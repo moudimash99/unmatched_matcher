@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unmatched Fighter Chooser</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+<header>
+    <h1>Unmatched Fighter Chooser 🧭</h1>
+    <p>Select sets, choose or get suggestions, and find your perfect Unmatched battle!</p>
+</header>
+
+<main>
+<form id="fighter-chooser-form" method="POST" action="{{ url_for('index') }}">
+    <input type="hidden" id="current_locked_p1_id"  name="current_locked_p1_id"
+           value="{{ selected_data.locked_p1_id if selected_data.locked_p1_id else '' }}">
+    <input type="hidden" id="current_locked_opp_id" name="current_locked_opp_id"
+           value="{{ selected_data.locked_opp_id if selected_data.locked_opp_id else '' }}">
+
+    <section class="settings-panel">
+        <h2>Game Setup</h2>
+        <div class="set-selection collapsed">
+            <h3>
+                Owned Sets
+                <button id="toggle-set-selection-btn" type="button" aria-expanded="false">⬇ Show</button>
+            </h3>
+            <div id="set-checkboxes" class="set-checkboxes">
+                {% for set_name_iter in all_sets_list %}
+                <label class="set-switch">
+                    <input type="checkbox" name="owned_sets" value="{{ set_name_iter }}" {% if set_name_iter in selected_data.owned_sets %}checked{% endif %}>
+                    <span class="slider"></span>
+                    <span class="set-label">{{ set_name_iter }}</span>
+                </label>
+                {% endfor %}
+            </div>
+            <div class="set-actions">
+                <button type="button" id="select-all-sets-btn">Select All Sets</button>
+                <button type="button" id="deselect-all-sets-btn">Deselect All Sets</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="matchup-configuration">
+        <h2>Fighter Selection</h2>
+        <div class="player-columns-container">
+            <div class="player-column" id="player1-controls">
+                <h3>Player 1 (You)</h3>
+                <div class="top-control-wrapper">
+                    <label for="p1_selection_method">How to choose P1’s fighter?</label>
+                    <select id="p1_selection_method" name="p1_selection_method">
+                        <option value="suggest" {% if selected_data.p1_selection_method == 'suggest' %}selected{% endif %}>Suggest for Me</option>
+                        <option value="direct_choice" {% if selected_data.p1_selection_method == 'direct_choice' %}selected{% endif %}>Let Me Choose</option>
+                    </select>
+                </div>
+                <div id="p1-direct-choice-section">
+                    <label for="p1_chosen_fighter">Choose Your Fighter:</label>
+                    <select id="p1_chosen_fighter" name="p1_chosen_fighter">
+                        <option value="">— Select a Fighter —</option>
+                        {% for fighter in all_fighters_for_select %}
+                        <option value="{{ fighter.id }}" data-set="{{ fighter.set }}" {% if fighter.id|string == selected_data.p1_chosen_fighter_id %}selected{% endif %}>
+                            {{ fighter.name }} ({{ fighter.set }})
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div id="p1-preferences-section" class="preferences-row">
+                    <div class="playstyle-selector">
+                        <label>Preferred Play-style(s):</label>
+                        <button class="toggle-playstyle-btn" type="button" data-target="p1-playstyle-options" aria-expanded="false">Select play-styles</button>
+                        <div id="p1-playstyle-options" class="playstyle-options collapsed">
+                            {% for style in all_playstyles %}
+                            <label><input type="checkbox" name="p1_playstyles" value="{{ style }}" {% if style in selected_data.p1_playstyles %}checked{% endif %}> {{ style | titlecase_custom }}</label>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="range-selector">
+                        <label for="p1_range">Preferred Range:</label>
+                        <select id="p1_range" name="p1_range">
+                            <option value="">Any Range</option>
+                            {% for range_type in all_ranges %}
+                            <option value="{{ range_type }}" {% if range_type == selected_data.p1_range %}selected{% endif %}>{{ range_type | titlecase_custom }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="player-column" id="opponent-controls">
+                <h3>Opponent</h3>
+                <div class="top-control-wrapper hidden"></div>
+                <div class="preferences-row">
+                    <div class="playstyle-selector">
+                        <label>Preferred Play-style(s):</label>
+                        <button class="toggle-playstyle-btn" type="button" data-target="opp-playstyle-options" aria-expanded="false">Select play-styles</button>
+                        <div id="opp-playstyle-options" class="playstyle-options collapsed">
+                            {% for style in all_playstyles %}
+                            <label><input type="checkbox" name="opp_playstyles" value="{{ style }}" {% if style in selected_data.opp_playstyles %}checked{% endif %}> {{ style | titlecase_custom }}</label>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="range-selector">
+                        <label for="opp_range">Preferred Range:</label>
+                        <select id="opp_range" name="opp_range">
+                            <option value="">Any Range</option>
+                            {% for range_type in all_ranges %}
+                            <option value="{{ range_type }}" {% if range_type == selected_data.opp_range %}selected{% endif %}>{{ range_type | titlecase_custom }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="action-area">
+        <button id="generate-matchup-btn" class="primary-action-button" type="submit" name="action" value="suggest_general">
+            🎲 Generate Matchup!
+        </button>
+    </section>
+</form>
+
+{% if results %}
+<section id="results-display-area" class="results-panel">
+    <h2>Matchup Suggestion</h2>
+
+    {% if error_message %}
+    <div class="error-message active">{{ error_message }}</div>
+    {% endif %}
+
+    <div class="player-columns-container">
+        <div class="player-column results-column">
+            <h4>Player 1’s Fighter</h4>
+            {% if results.p1_main %}
+            {{ render_fighter_backend(results.p1_main, True, 'p1', selected_data.locked_p1_id) | safe }}
+            {% endif %}
+
+            {% if results.p1_alternatives %}
+            <h5>Alternatives:</h5>
+            <div class="alternatives-grid">
+                {% for fighter in results.p1_alternatives %}
+                    {{ render_fighter_backend(fighter, False, 'p1') | safe }}
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="player-column results-column">
+            <h4>Opponent’s Fighter</h4>
+            {% if results.opp_main %}
+            {{ render_fighter_backend(results.opp_main, True, 'opp', selected_data.locked_opp_id) | safe }}
+            {% endif %}
+
+            {% if results.opp_alternatives %}
+            <h5>Alternatives:</h5>
+            <div class="alternatives-grid">
+                {% for fighter in results.opp_alternatives %}
+                    {{ render_fighter_backend(fighter, False, 'opp') | safe }}
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endif %}
+</main>
+
+<footer>
+    <p>Unmatched Fighter Chooser — Powered by Flask &amp; Your Preferences!</p>
+</footer>
+
+<script>
+    const ALL_FIGHTERS_JS = {{ all_fighters_for_select | tojson }};
+</script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
