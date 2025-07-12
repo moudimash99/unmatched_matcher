@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import random
 import json
+import hashlib
 
 app = Flask(__name__)
 
@@ -62,6 +63,87 @@ def get_smart_suggestions(pool, playstyles, prange, exclude_ids=None):
     alternatives = [s["fighter"] for s in scored[1:4]]
     return {"main": main_pick, "alternatives": alternatives}
 
+def calculate_win_percentage(id_a, id_b):
+    """Deterministic pseudo win percentage for id_a against id_b."""
+    if not id_a or not id_b:
+        return None
+    pair = tuple(sorted((id_a, id_b)))
+    seed = int(hashlib.sha256(":".join(pair).encode()).hexdigest(), 16)
+    rnd = random.Random(seed)
+    base = rnd.uniform(0.3, 0.7)
+    pct = base if id_a == pair[0] else 1 - base
+    return round(pct * 100, 1)
+
+def clone_fighter(f):
+    return dict(f) if f else None
+
+def attach_win_percentages(results):
+    """Attach win percentages vs the other side to fighter dicts."""
+    p1_team = [results.get("p1_main")] + results.get("p1_alternatives", [])
+    opp_team = [results.get("opp_main")] + results.get("opp_alternatives", [])
+
+    for f in p1_team:
+        if not f:
+            continue
+        f["win_percentages"] = {
+            o["id"]: calculate_win_percentage(f["id"], o["id"])
+            for o in opp_team if o
+        }
+
+    for o in opp_team:
+        if not o:
+            continue
+        o["win_percentages"] = {
+            f["id"]: calculate_win_percentage(o["id"], f["id"])
+            for f in p1_team if f
+        }
+
+def generate_suggestions(selected_data):
+    """Return matchup suggestions and any error message."""
+    results = {
+        "p1_main": None,
+        "p1_alternatives": [],
+        "opp_main": None,
+        "opp_alternatives": [],
+    }
+    error_message = None
+
+    available_fighters = get_available_fighters(selected_data["owned_sets"])
+    if not selected_data["owned_sets"]:
+        error_message = "Please select at least one owned set to get suggestions."
+    elif not available_fighters:
+        error_message = "No fighters available from the selected sets."
+    else:
+        exclude_ids = [fid for fid in [selected_data["locked_p1_id"], selected_data["locked_opp_id"]] if fid]
+
+        if selected_data["locked_p1_id"]:
+            results["p1_main"] = find_fighter_by_id(selected_data["locked_p1_id"])
+        else:
+            p1_sugg = get_smart_suggestions(
+                available_fighters,
+                selected_data["p1_playstyles"],
+                selected_data["p1_range"],
+                exclude_ids=exclude_ids,
+            )
+            results["p1_main"] = p1_sugg["main"]
+            results["p1_alternatives"] = p1_sugg["alternatives"]
+            if p1_sugg["main"]:
+                exclude_ids.append(p1_sugg["main"]["id"])
+
+        if selected_data["locked_opp_id"]:
+            results["opp_main"] = find_fighter_by_id(selected_data["locked_opp_id"])
+        else:
+            opp_sugg = get_smart_suggestions(
+                available_fighters,
+                selected_data["opp_playstyles"],
+                selected_data["opp_range"],
+                exclude_ids=exclude_ids,
+            )
+            results["opp_main"] = opp_sugg["main"]
+            results["opp_alternatives"] = opp_sugg["alternatives"]
+
+    return results, error_message
+
 # ---------------------------------------------------------
 # 3.  JINJA FILTERS / HELPERS  ────────────────────────────
 # ---------------------------------------------------------
@@ -76,6 +158,7 @@ def utility_processor():
         is_main,
         player_prefix="p1",
         currently_locked_id=None,
+        vs_fighter_id=None,
     ):
         """Return the HTML for a fighter card used by both players."""
         if not fighter:
@@ -107,6 +190,15 @@ def utility_processor():
                 f'Select for Matchup</button>'
             )
 
+        win_html = ""
+        if vs_fighter_id:
+            opponent = find_fighter_by_id(vs_fighter_id)
+            if opponent:
+                pct = calculate_win_percentage(fighter_id, vs_fighter_id)
+                win_html = (
+                    f'<p><strong>Win vs {opponent["name"]}:</strong> {pct}%</p>'
+                )
+
         card_id_attr = f'id="{player_prefix}-main-suggestion"' if is_main else ""
         card_cls = "main-suggestion" if is_main else "alternative-suggestion"
 
@@ -119,6 +211,7 @@ def utility_processor():
             f'      <p><strong>Set:</strong> {fighter.get("set", "N/A")}</p>'
             f'      <p><strong>Range:</strong> {title_case_filter(fighter.get("range", "N/A"))}</p>'
             f'      <p><strong>Playstyles:</strong> {playstyles_str}</p>'
+            f'      {win_html}'
             f'    </div>'
             f'  </div>'
             f'  <div class="fighter-card-footer">{btn_html}</div>'
@@ -208,49 +301,7 @@ def index():
         # -------------------------------------------------
         # 4D.  Build suggestions
         # -------------------------------------------------
-        results_data = {
-            "p1_main": None,
-            "p1_alternatives": [],
-            "opp_main": None,
-            "opp_alternatives": [],
-        }
-
-        available_fighters = get_available_fighters(selected_data["owned_sets"])
-
-        if not selected_data["owned_sets"]:
-            error_message = "Please select at least one owned set to get suggestions."
-        elif not available_fighters:
-            error_message = "No fighters available from the selected sets."
-        else:
-            exclude_ids = [fid for fid in [selected_data["locked_p1_id"], selected_data["locked_opp_id"]] if fid]
-
-            # -------- Player 1 --------
-            if selected_data["locked_p1_id"]:
-                results_data["p1_main"] = find_fighter_by_id(selected_data["locked_p1_id"])
-            else:
-                p1_sugg = get_smart_suggestions(
-                    available_fighters,
-                    selected_data["p1_playstyles"],
-                    selected_data["p1_range"],
-                    exclude_ids=exclude_ids,
-                )
-                results_data["p1_main"] = p1_sugg["main"]
-                results_data["p1_alternatives"] = p1_sugg["alternatives"]
-                if p1_sugg["main"]:
-                    exclude_ids.append(p1_sugg["main"]["id"])
-
-            # -------- Player 2 / Opponent --------
-            if selected_data["locked_opp_id"]:
-                results_data["opp_main"] = find_fighter_by_id(selected_data["locked_opp_id"])
-            else:
-                opp_sugg = get_smart_suggestions(
-                    available_fighters,
-                    selected_data["opp_playstyles"],
-                    selected_data["opp_range"],
-                    exclude_ids=exclude_ids,
-                )
-                results_data["opp_main"] = opp_sugg["main"]
-                results_data["opp_alternatives"] = opp_sugg["alternatives"]
+        results_data, error_message = generate_suggestions(selected_data)
 
     # -----------------------------------------------------
     # 4E.  Render
@@ -265,6 +316,37 @@ def index():
         selected_data=selected_data,
         error_message=error_message,
     )
+
+
+@app.route("/api/matchup", methods=["POST"])
+def api_matchup():
+    """JSON API for matchup suggestions."""
+    payload = request.get_json(force=True)
+    selected = {
+        "owned_sets": payload.get("owned_sets", []),
+        "p1_selection_method": payload.get("p1_selection_method", "direct_choice"),
+        "p1_playstyles": payload.get("p1_playstyles", []),
+        "p1_range": payload.get("p1_range"),
+        "opp_selection_method": payload.get("opp_selection_method", "direct_choice"),
+        "opp_playstyles": payload.get("opp_playstyles", []),
+        "opp_range": payload.get("opp_range"),
+        "locked_p1_id": payload.get("locked_p1_id"),
+        "locked_opp_id": payload.get("locked_opp_id"),
+    }
+
+    results, error = generate_suggestions(selected)
+
+    # Clone fighters so we don't mutate global data
+    cloned = {
+        "p1_main": clone_fighter(results.get("p1_main")),
+        "p1_alternatives": [clone_fighter(f) for f in results.get("p1_alternatives", [])],
+        "opp_main": clone_fighter(results.get("opp_main")),
+        "opp_alternatives": [clone_fighter(f) for f in results.get("opp_alternatives", [])],
+    }
+
+    attach_win_percentages(cloned)
+
+    return jsonify({"results": cloned, "error_message": error})
 
 # ---------------------------------------------------------
 # 5.  RUN  ────────────────────────────────────────────────

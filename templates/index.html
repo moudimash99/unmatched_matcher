@@ -136,14 +136,14 @@
         <div class="player-column results-column">
             <h4>Player 1’s Fighter</h4>
             {% if results.p1_main %}
-            {{ render_fighter_backend(results.p1_main, True, 'p1', selected_data.locked_p1_id) | safe }}
+            {{ render_fighter_backend(results.p1_main, True, 'p1', selected_data.locked_p1_id, results.opp_main.id if results.opp_main else None) | safe }}
             {% endif %}
 
             {% if results.p1_alternatives %}
             <h5>Alternatives:</h5>
             <div class="alternatives-grid">
                 {% for fighter in results.p1_alternatives %}
-                    {{ render_fighter_backend(fighter, False, 'p1') | safe }}
+                    {{ render_fighter_backend(fighter, False, 'p1', None, results.opp_main.id if results.opp_main else None) | safe }}
                 {% endfor %}
             </div>
             {% endif %}
@@ -152,14 +152,14 @@
         <div class="player-column results-column">
             <h4>Opponent’s Fighter</h4>
             {% if results.opp_main %}
-            {{ render_fighter_backend(results.opp_main, True, 'opp', selected_data.locked_opp_id) | safe }}
+            {{ render_fighter_backend(results.opp_main, True, 'opp', selected_data.locked_opp_id, results.p1_main.id if results.p1_main else None) | safe }}
             {% endif %}
 
             {% if results.opp_alternatives %}
             <h5>Alternatives:</h5>
             <div class="alternatives-grid">
                 {% for fighter in results.opp_alternatives %}
-                    {{ render_fighter_backend(fighter, False, 'opp') | safe }}
+                    {{ render_fighter_backend(fighter, False, 'opp', None, results.p1_main.id if results.p1_main else None) | safe }}
                 {% endfor %}
             </div>
             {% endif %}
