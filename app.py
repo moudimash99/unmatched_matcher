@@ -265,8 +265,17 @@ def index():
         # -------------------------------------------------
         # 4A.  Gather form inputs & preserve state
         # -------------------------------------------------
+        owned_sets_form = request.form.getlist("owned_sets")
+        if not owned_sets_form:
+            cookie_val = request.cookies.get("owned_sets")
+            if cookie_val:
+                try:
+                    owned_sets_form = json.loads(cookie_val)
+                except Exception:
+                    owned_sets_form = []
+
         selected_data.update({
-            "owned_sets": request.form.getlist("owned_sets"),
+            "owned_sets": owned_sets_form,
             # Player-1
             "p1_selection_method": request.form.get("p1_selection_method", "direct_choice"),
             "p1_playstyles": request.form.getlist("p1_playstyles"),
