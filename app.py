@@ -251,7 +251,8 @@ def index():
     all_fighters_sorted = sorted(FIGHTERS_DATA, key=lambda x: x["name"])
 
     if request.method == "POST":
-        action = request.form.get("action", "suggest_general")
+        action_list = request.form.getlist("action")
+        action = action_list[-1] if action_list else "suggest_general"
 
         # -------------------------------------------------
         # 4A.  Gather form inputs & preserve state

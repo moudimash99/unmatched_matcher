@@ -117,7 +117,10 @@ function setupResultCardActions() {
             const form = qs('#fighter-chooser-form');
 
             if (!fighterId || !playerPrefix || !form) return;
-            
+
+            // Remove any previous action inputs so the latest one wins
+            qsa('input[name="action"]', form).forEach(n => n.remove());
+
             // Create a hidden input to tell the backend which fighter to lock
             const actionInput = document.createElement('input');
             actionInput.type = 'hidden';
