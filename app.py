@@ -266,7 +266,7 @@ def index():
         # 4A.  Gather form inputs & preserve state
         # -------------------------------------------------
         owned_sets_form = request.form.getlist("owned_sets")
-        if not owned_sets_form:
+        if "owned_sets" not in request.form:
             cookie_val = request.cookies.get("owned_sets")
             if cookie_val:
                 try:
@@ -335,12 +335,12 @@ def index():
         error_message=error_message,
     ))
 
-    if request.method == "POST":
-        response.set_cookie(
-            "owned_sets",
-            json.dumps(selected_data["owned_sets"]),
-            max_age=60 * 60 * 24 * 365,
-        )
+    # Persist owned set selections for future visits
+    response.set_cookie(
+        "owned_sets",
+        json.dumps(selected_data["owned_sets"]),
+        max_age=60 * 60 * 24 * 365,
+    )
 
     return response
 
