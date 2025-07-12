@@ -143,7 +143,7 @@
             <h5>Alternatives:</h5>
             <div class="alternatives-grid">
                 {% for fighter in results.p1_alternatives %}
-                    {{ render_fighter_backend(fighter, False, 'p1', None, results.opp_main.id if results.opp_main else None) | safe }}
+                    {{ render_fighter_backend(fighter, False, 'p1', selected_data.locked_p1_id, results.opp_main.id if results.opp_main else None) | safe }}
                 {% endfor %}
             </div>
             {% endif %}
@@ -159,7 +159,7 @@
             <h5>Alternatives:</h5>
             <div class="alternatives-grid">
                 {% for fighter in results.opp_alternatives %}
-                    {{ render_fighter_backend(fighter, False, 'opp', None, results.p1_main.id if results.p1_main else None) | safe }}
+                    {{ render_fighter_backend(fighter, False, 'opp', selected_data.locked_opp_id, results.p1_main.id if results.p1_main else None) | safe }}
                 {% endfor %}
             </div>
             {% endif %}

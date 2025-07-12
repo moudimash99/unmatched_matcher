@@ -109,27 +109,49 @@ function setupResultCardActions() {
     if (!resultsArea) return;
 
     resultsArea.addEventListener('click', (e) => {
-        // Check if a "Select for Matchup" button was clicked
-        if (e.target.matches('.select-alternative-btn')) {
-            const button = e.target;
-            const fighterId = button.dataset.fighterId;
-            const playerPrefix = button.dataset.playerPrefix;
-            const form = qs('#fighter-chooser-form');
+        const btn = e.target.closest('button');
+        if (!btn) return;
 
-            if (!fighterId || !playerPrefix || !form) return;
-            
-            // Create a hidden input to tell the backend which fighter to lock
-            const actionInput = document.createElement('input');
-            actionInput.type = 'hidden';
-            actionInput.name = 'action';
-            actionInput.value = `lock_${playerPrefix}:${fighterId}`;
-            form.appendChild(actionInput);
-
-            // Submit the form to regenerate the matchup with the new selection
-            form.submit();
+        if (btn.matches('.select-alternative-btn') && !btn.disabled) {
+            e.preventDefault();
+            const fighterId = btn.dataset.fighterId;
+            const playerPrefix = btn.dataset.playerPrefix;
+            if (!fighterId || !playerPrefix) return;
+            submitMatchupAction(`lock_${playerPrefix}:${fighterId}`);
         }
-        
-        // Note: The regular Lock/Unlock buttons have type="submit", so they
-        // trigger a form submission automatically without needing JS.
+
+        if (btn.matches('.lock-button')) {
+            e.preventDefault();
+            const actionVal = btn.value;
+            if (!actionVal) return;
+            submitMatchupAction(actionVal);
+        }
     });
+}
+
+async function submitMatchupAction(actionValue) {
+    const form = qs('#fighter-chooser-form');
+    if (!form) return;
+    const formData = new FormData(form);
+    if (actionValue) {
+        formData.set('action', actionValue);
+    }
+
+    const resp = await fetch(form.action, { method: 'POST', body: formData });
+    if (!resp.ok) return;
+    const text = await resp.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'text/html');
+    const newResults = doc.querySelector('#results-display-area');
+    const newLockP1 = doc.querySelector('#current_locked_p1_id');
+    const newLockOpp = doc.querySelector('#current_locked_opp_id');
+    if (newResults) {
+        const current = qs('#results-display-area');
+        if (current) {
+            current.replaceWith(newResults);
+            setupResultCardActions();
+        }
+    }
+    if (newLockP1) qs('#current_locked_p1_id').value = newLockP1.value;
+    if (newLockOpp) qs('#current_locked_opp_id').value = newLockOpp.value;
 }

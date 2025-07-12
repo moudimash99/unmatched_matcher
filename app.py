@@ -116,8 +116,17 @@ def generate_suggestions(selected_data):
     else:
         exclude_ids = [fid for fid in [selected_data["locked_p1_id"], selected_data["locked_opp_id"]] if fid]
 
-        if selected_data["locked_p1_id"]:
-            results["p1_main"] = find_fighter_by_id(selected_data["locked_p1_id"])
+        p1_locked = selected_data["locked_p1_id"]
+        if p1_locked:
+            results["p1_main"] = find_fighter_by_id(p1_locked)
+            # Still generate alternatives so they remain visible
+            p1_sugg = get_smart_suggestions(
+                available_fighters,
+                selected_data["p1_playstyles"],
+                selected_data["p1_range"],
+                exclude_ids=exclude_ids,
+            )
+            results["p1_alternatives"] = p1_sugg["alternatives"]
         else:
             p1_sugg = get_smart_suggestions(
                 available_fighters,
@@ -130,8 +139,16 @@ def generate_suggestions(selected_data):
             if p1_sugg["main"]:
                 exclude_ids.append(p1_sugg["main"]["id"])
 
-        if selected_data["locked_opp_id"]:
-            results["opp_main"] = find_fighter_by_id(selected_data["locked_opp_id"])
+        opp_locked = selected_data["locked_opp_id"]
+        if opp_locked:
+            results["opp_main"] = find_fighter_by_id(opp_locked)
+            opp_sugg = get_smart_suggestions(
+                available_fighters,
+                selected_data["opp_playstyles"],
+                selected_data["opp_range"],
+                exclude_ids=exclude_ids,
+            )
+            results["opp_alternatives"] = opp_sugg["alternatives"]
         else:
             opp_sugg = get_smart_suggestions(
                 available_fighters,
@@ -185,9 +202,11 @@ def utility_processor():
                     f'class="lock-button btn-lock">🔒 Lock Fighter</button>'
                 )
         else:
+            disabled_attr = 'disabled' if currently_locked_id else ''
+            extra_cls = ' disabled-btn' if currently_locked_id else ''
             btn_html = (
-                f'<button type="button" class="select-alternative-btn" '
-                f'data-fighter-id="{fighter_id}" data-player-prefix="{player_prefix}">'  # JS hook
+                f'<button type="button" class="select-alternative-btn{extra_cls}" '
+                f'data-fighter-id="{fighter_id}" data-player-prefix="{player_prefix}" {disabled_attr}>'
                 f'Select for Matchup</button>'
             )
 

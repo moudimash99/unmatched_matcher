@@ -73,6 +73,15 @@ label { font-size: .9rem; }
 .lock-button, .select-alternative-btn { width: 100%; padding: 0.5rem; font-weight: 600; color: white; }
 .select-alternative-btn { background-color: #6c757d; }
 .select-alternative-btn:hover { background-color: #5a6268; }
+.select-alternative-btn.disabled-btn,
+.select-alternative-btn:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+}
+.select-alternative-btn.disabled-btn:hover,
+.select-alternative-btn:disabled:hover {
+    background-color: #a0a0a0;
+}
 .alternatives-grid { display: grid; gap: 1rem; }
 .alternative-suggestion .fighter-stats { padding-bottom: 0.5rem; margin-bottom: 0.5rem; font-size: 0.8rem; }
 .alternative-suggestion .win-percentage { font-weight: 400; }
