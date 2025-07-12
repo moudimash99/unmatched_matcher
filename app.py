@@ -230,7 +230,8 @@ def index():
         # Shared
         "owned_sets": [],
         # Player-1 controls
-        "p1_selection_method": "direct_choice",  # direct_choice | preferences
+        # Suggest by default, but allow switching to direct choice
+        "p1_selection_method": "suggest",  # suggest | direct_choice
         "p1_chosen_fighter_id": None,
         "p1_playstyles": [],
         "p1_range": "",
@@ -259,7 +260,7 @@ def index():
         selected_data.update({
             "owned_sets": request.form.getlist("owned_sets"),
             # Player-1
-            "p1_selection_method": request.form.get("p1_selection_method", "direct_choice"),
+            "p1_selection_method": request.form.get("p1_selection_method", "suggest"),
             "p1_playstyles": request.form.getlist("p1_playstyles"),
             "p1_range": request.form.get("p1_range"),
             # Player-2 (opponent)
@@ -324,7 +325,7 @@ def api_matchup():
     payload = request.get_json(force=True)
     selected = {
         "owned_sets": payload.get("owned_sets", []),
-        "p1_selection_method": payload.get("p1_selection_method", "direct_choice"),
+        "p1_selection_method": payload.get("p1_selection_method", "suggest"),
         "p1_playstyles": payload.get("p1_playstyles", []),
         "p1_range": payload.get("p1_range"),
         "opp_selection_method": payload.get("opp_selection_method", "direct_choice"),
