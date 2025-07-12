@@ -78,21 +78,22 @@ function setupP1SelectionToggle() {
     const p1SelectionMethod = qs('#p1_selection_method');
     const p1DirectChoiceSection = qs('#p1-direct-choice-section');
     const p1PreferencesSection = qs('#p1-preferences-section');
-    const opponentControls = qs('#opponent-controls');
+    const opponentTopDummy = qs('#opponent-controls .top-control-wrapper');
+
 
     function toggleP1Mode() {
-        if (!p1SelectionMethod || !p1DirectChoiceSection || !p1PreferencesSection || !opponentControls) {
+        if (!p1SelectionMethod || !p1DirectChoiceSection || !p1PreferencesSection || !opponentTopDummy) {
             return;
         }
 
         if (p1SelectionMethod.value === 'direct_choice') {
             p1DirectChoiceSection.style.display = 'block';
             p1PreferencesSection.style.display = 'none';
-            opponentControls.classList.add('hidden');
+            opponentTopDummy.classList.add('hidden');
         } else { // 'suggest'
             p1DirectChoiceSection.style.display = 'none';
             p1PreferencesSection.style.display = 'grid';
-            opponentControls.classList.remove('hidden');
+            opponentTopDummy.classList.remove('hidden');
         }
     }
 
