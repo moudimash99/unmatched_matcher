@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, make_response
 import random
 import json
 import hashlib
@@ -247,6 +247,19 @@ def index():
     results_data = None
     error_message = None
 
+    # Load owned sets from cookie on initial GET request
+    if request.method == "GET":
+        cookie_val = request.cookies.get("owned_sets")
+        if cookie_val:
+            try:
+                selected_data["owned_sets"] = json.loads(cookie_val)
+            except Exception:
+                pass
+
+    # Determine if the set-selection panel should start collapsed
+    collapsed_cookie = request.cookies.get("set_selection_collapsed", "true")
+    sets_collapsed = collapsed_cookie == "true"
+
     # Dropdown list for direct choices (same for both players)
     all_fighters_sorted = sorted(FIGHTERS_DATA, key=lambda x: x["name"])
 
@@ -256,8 +269,17 @@ def index():
         # -------------------------------------------------
         # 4A.  Gather form inputs & preserve state
         # -------------------------------------------------
+        owned_sets_form = request.form.getlist("owned_sets")
+        if "owned_sets" not in request.form:
+            cookie_val = request.cookies.get("owned_sets")
+            if cookie_val:
+                try:
+                    owned_sets_form = json.loads(cookie_val)
+                except Exception:
+                    owned_sets_form = []
+
         selected_data.update({
-            "owned_sets": request.form.getlist("owned_sets"),
+            "owned_sets": owned_sets_form,
             # Player-1
             "p1_selection_method": request.form.get("p1_selection_method", "direct_choice"),
             "p1_playstyles": request.form.getlist("p1_playstyles"),
@@ -306,7 +328,7 @@ def index():
     # -----------------------------------------------------
     # 4E.  Render
     # -----------------------------------------------------
-    return render_template(
+    response = make_response(render_template(
         "index.html",
         all_sets_list=ALL_SETS_LIST,
         all_playstyles=ALL_PLAYSTYLES,
@@ -315,7 +337,22 @@ def index():
         results=results_data,
         selected_data=selected_data,
         error_message=error_message,
+        sets_collapsed=sets_collapsed,
+    ))
+
+    # Persist owned set selections for future visits
+    response.set_cookie(
+        "owned_sets",
+        json.dumps(selected_data["owned_sets"]),
+        max_age=60 * 60 * 24 * 365,
     )
+    response.set_cookie(
+        "set_selection_collapsed",
+        "true" if sets_collapsed else "false",
+        max_age=60 * 60 * 24 * 365,
+    )
+
+    return response
 
 
 @app.route("/api/matchup", methods=["POST"])

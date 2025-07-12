@@ -24,10 +24,10 @@
 
     <section class="settings-panel">
         <h2>Game Setup</h2>
-        <div class="set-selection collapsed">
+        <div class="set-selection {% if sets_collapsed %}collapsed{% endif %}">
             <h3>
                 Owned Sets
-                <button id="toggle-set-selection-btn" type="button" aria-expanded="false">⬇ Show</button>
+                <button id="toggle-set-selection-btn" type="button" aria-expanded="{{ 'false' if sets_collapsed else 'true' }}">⬇ Show</button>
             </h3>
             <div id="set-checkboxes" class="set-checkboxes">
                 {% for set_name_iter in all_sets_list %}
