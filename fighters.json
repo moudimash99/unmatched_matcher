@@ -1,8 +1,7 @@
 {
   "fighters": [
     
-    {"id": "king_arthur", "name": "King Arthur", "set": "Battle of Legends, Vol. 1", "playstyles": ["midrange", "burst", "setup", "straightforward"], "range": "Melee", "image_url": "/static/pics/king_arthur.webp"  }
-},
+    {"id": "king_arthur", "name": "King Arthur", "set": "Battle of Legends, Vol. 1", "playstyles": ["midrange", "burst", "setup", "straightforward"], "range": "Melee", "image_url": "/static/pics/king_arthur.webp"},
     {"id": "alice", "name": "Alice", "set": "Battle of Legends, Vol. 1", "playstyles": ["shapeshifter", "versatile", "positional", "tricky"], "range": "Hybrid", "image_url": "/static/pics/alice.webp"},
     {"id": "medusa", "name": "Medusa", "set": "Battle of Legends, Vol. 1", "playstyles": ["control", "burst", "harass", "finisher"], "range": "Ranged", "image_url": "/static/pics/medusa.webp"},
     {"id": "sinbad", "name": "Sinbad", "set": "Battle of Legends, Vol. 1", "playstyles": ["scaling", "late_game", "card_advantage", "midrange"], "range": "Melee", "image_url": "/static/pics/sinbad.webp"},
@@ -72,49 +71,37 @@
     {"id": "yennefer_triss", "name": "Yennefer & Triss", "set": "The Witcher: Realms Fall", "playstyles": ["shapeshifter", "versatile", "recursion", "control"], "range": "Ranged", "image_url": "/static/pics/yennefer_triss.webp"},
     {"id": "philippa_eilhart", "name": "Philippa Eilhart", "set": "The Witcher: Realms Fall", "playstyles": ["unorthodox", "control", "tricky"], "range": "Ranged", "image_url": "/static/pics/philippa_eilhart.webp"},
     {"id": "eredin", "name": "Eredin Bréacc Glas", "set": "The Witcher: Realms Fall", "playstyles": ["swarm", "aggressive", "control", "finisher"], "range": "Melee", "image_url": "/static/pics/eredin.webp"},
-    {"id": "muhammad_ali", "name": "Muhammad Ali", "set": "Muhammad Ali vs. Bruce Lee", "playstyles": ["combo", "tank", "midrange", "tricky"], "range": "Melee", "image_url": "/static/pics/muhammad_ali.webp"},
+    {"id": "muhammad_ali", "name": "Muhammad Ali", "set": "Muhammad Ali vs. Bruce Lee", "playstyles": ["combo", "tank", "midrange", "tricky"], "range": "Melee", "image_url": "/static/pics/muhammad_ali.webp"}
   ],
   "playstyle_definitions": {
-    
     "aggressive": "Focuses on applying early pressure and maintaining offense",
     "control": "Manages board state and dictates the pace of the game",
     "midrange": "Balanced approach with flexible early-to-mid game plans",
     "combo": "Relies on specific card combinations for powerful effects",
-    
-    
     "burst": "Delivers high damage in short windows",
     "high_damage": "Consistently deals above-average damage", 
-    "consistent": "Reliable, steady damage output", # renamed from consistent_damage
+    "consistent": "Reliable, steady damage output",
     "finisher": "Specializes in closing out games",
-    
-    # Defensive Styles
-    "tank": "High durability and defensive capabilities", # merged tanky + resilient  
+    "tank": "High durability and defensive capabilities",
     "elusive": "Avoids damage through positioning and timing",
-    "regeneration": "Recovers health or resources over time", # renamed from regenerator
-    
-    # Resource Management
-    "scaling": "Grows stronger over time", # merged power_ramp + late_game concepts
+    "regeneration": "Recovers health or resources over time",
+    "scaling": "Grows stronger over time",
     "late_game": "Peaks in power during extended games", 
     "card_advantage": "Generates extra cards or resources",
     "attrition": "Wins through resource depletion",
-    
-    # Mechanical Complexity
-    "setup": "Requires preparation before major plays", # renamed from set_up
+    "setup": "Requires preparation before major plays",
     "tricky": "Complex timing and decision-making",
     "straightforward": "Simple, direct gameplay",
     "unorthodox": "Unique mechanics that break normal rules",
-    
-    # Positional & Tactical
     "positional": "Success depends heavily on board positioning",
     "swarm": "Uses multiple small units or tokens",
     "harass": "Applies constant small pressure",
-    
-    # Special Mechanics
     "shapeshifter": "Changes form or abilities during play",
     "recursion": "Reuses cards from discard pile",
-    "disruption": "Interferes with opponent's plans", # merged hand_disruption
-    "self_harm": "Takes damage to gain advantages", # renamed from self_damage
+    "disruption": "Interferes with opponent's plans",
+    "self_harm": "Takes damage to gain advantages",
     "versatile": "Adapts to multiple strategies",
     "glass_cannon": "High damage output but low survivability",
-    "information": "Gains knowledge about opponent's hand/deck" # replaced overly specific "deduction"
+    "information": "Gains knowledge about opponent's hand/deck"
+  }
 }
