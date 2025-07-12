@@ -174,13 +174,14 @@ def utility_processor():
         if is_main:
             if is_locked:
                 btn_html = (
-                    f'<button type="submit" name="action" value="unlock_{player_prefix}" '
+                    f'<button type="submit" form="fighter-chooser-form" '
+                    f'name="action" value="unlock_{player_prefix}" '
                     f'class="lock-button btn-unlock">🔓 Fighter Locked</button>'
                 )
             else:
                 btn_html = (
-                    f'<button type="submit" name="action" '
-                    f'value="lock_{player_prefix}:{fighter_id}" '
+                    f'<button type="submit" form="fighter-chooser-form" '
+                    f'name="action" value="lock_{player_prefix}:{fighter_id}" '
                     f'class="lock-button btn-lock">🔒 Lock Fighter</button>'
                 )
         else:
