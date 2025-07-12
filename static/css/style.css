@@ -47,9 +47,35 @@ h5 { margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1rem; }
     font-size: 1rem;
 }
 .playstyle-options input[type="checkbox"] {
-    width: 1.2rem;
-    height: 1.2rem;
-    accent-color: var(--accent-primary);
+    appearance: none;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 2px solid #adb5bd;
+    border-radius: 4px;
+    display: grid;
+    place-content: center;
+    transition: background-color .15s, border-color .15s;
+    cursor: pointer;
+}
+
+.playstyle-options input[type="checkbox"]::before {
+    content: '';
+    width: .45rem;
+    height: .25rem;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg) scale(0);
+    transform-origin: bottom left;
+    transition: transform .15s ease-in-out;
+}
+
+.playstyle-options input[type="checkbox"]:checked {
+    background-color: var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+.playstyle-options input[type="checkbox"]:checked::before {
+    transform: rotate(-45deg) scale(1);
 }
 .toggle-playstyle-btn { background: none !important; border: none !important; box-shadow: none !important; color: var(--accent-primary); font-size: 1rem; cursor: pointer; padding: .25rem; transition: none; }
 .toggle-playstyle-btn:hover, .toggle-playstyle-btn:active { text-decoration: underline; }
