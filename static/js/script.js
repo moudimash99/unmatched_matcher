@@ -1,135 +1,212 @@
 /* ==============================================================
-   GLOBAL UI HELPERS
+   Unmatched Fighter Chooser – Client‑side UX helpers
+   ————————————————————————————————————————————————
+   ✨ 2025‑07 – Re‑worked to address:
+      1. Selecting an alternative should *not* auto‑lock.
+      2. The 🔒/🔓 button must toggle instantly (no full reload).
+      3. Locking must leave *all* current suggestions visible.
+      4. Owned‑sets collapse + checkbox state persist 10 yrs via cookies.
 ================================================================*/
-function qs(selector, scope = document) { return scope.querySelector(selector); }
-function qsa(selector, scope = document) { return [...scope.querySelectorAll(selector)]; }
 
-/* ==============================================================
-   EVENT LISTENERS
-================================================================*/
+/***************************  DOM SHORTCUTS  ***************************/
+const qs  = (sel, ctx = document) => ctx.querySelector(sel);
+const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+
+/***************************  COOKIE HELPERS  ***************************/
+function setCookie(name, value, days = 3650) { // ≈10 yrs
+    const exp = new Date(Date.now() + days * 864e5).toUTCString();
+    document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; expires=${exp}; path=/`;
+}
+function getCookie(name) {
+    return document.cookie.split('; ').reduce((v, c) => {
+        const [k, val] = c.split('=');
+        return k === encodeURIComponent(name) ? decodeURIComponent(val) : v;
+    }, '');
+}
+
+/***************************  DOMContentLoaded  ***************************/
 document.addEventListener('DOMContentLoaded', () => {
-    // Setup for UI components that are always present
     setupSetSelection();
     setupPlaystyleToggles();
     setupP1SelectionToggle();
-
-    // Setup for dynamically generated result cards
+    annotateLockButtons();
     setupResultCardActions();
 });
 
-
-/* ==============================================================
-   SET-SELECTION
-================================================================*/
+/***************************  OWNED–SET PANEL  ***************************/
 function setupSetSelection() {
-    const setSelectionWrapper = qs('.set-selection');
-    if (!setSelectionWrapper) return;
+    const wrapper = qs('.set-selection');
+    if (!wrapper) return;
 
-    const setToggleBtn = qs('#toggle-set-selection-btn');
-    const LOCAL_KEY_COLLAPSED = 'unmatchedChooserSetSelectionCollapsed';
-    const selectAllSetsButton = qs('#select-all-sets-btn');
-    const deselectAllSetsButton = qs('#deselect-all-sets-btn');
-    const setCheckboxes = qsa('#set-checkboxes input[type="checkbox"]');
+    const toggleBtn = qs('#toggle-set-selection-btn');
+    const SELECT_COLLAPSE_KEY = 'ufs_sets_collapsed';
+    const ALL_SETS_KEY        = 'ufs_owned_sets';
+    const selectAllBtn        = qs('#select-all-sets-btn');
+    const deselectAllBtn      = qs('#deselect-all-sets-btn');
+    const checkboxes          = qsa('#set-checkboxes input[type="checkbox"]');
 
-    if (localStorage.getItem(LOCAL_KEY_COLLAPSED) === 'true') {
-        setSelectionWrapper.classList.add('collapsed');
-        setToggleBtn.setAttribute('aria-expanded', 'false');
-    } else {
-        setSelectionWrapper.classList.remove('collapsed');
-        setToggleBtn.setAttribute('aria-expanded', 'true');
-    }
+    // —— Restore collapse state
+    const wasCollapsed = getCookie(SELECT_COLLAPSE_KEY) === '1';
+    wrapper.classList.toggle('collapsed', wasCollapsed);
+    toggleBtn.setAttribute('aria-expanded', String(!wasCollapsed));
 
-    setToggleBtn?.addEventListener('click', () => {
-        const collapsed = setSelectionWrapper.classList.toggle('collapsed');
-        setToggleBtn.setAttribute('aria-expanded', String(!collapsed));
-        localStorage.setItem(LOCAL_KEY_COLLAPSED, String(collapsed));
+    toggleBtn.addEventListener('click', () => {
+        const collapsed = wrapper.classList.toggle('collapsed');
+        toggleBtn.setAttribute('aria-expanded', String(!collapsed));
+        setCookie(SELECT_COLLAPSE_KEY, collapsed ? '1' : '0');
     });
 
-    selectAllSetsButton?.addEventListener('click', () => setCheckboxes.forEach(cb => cb.checked = true));
-    deselectAllSetsButton?.addEventListener('click', () => setCheckboxes.forEach(cb => cb.checked = false));
+    // —— Restore checkboxes
+    const storedSets = getCookie(ALL_SETS_KEY);
+    if (storedSets) {
+        const arr = storedSets.split(',');
+        checkboxes.forEach(cb => cb.checked = arr.includes(cb.value));
+    }
+
+    // —— Persist on change
+    const persist = () => {
+        const checked = checkboxes.filter(cb => cb.checked).map(cb => cb.value);
+        setCookie(ALL_SETS_KEY, checked.join(','));
+    };
+    checkboxes.forEach(cb => cb.addEventListener('change', persist));
+    selectAllBtn?.addEventListener('click', () => { checkboxes.forEach(cb => cb.checked = true); persist(); });
+    deselectAllBtn?.addEventListener('click', () => { checkboxes.forEach(cb => cb.checked = false); persist(); });
 }
 
-
-/* ==============================================================
-   PLAY-STYLE COLLAPSIBLE PANELS
-================================================================*/
+/***************************  PLAY‑STYLE PANELS  ***************************/
 function setupPlaystyleToggles() {
     qsa('.toggle-playstyle-btn').forEach(btn => {
-        const targetId = btn.dataset.target;
-        const options = qs(`#${targetId}`);
-        if (!options) return;
-
-        // Set initial state from class
-        const isCollapsed = options.classList.contains('collapsed');
-        btn.setAttribute('aria-expanded', String(!isCollapsed));
-
+        const target = qs(`#${btn.dataset.target}`);
+        if (!target) return;
+        btn.setAttribute('aria-expanded', String(!target.classList.contains('collapsed')));
         btn.addEventListener('click', () => {
-            const collapsed = options.classList.toggle('collapsed');
+            const collapsed = target.classList.toggle('collapsed');
             btn.setAttribute('aria-expanded', String(!collapsed));
         });
     });
 }
 
-
-/* ==============================================================
-   PLAYER 1 SELECTION METHOD TOGGLE
-================================================================*/
+/***************************  P1 MODE SWITCH  ***************************/
 function setupP1SelectionToggle() {
-    const p1SelectionMethod = qs('#p1_selection_method');
-    const p1DirectChoiceSection = qs('#p1-direct-choice-section');
-    const p1PreferencesSection = qs('#p1-preferences-section');
-    const opponentTopDummy = qs('#opponent-controls .top-control-wrapper');
+    const selMethod = qs('#p1_selection_method');
+    const directSec = qs('#p1-direct-choice-section');
+    const prefSec   = qs('#p1-preferences-section');
+    const oppDummy  = qs('#opponent-controls .top-control-wrapper');
 
-
-    function toggleP1Mode() {
-        if (!p1SelectionMethod || !p1DirectChoiceSection || !p1PreferencesSection || !opponentTopDummy) {
-            return;
-        }
-
-        if (p1SelectionMethod.value === 'direct_choice') {
-            p1DirectChoiceSection.style.display = 'block';
-            p1PreferencesSection.style.display = 'none';
-            opponentTopDummy.classList.add('hidden');
-        } else { // 'suggest'
-            p1DirectChoiceSection.style.display = 'none';
-            p1PreferencesSection.style.display = 'grid';
-            opponentTopDummy.classList.remove('hidden');
+    function toggle() {
+        if (selMethod.value === 'direct_choice') {
+            directSec.style.display = 'block';
+            prefSec.style.display = 'none';
+            oppDummy.classList.add('hidden');
+        } else {
+            directSec.style.display = 'none';
+            prefSec.style.display = 'grid';
+            oppDummy.classList.remove('hidden');
         }
     }
-
-    p1SelectionMethod?.addEventListener('change', toggleP1Mode);
-    toggleP1Mode(); // Run on page load
+    selMethod?.addEventListener('change', toggle);
+    toggle();
 }
 
-/* ==============================================================
-   HANDLE DYNAMIC RESULT CARD ACTIONS
-================================================================*/
-function setupResultCardActions() {
-    const resultsArea = qs('#results-display-area');
-    if (!resultsArea) return;
-
-    resultsArea.addEventListener('click', (e) => {
-        // Check if a "Select for Matchup" button was clicked
-        if (e.target.matches('.select-alternative-btn')) {
-            const button = e.target;
-            const fighterId = button.dataset.fighterId;
-            const playerPrefix = button.dataset.playerPrefix;
-            const form = qs('#fighter-chooser-form');
-
-            if (!fighterId || !playerPrefix || !form) return;
-            
-            // Create a hidden input to tell the backend which fighter to lock
-            const actionInput = document.createElement('input');
-            actionInput.type = 'hidden';
-            actionInput.name = 'action';
-            actionInput.value = `lock_${playerPrefix}:${fighterId}`;
-            form.appendChild(actionInput);
-
-            // Submit the form to regenerate the matchup with the new selection
-            form.submit();
+/***************************  LOCK BUTTON ANNOTATION  ***************************/
+function annotateLockButtons() {
+    qsa('.lock-button').forEach(btn => {
+        const val = btn.value || ''; // may be undefined if JS‑generated
+        let m = val.match(/^lock_(p1|opp):(\d+)/);
+        if (m) {
+            btn.dataset.playerPrefix = m[1];
+            btn.dataset.fighterId   = m[2];
+            btn.dataset.locked      = 'false';
+            btn.type = 'button'; // prevent implicit form submit
+        } else if ((m = val.match(/^unlock_(p1|opp)$/))) {
+            btn.dataset.playerPrefix = m[1];
+            btn.dataset.fighterId   = qs(`#current_locked_${m[1]}_id`).value;
+            btn.dataset.locked      = 'true';
+            btn.type = 'button';
         }
-        
-        // Note: The regular Lock/Unlock buttons have type="submit", so they
-        // trigger a form submission automatically without needing JS.
     });
+}
+
+/***************************  RESULT‑CARD INTERACTIONS  ***************************/
+function setupResultCardActions() {
+    const results = qs('#results-display-area');
+    if (!results) return;
+
+    results.addEventListener('click', (e) => {
+        const tgt = e.target;
+        if (tgt.closest('.select-alternative-btn')) {
+            e.preventDefault();
+            promoteAlternative(tgt.closest('.select-alternative-btn'));
+        } else if (tgt.closest('.lock-button')) {
+            e.preventDefault();
+            toggleLock(tgt.closest('.lock-button'));
+        }
+    });
+}
+
+/***********  ALT → MAIN (NO AUTO‑LOCK)  ***********/
+function promoteAlternative(selBtn) {
+    const player = selBtn.dataset.playerPrefix; // p1 | opp
+    const fid    = selBtn.dataset.fighterId;
+    const altCard  = selBtn.closest('.fighter-card');
+    const mainCard = qs(`#${player}-main-suggestion`);
+    if (!altCard || !mainCard) return;
+
+    // —— Clone nodes so we don’t lose event listeners on originals
+    const altClone  = altCard.cloneNode(true);
+    const mainClone = mainCard.cloneNode(true);
+
+    // —— Rebuild footer for new main (lock‑btn) & new alt (select‑btn)
+    altClone.id = `${player}-main-suggestion`;
+    altClone.classList.replace('alternative-suggestion', 'main-suggestion');
+    altClone.querySelector('.fighter-card-footer').innerHTML =
+        lockButtonHTML(player, fid);
+
+    const prevMainId = extractFighterIdFromCard(mainCard);
+    mainClone.id = '';
+    mainClone.classList.replace('main-suggestion', 'alternative-suggestion');
+    mainClone.querySelector('.fighter-card-footer').innerHTML =
+        selectButtonHTML(player, prevMainId);
+
+    // —— Swap in DOM
+    mainCard.replaceWith(altClone);
+    altCard.replaceWith(mainClone);
+
+    // —— Annotate the freshly minted lock button so it’s interactive
+    annotateLockButtons();
+}
+
+/***********  LOCK / UNLOCK TOGGLE  ***********/
+function toggleLock(btn) {
+    const player = btn.dataset.playerPrefix;
+    const fid    = btn.dataset.fighterId;
+    const hidden = qs(`#current_locked_${player}_id`);
+
+    if (btn.dataset.locked === 'true') { // ——— UNLOCK
+        btn.dataset.locked = 'false';
+        hidden.value = '';
+        btn.classList.replace('btn-unlock', 'btn-lock');
+        btn.textContent = '🔒 Lock Fighter';
+    } else {                              // ——— LOCK
+        btn.dataset.locked = 'true';
+        hidden.value = fid;
+        btn.classList.replace('btn-lock', 'btn-unlock');
+        btn.textContent = '🔓 Fighter Locked';
+    }
+}
+
+/***************************  HTML HELPERS  ***************************/
+function lockButtonHTML(player, fid) {
+    return `<button type="button" class="lock-button btn-lock" data-player-prefix="${player}" data-fighter-id="${fid}" data-locked="false">🔒 Lock Fighter</button>`;
+}
+function selectButtonHTML(player, fid) {
+    return `<button type="button" class="select-alternative-btn" data-player-prefix="${player}" data-fighter-id="${fid}">Select for Matchup</button>`;
+}
+function extractFighterIdFromCard(card) {
+    const lb = qs('.lock-button', card);
+    if (lb) {
+        return lb.dataset.fighterId || (lb.value && lb.value.split(':')[1]);
+    }
+    const sb = qs('.select-alternative-btn', card);
+    return sb?.dataset.fighterId || '';
 }
