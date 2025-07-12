@@ -41,6 +41,7 @@ function setupSetSelection() {
 
     const setToggleBtn = qs('#toggle-set-selection-btn');
     const LOCAL_KEY_COLLAPSED = 'unmatchedChooserSetSelectionCollapsed';
+    const COOKIE_KEY_COLLAPSED = 'set_selection_collapsed';
     const selectAllSetsButton = qs('#select-all-sets-btn');
     const deselectAllSetsButton = qs('#deselect-all-sets-btn');
     const setCheckboxes = qsa('#set-checkboxes input[type="checkbox"]');
@@ -59,7 +60,12 @@ function setupSetSelection() {
         setCookie(COOKIE_KEY, JSON.stringify(selected), 365);
     }
 
-    if (localStorage.getItem(LOCAL_KEY_COLLAPSED) === 'true') {
+    const cookieCollapsed = getCookie(COOKIE_KEY_COLLAPSED);
+    let isCollapsed = cookieCollapsed !== null
+        ? cookieCollapsed === 'true'
+        : localStorage.getItem(LOCAL_KEY_COLLAPSED) === 'true';
+
+    if (isCollapsed) {
         setSelectionWrapper.classList.add('collapsed');
         setToggleBtn.setAttribute('aria-expanded', 'false');
     } else {
@@ -71,6 +77,7 @@ function setupSetSelection() {
         const collapsed = setSelectionWrapper.classList.toggle('collapsed');
         setToggleBtn.setAttribute('aria-expanded', String(!collapsed));
         localStorage.setItem(LOCAL_KEY_COLLAPSED, String(collapsed));
+        setCookie(COOKIE_KEY_COLLAPSED, String(collapsed), 365);
     });
 
     selectAllSetsButton?.addEventListener('click', () => {

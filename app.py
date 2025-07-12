@@ -256,6 +256,10 @@ def index():
             except Exception:
                 pass
 
+    # Determine if the set-selection panel should start collapsed
+    collapsed_cookie = request.cookies.get("set_selection_collapsed", "true")
+    sets_collapsed = collapsed_cookie == "true"
+
     # Dropdown list for direct choices (same for both players)
     all_fighters_sorted = sorted(FIGHTERS_DATA, key=lambda x: x["name"])
 
@@ -333,12 +337,18 @@ def index():
         results=results_data,
         selected_data=selected_data,
         error_message=error_message,
+        sets_collapsed=sets_collapsed,
     ))
 
     # Persist owned set selections for future visits
     response.set_cookie(
         "owned_sets",
         json.dumps(selected_data["owned_sets"]),
+        max_age=60 * 60 * 24 * 365,
+    )
+    response.set_cookie(
+        "set_selection_collapsed",
+        "true" if sets_collapsed else "false",
         max_age=60 * 60 * 24 * 365,
     )
 
