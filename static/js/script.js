@@ -4,6 +4,20 @@
 function qs(selector, scope = document) { return scope.querySelector(selector); }
 function qsa(selector, scope = document) { return [...scope.querySelectorAll(selector)]; }
 
+function getCookie(name) {
+    const match = document.cookie.split('; ').find(row => row.startsWith(name + '='));
+    return match ? decodeURIComponent(match.split('=')[1]) : null;
+}
+
+function setCookie(name, value, days) {
+    let expires = '';
+    if (days) {
+        const date = new Date(Date.now() + days * 24 * 60 * 60 * 1000);
+        expires = '; expires=' + date.toUTCString();
+    }
+    document.cookie = name + '=' + encodeURIComponent(value) + expires + '; path=/';
+}
+
 /* ==============================================================
    EVENT LISTENERS
 ================================================================*/
@@ -30,6 +44,20 @@ function setupSetSelection() {
     const selectAllSetsButton = qs('#select-all-sets-btn');
     const deselectAllSetsButton = qs('#deselect-all-sets-btn');
     const setCheckboxes = qsa('#set-checkboxes input[type="checkbox"]');
+    const COOKIE_KEY = 'owned_sets';
+
+    // Load any saved sets from cookie and apply them
+    const cookieVal = getCookie(COOKIE_KEY);
+    if (cookieVal) {
+        let sets = [];
+        try { sets = JSON.parse(cookieVal); } catch (e) { sets = cookieVal.split('|'); }
+        setCheckboxes.forEach(cb => { cb.checked = sets.includes(cb.value); });
+    }
+
+    function saveOwnedSetsToCookie() {
+        const selected = setCheckboxes.filter(cb => cb.checked).map(cb => cb.value);
+        setCookie(COOKIE_KEY, JSON.stringify(selected), 365);
+    }
 
     if (localStorage.getItem(LOCAL_KEY_COLLAPSED) === 'true') {
         setSelectionWrapper.classList.add('collapsed');
@@ -45,8 +73,16 @@ function setupSetSelection() {
         localStorage.setItem(LOCAL_KEY_COLLAPSED, String(collapsed));
     });
 
-    selectAllSetsButton?.addEventListener('click', () => setCheckboxes.forEach(cb => cb.checked = true));
-    deselectAllSetsButton?.addEventListener('click', () => setCheckboxes.forEach(cb => cb.checked = false));
+    selectAllSetsButton?.addEventListener('click', () => {
+        setCheckboxes.forEach(cb => cb.checked = true);
+        saveOwnedSetsToCookie();
+    });
+    deselectAllSetsButton?.addEventListener('click', () => {
+        setCheckboxes.forEach(cb => cb.checked = false);
+        saveOwnedSetsToCookie();
+    });
+
+    setCheckboxes.forEach(cb => cb.addEventListener('change', saveOwnedSetsToCookie));
 }
 
 

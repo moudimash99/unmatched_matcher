@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, make_response
 import random
 import json
 import hashlib
@@ -247,6 +247,15 @@ def index():
     results_data = None
     error_message = None
 
+    # Load owned sets from cookie on initial GET request
+    if request.method == "GET":
+        cookie_val = request.cookies.get("owned_sets")
+        if cookie_val:
+            try:
+                selected_data["owned_sets"] = json.loads(cookie_val)
+            except Exception:
+                pass
+
     # Dropdown list for direct choices (same for both players)
     all_fighters_sorted = sorted(FIGHTERS_DATA, key=lambda x: x["name"])
 
@@ -306,7 +315,7 @@ def index():
     # -----------------------------------------------------
     # 4E.  Render
     # -----------------------------------------------------
-    return render_template(
+    response = make_response(render_template(
         "index.html",
         all_sets_list=ALL_SETS_LIST,
         all_playstyles=ALL_PLAYSTYLES,
@@ -315,7 +324,16 @@ def index():
         results=results_data,
         selected_data=selected_data,
         error_message=error_message,
-    )
+    ))
+
+    if request.method == "POST":
+        response.set_cookie(
+            "owned_sets",
+            json.dumps(selected_data["owned_sets"]),
+            max_age=60 * 60 * 24 * 365,
+        )
+
+    return response
 
 
 @app.route("/api/matchup", methods=["POST"])
