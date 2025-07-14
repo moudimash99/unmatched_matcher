@@ -1,22 +1,21 @@
 /* ==============================================================
    Unmatched Fighter Chooser – Client‑side UX helpers
    ————————————————————————————————————————————————
-   ✨ 2025‑07 – Re‑worked to address:
-      1. Selecting an alternative should *not* auto‑lock.
-      2. The 🔒/🔓 button must toggle instantly (no full reload).
-      3. Locking must leave *all* current suggestions visible.
-      4. Owned‑sets collapse + checkbox state persist 10 yrs via cookies.
+   ✨ Refactored to use a local win-percentage matrix and
+      a centralized UI update function for robust, instant
+      matchup changes.
 ================================================================*/
 
-/***************************  DOM SHORTCUTS  ***************************/
-const qs  = (sel, ctx = document) => ctx.querySelector(sel);
+/*************************** DOM SHORTCUTS  ***************************/
+const qs = (sel, ctx = document) => ctx.querySelector(sel);
 const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
-/***************************  COOKIE HELPERS  ***************************/
-function setCookie(name, value, days = 3650) { // ≈10 yrs
+/*************************** COOKIE HELPERS  ***************************/
+function setCookie(name, value, days = 3650) { // ~10 years
     const exp = new Date(Date.now() + days * 864e5).toUTCString();
-    document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; expires=${exp}; path=/`;
+    document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; expires=${exp}; path=/; SameSite=Lax`;
 }
+
 function getCookie(name) {
     return document.cookie.split('; ').reduce((v, c) => {
         const [k, val] = c.split('=');
@@ -24,7 +23,7 @@ function getCookie(name) {
     }, '');
 }
 
-/***************************  DOMContentLoaded  ***************************/
+/*************************** INITIALIZATION  ***************************/
 document.addEventListener('DOMContentLoaded', () => {
     setupSetSelection();
     setupPlaystyleToggles();
@@ -33,19 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
     setupResultCardActions();
 });
 
-/***************************  OWNED–SET PANEL  ***************************/
+/*************************** UI SETUP FUNCTIONS  ***************************/
 function setupSetSelection() {
     const wrapper = qs('.set-selection');
     if (!wrapper) return;
 
     const toggleBtn = qs('#toggle-set-selection-btn');
     const SELECT_COLLAPSE_KEY = 'ufs_sets_collapsed';
-    const ALL_SETS_KEY        = 'ufs_owned_sets';
-    const selectAllBtn        = qs('#select-all-sets-btn');
-    const deselectAllBtn      = qs('#deselect-all-sets-btn');
-    const checkboxes          = qsa('#set-checkboxes input[type="checkbox"]');
+    const ALL_SETS_KEY = 'ufs_owned_sets';
+    const selectAllBtn = qs('#select-all-sets-btn');
+    const deselectAllBtn = qs('#deselect-all-sets-btn');
+    const checkboxes = qsa('#set-checkboxes input[type="checkbox"]');
 
-    // —— Restore collapse state
+    // Restore collapse state from cookie
     const wasCollapsed = getCookie(SELECT_COLLAPSE_KEY) === '1';
     wrapper.classList.toggle('collapsed', wasCollapsed);
     toggleBtn.setAttribute('aria-expanded', String(!wasCollapsed));
@@ -56,14 +55,18 @@ function setupSetSelection() {
         setCookie(SELECT_COLLAPSE_KEY, collapsed ? '1' : '0');
     });
 
-    // —— Restore checkboxes
+    // Restore checkboxes from cookie
     const storedSets = getCookie(ALL_SETS_KEY);
     if (storedSets) {
-        const arr = storedSets.split(',');
-        checkboxes.forEach(cb => cb.checked = arr.includes(cb.value));
+        try {
+            const arr = storedSets.split(',');
+            checkboxes.forEach(cb => cb.checked = arr.includes(cb.value));
+        } catch (e) {
+            console.error("Could not parse owned sets cookie:", e);
+        }
     }
 
-    // —— Persist on change
+    // Persist checkbox state on change
     const persist = () => {
         const checked = checkboxes.filter(cb => cb.checked).map(cb => cb.value);
         setCookie(ALL_SETS_KEY, checked.join(','));
@@ -73,7 +76,6 @@ function setupSetSelection() {
     deselectAllBtn?.addEventListener('click', () => { checkboxes.forEach(cb => cb.checked = false); persist(); });
 }
 
-/***************************  PLAY‑STYLE PANELS  ***************************/
 function setupPlaystyleToggles() {
     qsa('.toggle-playstyle-btn').forEach(btn => {
         const target = qs(`#${btn.dataset.target}`);
@@ -86,14 +88,14 @@ function setupPlaystyleToggles() {
     });
 }
 
-/***************************  P1 MODE SWITCH  ***************************/
 function setupP1SelectionToggle() {
     const selMethod = qs('#p1_selection_method');
     const directSec = qs('#p1-direct-choice-section');
-    const prefSec   = qs('#p1-preferences-section');
-    const oppDummy  = qs('#opponent-controls .top-control-wrapper');
+    const prefSec = qs('#p1-preferences-section');
+    const oppDummy = qs('#opponent-controls .top-control-wrapper');
 
     function toggle() {
+        if (!selMethod || !directSec || !prefSec || !oppDummy) return;
         if (selMethod.value === 'direct_choice') {
             directSec.style.display = 'block';
             prefSec.style.display = 'none';
@@ -105,29 +107,31 @@ function setupP1SelectionToggle() {
         }
     }
     selMethod?.addEventListener('change', toggle);
-    toggle();
+    toggle(); // Initial state
 }
 
-/***************************  LOCK BUTTON ANNOTATION  ***************************/
+/*************************** CORE INTERACTION LOGIC  ***************************/
+
+/**
+ * Changes server-side lock buttons to client-side JS buttons to prevent reloads.
+ */
 function annotateLockButtons() {
     qsa('.lock-button').forEach(btn => {
-        const val = btn.value || ''; // may be undefined if JS‑generated
-        let m = val.match(/^lock_(p1|opp):(\d+)/);
+        const val = btn.value || '';
+        let m = val.match(/^(lock|unlock)_(p1|opp):?([^:]*)$/);
         if (m) {
-            btn.dataset.playerPrefix = m[1];
-            btn.dataset.fighterId   = m[2];
-            btn.dataset.locked      = 'false';
-            btn.type = 'button'; // prevent implicit form submit
-        } else if ((m = val.match(/^unlock_(p1|opp)$/))) {
-            btn.dataset.playerPrefix = m[1];
-            btn.dataset.fighterId   = qs(`#current_locked_${m[1]}_id`).value;
-            btn.dataset.locked      = 'true';
-            btn.type = 'button';
+            btn.dataset.action = m[1];
+            btn.dataset.playerPrefix = m[2];
+            btn.dataset.fighterId = m[3] || qs(`#current_locked_${m[2]}_id`).value;
+            btn.dataset.locked = (m[1] === 'unlock').toString();
+            btn.type = 'button'; // CRITICAL: Prevent form submission
         }
     });
 }
 
-/***************************  RESULT‑CARD INTERACTIONS  ***************************/
+/**
+ * Sets up a single event listener on the results area to handle all card interactions.
+ */
 function setupResultCardActions() {
     const results = qs('#results-display-area');
     if (!results) return;
@@ -136,7 +140,7 @@ function setupResultCardActions() {
         const tgt = e.target;
         if (tgt.closest('.select-alternative-btn')) {
             e.preventDefault();
-            promoteAlternative(tgt.closest('.select-alternative-btn'));
+            promoteAlternative(tgt.closest('.fighter-card'));
         } else if (tgt.closest('.lock-button')) {
             e.preventDefault();
             toggleLock(tgt.closest('.lock-button'));
@@ -144,82 +148,52 @@ function setupResultCardActions() {
     });
 }
 
-/***********  WIN PERCENTAGE MATRIX  ***********/
-let WIN_PERCENTAGE_MATRIX = {};
-
-function getWinPercentageFromMatrix(fighterId, opponentId) {
-    if (!fighterId || !opponentId || !WIN_PERCENTAGE_MATRIX) {
-        return { percentage: 'N/A', opponent_name: 'Opponent' };
-    }
-    const key = [fighterId, opponentId].sort().join(':');
-    const matrixEntry = WIN_PERCENTAGE_MATRIX[key];
-    // Find the opponent's name for display purposes
-    const opponent = ALL_FIGHTERS_JS.find(f => f.id === opponentId);
-    const opponentName = opponent ? opponent.name : 'Opponent';
-    if (matrixEntry && matrixEntry[fighterId] !== undefined) {
-        return { percentage: matrixEntry[fighterId], opponent_name: opponentName };
-    }
-    return { percentage: 'N/A', opponent_name: opponentName };
-}
-
-/*********** ALT → MAIN (USING LOCAL MATRIX)  ***********/
-function promoteAlternative(selBtn) {
-    const player = selBtn.dataset.playerPrefix;
-    const promotedFighterId = selBtn.dataset.fighterId;
-    const altCard = selBtn.closest('.fighter-card');
+/**
+ * Promotes an alternative card to the main slot and updates the UI.
+ * @param {HTMLElement} altCard - The alternative fighter card that was clicked.
+ */
+function promoteAlternative(altCard) {
+    const player = altCard.dataset.playerPrefix;
     const mainCard = qs(`#${player}-main-suggestion`);
-    if (!altCard || !mainCard) return;
+    if (!mainCard) return;
 
-    // --- Get the ID of the fighter this new card will be facing
-    const opponentPlayer = (player === 'p1') ? 'opp' : 'p1';
-    const opponentCard = qs(`#${opponentPlayer}-main-suggestion`);
-    const opponentFighterId = extractFighterIdFromCard(opponentCard);
-
-    // --- Clone nodes and rebuild the buttons
-    const altClone = altCard.cloneNode(true);
     const mainClone = mainCard.cloneNode(true);
-    
+    const altClone = altCard.cloneNode(true);
+
+    // Configure the newly promoted card
     altClone.id = `${player}-main-suggestion`;
     altClone.classList.replace('alternative-suggestion', 'main-suggestion');
-    altClone.querySelector('.fighter-card-footer').innerHTML = 
-        lockButtonHTML(player, promotedFighterId);
+    altClone.querySelector('.fighter-card-footer').innerHTML = lockButtonHTML(player, altCard.dataset.fighterId);
 
-    const prevMainId = extractFighterIdFromCard(mainCard);
+    // Configure the newly demoted card
     mainClone.id = '';
     mainClone.classList.replace('main-suggestion', 'alternative-suggestion');
-    mainClone.querySelector('.fighter-card-footer').innerHTML = 
-        selectButtonHTML(player, prevMainId);
-    
-    // --- Swap in DOM
+    mainClone.querySelector('.fighter-card-footer').innerHTML = selectButtonHTML();
+
+    // Swap the cards in the DOM
     mainCard.replaceWith(altClone);
     altCard.replaceWith(mainClone);
-    
-    // --- Annotate new buttons and update win percentages from the matrix
+
+    // Annotate the new buttons and update all win percentages
     annotateLockButtons();
-
-    // Update the newly promoted card's win percentage text
-    const { percentage: newPct, opponent_name: newOpponentName } = getWinPercentageFromMatrix(promotedFighterId, opponentFighterId);
-    const newWinHtmlElement = altClone.querySelector('.fighter-details p:last-child');
-    if(newWinHtmlElement) newWinHtmlElement.innerHTML = `<strong>Win vs ${newOpponentName}:</strong> ${newPct}%`;
-
-    // Update the demoted card's win percentage text
-    const { percentage: oldPct, opponent_name: oldOpponentName } = getWinPercentageFromMatrix(prevMainId, opponentFighterId);
-    const oldWinHtmlElement = mainClone.querySelector('.fighter-details p:last-child');
-    if(oldWinHtmlElement) oldWinHtmlElement.innerHTML = `<strong>Win vs ${oldOpponentName}:</strong> ${oldPct}%`;
+    updateAllWinPercentages();
 }
 
-/***********  LOCK / UNLOCK TOGGLE  ***********/
+/**
+ * Toggles the lock state of a fighter card both visually and in the hidden form input.
+ * @param {HTMLElement} btn - The lock/unlock button that was clicked.
+ */
 function toggleLock(btn) {
     const player = btn.dataset.playerPrefix;
-    const fid    = btn.dataset.fighterId;
+    const fid = btn.dataset.fighterId;
     const hidden = qs(`#current_locked_${player}_id`);
 
-    if (btn.dataset.locked === 'true') { // ——— UNLOCK
+    if (btn.dataset.locked === 'true') { // --- UNLOCK ---
         btn.dataset.locked = 'false';
         hidden.value = '';
         btn.classList.replace('btn-unlock', 'btn-lock');
         btn.textContent = '🔒 Lock Fighter';
-    } else {                              // ——— LOCK
+    } else {                              // --- LOCK ---
         btn.dataset.locked = 'true';
         hidden.value = fid;
         btn.classList.replace('btn-lock', 'btn-unlock');
@@ -227,18 +201,72 @@ function toggleLock(btn) {
     }
 }
 
-/***************************  HTML HELPERS  ***************************/
-function lockButtonHTML(player, fid) {
-    return `<button type="button" class="lock-button btn-lock" data-player-prefix="${player}" data-fighter-id="${fid}" data-locked="false">🔒 Lock Fighter</button>`;
+/*************************** WIN PERCENTAGE & UI UPDATES  ***************************/
+
+/**
+ * Central function to update all win percentages on the page based on the current main matchup.
+ */
+function updateAllWinPercentages() {
+    const p1_main_id = extractFighterIdFromCard(qs('#p1-main-suggestion'));
+    const opp_main_id = extractFighterIdFromCard(qs('#opp-main-suggestion'));
+    if (!p1_main_id || !opp_main_id) return;
+
+    // Update all cards on Player 1's side
+    qsa(`[data-player-prefix="p1"]`).forEach(card => {
+        updateCardWinPct(card, opp_main_id);
+    });
+
+    // Update all cards on the Opponent's side
+    qsa(`[data-player-prefix="opp"]`).forEach(card => {
+        updateCardWinPct(card, p1_main_id);
+    });
 }
-function selectButtonHTML(player, fid) {
-    return `<button type="button" class="select-alternative-btn" data-player-prefix="${player}" data-fighter-id="${fid}">Select for Matchup</button>`;
-}
-function extractFighterIdFromCard(card) {
-    const lb = qs('.lock-button', card);
-    if (lb) {
-        return lb.dataset.fighterId || (lb.value && lb.value.split(':')[1]);
+
+/**
+ * Updates the win percentage text for a single card.
+ * @param {HTMLElement} card - The fighter card to update.
+ * @param {string} opponentId - The ID of the fighter it is facing.
+ */
+function updateCardWinPct(card, opponentId) {
+    const cardFighterId = extractFighterIdFromCard(card);
+    const winPctData = getWinPctFromMatrix(cardFighterId, opponentId);
+    const winHtmlElement = card.querySelector('.win-percentage-text');
+    if (winHtmlElement) {
+        winHtmlElement.innerHTML = `<strong>Win vs ${winPctData.opponent_name}:</strong> ${winPctData.percentage}%`;
     }
-    const sb = qs('.select-alternative-btn', card);
-    return sb?.dataset.fighterId || '';
+}
+
+/**
+ * Looks up a win percentage from the global matrix.
+ * @param {string} fighterId - The ID of the first fighter.
+ * @param {string} opponentId - The ID of the second fighter.
+ * @returns {{percentage: number|string, opponent_name: string}}
+ */
+function getWinPctFromMatrix(fighterId, opponentId) {
+    if (!fighterId || !opponentId || typeof WIN_PERCENTAGE_MATRIX !== 'object') {
+        return { percentage: 'N/A', opponent_name: 'Opponent' };
+    }
+    const key = [fighterId, opponentId].sort().join(':');
+    const matrixEntry = WIN_PERCENTAGE_MATRIX[key];
+
+    const opponentInfo = ALL_FIGHTERS_JS.find(f => f.id === opponentId);
+    const opponentName = opponentInfo ? opponentInfo.name : 'Opponent';
+
+    if (matrixEntry && matrixEntry[fighterId] !== undefined) {
+        return { percentage: matrixEntry[fighterId], opponent_name: opponentName };
+    }
+    return { percentage: 'N/A', opponent_name: opponentName };
+}
+
+/*************************** HTML HELPERS  ***************************/
+function lockButtonHTML(player, fid) {
+    return `<button type="button" class="lock-button btn-lock" data-action="lock" data-player-prefix="${player}" data-fighter-id="${fid}" data-locked="false">🔒 Lock Fighter</button>`;
+}
+
+function selectButtonHTML() {
+    return `<button type="button" class="select-alternative-btn">Select for Matchup</button>`;
+}
+
+function extractFighterIdFromCard(card) {
+    return card?.dataset.fighterId || '';
 }

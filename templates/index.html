@@ -10,6 +10,50 @@
 </head>
 
 <body>
+
+{% macro render_fighter_card(fighter, is_main, player_prefix, locked_id, vs_fighter) %}
+    {% if fighter %}
+        {# Determine button type and card classes based on context #}
+        {% set card_id_attr = 'id="' ~ player_prefix ~ '-main-suggestion"' if is_main else '' %}
+        {% set card_cls = "main-suggestion" if is_main else "alternative-suggestion" %}
+        {% set is_locked = fighter.id and fighter.id == locked_id %}
+
+        <div {{ card_id_attr | safe }} class="fighter-card {{ card_cls }}" data-fighter-id="{{ fighter.id }}" data-player-prefix="{{ player_prefix }}">
+            <div class="fighter-card-body">
+                <img src="{{ url_for('static', filename=fighter.image_url.replace('/static/', '')) }}" alt="{{ fighter.name }}" class="fighter-image" onerror="this.onerror=null;this.src='https://placehold.co/100x150/e9ecef/6c757d?text={{ fighter.name | urlencode }}';">
+                <div class="fighter-details">
+                    <h3 class="fighter-name">{{ fighter.name }}</h3>
+                    <p><strong>Set:</strong> {{ fighter.set }}</p>
+                    <p><strong>Range:</strong> {{ fighter.range | titlecase_custom }}</p>
+                    <p><strong>Playstyles:</strong> {{ fighter.playstyles | map('titlecase_custom') | join(', ') }}</p>
+
+                    {# Win percentage logic #}
+                    <p class="win-percentage-text">
+                    {% if vs_fighter %}
+                        {% set win_pct = calculate_win_percentage(fighter.id, vs_fighter.id) %}
+                        <strong>Win vs {{ vs_fighter.name }}:</strong> {{ win_pct }}%
+                    {% endif %}
+                    </p>
+                </div>
+            </div>
+            <div class="fighter-card-footer">
+                {# Main Card: Show a lock/unlock button (as a proper form submission) #}
+                {% if is_main %}
+                    {% if is_locked %}
+                        <button type="submit" name="action" value="unlock_{{ player_prefix }}" class="lock-button btn-unlock">🔓 Fighter Locked</button>
+                    {% else %}
+                        <button type="submit" name="action" value="lock_{{ player_prefix }}:{{ fighter.id }}" class="lock-button btn-lock">🔒 Lock Fighter</button>
+                    {% endif %}
+                {# Alternative Card: Show a JS-only select button #}
+                {% else %}
+                    <button type="button" class="select-alternative-btn">Select for Matchup</button>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+{% endmacro %}
+
+
 <header>
     <h1>Unmatched Fighter Chooser 🧭</h1>
     <p>Select sets, choose or get suggestions, and find your perfect Unmatched battle!</p>
@@ -39,8 +83,8 @@
                 {% endfor %}
             </div>
             <div class="set-actions">
-                <button type="button" id="select-all-sets-btn">Select All Sets</button>
-                <button type="button" id="deselect-all-sets-btn">Deselect All Sets</button>
+                <button type="button" id="select-all-sets-btn">Select All</button>
+                <button type="button" id="deselect-all-sets-btn">Deselect All</button>
             </div>
         </div>
     </section>
@@ -71,7 +115,7 @@
                 <div id="p1-preferences-section" class="preferences-row">
                     <div class="playstyle-selector">
                         <label>Preferred Play-style(s):</label>
-                        <button class="toggle-playstyle-btn" type="button" data-target="p1-playstyle-options" aria-expanded="false">Select play-styles</button>
+                        <button class="toggle-playstyle-btn" type="button" data-target="p1-playstyle-options" aria-expanded="false">Select</button>
                         <div id="p1-playstyle-options" class="playstyle-options collapsed">
                             {% for style in all_playstyles %}
                             <label><input type="checkbox" name="p1_playstyles" value="{{ style }}" {% if style in selected_data.p1_playstyles %}checked{% endif %}> {{ style | titlecase_custom }}</label>
@@ -96,7 +140,7 @@
                 <div class="preferences-row">
                     <div class="playstyle-selector">
                         <label>Preferred Play-style(s):</label>
-                        <button class="toggle-playstyle-btn" type="button" data-target="opp-playstyle-options" aria-expanded="false">Select play-styles</button>
+                        <button class="toggle-playstyle-btn" type="button" data-target="opp-playstyle-options" aria-expanded="false">Select</button>
                         <div id="opp-playstyle-options" class="playstyle-options collapsed">
                             {% for style in all_playstyles %}
                             <label><input type="checkbox" name="opp_playstyles" value="{{ style }}" {% if style in selected_data.opp_playstyles %}checked{% endif %}> {{ style | titlecase_custom }}</label>
@@ -124,7 +168,7 @@
     </section>
 </form>
 
-{% if results %}
+{% if results and results.p1_main and results.opp_main %}
 <section id="results-display-area" class="results-panel">
     <h2>Matchup Suggestion</h2>
 
@@ -135,15 +179,13 @@
     <div class="player-columns-container">
         <div class="player-column results-column">
             <h4>Player 1’s Fighter</h4>
-            {% if results.p1_main %}
-            {{ render_fighter_backend(results.p1_main, True, 'p1', selected_data.locked_p1_id, results.opp_main.id if results.opp_main else None) | safe }}
-            {% endif %}
+            {{ render_fighter_card(results.p1_main, True, 'p1', selected_data.locked_p1_id, results.opp_main) }}
 
             {% if results.p1_alternatives %}
             <h5>Alternatives:</h5>
             <div class="alternatives-grid">
                 {% for fighter in results.p1_alternatives %}
-                    {{ render_fighter_backend(fighter, False, 'p1', None, results.opp_main.id if results.opp_main else None) | safe }}
+                    {{ render_fighter_card(fighter, False, 'p1', None, results.opp_main) }}
                 {% endfor %}
             </div>
             {% endif %}
@@ -151,15 +193,13 @@
 
         <div class="player-column results-column">
             <h4>Opponent’s Fighter</h4>
-            {% if results.opp_main %}
-            {{ render_fighter_backend(results.opp_main, True, 'opp', selected_data.locked_opp_id, results.p1_main.id if results.p1_main else None) | safe }}
-            {% endif %}
+            {{ render_fighter_card(results.opp_main, True, 'opp', selected_data.locked_opp_id, results.p1_main) }}
 
             {% if results.opp_alternatives %}
             <h5>Alternatives:</h5>
             <div class="alternatives-grid">
                 {% for fighter in results.opp_alternatives %}
-                    {{ render_fighter_backend(fighter, False, 'opp', None, results.p1_main.id if results.p1_main else None) | safe }}
+                    {{ render_fighter_card(fighter, False, 'opp', None, results.p1_main) }}
                 {% endfor %}
             </div>
             {% endif %}
@@ -175,6 +215,7 @@
 
 <script>
     const ALL_FIGHTERS_JS = {{ all_fighters_for_select | tojson }};
+    const WIN_PERCENTAGE_MATRIX = {{ win_percentage_matrix | tojson }};
 </script>
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
