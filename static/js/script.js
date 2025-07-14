@@ -144,36 +144,68 @@ function setupResultCardActions() {
     });
 }
 
-/***********  ALT → MAIN (NO AUTO‑LOCK)  ***********/
+/***********  WIN PERCENTAGE MATRIX  ***********/
+let WIN_PERCENTAGE_MATRIX = {};
+
+function getWinPercentageFromMatrix(fighterId, opponentId) {
+    if (!fighterId || !opponentId || !WIN_PERCENTAGE_MATRIX) {
+        return { percentage: 'N/A', opponent_name: 'Opponent' };
+    }
+    const key = [fighterId, opponentId].sort().join(':');
+    const matrixEntry = WIN_PERCENTAGE_MATRIX[key];
+    // Find the opponent's name for display purposes
+    const opponent = ALL_FIGHTERS_JS.find(f => f.id === opponentId);
+    const opponentName = opponent ? opponent.name : 'Opponent';
+    if (matrixEntry && matrixEntry[fighterId] !== undefined) {
+        return { percentage: matrixEntry[fighterId], opponent_name: opponentName };
+    }
+    return { percentage: 'N/A', opponent_name: opponentName };
+}
+
+/*********** ALT → MAIN (USING LOCAL MATRIX)  ***********/
 function promoteAlternative(selBtn) {
-    const player = selBtn.dataset.playerPrefix; // p1 | opp
-    const fid    = selBtn.dataset.fighterId;
-    const altCard  = selBtn.closest('.fighter-card');
+    const player = selBtn.dataset.playerPrefix;
+    const promotedFighterId = selBtn.dataset.fighterId;
+    const altCard = selBtn.closest('.fighter-card');
     const mainCard = qs(`#${player}-main-suggestion`);
     if (!altCard || !mainCard) return;
 
-    // —— Clone nodes so we don’t lose event listeners on originals
-    const altClone  = altCard.cloneNode(true);
-    const mainClone = mainCard.cloneNode(true);
+    // --- Get the ID of the fighter this new card will be facing
+    const opponentPlayer = (player === 'p1') ? 'opp' : 'p1';
+    const opponentCard = qs(`#${opponentPlayer}-main-suggestion`);
+    const opponentFighterId = extractFighterIdFromCard(opponentCard);
 
-    // —— Rebuild footer for new main (lock‑btn) & new alt (select‑btn)
+    // --- Clone nodes and rebuild the buttons
+    const altClone = altCard.cloneNode(true);
+    const mainClone = mainCard.cloneNode(true);
+    
     altClone.id = `${player}-main-suggestion`;
     altClone.classList.replace('alternative-suggestion', 'main-suggestion');
-    altClone.querySelector('.fighter-card-footer').innerHTML =
-        lockButtonHTML(player, fid);
+    altClone.querySelector('.fighter-card-footer').innerHTML = 
+        lockButtonHTML(player, promotedFighterId);
 
     const prevMainId = extractFighterIdFromCard(mainCard);
     mainClone.id = '';
     mainClone.classList.replace('main-suggestion', 'alternative-suggestion');
-    mainClone.querySelector('.fighter-card-footer').innerHTML =
+    mainClone.querySelector('.fighter-card-footer').innerHTML = 
         selectButtonHTML(player, prevMainId);
-
-    // —— Swap in DOM
+    
+    // --- Swap in DOM
     mainCard.replaceWith(altClone);
     altCard.replaceWith(mainClone);
-
-    // —— Annotate the freshly minted lock button so it’s interactive
+    
+    // --- Annotate new buttons and update win percentages from the matrix
     annotateLockButtons();
+
+    // Update the newly promoted card's win percentage text
+    const { percentage: newPct, opponent_name: newOpponentName } = getWinPercentageFromMatrix(promotedFighterId, opponentFighterId);
+    const newWinHtmlElement = altClone.querySelector('.fighter-details p:last-child');
+    if(newWinHtmlElement) newWinHtmlElement.innerHTML = `<strong>Win vs ${newOpponentName}:</strong> ${newPct}%`;
+
+    // Update the demoted card's win percentage text
+    const { percentage: oldPct, opponent_name: oldOpponentName } = getWinPercentageFromMatrix(prevMainId, opponentFighterId);
+    const oldWinHtmlElement = mainClone.querySelector('.fighter-details p:last-child');
+    if(oldWinHtmlElement) oldWinHtmlElement.innerHTML = `<strong>Win vs ${oldOpponentName}:</strong> ${oldPct}%`;
 }
 
 /***********  LOCK / UNLOCK TOGGLE  ***********/

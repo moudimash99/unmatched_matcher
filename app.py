@@ -325,10 +325,8 @@ def api_matchup():
     payload = request.get_json(force=True)
     selected = {
         "owned_sets": payload.get("owned_sets", []),
-        "p1_selection_method": payload.get("p1_selection_method", "suggest"),
         "p1_playstyles": payload.get("p1_playstyles", []),
         "p1_range": payload.get("p1_range"),
-        "opp_selection_method": payload.get("opp_selection_method", "direct_choice"),
         "opp_playstyles": payload.get("opp_playstyles", []),
         "opp_range": payload.get("opp_range"),
         "locked_p1_id": payload.get("locked_p1_id"),
@@ -337,17 +335,27 @@ def api_matchup():
 
     results, error = generate_suggestions(selected)
 
-    # Clone fighters so we don't mutate global data
-    cloned = {
-        "p1_main": clone_fighter(results.get("p1_main")),
-        "p1_alternatives": [clone_fighter(f) for f in results.get("p1_alternatives", [])],
-        "opp_main": clone_fighter(results.get("opp_main")),
-        "opp_alternatives": [clone_fighter(f) for f in results.get("opp_alternatives", [])],
-    }
+    # --- Create the Win Percentage Matrix ---
+    win_percentage_matrix = {}
+    p1_team = [f for f in [results.get("p1_main")] + results.get("p1_alternatives", []) if f]
+    opp_team = [f for f in [results.get("opp_main")] + results.get("opp_alternatives", []) if f]
 
-    attach_win_percentages(cloned)
+    for p1_fighter in p1_team:
+        for opp_fighter in opp_team:
+            # Create a consistent key by always sorting the IDs
+            key = ":".join(sorted((p1_fighter["id"], opp_fighter["id"])))
+            if key not in win_percentage_matrix:
+                win_percentage_matrix[key] = {
+                    p1_fighter["id"]: calculate_win_percentage(p1_fighter["id"], opp_fighter["id"]),
+                    opp_fighter["id"]: calculate_win_percentage(opp_fighter["id"], p1_fighter["id"])
+                }
 
-    return jsonify({"results": cloned, "error_message": error})
+    # Note: We no longer need to clone or attach percentages directly to fighters
+    return jsonify({
+        "results": results,
+        "win_percentage_matrix": win_percentage_matrix,
+        "error_message": error
+    })
 
 # ---------------------------------------------------------
 # 5.  RUN  ────────────────────────────────────────────────
