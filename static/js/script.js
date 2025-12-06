@@ -204,6 +204,8 @@ function toggleLock(btn) {
         btn.classList.replace('btn-lock', 'btn-unlock');
         btn.textContent = '🔓 Fighter Locked';
     }
+    // Refresh win percentages after lock state changes (main matchup may change)
+    try { updateAllWinPercentages(); } catch (e) { /* graceful fallback */ }
 }
 
 /*************************** WIN PERCENTAGE & UI UPDATES  ***************************/
@@ -255,15 +257,18 @@ function getWinRate(fighterId, opponentId) {
     
     // Check A vs B
     if (WIN_MATRIX[fighterId] && WIN_MATRIX[fighterId][opponentId] !== undefined) {
-        return WIN_MATRIX[fighterId][opponentId];
+        const v = WIN_MATRIX[fighterId][opponentId];
+        // Some entries use -2 (sentinel) or other negative values to mean "unknown".
+        if (typeof v === 'number' && v >= 0 && v <= 100) return v;
     }
     
     // Check B vs A (and invert)
     if (WIN_MATRIX[opponentId] && WIN_MATRIX[opponentId][fighterId] !== undefined) {
-        return 100 - WIN_MATRIX[opponentId][fighterId];
+        const v2 = WIN_MATRIX[opponentId][fighterId];
+        if (typeof v2 === 'number' && v2 >= 0 && v2 <= 100) return 100 - v2;
     }
-    
-    return 50; // Default to fair if unknown
+
+    return null; // Unknown
 }
 
 /**
@@ -276,11 +281,14 @@ function getWinPctFromMatrix(fighterId, opponentId) {
     if (!fighterId || !opponentId || typeof WIN_MATRIX !== 'object') {
         return { percentage: 'N/A', opponent_name: 'Opponent' };
     }
-    
+
     const winRate = getWinRate(fighterId, opponentId);
     const opponentInfo = ALL_FIGHTERS_JS.find(f => f.id === opponentId);
     const opponentName = opponentInfo ? opponentInfo.name : 'Opponent';
-    
+
+    if (winRate === null || isNaN(winRate)) {
+        return { percentage: 'N/A', opponent_name: opponentName };
+    }
     return { percentage: Math.round(winRate), opponent_name: opponentName };
 }
 

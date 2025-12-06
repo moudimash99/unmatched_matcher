@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from fairpool import MatchupEngine # <--- ADD THIS
+from matchup_engine import MatchupEngine 
 import random
 import json
 import hashlib
@@ -22,11 +22,17 @@ def load_json_data(filename, default):
 FIGHTERS_DATA = load_json_data("fighters.json", {}).get("fighters", [])
 PLAYSTYLE_DEFINITIONS = load_json_data("fighters.json", {}).get("playstyle_definitions", {})
 WIN_MATRIX = load_json_data("win_matrix.json", {})
-engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX) # <--- ADD THIS
+engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX) 
 
 ALL_SETS_LIST = sorted({f["set"] for f in FIGHTERS_DATA})
 ALL_PLAYSTYLES = sorted({ps for f in FIGHTERS_DATA for ps in f["playstyles"]})
-ALL_RANGES = sorted({f["range"] for f in FIGHTERS_DATA})
+
+# Define Custom Sort Order for Range Dropdown
+RANGE_ORDER = ["Melee", "Reach", "Hybrid", "Ranged Assist", "Ranged"]
+ALL_RANGES = sorted(
+    {f["range"] for f in FIGHTERS_DATA}, 
+    key=lambda x: RANGE_ORDER.index(x) if x in RANGE_ORDER else 99
+)
 
 # ---------------------------------------------------------
 # 2.  HELPER FUNCTIONS  ───────────────────────────────────
@@ -65,6 +71,10 @@ def generate_suggestions(selected_data):
     p1_tags = set(selected_data["p1_playstyles"])
     opp_tags = set(selected_data["opp_playstyles"])
     
+    # Extract Range Preferences
+    p1_range = selected_data.get("p1_range")
+    opp_range = selected_data.get("opp_range")
+    
     # CASE A: P1 is LOCKED (Direct Choice or Lock Button)
     if selected_data["locked_p1_id"]:
         p1_fighter = find_fighter_by_id(selected_data["locked_p1_id"])
@@ -86,8 +96,9 @@ def generate_suggestions(selected_data):
         opp_fighter = find_fighter_by_id(selected_data["locked_opp_id"])
         if opp_fighter:
             results["opp_main"] = opp_fighter
+            
             # Ask Engine for P1s tailored to Opponent
-            p1_recs = engine.recommend_opponents(opp_fighter, available, p1_tags)
+            p1_recs = engine.recommend_opponents(opp_fighter, available, p1_tags, p1_range, quantity=5)
             
             if p1_recs:
                 results["p1_main"] = p1_recs[0]
@@ -95,6 +106,8 @@ def generate_suggestions(selected_data):
 
     # CASE C: Nobody Locked (Generate Fresh Matchups)
     else:
+                # batch_1v1 = engine.generate_batch(available, p1_tags, opp_tags, p1_range, opp_range, quantity=5)
+
         pool_result = engine.generate_fair_pools(available, p1_tags, opp_tags)
         if pool_result:
             p1_pool = pool_result['p1_pool']
@@ -177,19 +190,6 @@ def index():
             selected_data["locked_opp_id"] = None
 
         results_data, error_message = generate_suggestions(selected_data)
-
-        # if results_data:
-        #     p1_team = [f for f in [results_data.get("p1_main")] + results_data.get("p1_alternatives", []) if f]
-        #     opp_team = [f for f in [results_data.get("opp_main")] + results_data.get("opp_alternatives", []) if f]
-
-        #     for p1_fighter in p1_team:
-        #         for opp_fighter in opp_team:
-        #             key = ":".join(sorted((p1_fighter["id"], opp_fighter["id"])))
-        #             if key not in win_percentage_matrix:
-        #                 win_percentage_matrix[key] = {
-        #                     p1_fighter["id"]: calculate_win_percentage(p1_fighter["id"], opp_fighter["id"]),
-        #                     opp_fighter["id"]: calculate_win_percentage(opp_fighter["id"], opp_fighter["id"])
-        #                 }
 
     return render_template(
         "index.html",

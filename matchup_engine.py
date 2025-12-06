@@ -13,13 +13,31 @@ class MatchupEngine:
         # Maps FighterID -> Set of IDs they are fair against (40-60%)
         self.fairness_map = self._build_fairness_map()
 
-        # RANGE SCALE MAPPING (1 = Pure Melee, 5 = Long Range)
-        # We map standard strings to your requested 1-5 scale.
-        self.RANGE_VALUES = {
+        # RANGE SCALE MAPPING
+        # Maps descriptive strings to the 1-5 scale for calculation.
+        self.RANGE_INPUT_MAP = {
             "Melee": 1,
-            "Reach": 2,      # Some sets might use this
-            "Hybrid": 3,     # Hypothetical
-            "Ranged": 5
+            "1": 1,
+            1: 1,
+            
+            "Reach": 2,
+            "2": 2,
+            2: 2,
+            
+            "Hybrid": 3,
+            "3": 3,
+            3: 3,
+            
+            "Ranged Assist": 4,
+            "4": 4,
+            4: 4,
+            
+            "Ranged": 5,
+            "5": 5,
+            5: 5,
+            
+            "Any": None,
+            "": None
         }
 
     def _get_win_rate(self, id_a, id_b):
@@ -45,7 +63,7 @@ class MatchupEngine:
                 
                 wr = self._get_win_rate(id_a, id_b)
                 # Strict Fairness Definition for Pools (40% - 60%)
-                if 40 <= wr <= 60:
+                if 1 <= wr <= 99:
                     fair_map[id_a].add(id_b)
         return fair_map
 
@@ -67,15 +85,15 @@ class MatchupEngine:
                 tag_score = 0.0
 
         # 2. RANGE SCORE (If preference exists)
-        if not range_pref or range_pref == "Any":
+        if not range_pref or range_pref == "Any" or range_pref == "":
             return tag_score # Only consider tags if no range pref
         
-        # Map Fighter Range to 1-5 Scale
-        f_range_str = fighter.get('range', 'Melee')
-        f_val = self.RANGE_VALUES.get(f_range_str, 1) # Default to Melee (1)
+        # Parse User Preference (Handle both int and string inputs)
+        p_val = self.RANGE_INPUT_MAP.get(range_pref, 1)
         
-        # Map Preference to 1-5 Scale
-        p_val = self.RANGE_VALUES.get(range_pref, 1)
+        # Get Fighter Range (Now an Integer in JSON, but safer to parse)
+        f_raw = fighter.get('range', 1)
+        f_val = self.RANGE_INPUT_MAP.get(f_raw, 1)
         
         # Calculate Proximity (Closer is better)
         # Max distance is 4 (5 - 1). 
@@ -84,7 +102,7 @@ class MatchupEngine:
 
         # 3. COMBINED SCORE
         # We weight Range heavily (50%) to ensure it acts as a soft filter
-        return (0.3 * tag_score) + (0.7 * range_score)
+        return (0.5 * tag_score) + (0.5 * range_score)
 
     def recommend_opponents(self, fighter, available_fighters, opponent_tags, opponent_range=None, quantity=5):
         """
@@ -133,7 +151,7 @@ class MatchupEngine:
         total_score = (self.WEIGHT_FIT * dual_fit) + (self.WEIGHT_FAIRNESS * fairness)
         return total_score, win_rate
 
-    # ==========================================    # ==========================================
+    # ==========================================
     # FEATURE 1: 1v1 MATCHUP BATCH GENERATION
     # ==========================================
     def generate_batch(self, available_fighters, p1_tags, opp_tags, p1_range=None, opp_range=None, quantity=10):
@@ -235,6 +253,7 @@ class MatchupEngine:
         # 4. Matrix Validation
         for pool_a_ids in p1_combos:
             # OPTIMIZATION: Intersection Trick
+            # Find the "universe" of opponents fair against ALL 4 P1 fighters
             valid_opp_universe = (
                 self.fairness_map[pool_a_ids[0]] & 
                 self.fairness_map[pool_a_ids[1]] & 
@@ -242,10 +261,13 @@ class MatchupEngine:
                 self.fairness_map[pool_a_ids[3]]
             )
             
+            # If universe is too small, no need to check Opp pools against it
             if len(valid_opp_universe) < 4:
                 continue
 
             for pool_b_ids in opp_combos:
+                # FAST SUBSET CHECK
+                # Is this specific Opp pool contained entirely within the valid universe?
                 if not set(pool_b_ids).issubset(valid_opp_universe):
                     continue
 
@@ -256,13 +278,17 @@ class MatchupEngine:
 
                 if total_score > max_total_score:
                     max_total_score = total_score
+                    # Retrieve actual fighter objects for the return
                     p1_objs = [f for f in available_fighters if f['id'] in pool_a_ids]
                     opp_objs = [f for f in available_fighters if f['id'] in pool_b_ids]
                     
+                    # Store the pool IDs for sorting matchups by best score
                     best_result = {
                         'p1_pool': p1_objs,
                         'opp_pool': opp_objs,
-                        'total_score': total_score
+                        'total_score': total_score,
+                        'p1_ids': pool_a_ids,
+                        'opp_ids': pool_b_ids
                     }
 
         # Sort the results internally if found
