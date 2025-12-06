@@ -8,6 +8,9 @@ class MatchupEngine:
         self.win_rate_matrix = win_rate_matrix
         self.WEIGHT_FIT = 0.6
         self.WEIGHT_FAIRNESS = 0.4
+
+        self.P1_POOL_SIZE = 4
+        self.OPP_POOL_SIZE = 3
         
         # PRE-CALCULATION: Build the Fairness Map immediately (O(1) lookups later)
         # Maps FighterID -> Set of IDs they are fair against (40-60%)
@@ -211,13 +214,22 @@ class MatchupEngine:
     # ==========================================
     # FEATURE 2: FAIR PLAY POOLS (4v4)
     # ==========================================
+    
     def generate_fair_pools(self, available_fighters, p1_tags, opp_tags, p1_range=None, opp_range=None):
         """
-        Generates optimal 4v4 pools using the Symmetric Elite Strategy.
+        Generates optimal pools using the Symmetric Elite Strategy,
+        but with asymmetric pool sizes:
+          - P1 pool: 5 fighters
+          - Opp pool: 3 fighters
         Uses Set Intersection for O(1) fairness validation.
         """
-        # 0. Safety Check: Need at least 4 fighters to make a pool
-        if len(available_fighters) < 4:
+        # CONFIGURE POOL SIZES HERE
+        
+        P1_POOL_SIZE = self.P1_POOL_SIZE
+        OPP_POOL_SIZE = self.OPP_POOL_SIZE
+
+        # 0. Safety Check: Need enough fighters to make the *bigger* pool
+        if len(available_fighters) < max(P1_POOL_SIZE, OPP_POOL_SIZE):
             return None
 
         # 1. Score ALL fighters individually (With Range)
@@ -225,15 +237,15 @@ class MatchupEngine:
         opp_scores = []
         
         for f in available_fighters:
-            # Pass range preferences here
             s_p1 = self._calculate_individual_fit(f, p1_tags, p1_range)
             s_opp = self._calculate_individual_fit(f, opp_tags, opp_range)
             p1_scores.append({'id': f['id'], 'score': s_p1, 'obj': f})
             opp_scores.append({'id': f['id'], 'score': s_opp, 'obj': f})
         
-        # 2. Get Elite Candidates (Top 12)
-        p1_elite = sorted(p1_scores, key=lambda x: x['score'], reverse=True)[:12]
-        opp_elite = sorted(opp_scores, key=lambda x: x['score'], reverse=True)[:12]
+        # 2. Get Elite Candidates (Top 12 or any k you like)
+        ELITE_K = 12  # you can tweak this
+        p1_elite = sorted(p1_scores, key=lambda x: x['score'], reverse=True)[:ELITE_K]
+        opp_elite = sorted(opp_scores, key=lambda x: x['score'], reverse=True)[:ELITE_K]
         
         # Extract IDs for combination generation
         p1_ids = [x['id'] for x in p1_elite]
@@ -246,34 +258,32 @@ class MatchupEngine:
         best_result = None
         max_total_score = -1.0
 
-        # 3. Generate Pools
-        p1_combos = list(combinations(p1_ids, 4))
-        opp_combos = list(combinations(opp_ids, 4))
+        # 3. Generate Pools with ASYMMETRIC sizes
+        p1_combos = list(combinations(p1_ids, P1_POOL_SIZE))
+        opp_combos = list(combinations(opp_ids, OPP_POOL_SIZE))
 
         # 4. Matrix Validation
         for pool_a_ids in p1_combos:
             # OPTIMIZATION: Intersection Trick
-            # Find the "universe" of opponents fair against ALL 4 P1 fighters
-            valid_opp_universe = (
-                self.fairness_map[pool_a_ids[0]] & 
-                self.fairness_map[pool_a_ids[1]] & 
-                self.fairness_map[pool_a_ids[2]] & 
-                self.fairness_map[pool_a_ids[3]]
-            )
+            # Universe of opponents fair against ALL P1 fighters in this pool
+            iterator = iter(pool_a_ids)
+            first_id = next(iterator)
+            valid_opp_universe = set(self.fairness_map[first_id])
+            for fid in iterator:
+                valid_opp_universe &= self.fairness_map[fid]
             
             # If universe is too small, no need to check Opp pools against it
-            if len(valid_opp_universe) < 4:
+            if len(valid_opp_universe) < OPP_POOL_SIZE:
                 continue
 
             for pool_b_ids in opp_combos:
                 # FAST SUBSET CHECK
-                # Is this specific Opp pool contained entirely within the valid universe?
                 if not set(pool_b_ids).issubset(valid_opp_universe):
                     continue
 
                 # 5. Global Scoring (Avg Fit A + Avg Fit B)
-                avg_p1 = sum(p1_score_map[i] for i in pool_a_ids) / 4.0
-                avg_opp = sum(opp_score_map[i] for i in pool_b_ids) / 4.0
+                avg_p1 = sum(p1_score_map[i] for i in pool_a_ids) / float(P1_POOL_SIZE)
+                avg_opp = sum(opp_score_map[i] for i in pool_b_ids) / float(OPP_POOL_SIZE)
                 total_score = avg_p1 + avg_opp
 
                 if total_score > max_total_score:
@@ -282,7 +292,6 @@ class MatchupEngine:
                     p1_objs = [f for f in available_fighters if f['id'] in pool_a_ids]
                     opp_objs = [f for f in available_fighters if f['id'] in pool_b_ids]
                     
-                    # Store the pool IDs for sorting matchups by best score
                     best_result = {
                         'p1_pool': p1_objs,
                         'opp_pool': opp_objs,
@@ -297,7 +306,14 @@ class MatchupEngine:
             matchup_scores = []
             for p1_fighter in best_result['p1_pool']:
                 for opp_fighter in best_result['opp_pool']:
-                    score, _ = self._score_pair(p1_fighter, opp_fighter, p1_tags, opp_tags, p1_range, opp_range)
+                    score, _ = self._score_pair(
+                        p1_fighter,
+                        opp_fighter,
+                        p1_tags,
+                        opp_tags,
+                        p1_range,
+                        opp_range
+                    )
                     matchup_scores.append({
                         'p1': p1_fighter,
                         'opp': opp_fighter,
@@ -312,9 +328,13 @@ class MatchupEngine:
             best_opp = matchup_scores[0]['opp']
             
             # Reorder p1_pool
-            p1_pool_reordered = [best_p1] + [f for f in best_result['p1_pool'] if f['id'] != best_p1['id']]
+            p1_pool_reordered = [best_p1] + [
+                f for f in best_result['p1_pool'] if f['id'] != best_p1['id']
+            ]
             # Reorder opp_pool
-            opp_pool_reordered = [best_opp] + [f for f in best_result['opp_pool'] if f['id'] != best_opp['id']]
+            opp_pool_reordered = [best_opp] + [
+                f for f in best_result['opp_pool'] if f['id'] != best_opp['id']
+            ]
             
             best_result['p1_pool'] = p1_pool_reordered
             best_result['opp_pool'] = opp_pool_reordered
