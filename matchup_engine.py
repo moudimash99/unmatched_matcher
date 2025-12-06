@@ -102,7 +102,7 @@ class MatchupEngine:
 
         # 3. COMBINED SCORE
         # We weight Range heavily (50%) to ensure it acts as a soft filter
-        return (0.5 * tag_score) + (0.5 * range_score)
+        return (0.4 * tag_score) + (0.6 * range_score)
 
     def recommend_opponents(self, fighter, available_fighters, opponent_tags, opponent_range=None, quantity=5):
         """

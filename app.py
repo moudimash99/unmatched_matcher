@@ -108,7 +108,14 @@ def generate_suggestions(selected_data):
     else:
                 # batch_1v1 = engine.generate_batch(available, p1_tags, opp_tags, p1_range, opp_range, quantity=5)
 
-        pool_result = engine.generate_fair_pools(available, p1_tags, opp_tags)
+        pool_result = engine.generate_fair_pools(
+            available,
+            p1_tags,
+            opp_tags,
+            p1_range=p1_range,
+            opp_range=opp_range
+        )
+
         if pool_result:
             p1_pool = pool_result['p1_pool']
             opp_pool = pool_result['opp_pool']
