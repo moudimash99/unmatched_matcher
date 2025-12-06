@@ -54,23 +54,28 @@ function setupSetSelection() {
         toggleBtn.setAttribute('aria-expanded', String(!collapsed));
         setCookie(SELECT_COLLAPSE_KEY, collapsed ? '1' : '0');
     });
-
-    // Restore checkboxes from cookie
+    // Restore checkboxes from cookie (JSON)
     const storedSets = getCookie(ALL_SETS_KEY);
     if (storedSets) {
         try {
-            const arr = storedSets.split(',');
-            checkboxes.forEach(cb => cb.checked = arr.includes(cb.value));
+            const arr = JSON.parse(storedSets);
+            checkboxes.forEach(cb => {
+                cb.checked = arr.includes(cb.value);
+            });
         } catch (e) {
             console.error("Could not parse owned sets cookie:", e);
         }
     }
 
-    // Persist checkbox state on change
+
+    // Persist checkbox state on change (JSON)
     const persist = () => {
-        const checked = checkboxes.filter(cb => cb.checked).map(cb => cb.value);
-        setCookie(ALL_SETS_KEY, checked.join(','));
+        const checked = checkboxes
+            .filter(cb => cb.checked)
+            .map(cb => cb.value);
+        setCookie(ALL_SETS_KEY, JSON.stringify(checked));
     };
+
     checkboxes.forEach(cb => cb.addEventListener('change', persist));
     selectAllBtn?.addEventListener('click', () => { checkboxes.forEach(cb => cb.checked = true); persist(); });
     deselectAllBtn?.addEventListener('click', () => { checkboxes.forEach(cb => cb.checked = false); persist(); });
@@ -238,24 +243,45 @@ function updateCardWinPct(card, opponentId) {
 
 /**
  * Looks up a win percentage from the global matrix.
+ * Mirrors the server-side _get_win_rate() logic.
+ * @param {string} fighterId - The ID of the first fighter.
+ * @param {string} opponentId - The ID of the second fighter.
+ * @returns {number} The win percentage (0-100) for fighterId vs opponentId.
+ */
+function getWinRate(fighterId, opponentId) {
+    if (!fighterId || !opponentId || typeof WIN_MATRIX !== 'object') {
+        return 50; // Default to fair
+    }
+    
+    // Check A vs B
+    if (WIN_MATRIX[fighterId] && WIN_MATRIX[fighterId][opponentId] !== undefined) {
+        return WIN_MATRIX[fighterId][opponentId];
+    }
+    
+    // Check B vs A (and invert)
+    if (WIN_MATRIX[opponentId] && WIN_MATRIX[opponentId][fighterId] !== undefined) {
+        return 100 - WIN_MATRIX[opponentId][fighterId];
+    }
+    
+    return 50; // Default to fair if unknown
+}
+
+/**
+ * Looks up a win percentage from the global matrix and returns display info.
  * @param {string} fighterId - The ID of the first fighter.
  * @param {string} opponentId - The ID of the second fighter.
  * @returns {{percentage: number|string, opponent_name: string}}
  */
 function getWinPctFromMatrix(fighterId, opponentId) {
-    if (!fighterId || !opponentId || typeof WIN_PERCENTAGE_MATRIX !== 'object') {
+    if (!fighterId || !opponentId || typeof WIN_MATRIX !== 'object') {
         return { percentage: 'N/A', opponent_name: 'Opponent' };
     }
-    const key = [fighterId, opponentId].sort().join(':');
-    const matrixEntry = WIN_PERCENTAGE_MATRIX[key];
-
+    
+    const winRate = getWinRate(fighterId, opponentId);
     const opponentInfo = ALL_FIGHTERS_JS.find(f => f.id === opponentId);
     const opponentName = opponentInfo ? opponentInfo.name : 'Opponent';
-
-    if (matrixEntry && matrixEntry[fighterId] !== undefined) {
-        return { percentage: matrixEntry[fighterId], opponent_name: opponentName };
-    }
-    return { percentage: 'N/A', opponent_name: opponentName };
+    
+    return { percentage: Math.round(winRate), opponent_name: opponentName };
 }
 
 /*************************** HTML HELPERS  ***************************/

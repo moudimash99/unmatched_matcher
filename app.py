@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+from fairpool import MatchupEngine # <--- ADD THIS
 import random
 import json
 import hashlib
@@ -8,15 +9,20 @@ app = Flask(__name__)
 # ---------------------------------------------------------
 # 1.  DATA  ────────────────────────────────────────────────
 # ---------------------------------------------------------
-try:
-    with open("fighters.json", "r", encoding="utf-8") as f:
-        json_data = json.load(f)
-        FIGHTERS_DATA = json_data.get("fighters", [])
-        PLAYSTYLE_DEFINITIONS = json_data.get("playstyle_definitions", {})
-except (FileNotFoundError, json.JSONDecodeError) as e:
-    print(f"Error loading or parsing fighters.json: {e}")
-    FIGHTERS_DATA = []
-    PLAYSTYLE_DEFINITIONS = {}
+def load_json_data(filename, default):
+    """Load JSON data from a file with error handling."""
+    try:
+        with open(filename, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"Error loading or parsing {filename}: {e}")
+        return default
+
+
+FIGHTERS_DATA = load_json_data("fighters.json", {}).get("fighters", [])
+PLAYSTYLE_DEFINITIONS = load_json_data("fighters.json", {}).get("playstyle_definitions", {})
+WIN_MATRIX = load_json_data("win_matrix.json", {})
+engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX) # <--- ADD THIS
 
 ALL_SETS_LIST = sorted({f["set"] for f in FIGHTERS_DATA})
 ALL_PLAYSTYLES = sorted({ps for f in FIGHTERS_DATA for ps in f["playstyles"]})
@@ -36,32 +42,6 @@ def get_available_fighters(owned_set_names):
         return []
     return [f for f in FIGHTERS_DATA if f["set"] in owned_set_names]
 
-def score_fighter(fighter, preferred_playstyles, preferred_range):
-    """Calculates a relevance score for a fighter based on preferences."""
-    score = 1
-    if preferred_playstyles and any(ps in fighter["playstyles"] for ps in preferred_playstyles):
-        score += 10
-    if preferred_range and fighter["range"].lower() == preferred_range.lower():
-        score += 8
-    score += random.uniform(0, 0.1)  # Small tie-breaker
-    return score
-
-def get_smart_suggestions(pool, playstyles, prange, exclude_ids=None):
-    """Returns a main suggestion and alternatives from a pool of fighters."""
-    exclude_ids = exclude_ids or []
-    eligible = [f for f in pool if f["id"] not in exclude_ids]
-    if not eligible:
-        return {"main": None, "alternatives": []}
-
-    scored = sorted(
-        ({"fighter": f, "score": score_fighter(f, playstyles, prange)} for f in eligible),
-        key=lambda x: x["score"],
-        reverse=True,
-    )
-    main_pick = scored[0]["fighter"]
-    # Ensure alternatives don't include the main pick
-    alternatives = [s["fighter"] for s in scored[1:5] if s["fighter"]["id"] != main_pick["id"]]
-    return {"main": main_pick, "alternatives": alternatives[:4]}
 
 def calculate_win_percentage(id_a, id_b):
     """Generates a deterministic, pseudo-random win percentage for id_a vs id_b."""
@@ -72,55 +52,63 @@ def calculate_win_percentage(id_a, id_b):
     rnd = random.Random(seed)
     base = rnd.uniform(0.3, 0.7)
     pct = base if id_a == pair[0] else 1 - base
-    return round(pct * 100, 1)
+    return round(pct, 1)
 
 def generate_suggestions(selected_data):
-    """Core logic to generate matchup suggestions for both players."""
-    results = {
-        "p1_main": None, "p1_alternatives": [],
-        "opp_main": None, "opp_alternatives": [],
-    }
-    error_message = None
+    results = {"p1_main": None, "p1_alternatives": [], "opp_main": None, "opp_alternatives": []}
+    error = None
 
-    available_fighters = get_available_fighters(selected_data["owned_sets"])
-    if not selected_data["owned_sets"]:
-        error_message = "Please select at least one owned set to get suggestions."
-    elif not available_fighters:
-        error_message = "No fighters available from the selected sets."
+    available = get_available_fighters(selected_data["owned_sets"])
+    if not available:
+        return results, "Please select at least one owned set."
+
+    p1_tags = set(selected_data["p1_playstyles"])
+    opp_tags = set(selected_data["opp_playstyles"])
+    
+    # CASE A: P1 is LOCKED (Direct Choice or Lock Button)
+    if selected_data["locked_p1_id"]:
+        p1_fighter = find_fighter_by_id(selected_data["locked_p1_id"])
+        if p1_fighter:
+            results["p1_main"] = p1_fighter
+            # Ask Engine for Opponents tailored to P1
+            opp_recs = engine.recommend_opponents(p1_fighter, available, opp_tags)
+            
+            # If Opponent is ALSO locked, just set them
+            if selected_data["locked_opp_id"]:
+                results["opp_main"] = find_fighter_by_id(selected_data["locked_opp_id"])
+            # Otherwise, use the engine's recommendations
+            elif opp_recs:
+                results["opp_main"] = opp_recs[0]
+                results["opp_alternatives"] = opp_recs[1:]
+
+    # CASE B: Opponent is LOCKED (but P1 is not)
+    elif selected_data["locked_opp_id"]:
+        opp_fighter = find_fighter_by_id(selected_data["locked_opp_id"])
+        if opp_fighter:
+            results["opp_main"] = opp_fighter
+            # Ask Engine for P1s tailored to Opponent
+            p1_recs = engine.recommend_opponents(opp_fighter, available, p1_tags)
+            
+            if p1_recs:
+                results["p1_main"] = p1_recs[0]
+                results["p1_alternatives"] = p1_recs[1:]
+
+    # CASE C: Nobody Locked (Generate Fresh Matchups)
     else:
-        exclude_ids = [fid for fid in [selected_data["locked_p1_id"], selected_data["locked_opp_id"]] if fid]
+        pool_result = engine.generate_fair_pools(available, p1_tags, opp_tags)
+        if pool_result:
+            p1_pool = pool_result['p1_pool']
+            opp_pool = pool_result['opp_pool']
+            
+            if p1_pool and opp_pool:
+                results["p1_main"] = p1_pool[0]
+                results["opp_main"] = opp_pool[0]
+                
+                # Extract alternatives (remaining fighters in each pool)
+                results["p1_alternatives"] = p1_pool[1:]
+                results["opp_alternatives"] = opp_pool[1:]
 
-        # --- Player 1 ---
-        if selected_data["locked_p1_id"]:
-            results["p1_main"] = find_fighter_by_id(selected_data["locked_p1_id"])
-            p1_alt_sugg = get_smart_suggestions(
-                available_fighters, selected_data["p1_playstyles"], selected_data["p1_range"], exclude_ids=exclude_ids
-            )
-            results["p1_alternatives"] = p1_alt_sugg["alternatives"]
-        else:
-            p1_sugg = get_smart_suggestions(
-                available_fighters, selected_data["p1_playstyles"], selected_data["p1_range"], exclude_ids=exclude_ids
-            )
-            results["p1_main"] = p1_sugg["main"]
-            results["p1_alternatives"] = p1_sugg["alternatives"]
-            if p1_sugg["main"]:
-                exclude_ids.append(p1_sugg["main"]["id"])
-
-        # --- Opponent ---
-        if selected_data["locked_opp_id"]:
-            results["opp_main"] = find_fighter_by_id(selected_data["locked_opp_id"])
-            opp_alt_sugg = get_smart_suggestions(
-                available_fighters, selected_data["opp_playstyles"], selected_data["opp_range"], exclude_ids=exclude_ids
-            )
-            results["opp_alternatives"] = opp_alt_sugg["alternatives"]
-        else:
-            opp_sugg = get_smart_suggestions(
-                available_fighters, selected_data["opp_playstyles"], selected_data["opp_range"], exclude_ids=exclude_ids
-            )
-            results["opp_main"] = opp_sugg["main"]
-            results["opp_alternatives"] = opp_sugg["alternatives"]
-
-    return results, error_message
+    return results, error
 
 # ---------------------------------------------------------
 # 3.  JINJA FILTERS / HELPERS  ────────────────────────────
@@ -132,9 +120,12 @@ def title_case_filter(s):
 
 @app.context_processor
 def utility_processor():
-    """Make helper functions available in all templates."""
-    return dict(calculate_win_percentage=calculate_win_percentage)
-
+    def get_real_win_rate(id_a, id_b):
+        if not id_a or not id_b: return 0
+        # Access the internal method of the engine instance
+        return round(engine._get_win_rate(id_a, id_b), 1)
+    
+    return dict(calculate_win_percentage=get_real_win_rate)
 # ---------------------------------------------------------
 # 4.  MAIN ROUTE  ─────────────────────────────────────────
 # ---------------------------------------------------------
@@ -187,18 +178,18 @@ def index():
 
         results_data, error_message = generate_suggestions(selected_data)
 
-        if results_data:
-            p1_team = [f for f in [results_data.get("p1_main")] + results_data.get("p1_alternatives", []) if f]
-            opp_team = [f for f in [results_data.get("opp_main")] + results_data.get("opp_alternatives", []) if f]
+        # if results_data:
+        #     p1_team = [f for f in [results_data.get("p1_main")] + results_data.get("p1_alternatives", []) if f]
+        #     opp_team = [f for f in [results_data.get("opp_main")] + results_data.get("opp_alternatives", []) if f]
 
-            for p1_fighter in p1_team:
-                for opp_fighter in opp_team:
-                    key = ":".join(sorted((p1_fighter["id"], opp_fighter["id"])))
-                    if key not in win_percentage_matrix:
-                        win_percentage_matrix[key] = {
-                            p1_fighter["id"]: calculate_win_percentage(p1_fighter["id"], opp_fighter["id"]),
-                            opp_fighter["id"]: calculate_win_percentage(opp_fighter["id"], opp_fighter["id"])
-                        }
+        #     for p1_fighter in p1_team:
+        #         for opp_fighter in opp_team:
+        #             key = ":".join(sorted((p1_fighter["id"], opp_fighter["id"])))
+        #             if key not in win_percentage_matrix:
+        #                 win_percentage_matrix[key] = {
+        #                     p1_fighter["id"]: calculate_win_percentage(p1_fighter["id"], opp_fighter["id"]),
+        #                     opp_fighter["id"]: calculate_win_percentage(opp_fighter["id"], opp_fighter["id"])
+        #                 }
 
     return render_template(
         "index.html",
@@ -209,7 +200,8 @@ def index():
         results=results_data,
         selected_data=selected_data,
         error_message=error_message,
-        win_percentage_matrix=win_percentage_matrix
+        win_percentage_matrix=win_percentage_matrix,
+        win_matrix=WIN_MATRIX
     )
 
 # ---------------------------------------------------------
