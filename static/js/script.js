@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setupSetSelection();
     setupPlaystyleToggles();
     setupP1SelectionToggle();
+    setupModeControls();
+    setupIntroModal();
     annotateLockButtons();
     setupResultCardActions();
 });
@@ -113,6 +115,166 @@ function setupP1SelectionToggle() {
     }
     selMethod?.addEventListener('change', toggle);
     toggle(); // Initial state
+}
+
+function setupModeControls() {
+    const modePanel = qs('#mode-settings-panel');
+    const modeToggleBtn = qs('#show-mode-settings-btn');
+    const modeHelpBtn = qs('#matchup-mode-help-btn');
+    const advBtn = qs('#advanced-mode-toggle');
+    const advHelpBtn = qs('#advanced-help-btn');
+    const customBlock = qs('#custom-mode-settings');
+    const fairnessInput = qs('#fairness_weight');
+
+    // Matchup Mode panel toggle (default hidden)
+    if (modePanel && modeToggleBtn) {
+        // Ensure it starts collapsed
+        modePanel.classList.add('collapsed');
+        modeToggleBtn.setAttribute('aria-expanded', 'false');
+        
+        modeToggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const isCollapsed = modePanel.classList.contains('collapsed');
+            if (isCollapsed) {
+                modePanel.classList.remove('collapsed');
+                modeToggleBtn.setAttribute('aria-expanded', 'true');
+                modeToggleBtn.textContent = '⬆ Hide';
+                // Show the matchup mode help modal when opening
+                showMatchupModeHelpOnce();
+            } else {
+                modePanel.classList.add('collapsed');
+                modeToggleBtn.setAttribute('aria-expanded', 'false');
+                modeToggleBtn.textContent = '⬇ Show';
+            }
+        });
+    }
+
+    // Matchup Mode help button (always shows the modal without localStorage lock)
+    if (modeHelpBtn) {
+        modeHelpBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modal = qs('#matchup-mode-help-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+            }
+        });
+    }
+
+    // Advanced (custom weight) toggle
+    if (advBtn && customBlock) {
+        // If a custom weight already exists (POST back), show it
+        if (fairnessInput && fairnessInput.value.trim() !== '') {
+            customBlock.classList.remove('collapsed');
+        }
+
+        advBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            customBlock.classList.toggle('collapsed');
+            // Show the advanced mode help modal when clicking Advanced
+            showAdvancedModeHelpOnce();
+        });
+    }
+
+    // Advanced help button (always shows the modal without localStorage lock)
+    if (advHelpBtn) {
+        advHelpBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modal = qs('#advanced-mode-help-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+            }
+        });
+    }
+}
+
+function setupIntroModal() {
+    const introModal = qs('#intro-modal');
+    const introClose = qs('#intro-modal-close');
+    if (!introModal || !introClose) return;
+
+    // Setup close handler (only if not already setup)
+    if (!introClose.dataset.closeHandlerSetup) {
+        introClose.addEventListener('click', () => {
+            introModal.classList.add('hidden');
+            const SEEN_KEY = 'ufc_intro_seen';
+            try {
+                localStorage.setItem(SEEN_KEY, '1');
+            } catch (e) {
+                // ignore storage errors
+            }
+        });
+        introClose.dataset.closeHandlerSetup = '1';
+    }
+
+    // Wire up intro help button (always shows the modal without localStorage lock)
+    const introHelpBtn = qs('#intro-help-btn');
+    if (introHelpBtn && !introHelpBtn.dataset.clickHandlerSetup) {
+        introHelpBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            introModal.classList.remove('hidden');
+        });
+        introHelpBtn.dataset.clickHandlerSetup = '1';
+    }
+
+    // Only show once per browser (using localStorage)
+    const SEEN_KEY = 'ufc_intro_seen';
+    if (window.localStorage && localStorage.getItem(SEEN_KEY) === '1') {
+        return;
+    }
+
+    introModal.classList.remove('hidden');
+}
+
+function showMatchupModeHelpOnce() {
+    const modal = qs('#matchup-mode-help-modal');
+    const closeBtn = qs('#matchup-mode-help-close');
+    if (!modal || !closeBtn) return;
+
+    const SEEN_KEY = 'ufc_matchup_mode_help_seen';
+    if (window.localStorage && localStorage.getItem(SEEN_KEY) === '1') {
+        return;
+    }
+
+    modal.classList.remove('hidden');
+
+    // Setup close handler (only if not already setup)
+    if (!closeBtn.dataset.closeHandlerSetup) {
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            try {
+                localStorage.setItem(SEEN_KEY, '1');
+            } catch (e) {
+                // ignore storage errors
+            }
+        });
+        closeBtn.dataset.closeHandlerSetup = '1';
+    }
+}
+
+function showAdvancedModeHelpOnce() {
+    const modal = qs('#advanced-mode-help-modal');
+    const closeBtn = qs('#advanced-mode-help-close');
+    if (!modal || !closeBtn) return;
+
+    const SEEN_KEY = 'ufc_advanced_mode_help_seen';
+    if (window.localStorage && localStorage.getItem(SEEN_KEY) === '1') {
+        return;
+    }
+
+    modal.classList.remove('hidden');
+
+    // Setup close handler (only if not already setup)
+    if (!closeBtn.dataset.closeHandlerSetup) {
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            try {
+                localStorage.setItem(SEEN_KEY, '1');
+            } catch (e) {
+                // ignore storage errors
+            }
+        });
+        closeBtn.dataset.closeHandlerSetup = '1';
+    }
 }
 
 /*************************** CORE INTERACTION LOGIC  ***************************/

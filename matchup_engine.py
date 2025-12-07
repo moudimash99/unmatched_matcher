@@ -43,6 +43,41 @@ class MatchupEngine:
             "": None
         }
 
+    def set_mode(self, mode, custom_fairness_weight=None):
+        """
+        Adjusts the relative weight of fairness vs fit.
+
+        mode:
+          - "discovery": prioritize fit / variety
+          - "fairness":  prioritize balanced win rates
+          - "custom":    use custom_fairness_weight in [0, 1]
+        """
+        mode = (mode or "").lower()
+
+        if mode == "discovery":
+            self.WEIGHT_FAIRNESS = 0.3
+            self.WEIGHT_FIT = 0.7
+
+        elif mode == "fairness":
+            self.WEIGHT_FAIRNESS = 0.7
+            self.WEIGHT_FIT = 0.3
+
+        elif mode == "custom" and custom_fairness_weight not in (None, ""):
+            try:
+                w = float(custom_fairness_weight)
+            except (TypeError, ValueError):
+                w = 0.4  # fallback
+
+            # clamp to [0, 1]
+            w = max(0.0, min(1.0, w))
+            self.WEIGHT_FAIRNESS = w
+            self.WEIGHT_FIT = 1.0 - w
+
+        else:
+            # default behaviour
+            self.WEIGHT_FAIRNESS = 0.4
+            self.WEIGHT_FIT = 0.6
+
     def _get_win_rate(self, id_a, id_b):
         """
         Safely gets win rate from matrix (A vs B or B vs A). 

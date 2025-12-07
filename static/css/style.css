@@ -81,3 +81,54 @@ label { font-size: .9rem; }
 .lock-button.btn-lock:hover { background-color: #0069d9; }
 .lock-button.btn-unlock { background-color: var(--accent-action); border-color: var(--accent-action); }
 .lock-button.btn-unlock:hover { background-color: #218838; }
+
+/* ===== HEADER WITH HELP BUTTON ===== */
+.header-with-help { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.header-with-help h2 { margin-bottom: 0; }
+
+/* ===== MATCHUP MODE SELECTOR ===== */
+.mode-selection { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #e9ecef; }
+.mode-selection h3 { margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; }
+.header-buttons { display: flex; align-items: center; gap: 0.5rem; }
+.mode-toggle-heading-btn { background: none !important; border: none !important; box-shadow: none !important; color: var(--accent-primary); font-size: 0.9rem; cursor: pointer; padding: 0.25rem 0; transition: none; text-align: right; }
+.mode-toggle-heading-btn:hover { text-decoration: underline; }
+.help-icon-btn { background: none !important; border: none !important; box-shadow: none !important; color: var(--accent-primary); font-size: 1rem; cursor: pointer; padding: 0.2rem 0.4rem; transition: none; }
+.help-icon-btn:hover { transform: scale(1.15); }
+.advanced-button-row { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; }
+.mode-selection.collapsed { padding-bottom: 0; margin-bottom: 1rem; }
+.mode-selection.collapsed > p, .mode-selection.collapsed .mode-options, .mode-selection.collapsed .custom-mode { display: none; }
+.mode-options { display: flex; flex-direction: column; gap: 0.75rem; }
+.mode-options label { display: flex; align-items: center; font-size: 0.95rem; cursor: pointer; user-select: none; }
+.mode-options input[type="radio"] { margin-right: 0.5rem; cursor: pointer; }
+.advanced-toggle { background: none !important; border: none !important; box-shadow: none !important; color: var(--accent-primary); font-size: 0.9rem; cursor: pointer; padding: 0.25rem 0; transition: none; text-align: left; margin-top: 0.5rem; }
+.advanced-toggle:hover { text-decoration: underline; }
+.custom-mode { margin-top: 1rem; padding: 1rem; background-color: #f8f9fa; border-radius: 6px; border-left: 3px solid var(--accent-primary); }
+.custom-mode.collapsed { display: none; }
+.custom-mode label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+.custom-mode input[type="number"] { width: 100%; max-width: 200px; padding: 0.5rem; border: 1px solid #ced4da; border-radius: 4px; font-size: 0.9rem; }
+.custom-mode input[type="number"]:focus { outline: 2px solid var(--accent-primary); outline-offset: 1px; }
+.custom-mode .helper-text { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem; font-style: italic; }
+
+/* ===== MODAL STYLES ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: #fff;
+    color: #222;
+    padding: 1.5rem;
+    max-width: 480px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Stronger hidden rule for modals */
+.hidden { display: none !important; }
+

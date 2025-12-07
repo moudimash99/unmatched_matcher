@@ -67,7 +67,10 @@
            value="{{ selected_data.locked_opp_id if selected_data.locked_opp_id else '' }}">
 
     <section class="settings-panel">
-        <h2>Game Setup</h2>
+        <div class="header-with-help">
+            <h2>Game Setup</h2>
+            <button type="button" id="intro-help-btn" class="help-icon-btn" title="Show welcome help">ⓘ</button>
+        </div>
         <div class="set-selection collapsed">
             <h3>
                 Owned Sets
@@ -87,6 +90,57 @@
                 <button type="button" id="deselect-all-sets-btn">Deselect All</button>
             </div>
         </div>
+
+        <!-- 🔽🔽🔽 NEW MATCHUP MODE BLOCK 🔽🔽🔽 -->
+        <div id="mode-settings-panel" class="mode-selection collapsed">
+            <h3>
+                Matchup Mode
+                <div class="header-buttons">
+                    <button type="button" id="matchup-mode-help-btn" class="help-icon-btn" title="Show help">ⓘ</button>
+                    <button type="button" id="show-mode-settings-btn" class="mode-toggle-heading-btn" aria-expanded="false">⬇ Show</button>
+                </div>
+            </h3>
+            <p class="helper-text">
+                Choose how strongly the engine should prioritize <strong>fairness</strong> (balanced win rates)
+                vs <strong>fit</strong> (playstyles and range). If you’re not sure, just leave this as is.
+            </p>
+            <div class="mode-options">
+                <label>
+                    <input type="radio" name="mode" value="discovery"
+                           {% if selected_data.mode == 'discovery' or not selected_data.mode %}checked{% endif %}>
+                    Discovery (more variety / fit)
+                </label>
+                <label>
+                    <input type="radio" name="mode" value="fairness"
+                           {% if selected_data.mode == 'fairness' %}checked{% endif %}>
+                    Fairness (balanced matchups)
+                </label>
+
+                <!-- "hidden" advanced control: shows custom weight block -->
+                <div class="advanced-button-row">
+                    <button type="button" id="advanced-mode-toggle" class="advanced-toggle">
+                        ⚙ Advanced
+                    </button>
+                    <button type="button" id="advanced-help-btn" class="help-icon-btn" title="Show help">ⓘ</button>
+                </div>
+            </div>
+
+            <div id="custom-mode-settings" class="custom-mode collapsed">
+                <label for="fairness_weight">
+                    Custom fairness weight (0.0–1.0):
+                </label>
+                <input type="number"
+                       id="fairness_weight"
+                       name="fairness_weight"
+                       min="0" max="1" step="0.05"
+                       value="{{ selected_data.fairness_weight if selected_data.fairness_weight is not none else '' }}">
+                <p class="helper-text">
+                    Fit weight = 1 − fairness weight. Providing a value lets you fine-tune how “swingy”
+                    vs “even” you want matchups to be.
+                </p>
+            </div>
+        </div>
+        <!-- 🔼🔼🔼 END MATCHUP MODE BLOCK 🔼🔼🔼 -->
     </section>
 
     <section class="matchup-configuration">
@@ -212,6 +266,63 @@
 <footer>
     <p>Unmatched Fighter Chooser — Powered by Flask &amp; Your Preferences!</p>
 </footer>
+
+<!-- Intro popup: shown once on first visit -->
+<div id="intro-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+        <h2>Welcome to Unmatched Fighter Chooser 🧭</h2>
+        <p>
+            This tool helps you find fun and balanced <strong>Unmatched</strong> matchups
+            based on the sets you own, playstyles and ranges.
+        </p>
+        <p>
+            <strong>How to use it:</strong><br>
+            1) Select the sets you own.<br>
+            2) Click “Generate Matchup” to get a suggested fighter for you and a pool of alternatives.<br>
+            3) Pick a fighter you like for Player 1 and <strong>lock</strong> them.<br>
+            4) Run “Generate Matchup” again with your fighter locked to get a much more accurate opponent suggestion and pools.
+        </p>
+        <button type="button" id="intro-modal-close">Got it!</button>
+    </div>
+</div>
+
+<!-- Matchup Mode help popup: shown when Show button is clicked -->
+<div id="matchup-mode-help-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+        <h2>Matchup Mode Explained 🎮</h2>
+        <p>
+            <strong>Discovery Mode:</strong> The engine prioritizes finding fighters that match your
+            playstyle and range preferences. Great for exploring different fighter combinations.
+        </p>
+        <p>
+            <strong>Fairness Mode:</strong> The engine tries much harder to keep matchups close to a
+            50/50 win rate using the internal win-rate matrix. Perfect when you want competitive balance.
+        </p>
+        <p>
+            <strong>Advanced:</strong> Fine-tune the exact balance between fairness and fit using a custom weight.
+        </p>
+        <button type="button" id="matchup-mode-help-close">Got it!</button>
+    </div>
+</div>
+
+<!-- Advanced mode popup: shown when Advanced button is clicked -->
+<div id="advanced-mode-help-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+        <h2>Advanced: Custom Weight 🎛️</h2>
+        <p>
+            Use the custom weight slider to control the balance between <strong>fairness</strong> and <strong>fit</strong>.
+        </p>
+        <p>
+            <strong>0.0</strong> = 100% fit (ignore win rates, focus on playstyles and range)<br>
+            <strong>0.5</strong> = 50/50 balance between fairness and fit<br>
+            <strong>1.0</strong> = 100% fairness (prioritize balanced win rates)
+        </p>
+        <p>
+            Leave it empty to use Discovery or Fairness mode instead.
+        </p>
+        <button type="button" id="advanced-mode-help-close">Understood!</button>
+    </div>
+</div>
 
 <script>
     const ALL_FIGHTERS_JS = {{ all_fighters_for_select | tojson }};

@@ -158,6 +158,8 @@ def index():
         "p1_playstyles": [], "p1_range": "",
         "opp_playstyles": [], "opp_range": "",
         "locked_p1_id": None, "locked_opp_id": None,
+        "mode": "discovery",
+        "fairness_weight": None,
     }
     results_data = None
     error_message = None
@@ -177,6 +179,8 @@ def index():
             "opp_range": request.form.get("opp_range"),
             "locked_p1_id": request.form.get("current_locked_p1_id"),
             "locked_opp_id": request.form.get("current_locked_opp_id"),
+            "mode": request.form.get("mode", "discovery"),
+            "fairness_weight": request.form.get("fairness_weight", "").strip() or None,
         })
 
         # Handle direct choices as implicit locks
@@ -195,6 +199,13 @@ def index():
             selected_data["locked_opp_id"] = action.split(":")[1]
         elif action == "unlock_opp":
             selected_data["locked_opp_id"] = None
+
+        # --- Apply matchup mode (discovery / fairness / custom) ---
+        mode = selected_data.get("mode", "discovery")
+        fw = selected_data.get("fairness_weight")
+        effective_mode = "custom" if fw not in (None, "") else mode
+        engine.set_mode(effective_mode, fw)
+        # -----------------------------------------------------------
 
         results_data, error_message = generate_suggestions(selected_data)
 
