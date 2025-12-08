@@ -4,8 +4,8 @@ import math
 import re
 from collections import defaultdict
 
-EXCEL_FILE = "Unmatched stats.xlsx"
-FIGHTERS_FILE = "fighters.json"   # save your big JSON here
+EXCEL_FILE = "input/Unmatched stats.xlsx"
+FIGHTERS_FILE = "input/fighters.json"   # save your big JSON here
 
 
 # ---------------------------------------------------
@@ -251,8 +251,8 @@ if __name__ == "__main__":
         gp_main, wp_main, gp_um, wp_um
     )
 
-    with open("merged_games.json", "w", encoding="utf-8") as f:
+    with open("input/merged_games.json", "w", encoding="utf-8") as f:
         json.dump(merged_games, f, indent=2, ensure_ascii=False)
 
-    with open("merged_win_pct.json", "w", encoding="utf-8") as f:
+    with open("input/merged_win_pct.json", "w", encoding="utf-8") as f:
         json.dump(merged_win_pct, f, indent=2, ensure_ascii=False)
