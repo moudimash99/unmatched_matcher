@@ -87,10 +87,11 @@ function setupCookieConsent() {
         banner.classList.add('hidden');
         initializeAnalytics();
         
-        // Track the consent acceptance
+        // Track the consent acceptance (delay ensures gtag is fully initialized)
+        const ANALYTICS_INIT_DELAY = 500; // milliseconds
         setTimeout(() => {
             trackEvent('cookie_consent', { action: 'accepted' });
-        }, 500);
+        }, ANALYTICS_INIT_DELAY);
     });
     
     // Handle decline
@@ -109,10 +110,10 @@ function setupInteractionTracking() {
     const form = document.getElementById('fighter-chooser-form');
     if (form) {
         form.addEventListener('submit', (e) => {
-            const action = e.submitter?.value || 'unknown';
+            const action = e.submitter?.value || 'form_submitted_no_action';
             trackEvent('matchup_generation', {
                 action: action,
-                p1_method: document.getElementById('p1_selection_method')?.value || 'unknown'
+                p1_method: document.getElementById('p1_selection_method')?.value || 'method_not_found'
             });
         });
     }
