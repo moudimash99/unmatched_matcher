@@ -23,8 +23,13 @@ function getCookie(name) {
     }, '');
 }
 
-/*************************** ANALYTICS & CONSENT ***************************/
+/*************************** CONSTANTS ***************************/
 const CONSENT_COOKIE_KEY = 'ufc_cookie_consent';
+const INTRO_SEEN_KEY = 'ufc_intro_seen';
+const MATCHUP_MODE_HELP_SEEN_KEY = 'ufc_matchup_mode_help_seen';
+const ADVANCED_MODE_HELP_SEEN_KEY = 'ufc_advanced_mode_help_seen';
+
+/*************************** ANALYTICS & CONSENT ***************************/
 let analyticsEnabled = false;
 
 function enableAnalytics() {
@@ -268,9 +273,8 @@ function setupModalCloseHandlers() {
     if (introModal && introClose) {
         introClose.addEventListener('click', () => {
             introModal.classList.add('hidden');
-            const SEEN_KEY = 'ufc_intro_seen';
             try {
-                localStorage.setItem(SEEN_KEY, '1');
+                localStorage.setItem(INTRO_SEEN_KEY, '1');
             } catch (e) {
                 // ignore storage errors
             }
@@ -283,9 +287,8 @@ function setupModalCloseHandlers() {
     if (matchupModeHelpModal && matchupModeHelpClose) {
         matchupModeHelpClose.addEventListener('click', () => {
             matchupModeHelpModal.classList.add('hidden');
-            const SEEN_KEY = 'ufc_matchup_mode_help_seen';
             try {
-                localStorage.setItem(SEEN_KEY, '1');
+                localStorage.setItem(MATCHUP_MODE_HELP_SEEN_KEY, '1');
             } catch (e) {
                 // ignore storage errors
             }
@@ -298,9 +301,8 @@ function setupModalCloseHandlers() {
     if (advancedModeHelpModal && advancedModeHelpClose) {
         advancedModeHelpClose.addEventListener('click', () => {
             advancedModeHelpModal.classList.add('hidden');
-            const SEEN_KEY = 'ufc_advanced_mode_help_seen';
             try {
-                localStorage.setItem(SEEN_KEY, '1');
+                localStorage.setItem(ADVANCED_MODE_HELP_SEEN_KEY, '1');
             } catch (e) {
                 // ignore storage errors
             }
@@ -323,8 +325,7 @@ function setupIntroModal() {
     }
 
     // Only show once per browser (using localStorage)
-    const SEEN_KEY = 'ufc_intro_seen';
-    if (window.localStorage && localStorage.getItem(SEEN_KEY) === '1') {
+    if (window.localStorage && localStorage.getItem(INTRO_SEEN_KEY) === '1') {
         return;
     }
 
@@ -371,8 +372,7 @@ function showMatchupModeHelpOnce() {
     const modal = qs('#matchup-mode-help-modal');
     if (!modal) return;
 
-    const SEEN_KEY = 'ufc_matchup_mode_help_seen';
-    if (window.localStorage && localStorage.getItem(SEEN_KEY) === '1') {
+    if (window.localStorage && localStorage.getItem(MATCHUP_MODE_HELP_SEEN_KEY) === '1') {
         return;
     }
 
@@ -383,8 +383,7 @@ function showAdvancedModeHelpOnce() {
     const modal = qs('#advanced-mode-help-modal');
     if (!modal) return;
 
-    const SEEN_KEY = 'ufc_advanced_mode_help_seen';
-    if (window.localStorage && localStorage.getItem(SEEN_KEY) === '1') {
+    if (window.localStorage && localStorage.getItem(ADVANCED_MODE_HELP_SEEN_KEY) === '1') {
         return;
     }
 
