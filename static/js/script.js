@@ -39,6 +39,11 @@ function recordAnalytics(eventName, payload = {}) {
     const entry = { event: eventName, at: new Date().toISOString(), ...payload };
     window.ufcAnalyticsEvents.push(entry);
     console.debug('[ufc-analytics]', entry);
+
+      // 2. Send to GA4 if available
+    if (typeof gtag === 'function') {
+        gtag('event', eventName, payload);
+    }
 }
 
 function initCookieConsent() {
