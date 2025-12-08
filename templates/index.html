@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VX153VVW52"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-VX153VVW52');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unmatched Fighter Chooser</title>
@@ -275,6 +266,27 @@
 <footer>
     <p>Unmatched Fighter Chooser — Powered by Flask &amp; Your Preferences!</p>
 </footer>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-consent-banner" class="cookie-consent-overlay hidden">
+    <div class="cookie-consent-content">
+        <h3>🍪 Cookie Notice</h3>
+        <p>
+            We use cookies and analytics to understand how you use our site and improve your experience. 
+            This helps us make the Fighter Chooser better for everyone. By clicking "Accept", you consent 
+            to our use of cookies and analytics tracking.
+        </p>
+        <p class="cookie-consent-details">
+            We track interactions like button clicks and option selections to improve the website. 
+            Your data is used solely to enhance user experience and will not be shared with third parties 
+            for advertising purposes.
+        </p>
+        <div class="cookie-consent-actions">
+            <button type="button" id="cookie-accept-btn" class="cookie-btn cookie-accept">Accept Cookies</button>
+            <button type="button" id="cookie-decline-btn" class="cookie-btn cookie-decline">Decline</button>
+        </div>
+    </div>
+</div>
 
 <!-- Intro popup: shown once on first visit -->
 <div id="intro-modal" class="modal-overlay hidden">

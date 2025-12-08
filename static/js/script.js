@@ -23,8 +23,173 @@ function getCookie(name) {
     }, '');
 }
 
+/*************************** COOKIE CONSENT & ANALYTICS  ***************************/
+const COOKIE_CONSENT_KEY = 'ufc_cookie_consent';
+const GA_TRACKING_ID = 'G-VX153VVW52';
+
+/**
+ * Initialize Google Analytics if user has consented
+ */
+function initializeAnalytics() {
+    // Load Google Analytics script
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+    document.head.appendChild(script);
+    
+    // Initialize gtag
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', GA_TRACKING_ID);
+    
+    // Make gtag globally available for event tracking
+    window.gtag = gtag;
+    
+    console.log('Analytics initialized');
+}
+
+/**
+ * Track custom events with Google Analytics (only if consent given)
+ */
+function trackEvent(eventName, eventParams = {}) {
+    if (getCookie(COOKIE_CONSENT_KEY) === 'accepted' && window.gtag) {
+        window.gtag('event', eventName, eventParams);
+    }
+}
+
+/**
+ * Setup cookie consent banner
+ */
+function setupCookieConsent() {
+    const banner = document.getElementById('cookie-consent-banner');
+    const acceptBtn = document.getElementById('cookie-accept-btn');
+    const declineBtn = document.getElementById('cookie-decline-btn');
+    
+    if (!banner || !acceptBtn || !declineBtn) return;
+    
+    const consent = getCookie(COOKIE_CONSENT_KEY);
+    
+    // If user already made a choice, apply it
+    if (consent === 'accepted') {
+        initializeAnalytics();
+        banner.classList.add('hidden');
+    } else if (consent === 'declined') {
+        banner.classList.add('hidden');
+    } else {
+        // Show banner if no choice has been made
+        banner.classList.remove('hidden');
+    }
+    
+    // Handle accept
+    acceptBtn.addEventListener('click', () => {
+        setCookie(COOKIE_CONSENT_KEY, 'accepted', 365); // Store for 1 year
+        banner.classList.add('hidden');
+        initializeAnalytics();
+        
+        // Track the consent acceptance
+        setTimeout(() => {
+            trackEvent('cookie_consent', { action: 'accepted' });
+        }, 500);
+    });
+    
+    // Handle decline
+    declineBtn.addEventListener('click', () => {
+        setCookie(COOKIE_CONSENT_KEY, 'declined', 365); // Store for 1 year
+        banner.classList.add('hidden');
+    });
+}
+
+/*************************** EVENT TRACKING SETUP  ***************************/
+/**
+ * Setup tracking for user interactions
+ */
+function setupInteractionTracking() {
+    // Track form submission (matchup generation)
+    const form = document.getElementById('fighter-chooser-form');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            const action = e.submitter?.value || 'unknown';
+            trackEvent('matchup_generation', {
+                action: action,
+                p1_method: document.getElementById('p1_selection_method')?.value || 'unknown'
+            });
+        });
+    }
+    
+    // Track set selection changes
+    const setCheckboxes = document.querySelectorAll('input[name="owned_sets"]');
+    setCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', (e) => {
+            trackEvent('set_selection', {
+                set_name: e.target.value,
+                selected: e.target.checked
+            });
+        });
+    });
+    
+    // Track playstyle selections
+    const playstyleCheckboxes = document.querySelectorAll('input[name="p1_playstyles"], input[name="opp_playstyles"]');
+    playstyleCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', (e) => {
+            const player = e.target.name.includes('p1') ? 'player1' : 'opponent';
+            trackEvent('playstyle_selection', {
+                player: player,
+                playstyle: e.target.value,
+                selected: e.target.checked
+            });
+        });
+    });
+    
+    // Track range selections
+    const rangeSelects = document.querySelectorAll('#p1_range, #opp_range');
+    rangeSelects.forEach(select => {
+        select.addEventListener('change', (e) => {
+            const player = e.target.id.includes('p1') ? 'player1' : 'opponent';
+            trackEvent('range_selection', {
+                player: player,
+                range: e.target.value
+            });
+        });
+    });
+    
+    // Track mode changes
+    const modeRadios = document.querySelectorAll('input[name="mode"]');
+    modeRadios.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            trackEvent('mode_selection', {
+                mode: e.target.value
+            });
+        });
+    });
+    
+    // Track lock/unlock actions
+    document.addEventListener('click', (e) => {
+        const lockBtn = e.target.closest('.lock-button');
+        if (lockBtn) {
+            trackEvent('fighter_lock', {
+                action: lockBtn.dataset.action,
+                player: lockBtn.dataset.playerPrefix,
+                fighter_id: lockBtn.dataset.fighterId
+            });
+        }
+        
+        // Track alternative fighter selection
+        const altBtn = e.target.closest('.select-alternative-btn');
+        if (altBtn) {
+            const card = altBtn.closest('.fighter-card');
+            trackEvent('alternative_selection', {
+                player: card?.dataset.playerPrefix,
+                fighter_id: card?.dataset.fighterId
+            });
+        }
+    });
+}
+
+
 /*************************** INITIALIZATION  ***************************/
 document.addEventListener('DOMContentLoaded', () => {
+    setupCookieConsent();
     setupSetSelection();
     setupPlaystyleToggles();
     setupP1SelectionToggle();
@@ -32,6 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupIntroModal();
     annotateLockButtons();
     setupResultCardActions();
+    setupInteractionTracking();
 });
 
 /*************************** UI SETUP FUNCTIONS  ***************************/
