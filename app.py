@@ -19,9 +19,9 @@ def load_json_data(filename, default):
         return default
 
 
-FIGHTERS_DATA = load_json_data("fighters.json", {}).get("fighters", [])
-PLAYSTYLE_DEFINITIONS = load_json_data("fighters.json", {}).get("playstyle_definitions", {})
-WIN_MATRIX = load_json_data("win_matrix.json", {})
+FIGHTERS_DATA = load_json_data("input/fighters.json", {}).get("fighters", [])
+PLAYSTYLE_DEFINITIONS = load_json_data("input/fighters.json", {}).get("playstyle_definitions", {})
+WIN_MATRIX = load_json_data("input/win_matrix.json", {})
 engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX) 
 
 ALL_SETS_LIST = sorted({f["set"] for f in FIGHTERS_DATA})

@@ -23,13 +23,63 @@ function getCookie(name) {
     }, '');
 }
 
+/*************************** ANALYTICS & CONSENT ***************************/
+const CONSENT_COOKIE_KEY = 'ufc_cookie_consent';
+let analyticsEnabled = false;
+
+function enableAnalytics() {
+    analyticsEnabled = true;
+    window.ufcAnalyticsEvents = window.ufcAnalyticsEvents || [];
+    recordAnalytics('analytics_enabled', { source: 'cookie_accept' });
+}
+
+function recordAnalytics(eventName, payload = {}) {
+    if (!analyticsEnabled) return;
+    // Keep analytics client-side and focused on UX improvements only
+    const entry = { event: eventName, at: new Date().toISOString(), ...payload };
+    window.ufcAnalyticsEvents.push(entry);
+    console.debug('[ufc-analytics]', entry);
+}
+
+function initCookieConsent() {
+    const banner = qs('#cookie-consent');
+    if (!banner) return;
+
+    const acceptBtn = qs('#cookie-accept', banner);
+    const declineBtn = qs('#cookie-decline', banner);
+    const consent = getCookie(CONSENT_COOKIE_KEY);
+
+    if (consent === 'accepted') {
+        banner.classList.add('hidden');
+        enableAnalytics();
+    } else if (consent === 'declined') {
+        banner.classList.add('hidden');
+    } else {
+        banner.classList.remove('hidden');
+    }
+
+    acceptBtn?.addEventListener('click', () => {
+        setCookie(CONSENT_COOKIE_KEY, 'accepted', 365);
+        banner.classList.add('hidden');
+        enableAnalytics();
+    });
+
+    declineBtn?.addEventListener('click', () => {
+        setCookie(CONSENT_COOKIE_KEY, 'declined', 365);
+        banner.classList.add('hidden');
+        analyticsEnabled = false;
+    });
+}
+
 /*************************** INITIALIZATION  ***************************/
 document.addEventListener('DOMContentLoaded', () => {
+    initCookieConsent();
     setupSetSelection();
     setupPlaystyleToggles();
     setupP1SelectionToggle();
     setupModeControls();
     setupIntroModal();
+    setupAnalyticsListeners();
     annotateLockButtons();
     setupResultCardActions();
 });
@@ -78,9 +128,20 @@ function setupSetSelection() {
         setCookie(ALL_SETS_KEY, JSON.stringify(checked));
     };
 
-    checkboxes.forEach(cb => cb.addEventListener('change', persist));
-    selectAllBtn?.addEventListener('click', () => { checkboxes.forEach(cb => cb.checked = true); persist(); });
-    deselectAllBtn?.addEventListener('click', () => { checkboxes.forEach(cb => cb.checked = false); persist(); });
+    checkboxes.forEach(cb => cb.addEventListener('change', () => {
+        persist();
+        recordAnalytics('set_toggle', { set: cb.value, checked: cb.checked });
+    }));
+    selectAllBtn?.addEventListener('click', () => {
+        checkboxes.forEach(cb => cb.checked = true);
+        persist();
+        recordAnalytics('sets_select_all', { total: checkboxes.length });
+    });
+    deselectAllBtn?.addEventListener('click', () => {
+        checkboxes.forEach(cb => cb.checked = false);
+        persist();
+        recordAnalytics('sets_deselect_all', { total: checkboxes.length });
+    });
 }
 
 function setupPlaystyleToggles() {
@@ -113,7 +174,10 @@ function setupP1SelectionToggle() {
             oppDummy.classList.remove('hidden');
         }
     }
-    selMethod?.addEventListener('change', toggle);
+    selMethod?.addEventListener('change', () => {
+        toggle();
+        recordAnalytics('p1_selection_mode', { mode: selMethod.value });
+    });
     toggle(); // Initial state
 }
 
@@ -225,6 +289,42 @@ function setupIntroModal() {
     introModal.classList.remove('hidden');
 }
 
+function setupAnalyticsListeners() {
+    const generateBtn = qs('#generate-matchup-btn');
+    generateBtn?.addEventListener('click', () => {
+        recordAnalytics('generate_matchup', {
+            locked_p1: !!qs('#current_locked_p1_id')?.value,
+            locked_opp: !!qs('#current_locked_opp_id')?.value
+        });
+    });
+
+    qsa('input[name="mode"]').forEach(r => {
+        r.addEventListener('change', () => recordAnalytics('mode_change', { mode: r.value }));
+    });
+
+    const fairnessInput = qs('#fairness_weight');
+    fairnessInput?.addEventListener('change', () => {
+        recordAnalytics('fairness_weight_set', { value: fairnessInput.value });
+    });
+
+    const p1DirectSelect = qs('#p1_chosen_fighter');
+    p1DirectSelect?.addEventListener('change', () => {
+        recordAnalytics('p1_direct_choice', { fighter_id: p1DirectSelect.value });
+    });
+
+    qsa('input[name="p1_playstyles"], input[name="opp_playstyles"]').forEach(cb => {
+        cb.addEventListener('change', () => {
+            const group = cb.name.startsWith('p1') ? 'p1' : 'opp';
+            recordAnalytics('playstyle_pref', { player: group, style: cb.value, checked: cb.checked });
+        });
+    });
+
+    const p1Range = qs('#p1_range');
+    p1Range?.addEventListener('change', () => recordAnalytics('range_pref', { player: 'p1', range: p1Range.value }));
+    const oppRange = qs('#opp_range');
+    oppRange?.addEventListener('change', () => recordAnalytics('range_pref', { player: 'opp', range: oppRange.value }));
+}
+
 function showMatchupModeHelpOnce() {
     const modal = qs('#matchup-mode-help-modal');
     const closeBtn = qs('#matchup-mode-help-close');
@@ -324,6 +424,12 @@ function promoteAlternative(altCard) {
     const mainCard = qs(`#${player}-main-suggestion`);
     if (!mainCard) return;
 
+    recordAnalytics('alternative_promoted', {
+        player,
+        from_fighter: extractFighterIdFromCard(altCard),
+        to_fighter: extractFighterIdFromCard(mainCard)
+    });
+
     const mainClone = mainCard.cloneNode(true);
     const altClone = altCard.cloneNode(true);
 
@@ -360,11 +466,13 @@ function toggleLock(btn) {
         hidden.value = '';
         btn.classList.replace('btn-unlock', 'btn-lock');
         btn.textContent = '🔒 Lock Fighter';
+        recordAnalytics('fighter_unlocked', { player, fighter_id: fid });
     } else {                              // --- LOCK ---
         btn.dataset.locked = 'true';
         hidden.value = fid;
         btn.classList.replace('btn-lock', 'btn-unlock');
         btn.textContent = '🔓 Fighter Locked';
+        recordAnalytics('fighter_locked', { player, fighter_id: fid });
     }
     // Refresh win percentages after lock state changes (main matchup may change)
     try { updateAllWinPercentages(); } catch (e) { /* graceful fallback */ }

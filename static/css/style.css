@@ -132,3 +132,44 @@ label { font-size: .9rem; }
 /* Stronger hidden rule for modals */
 .hidden { display: none !important; }
 
+/* ===== COOKIE CONSENT ===== */
+.cookie-consent {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(960px, calc(100% - 2rem));
+    background: #0b1526;
+    color: #f8fafc;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem 1rem;
+    align-items: center;
+    z-index: 1200;
+}
+
+.cookie-consent .cookie-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.cookie-consent .cookie-actions { display: flex; gap: 0.5rem; }
+
+.cookie-consent button { margin: 0; padding: 0.55rem 1rem; }
+
+.cookie-consent .secondary {
+    background: #25324a;
+    color: #e2e8f0;
+    border-color: transparent;
+}
+
+.cookie-consent .secondary:hover { background: #2f405c; }
+
+@media (max-width: 640px) {
+    .cookie-consent { grid-template-columns: 1fr; }
+    .cookie-consent .cookie-actions { justify-content: flex-start; }
+}
+
