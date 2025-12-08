@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  unmatched:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: unmatched
+    expose:
+      - "8001"
+    restart: unless-stopped
+    networks:
+      - internal_net
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: unmatched_nginx
+    depends_on:
+      - unmatched
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+    expose:
+      - "80"
+    # Optional: map to host for local testing
+    # ports:
+    #   - "8080:80"
+    restart: unless-stopped
+    networks:
+      - internal_net
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: unmatched_cloudflared
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    depends_on:
+      - nginx
+    restart: unless-stopped
+    networks:
+      - internal_net
+
+networks:
+  internal_net:
+    driver: bridge

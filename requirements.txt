@@ -1,1 +1,6 @@
-Flask==3.0.0
+Flask==3.0.3
+Jinja2==3.1.4
+Werkzeug==3.0.3
+itsdangerous==2.2.0
+MarkupSafe==2.1.5
+gunicorn==21.2.0      # If deploying on Linux servers
