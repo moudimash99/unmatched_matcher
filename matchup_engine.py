@@ -1,8 +1,45 @@
 import random
 from itertools import combinations
 from collections import defaultdict
+def _pick_weighted_elite(score_list, k):
+    """
+    Selects up to k distinct fighters from score_list using
+    weighted random sampling across the full list (no window).
+    score_list items are dicts: {'id', 'score', 'obj'}.
+    """
+    # Work on a shallow copy so we don't mutate the original
+    pool = list(score_list)
+    elite = []
+    used_ids = set()
+
+    # Safety: if fewer fighters than k, just adapt
+    max_picks = min(k, len(pool))
+
+    for _ in range(max_picks):
+        # Filter out already picked fighters
+        candidates = [item for item in pool if item['id'] not in used_ids]
+        if not candidates:
+            break
+
+        # Ensure non-negative weights (in case of odd scores)
+        weights = [max(item['score'], 0.0) for item in candidates]
+
+        # If all weights are zero, fall back to uniform
+        if all(w == 0 for w in weights):
+            chosen = random.choice(candidates)
+        else:
+            chosen = random.choices(candidates, weights=weights, k=1)[0]
+
+        elite.append(chosen)
+        used_ids.add(chosen['id'])
+
+    return elite
+
 
 class MatchupEngine:
+
+
+
     def __init__(self, fighters_db, win_rate_matrix):
         self.fighters_db = fighters_db
         self.win_rate_matrix = win_rate_matrix
@@ -278,10 +315,17 @@ class MatchupEngine:
             opp_scores.append({'id': f['id'], 'score': s_opp, 'obj': f})
         
         # 2. Get Elite Candidates (Top 12 or any k you like)
-        ELITE_K = 12  # you can tweak this
-        p1_elite = sorted(p1_scores, key=lambda x: x['score'], reverse=True)[:ELITE_K]
-        opp_elite = sorted(opp_scores, key=lambda x: x['score'], reverse=True)[:ELITE_K]
-        
+                # 2. Get Elite Candidates (Weighted random across full list)
+        ELITE_K = 12  # size of the elite pool
+        p1_elite = _pick_weighted_elite(p1_scores, ELITE_K)
+        opp_elite = _pick_weighted_elite(opp_scores, ELITE_K)
+
+        # Extract IDs for combination generation
+        p1_ids = [x['id'] for x in p1_elite]
+        opp_ids = [x['id'] for x in opp_elite]
+
+        p1_ids = [x['id'] for x in p1_elite]
+        opp_ids = [x['id'] for x in opp_elite]
         # Extract IDs for combination generation
         p1_ids = [x['id'] for x in p1_elite]
         opp_ids = [x['id'] for x in opp_elite]
@@ -337,41 +381,16 @@ class MatchupEngine:
 
         # Sort the results internally if found
         if best_result:
-            # Calculate score for each possible p1-opp pairing
-            matchup_scores = []
-            for p1_fighter in best_result['p1_pool']:
-                for opp_fighter in best_result['opp_pool']:
-                    score, _ = self._score_pair(
-                        p1_fighter,
-                        opp_fighter,
-                        p1_tags,
-                        opp_tags,
-                        p1_range,
-                        opp_range
-                    )
-                    matchup_scores.append({
-                        'p1': p1_fighter,
-                        'opp': opp_fighter,
-                        'score': score
-                    })
-            
-            # Sort by score descending
-            matchup_scores.sort(key=lambda x: x['score'], reverse=True)
-            
-            # Reorder pools: put best matchup fighters at index 0
-            best_p1 = matchup_scores[0]['p1']
-            best_opp = matchup_scores[0]['opp']
-            
-            # Reorder p1_pool
-            p1_pool_reordered = [best_p1] + [
-                f for f in best_result['p1_pool'] if f['id'] != best_p1['id']
-            ]
-            # Reorder opp_pool
-            opp_pool_reordered = [best_opp] + [
-                f for f in best_result['opp_pool'] if f['id'] != best_opp['id']
-            ]
-            
-            best_result['p1_pool'] = p1_pool_reordered
-            best_result['opp_pool'] = opp_pool_reordered
+            # Sort P1 pool by descending individual fit score
+            best_result['p1_pool'].sort(
+                key=lambda f: p1_score_map[f['id']],
+                reverse=True
+            )
+
+            # Sort Opponent pool by descending individual fit score
+            best_result['opp_pool'].sort(
+                key=lambda f: opp_score_map[f['id']],
+                reverse=True
+            )
 
         return best_result

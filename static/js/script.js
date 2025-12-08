@@ -100,15 +100,20 @@ function setupSetSelection() {
     const selectAllBtn = qs('#select-all-sets-btn');
     const deselectAllBtn = qs('#deselect-all-sets-btn');
     const checkboxes = qsa('#set-checkboxes input[type="checkbox"]');
+    const updateToggleButton = (collapsed) => {
+        if (!toggleBtn) return;
+        toggleBtn.setAttribute('aria-expanded', String(!collapsed));
+        toggleBtn.textContent = collapsed ? '⬇ Show' : '⬆ Hide';
+    };
 
     // Restore collapse state from cookie
     const wasCollapsed = getCookie(SELECT_COLLAPSE_KEY) === '1';
     wrapper.classList.toggle('collapsed', wasCollapsed);
-    toggleBtn.setAttribute('aria-expanded', String(!wasCollapsed));
+    updateToggleButton(wasCollapsed);
 
-    toggleBtn.addEventListener('click', () => {
+    toggleBtn?.addEventListener('click', () => {
         const collapsed = wrapper.classList.toggle('collapsed');
-        toggleBtn.setAttribute('aria-expanded', String(!collapsed));
+        updateToggleButton(collapsed);
         setCookie(SELECT_COLLAPSE_KEY, collapsed ? '1' : '0');
     });
     // Restore checkboxes from cookie (JSON)

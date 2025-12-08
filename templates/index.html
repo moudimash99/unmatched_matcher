@@ -81,10 +81,10 @@
             <button type="button" id="intro-help-btn" class="help-icon-btn" title="Show welcome help">ⓘ</button>
         </div>
         <div class="set-selection collapsed">
-            <h3>
-                Owned Sets
-                <button id="toggle-set-selection-btn" type="button" aria-expanded="false">⬇ Show</button>
-            </h3>
+            <div class="set-selection-header">
+                <h3>Owned Sets</h3>
+                <button id="toggle-set-selection-btn" type="button" class="mode-toggle-heading-btn" aria-expanded="false">⬇ Show</button>
+            </div>
             <div id="set-checkboxes" class="set-checkboxes">
                 {% for set_name_iter in all_sets_list %}
                 <label class="set-switch">
@@ -273,7 +273,14 @@
 </main>
 
 <footer>
-    <p>Unmatched Fighter Chooser — Powered by Flask &amp; Your Preferences!</p>
+    
+    <p class="footer-note">
+        For more info about the website, visit the developer at 
+        <a href="https://mohammad.machaka.net" target="_blank" rel="noopener">mohammad.machaka.net</a>
+        &nbsp;|&nbsp;
+        Follow the project on 
+        <a href="https://github.com/moudimash99/unmatched_matcher" target="_blank" rel="noopener">GitHub</a>.
+    </p>
 </footer>
 
 <!-- Cookie consent banner -->
