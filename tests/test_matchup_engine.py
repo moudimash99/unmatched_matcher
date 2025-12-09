@@ -39,7 +39,7 @@ def test_individual_fit_accounts_for_range_and_tags(engine, sample_fighters):
     score_with_range = engine._calculate_individual_fit(alpha, {"aggressive"}, "Melee")
     assert score_with_range == pytest.approx(1.0)
 
-    score_without_tags = engine._calculate_individual_fit(alpha, set())
+    score_without_tags = engine._calculate_individual_fit(alpha, set(), None)
     assert score_without_tags == pytest.approx(0.5)
 
 
