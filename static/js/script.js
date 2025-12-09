@@ -23,8 +23,13 @@ function getCookie(name) {
     }, '');
 }
 
-/*************************** ANALYTICS & CONSENT ***************************/
+/*************************** CONSTANTS ***************************/
 const CONSENT_COOKIE_KEY = 'ufc_cookie_consent';
+const INTRO_SEEN_KEY = 'ufc_intro_seen';
+const MATCHUP_MODE_HELP_SEEN_KEY = 'ufc_matchup_mode_help_seen';
+const ADVANCED_MODE_HELP_SEEN_KEY = 'ufc_advanced_mode_help_seen';
+
+/*************************** ANALYTICS & CONSENT ***************************/
 let analyticsEnabled = false;
 
 function enableAnalytics() {
@@ -83,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupPlaystyleToggles();
     setupP1SelectionToggle();
     setupModeControls();
+    setupModalCloseHandlers(); // Set up all modal close handlers first
     setupIntroModal();
     setupAnalyticsListeners();
     annotateLockButtons();
@@ -261,24 +267,57 @@ function setupModeControls() {
     }
 }
 
-function setupIntroModal() {
+/**
+ * Set up all modal close handlers. This is called once during initialization
+ * to ensure all modal close buttons work regardless of how the modal was opened.
+ */
+function setupModalCloseHandlers() {
+    // Intro modal close handler
     const introModal = qs('#intro-modal');
     const introClose = qs('#intro-modal-close');
-    if (!introModal || !introClose) return;
-
-    // Setup close handler (only if not already setup)
-    if (!introClose.dataset.closeHandlerSetup) {
+    if (introModal && introClose) {
         introClose.addEventListener('click', () => {
             introModal.classList.add('hidden');
-            const SEEN_KEY = 'ufc_intro_seen';
             try {
-                localStorage.setItem(SEEN_KEY, '1');
+                localStorage.setItem(INTRO_SEEN_KEY, '1');
             } catch (e) {
                 // ignore storage errors
             }
         });
-        introClose.dataset.closeHandlerSetup = '1';
     }
+
+    // Matchup mode help modal close handler
+    const matchupModeHelpModal = qs('#matchup-mode-help-modal');
+    const matchupModeHelpClose = qs('#matchup-mode-help-close');
+    if (matchupModeHelpModal && matchupModeHelpClose) {
+        matchupModeHelpClose.addEventListener('click', () => {
+            matchupModeHelpModal.classList.add('hidden');
+            try {
+                localStorage.setItem(MATCHUP_MODE_HELP_SEEN_KEY, '1');
+            } catch (e) {
+                // ignore storage errors
+            }
+        });
+    }
+
+    // Advanced mode help modal close handler
+    const advancedModeHelpModal = qs('#advanced-mode-help-modal');
+    const advancedModeHelpClose = qs('#advanced-mode-help-close');
+    if (advancedModeHelpModal && advancedModeHelpClose) {
+        advancedModeHelpClose.addEventListener('click', () => {
+            advancedModeHelpModal.classList.add('hidden');
+            try {
+                localStorage.setItem(ADVANCED_MODE_HELP_SEEN_KEY, '1');
+            } catch (e) {
+                // ignore storage errors
+            }
+        });
+    }
+}
+
+function setupIntroModal() {
+    const introModal = qs('#intro-modal');
+    if (!introModal) return;
 
     // Wire up intro help button (always shows the modal without localStorage lock)
     const introHelpBtn = qs('#intro-help-btn');
@@ -291,8 +330,7 @@ function setupIntroModal() {
     }
 
     // Only show once per browser (using localStorage)
-    const SEEN_KEY = 'ufc_intro_seen';
-    if (window.localStorage && localStorage.getItem(SEEN_KEY) === '1') {
+    if (window.localStorage && localStorage.getItem(INTRO_SEEN_KEY) === '1') {
         return;
     }
 
@@ -337,54 +375,24 @@ function setupAnalyticsListeners() {
 
 function showMatchupModeHelpOnce() {
     const modal = qs('#matchup-mode-help-modal');
-    const closeBtn = qs('#matchup-mode-help-close');
-    if (!modal || !closeBtn) return;
+    if (!modal) return;
 
-    const SEEN_KEY = 'ufc_matchup_mode_help_seen';
-    if (window.localStorage && localStorage.getItem(SEEN_KEY) === '1') {
+    if (window.localStorage && localStorage.getItem(MATCHUP_MODE_HELP_SEEN_KEY) === '1') {
         return;
     }
 
     modal.classList.remove('hidden');
-
-    // Setup close handler (only if not already setup)
-    if (!closeBtn.dataset.closeHandlerSetup) {
-        closeBtn.addEventListener('click', () => {
-            modal.classList.add('hidden');
-            try {
-                localStorage.setItem(SEEN_KEY, '1');
-            } catch (e) {
-                // ignore storage errors
-            }
-        });
-        closeBtn.dataset.closeHandlerSetup = '1';
-    }
 }
 
 function showAdvancedModeHelpOnce() {
     const modal = qs('#advanced-mode-help-modal');
-    const closeBtn = qs('#advanced-mode-help-close');
-    if (!modal || !closeBtn) return;
+    if (!modal) return;
 
-    const SEEN_KEY = 'ufc_advanced_mode_help_seen';
-    if (window.localStorage && localStorage.getItem(SEEN_KEY) === '1') {
+    if (window.localStorage && localStorage.getItem(ADVANCED_MODE_HELP_SEEN_KEY) === '1') {
         return;
     }
 
     modal.classList.remove('hidden');
-
-    // Setup close handler (only if not already setup)
-    if (!closeBtn.dataset.closeHandlerSetup) {
-        closeBtn.addEventListener('click', () => {
-            modal.classList.add('hidden');
-            try {
-                localStorage.setItem(SEEN_KEY, '1');
-            } catch (e) {
-                // ignore storage errors
-            }
-        });
-        closeBtn.dataset.closeHandlerSetup = '1';
-    }
 }
 
 /*************************** CORE INTERACTION LOGIC  ***************************/
