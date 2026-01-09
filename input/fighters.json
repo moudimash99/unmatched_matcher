@@ -1,94 +1,736 @@
 {
   "fighters": [
-    {"id": "king_arthur", "name": "King Arthur", "set": "Battle of Legends Vol. 1", "playstyles": ["midrange", "burst", "setup", "straightforward"], "range": "Hybrid", "image_url": "/static/pics/king_arthur.webp"},
-    {"id": "alice", "name": "Alice", "set": "Battle of Legends Vol. 1", "playstyles": ["shapeshifter", "versatile", "positional", "tricky"], "range": "Melee", "image_url": "/static/pics/alice.webp"},
-    {"id": "medusa", "name": "Medusa", "set": "Battle of Legends Vol. 1", "playstyles": ["control", "burst", "harass", "finisher"], "range": "Ranged Assist", "image_url": "/static/pics/medusa.webp"},
-    {"id": "sinbad", "name": "Sinbad", "set": "Battle of Legends Vol. 1", "playstyles": ["scaling", "late_game", "card_advantage", "midrange"], "range": "Melee", "image_url": "/static/pics/sinbad.webp"},
-    {"id": "robin_hood", "name": "Robin Hood", "set": "Robin Hood vs. Bigfoot", "playstyles": ["harass", "control", "card_advantage"], "range": "Ranged Assist", "image_url": "/static/pics/robin_hood.webp"},
-    {"id": "bigfoot", "name": "Bigfoot", "set": "Robin Hood vs. Bigfoot", "playstyles": ["high_damage", "positional", "control", "straightforward"], "range": "Melee", "image_url": "/static/pics/bigfoot.webp"},
-    {"id": "bruce_lee", "name": "Bruce Lee", "set": "Bruce Lee", "playstyles": ["combo", "burst", "high_damage", "tricky"], "range": "Melee", "image_url": "/static/pics/bruce_lee.webp"},
-    {"id": "robert_muldoon", "name": "Robert Muldoon", "set": "InGen vs. Raptors", "playstyles": ["control", "setup", "tricky"], "range": "Ranged", "image_url": "/static/pics/robert_muldoon.webp"},
-    {"id": "raptors", "name": "Raptors", "set": "InGen vs. Raptors", "playstyles": ["swarm", "aggressive", "positional", "glass_cannon"], "range": "Melee", "image_url": "/static/pics/raptors.webp"},
-    {"id": "dracula", "name": "Dracula", "set": "Cobble & Fog", "playstyles": ["attrition", "harass", "recursion", "control"], "range": "Melee", "image_url": "/static/pics/dracula.webp"},
-    {"id": "invisible_man", "name": "The Invisible Man", "set": "Cobble & Fog", "playstyles": ["elusive", "tricky", "harass", "control"], "range": "Melee", "image_url": "/static/pics/invisible_man.webp"},
-    {"id": "jekyll_hyde", "name": "Jekyll & Hyde", "set": "Cobble & Fog", "playstyles": ["shapeshifter", "high_damage", "self_harm", "burst"], "range": "Melee", "image_url": "/static/pics/jekyll_hyde.webp"},
-    {"id": "sherlock_holmes", "name": "Sherlock Holmes", "set": "Cobble & Fog", "playstyles": ["information", "disruption", "tricky", "combo"], "range": "Hybrid", "image_url": "/static/pics/sherlock_holmes.webp"},
-    {"id": "buffy", "name": "Buffy", "set": "Buffy the Vampire Slayer", "playstyles": ["aggressive", "versatile", "midrange", "regeneration"], "range": "Reach", "image_url": "/static/pics/buffy.webp"},
-    {"id": "spike", "name": "Spike", "set": "Buffy the Vampire Slayer", "playstyles": ["aggressive", "self_harm", "card_advantage", "elusive"], "range": "Melee", "image_url": "/static/pics/spike.webp"},
-    {"id": "willow", "name": "Willow", "set": "Buffy the Vampire Slayer", "playstyles": ["shapeshifter", "scaling", "late_game", "high_damage"], "range": "Ranged", "image_url": "/static/pics/willow.webp"},
-    {"id": "angel", "name": "Angel", "set": "Buffy the Vampire Slayer", "playstyles": ["shapeshifter", "attrition", "disruption", "regeneration"], "range": "Melee", "image_url": "/static/pics/angel.webp"},
-    {"id": "little_red", "name": "Little Red Riding Hood", "set": "Beowulf vs. Little Red Riding Hood", "playstyles": ["combo", "setup", "disruption", "high_damage"], "range": "Hybrid", "image_url": "/static/pics/little_red.webp"},
-    {"id": "beowulf", "name": "Beowulf", "set": "Beowulf vs. Little Red Riding Hood", "playstyles": ["high_damage", "tank", "finisher", "self_harm"], "range": "Melee", "image_url": "/static/pics/beowulf.webp"},
-    {"id": "deadpool", "name": "Deadpool", "set": "Deadpool", "playstyles": ["unorthodox", "regeneration", "tricky", "harass"], "range": "Melee", "image_url": "/static/pics/deadpool.webp"},
-    {"id": "achilles", "name": "Achilles", "set": "Battle of Legends Vol. 2", "playstyles": ["aggressive", "card_advantage", "finisher", "glass_cannon"], "range": "Melee", "image_url": "/static/pics/achilles.webp"},
-    {"id": "bloody_mary", "name": "Bloody Mary", "set": "Battle of Legends Vol. 2", "playstyles": ["burst", "combo", "disruption", "glass_cannon"], "range": "Melee", "image_url": "/static/pics/bloody_mary.webp"},
-    {"id": "sun_wukong", "name": "Sun Wukong", "set": "Battle of Legends Vol. 2", "playstyles": ["swarm", "versatile", "elusive", "control"], "range": "Melee", "image_url": "/static/pics/sun_wukong.webp"},
-    {"id": "yennenga", "name": "Yennenga", "set": "Battle of Legends Vol. 2", "playstyles": ["control", "consistent", "tank"], "range": "Ranged", "image_url": "/static/pics/yennenga.webp"},
-    {"id": "luke_cage", "name": "Luke Cage", "set": "Redemption Row", "playstyles": ["tank", "attrition", "disruption"], "range": "Hybrid", "image_url": "/static/pics/luke_cage.webp"},
-    {"id": "ghost_rider", "name": "Ghost Rider", "set": "Redemption Row", "playstyles": ["burst", "self_harm", "scaling", "late_game"], "range": "Melee", "image_url": "/static/pics/ghost_rider.webp"},
-    {"id": "moon_knight", "name": "Moon Knight", "set": "Redemption Row", "playstyles": ["shapeshifter", "versatile", "positional", "unorthodox"], "range": "Melee", "image_url": "/static/pics/moon_knight.webp"},
-    {"id": "daredevil", "name": "Daredevil", "set": "Hell's Kitchen", "playstyles": ["midrange", "disruption", "tank", "tricky"], "range": "Melee", "image_url": "/static/pics/daredevil.webp"},
-    {"id": "elektra", "name": "Elektra", "set": "Hell's Kitchen", "playstyles": ["recursion", "elusive", "aggressive", "glass_cannon"], "range": "Melee", "image_url": "/static/pics/elektra.webp"},
-    {"id": "bullseye", "name": "Bullseye", "set": "Hell's Kitchen", "playstyles": ["harass", "control", "high_damage", "finisher"], "range": "Ranged", "image_url": "/static/pics/bullseye.webp"},
-    {"id": "dr_sattler", "name": "Dr. Sattler", "set": "Dr. Sattler vs. T-Rex", "playstyles": ["control", "setup", "card_advantage", "versatile"], "range": "Reach", "image_url": "/static/pics/dr_sattler.webp"},
-    {"id": "t_rex", "name": "T. Rex", "set": "Dr. Sattler vs. T-Rex", "playstyles": ["high_damage", "tank", "control", "straightforward"], "range": "Melee", "image_url": "/static/pics/t_rex.webp"},
-    {"id": "houdini", "name": "Houdini", "set": "Houdini vs. The Genie", "playstyles": ["elusive", "tricky", "positional", "burst"], "range": "Melee", "image_url": "/static/pics/houdini.webp"},
-    {"id": "the_genie", "name": "The Genie", "set": "Houdini vs. The Genie", "playstyles": ["versatile", "late_game", "card_advantage", "combo"], "range": "Ranged", "image_url": "/static/pics/the_genie.webp"},
-    {"id": "ms_marvel", "name": "Ms. Marvel", "set": "Teen Spirit", "playstyles": ["positional", "harass", "control", "tricky"], "range": "Reach", "image_url": "/static/pics/ms_marvel.webp"},
-    {"id": "squirrel_girl", "name": "Squirrel Girl", "set": "Teen Spirit", "playstyles": ["swarm", "control", "aggressive", "consistent"], "range": "Melee", "image_url": "/static/pics/squirrel_girl.webp"},
-    {"id": "cloak_and_dagger", "name": "Cloak and Dagger", "set": "Teen Spirit", "playstyles": ["positional", "burst", "elusive", "glass_cannon"], "range": "Melee", "image_url": "/static/pics/cloak_and_dagger.webp"},
-    {"id": "black_panther", "name": "Black Panther", "set": "For King and Country", "playstyles": ["scaling", "tank", "late_game"], "range": "Melee", "image_url": "/static/pics/black_panther.webp"},
-    {"id": "black_widow", "name": "Black Widow", "set": "For King and Country", "playstyles": ["combo", "setup", "tricky", "finisher"], "range": "Ranged", "image_url": "/static/pics/black_widow.webp"},
-    {"id": "winter_soldier", "name": "Winter Soldier", "set": "For King and Country", "playstyles": ["versatile", "midrange", "positional", "disruption"], "range": "Ranged", "image_url": "/static/pics/winter_soldier.webp"},
-    {"id": "she_hulk", "name": "She-Hulk", "set": "Brains and Brawn", "playstyles": ["high_damage", "disruption", "tank", "straightforward"], "range": "Melee", "image_url": "/static/pics/she_hulk.webp"},
-    {"id": "spider_man", "name": "Spider-Man", "set": "Brains and Brawn", "playstyles": ["elusive", "positional", "harass", "tank"], "range": "Reach", "image_url": "/static/pics/spider_man.webp"},
-    {"id": "doctor_strange", "name": "Doctor Strange", "set": "Brains and Brawn", "playstyles": ["versatile", "tricky", "card_advantage", "control"], "range": "Ranged", "image_url": "/static/pics/doctor_strange.webp"},
-    {"id": "nikola_tesla", "name": "Nikola Tesla", "set": "Tales to Amaze", "playstyles": ["control", "setup", "scaling"], "range": "Ranged", "image_url": "/static/pics/nikola_tesla.webp"},
-    {"id": "annie_christmas", "name": "Annie Christmas", "set": "Tales to Amaze", "playstyles": ["scaling", "high_damage", "midrange", "finisher"], "range": "Hybrid", "image_url": "/static/pics/annie_christmas.webp"},
-    {"id": "the_golden_bat", "name": "The Golden Bat", "set": "Tales to Amaze", "playstyles": ["finisher", "burst", "elusive", "glass_cannon"], "range": "Melee", "image_url": "/static/pics/the_golden_bat.webp"},
-    {"id": "dr_jill_trent", "name": "Dr. Jill Trent", "set": "Tales to Amaze", "playstyles": ["versatile", "recursion", "control", "card_advantage"], "range": "Melee", "image_url": "/static/pics/dr_jill_trent.webp"},
-    {"id": "oda_nobunaga", "name": "Oda Nobunaga", "set": "Sun's Origin", "playstyles": ["swarm", "aggressive", "control", "self_harm"], "range": "Melee", "image_url": "/static/pics/oda_nobunaga.webp"},
-    {"id": "tomoe_gozen", "name": "Tomoe Gozen", "set": "Sun's Origin", "playstyles": ["aggressive", "consistent", "finisher", "midrange"], "range": "Ranged", "image_url": "/static/pics/tomoe_gozen.webp"},
-    {"id": "william_shakespeare", "name": "William Shakespeare", "set": "Slings and Arrows", "playstyles": ["control", "tricky", "setup"], "range": "Melee", "image_url": "/static/pics/william_shakespeare.webp"},
-    {"id": "hamlet", "name": "Hamlet", "set": "Slings and Arrows", "playstyles": ["high_damage", "self_harm", "glass_cannon", "finisher"], "range": "Melee", "image_url": "/static/pics/hamlet.webp"},
-    {"id": "titania", "name": "Titania", "set": "Slings and Arrows", "playstyles": ["swarm", "harass", "control", "elusive"], "range": "Melee", "image_url": "/static/pics/titania.webp"},
-    {"id": "the_wayward_sisters", "name": "The Wayward Sisters", "set": "Slings and Arrows", "playstyles": ["scaling", "combo", "late_game", "setup"], "range": "Ranged", "image_url": "/static/pics/the_wayward_sisters.webp"},
-    {"id": "geralt", "name": "Geralt of Rivia", "set": "The Witcher: Steel and Silver", "playstyles": ["versatile", "combo", "midrange", "tank"], "range": "Melee", "image_url": "/static/pics/geralt.webp"},
-    {"id": "ciri", "name": "Ciri", "set": "The Witcher: Steel and Silver", "playstyles": ["elusive", "burst", "positional", "late_game"], "range": "Melee", "image_url": "/static/pics/ciri.webp"},
-    {"id": "yennefer_triss", "name": "Yennefer & Triss", "set": "The Witcher: Realms Fall", "playstyles": ["shapeshifter", "versatile", "recursion", "control"], "range": "Ranged", "image_url": "/static/pics/yennefer_triss.webp"},
-    {"id": "philippa_eilhart", "name": "Philippa Eilhart", "set": "The Witcher: Realms Fall", "playstyles": ["unorthodox", "control", "tricky"], "range": "Ranged", "image_url": "/static/pics/philippa_eilhart.webp"},
-    {"id": "eredin", "name": "Eredin Bréacc Glas", "set": "The Witcher: Realms Fall", "playstyles": ["swarm", "aggressive", "control", "finisher"], "range": "Melee", "image_url": "/static/pics/eredin.webp"},
-    {"id": "muhammad_ali", "name": "Muhammad Ali", "set": "Muhammad Ali vs. Bruce Lee", "playstyles": ["combo", "tank", "midrange", "tricky"], "range": "Melee", "image_url": "/static/pics/muhammad_ali.webp"}
+    {
+      "id": "king_arthur",
+      "name": "King Arthur",
+      "set": "Battle of Legends Vol. 1",
+      "playstyles": [
+        "versatile",
+        "combo",
+        "burst"
+      ],
+      "range": "Hybrid",
+      "image_url": "/static/pics/king_arthur.webp"
+    },
+    {
+      "id": "alice",
+      "name": "Alice",
+      "set": "Battle of Legends Vol. 1",
+      "playstyles": [
+        "versatile",
+        "elusive",
+        "damage"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/alice.webp"
+    },
+    {
+      "id": "medusa",
+      "name": "Medusa",
+      "set": "Battle of Legends Vol. 1",
+      "playstyles": [
+        "control",
+        "burst",
+        "aggressive"
+      ],
+      "range": "Ranged Assist",
+      "image_url": "/static/pics/medusa.webp"
+    },
+    {
+      "id": "sinbad",
+      "name": "Sinbad",
+      "set": "Battle of Legends Vol. 1",
+      "playstyles": [
+        "scaling",
+        "recursion",
+        "versatile"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/sinbad.webp"
+    },
+    {
+      "id": "robin_hood",
+      "name": "Robin Hood",
+      "set": "Robin Hood vs. Bigfoot",
+      "playstyles": [
+        "aggressive",
+        "control",
+        "recursion"
+      ],
+      "range": "Ranged Assist",
+      "image_url": "/static/pics/robin_hood.webp"
+    },
+    {
+      "id": "bigfoot",
+      "name": "Bigfoot",
+      "set": "Robin Hood vs. Bigfoot",
+      "playstyles": [
+        "damage",
+        "elusive",
+        "control"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/bigfoot.webp"
+    },
+    {
+      "id": "bruce_lee",
+      "name": "Bruce Lee",
+      "set": "Bruce Lee",
+      "playstyles": [
+        "combo",
+        "burst",
+        "damage"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/bruce_lee.webp"
+    },
+    {
+      "id": "robert_muldoon",
+      "name": "Robert Muldoon",
+      "set": "InGen vs. Raptors",
+      "playstyles": [
+        "control",
+        "combo",
+        "elusive"
+      ],
+      "range": "Ranged",
+      "image_url": "/static/pics/robert_muldoon.webp"
+    },
+    {
+      "id": "raptors",
+      "name": "Raptors",
+      "set": "InGen vs. Raptors",
+      "playstyles": [
+        "swarm",
+        "aggressive",
+        "burst"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/raptors.webp"
+    },
+    {
+      "id": "dracula",
+      "name": "Dracula",
+      "set": "Cobble & Fog",
+      "playstyles": [
+        "tank",
+        "aggressive",
+        "recursion",
+        "control"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/dracula.webp"
+    },
+    {
+      "id": "invisible_man",
+      "name": "The Invisible Man",
+      "set": "Cobble & Fog",
+      "playstyles": [
+        "elusive",
+        "aggressive",
+        "control"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/invisible_man.webp"
+    },
+    {
+      "id": "jekyll_hyde",
+      "name": "Jekyll & Hyde",
+      "set": "Cobble & Fog",
+      "playstyles": [
+        "versatile",
+        "damage",
+        "burst"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/jekyll_hyde.webp"
+    },
+    {
+      "id": "sherlock_holmes",
+      "name": "Sherlock Holmes",
+      "set": "Cobble & Fog",
+      "playstyles": [
+        "control",
+        "elusive",
+        "combo"
+      ],
+      "range": "Hybrid",
+      "image_url": "/static/pics/sherlock_holmes.webp"
+    },
+    {
+      "id": "buffy",
+      "name": "Buffy",
+      "set": "Buffy the Vampire Slayer",
+      "playstyles": [
+        "aggressive",
+        "versatile",
+        "tank"
+      ],
+      "range": "Reach",
+      "image_url": "/static/pics/buffy.webp"
+    },
+    {
+      "id": "spike",
+      "name": "Spike",
+      "set": "Buffy the Vampire Slayer",
+      "playstyles": [
+        "aggressive",
+        "unorthodox",
+        "recursion",
+        "elusive"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/spike.webp"
+    },
+    {
+      "id": "willow",
+      "name": "Willow",
+      "set": "Buffy the Vampire Slayer",
+      "playstyles": [
+        "versatile",
+        "scaling",
+        "damage"
+      ],
+      "range": "Ranged",
+      "image_url": "/static/pics/willow.webp"
+    },
+    {
+      "id": "angel",
+      "name": "Angel",
+      "set": "Buffy the Vampire Slayer",
+      "playstyles": [
+        "versatile",
+        "tank",
+        "control"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/angel.webp"
+    },
+    {
+      "id": "little_red",
+      "name": "Little Red Riding Hood",
+      "set": "Beowulf vs. Little Red Riding Hood",
+      "playstyles": [
+        "combo",
+        "control",
+        "damage"
+      ],
+      "range": "Hybrid",
+      "image_url": "/static/pics/little_red.webp"
+    },
+    {
+      "id": "beowulf",
+      "name": "Beowulf",
+      "set": "Beowulf vs. Little Red Riding Hood",
+      "playstyles": [
+        "damage",
+        "tank",
+        "burst"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/beowulf.webp"
+    },
+    {
+      "id": "deadpool",
+      "name": "Deadpool",
+      "set": "Deadpool",
+      "playstyles": [
+        "unorthodox",
+        "tank",
+        "elusive"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/deadpool.webp"
+    },
+    {
+      "id": "achilles",
+      "name": "Achilles",
+      "set": "Battle of Legends Vol. 2",
+      "playstyles": [
+        "aggressive",
+        "recursion",
+        "burst"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/achilles.webp"
+    },
+    {
+      "id": "bloody_mary",
+      "name": "Bloody Mary",
+      "set": "Battle of Legends Vol. 2",
+      "playstyles": [
+        "burst",
+        "combo",
+        "control"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/bloody_mary.webp"
+    },
+    {
+      "id": "sun_wukong",
+      "name": "Sun Wukong",
+      "set": "Battle of Legends Vol. 2",
+      "playstyles": [
+        "swarm",
+        "versatile",
+        "elusive",
+        "control"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/sun_wukong.webp"
+    },
+    {
+      "id": "yennenga",
+      "name": "Yennenga",
+      "set": "Battle of Legends Vol. 2",
+      "playstyles": [
+        "control",
+        "damage",
+        "tank"
+      ],
+      "range": "Ranged",
+      "image_url": "/static/pics/yennenga.webp"
+    },
+    {
+      "id": "luke_cage",
+      "name": "Luke Cage",
+      "set": "Redemption Row",
+      "playstyles": [
+        "tank",
+        "control"
+      ],
+      "range": "Hybrid",
+      "image_url": "/static/pics/luke_cage.webp"
+    },
+    {
+      "id": "ghost_rider",
+      "name": "Ghost Rider",
+      "set": "Redemption Row",
+      "playstyles": [
+        "burst",
+        "unorthodox",
+        "scaling"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/ghost_rider.webp"
+    },
+    {
+      "id": "moon_knight",
+      "name": "Moon Knight",
+      "set": "Redemption Row",
+      "playstyles": [
+        "versatile",
+        "elusive",
+        "unorthodox"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/moon_knight.webp"
+    },
+    {
+      "id": "daredevil",
+      "name": "Daredevil",
+      "set": "Hell's Kitchen",
+      "playstyles": [
+        "versatile",
+        "control",
+        "tank",
+        "elusive"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/daredevil.webp"
+    },
+    {
+      "id": "elektra",
+      "name": "Elektra",
+      "set": "Hell's Kitchen",
+      "playstyles": [
+        "recursion",
+        "elusive",
+        "aggressive",
+        "burst"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/elektra.webp"
+    },
+    {
+      "id": "bullseye",
+      "name": "Bullseye",
+      "set": "Hell's Kitchen",
+      "playstyles": [
+        "aggressive",
+        "control",
+        "damage",
+        "burst"
+      ],
+      "range": "Ranged",
+      "image_url": "/static/pics/bullseye.webp"
+    },
+    {
+      "id": "dr_sattler",
+      "name": "Dr. Sattler",
+      "set": "Dr. Sattler vs. T-Rex",
+      "playstyles": [
+        "control",
+        "combo",
+        "recursion",
+        "versatile"
+      ],
+      "range": "Reach",
+      "image_url": "/static/pics/dr_sattler.webp"
+    },
+    {
+      "id": "t_rex",
+      "name": "T. Rex",
+      "set": "Dr. Sattler vs. T-Rex",
+      "playstyles": [
+        "damage",
+        "tank",
+        "control"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/t_rex.webp"
+    },
+    {
+      "id": "houdini",
+      "name": "Houdini",
+      "set": "Houdini vs. The Genie",
+      "playstyles": [
+        "elusive",
+        "burst"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/houdini.webp"
+    },
+    {
+      "id": "the_genie",
+      "name": "The Genie",
+      "set": "Houdini vs. The Genie",
+      "playstyles": [
+        "versatile",
+        "scaling",
+        "recursion",
+        "combo"
+      ],
+      "range": "Ranged",
+      "image_url": "/static/pics/the_genie.webp"
+    },
+    {
+      "id": "ms_marvel",
+      "name": "Ms. Marvel",
+      "set": "Teen Spirit",
+      "playstyles": [
+        "elusive",
+        "aggressive",
+        "control"
+      ],
+      "range": "Reach",
+      "image_url": "/static/pics/ms_marvel.webp"
+    },
+    {
+      "id": "squirrel_girl",
+      "name": "Squirrel Girl",
+      "set": "Teen Spirit",
+      "playstyles": [
+        "swarm",
+        "control",
+        "aggressive",
+        "damage"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/squirrel_girl.webp"
+    },
+    {
+      "id": "cloak_and_dagger",
+      "name": "Cloak and Dagger",
+      "set": "Teen Spirit",
+      "playstyles": [
+        "elusive",
+        "burst"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/cloak_and_dagger.webp"
+    },
+    {
+      "id": "black_panther",
+      "name": "Black Panther",
+      "set": "For King and Country",
+      "playstyles": [
+        "scaling",
+        "tank"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/black_panther.webp"
+    },
+    {
+      "id": "black_widow",
+      "name": "Black Widow",
+      "set": "For King and Country",
+      "playstyles": [
+        "combo",
+        "elusive",
+        "burst"
+      ],
+      "range": "Ranged",
+      "image_url": "/static/pics/black_widow.webp"
+    },
+    {
+      "id": "winter_soldier",
+      "name": "Winter Soldier",
+      "set": "For King and Country",
+      "playstyles": [
+        "versatile",
+        "elusive",
+        "control"
+      ],
+      "range": "Ranged",
+      "image_url": "/static/pics/winter_soldier.webp"
+    },
+    {
+      "id": "she_hulk",
+      "name": "She-Hulk",
+      "set": "Brains and Brawn",
+      "playstyles": [
+        "damage",
+        "control",
+        "tank"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/she_hulk.webp"
+    },
+    {
+      "id": "spider_man",
+      "name": "Spider-Man",
+      "set": "Brains and Brawn",
+      "playstyles": [
+        "elusive",
+        "aggressive",
+        "tank"
+      ],
+      "range": "Reach",
+      "image_url": "/static/pics/spider_man.webp"
+    },
+    {
+      "id": "doctor_strange",
+      "name": "Doctor Strange",
+      "set": "Brains and Brawn",
+      "playstyles": [
+        "versatile",
+        "elusive",
+        "recursion",
+        "control"
+      ],
+      "range": "Ranged",
+      "image_url": "/static/pics/doctor_strange.webp"
+    },
+    {
+      "id": "nikola_tesla",
+      "name": "Nikola Tesla",
+      "set": "Tales to Amaze",
+      "playstyles": [
+        "control",
+        "combo",
+        "scaling"
+      ],
+      "range": "Ranged",
+      "image_url": "/static/pics/nikola_tesla.webp"
+    },
+    {
+      "id": "annie_christmas",
+      "name": "Annie Christmas",
+      "set": "Tales to Amaze",
+      "playstyles": [
+        "scaling",
+        "damage",
+        "versatile",
+        "burst"
+      ],
+      "range": "Hybrid",
+      "image_url": "/static/pics/annie_christmas.webp"
+    },
+    {
+      "id": "the_golden_bat",
+      "name": "The Golden Bat",
+      "set": "Tales to Amaze",
+      "playstyles": [
+        "burst",
+        "elusive"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/the_golden_bat.webp"
+    },
+    {
+      "id": "dr_jill_trent",
+      "name": "Dr. Jill Trent",
+      "set": "Tales to Amaze",
+      "playstyles": [
+        "versatile",
+        "recursion",
+        "control"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/dr_jill_trent.webp"
+    },
+    {
+      "id": "oda_nobunaga",
+      "name": "Oda Nobunaga",
+      "set": "Sun's Origin",
+      "playstyles": [
+        "swarm",
+        "aggressive",
+        "control",
+        "unorthodox"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/oda_nobunaga.webp"
+    },
+    {
+      "id": "tomoe_gozen",
+      "name": "Tomoe Gozen",
+      "set": "Sun's Origin",
+      "playstyles": [
+        "aggressive",
+        "damage",
+        "burst",
+        "versatile"
+      ],
+      "range": "Ranged",
+      "image_url": "/static/pics/tomoe_gozen.webp"
+    },
+    {
+      "id": "william_shakespeare",
+      "name": "William Shakespeare",
+      "set": "Slings and Arrows",
+      "playstyles": [
+        "control",
+        "elusive",
+        "combo"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/william_shakespeare.webp"
+    },
+    {
+      "id": "hamlet",
+      "name": "Hamlet",
+      "set": "Slings and Arrows",
+      "playstyles": [
+        "damage",
+        "unorthodox",
+        "burst"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/hamlet.webp"
+    },
+    {
+      "id": "titania",
+      "name": "Titania",
+      "set": "Slings and Arrows",
+      "playstyles": [
+        "swarm",
+        "aggressive",
+        "control",
+        "elusive"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/titania.webp"
+    },
+    {
+      "id": "the_wayward_sisters",
+      "name": "The Wayward Sisters",
+      "set": "Slings and Arrows",
+      "playstyles": [
+        "scaling",
+        "combo"
+      ],
+      "range": "Ranged",
+      "image_url": "/static/pics/the_wayward_sisters.webp"
+    },
+    {
+      "id": "geralt",
+      "name": "Geralt of Rivia",
+      "set": "The Witcher: Steel and Silver",
+      "playstyles": [
+        "versatile",
+        "combo",
+        "tank"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/geralt.webp"
+    },
+    {
+      "id": "ciri",
+      "name": "Ciri",
+      "set": "The Witcher: Steel and Silver",
+      "playstyles": [
+        "elusive",
+        "burst",
+        "scaling"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/ciri.webp"
+    },
+    {
+      "id": "yennefer_triss",
+      "name": "Yennefer & Triss",
+      "set": "The Witcher: Realms Fall",
+      "playstyles": [
+        "versatile",
+        "recursion",
+        "control"
+      ],
+      "range": "Ranged",
+      "image_url": "/static/pics/yennefer_triss.webp"
+    },
+    {
+      "id": "philippa_eilhart",
+      "name": "Philippa Eilhart",
+      "set": "The Witcher: Realms Fall",
+      "playstyles": [
+        "unorthodox",
+        "control",
+        "elusive"
+      ],
+      "range": "Ranged",
+      "image_url": "/static/pics/philippa_eilhart.webp"
+    },
+    {
+      "id": "eredin",
+      "name": "Eredin Bréacc Glas",
+      "set": "The Witcher: Realms Fall",
+      "playstyles": [
+        "swarm",
+        "aggressive",
+        "control",
+        "burst"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/eredin.webp"
+    },
+    {
+      "id": "muhammad_ali",
+      "name": "Muhammad Ali",
+      "set": "Muhammad Ali vs. Bruce Lee",
+      "playstyles": [
+        "combo",
+        "tank",
+        "versatile",
+        "elusive"
+      ],
+      "range": "Melee",
+      "image_url": "/static/pics/muhammad_ali.webp"
+    }
   ],
   "playstyle_definitions": {
     "aggressive": "Focuses on applying early pressure and maintaining offense",
-    "control": "Manages board state and dictates the pace of the game",
-    "midrange": "Balanced approach with flexible early-to-mid game plans",
-    "combo": "Relies on specific card combinations for powerful effects",
-    "burst": "Delivers high damage in short windows",
-    "high_damage": "Consistently deals above-average damage",
-    "consistent": "Reliable, steady damage output",
-    "finisher": "Specializes in closing out games",
-    "tank": "High durability and defensive capabilities",
-    "elusive": "Avoids damage through positioning and timing",
-    "regeneration": "Recovers health or resources over time",
-    "scaling": "Grows stronger over time",
-    "late_game": "Peaks in power during extended games",
-    "card_advantage": "Generates extra cards or resources",
-    "attrition": "Wins through resource depletion",
-    "setup": "Requires preparation before major plays",
-    "tricky": "Complex timing and decision-making",
-    "straightforward": "Simple, direct gameplay",
-    "unorthodox": "Unique mechanics that break normal rules",
-    "positional": "Success depends heavily on board positioning",
+    "control": "Manages board state, disrupts opponents, and dictates the pace",
+    "combo": "Relies on specific card combinations and setup for powerful effects",
+    "burst": "Delivers high damage in short windows to finish games quickly",
+    "tank": "High durability, defensive capabilities, and resource sustainability",
+    "elusive": "Avoids damage through positioning, timing, and complex decision-making",
+    "versatile": "Adapts to multiple strategies with flexible gameplay",
+    "scaling": "Grows stronger over time and peaks in extended games",
+    "damage": "Consistently deals high or reliable damage output",
     "swarm": "Uses multiple small units or tokens",
-    "harass": "Applies constant small pressure",
-    "shapeshifter": "Changes form or abilities during play",
-    "recursion": "Reuses cards from discard pile",
-    "disruption": "Interferes with opponent's plans",
-    "self_harm": "Takes damage to gain advantages",
-    "versatile": "Adapts to multiple strategies",
-    "glass_cannon": "High damage output but low survivability",
-    "information": "Gains knowledge about opponent's hand/deck"
+    "recursion": "Generates card advantage and reuses resources from discard",
+    "unorthodox": "Unique mechanics that break normal rules or use unconventional strategies"
   }
 }
