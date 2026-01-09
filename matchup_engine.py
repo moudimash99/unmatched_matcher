@@ -318,12 +318,13 @@ class MatchupEngine:
             p1_scores.append({'id': f['id'], 'score': s_p1, 'obj': f})
             opp_scores.append({'id': f['id'], 'score': s_opp, 'obj': f})
         
-        # 2. Get Elite Candidates (Weighted random across full list)
-        ELITE_K = 12  # size of the elite pool
+        # 2. Get Elite Candidates (Weighted random selection from full list)
+        # ELITE_K determines the size of the candidate pool for combinations
+        ELITE_K = 12
         p1_elite = _pick_weighted_elite(p1_scores, ELITE_K)
         opp_elite = _pick_weighted_elite(opp_scores, ELITE_K)
 
-        # Extract IDs for combination generation
+        # 3. Extract IDs for combination generation
         p1_ids = [x['id'] for x in p1_elite]
         opp_ids = [x['id'] for x in opp_elite]
         
@@ -334,11 +335,11 @@ class MatchupEngine:
         best_result = None
         max_total_score = -1.0
 
-        # 3. Generate Pools with ASYMMETRIC sizes
+        # 4. Generate Pools with ASYMMETRIC sizes
         p1_combos = list(combinations(p1_ids, P1_POOL_SIZE))
         opp_combos = list(combinations(opp_ids, OPP_POOL_SIZE))
 
-        # 4. Matrix Validation
+        # 5. Matrix Validation
         for pool_a_ids in p1_combos:
             # OPTIMIZATION: Intersection Trick
             # Universe of opponents fair against ALL P1 fighters in this pool
@@ -357,7 +358,7 @@ class MatchupEngine:
                 if not set(pool_b_ids).issubset(valid_opp_universe):
                     continue
 
-                # 5. Global Scoring (Avg Fit A + Avg Fit B)
+                # 6. Global Scoring (Avg Fit A + Avg Fit B)
                 avg_p1 = sum(p1_score_map[i] for i in pool_a_ids) / float(P1_POOL_SIZE)
                 avg_opp = sum(opp_score_map[i] for i in pool_b_ids) / float(OPP_POOL_SIZE)
                 total_score = avg_p1 + avg_opp
