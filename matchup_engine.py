@@ -304,28 +304,25 @@ class MatchupEngine:
         if len(available_fighters) < max(P1_POOL_SIZE, OPP_POOL_SIZE):
             return None
 
+        # Shuffle fighters to eliminate positional bias when scores are equal
+        shuffled_fighters = list(available_fighters)
+        random.shuffle(shuffled_fighters)
+
         # 1. Score ALL fighters individually (With Range)
         p1_scores = []
         opp_scores = []
         
-        for f in available_fighters:
+        for f in shuffled_fighters:
             s_p1 = self._calculate_individual_fit(f, p1_tags, p1_range)
             s_opp = self._calculate_individual_fit(f, opp_tags, opp_range)
             p1_scores.append({'id': f['id'], 'score': s_p1, 'obj': f})
             opp_scores.append({'id': f['id'], 'score': s_opp, 'obj': f})
         
-        # 2. Get Elite Candidates (Top 12 or any k you like)
-                # 2. Get Elite Candidates (Weighted random across full list)
+        # 2. Get Elite Candidates (Weighted random across full list)
         ELITE_K = 12  # size of the elite pool
         p1_elite = _pick_weighted_elite(p1_scores, ELITE_K)
         opp_elite = _pick_weighted_elite(opp_scores, ELITE_K)
 
-        # Extract IDs for combination generation
-        p1_ids = [x['id'] for x in p1_elite]
-        opp_ids = [x['id'] for x in opp_elite]
-
-        p1_ids = [x['id'] for x in p1_elite]
-        opp_ids = [x['id'] for x in opp_elite]
         # Extract IDs for combination generation
         p1_ids = [x['id'] for x in p1_elite]
         opp_ids = [x['id'] for x in opp_elite]
@@ -368,8 +365,8 @@ class MatchupEngine:
                 if total_score > max_total_score:
                     max_total_score = total_score
                     # Retrieve actual fighter objects for the return
-                    p1_objs = [f for f in available_fighters if f['id'] in pool_a_ids]
-                    opp_objs = [f for f in available_fighters if f['id'] in pool_b_ids]
+                    p1_objs = [f for f in shuffled_fighters if f['id'] in pool_a_ids]
+                    opp_objs = [f for f in shuffled_fighters if f['id'] in pool_b_ids]
                     
                     best_result = {
                         'p1_pool': p1_objs,
