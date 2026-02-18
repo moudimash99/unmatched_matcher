@@ -6,8 +6,9 @@
       "set": "Battle of Legends Vol. 1",
       "playstyles": [
         "versatile",
+        "burst",
         "combo",
-        "burst"
+        "straightforward"
       ],
       "range": "Hybrid",
       "image_url": "/static/pics/king_arthur.webp"
@@ -18,8 +19,7 @@
       "set": "Battle of Legends Vol. 1",
       "playstyles": [
         "versatile",
-        "elusive",
-        "damage"
+        "tricky"
       ],
       "range": "Melee",
       "image_url": "/static/pics/alice.webp"
@@ -42,7 +42,7 @@
       "set": "Battle of Legends Vol. 1",
       "playstyles": [
         "scaling",
-        "recursion",
+        "card_advantage",
         "versatile"
       ],
       "range": "Melee",
@@ -55,7 +55,7 @@
       "playstyles": [
         "aggressive",
         "control",
-        "recursion"
+        "card_advantage"
       ],
       "range": "Ranged Assist",
       "image_url": "/static/pics/robin_hood.webp"
@@ -65,9 +65,10 @@
       "name": "Bigfoot",
       "set": "Robin Hood vs. Bigfoot",
       "playstyles": [
-        "damage",
-        "elusive",
-        "control"
+        "burst",
+        "tricky",
+        "control",
+        "straightforward"
       ],
       "range": "Melee",
       "image_url": "/static/pics/bigfoot.webp"
@@ -79,7 +80,7 @@
       "playstyles": [
         "combo",
         "burst",
-        "damage"
+        "tricky"
       ],
       "range": "Melee",
       "image_url": "/static/pics/bruce_lee.webp"
@@ -91,7 +92,7 @@
       "playstyles": [
         "control",
         "combo",
-        "elusive"
+        "tricky"
       ],
       "range": "Ranged",
       "image_url": "/static/pics/robert_muldoon.webp"
@@ -103,6 +104,7 @@
       "playstyles": [
         "swarm",
         "aggressive",
+        "tricky",
         "burst"
       ],
       "range": "Melee",
@@ -113,9 +115,9 @@
       "name": "Dracula",
       "set": "Cobble & Fog",
       "playstyles": [
-        "tank",
+        "attrition",
         "aggressive",
-        "recursion",
+        "card_advantage",
         "control"
       ],
       "range": "Melee",
@@ -126,7 +128,7 @@
       "name": "The Invisible Man",
       "set": "Cobble & Fog",
       "playstyles": [
-        "elusive",
+        "tricky",
         "aggressive",
         "control"
       ],
@@ -139,8 +141,8 @@
       "set": "Cobble & Fog",
       "playstyles": [
         "versatile",
-        "damage",
-        "burst"
+        "burst",
+        "tricky"
       ],
       "range": "Melee",
       "image_url": "/static/pics/jekyll_hyde.webp"
@@ -151,7 +153,7 @@
       "set": "Cobble & Fog",
       "playstyles": [
         "control",
-        "elusive",
+        "tricky",
         "combo"
       ],
       "range": "Hybrid",
@@ -175,9 +177,8 @@
       "set": "Buffy the Vampire Slayer",
       "playstyles": [
         "aggressive",
-        "unorthodox",
-        "recursion",
-        "elusive"
+        "tricky",
+        "card_advantage"
       ],
       "range": "Melee",
       "image_url": "/static/pics/spike.webp"
@@ -189,7 +190,7 @@
       "playstyles": [
         "versatile",
         "scaling",
-        "damage"
+        "burst"
       ],
       "range": "Ranged",
       "image_url": "/static/pics/willow.webp"
@@ -200,8 +201,9 @@
       "set": "Buffy the Vampire Slayer",
       "playstyles": [
         "versatile",
-        "tank",
-        "control"
+        "attrition",
+        "control",
+        "tank"
       ],
       "range": "Melee",
       "image_url": "/static/pics/angel.webp"
@@ -213,7 +215,7 @@
       "playstyles": [
         "combo",
         "control",
-        "damage"
+        "burst"
       ],
       "range": "Hybrid",
       "image_url": "/static/pics/little_red.webp"
@@ -223,9 +225,9 @@
       "name": "Beowulf",
       "set": "Beowulf vs. Little Red Riding Hood",
       "playstyles": [
-        "damage",
+        "burst",
         "tank",
-        "burst"
+        "tricky"
       ],
       "range": "Melee",
       "image_url": "/static/pics/beowulf.webp"
@@ -235,9 +237,9 @@
       "name": "Deadpool",
       "set": "Deadpool",
       "playstyles": [
-        "unorthodox",
+        "tricky",
         "tank",
-        "elusive"
+        "aggressive"
       ],
       "range": "Melee",
       "image_url": "/static/pics/deadpool.webp"
@@ -248,7 +250,7 @@
       "set": "Battle of Legends Vol. 2",
       "playstyles": [
         "aggressive",
-        "recursion",
+        "card_advantage",
         "burst"
       ],
       "range": "Melee",
@@ -273,7 +275,7 @@
       "playstyles": [
         "swarm",
         "versatile",
-        "elusive",
+        "tricky",
         "control"
       ],
       "range": "Melee",
@@ -285,7 +287,7 @@
       "set": "Battle of Legends Vol. 2",
       "playstyles": [
         "control",
-        "damage",
+        "consistent",
         "tank"
       ],
       "range": "Ranged",
@@ -297,6 +299,7 @@
       "set": "Redemption Row",
       "playstyles": [
         "tank",
+        "attrition",
         "control"
       ],
       "range": "Hybrid",
@@ -308,7 +311,7 @@
       "set": "Redemption Row",
       "playstyles": [
         "burst",
-        "unorthodox",
+        "tricky",
         "scaling"
       ],
       "range": "Melee",
@@ -320,8 +323,7 @@
       "set": "Redemption Row",
       "playstyles": [
         "versatile",
-        "elusive",
-        "unorthodox"
+        "tricky"
       ],
       "range": "Melee",
       "image_url": "/static/pics/moon_knight.webp"
@@ -334,7 +336,7 @@
         "versatile",
         "control",
         "tank",
-        "elusive"
+        "tricky"
       ],
       "range": "Melee",
       "image_url": "/static/pics/daredevil.webp"
@@ -344,8 +346,8 @@
       "name": "Elektra",
       "set": "Hell's Kitchen",
       "playstyles": [
-        "recursion",
-        "elusive",
+        "card_advantage",
+        "tricky",
         "aggressive",
         "burst"
       ],
@@ -359,7 +361,6 @@
       "playstyles": [
         "aggressive",
         "control",
-        "damage",
         "burst"
       ],
       "range": "Ranged",
@@ -372,7 +373,7 @@
       "playstyles": [
         "control",
         "combo",
-        "recursion",
+        "card_advantage",
         "versatile"
       ],
       "range": "Reach",
@@ -383,9 +384,10 @@
       "name": "T. Rex",
       "set": "Dr. Sattler vs. T-Rex",
       "playstyles": [
-        "damage",
+        "burst",
         "tank",
-        "control"
+        "control",
+        "straightforward"
       ],
       "range": "Melee",
       "image_url": "/static/pics/t_rex.webp"
@@ -395,7 +397,7 @@
       "name": "Houdini",
       "set": "Houdini vs. The Genie",
       "playstyles": [
-        "elusive",
+        "tricky",
         "burst"
       ],
       "range": "Melee",
@@ -408,7 +410,7 @@
       "playstyles": [
         "versatile",
         "scaling",
-        "recursion",
+        "card_advantage",
         "combo"
       ],
       "range": "Ranged",
@@ -419,7 +421,7 @@
       "name": "Ms. Marvel",
       "set": "Teen Spirit",
       "playstyles": [
-        "elusive",
+        "tricky",
         "aggressive",
         "control"
       ],
@@ -434,7 +436,7 @@
         "swarm",
         "control",
         "aggressive",
-        "damage"
+        "consistent"
       ],
       "range": "Melee",
       "image_url": "/static/pics/squirrel_girl.webp"
@@ -444,7 +446,7 @@
       "name": "Cloak and Dagger",
       "set": "Teen Spirit",
       "playstyles": [
-        "elusive",
+        "tricky",
         "burst"
       ],
       "range": "Melee",
@@ -467,7 +469,7 @@
       "set": "For King and Country",
       "playstyles": [
         "combo",
-        "elusive",
+        "tricky",
         "burst"
       ],
       "range": "Ranged",
@@ -479,7 +481,7 @@
       "set": "For King and Country",
       "playstyles": [
         "versatile",
-        "elusive",
+        "tricky",
         "control"
       ],
       "range": "Ranged",
@@ -490,9 +492,10 @@
       "name": "She-Hulk",
       "set": "Brains and Brawn",
       "playstyles": [
-        "damage",
+        "burst",
         "control",
-        "tank"
+        "tank",
+        "straightforward"
       ],
       "range": "Melee",
       "image_url": "/static/pics/she_hulk.webp"
@@ -502,7 +505,7 @@
       "name": "Spider-Man",
       "set": "Brains and Brawn",
       "playstyles": [
-        "elusive",
+        "tricky",
         "aggressive",
         "tank"
       ],
@@ -515,8 +518,8 @@
       "set": "Brains and Brawn",
       "playstyles": [
         "versatile",
-        "elusive",
-        "recursion",
+        "tricky",
+        "card_advantage",
         "control"
       ],
       "range": "Ranged",
@@ -540,9 +543,8 @@
       "set": "Tales to Amaze",
       "playstyles": [
         "scaling",
-        "damage",
-        "versatile",
-        "burst"
+        "burst",
+        "versatile"
       ],
       "range": "Hybrid",
       "image_url": "/static/pics/annie_christmas.webp"
@@ -553,7 +555,7 @@
       "set": "Tales to Amaze",
       "playstyles": [
         "burst",
-        "elusive"
+        "tricky"
       ],
       "range": "Melee",
       "image_url": "/static/pics/the_golden_bat.webp"
@@ -564,7 +566,7 @@
       "set": "Tales to Amaze",
       "playstyles": [
         "versatile",
-        "recursion",
+        "card_advantage",
         "control"
       ],
       "range": "Melee",
@@ -578,7 +580,7 @@
         "swarm",
         "aggressive",
         "control",
-        "unorthodox"
+        "tricky"
       ],
       "range": "Melee",
       "image_url": "/static/pics/oda_nobunaga.webp"
@@ -589,7 +591,7 @@
       "set": "Sun's Origin",
       "playstyles": [
         "aggressive",
-        "damage",
+        "consistent",
         "burst",
         "versatile"
       ],
@@ -602,7 +604,7 @@
       "set": "Slings and Arrows",
       "playstyles": [
         "control",
-        "elusive",
+        "tricky",
         "combo"
       ],
       "range": "Melee",
@@ -613,9 +615,8 @@
       "name": "Hamlet",
       "set": "Slings and Arrows",
       "playstyles": [
-        "damage",
-        "unorthodox",
-        "burst"
+        "burst",
+        "tricky"
       ],
       "range": "Melee",
       "image_url": "/static/pics/hamlet.webp"
@@ -628,7 +629,7 @@
         "swarm",
         "aggressive",
         "control",
-        "elusive"
+        "tricky"
       ],
       "range": "Melee",
       "image_url": "/static/pics/titania.webp"
@@ -661,7 +662,7 @@
       "name": "Ciri",
       "set": "The Witcher: Steel and Silver",
       "playstyles": [
-        "elusive",
+        "tricky",
         "burst",
         "scaling"
       ],
@@ -674,7 +675,7 @@
       "set": "The Witcher: Realms Fall",
       "playstyles": [
         "versatile",
-        "recursion",
+        "card_advantage",
         "control"
       ],
       "range": "Ranged",
@@ -685,9 +686,8 @@
       "name": "Philippa Eilhart",
       "set": "The Witcher: Realms Fall",
       "playstyles": [
-        "unorthodox",
-        "control",
-        "elusive"
+        "tricky",
+        "control"
       ],
       "range": "Ranged",
       "image_url": "/static/pics/philippa_eilhart.webp"
@@ -713,7 +713,7 @@
         "combo",
         "tank",
         "versatile",
-        "elusive"
+        "tricky"
       ],
       "range": "Melee",
       "image_url": "/static/pics/muhammad_ali.webp"
@@ -725,12 +725,13 @@
     "combo": "Relies on specific card combinations and setup for powerful effects",
     "burst": "Delivers high damage in short windows to finish games quickly",
     "tank": "High durability, defensive capabilities, and resource sustainability",
-    "elusive": "Avoids damage through positioning, timing, and complex decision-making",
+    "tricky": "Complex timing, positioning, and decision-making with unconventional mechanics",
     "versatile": "Adapts to multiple strategies with flexible gameplay",
     "scaling": "Grows stronger over time and peaks in extended games",
-    "damage": "Consistently deals high or reliable damage output",
+    "consistent": "Reliable, steady performance throughout the game",
     "swarm": "Uses multiple small units or tokens",
-    "recursion": "Generates card advantage and reuses resources from discard",
-    "unorthodox": "Unique mechanics that break normal rules or use unconventional strategies"
+    "card_advantage": "Generates extra cards, resources, and reuses cards from discard",
+    "attrition": "Wins through resource depletion and outlasting opponents",
+    "straightforward": "Simple, direct gameplay with clear strategies"
   }
 }
