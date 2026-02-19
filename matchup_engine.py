@@ -287,6 +287,16 @@ class MatchupEngine:
     # FEATURE 2: FAIR PLAY POOLS (4v4)
     # ==========================================
     
+    def _calculate_matchup_fairness(self, fighter_id, opponent_id):
+        """
+        Calculate fairness score for a single matchup.
+        
+        Fairness is measured as proximity to 50% win rate (1.0 = perfectly fair).
+        """
+        win_rate = self._get_win_rate(fighter_id, opponent_id)
+        dist_from_50 = abs(win_rate - 50.0)
+        return 1.0 - (dist_from_50 / 50.0)
+    
     def _calculate_pool_fitness(self, pool_a_ids, pool_b_ids, p1_score_map, opp_score_map, pool_a_size, pool_b_size):
         """
         Calculate the average fitness score for two pools.
@@ -304,7 +314,7 @@ class MatchupEngine:
         Fairness is measured as proximity to 50% win rate (1.0 = perfectly fair).
         """
         fairness_scores = [
-            1.0 - (abs(self._get_win_rate(p1_id, opp_id) - 50.0) / 50.0)
+            self._calculate_matchup_fairness(p1_id, opp_id)
             for p1_id in pool_a_ids
             for opp_id in pool_b_ids
         ]
@@ -326,7 +336,7 @@ class MatchupEngine:
         
         # Calculate average fairness against all fighters in the opposite pool
         fairness_scores = [
-            1.0 - (abs(self._get_win_rate(fighter['id'], opp_id) - 50.0) / 50.0)
+            self._calculate_matchup_fairness(fighter['id'], opp_id)
             for opp_id in pool_ids
         ]
         avg_fairness = sum(fairness_scores) / len(fairness_scores)
