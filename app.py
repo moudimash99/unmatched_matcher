@@ -172,8 +172,8 @@ def favicon():
             # Open the WebP image and convert it to PNG
             img = Image.open(image_path)
             
-            # Resize to a standard favicon size (32x32)
-            img.thumbnail((32, 32), Image.Resampling.LANCZOS)
+            # Resize to a standard favicon size (32x32) with uniform dimensions
+            img = img.resize((32, 32), Image.Resampling.LANCZOS)
             
             # Convert to PNG in memory
             img_io = BytesIO()
@@ -187,7 +187,7 @@ def favicon():
             response.headers['Expires'] = '0'
             return response
         except Exception as e:
-            print(f"Error converting favicon: {e}")
+            print(f"Error converting favicon from {random_image_filename}: {e}")
             return '', 404
     
     # Fallback if no images found
