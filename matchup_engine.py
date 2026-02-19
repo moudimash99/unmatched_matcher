@@ -182,14 +182,15 @@ class MatchupEngine:
                 total_weighted = (len(macro_tags) * MACRO_WEIGHT + 
                                 len(micro_tags) * MICRO_WEIGHT)
                 
-                # Total requested tags (all have equal weight from user perspective)
-                total_requested = len(requested_tags)
+                # Total requested tags (treat as if all were macro for coverage comparison)
+                total_requested_weighted = len(requested_tags) * MACRO_WEIGHT
                 
-                if total_weighted > 0 and total_requested > 0:
+                if total_weighted > 0 and total_requested_weighted > 0:
                     # Match ratio: what fraction of the fighter's weighted tags match
                     match_ratio = weighted_matches / total_weighted
-                    # Coverage score: how many requested tags are covered (weighted)
-                    coverage_score = weighted_matches / (total_requested * MACRO_WEIGHT)
+                    # Coverage score: what fraction of requested tags are covered (weighted)
+                    # This ensures macro matches contribute more to coverage
+                    coverage_score = weighted_matches / total_requested_weighted
                     tag_score = (0.4 * match_ratio) + (0.6 * coverage_score)
                 else:
                     tag_score = 0.0

@@ -49,7 +49,7 @@
                         {% endfor %}
                     </p>
                     {% elif fighter.playstyles %}
-                    {# Backward compatibility for old format #}
+                    {# Backward compatibility: Support old playstyle format for any legacy data #}
                     <p><strong>Playstyles:</strong> {{ fighter.playstyles | map('titlecase_custom') | join(', ') }}</p>
                     {% endif %}
 
