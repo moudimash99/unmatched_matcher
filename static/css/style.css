@@ -175,3 +175,25 @@ label { font-size: .9rem; }
     .cookie-consent .cookie-actions { justify-content: flex-start; }
 }
 
+
+/* ===== PLAYSTYLE TAGS (Major/Minor) ===== */
+.playstyle-tag {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    margin: 0.1rem 0.2rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.playstyle-tag.major {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(238, 90, 111, 0.2);
+}
+
+.playstyle-tag.minor {
+    background: linear-gradient(135deg, #4ecdc4 0%, #44a0a0 100%);
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(78, 205, 196, 0.2);
+}

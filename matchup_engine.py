@@ -145,17 +145,52 @@ class MatchupEngine:
     def _calculate_individual_fit(self, fighter, requested_tags, range_pref=None):
         """
         Scores how well a fighter matches the requested playstyles AND range.
-        If range_pref is provided, it carries significant weight (50%).
+        
+        Scoring Components:
+        - Major playstyles: weighted 1.7x
+        - Minor playstyles: weighted 1.0x
+        - match_ratio (40% of tag score): Fighter's tag coverage
+        - coverage_score (60% of tag score): Requested tag satisfaction
+        - range_score: If range_pref provided, weighted 60% with tag_score at 40%
+        
+        Returns:
+            float: Score between 0.0 and 1.0, higher is better match
         """
-        # 1. TAG SCORE
+        # 1. TAG SCORE with Major/Minor weighting
         tag_score = 0.5 # Default neutral if no tags
         if requested_tags:
-            fighter_tags = set(fighter.get('playstyles', []))
-            if fighter_tags:
-                intersection = fighter_tags.intersection(requested_tags)
-                match_ratio = len(intersection) / len(fighter_tags)
-                coverage_score = len(intersection) / len(requested_tags)
-                tag_score = (0.4 * match_ratio) + (0.6 * coverage_score)
+            # Extract major and minor playstyles from fighter
+            major_tags = set(fighter.get('major', []))
+            minor_tags = set(fighter.get('minor', []))
+            
+            if major_tags or minor_tags:
+                # Calculate weighted matches
+                # Major matches are worth 1.7x minor matches
+                MAJOR_WEIGHT = 1.7
+                MINOR_WEIGHT = 1.0
+                
+                major_matches = major_tags.intersection(requested_tags)
+                minor_matches = minor_tags.intersection(requested_tags)
+                
+                weighted_matches = (len(major_matches) * MAJOR_WEIGHT + 
+                                  len(minor_matches) * MINOR_WEIGHT)
+                
+                # Total possible weighted playstyles the fighter has
+                total_weighted = (len(major_tags) * MAJOR_WEIGHT + 
+                                len(minor_tags) * MINOR_WEIGHT)
+                
+                # Total requested tags (treat as if all were major for coverage comparison)
+                total_requested_weighted = len(requested_tags) * MAJOR_WEIGHT
+                
+                if total_weighted > 0 and total_requested_weighted > 0:
+                    # Match ratio: what fraction of the fighter's weighted tags match
+                    match_ratio = weighted_matches / total_weighted
+                    # Coverage score: what fraction of requested tags are covered (weighted)
+                    # This ensures major matches contribute more to coverage
+                    coverage_score = weighted_matches / total_requested_weighted
+                    tag_score = (0.4 * match_ratio) + (0.6 * coverage_score)
+                else:
+                    tag_score = 0.0
             else:
                 tag_score = 0.0
 

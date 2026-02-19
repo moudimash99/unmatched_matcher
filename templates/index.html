@@ -34,7 +34,19 @@
                     <h3 class="fighter-name">{{ fighter.name }}</h3>
                     <p><strong>Set:</strong> {{ fighter.set }}</p>
                     <p><strong>Range:</strong> {{ fighter.range | titlecase_custom }}</p>
-                    <p><strong>Playstyles:</strong> {{ fighter.playstyles | map('titlecase_custom') | join(', ') }}</p>
+                    {# Display Major and Minor playstyles #}
+                    <p>
+                        <strong>Major:</strong> 
+                        {% for ps in fighter.major %}
+                            <span class="playstyle-tag major">{{ ps | titlecase_custom }}</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        <strong>Minor:</strong> 
+                        {% for ps in fighter.minor %}
+                            <span class="playstyle-tag minor">{{ ps | titlecase_custom }}</span>
+                        {% endfor %}
+                    </p>
 
                     {# Win percentage logic #}
                     <p class="win-percentage-text">

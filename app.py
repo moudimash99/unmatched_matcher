@@ -25,7 +25,12 @@ WIN_MATRIX = load_json_data("input/win_matrix.json", {})
 engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX) 
 
 ALL_SETS_LIST = sorted({f["set"] for f in FIGHTERS_DATA})
-ALL_PLAYSTYLES = sorted({ps for f in FIGHTERS_DATA for ps in f["playstyles"]})
+# Extract all unique playstyles from both major and minor
+all_playstyles_set = set()
+for f in FIGHTERS_DATA:
+    all_playstyles_set.update(f.get("major", []))
+    all_playstyles_set.update(f.get("minor", []))
+ALL_PLAYSTYLES = sorted(all_playstyles_set)
 
 # Define Custom Sort Order for Range Dropdown
 RANGE_ORDER = ["Melee", "Reach", "Hybrid", "Ranged Assist", "Ranged"]
