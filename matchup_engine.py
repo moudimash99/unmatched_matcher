@@ -303,9 +303,9 @@ class MatchupEngine:
         
         Returns the combined average fitness of both pools.
         """
-        avg_p1_fit = sum(p1_score_map[i] for i in pool_a_ids) / float(pool_a_size)
-        avg_opp_fit = sum(opp_score_map[i] for i in pool_b_ids) / float(pool_b_size)
-        return (avg_p1_fit + avg_opp_fit) / 2.0
+        p1_fit = sum(p1_score_map[i] for i in pool_a_ids) 
+        opp_fit = sum(opp_score_map[i] for i in pool_b_ids)
+        return (p1_fit + opp_fit) / (pool_a_size + pool_b_size)
     
     def _calculate_pool_fairness(self, pool_a_ids, pool_b_ids):
         """
