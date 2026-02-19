@@ -25,14 +25,11 @@ WIN_MATRIX = load_json_data("input/win_matrix.json", {})
 engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX) 
 
 ALL_SETS_LIST = sorted({f["set"] for f in FIGHTERS_DATA})
-# Extract all unique playstyles from both macro and micro
+# Extract all unique playstyles from both major and minor
 all_playstyles_set = set()
 for f in FIGHTERS_DATA:
-    # New structure: macro.primary and micro.supporting
-    all_playstyles_set.update(f.get("macro", {}).get("primary", []))
-    all_playstyles_set.update(f.get("micro", {}).get("supporting", []))
-    # Backward compatibility: old playstyles field
-    all_playstyles_set.update(f.get("playstyles", []))
+    all_playstyles_set.update(f.get("major", []))
+    all_playstyles_set.update(f.get("minor", []))
 ALL_PLAYSTYLES = sorted(all_playstyles_set)
 
 # Define Custom Sort Order for Range Dropdown
