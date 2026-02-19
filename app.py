@@ -1,10 +1,12 @@
-from flask import Flask, render_template, request, jsonify, send_from_directory
+from flask import Flask, render_template, request, jsonify, send_from_directory, send_file
 from matchup_engine import MatchupEngine 
 import random
 import json
 import hashlib
 import os
 import glob
+from io import BytesIO
+from PIL import Image
 
 app = Flask(__name__)
 
@@ -161,16 +163,32 @@ def utility_processor():
 # ---------------------------------------------------------
 @app.route("/favicon.ico")
 def favicon():
-    """Serves a random fighter image as the favicon."""
+    """Serves a random fighter image as the favicon, converted to PNG for browser compatibility."""
     if _FIGHTER_IMAGES_CACHE:
         random_image_filename = random.choice(_FIGHTER_IMAGES_CACHE)
+        image_path = os.path.join(_PICS_DIR, random_image_filename)
         
-        response = send_from_directory(_PICS_DIR, random_image_filename, mimetype='image/webp')
-        # Prevent caching so browsers get a new random image each time
-        response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
-        response.headers['Pragma'] = 'no-cache'
-        response.headers['Expires'] = '0'
-        return response
+        try:
+            # Open the WebP image and convert it to PNG
+            img = Image.open(image_path)
+            
+            # Resize to a standard favicon size (32x32)
+            img.thumbnail((32, 32), Image.Resampling.LANCZOS)
+            
+            # Convert to PNG in memory
+            img_io = BytesIO()
+            img.save(img_io, 'PNG')
+            img_io.seek(0)
+            
+            # Send the PNG image with no-cache headers
+            response = send_file(img_io, mimetype='image/png')
+            response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+            response.headers['Pragma'] = 'no-cache'
+            response.headers['Expires'] = '0'
+            return response
+        except Exception as e:
+            print(f"Error converting favicon: {e}")
+            return '', 404
     
     # Fallback if no images found
     return '', 404
