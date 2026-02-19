@@ -287,6 +287,62 @@ class MatchupEngine:
     # FEATURE 2: FAIR PLAY POOLS (4v4)
     # ==========================================
     
+    def _calculate_matchup_fairness(self, fighter_id, opponent_id):
+        """
+        Calculate fairness score for a single matchup.
+        
+        Fairness is measured as proximity to 50% win rate (1.0 = perfectly fair).
+        """
+        win_rate = self._get_win_rate(fighter_id, opponent_id)
+        dist_from_50 = abs(win_rate - 50.0)
+        return 1.0 - (dist_from_50 / 50.0)
+    
+    def _calculate_pool_fitness(self, pool_a_ids, pool_b_ids, p1_score_map, opp_score_map, pool_a_size, pool_b_size):
+        """
+        Calculate the average fitness score for two pools.
+        
+        Returns the combined average fitness of both pools.
+        """
+        avg_p1_fit = sum(p1_score_map[i] for i in pool_a_ids) / float(pool_a_size)
+        avg_opp_fit = sum(opp_score_map[i] for i in pool_b_ids) / float(pool_b_size)
+        return (avg_p1_fit + avg_opp_fit) / 2.0
+    
+    def _calculate_pool_fairness(self, pool_a_ids, pool_b_ids):
+        """
+        Calculate the average fairness score across all matchups between two pools.
+        
+        Fairness is measured as proximity to 50% win rate (1.0 = perfectly fair).
+        """
+        fairness_scores = [
+            self._calculate_matchup_fairness(p1_id, opp_id)
+            for p1_id in pool_a_ids
+            for opp_id in pool_b_ids
+        ]
+        return sum(fairness_scores) / len(fairness_scores)
+    
+    def _calculate_fighter_total_score(self, fighter, pool_type, score_map, pool_ids):
+        """
+        Calculate total score for a single fighter considering both fit and fairness.
+        
+        Args:
+            fighter: The fighter object
+            pool_type: 'p1' or 'opp' to determine which pool this fighter belongs to
+            score_map: Dictionary mapping fighter IDs to their fit scores
+            pool_ids: IDs of fighters in the opposite pool
+            
+        Returns the weighted combination of fitness and average fairness against the opposite pool.
+        """
+        fit_score = score_map[fighter['id']]
+        
+        # Calculate average fairness against all fighters in the opposite pool
+        fairness_scores = [
+            self._calculate_matchup_fairness(fighter['id'], opp_id)
+            for opp_id in pool_ids
+        ]
+        avg_fairness = sum(fairness_scores) / len(fairness_scores)
+        
+        return (self.WEIGHT_FIT * fit_score) + (self.WEIGHT_FAIRNESS * avg_fairness)
+    
     def generate_fair_pools(self, available_fighters, p1_tags, opp_tags, p1_range=None, opp_range=None):
         """
         Generates optimal pools using the Symmetric Elite Strategy,
@@ -360,10 +416,11 @@ class MatchupEngine:
                 if not set(pool_b_ids).issubset(valid_opp_universe):
                     continue
 
-                # 5. Global Scoring (Avg Fit A + Avg Fit B)
-                avg_p1 = sum(p1_score_map[i] for i in pool_a_ids) / float(P1_POOL_SIZE)
-                avg_opp = sum(opp_score_map[i] for i in pool_b_ids) / float(OPP_POOL_SIZE)
-                total_score = avg_p1 + avg_opp
+                # 5. Global Scoring (Weighted combination of Fit and Fairness)
+                avg_fit = self._calculate_pool_fitness(pool_a_ids, pool_b_ids, p1_score_map, opp_score_map, P1_POOL_SIZE, OPP_POOL_SIZE)
+                avg_fairness = self._calculate_pool_fairness(pool_a_ids, pool_b_ids)
+                total_score = (self.WEIGHT_FIT * avg_fit) + (self.WEIGHT_FAIRNESS * avg_fairness)
+
 
                 if total_score > max_total_score:
                     max_total_score = total_score
@@ -381,15 +438,15 @@ class MatchupEngine:
 
         # Sort the results internally if found
         if best_result:
-            # Sort P1 pool by descending individual fit score
+            # Sort P1 pool by descending total score (fitness + fairness)
             best_result['p1_pool'].sort(
-                key=lambda f: p1_score_map[f['id']],
+                key=lambda f: self._calculate_fighter_total_score(f, 'p1', p1_score_map, best_result['opp_ids']),
                 reverse=True
             )
 
-            # Sort Opponent pool by descending individual fit score
+            # Sort Opponent pool by descending total score (fitness + fairness)
             best_result['opp_pool'].sort(
-                key=lambda f: opp_score_map[f['id']],
+                key=lambda f: self._calculate_fighter_total_score(f, 'opp', opp_score_map, best_result['p1_ids']),
                 reverse=True
             )
 
