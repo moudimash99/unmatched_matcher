@@ -5,3 +5,4 @@ itsdangerous==2.2.0
 MarkupSafe==2.1.5
 gunicorn==21.2.0      # If deploying on Linux servers
 pytest==8.3.3
+Pillow==10.2.0        # For favicon image conversion
