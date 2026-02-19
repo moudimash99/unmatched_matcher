@@ -146,18 +146,53 @@ class MatchupEngine:
         """
         Scores how well a fighter matches the requested playstyles AND range.
         If range_pref is provided, it carries significant weight (50%).
+        
+        Macro playstyles are weighted 1.7x more than micro playstyles.
         """
-        # 1. TAG SCORE
+        # 1. TAG SCORE with Macro/Micro weighting
         tag_score = 0.5 # Default neutral if no tags
         if requested_tags:
-            fighter_tags = set(fighter.get('playstyles', []))
-            if fighter_tags:
-                intersection = fighter_tags.intersection(requested_tags)
-                match_ratio = len(intersection) / len(fighter_tags)
-                coverage_score = len(intersection) / len(requested_tags)
-                tag_score = (0.4 * match_ratio) + (0.6 * coverage_score)
+            # Extract macro and micro playstyles from fighter
+            macro_tags = set(fighter.get('macro', {}).get('primary', []))
+            micro_tags = set(fighter.get('micro', {}).get('supporting', []))
+            
+            # For backward compatibility, also check old 'playstyles' field
+            if not macro_tags and not micro_tags:
+                fighter_tags = set(fighter.get('playstyles', []))
+                if fighter_tags:
+                    intersection = fighter_tags.intersection(requested_tags)
+                    match_ratio = len(intersection) / len(fighter_tags)
+                    coverage_score = len(intersection) / len(requested_tags)
+                    tag_score = (0.4 * match_ratio) + (0.6 * coverage_score)
+                else:
+                    tag_score = 0.0
             else:
-                tag_score = 0.0
+                # Calculate weighted matches
+                # Macro matches are worth 1.7x micro matches
+                MACRO_WEIGHT = 1.7
+                MICRO_WEIGHT = 1.0
+                
+                macro_matches = macro_tags.intersection(requested_tags)
+                micro_matches = micro_tags.intersection(requested_tags)
+                
+                weighted_matches = (len(macro_matches) * MACRO_WEIGHT + 
+                                  len(micro_matches) * MICRO_WEIGHT)
+                
+                # Total possible weighted playstyles the fighter has
+                total_weighted = (len(macro_tags) * MACRO_WEIGHT + 
+                                len(micro_tags) * MICRO_WEIGHT)
+                
+                # Total requested tags (all have equal weight from user perspective)
+                total_requested = len(requested_tags)
+                
+                if total_weighted > 0 and total_requested > 0:
+                    # Match ratio: what fraction of the fighter's weighted tags match
+                    match_ratio = weighted_matches / total_weighted
+                    # Coverage score: how many requested tags are covered (weighted)
+                    coverage_score = weighted_matches / (total_requested * MACRO_WEIGHT)
+                    tag_score = (0.4 * match_ratio) + (0.6 * coverage_score)
+                else:
+                    tag_score = 0.0
 
         # 2. RANGE SCORE (If preference exists)
         if not range_pref or range_pref == "Any" or range_pref == "":

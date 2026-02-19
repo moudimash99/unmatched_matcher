@@ -20,12 +20,22 @@ def load_json_data(filename, default):
 
 
 FIGHTERS_DATA = load_json_data("input/fighters.json", {}).get("fighters", [])
-PLAYSTYLE_DEFINITIONS = load_json_data("input/fighters.json", {}).get("playstyle_definitions", {})
+ATTRIBUTE_DEFINITIONS = load_json_data("input/fighters.json", {}).get("attribute_definitions", {})
+# For backward compatibility, also support old field name
+PLAYSTYLE_DEFINITIONS = load_json_data("input/fighters.json", {}).get("playstyle_definitions", ATTRIBUTE_DEFINITIONS)
 WIN_MATRIX = load_json_data("input/win_matrix.json", {})
 engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX) 
 
 ALL_SETS_LIST = sorted({f["set"] for f in FIGHTERS_DATA})
-ALL_PLAYSTYLES = sorted({ps for f in FIGHTERS_DATA for ps in f["playstyles"]})
+# Extract all unique playstyles from both macro and micro
+all_playstyles_set = set()
+for f in FIGHTERS_DATA:
+    # New structure: macro.primary and micro.supporting
+    all_playstyles_set.update(f.get("macro", {}).get("primary", []))
+    all_playstyles_set.update(f.get("micro", {}).get("supporting", []))
+    # Backward compatibility: old playstyles field
+    all_playstyles_set.update(f.get("playstyles", []))
+ALL_PLAYSTYLES = sorted(all_playstyles_set)
 
 # Define Custom Sort Order for Range Dropdown
 RANGE_ORDER = ["Melee", "Reach", "Hybrid", "Ranged Assist", "Ranged"]

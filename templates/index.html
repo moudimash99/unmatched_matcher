@@ -34,7 +34,24 @@
                     <h3 class="fighter-name">{{ fighter.name }}</h3>
                     <p><strong>Set:</strong> {{ fighter.set }}</p>
                     <p><strong>Range:</strong> {{ fighter.range | titlecase_custom }}</p>
+                    {# Display Macro and Micro playstyles separately #}
+                    {% if fighter.macro and fighter.micro %}
+                    <p>
+                        <strong>Macro:</strong> 
+                        {% for ps in fighter.macro.primary %}
+                            <span class="playstyle-tag macro">{{ ps | titlecase_custom }}</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        <strong>Micro:</strong> 
+                        {% for ps in fighter.micro.supporting %}
+                            <span class="playstyle-tag micro">{{ ps | titlecase_custom }}</span>
+                        {% endfor %}
+                    </p>
+                    {% elif fighter.playstyles %}
+                    {# Backward compatibility for old format #}
                     <p><strong>Playstyles:</strong> {{ fighter.playstyles | map('titlecase_custom') | join(', ') }}</p>
+                    {% endif %}
 
                     {# Win percentage logic #}
                     <p class="win-percentage-text">
