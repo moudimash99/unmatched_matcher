@@ -145,9 +145,16 @@ class MatchupEngine:
     def _calculate_individual_fit(self, fighter, requested_tags, range_pref=None):
         """
         Scores how well a fighter matches the requested playstyles AND range.
-        If range_pref is provided, it carries significant weight (50%).
         
-        Macro playstyles are weighted 1.7x more than micro playstyles.
+        Scoring Components:
+        - Macro playstyles (primary strategy): weighted 1.7x
+        - Micro playstyles (supporting tactics): weighted 1.0x
+        - match_ratio (40% of tag score): Fighter's tag coverage
+        - coverage_score (60% of tag score): Requested tag satisfaction
+        - range_score: If range_pref provided, weighted 60% with tag_score at 40%
+        
+        Returns:
+            float: Score between 0.0 and 1.0, higher is better match
         """
         # 1. TAG SCORE with Macro/Micro weighting
         tag_score = 0.5 # Default neutral if no tags

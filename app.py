@@ -20,9 +20,7 @@ def load_json_data(filename, default):
 
 
 FIGHTERS_DATA = load_json_data("input/fighters.json", {}).get("fighters", [])
-ATTRIBUTE_DEFINITIONS = load_json_data("input/fighters.json", {}).get("attribute_definitions", {})
-# For backward compatibility, also support old field name
-PLAYSTYLE_DEFINITIONS = load_json_data("input/fighters.json", {}).get("playstyle_definitions", ATTRIBUTE_DEFINITIONS)
+PLAYSTYLE_DEFINITIONS = load_json_data("input/fighters.json", {}).get("playstyle_definitions", {})
 WIN_MATRIX = load_json_data("input/win_matrix.json", {})
 engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX) 
 

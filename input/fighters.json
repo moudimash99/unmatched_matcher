@@ -1144,7 +1144,7 @@
       "image_url": "/static/pics/muhammad_ali.webp"
     }
   ],
-  "attribute_definitions": {
+  "playstyle_definitions": {
     "macro_primary": {
       "burst": "High damage in short windows",
       "adaptive": "Can change plan based on matchup/state",
