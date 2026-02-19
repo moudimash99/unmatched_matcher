@@ -1,8 +1,10 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 from matchup_engine import MatchupEngine 
 import random
 import json
 import hashlib
+import os
+import glob
 
 app = Flask(__name__)
 
@@ -154,6 +156,20 @@ def utility_processor():
 # ---------------------------------------------------------
 # 4.  MAIN ROUTE  ─────────────────────────────────────────
 # ---------------------------------------------------------
+@app.route("/favicon.ico")
+def favicon():
+    """Serves a random fighter image as the favicon."""
+    pics_dir = os.path.join(app.static_folder, 'pics')
+    fighter_images = glob.glob(os.path.join(pics_dir, '*.webp'))
+    
+    if fighter_images:
+        random_image = random.choice(fighter_images)
+        image_filename = os.path.basename(random_image)
+        return send_from_directory(pics_dir, image_filename, mimetype='image/webp')
+    
+    # Fallback if no images found
+    return '', 404
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     """Handles the main page load and form submissions."""
