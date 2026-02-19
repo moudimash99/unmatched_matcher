@@ -367,13 +367,11 @@ class MatchupEngine:
                 avg_fit = (avg_p1_fit + avg_opp_fit) / 2.0
                 
                 # Calculate average fairness across all matchups in the pool
-                fairness_scores = []
-                for p1_id in pool_a_ids:
-                    for opp_id in pool_b_ids:
-                        win_rate = self._get_win_rate(p1_id, opp_id)
-                        dist_from_50 = abs(win_rate - 50.0)
-                        fairness = 1.0 - (dist_from_50 / 50.0)
-                        fairness_scores.append(fairness)
+                fairness_scores = [
+                    1.0 - (abs(self._get_win_rate(p1_id, opp_id) - 50.0) / 50.0)
+                    for p1_id in pool_a_ids
+                    for opp_id in pool_b_ids
+                ]
                 avg_fairness = sum(fairness_scores) / len(fairness_scores)
                 
                 # Combine fitness and fairness with weights
