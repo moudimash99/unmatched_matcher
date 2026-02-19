@@ -145,6 +145,7 @@ def test_generate_fair_pools_returns_highest_fit(expanded_engine, expanded_fight
     assert set(p1_ids) == {"alpha", "echo"}
     assert p1_ids[0] == "alpha"
 
-    # Highest defensive fit with Reach preference should lead
-    assert set(opp_ids) == {"bravo", "delta"}
+    # Now considers both fitness and fairness with weights (0.6 fit, 0.4 fairness)
+    # The pool with bravo+charlie has better overall fairness, outweighing slightly lower fitness
+    assert set(opp_ids) == {"bravo", "charlie"}
     assert opp_ids[0] == "bravo"

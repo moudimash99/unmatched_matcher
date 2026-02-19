@@ -360,10 +360,24 @@ class MatchupEngine:
                 if not set(pool_b_ids).issubset(valid_opp_universe):
                     continue
 
-                # 5. Global Scoring (Avg Fit A + Avg Fit B)
-                avg_p1 = sum(p1_score_map[i] for i in pool_a_ids) / float(P1_POOL_SIZE)
-                avg_opp = sum(opp_score_map[i] for i in pool_b_ids) / float(OPP_POOL_SIZE)
-                total_score = avg_p1 + avg_opp
+                # 5. Global Scoring (Weighted combination of Fit and Fairness)
+                # Calculate average fitness for both pools
+                avg_p1_fit = sum(p1_score_map[i] for i in pool_a_ids) / float(P1_POOL_SIZE)
+                avg_opp_fit = sum(opp_score_map[i] for i in pool_b_ids) / float(OPP_POOL_SIZE)
+                avg_fit = (avg_p1_fit + avg_opp_fit) / 2.0
+                
+                # Calculate average fairness across all matchups in the pool
+                fairness_scores = []
+                for p1_id in pool_a_ids:
+                    for opp_id in pool_b_ids:
+                        win_rate = self._get_win_rate(p1_id, opp_id)
+                        dist_from_50 = abs(win_rate - 50.0)
+                        fairness = 1.0 - (dist_from_50 / 50.0)
+                        fairness_scores.append(fairness)
+                avg_fairness = sum(fairness_scores) / len(fairness_scores)
+                
+                # Combine fitness and fairness with weights
+                total_score = (self.WEIGHT_FIT * avg_fit) + (self.WEIGHT_FAIRNESS * avg_fairness)
 
                 if total_score > max_total_score:
                     max_total_score = total_score
