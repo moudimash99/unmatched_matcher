@@ -11,8 +11,9 @@ app = Flask(__name__)
 # ---------------------------------------------------------
 # 1.  DATA  ────────────────────────────────────────────────
 # ---------------------------------------------------------
-# Cache the list of fighter images at startup
-FIGHTER_IMAGES = glob.glob(os.path.join(os.path.dirname(__file__), 'static', 'pics', '*.webp'))
+# Cache the list of fighter image filenames at startup
+_PICS_DIR = os.path.join(os.path.dirname(__file__), 'static', 'pics')
+_FIGHTER_IMAGES_CACHE = [os.path.basename(f) for f in glob.glob(os.path.join(_PICS_DIR, '*.webp'))]
 def load_json_data(filename, default):
     """Load JSON data from a file with error handling."""
     try:
@@ -161,12 +162,10 @@ def utility_processor():
 @app.route("/favicon.ico")
 def favicon():
     """Serves a random fighter image as the favicon."""
-    if FIGHTER_IMAGES:
-        random_image = random.choice(FIGHTER_IMAGES)
-        image_filename = os.path.basename(random_image)
-        pics_dir = os.path.join(app.static_folder, 'pics')
+    if _FIGHTER_IMAGES_CACHE:
+        random_image_filename = random.choice(_FIGHTER_IMAGES_CACHE)
         
-        response = send_from_directory(pics_dir, image_filename, mimetype='image/webp')
+        response = send_from_directory(_PICS_DIR, random_image_filename, mimetype='image/webp')
         # Prevent caching so browsers get a new random image each time
         response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
         response.headers['Pragma'] = 'no-cache'
