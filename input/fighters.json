@@ -477,8 +477,9 @@
         "control"
       ],
       "minor": [
+        "disruption",
         "resource_management",
-        "adaptive"
+        "burst"
       ]
     },
     {
@@ -489,10 +490,11 @@
       "range": "Melee",
       "image_url": "/static/pics/t_rex.webp",
       "major": [
-        "attrition"
+        "rushdown"
       ],
       "minor": [
         "burst",
+        "resource_management",
         "control"
       ]
     },
@@ -507,8 +509,9 @@
         "evasion"
       ],
       "minor": [
-        "burst",
-        "technical"
+        "control",
+        "disruption",
+        "adaptive"
       ]
     },
     {
@@ -519,11 +522,12 @@
       "range": "Ranged",
       "image_url": "/static/pics/the_genie.webp",
       "major": [
-        "adaptive"
+        "burst"
       ],
       "minor": [
-        "combo",
-        "resource_management"
+        "resource_management",
+        "control",
+        "technical"
       ]
     },
     {
