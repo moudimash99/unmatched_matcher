@@ -266,6 +266,18 @@ def index():
         win_matrix=WIN_MATRIX
     )
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/robots.txt")
+def robots_txt():
+    return send_from_directory("static", "robots.txt", mimetype="text/plain")
+
+@app.route("/sitemap.xml")
+def sitemap_xml():
+    return send_from_directory("static", "sitemap.xml", mimetype="application/xml")
+
 # ---------------------------------------------------------
 # 5.  RUN  ────────────────────────────────────────────────
 # ---------------------------------------------------------
