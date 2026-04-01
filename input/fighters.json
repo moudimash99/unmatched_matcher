@@ -488,7 +488,7 @@
       "set": "Dr. Sattler vs. T-Rex",
       "foundational_mechanism": "Area damage and survivability",
       "range": "Melee",
-      "image_url": "/static/pics/t_rex.webp",
+      "image_url": "/static/pics/T_rex.webp",
       "major": [
         "rushdown"
       ],
