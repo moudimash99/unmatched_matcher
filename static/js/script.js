@@ -31,10 +31,15 @@ const ADVANCED_MODE_HELP_SEEN_KEY = 'ufc_advanced_mode_help_seen';
 
 /*************************** ANALYTICS & CONSENT ***************************/
 let analyticsEnabled = false;
+let sessionMatchupCount = 0;
 
 function enableAnalytics() {
     analyticsEnabled = true;
     window.ufcAnalyticsEvents = window.ufcAnalyticsEvents || [];
+    if (typeof gtag === 'function') {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+        gtag('event', 'page_view');
+    }
     recordAnalytics('analytics_enabled', { source: 'cookie_accept' });
 }
 
@@ -93,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupAnalyticsListeners();
     annotateLockButtons();
     setupResultCardActions();
+    trackMatchupResult();
 });
 
 /*************************** UI SETUP FUNCTIONS  ***************************/
@@ -121,6 +127,7 @@ function setupSetSelection() {
         const collapsed = wrapper.classList.toggle('collapsed');
         updateToggleButton(collapsed);
         setCookie(SELECT_COLLAPSE_KEY, collapsed ? '1' : '0');
+        recordAnalytics('panel_toggle', { panel: 'owned_sets', expanded: !collapsed });
     });
     // Restore checkboxes from cookie (JSON)
     const storedSets = getCookie(ALL_SETS_KEY);
@@ -221,10 +228,12 @@ function setupModeControls() {
                 modeToggleBtn.textContent = '⬆ Hide';
                 // Show the matchup mode help modal when opening
                 showMatchupModeHelpOnce();
+                recordAnalytics('panel_toggle', { panel: 'matchup_mode', expanded: true });
             } else {
                 modePanel.classList.add('collapsed');
                 modeToggleBtn.setAttribute('aria-expanded', 'false');
                 modeToggleBtn.textContent = '⬇ Show';
+                recordAnalytics('panel_toggle', { panel: 'matchup_mode', expanded: false });
             }
         });
     }
@@ -236,6 +245,7 @@ function setupModeControls() {
             const modal = qs('#matchup-mode-help-modal');
             if (modal) {
                 modal.classList.remove('hidden');
+                recordAnalytics('modal_view', { modal: 'matchup_mode_help' });
             }
         });
     }
@@ -262,6 +272,7 @@ function setupModeControls() {
             const modal = qs('#advanced-mode-help-modal');
             if (modal) {
                 modal.classList.remove('hidden');
+                recordAnalytics('modal_view', { modal: 'advanced_mode_help' });
             }
         });
     }
@@ -325,6 +336,7 @@ function setupIntroModal() {
         introHelpBtn.addEventListener('click', (e) => {
             e.preventDefault();
             introModal.classList.remove('hidden');
+            recordAnalytics('modal_view', { modal: 'intro' });
         });
         introHelpBtn.dataset.clickHandlerSetup = '1';
     }
@@ -335,14 +347,20 @@ function setupIntroModal() {
     }
 
     introModal.classList.remove('hidden');
+    recordAnalytics('modal_view', { modal: 'intro', first_time: true });
 }
 
 function setupAnalyticsListeners() {
     const generateBtn = qs('#generate-matchup-btn');
     generateBtn?.addEventListener('click', () => {
+        sessionMatchupCount++;
         recordAnalytics('generate_matchup', {
             locked_p1: !!qs('#current_locked_p1_id')?.value,
-            locked_opp: !!qs('#current_locked_opp_id')?.value
+            locked_opp: !!qs('#current_locked_opp_id')?.value,
+            mode: qs('input[name="mode"]:checked')?.value || 'discovery',
+            p1_selection_method: qs('#p1_selection_method')?.value || 'suggest',
+            owned_sets_count: qsa('#set-checkboxes input[type="checkbox"]:checked').length,
+            session_matchup_number: sessionMatchupCount
         });
     });
 
@@ -373,6 +391,28 @@ function setupAnalyticsListeners() {
     oppRange?.addEventListener('change', () => recordAnalytics('range_pref', { player: 'opp', range: oppRange.value }));
 }
 
+function trackMatchupResult() {
+    const p1Card = qs('#p1-main-suggestion');
+    const oppCard = qs('#opp-main-suggestion');
+    if (!p1Card || !oppCard) return;
+
+    const p1Id = extractFighterIdFromCard(p1Card);
+    const oppId = extractFighterIdFromCard(oppCard);
+    const p1Info = ALL_FIGHTERS_JS.find(f => f.id === p1Id);
+    const oppInfo = ALL_FIGHTERS_JS.find(f => f.id === oppId);
+    const winRate = getWinRate(p1Id, oppId);
+
+    recordAnalytics('matchup_result_shown', {
+        p1_fighter_id: p1Id,
+        p1_fighter_name: p1Info?.name || p1Id,
+        opp_fighter_id: oppId,
+        opp_fighter_name: oppInfo?.name || oppId,
+        win_rate: winRate !== null ? Math.round(winRate) : null,
+        p1_alternatives_count: qsa('[data-player-prefix="p1"].alternative-suggestion').length,
+        opp_alternatives_count: qsa('[data-player-prefix="opp"].alternative-suggestion').length
+    });
+}
+
 function showMatchupModeHelpOnce() {
     const modal = qs('#matchup-mode-help-modal');
     if (!modal) return;
@@ -382,6 +422,7 @@ function showMatchupModeHelpOnce() {
     }
 
     modal.classList.remove('hidden');
+    recordAnalytics('modal_view', { modal: 'matchup_mode_help', first_time: true });
 }
 
 function showAdvancedModeHelpOnce() {
@@ -393,6 +434,7 @@ function showAdvancedModeHelpOnce() {
     }
 
     modal.classList.remove('hidden');
+    recordAnalytics('modal_view', { modal: 'advanced_mode_help', first_time: true });
 }
 
 /*************************** CORE INTERACTION LOGIC  ***************************/
