@@ -192,6 +192,7 @@
                     <div class="playstyle-selector">
                         <label>Preferred Play-style(s):</label>
                         <button class="toggle-playstyle-btn" type="button" data-target="p1-playstyle-options" aria-expanded="false">Select</button>
+                        <button type="button" class="help-icon-btn playstyle-help-btn" title="What do the playstyles mean?">ⓘ</button>
                         <div id="p1-playstyle-options" class="playstyle-options collapsed">
                             {% for style in all_playstyles %}
                             <label><input type="checkbox" name="p1_playstyles" value="{{ style }}" {% if style in selected_data.p1_playstyles %}checked{% endif %}> {{ style | titlecase_custom }}</label>
@@ -217,6 +218,7 @@
                     <div class="playstyle-selector">
                         <label>Preferred Play-style(s):</label>
                         <button class="toggle-playstyle-btn" type="button" data-target="opp-playstyle-options" aria-expanded="false">Select</button>
+                        <button type="button" class="help-icon-btn playstyle-help-btn" title="What do the playstyles mean?">ⓘ</button>
                         <div id="opp-playstyle-options" class="playstyle-options collapsed">
                             {% for style in all_playstyles %}
                             <label><input type="checkbox" name="opp_playstyles" value="{{ style }}" {% if style in selected_data.opp_playstyles %}checked{% endif %}> {{ style | titlecase_custom }}</label>
@@ -361,6 +363,38 @@
             Leave it empty to use Discovery or Fairness mode instead.
         </p>
         <button type="button" id="advanced-mode-help-close">Understood!</button>
+    </div>
+</div>
+
+<!-- Playstyle definitions popup -->
+<div id="playstyle-help-modal" class="modal-overlay hidden">
+    <div class="modal-content modal-content-scrollable">
+        <h2>Playstyle Glossary 📖</h2>
+        {% if playstyle_definitions %}
+            {% if playstyle_definitions.major %}
+            <h3 class="playstyle-glossary-heading">Major Playstyles</h3>
+            <p class="helper-text">Primary identity — the defining mechanic a fighter is built around.</p>
+            <dl class="playstyle-glossary-list">
+                {% for name, desc in playstyle_definitions.major.items() %}
+                <dt><span class="playstyle-tag major">{{ name | titlecase_custom }}</span></dt>
+                <dd>{{ desc }}</dd>
+                {% endfor %}
+            </dl>
+            {% endif %}
+            {% if playstyle_definitions.minor %}
+            <h3 class="playstyle-glossary-heading">Minor Playstyles</h3>
+            <p class="helper-text">Secondary tendencies — supporting tools the fighter also uses.</p>
+            <dl class="playstyle-glossary-list">
+                {% for name, desc in playstyle_definitions.minor.items() %}
+                <dt><span class="playstyle-tag minor">{{ name | titlecase_custom }}</span></dt>
+                <dd>{{ desc }}</dd>
+                {% endfor %}
+            </dl>
+            {% endif %}
+        {% else %}
+            <p>No playstyle definitions available.</p>
+        {% endif %}
+        <button type="button" id="playstyle-help-close">Got it!</button>
     </div>
 </div>
 
