@@ -185,7 +185,7 @@ def merge_sources_to_fighter_ids(gp_main, wp_main, gp_um, wp_um):
     win_num = defaultdict(lambda: defaultdict(float))   # accumulated wins
     win_den = defaultdict(lambda: defaultdict(int))     # games where we have a win%
 
-    def accumulate_from_source(gp, wp):
+    def accumulate_from_source(gp, wp, win_pct_scale=1.0):
         # For each cell in this source, map row/col to fighter ids and accumulate
         for row_name in gp.index:
             f1 = deck_to_fighter_id(row_name)
@@ -209,12 +209,20 @@ def merge_sources_to_fighter_ids(gp_main, wp_main, gp_um, wp_um):
                     w = parse_win_cell(wp.at[row_name, col_name])
 
                 if w is not None and g > 0:
-                    win_num[f1][f2] += (w / 100.0) * g
+                    # win_pct_scale converts the raw cell value to a 0-100 percentage.
+                    # The main sheet stores win rates as decimals (e.g. 0.5 = 50%),
+                    # so win_pct_scale=100.0 is used for it.
+                    # The UMLeague sheet already stores integer percentages (e.g. 50 = 50%),
+                    # so win_pct_scale=1.0 is used for it.
+                    w_pct = w * win_pct_scale
+                    win_num[f1][f2] += (w_pct / 100.0) * g
                     win_den[f1][f2] += g
 
-    # Accumulate from both sources
-    accumulate_from_source(gp_main, wp_main)
-    accumulate_from_source(gp_um, wp_um)
+    # Accumulate from both sources.
+    # The main "Win Percentage" sheet stores values as decimals (0.0–1.0), so scale by 100.
+    # The UMLeague sheet already stores integer percentages (0–100), no scaling needed.
+    accumulate_from_source(gp_main, wp_main, win_pct_scale=100.0)
+    accumulate_from_source(gp_um, wp_um, win_pct_scale=1.0)
 
     # Now build final win% matrix, filling -2 where we have no usable win% data
     merged_win_pct = defaultdict(dict)
@@ -254,5 +262,5 @@ if __name__ == "__main__":
     with open("input/merged_games.json", "w", encoding="utf-8") as f:
         json.dump(merged_games, f, indent=2, ensure_ascii=False)
 
-    with open("input/merged_win_pct.json", "w", encoding="utf-8") as f:
+    with open("input/win_matrix.json", "w", encoding="utf-8") as f:
         json.dump(merged_win_pct, f, indent=2, ensure_ascii=False)
