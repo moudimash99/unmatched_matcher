@@ -197,3 +197,40 @@ label { font-size: .9rem; }
     color: #fff;
     box-shadow: 0 2px 4px rgba(78, 205, 196, 0.2);
 }
+
+/* ===== PLAYSTYLE GLOSSARY MODAL ===== */
+.modal-content-scrollable {
+    max-height: 80vh;
+    overflow-y: auto;
+    width: min(560px, calc(100% - 2rem));
+}
+
+.playstyle-glossary-heading {
+    margin-top: 1.25rem;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.playstyle-glossary-heading:first-of-type {
+    margin-top: 0.75rem;
+}
+
+.playstyle-glossary-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+    align-items: baseline;
+    margin: 0.5rem 0 0.75rem;
+}
+
+.playstyle-glossary-list dt {
+    white-space: nowrap;
+}
+
+.playstyle-glossary-list dd {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+}

@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCookieConsent();
     setupSetSelection();
     setupPlaystyleToggles();
+    setupPlaystyleHelpButtons();
     setupP1SelectionToggle();
     setupModeControls();
     setupModalCloseHandlers(); // Set up all modal close handlers first
@@ -175,6 +176,18 @@ function setupPlaystyleToggles() {
         btn.addEventListener('click', () => {
             const collapsed = target.classList.toggle('collapsed');
             btn.setAttribute('aria-expanded', String(!collapsed));
+        });
+    });
+}
+
+function setupPlaystyleHelpButtons() {
+    const modal = qs('#playstyle-help-modal');
+    if (!modal) return;
+    qsa('.playstyle-help-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.remove('hidden');
+            recordAnalytics('modal_view', { modal: 'playstyle_help' });
         });
     });
 }
@@ -321,6 +334,21 @@ function setupModalCloseHandlers() {
                 localStorage.setItem(ADVANCED_MODE_HELP_SEEN_KEY, '1');
             } catch (e) {
                 // ignore storage errors
+            }
+        });
+    }
+
+    // Playstyle help modal close handler
+    const playstyleHelpModal = qs('#playstyle-help-modal');
+    const playstyleHelpClose = qs('#playstyle-help-close');
+    if (playstyleHelpModal && playstyleHelpClose) {
+        playstyleHelpClose.addEventListener('click', () => {
+            playstyleHelpModal.classList.add('hidden');
+        });
+        // Also close when clicking the overlay backdrop
+        playstyleHelpModal.addEventListener('click', (e) => {
+            if (e.target === playstyleHelpModal) {
+                playstyleHelpModal.classList.add('hidden');
             }
         });
     }

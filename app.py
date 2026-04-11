@@ -263,7 +263,8 @@ def index():
         selected_data=selected_data,
         error_message=error_message,
         win_percentage_matrix=win_percentage_matrix,
-        win_matrix=WIN_MATRIX
+        win_matrix=WIN_MATRIX,
+        playstyle_definitions=PLAYSTYLE_DEFINITIONS
     )
 
 @app.route("/about")
