@@ -8,9 +8,9 @@ from matchup_engine import MatchupEngine
 @pytest.fixture
 def sample_fighters():
     return [
-        {"id": "alpha", "playstyles": ["aggressive"], "range": "Melee"},
-        {"id": "bravo", "playstyles": ["defensive"], "range": "Reach"},
-        {"id": "charlie", "playstyles": ["aggressive", "defensive"], "range": "Hybrid"},
+        {"id": "alpha", "major": ["aggressive"], "minor": [], "range": "Melee"},
+        {"id": "bravo", "major": ["defensive"], "minor": [], "range": "Reach"},
+        {"id": "charlie", "major": ["aggressive", "defensive"], "minor": [], "range": "Hybrid"},
     ]
 
 
@@ -59,6 +59,16 @@ def test_get_win_rate_handles_reverse_lookup(engine):
     assert engine._get_win_rate("bravo", "alpha") == 40.0
 
 
+def test_get_win_rate_ignores_sentinel_and_falls_back():
+    """A -2 sentinel in the matrix should be treated as 'no data' (return 50.0)."""
+    fighters = [{"id": "x", "major": [], "minor": [], "range": "Melee"},
+                {"id": "y", "major": [], "minor": [], "range": "Melee"}]
+    matrix_with_sentinel = {"x": {"y": -2}}
+    eng = MatchupEngine(fighters, matrix_with_sentinel)
+    assert eng._get_win_rate("x", "y") == 50.0
+    assert eng._get_win_rate("y", "x") == 50.0
+
+
 def test_individual_fit_accounts_for_range_and_tags(engine, sample_fighters):
     alpha = sample_fighters[0]
     score_with_range = engine._calculate_individual_fit(alpha, {"aggressive"}, "Melee")
@@ -83,11 +93,11 @@ def test_recommend_opponents_ranks_by_fairness_and_fit(engine, sample_fighters):
 @pytest.fixture
 def expanded_fighters():
     return [
-        {"id": "alpha", "playstyles": ["aggressive"], "range": "Melee"},
-        {"id": "bravo", "playstyles": ["defensive"], "range": "Reach"},
-        {"id": "charlie", "playstyles": ["aggressive", "defensive"], "range": "Hybrid"},
-        {"id": "delta", "playstyles": ["defensive"], "range": "Melee"},
-        {"id": "echo", "playstyles": ["aggressive"], "range": "Reach"},
+        {"id": "alpha", "major": ["aggressive"], "minor": [], "range": "Melee"},
+        {"id": "bravo", "major": ["defensive"], "minor": [], "range": "Reach"},
+        {"id": "charlie", "major": ["aggressive", "defensive"], "minor": [], "range": "Hybrid"},
+        {"id": "delta", "major": ["defensive"], "minor": [], "range": "Melee"},
+        {"id": "echo", "major": ["aggressive"], "minor": [], "range": "Reach"},
     ]
 
 
@@ -145,7 +155,7 @@ def test_generate_fair_pools_returns_highest_fit(expanded_engine, expanded_fight
     assert set(p1_ids) == {"alpha", "echo"}
     assert p1_ids[0] == "alpha"
 
-    # Now considers both fitness and fairness with weights (0.6 fit, 0.4 fairness)
-    # The pool with bravo+charlie has better overall fairness, outweighing slightly lower fitness
-    assert set(opp_ids) == {"bravo", "charlie"}
-    assert opp_ids[0] == "bravo"
+    # With strict 40-60% fairness, bravo is excluded (alpha beats bravo 65% of the time).
+    # The best valid opp pool is charlie+delta: delta has higher fit, charlie has perfect fairness.
+    assert set(opp_ids) == {"charlie", "delta"}
+    assert opp_ids[0] == "delta"

@@ -120,11 +120,16 @@ class MatchupEngine:
         Safely gets win rate from matrix (A vs B or B vs A). 
         Defaults to 50.0 (percent) if no data exists.
         This treats unknown matchups as 'Fair' (Benefit of the doubt).
+        Values of -2 are sentinels meaning 'no data' and are skipped.
         """
         if id_a in self.win_rate_matrix and id_b in self.win_rate_matrix[id_a]:
-            return self.win_rate_matrix[id_a][id_b]
+            v = self.win_rate_matrix[id_a][id_b]
+            if v >= 0:
+                return v
         if id_b in self.win_rate_matrix and id_a in self.win_rate_matrix[id_b]:
-            return 100.0 - self.win_rate_matrix[id_b][id_a]
+            v = self.win_rate_matrix[id_b][id_a]
+            if v >= 0:
+                return 100.0 - v
         return 50.0 # Default to fair if unknown
 
     def _build_fairness_map(self):
@@ -138,7 +143,7 @@ class MatchupEngine:
                 
                 wr = self._get_win_rate(id_a, id_b)
                 # Strict Fairness Definition for Pools (40% - 60%)
-                if 1 <= wr <= 99:
+                if 40 <= wr <= 60:
                     fair_map[id_a].add(id_b)
         return fair_map
 
