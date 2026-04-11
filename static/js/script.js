@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupPlaystyleToggles();
     setupP1SelectionToggle();
     setupModeControls();
+    setupThemeChips();
     setupModalCloseHandlers(); // Set up all modal close handlers first
     setupIntroModal();
     setupAnalyticsListeners();
@@ -100,6 +101,18 @@ document.addEventListener('DOMContentLoaded', () => {
     setupResultCardActions();
     trackMatchupResult();
 });
+
+function setupThemeChips() {
+    const chips = qsa('.theme-chip');
+    chips.forEach(chip => {
+        const cb = chip.querySelector('input[type="checkbox"]');
+        if (!cb) return;
+        // Sync active class on change
+        cb.addEventListener('change', () => {
+            chip.classList.toggle('active', cb.checked);
+        });
+    });
+}
 
 /*************************** UI SETUP FUNCTIONS  ***************************/
 function setupSetSelection() {

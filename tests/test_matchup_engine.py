@@ -149,3 +149,52 @@ def test_generate_fair_pools_returns_highest_fit(expanded_engine, expanded_fight
     # The pool with bravo+charlie has better overall fairness, outweighing slightly lower fitness
     assert set(opp_ids) == {"bravo", "charlie"}
     assert opp_ids[0] == "bravo"
+
+
+# ==========================================
+# THEME FILTERING TESTS
+# ==========================================
+
+@pytest.fixture
+def themed_fighters():
+    return [
+        {"id": "hero_a", "name": "Hero A", "set": "Heroes", "themes": ["superhero"], "range": "Melee", "major": [], "minor": []},
+        {"id": "monster_a", "name": "Monster A", "set": "Monsters", "themes": ["halloween", "monster"], "range": "Melee", "major": [], "minor": []},
+        {"id": "legend_a", "name": "Legend A", "set": "Legends", "themes": ["legend"], "range": "Melee", "major": [], "minor": []},
+        {"id": "multi_a", "name": "Multi A", "set": "Heroes", "themes": ["superhero", "halloween"], "range": "Melee", "major": [], "minor": []},
+    ]
+
+
+def _filter_by_themes(fighters, theme_filter):
+    """Mirrors the logic in app.get_available_fighters for theme filtering."""
+    if not theme_filter:
+        return fighters
+    return [f for f in fighters if any(t in theme_filter for t in f.get("themes", []))]
+
+
+def test_theme_filter_returns_only_matching_fighters(themed_fighters):
+    result = _filter_by_themes(themed_fighters, ["halloween"])
+    ids = [f["id"] for f in result]
+    assert "monster_a" in ids
+    assert "multi_a" in ids
+    assert "hero_a" not in ids
+    assert "legend_a" not in ids
+
+
+def test_theme_filter_multiple_themes(themed_fighters):
+    result = _filter_by_themes(themed_fighters, ["superhero", "legend"])
+    ids = [f["id"] for f in result]
+    assert "hero_a" in ids
+    assert "legend_a" in ids
+    assert "multi_a" in ids  # has superhero
+    assert "monster_a" not in ids
+
+
+def test_theme_filter_empty_returns_all(themed_fighters):
+    result = _filter_by_themes(themed_fighters, [])
+    assert len(result) == len(themed_fighters)
+
+
+def test_theme_filter_no_matches_returns_empty(themed_fighters):
+    result = _filter_by_themes(themed_fighters, ["witcher"])
+    assert result == []
