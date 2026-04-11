@@ -386,14 +386,20 @@ class MatchupEngine:
           - Opp pool: 3 fighters
         Uses Set Intersection for O(1) fairness validation.
         """
-        # CONFIGURE POOL SIZES HERE
-        
-        P1_POOL_SIZE = self.P1_POOL_SIZE
-        OPP_POOL_SIZE = self.OPP_POOL_SIZE
-
-        # 0. Safety Check: Need enough fighters to make the *bigger* pool
-        if len(available_fighters) < max(P1_POOL_SIZE, OPP_POOL_SIZE):
+        # 0. Safety Check: Need at least 2 fighters for a matchup
+        n = len(available_fighters)
+        if n < 2:
             return None
+
+        # CONFIGURE POOL SIZES (scaled down proportionally when fewer fighters are available)
+        total_default = self.P1_POOL_SIZE + self.OPP_POOL_SIZE
+        if n < total_default:
+            p1_ratio = self.P1_POOL_SIZE / total_default
+            P1_POOL_SIZE = max(1, min(self.P1_POOL_SIZE, round(n * p1_ratio)))
+            OPP_POOL_SIZE = max(1, min(self.OPP_POOL_SIZE, n - P1_POOL_SIZE))
+        else:
+            P1_POOL_SIZE = self.P1_POOL_SIZE
+            OPP_POOL_SIZE = self.OPP_POOL_SIZE
 
         # 1. Score ALL fighters individually (With Range)
         p1_scores = []
