@@ -14,6 +14,9 @@
         "resource_management",
         "combo",
         "rushdown"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -28,6 +31,9 @@
       ],
       "minor": [
         "stance"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -44,6 +50,9 @@
         "disruption",
         "ranged_pressure",
         "swarm"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -60,6 +69,9 @@
         "evasion",
         "adaptive",
         "burst"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -76,6 +88,9 @@
         "swarm",
         "control",
         "ranged_pressure"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -91,6 +106,10 @@
       "minor": [
         "burst",
         "control"
+      ],
+      "themes": [
+        "legend",
+        "monster"
       ]
     },
     {
@@ -107,6 +126,9 @@
         "burst",
         "evasion",
         "technical"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -123,6 +145,9 @@
         "swarm",
         "ranged_pressure",
         "disruption"
+      ],
+      "themes": [
+        "film"
       ]
     },
     {
@@ -138,6 +163,9 @@
       "minor": [
         "rushdown",
         "burst"
+      ],
+      "themes": [
+        "monster"
       ]
     },
     {
@@ -154,6 +182,10 @@
         "resource_management",
         "burst",
         "evasion"
+      ],
+      "themes": [
+        "halloween",
+        "monster"
       ]
     },
     {
@@ -170,6 +202,10 @@
         "control",
         "disruption",
         "resource_management"
+      ],
+      "themes": [
+        "halloween",
+        "monster"
       ]
     },
     {
@@ -185,6 +221,10 @@
       "minor": [
         "burst",
         "adaptive"
+      ],
+      "themes": [
+        "halloween",
+        "monster"
       ]
     },
     {
@@ -201,6 +241,9 @@
         "disruption",
         "combo",
         "technical"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -217,6 +260,9 @@
         "evasion",
         "burst",
         "swarm"
+      ],
+      "themes": [
+        "halloween"
       ]
     },
     {
@@ -232,6 +278,9 @@
       "minor": [
         "resource_management",
         "disruption"
+      ],
+      "themes": [
+        "halloween"
       ]
     },
     {
@@ -248,6 +297,9 @@
         "burst",
         "scaling",
         "adaptive"
+      ],
+      "themes": [
+        "halloween"
       ]
     },
     {
@@ -263,6 +315,9 @@
       "minor": [
         "rushdown",
         "control"
+      ],
+      "themes": [
+        "halloween"
       ]
     },
     {
@@ -279,6 +334,9 @@
         "resource_management",
         "technical",
         "burst"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -294,6 +352,9 @@
       "minor": [
         "attrition",
         "burst"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -309,6 +370,9 @@
       "minor": [
         "resource_management",
         "disruption"
+      ],
+      "themes": [
+        "superhero"
       ]
     },
     {
@@ -324,6 +388,9 @@
       "minor": [
         "rushdown",
         "burst"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -340,6 +407,10 @@
         "technical",
         "burst",
         "combo"
+      ],
+      "themes": [
+        "halloween",
+        "legend"
       ]
     },
     {
@@ -355,6 +426,9 @@
       "minor": [
         "evasion",
         "control"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -370,6 +444,9 @@
       "minor": [
         "attrition",
         "ranged_pressure"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -385,6 +462,9 @@
       "minor": [
         "resource_management",
         "burst"
+      ],
+      "themes": [
+        "superhero"
       ]
     },
     {
@@ -401,6 +481,10 @@
         "burst",
         "rushdown",
         "evasion"
+      ],
+      "themes": [
+        "superhero",
+        "halloween"
       ]
     },
     {
@@ -416,6 +500,10 @@
       "minor": [
         "adaptive",
         "technical"
+      ],
+      "themes": [
+        "superhero",
+        "halloween"
       ]
     },
     {
@@ -432,6 +520,9 @@
         "resource_management",
         "burst",
         "technical"
+      ],
+      "themes": [
+        "superhero"
       ]
     },
     {
@@ -448,6 +539,9 @@
         "stance",
         "rushdown",
         "burst"
+      ],
+      "themes": [
+        "superhero"
       ]
     },
     {
@@ -464,6 +558,9 @@
         "rushdown",
         "evasion",
         "burst"
+      ],
+      "themes": [
+        "superhero"
       ]
     },
     {
@@ -480,6 +577,9 @@
         "disruption",
         "resource_management",
         "burst"
+      ],
+      "themes": [
+        "film"
       ]
     },
     {
@@ -496,6 +596,9 @@
         "burst",
         "resource_management",
         "control"
+      ],
+      "themes": [
+        "monster"
       ]
     },
     {
@@ -512,6 +615,9 @@
         "control",
         "disruption",
         "adaptive"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -528,6 +634,9 @@
         "resource_management",
         "control",
         "technical"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -543,6 +652,9 @@
       "minor": [
         "evasion",
         "ranged_pressure"
+      ],
+      "themes": [
+        "superhero"
       ]
     },
     {
@@ -558,6 +670,9 @@
       "minor": [
         "rushdown",
         "burst"
+      ],
+      "themes": [
+        "superhero"
       ]
     },
     {
@@ -573,6 +688,9 @@
       "minor": [
         "control",
         "resource_management"
+      ],
+      "themes": [
+        "superhero"
       ]
     },
     {
@@ -588,6 +706,9 @@
       "minor": [
         "attrition",
         "burst"
+      ],
+      "themes": [
+        "superhero"
       ]
     },
     {
@@ -604,6 +725,9 @@
         "control",
         "technical",
         "disruption"
+      ],
+      "themes": [
+        "superhero"
       ]
     },
     {
@@ -619,6 +743,9 @@
       "minor": [
         "rushdown",
         "ranged_pressure"
+      ],
+      "themes": [
+        "superhero"
       ]
     },
     {
@@ -634,6 +761,9 @@
       "minor": [
         "burst",
         "disruption"
+      ],
+      "themes": [
+        "superhero"
       ]
     },
     {
@@ -649,6 +779,9 @@
       "minor": [
         "evasion",
         "disruption"
+      ],
+      "themes": [
+        "superhero"
       ]
     },
     {
@@ -665,6 +798,9 @@
         "resource_management",
         "ranged_pressure",
         "burst"
+      ],
+      "themes": [
+        "superhero"
       ]
     },
     {
@@ -680,6 +816,9 @@
       "minor": [
         "burst",
         "technical"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -695,6 +834,9 @@
       "minor": [
         "burst",
         "rushdown"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -710,6 +852,10 @@
       "minor": [
         "burst",
         "evasion"
+      ],
+      "themes": [
+        "superhero",
+        "legend"
       ]
     },
     {
@@ -725,6 +871,10 @@
       "minor": [
         "disruption",
         "adaptive"
+      ],
+      "themes": [
+        "superhero",
+        "legend"
       ]
     },
     {
@@ -740,6 +890,9 @@
       "minor": [
         "rushdown",
         "burst"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -755,6 +908,9 @@
       "minor": [
         "ranged_pressure",
         "disruption"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -770,6 +926,9 @@
       "minor": [
         "technical",
         "resource_management"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -785,6 +944,9 @@
       "minor": [
         "stance",
         "burst"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -800,6 +962,9 @@
       "minor": [
         "adaptive",
         "ranged_pressure"
+      ],
+      "themes": [
+        "legend"
       ]
     },
     {
@@ -815,6 +980,10 @@
       "minor": [
         "swarm",
         "resource_management"
+      ],
+      "themes": [
+        "halloween",
+        "legend"
       ]
     },
     {
@@ -831,6 +1000,9 @@
         "technical",
         "control",
         "burst"
+      ],
+      "themes": [
+        "witcher"
       ]
     },
     {
@@ -846,6 +1018,9 @@
       "minor": [
         "evasion",
         "burst"
+      ],
+      "themes": [
+        "witcher"
       ]
     },
     {
@@ -862,6 +1037,9 @@
         "stance",
         "disruption",
         "ranged_pressure"
+      ],
+      "themes": [
+        "witcher"
       ]
     },
     {
@@ -877,6 +1055,9 @@
       "minor": [
         "disruption",
         "rushdown"
+      ],
+      "themes": [
+        "witcher"
       ]
     },
     {
@@ -893,6 +1074,10 @@
         "swarm",
         "rushdown",
         "burst"
+      ],
+      "themes": [
+        "witcher",
+        "monster"
       ]
     },
     {
@@ -909,6 +1094,9 @@
         "stance",
         "burst",
         "control"
+      ],
+      "themes": [
+        "legend"
       ]
     }
   ],
