@@ -47,6 +47,21 @@ for f in FIGHTERS_DATA:
     all_playstyles_set.update(f.get("minor", []))
 ALL_PLAYSTYLES = sorted(all_playstyles_set)
 
+# Extract all unique themes from fighters
+all_themes_set = set()
+for f in FIGHTERS_DATA:
+    all_themes_set.update(f.get("themes", []))
+ALL_THEMES = sorted(all_themes_set)
+
+# Human-readable theme labels
+THEME_LABELS = {
+    "halloween": "🎃 Halloween",
+    "superhero": "🦸 Superhero",
+    "legend": "⚔️ Legend",
+    "monster": "👹 Monster",
+    "film": "🎬 Film",
+}
+
 # Define Custom Sort Order for Range Dropdown
 RANGE_ORDER = ["Melee", "Reach", "Hybrid", "Ranged Assist", "Ranged"]
 ALL_RANGES = sorted(
@@ -62,11 +77,14 @@ def find_fighter_by_id(fid):
     """Finds a fighter dictionary by its ID."""
     return next((f for f in FIGHTERS_DATA if f["id"] == fid), None)
 
-def get_available_fighters(owned_set_names):
-    """Returns a list of fighters from the owned sets."""
+def get_available_fighters(owned_set_names, theme_filter=None):
+    """Returns a list of fighters from the owned sets, optionally filtered by themes."""
     if not owned_set_names:
         return []
-    return [f for f in FIGHTERS_DATA if f["set"] in owned_set_names]
+    fighters = [f for f in FIGHTERS_DATA if f["set"] in owned_set_names]
+    if theme_filter:
+        fighters = [f for f in fighters if any(t in theme_filter for t in f.get("themes", []))]
+    return fighters
 
 
 def calculate_win_percentage(id_a, id_b):
@@ -84,8 +102,11 @@ def generate_suggestions(selected_data):
     results = {"p1_main": None, "p1_alternatives": [], "opp_main": None, "opp_alternatives": []}
     error = None
 
-    available = get_available_fighters(selected_data["owned_sets"])
+    theme_filter = selected_data.get("theme_filter")
+    available = get_available_fighters(selected_data["owned_sets"], theme_filter)
     if not available:
+        if theme_filter and get_available_fighters(selected_data["owned_sets"]):
+            return results, "No fighters match the selected theme(s) in your owned sets. Try selecting different themes or more sets."
         return results, "Please select at least one owned set."
 
     p1_tags = set(selected_data["p1_playstyles"])
@@ -212,6 +233,7 @@ def index():
         "locked_p1_id": None, "locked_opp_id": None,
         "mode": "discovery",
         "fairness_weight": None,
+        "theme_filter": [],
     }
     results_data = None
     error_message = None
@@ -233,6 +255,7 @@ def index():
             "locked_opp_id": request.form.get("current_locked_opp_id"),
             "mode": request.form.get("mode", "discovery"),
             "fairness_weight": request.form.get("fairness_weight", "").strip() or None,
+            "theme_filter": request.form.getlist("theme_filter"),
         })
 
         # Handle direct choices as implicit locks
@@ -266,6 +289,8 @@ def index():
         all_sets_list=ALL_SETS_LIST,
         all_playstyles=ALL_PLAYSTYLES,
         all_ranges=ALL_RANGES,
+        all_themes=ALL_THEMES,
+        theme_labels=THEME_LABELS,
         all_fighters_for_select=all_fighters_sorted,
         results=results_data,
         selected_data=selected_data,
