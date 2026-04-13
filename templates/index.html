@@ -216,6 +216,7 @@
                     <div class="playstyle-selector">
                         <label>Preferred Play-style(s):</label>
                         <button class="toggle-playstyle-btn" type="button" data-target="p1-playstyle-options" aria-expanded="false">Select</button>
+                        <button type="button" class="help-icon-btn playstyle-help-btn" title="What do the playstyles mean?">ⓘ</button>
                         <div id="p1-playstyle-options" class="playstyle-options collapsed">
                             {% for style in all_playstyles %}
                             <label><input type="checkbox" name="p1_playstyles" value="{{ style }}" {% if style in selected_data.p1_playstyles %}checked{% endif %}> {{ style | titlecase_custom }}</label>
@@ -241,6 +242,7 @@
                     <div class="playstyle-selector">
                         <label>Preferred Play-style(s):</label>
                         <button class="toggle-playstyle-btn" type="button" data-target="opp-playstyle-options" aria-expanded="false">Select</button>
+                        <button type="button" class="help-icon-btn playstyle-help-btn" title="What do the playstyles mean?">ⓘ</button>
                         <div id="opp-playstyle-options" class="playstyle-options collapsed">
                             {% for style in all_playstyles %}
                             <label><input type="checkbox" name="opp_playstyles" value="{{ style }}" {% if style in selected_data.opp_playstyles %}checked{% endif %}> {{ style | titlecase_custom }}</label>
@@ -405,6 +407,24 @@
             Leave it empty to use Discovery or Fairness mode instead.
         </p>
         <button type="button" id="advanced-mode-help-close">Understood!</button>
+    </div>
+</div>
+
+<!-- Playstyle definitions popup -->
+<div id="playstyle-help-modal" class="modal-overlay hidden">
+    <div class="modal-content modal-content-scrollable">
+        <h2>Playstyle Glossary 📖</h2>
+        {% if playstyle_definitions %}
+        <dl class="playstyle-glossary-list">
+            {% for name, info in playstyle_definitions.items() %}
+            <dt><span class="playstyle-tag {{ info.type }}">{{ name | titlecase_custom }}</span></dt>
+            <dd>{{ info.desc }}</dd>
+            {% endfor %}
+        </dl>
+        {% else %}
+            <p>No playstyle definitions available.</p>
+        {% endif %}
+        <button type="button" id="playstyle-help-close">Got it!</button>
     </div>
 </div>
 

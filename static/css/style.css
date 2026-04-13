@@ -198,6 +198,56 @@ label { font-size: .9rem; }
     box-shadow: 0 2px 4px rgba(78, 205, 196, 0.2);
 }
 
+/* Uniform tag colour inside the glossary (no major/minor distinction) */
+.playstyle-glossary-list .playstyle-tag {
+    background: linear-gradient(135deg, #7c6fcd 0%, #5a4fa8 100%);
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(90, 79, 168, 0.2);
+}
+
+/* ===== PLAYSTYLE GLOSSARY MODAL ===== */
+.modal-content-scrollable {
+    max-height: 80vh;
+    overflow-y: auto;
+    width: min(560px, calc(100% - 2rem));
+}
+
+.playstyle-glossary-heading {
+    margin-top: 1.25rem;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.playstyle-glossary-heading:first-of-type {
+    margin-top: 0.75rem;
+}
+
+.playstyle-glossary-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+    align-items: center;
+    justify-items: center;
+    margin: 0.5rem auto 0.75rem;
+    width: 100%;
+}
+
+.playstyle-glossary-list dt {
+    text-align: center;
+}
+
+.playstyle-glossary-list dd {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+    text-align: center;
+}
+
+#playstyle-help-modal .modal-content {
+    text-align: center;
+}
 /* ===== THEME FILTER ===== */
 .theme-filter-section {
     margin-top: 1.5rem;

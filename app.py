@@ -28,6 +28,14 @@ def load_json_data(filename, default):
 
 FIGHTERS_DATA = load_json_data("input/fighters.json", {}).get("fighters", [])
 PLAYSTYLE_DEFINITIONS = load_json_data("input/fighters.json", {}).get("playstyle_definitions", {})
+# Build a single alphabetically-sorted dict merging major and minor definitions.
+# Major entries take precedence for type when a name appears in both.
+_ps_combined: dict = {}
+for _name, _desc in PLAYSTYLE_DEFINITIONS.get("minor", {}).items():
+    _ps_combined[_name] = {"desc": _desc, "type": "minor"}
+for _name, _desc in PLAYSTYLE_DEFINITIONS.get("major", {}).items():
+    _ps_combined[_name] = {"desc": _desc, "type": "major"}
+PLAYSTYLE_DEFINITIONS_COMBINED = dict(sorted(_ps_combined.items()))
 WIN_MATRIX = load_json_data("input/win_matrix.json", {})
 engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX) 
 
@@ -288,7 +296,8 @@ def index():
         selected_data=selected_data,
         error_message=error_message,
         win_percentage_matrix=win_percentage_matrix,
-        win_matrix=WIN_MATRIX
+        win_matrix=WIN_MATRIX,
+        playstyle_definitions=PLAYSTYLE_DEFINITIONS_COMBINED
     )
 
 @app.route("/about")

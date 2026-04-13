@@ -28,6 +28,7 @@ const CONSENT_COOKIE_KEY = 'ufc_cookie_consent';
 const INTRO_SEEN_KEY = 'ufc_intro_seen';
 const MATCHUP_MODE_HELP_SEEN_KEY = 'ufc_matchup_mode_help_seen';
 const ADVANCED_MODE_HELP_SEEN_KEY = 'ufc_advanced_mode_help_seen';
+const PLAYSTYLE_HELP_SEEN_KEY = 'ufc_playstyle_help_seen';
 const THEME_FILTER_HELP_SEEN_KEY = 'ufc_theme_filter_help_seen';
 
 /*************************** ANALYTICS & CONSENT ***************************/
@@ -92,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCookieConsent();
     setupSetSelection();
     setupPlaystyleToggles();
+    setupPlaystyleHelpButtons();
     setupP1SelectionToggle();
     setupModeControls();
     setupThemeChips();
@@ -238,6 +240,29 @@ function setupPlaystyleToggles() {
         btn.addEventListener('click', () => {
             const collapsed = target.classList.toggle('collapsed');
             btn.setAttribute('aria-expanded', String(!collapsed));
+            if (!collapsed) {
+                showPlaystyleHelpOnce();
+            }
+        });
+    });
+}
+
+function showPlaystyleHelpOnce() {
+    const modal = qs('#playstyle-help-modal');
+    if (!modal) return;
+    if (window.localStorage && localStorage.getItem(PLAYSTYLE_HELP_SEEN_KEY) === '1') return;
+    modal.classList.remove('hidden');
+    recordAnalytics('modal_view', { modal: 'playstyle_help', first_time: true });
+}
+
+function setupPlaystyleHelpButtons() {
+    const modal = qs('#playstyle-help-modal');
+    if (!modal) return;
+    qsa('.playstyle-help-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.remove('hidden');
+            recordAnalytics('modal_view', { modal: 'playstyle_help' });
         });
     });
 }
@@ -388,6 +413,22 @@ function setupModalCloseHandlers() {
         });
     }
 
+    // Playstyle help modal close handler
+    const playstyleHelpModal = qs('#playstyle-help-modal');
+    const playstyleHelpClose = qs('#playstyle-help-close');
+    if (playstyleHelpModal && playstyleHelpClose) {
+        playstyleHelpClose.addEventListener('click', () => {
+            playstyleHelpModal.classList.add('hidden');
+            try { localStorage.setItem(PLAYSTYLE_HELP_SEEN_KEY, '1'); } catch (e) { /* ignore */ }
+        });
+        // Also close when clicking the overlay backdrop
+        playstyleHelpModal.addEventListener('click', (e) => {
+            if (e.target === playstyleHelpModal) {
+                playstyleHelpModal.classList.add('hidden');
+                try { localStorage.setItem(PLAYSTYLE_HELP_SEEN_KEY, '1'); } catch (e) { /* ignore */ }
+            }
+        });
+    }
     // Theme filter help modal close handler
     const themeFilterHelpModal = qs('#theme-filter-help-modal');
     const themeFilterHelpClose = qs('#theme-filter-help-close');
