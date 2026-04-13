@@ -205,7 +205,12 @@ label { font-size: .9rem; }
     border-top: 1px solid #e9ecef;
 }
 
-.theme-filter-section h3 { margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; }
+.theme-filter-section h3 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .theme-filter-section .optional-label {
     font-size: 0.8rem;
