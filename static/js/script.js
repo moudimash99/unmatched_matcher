@@ -28,6 +28,7 @@ const CONSENT_COOKIE_KEY = 'ufc_cookie_consent';
 const INTRO_SEEN_KEY = 'ufc_intro_seen';
 const MATCHUP_MODE_HELP_SEEN_KEY = 'ufc_matchup_mode_help_seen';
 const ADVANCED_MODE_HELP_SEEN_KEY = 'ufc_advanced_mode_help_seen';
+const THEME_FILTER_HELP_SEEN_KEY = 'ufc_theme_filter_help_seen';
 
 /*************************** ANALYTICS & CONSENT ***************************/
 let analyticsEnabled = false;
@@ -93,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupPlaystyleToggles();
     setupP1SelectionToggle();
     setupModeControls();
+    setupThemeChips();
     setupModalCloseHandlers(); // Set up all modal close handlers first
     setupIntroModal();
     setupAnalyticsListeners();
@@ -100,6 +102,67 @@ document.addEventListener('DOMContentLoaded', () => {
     setupResultCardActions();
     trackMatchupResult();
 });
+
+function setupThemeChips() {
+    const panel = qs('#theme-filter-panel');
+    const toggleBtn = qs('#toggle-theme-filter-btn');
+
+    // Collapse/expand toggle — mirrors Matchup Mode behaviour
+    if (panel && toggleBtn) {
+        // Ensure it starts collapsed (also applied via HTML class)
+        panel.classList.add('collapsed');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+
+        // If a theme chip is already checked (POST back) expand the panel so the state is visible
+        const anyChecked = qsa('.theme-chip input[type="checkbox"]:checked').length > 0;
+        if (anyChecked) {
+            panel.classList.remove('collapsed');
+            toggleBtn.setAttribute('aria-expanded', 'true');
+            toggleBtn.textContent = '⬆ Hide';
+        }
+
+        toggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const isCollapsed = panel.classList.contains('collapsed');
+            if (isCollapsed) {
+                panel.classList.remove('collapsed');
+                toggleBtn.setAttribute('aria-expanded', 'true');
+                toggleBtn.textContent = '⬆ Hide';
+                // Show help popup the first time the panel is opened
+                showThemeFilterHelpOnce();
+                recordAnalytics('panel_toggle', { panel: 'theme_filter', expanded: true });
+            } else {
+                panel.classList.add('collapsed');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+                toggleBtn.textContent = '⬇ Show';
+                recordAnalytics('panel_toggle', { panel: 'theme_filter', expanded: false });
+            }
+        });
+    }
+
+    const chips = qsa('.theme-chip');
+    chips.forEach(chip => {
+        const cb = chip.querySelector('input[type="checkbox"]');
+        if (!cb) return;
+        // Sync active class on change
+        cb.addEventListener('change', () => {
+            chip.classList.toggle('active', cb.checked);
+        });
+    });
+
+    // Wire up theme filter help button (always shows the modal)
+    const themeHelpBtn = qs('#theme-filter-help-btn');
+    if (themeHelpBtn) {
+        themeHelpBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modal = qs('#theme-filter-help-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                recordAnalytics('modal_view', { modal: 'theme_filter_help' });
+            }
+        });
+    }
+}
 
 /*************************** UI SETUP FUNCTIONS  ***************************/
 function setupSetSelection() {
@@ -324,6 +387,20 @@ function setupModalCloseHandlers() {
             }
         });
     }
+
+    // Theme filter help modal close handler
+    const themeFilterHelpModal = qs('#theme-filter-help-modal');
+    const themeFilterHelpClose = qs('#theme-filter-help-close');
+    if (themeFilterHelpModal && themeFilterHelpClose) {
+        themeFilterHelpClose.addEventListener('click', () => {
+            themeFilterHelpModal.classList.add('hidden');
+            try {
+                localStorage.setItem(THEME_FILTER_HELP_SEEN_KEY, '1');
+            } catch (e) {
+                // ignore storage errors
+            }
+        });
+    }
 }
 
 function setupIntroModal() {
@@ -435,6 +512,18 @@ function showAdvancedModeHelpOnce() {
 
     modal.classList.remove('hidden');
     recordAnalytics('modal_view', { modal: 'advanced_mode_help', first_time: true });
+}
+
+function showThemeFilterHelpOnce() {
+    const modal = qs('#theme-filter-help-modal');
+    if (!modal) return;
+
+    if (window.localStorage && localStorage.getItem(THEME_FILTER_HELP_SEEN_KEY) === '1') {
+        return;
+    }
+
+    modal.classList.remove('hidden');
+    recordAnalytics('modal_view', { modal: 'theme_filter_help', first_time: true });
 }
 
 /*************************** CORE INTERACTION LOGIC  ***************************/
