@@ -114,11 +114,14 @@
         </div>
 
         <!-- 🔽🔽🔽 THEME FILTER BLOCK 🔽🔽🔽 -->
-        <div class="theme-filter-section">
-            <div class="theme-filter-header">
-                <h3>Theme Filter <span class="optional-label">(optional)</span></h3>
-                <button type="button" id="theme-filter-help-btn" class="help-icon-btn" title="What are themes?">ⓘ</button>
-            </div>
+        <div id="theme-filter-panel" class="theme-filter-section collapsed">
+            <h3>
+                Theme Filter <span class="optional-label">(optional)</span>
+                <div class="header-buttons">
+                    <button type="button" id="theme-filter-help-btn" class="help-icon-btn" title="What are themes?">ⓘ</button>
+                    <button type="button" id="toggle-theme-filter-btn" class="mode-toggle-heading-btn" aria-expanded="false">⬇ Show</button>
+                </div>
+            </h3>
             <p class="helper-text">
                 Limit fighters to a fun theme for a special combination. Leave all unchecked to use all fighters from your selected sets.
             </p>

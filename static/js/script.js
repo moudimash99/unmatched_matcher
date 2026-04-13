@@ -104,14 +104,49 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function setupThemeChips() {
+    const panel = qs('#theme-filter-panel');
+    const toggleBtn = qs('#toggle-theme-filter-btn');
+
+    // Collapse/expand toggle — mirrors Matchup Mode behaviour
+    if (panel && toggleBtn) {
+        // Ensure it starts collapsed (also applied via HTML class)
+        panel.classList.add('collapsed');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+
+        // If a theme chip is already checked (POST back) expand the panel so the state is visible
+        const anyChecked = qsa('.theme-chip input[type="checkbox"]:checked').length > 0;
+        if (anyChecked) {
+            panel.classList.remove('collapsed');
+            toggleBtn.setAttribute('aria-expanded', 'true');
+            toggleBtn.textContent = '⬆ Hide';
+        }
+
+        toggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const isCollapsed = panel.classList.contains('collapsed');
+            if (isCollapsed) {
+                panel.classList.remove('collapsed');
+                toggleBtn.setAttribute('aria-expanded', 'true');
+                toggleBtn.textContent = '⬆ Hide';
+                // Show help popup the first time the panel is opened
+                showThemeFilterHelpOnce();
+                recordAnalytics('panel_toggle', { panel: 'theme_filter', expanded: true });
+            } else {
+                panel.classList.add('collapsed');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+                toggleBtn.textContent = '⬇ Show';
+                recordAnalytics('panel_toggle', { panel: 'theme_filter', expanded: false });
+            }
+        });
+    }
+
     const chips = qsa('.theme-chip');
     chips.forEach(chip => {
         const cb = chip.querySelector('input[type="checkbox"]');
         if (!cb) return;
-        // Sync active class on change; show help popup the first time a chip is clicked
+        // Sync active class on change
         cb.addEventListener('change', () => {
             chip.classList.toggle('active', cb.checked);
-            showThemeFilterHelpOnce();
         });
     });
 
