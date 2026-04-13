@@ -115,7 +115,10 @@
 
         <!-- 🔽🔽🔽 THEME FILTER BLOCK 🔽🔽🔽 -->
         <div class="theme-filter-section">
-            <h3>Theme Filter <span class="optional-label">(optional)</span></h3>
+            <div class="theme-filter-header">
+                <h3>Theme Filter <span class="optional-label">(optional)</span></h3>
+                <button type="button" id="theme-filter-help-btn" class="help-icon-btn" title="What are themes?">ⓘ</button>
+            </div>
             <p class="helper-text">
                 Limit fighters to a fun theme for a special combination. Leave all unchecked to use all fighters from your selected sets.
             </p>
@@ -360,6 +363,26 @@
             <strong>Advanced:</strong> Fine-tune the exact balance between fairness and fit using a custom weight.
         </p>
         <button type="button" id="matchup-mode-help-close">Got it!</button>
+    </div>
+</div>
+
+<!-- Theme filter help popup: shown once the first time a theme chip is clicked -->
+<div id="theme-filter-help-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+        <h2>Theme Filter Explained 🎭</h2>
+        <p>
+            Themes let you restrict the fighter pool to a fun <strong>thematic subset</strong> — 
+            great for Halloween nights, superhero showdowns, or legendary duels!
+        </p>
+        <p>
+            <strong>How it works:</strong><br>
+            Select one or more themes (e.g. <em>Halloween</em> + <em>Monster</em>) and only fighters
+            that belong to <em>at least one</em> of those themes will be included in matchup generation.
+        </p>
+        <p>
+            Leave <em>all chips unselected</em> to use every fighter from your owned sets as usual.
+        </p>
+        <button type="button" id="theme-filter-help-close">Got it!</button>
     </div>
 </div>
 

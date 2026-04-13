@@ -205,6 +205,17 @@ label { font-size: .9rem; }
     border-top: 1px solid #dee2e6;
 }
 
+.theme-filter-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.theme-filter-header h3 {
+    margin-bottom: 0;
+}
+
 .theme-filter-section .optional-label {
     font-size: 0.8rem;
     color: var(--text-secondary);

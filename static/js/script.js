@@ -28,6 +28,7 @@ const CONSENT_COOKIE_KEY = 'ufc_cookie_consent';
 const INTRO_SEEN_KEY = 'ufc_intro_seen';
 const MATCHUP_MODE_HELP_SEEN_KEY = 'ufc_matchup_mode_help_seen';
 const ADVANCED_MODE_HELP_SEEN_KEY = 'ufc_advanced_mode_help_seen';
+const THEME_FILTER_HELP_SEEN_KEY = 'ufc_theme_filter_help_seen';
 
 /*************************** ANALYTICS & CONSENT ***************************/
 let analyticsEnabled = false;
@@ -107,11 +108,25 @@ function setupThemeChips() {
     chips.forEach(chip => {
         const cb = chip.querySelector('input[type="checkbox"]');
         if (!cb) return;
-        // Sync active class on change
+        // Sync active class on change; show help popup the first time a chip is clicked
         cb.addEventListener('change', () => {
             chip.classList.toggle('active', cb.checked);
+            showThemeFilterHelpOnce();
         });
     });
+
+    // Wire up theme filter help button (always shows the modal)
+    const themeHelpBtn = qs('#theme-filter-help-btn');
+    if (themeHelpBtn) {
+        themeHelpBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modal = qs('#theme-filter-help-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                recordAnalytics('modal_view', { modal: 'theme_filter_help' });
+            }
+        });
+    }
 }
 
 /*************************** UI SETUP FUNCTIONS  ***************************/
@@ -337,6 +352,20 @@ function setupModalCloseHandlers() {
             }
         });
     }
+
+    // Theme filter help modal close handler
+    const themeFilterHelpModal = qs('#theme-filter-help-modal');
+    const themeFilterHelpClose = qs('#theme-filter-help-close');
+    if (themeFilterHelpModal && themeFilterHelpClose) {
+        themeFilterHelpClose.addEventListener('click', () => {
+            themeFilterHelpModal.classList.add('hidden');
+            try {
+                localStorage.setItem(THEME_FILTER_HELP_SEEN_KEY, '1');
+            } catch (e) {
+                // ignore storage errors
+            }
+        });
+    }
 }
 
 function setupIntroModal() {
@@ -448,6 +477,18 @@ function showAdvancedModeHelpOnce() {
 
     modal.classList.remove('hidden');
     recordAnalytics('modal_view', { modal: 'advanced_mode_help', first_time: true });
+}
+
+function showThemeFilterHelpOnce() {
+    const modal = qs('#theme-filter-help-modal');
+    if (!modal) return;
+
+    if (window.localStorage && localStorage.getItem(THEME_FILTER_HELP_SEEN_KEY) === '1') {
+        return;
+    }
+
+    modal.classList.remove('hidden');
+    recordAnalytics('modal_view', { modal: 'theme_filter_help', first_time: true });
 }
 
 /*************************** CORE INTERACTION LOGIC  ***************************/
