@@ -1000,9 +1000,6 @@
         "technical",
         "control",
         "burst"
-      ],
-      "themes": [
-        "witcher"
       ]
     },
     {
@@ -1018,9 +1015,6 @@
       "minor": [
         "evasion",
         "burst"
-      ],
-      "themes": [
-        "witcher"
       ]
     },
     {
@@ -1037,9 +1031,6 @@
         "stance",
         "disruption",
         "ranged_pressure"
-      ],
-      "themes": [
-        "witcher"
       ]
     },
     {
@@ -1055,9 +1046,6 @@
       "minor": [
         "disruption",
         "rushdown"
-      ],
-      "themes": [
-        "witcher"
       ]
     },
     {
@@ -1076,7 +1064,6 @@
         "burst"
       ],
       "themes": [
-        "witcher",
         "monster"
       ]
     },

@@ -113,30 +113,6 @@
             </div>
         </div>
 
-        <!-- 🔽🔽🔽 THEME FILTER BLOCK 🔽🔽🔽 -->
-        <div id="theme-filter-panel" class="theme-filter-section collapsed">
-            <h3>
-                Theme Filter <span class="optional-label">(optional)</span>
-                <div class="header-buttons">
-                    <button type="button" id="theme-filter-help-btn" class="help-icon-btn" title="What are themes?">ⓘ</button>
-                    <button type="button" id="toggle-theme-filter-btn" class="mode-toggle-heading-btn" aria-expanded="false">⬇ Show</button>
-                </div>
-            </h3>
-            <p class="helper-text">
-                Limit fighters to a fun theme for a special combination. Leave all unchecked to use all fighters from your selected sets.
-            </p>
-            <div class="theme-options">
-                {% for theme in all_themes %}
-                <label class="theme-chip {% if theme in selected_data.theme_filter %}active{% endif %}">
-                    <input type="checkbox" name="theme_filter" value="{{ theme }}"
-                           {% if theme in selected_data.theme_filter %}checked{% endif %}>
-                    {{ theme_labels.get(theme, theme | titlecase_custom) }}
-                </label>
-                {% endfor %}
-            </div>
-        </div>
-        <!-- 🔼🔼🔼 END THEME FILTER BLOCK 🔼🔼🔼 -->
-
         <!-- 🔽🔽🔽 NEW MATCHUP MODE BLOCK 🔽🔽🔽 -->
         <div id="mode-settings-panel" class="mode-selection collapsed">
             <h3>
@@ -187,6 +163,30 @@
             </div>
         </div>
         <!-- 🔼🔼🔼 END MATCHUP MODE BLOCK 🔼🔼🔼 -->
+
+        <!-- 🔽🔽🔽 THEME FILTER BLOCK 🔽🔽🔽 -->
+        <div id="theme-filter-panel" class="theme-filter-section collapsed">
+            <h3>
+                Theme Filter
+                <div class="header-buttons">
+                    <button type="button" id="theme-filter-help-btn" class="help-icon-btn" title="What are themes?">ⓘ</button>
+                    <button type="button" id="toggle-theme-filter-btn" class="mode-toggle-heading-btn" aria-expanded="false">⬇ Show</button>
+                </div>
+            </h3>
+            <p class="helper-text">
+                Limit fighters to a fun theme for a special combination. Leave all unchecked to use all fighters from your selected sets.
+            </p>
+            <div class="theme-options">
+                {% for theme in all_themes %}
+                <label class="theme-chip {% if theme in selected_data.theme_filter %}active{% endif %}">
+                    <input type="checkbox" name="theme_filter" value="{{ theme }}"
+                           {% if theme in selected_data.theme_filter %}checked{% endif %}>
+                    {{ theme_labels.get(theme, theme | titlecase_custom) }}
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- 🔼🔼🔼 END THEME FILTER BLOCK 🔼🔼🔼 -->
     </section>
 
     <section class="matchup-configuration">

@@ -51,7 +51,6 @@ THEME_LABELS = {
     "superhero": "🦸 Superhero",
     "legend": "⚔️ Legend",
     "monster": "👹 Monster",
-    "witcher": "🐺 Witcher",
     "film": "🎬 Film",
 }
 
