@@ -371,26 +371,12 @@
     <div class="modal-content modal-content-scrollable">
         <h2>Playstyle Glossary 📖</h2>
         {% if playstyle_definitions %}
-            {% if playstyle_definitions.major %}
-            <h3 class="playstyle-glossary-heading">Major Playstyles</h3>
-            <p class="helper-text">Primary identity — the defining mechanic a fighter is built around.</p>
-            <dl class="playstyle-glossary-list">
-                {% for name, desc in playstyle_definitions.major.items() %}
-                <dt><span class="playstyle-tag major">{{ name | titlecase_custom }}</span></dt>
-                <dd>{{ desc }}</dd>
-                {% endfor %}
-            </dl>
-            {% endif %}
-            {% if playstyle_definitions.minor %}
-            <h3 class="playstyle-glossary-heading">Minor Playstyles</h3>
-            <p class="helper-text">Secondary tendencies — supporting tools the fighter also uses.</p>
-            <dl class="playstyle-glossary-list">
-                {% for name, desc in playstyle_definitions.minor.items() %}
-                <dt><span class="playstyle-tag minor">{{ name | titlecase_custom }}</span></dt>
-                <dd>{{ desc }}</dd>
-                {% endfor %}
-            </dl>
-            {% endif %}
+        <dl class="playstyle-glossary-list">
+            {% for name, info in playstyle_definitions.items() %}
+            <dt><span class="playstyle-tag {{ info.type }}">{{ name | titlecase_custom }}</span></dt>
+            <dd>{{ info.desc }}</dd>
+            {% endfor %}
+        </dl>
         {% else %}
             <p>No playstyle definitions available.</p>
         {% endif %}
