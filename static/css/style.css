@@ -229,15 +229,22 @@ label { font-size: .9rem; }
     grid-template-columns: auto 1fr;
     gap: 0.5rem 1rem;
     align-items: baseline;
-    margin: 0.5rem 0 0.75rem;
+    margin: 0.5rem auto 0.75rem;
+    width: fit-content;
 }
 
 .playstyle-glossary-list dt {
     white-space: nowrap;
+    text-align: right;
 }
 
 .playstyle-glossary-list dd {
     font-size: 0.875rem;
     color: var(--text-secondary);
     margin: 0;
+    text-align: left;
+}
+
+#playstyle-help-modal .modal-content {
+    text-align: center;
 }
