@@ -3,62 +3,260 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About • Unmatched Matchup Generator</title>
-  <meta name="description" content="Generate fun and fair Unmatched matchups based on the sets you own, playstyles, and preferred ranges.">
+  <title>About – Unmatched Fighter Chooser | Unmatched Board Game Matchup Generator</title>
+  <meta name="description" content="Unmatched Fighter Chooser is a free fan-made matchup generator for the Unmatched board game. Pick fighters from your collection, filter by playstyle and range, and get balanced matchup suggestions for Bigfoot, Sinbad, Medusa, Alice, and more.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://unmatched.machaka.net/about">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='medusa.png') }}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://unmatched.machaka.net/about">
+  <meta property="og:title" content="About – Unmatched Fighter Chooser | Unmatched Board Game Matchup Generator">
+  <meta property="og:description" content="Free fan-made matchup generator for the Unmatched board game. Filter fighters by playstyle and range to find the most fun and balanced matchup from your collection.">
+  <meta property="og:site_name" content="Unmatched Fighter Chooser">
+
+  <!-- JSON-LD: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Unmatched Fighter Chooser",
+    "url": "https://unmatched.machaka.net/",
+    "description": "A free fan-made tool that generates fun and balanced Unmatched board game matchups based on your collection, playstyle, and range preferences.",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Person", "name": "Mohammad Machaka", "url": "https://mohammad.machaka.net" }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage (helps Google show Q&A in search results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the Unmatched Fighter Chooser?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unmatched Fighter Chooser is a free, fan-made web tool that helps players of the Unmatched board game pick well-matched fighters. It generates matchup suggestions based on the sets you own, your playstyle preferences, and how balanced you want the fight to be."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this an official Restoration Games tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. This is an independent fan project and has no affiliation with Restoration Games. Unmatched is a trademark of Restoration Games."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the Unmatched matchup generator work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every possible matchup is scored using two ideas: Fit (how well each fighter matches your requested playstyles and range preferences) and Fairness (how close the matchup is to 50/50 based on community win-rate data). Different modes shift the emphasis between discovery and competitive balance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which Unmatched sets and fighters are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The tool supports fighters from a wide range of Unmatched sets. Select the sets you own on the main page and the generator will only suggest matchups from your collection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I share matchups with friends?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — just share the URL to this site. Select the same fighters and settings and you will get the same suggestions. No account required."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-primary: 'Roboto', system-ui, -apple-system, sans-serif;
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --accent: #0069ff;
+      --text: #212529;
+      --text-muted: #6c757d;
+      --bg: #f2f6f9;
+      --bg-card: #ffffff;
+      --shadow: 0 3px 6px rgba(0,0,0,.1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font: 400 16px/1.6 var(--font-primary); color: var(--text); background: var(--bg); }
+
+    /* Header */
+    .site-header {
+      background: linear-gradient(135deg, #0069ff 0%, #005fd1 100%);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem 2rem;
+    }
+    .site-header h1 { font: 700 clamp(1.3rem, 3vw, 2rem) var(--font-heading); margin-bottom: .4rem; }
+    .site-header p { opacity: .9; font-size: .95rem; }
+    .back-link {
+      display: inline-block;
+      margin-top: .9rem;
+      color: rgba(255,255,255,.85);
+      text-decoration: none;
+      font-size: .9rem;
+      transition: color .2s;
+    }
+    .back-link:hover { color: #fff; text-decoration: underline; }
+
+    /* Main content */
+    main {
+      max-width: 860px;
+      margin: 2rem auto;
+      padding: 0 1rem 3rem;
+    }
+    .card {
+      background: var(--bg-card);
+      border-radius: .75rem;
+      box-shadow: var(--shadow);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      font: 700 1.3rem/1.2 var(--font-heading);
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 1.25rem 0 .35rem;
+      color: var(--text);
+    }
+    h3:first-child { margin-top: 0; }
+    p { margin-bottom: .85rem; }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { padding-left: 1.4rem; margin-bottom: .85rem; }
+    li { margin-bottom: .35rem; }
+    a { color: var(--accent); }
+    a:hover { text-decoration: none; }
+
+    /* Footer */
+    .site-footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: .85rem;
+      color: var(--text-muted);
+    }
+    .site-footer a { color: var(--text-muted); }
+    .site-footer a:hover { color: var(--accent); }
+  </style>
+  
 </head>
-<body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 16px; line-height: 1.5;">
-  <header style="margin-bottom: 24px;">
-    <h1 style="margin: 0 0 8px;">Unmatched Matchup Generator</h1>
-    <p style="margin: 0; opacity: 0.85;">
-      A quick tool to generate <strong>fun</strong> and <strong>fair</strong> Unmatched matchups based on your collection.
-    </p>
-    <p style="margin: 12px 0 0;">
-      <a href="/" style="text-decoration: none;">← Back to generator</a>
-    </p>
+<body>
+
+  <header class="site-header">
+    <h1>Unmatched Fighter Chooser</h1>
+    <p>A free fan-made tool for generating fun and balanced <strong>Unmatched</strong> matchups</p>
+    <a class="back-link" href="/">← Back to the generator</a>
   </header>
 
   <main>
-    <h2>What it does</h2>
-    <ul>
-      <li>Select the sets you own.</li>
-      <li>Choose playstyles and preferred ranges.</li>
-      <li>Get suggested matchups optimized for your chosen mode (e.g., discovery vs fairness).</li>
-      <li>Optionally lock a fighter and generate tailored opponents.</li>
-    </ul>
 
-    <h2>How suggestions work (high level)</h2>
-    <p>
-      Suggestions are scored using two ideas:
-    </p>
-    <ul>
-      <li><strong>Fit</strong>: how well a fighter matches the requested playstyles and range preferences.</li>
-      <li><strong>Fairness</strong>: how close the matchup is to balanced based on the win-rate matrix.</li>
-    </ul>
-    <p>
-      Different modes can shift the emphasis between fit (discovery) and fairness (balanced matchups).
-    </p>
+    <div class="card">
+      <h2>What is this?</h2>
+      <p>
+        <strong>Unmatched Fighter Chooser</strong> is a free, fan-made web tool that helps players of the
+        <a href="https://restorationgames.com/unmatched/" target="_blank" rel="noopener">Unmatched board game</a>
+        pick well-matched fighters for their next game. Instead of spending time debating who to play,
+        let the tool do the work based on what you own, how you like to play, and how balanced you want the fight to be.
+      </p>
+      <p>
+        This is <strong>not</strong> an official Restoration Games product , it’s built by fans, for fans.
+      </p>
+    </div>
 
-    <h2>FAQ</h2>
-    <h3 style="margin-bottom: 6px;">Is this official?</h3>
-    <p style="margin-top: 0;">
-      No — this is a fan-made tool for convenience and fun.
-    </p>
+    <div class="card">
+      <h2>What it does</h2>
+      <ul>
+        <li><strong>Pick your collection</strong> — select only the sets you own so suggestions stay practical.</li>
+        <li><strong>Choose playstyles and ranges</strong> — prefer aggressive rushdown, ranged control, or something in between.</li>
+        <li><strong>Get matchup suggestions</strong> — optimised for your chosen mode (discovery, balanced, or best-fit).</li>
+        <li><strong>Lock a fighter</strong> — already know who you want to play? Lock them in and generate tailored opponents.</li>
+      </ul>
+    </div>
 
-    <h3 style="margin-bottom: 6px;">Can I share matchups with friends?</h3>
-    <p style="margin-top: 0;">
-      Yes — share the URL to this site and the matchup suggestions you generate. (If you later add “share links” that encode selections, it becomes even easier.)
-    </p>
+    <div class="card">
+      <h2>How suggestions are scored</h2>
+      <p>Every possible matchup receives two scores that are blended together:</p>
+      <ul>
+        <li>
+          <strong>Fit</strong> — how well each fighter matches your requested playstyles and range preferences.
+          A higher fit means the fighters feel like the kind of game you described.
+        </li>
+        <li>
+          <strong>Fairness</strong> — how close the matchup is to 50/50 based on community win-rate data.
+          A higher fairness score means neither player has a large statistical advantage.
+        </li>
+      </ul>
+      <p>
+        Different suggestion modes shift the emphasis: <em>Discovery</em> prioritises fit so you try new things;
+        <em>Balanced</em> prioritises fairness for competitive play.
+      </p>
+    </div>
 
-    <h3 style="margin-bottom: 6px;">How can I report an issue or suggest a feature?</h3>
-    <p style="margin-top: 0;">
-      Add a small “Feedback” link on the home page pointing to your preferred contact (email, Discord, GitHub issues, Google Form).
-    </p>
+    <div class="card">
+      <h2>FAQ</h2>
 
-    <hr style="margin: 32px 0; opacity: 0.3;">
+      <h3>Is this an official Restoration Games tool?</h3>
+      <p>
+        No. This is an independent fan project and has no affiliation with Restoration Games.
+        Unmatched is a trademark of Restoration Games.
+      </p>
 
-    <p style="opacity: 0.7;">
-      Tip: If you want Google to pick this up faster, add this page to your sitemap and submit it in Search Console.
-    </p>
+      <h3>Where does the win-rate data come from?</h3>
+      <p>
+        Win-rate estimates are compiled from community match data and public discussions.
+        They are approximations , results will vary with player skill and strategy.
+      </p>
+
+      <h3>Can I share matchups with friends?</h3>
+      <p>
+        Yes! Just share the URL to this site. Select the same fighters and settings and you’ll
+        get the same suggestions. No account required.
+      </p>
+
+      <h3>How do I report a bug or suggest a feature?</h3>
+      <p>
+        Open an issue on the
+        <a href="https://github.com/moudimash99/unmatched_matcher/issues" target="_blank" rel="noopener">GitHub repository</a>.
+        All feedback is welcome.
+      </p>
+
+      <h3>Who built this?</h3>
+      <p>
+        Built by <a href="https://mohammad.machaka.net" target="_blank" rel="noopener">Mohammad Machaka</a>.
+        The source code is open on
+        <a href="https://github.com/moudimash99/unmatched_matcher" target="_blank" rel="noopener">GitHub</a>.
+      </p>
+    </div>
+
   </main>
+
+  <footer class="site-footer">
+    <p>
+      <a href="/">Generator</a> &nbsp;·&nbsp;
+      <a href="https://github.com/moudimash99/unmatched_matcher" target="_blank" rel="noopener">GitHub</a> &nbsp;·&nbsp;
+      <a href="https://mohammad.machaka.net" target="_blank" rel="noopener">Developer</a>
+    </p>
+  </footer>
+
 </body>
 </html>
