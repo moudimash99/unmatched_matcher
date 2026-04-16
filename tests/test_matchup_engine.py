@@ -51,8 +51,8 @@ def test_set_mode_adjusts_weights_and_clamps(engine):
     assert engine.WEIGHT_FIT == pytest.approx(0.6)
 
 
-def test_get_win_rate_defaults_to_even_when_missing(engine):
-    assert engine._get_win_rate("alpha", "unknown") == 50.0
+def test_get_win_rate_returns_none_when_missing(engine):
+    assert engine._get_win_rate("alpha", "unknown") is None
 
 
 def test_get_win_rate_handles_reverse_lookup(engine):
@@ -62,8 +62,12 @@ def test_get_win_rate_handles_reverse_lookup(engine):
 def test_get_win_rate_handles_invalid_values(sample_fighters):
     sentinel_matrix = {"alpha": {"bravo": -2}}
     local_engine = MatchupEngine(sample_fighters, sentinel_matrix)
-    assert local_engine._get_win_rate("alpha", "bravo") == 50.0
-    assert local_engine._get_win_rate("bravo", "alpha") == 50.0
+    assert local_engine._get_win_rate("alpha", "bravo") is None
+    assert local_engine._get_win_rate("bravo", "alpha") is None
+
+
+def test_calculate_matchup_fairness_is_neutral_when_missing(engine):
+    assert engine._calculate_matchup_fairness("alpha", "unknown") == pytest.approx(0.5)
 
 
 def test_individual_fit_accounts_for_range_and_tags(engine, sample_fighters):
@@ -105,7 +109,7 @@ def expanded_win_matrix(expanded_fighters):
         "alpha": {"bravo": 65.0, "delta": 60.0},
         "bravo": {"alpha": 35.0, "charlie": 55.0},
         "charlie": {"delta": 52.0},
-        # missing entries default to 50 via _get_win_rate
+        # missing entries are treated as unknown by _get_win_rate
     }
 
 

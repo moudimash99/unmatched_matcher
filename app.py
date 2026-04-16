@@ -184,7 +184,8 @@ def utility_processor():
     def get_real_win_rate(id_a, id_b):
         if not id_a or not id_b: return 0
         # Access the internal method of the engine instance
-        return round(engine._get_win_rate(id_a, id_b), 1)
+        win_rate = engine._get_win_rate(id_a, id_b)
+        return round(win_rate, 1) if win_rate is not None else "N/A"
     
     return dict(calculate_win_percentage=get_real_win_rate)
 # ---------------------------------------------------------
