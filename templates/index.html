@@ -81,7 +81,7 @@
                     <p class="win-percentage-text">
                     {% if vs_fighter %}
                         {% set win_pct = calculate_win_percentage(fighter.id, vs_fighter.id) %}
-                        <strong>Win vs {{ vs_fighter.name }}:</strong> {{ win_pct }}{% if win_pct != "N/A" %}%{% endif %}
+                        <strong>Win vs {{ vs_fighter.name }}:</strong> {{ "N/A" if win_pct == "N/A" else (win_pct ~ "%") }}
                     {% endif %}
                     </p>
                 </div>

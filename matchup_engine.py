@@ -144,7 +144,9 @@ class MatchupEngine:
                 wr = self._get_win_rate(id_a, id_b)
                 # Strict Fairness Definition for Pools (40% - 60%)
                 # Missing/invalid matchup data should not block pool generation.
-                if wr is None or 1 <= wr <= 99:
+                if wr is None:
+                    fair_map[id_a].add(id_b)
+                elif 1 <= wr <= 99:
                     fair_map[id_a].add(id_b)
         return fair_map
 
@@ -334,6 +336,7 @@ class MatchupEngine:
         """
         win_rate = self._get_win_rate(fighter_id, opponent_id)
         if win_rate is None:
+            # Unknown matchup data gets a neutral fairness prior.
             return 0.5
         dist_from_50 = abs(win_rate - 50.0)
         return 1.0 - (dist_from_50 / 50.0)
