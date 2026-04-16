@@ -59,7 +59,7 @@ def test_get_win_rate_handles_reverse_lookup(engine):
     assert engine._get_win_rate("bravo", "alpha") == 40.0
 
 
-def test_get_win_rate_treats_invalid_matrix_values_as_unknown(sample_fighters):
+def test_get_win_rate_handles_invalid_values(sample_fighters):
     sentinel_matrix = {"alpha": {"bravo": -2}}
     local_engine = MatchupEngine(sample_fighters, sentinel_matrix)
     assert local_engine._get_win_rate("alpha", "bravo") == 50.0
