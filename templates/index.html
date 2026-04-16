@@ -234,7 +234,7 @@
                     <select id="p1_chosen_fighter" name="p1_chosen_fighter">
                         <option value="">— Select a Fighter —</option>
                         {% for fighter in all_fighters_for_select %}
-                        <option value="{{ fighter.id }}" data-set="{{ fighter.set if fighter.set is string else fighter.set | join(', ') }}" {% if fighter.id|string == selected_data.p1_chosen_fighter_id %}selected{% endif %}>
+                        <option value="{{ fighter.id }}" data-set="{{ fighter.set if fighter.set is string else fighter.set | join(", ") }}" {% if fighter.id|string == selected_data.p1_chosen_fighter_id %}selected{% endif %}>
                             {{ fighter.name }} ({{ fighter.set if fighter.set is string else fighter.set | join(", ") }})
                         </option>
                         {% endfor %}
