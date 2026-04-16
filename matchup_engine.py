@@ -122,9 +122,15 @@ class MatchupEngine:
         This treats unknown matchups as 'Fair' (Benefit of the doubt).
         """
         if id_a in self.win_rate_matrix and id_b in self.win_rate_matrix[id_a]:
-            return self.win_rate_matrix[id_a][id_b]
+            wr = self.win_rate_matrix[id_a][id_b]
+            if isinstance(wr, (int, float)) and 0.0 <= wr <= 100.0:
+                return float(wr)
+            return 50.0
         if id_b in self.win_rate_matrix and id_a in self.win_rate_matrix[id_b]:
-            return 100.0 - self.win_rate_matrix[id_b][id_a]
+            wr = self.win_rate_matrix[id_b][id_a]
+            if isinstance(wr, (int, float)) and 0.0 <= wr <= 100.0:
+                return 100.0 - float(wr)
+            return 50.0
         return 50.0 # Default to fair if unknown
 
     def _build_fairness_map(self):

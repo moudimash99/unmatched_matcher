@@ -59,6 +59,13 @@ def test_get_win_rate_handles_reverse_lookup(engine):
     assert engine._get_win_rate("bravo", "alpha") == 40.0
 
 
+def test_get_win_rate_treats_invalid_matrix_values_as_unknown(sample_fighters):
+    sentinel_matrix = {"alpha": {"bravo": -2}}
+    local_engine = MatchupEngine(sample_fighters, sentinel_matrix)
+    assert local_engine._get_win_rate("alpha", "bravo") == 50.0
+    assert local_engine._get_win_rate("bravo", "alpha") == 50.0
+
+
 def test_individual_fit_accounts_for_range_and_tags(engine, sample_fighters):
     alpha = sample_fighters[0]
     score_with_range = engine._calculate_individual_fit(alpha, {"aggressive"}, "Melee")
@@ -122,6 +129,24 @@ def test_generate_batch_respects_repeat_limits(expanded_engine, expanded_fighter
 
     assert all(count <= 3 for count in p1_counts.values())
     assert all(count <= 3 for count in opp_counts.values())
+
+
+def test_generate_fair_pools_with_two_fighters_and_invalid_rate():
+    fighters = [
+        {"id": "a", "range": "Melee", "major": [], "minor": []},
+        {"id": "b", "range": "Melee", "major": [], "minor": []},
+    ]
+    engine = MatchupEngine(fighters, {"a": {"b": -2}})
+
+    result = engine.generate_fair_pools(fighters, p1_tags=set(), opp_tags=set())
+
+    assert result is not None
+    p1_ids = {f["id"] for f in result["p1_pool"]}
+    opp_ids = {f["id"] for f in result["opp_pool"]}
+    assert len(p1_ids) == 1
+    assert len(opp_ids) == 1
+    assert p1_ids != opp_ids
+    assert p1_ids.union(opp_ids) == {"a", "b"}
 
 
 def test_generate_fair_pools_returns_highest_fit(expanded_engine, expanded_fighters):
