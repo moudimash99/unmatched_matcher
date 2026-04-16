@@ -6,7 +6,7 @@
     {"id": "sinbad", "name": "Sinbad", "set": "Battle of Legends Vol. 1", "playstyles": ["scaling", "late_game", "card_advantage", "midrange"], "range": 1, "image_url": "/static/pics/sinbad.webp"},
     {"id": "robin_hood", "name": "Robin Hood", "set": "Robin Hood vs. Bigfoot", "playstyles": ["harass", "control", "card_advantage"], "range": 4, "image_url": "/static/pics/robin_hood.webp"},
     {"id": "bigfoot", "name": "Bigfoot", "set": "Robin Hood vs. Bigfoot", "playstyles": ["high_damage", "positional", "control", "straightforward"], "range": 1, "image_url": "/static/pics/bigfoot.webp"},
-    {"id": "bruce_lee", "name": "Bruce Lee", "set": "Bruce Lee", "playstyles": ["combo", "burst", "high_damage", "tricky"], "range": 1, "image_url": "/static/pics/bruce_lee.webp"},
+    {"id": "bruce_lee", "name": "Bruce Lee", "set": ["Bruce Lee", "Muhammad Ali vs. Bruce Lee"], "playstyles": ["combo", "burst", "high_damage", "tricky"], "range": 1, "image_url": "/static/pics/bruce_lee.webp"},
     {"id": "robert_muldoon", "name": "Robert Muldoon", "set": "InGen vs. Raptors", "playstyles": ["control", "setup", "tricky"], "range": 5, "image_url": "/static/pics/robert_muldoon.webp"},
     {"id": "raptors", "name": "Raptors", "set": "InGen vs. Raptors", "playstyles": ["swarm", "aggressive", "positional", "glass_cannon"], "range": 1, "image_url": "/static/pics/raptors.webp"},
     {"id": "dracula", "name": "Dracula", "set": "Cobble & Fog", "playstyles": ["attrition", "harass", "recursion", "control"], "range": 1, "image_url": "/static/pics/dracula.webp"},

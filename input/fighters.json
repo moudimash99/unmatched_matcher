@@ -115,7 +115,10 @@
     {
       "id": "bruce_lee",
       "name": "Bruce Lee",
-      "set": "Bruce Lee",
+      "set": [
+        "Bruce Lee",
+        "Muhammad Ali vs. Bruce Lee"
+      ],
       "foundational_mechanism": "Sequential extra actions",
       "range": "Melee",
       "image_url": "/static/pics/bruce_lee.webp",
