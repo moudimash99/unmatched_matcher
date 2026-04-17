@@ -72,8 +72,8 @@ def test_get_games_played_handles_direct_and_reverse_lookup(sample_fighters):
         {"alpha": {"bravo": 60.0}},
         {"alpha": {"bravo": 12}},
     )
-    assert local_engine._get_games_played("alpha", "bravo") == pytest.approx(12.0)
-    assert local_engine._get_games_played("bravo", "alpha") == pytest.approx(12.0)
+    assert local_engine._get_games_played("alpha", "bravo") == 12
+    assert local_engine._get_games_played("bravo", "alpha") == 12
 
 
 def test_get_games_played_returns_none_when_missing_or_invalid(sample_fighters):
