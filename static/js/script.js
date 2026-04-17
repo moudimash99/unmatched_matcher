@@ -748,12 +748,12 @@ function getGamesPlayed(fighterId, opponentId) {
 
     if (GAMES_MATRIX[fighterId] && GAMES_MATRIX[fighterId][opponentId] !== undefined) {
         const g = GAMES_MATRIX[fighterId][opponentId];
-        if (typeof g === 'number' && g >= 0) return Math.round(g);
+        if (typeof g === 'number' && g >= 0) return g;
     }
 
     if (GAMES_MATRIX[opponentId] && GAMES_MATRIX[opponentId][fighterId] !== undefined) {
         const g2 = GAMES_MATRIX[opponentId][fighterId];
-        if (typeof g2 === 'number' && g2 >= 0) return Math.round(g2);
+        if (typeof g2 === 'number' && g2 >= 0) return g2;
     }
 
     return null;
