@@ -40,9 +40,10 @@ class MatchupEngine:
 
 
 
-    def __init__(self, fighters_db, win_rate_matrix):
+    def __init__(self, fighters_db, win_rate_matrix, games_played_matrix=None):
         self.fighters_db = fighters_db
         self.win_rate_matrix = win_rate_matrix
+        self.games_played_matrix = games_played_matrix or {}
         self.WEIGHT_FIT = 0.6
         self.WEIGHT_FAIRNESS = 0.4
 
@@ -129,6 +130,20 @@ class MatchupEngine:
             wr = self.win_rate_matrix[id_b][id_a]
             if isinstance(wr, (int, float)) and 0.0 <= wr <= 100.0:
                 return 100.0 - float(wr)
+            return None
+        return None
+
+    def _get_games_played(self, id_a, id_b):
+        """Safely gets games-played count from matrix (A vs B or B vs A)."""
+        if id_a in self.games_played_matrix and id_b in self.games_played_matrix[id_a]:
+            games = self.games_played_matrix[id_a][id_b]
+            if isinstance(games, (int, float)) and games >= 0:
+                return int(games)
+            return None
+        if id_b in self.games_played_matrix and id_a in self.games_played_matrix[id_b]:
+            games = self.games_played_matrix[id_b][id_a]
+            if isinstance(games, (int, float)) and games >= 0:
+                return int(games)
             return None
         return None
 
@@ -336,10 +351,17 @@ class MatchupEngine:
         """
         win_rate = self._get_win_rate(fighter_id, opponent_id)
         if win_rate is None:
-            # Unknown matchup data gets a neutral fairness prior.
-            return 0.5
+            # Unknown matchup data should rank at minimum fairness.
+            return 0.0
         dist_from_50 = abs(win_rate - 50.0)
-        return 1.0 - (dist_from_50 / 50.0)
+        fairness = 1.0 - (dist_from_50 / 50.0)
+
+        # Reduce confidence when sample size is very small (< 5 games).
+        games_played = self._get_games_played(fighter_id, opponent_id)
+        if games_played is not None and games_played < 5:
+            fairness *= (games_played / 5.0)
+
+        return fairness
     
     def _calculate_pool_fitness(self, pool_a_ids, pool_b_ids, p1_score_map, opp_score_map, pool_a_size, pool_b_size):
         """

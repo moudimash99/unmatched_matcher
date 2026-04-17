@@ -66,8 +66,29 @@ def test_get_win_rate_handles_invalid_values(sample_fighters):
     assert local_engine._get_win_rate("bravo", "alpha") is None
 
 
-def test_calculate_matchup_fairness_is_neutral_when_missing(engine):
-    assert engine._calculate_matchup_fairness("alpha", "unknown") == pytest.approx(0.5)
+def test_calculate_matchup_fairness_is_minimum_when_missing(engine):
+    assert engine._calculate_matchup_fairness("alpha", "unknown") == pytest.approx(0.0)
+
+
+def test_calculate_matchup_fairness_penalizes_low_sample_size(sample_fighters):
+    local_engine = MatchupEngine(
+        sample_fighters,
+        {"alpha": {"bravo": 60.0}},
+        {"alpha": {"bravo": 2}},
+    )
+
+    # Base fairness for 60% is 0.8, then reduced by 2/5 due to low sample size.
+    assert local_engine._calculate_matchup_fairness("alpha", "bravo") == pytest.approx(0.32)
+
+
+def test_calculate_matchup_fairness_no_penalty_at_five_games(sample_fighters):
+    local_engine = MatchupEngine(
+        sample_fighters,
+        {"alpha": {"bravo": 60.0}},
+        {"alpha": {"bravo": 5}},
+    )
+
+    assert local_engine._calculate_matchup_fairness("alpha", "bravo") == pytest.approx(0.8)
 
 
 def test_individual_fit_accounts_for_range_and_tags(engine, sample_fighters):
