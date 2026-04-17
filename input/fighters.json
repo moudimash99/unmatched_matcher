@@ -3,7 +3,9 @@
     {
       "id": "king_arthur",
       "name": "King Arthur",
-      "set": "Battle of Legends Vol. 1",
+      "set": [
+        "Battle of Legends Vol. 1"
+      ],
       "foundational_mechanism": "Excalibur Boost valuation",
       "range": "Hybrid",
       "image_url": "/static/pics/king_arthur.webp",
@@ -22,7 +24,9 @@
     {
       "id": "alice",
       "name": "Alice",
-      "set": "Battle of Legends Vol. 1",
+      "set": [
+        "Battle of Legends Vol. 1"
+      ],
       "foundational_mechanism": "Size alteration buffs",
       "range": "Melee",
       "image_url": "/static/pics/alice.webp",
@@ -39,7 +43,9 @@
     {
       "id": "medusa",
       "name": "Medusa",
-      "set": "Battle of Legends Vol. 1",
+      "set": [
+        "Battle of Legends Vol. 1"
+      ],
       "foundational_mechanism": "Passive zone damage",
       "range": "Ranged Assist",
       "image_url": "/static/pics/medusa.webp",
@@ -58,7 +64,9 @@
     {
       "id": "sinbad",
       "name": "Sinbad",
-      "set": "Battle of Legends Vol. 1",
+      "set": [
+        "Battle of Legends Vol. 1"
+      ],
       "foundational_mechanism": "Voyage card accumulation",
       "range": "Melee",
       "image_url": "/static/pics/sinbad.webp",
@@ -77,7 +85,9 @@
     {
       "id": "robin_hood",
       "name": "Robin Hood",
-      "set": "Robin Hood vs. Bigfoot",
+      "set": [
+        "Robin Hood vs. Bigfoot"
+      ],
       "foundational_mechanism": "Post-attack forced movement",
       "range": "Ranged Assist",
       "image_url": "/static/pics/robin_hood.webp",
@@ -96,7 +106,9 @@
     {
       "id": "bigfoot",
       "name": "Bigfoot",
-      "set": "Robin Hood vs. Bigfoot",
+      "set": [
+        "Robin Hood vs. Bigfoot"
+      ],
       "foundational_mechanism": "High mobility aggression",
       "range": "Melee",
       "image_url": "/static/pics/bigfoot.webp",
@@ -115,7 +127,10 @@
     {
       "id": "bruce_lee",
       "name": "Bruce Lee",
-      "set": "Bruce Lee",
+      "set": [
+        "Bruce Lee",
+        "Muhammad Ali vs. Bruce Lee"
+      ],
       "foundational_mechanism": "Sequential extra actions",
       "range": "Melee",
       "image_url": "/static/pics/bruce_lee.webp",
@@ -134,7 +149,9 @@
     {
       "id": "robert_muldoon",
       "name": "Robert Muldoon",
-      "set": "InGen vs. Raptors",
+      "set": [
+        "InGen vs. Raptors"
+      ],
       "foundational_mechanism": "Trap placement zoning",
       "range": "Ranged",
       "image_url": "/static/pics/robert_muldoon.webp",
@@ -153,7 +170,9 @@
     {
       "id": "raptors",
       "name": "Raptors",
-      "set": "InGen vs. Raptors",
+      "set": [
+        "InGen vs. Raptors"
+      ],
       "foundational_mechanism": "Adjacency attack buffs",
       "range": "Melee",
       "image_url": "/static/pics/raptors.webp",
@@ -171,7 +190,9 @@
     {
       "id": "dracula",
       "name": "Dracula",
-      "set": "Cobble & Fog",
+      "set": [
+        "Cobble & Fog"
+      ],
       "foundational_mechanism": "Beastform timing execution",
       "range": "Melee",
       "image_url": "/static/pics/dracula.webp",
@@ -191,7 +212,9 @@
     {
       "id": "invisible_man",
       "name": "The Invisible Man",
-      "set": "Cobble & Fog",
+      "set": [
+        "Cobble & Fog"
+      ],
       "foundational_mechanism": "Fog token teleportation",
       "range": "Melee",
       "image_url": "/static/pics/invisible_man.webp",
@@ -211,7 +234,9 @@
     {
       "id": "jekyll_hyde",
       "name": "Jekyll & Hyde",
-      "set": "Cobble & Fog",
+      "set": [
+        "Cobble & Fog"
+      ],
       "foundational_mechanism": "Drastic mode switching",
       "range": "Melee",
       "image_url": "/static/pics/jekyll_hyde.webp",
@@ -230,7 +255,9 @@
     {
       "id": "sherlock_holmes",
       "name": "Sherlock Holmes",
-      "set": "Cobble & Fog",
+      "set": [
+        "Cobble & Fog"
+      ],
       "foundational_mechanism": "Psychological hand knowledge",
       "range": "Hybrid",
       "image_url": "/static/pics/sherlock_holmes.webp",
@@ -249,7 +276,9 @@
     {
       "id": "buffy",
       "name": "Buffy",
-      "set": "Buffy the Vampire Slayer",
+      "set": [
+        "Buffy the Vampire Slayer"
+      ],
       "foundational_mechanism": "Phasing through opponents",
       "range": "Reach",
       "image_url": "/static/pics/buffy.webp",
@@ -268,7 +297,9 @@
     {
       "id": "spike",
       "name": "Spike",
-      "set": "Buffy the Vampire Slayer",
+      "set": [
+        "Buffy the Vampire Slayer"
+      ],
       "foundational_mechanism": "Shadow token manipulation",
       "range": "Melee",
       "image_url": "/static/pics/spike.webp",
@@ -286,7 +317,9 @@
     {
       "id": "willow",
       "name": "Willow",
-      "set": "Buffy the Vampire Slayer",
+      "set": [
+        "Buffy the Vampire Slayer"
+      ],
       "foundational_mechanism": "Dark Willow threshold trigger",
       "range": "Ranged",
       "image_url": "/static/pics/willow.webp",
@@ -305,7 +338,9 @@
     {
       "id": "angel",
       "name": "Angel",
-      "set": "Buffy the Vampire Slayer",
+      "set": [
+        "Buffy the Vampire Slayer"
+      ],
       "foundational_mechanism": "Health recovery and stalling",
       "range": "Melee",
       "image_url": "/static/pics/angel.webp",
@@ -323,7 +358,9 @@
     {
       "id": "little_red",
       "name": "Little Red Riding Hood",
-      "set": "Beowulf vs. Little Red Riding Hood",
+      "set": [
+        "Beowulf vs. Little Red Riding Hood"
+      ],
       "foundational_mechanism": "Basket symbol matching",
       "range": "Hybrid",
       "image_url": "/static/pics/little_red.webp",
@@ -342,7 +379,9 @@
     {
       "id": "beowulf",
       "name": "Beowulf",
-      "set": "Beowulf vs. Little Red Riding Hood",
+      "set": [
+        "Beowulf vs. Little Red Riding Hood"
+      ],
       "foundational_mechanism": "Rage token expenditure",
       "range": "Melee",
       "image_url": "/static/pics/beowulf.webp",
@@ -360,7 +399,9 @@
     {
       "id": "deadpool",
       "name": "Deadpool",
-      "set": "Deadpool",
+      "set": [
+        "Deadpool"
+      ],
       "foundational_mechanism": "Passive restorative healing",
       "range": "Melee",
       "image_url": "/static/pics/deadpool.webp",
@@ -378,7 +419,9 @@
     {
       "id": "achilles",
       "name": "Achilles",
-      "set": "Battle of Legends Vol. 2",
+      "set": [
+        "Battle of Legends Vol. 2"
+      ],
       "foundational_mechanism": "Post-Patroclus berserker buffs",
       "range": "Melee",
       "image_url": "/static/pics/achilles.webp",
@@ -396,7 +439,9 @@
     {
       "id": "bloody_mary",
       "name": "Bloody Mary",
-      "set": "Battle of Legends Vol. 2",
+      "set": [
+        "Battle of Legends Vol. 2"
+      ],
       "foundational_mechanism": "Hand size strictures",
       "range": "Melee",
       "image_url": "/static/pics/bloody_mary.webp",
@@ -416,7 +461,9 @@
     {
       "id": "sun_wukong",
       "name": "Sun Wukong",
-      "set": "Battle of Legends Vol. 2",
+      "set": [
+        "Battle of Legends Vol. 2"
+      ],
       "foundational_mechanism": "Clone summoning via damage",
       "range": "Melee",
       "image_url": "/static/pics/sun_wukong.webp",
@@ -434,7 +481,9 @@
     {
       "id": "yennenga",
       "name": "Yennenga",
-      "set": "Battle of Legends Vol. 2",
+      "set": [
+        "Battle of Legends Vol. 2"
+      ],
       "foundational_mechanism": "Damage redirection capabilities",
       "range": "Ranged",
       "image_url": "/static/pics/yennenga.webp",
@@ -452,7 +501,9 @@
     {
       "id": "luke_cage",
       "name": "Luke Cage",
-      "set": "Redemption Row",
+      "set": [
+        "Redemption Row"
+      ],
       "foundational_mechanism": "Passive damage reduction",
       "range": "Hybrid",
       "image_url": "/static/pics/luke_cage.webp",
@@ -470,7 +521,9 @@
     {
       "id": "ghost_rider",
       "name": "Ghost Rider",
-      "set": "Redemption Row",
+      "set": [
+        "Redemption Row"
+      ],
       "foundational_mechanism": "Hellfire token expenditure",
       "range": "Melee",
       "image_url": "/static/pics/ghost_rider.webp",
@@ -490,7 +543,9 @@
     {
       "id": "moon_knight",
       "name": "Moon Knight",
-      "set": "Redemption Row",
+      "set": [
+        "Redemption Row"
+      ],
       "foundational_mechanism": "Forced identity rotation",
       "range": "Melee",
       "image_url": "/static/pics/moon_knight.webp",
@@ -509,7 +564,9 @@
     {
       "id": "daredevil",
       "name": "Daredevil",
-      "set": "Hell's Kitchen",
+      "set": [
+        "Hell's Kitchen"
+      ],
       "foundational_mechanism": "Blind deck boosting gambits",
       "range": "Melee",
       "image_url": "/static/pics/daredevil.webp",
@@ -528,7 +585,9 @@
     {
       "id": "elektra",
       "name": "Elektra",
-      "set": "Hell's Kitchen",
+      "set": [
+        "Hell's Kitchen"
+      ],
       "foundational_mechanism": "Resurrection phase shift",
       "range": "Melee",
       "image_url": "/static/pics/elektra.webp",
@@ -547,7 +606,9 @@
     {
       "id": "bullseye",
       "name": "Bullseye",
-      "set": "Hell's Kitchen",
+      "set": [
+        "Hell's Kitchen"
+      ],
       "foundational_mechanism": "Unlimited range targeting",
       "range": "Ranged",
       "image_url": "/static/pics/bullseye.webp",
@@ -566,7 +627,9 @@
     {
       "id": "dr_sattler",
       "name": "Dr. Sattler",
-      "set": "Dr. Sattler vs. T-Rex",
+      "set": [
+        "Dr. Sattler vs. T-Rex"
+      ],
       "foundational_mechanism": "Distraction and setup",
       "range": "Reach",
       "image_url": "/static/pics/dr_sattler.webp",
@@ -585,7 +648,9 @@
     {
       "id": "t_rex",
       "name": "T. Rex",
-      "set": "Dr. Sattler vs. T-Rex",
+      "set": [
+        "Dr. Sattler vs. T-Rex"
+      ],
       "foundational_mechanism": "Area damage and survivability",
       "range": "Melee",
       "image_url": "/static/pics/T_rex.webp",
@@ -604,7 +669,9 @@
     {
       "id": "houdini",
       "name": "Houdini",
-      "set": "Houdini vs. The Genie",
+      "set": [
+        "Houdini vs. The Genie"
+      ],
       "foundational_mechanism": "Escape and repositioning tricks",
       "range": "Melee",
       "image_url": "/static/pics/houdini.webp",
@@ -623,7 +690,9 @@
     {
       "id": "the_genie",
       "name": "The Genie",
-      "set": "Houdini vs. The Genie",
+      "set": [
+        "Houdini vs. The Genie"
+      ],
       "foundational_mechanism": "Wish granting versatility",
       "range": "Ranged",
       "image_url": "/static/pics/the_genie.webp",
@@ -642,7 +711,9 @@
     {
       "id": "ms_marvel",
       "name": "Ms. Marvel",
-      "set": "Teen Spirit",
+      "set": [
+        "Teen Spirit"
+      ],
       "foundational_mechanism": "Melee extension distance",
       "range": "Reach",
       "image_url": "/static/pics/ms_marvel.webp",
@@ -660,7 +731,9 @@
     {
       "id": "squirrel_girl",
       "name": "Squirrel Girl",
-      "set": "Teen Spirit",
+      "set": [
+        "Teen Spirit"
+      ],
       "foundational_mechanism": "Micro-sidekick swarming",
       "range": "Melee",
       "image_url": "/static/pics/squirrel_girl.webp",
@@ -678,7 +751,9 @@
     {
       "id": "cloak_and_dagger",
       "name": "Cloak and Dagger",
-      "set": "Teen Spirit",
+      "set": [
+        "Teen Spirit"
+      ],
       "foundational_mechanism": "Dual-hero positional reliance",
       "range": "Melee",
       "image_url": "/static/pics/cloak_and_dagger.webp",
@@ -696,7 +771,9 @@
     {
       "id": "black_panther",
       "name": "Black Panther",
-      "set": "For King and Country",
+      "set": [
+        "For King and Country"
+      ],
       "foundational_mechanism": "Storing and returning attacks",
       "range": "Melee",
       "image_url": "/static/pics/black_panther.webp",
@@ -714,7 +791,9 @@
     {
       "id": "black_widow",
       "name": "Black Widow",
-      "set": "For King and Country",
+      "set": [
+        "For King and Country"
+      ],
       "foundational_mechanism": "Completing discrete missions",
       "range": "Ranged",
       "image_url": "/static/pics/black_widow.webp",
@@ -733,7 +812,9 @@
     {
       "id": "winter_soldier",
       "name": "Winter Soldier",
-      "set": "For King and Country",
+      "set": [
+        "For King and Country"
+      ],
       "foundational_mechanism": "Highly efficient base combat",
       "range": "Ranged",
       "image_url": "/static/pics/winter_soldier.webp",
@@ -751,7 +832,9 @@
     {
       "id": "she_hulk",
       "name": "She-Hulk",
-      "set": "Brains and Brawn",
+      "set": [
+        "Brains and Brawn"
+      ],
       "foundational_mechanism": "Unblockable discard damage",
       "range": "Melee",
       "image_url": "/static/pics/she_hulk.webp",
@@ -769,7 +852,9 @@
     {
       "id": "spider_man",
       "name": "Spider-Man",
-      "set": "Brains and Brawn",
+      "set": [
+        "Brains and Brawn"
+      ],
       "foundational_mechanism": "Spider-Sense card revelation",
       "range": "Reach",
       "image_url": "/static/pics/spider_man.webp",
@@ -787,7 +872,9 @@
     {
       "id": "doctor_strange",
       "name": "Doctor Strange",
-      "set": "Brains and Brawn",
+      "set": [
+        "Brains and Brawn"
+      ],
       "foundational_mechanism": "Health sacrifice for recursion",
       "range": "Ranged",
       "image_url": "/static/pics/doctor_strange.webp",
@@ -806,7 +893,9 @@
     {
       "id": "nikola_tesla",
       "name": "Nikola Tesla",
-      "set": "Tales to Amaze",
+      "set": [
+        "Tales to Amaze"
+      ],
       "foundational_mechanism": "Coil charging optimization",
       "range": "Ranged",
       "image_url": "/static/pics/nikola_tesla.webp",
@@ -824,7 +913,9 @@
     {
       "id": "annie_christmas",
       "name": "Annie Christmas",
-      "set": "Tales to Amaze",
+      "set": [
+        "Tales to Amaze"
+      ],
       "foundational_mechanism": "Health deficit attack buffs",
       "range": "Hybrid",
       "image_url": "/static/pics/annie_christmas.webp",
@@ -842,7 +933,9 @@
     {
       "id": "the_golden_bat",
       "name": "The Golden Bat",
-      "set": "Tales to Amaze",
+      "set": [
+        "Tales to Amaze"
+      ],
       "foundational_mechanism": "Foregoing maneuver for power",
       "range": "Melee",
       "image_url": "/static/pics/the_golden_bat.webp",
@@ -861,7 +954,9 @@
     {
       "id": "dr_jill_trent",
       "name": "Dr. Jill Trent",
-      "set": "Tales to Amaze",
+      "set": [
+        "Tales to Amaze"
+      ],
       "foundational_mechanism": "Gadget loadout switching",
       "range": "Melee",
       "image_url": "/static/pics/dr_jill_trent.webp",
@@ -880,7 +975,9 @@
     {
       "id": "oda_nobunaga",
       "name": "Oda Nobunaga",
-      "set": "Sun's Origin",
+      "set": [
+        "Sun's Origin"
+      ],
       "foundational_mechanism": "Flanking honor guard buffs",
       "range": "Melee",
       "image_url": "/static/pics/oda_nobunaga.webp",
@@ -898,7 +995,9 @@
     {
       "id": "tomoe_gozen",
       "name": "Tomoe Gozen",
-      "set": "Sun's Origin",
+      "set": [
+        "Sun's Origin"
+      ],
       "foundational_mechanism": "Attack of Opportunity traps",
       "range": "Ranged",
       "image_url": "/static/pics/tomoe_gozen.webp",
@@ -916,7 +1015,9 @@
     {
       "id": "william_shakespeare",
       "name": "William Shakespeare",
-      "set": "Slings and Arrows",
+      "set": [
+        "Slings and Arrows"
+      ],
       "foundational_mechanism": "Syllable matching mechanics",
       "range": "Melee",
       "image_url": "/static/pics/william_shakespeare.webp",
@@ -934,7 +1035,9 @@
     {
       "id": "hamlet",
       "name": "Hamlet",
-      "set": "Slings and Arrows",
+      "set": [
+        "Slings and Arrows"
+      ],
       "foundational_mechanism": "Self-damage for card draw",
       "range": "Melee",
       "image_url": "/static/pics/hamlet.webp",
@@ -952,7 +1055,9 @@
     {
       "id": "titania",
       "name": "Titania",
-      "set": "Slings and Arrows",
+      "set": [
+        "Slings and Arrows"
+      ],
       "foundational_mechanism": "Hand and movement manipulation",
       "range": "Melee",
       "image_url": "/static/pics/titania.webp",
@@ -970,7 +1075,9 @@
     {
       "id": "the_wayward_sisters",
       "name": "The Wayward Sisters",
-      "set": "Slings and Arrows",
+      "set": [
+        "Slings and Arrows"
+      ],
       "foundational_mechanism": "Cauldron ingredient mixing",
       "range": "Ranged",
       "image_url": "/static/pics/the_wayward_sisters.webp",
@@ -989,7 +1096,9 @@
     {
       "id": "geralt",
       "name": "Geralt of Rivia",
-      "set": "The Witcher: Steel and Silver",
+      "set": [
+        "The Witcher: Steel and Silver"
+      ],
       "foundational_mechanism": "Pre-planning and preparation",
       "range": "Melee",
       "image_url": "/static/pics/geralt.webp",
@@ -1005,7 +1114,9 @@
     {
       "id": "ciri",
       "name": "Ciri",
-      "set": "The Witcher: Steel and Silver",
+      "set": [
+        "The Witcher: Steel and Silver"
+      ],
       "foundational_mechanism": "Source card accumulation",
       "range": "Melee",
       "image_url": "/static/pics/ciri.webp",
@@ -1020,7 +1131,9 @@
     {
       "id": "yennefer_triss",
       "name": "Yennefer & Triss",
-      "set": "The Witcher: Realms Fall",
+      "set": [
+        "The Witcher: Realms Fall"
+      ],
       "foundational_mechanism": "Adaptive magic utility",
       "range": "Ranged",
       "image_url": "/static/pics/yennefer_triss.webp",
@@ -1036,7 +1149,9 @@
     {
       "id": "philippa_eilhart",
       "name": "Philippa Eilhart",
-      "set": "The Witcher: Realms Fall",
+      "set": [
+        "The Witcher: Realms Fall"
+      ],
       "foundational_mechanism": "Blinding and forced discard",
       "range": "Ranged",
       "image_url": "/static/pics/philippa_eilhart.webp",
@@ -1051,7 +1166,9 @@
     {
       "id": "eredin",
       "name": "Eredin Bréacc Glas",
-      "set": "The Witcher: Realms Fall",
+      "set": [
+        "The Witcher: Realms Fall"
+      ],
       "foundational_mechanism": "Persistent board presence",
       "range": "Melee",
       "image_url": "/static/pics/eredin.webp",
@@ -1108,7 +1225,9 @@
     {
       "id": "muhammad_ali",
       "name": "Muhammad Ali",
-      "set": "Muhammad Ali vs. Bruce Lee",
+      "set": [
+        "Muhammad Ali vs. Bruce Lee"
+      ],
       "foundational_mechanism": "Immediate post-attack mobility",
       "range": "Melee",
       "image_url": "/static/pics/muhammad_ali.webp",

@@ -39,7 +39,14 @@ PLAYSTYLE_DEFINITIONS_COMBINED = dict(sorted(_ps_combined.items()))
 WIN_MATRIX = load_json_data("input/merged_win_pct.json", {})
 engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX) 
 
-ALL_SETS_LIST = sorted({f["set"] for f in FIGHTERS_DATA})
+def get_fighter_sets(fighter):
+    """Returns a fighter's set values as a normalized list."""
+    sets = fighter.get("set", [])
+    if isinstance(sets, list):
+        return sets
+    return [sets] if sets else []
+
+ALL_SETS_LIST = sorted({set_name for f in FIGHTERS_DATA for set_name in get_fighter_sets(f)})
 # Extract all unique playstyles from both major and minor
 all_playstyles_set = set()
 for f in FIGHTERS_DATA:
@@ -81,7 +88,11 @@ def get_available_fighters(owned_set_names, theme_filter=None):
     """Returns a list of fighters from the owned sets, optionally filtered by themes."""
     if not owned_set_names:
         return []
-    fighters = [f for f in FIGHTERS_DATA if f["set"] in owned_set_names]
+    owned_set_names_set = set(owned_set_names)
+    fighters = [
+        f for f in FIGHTERS_DATA
+        if any(set_name in owned_set_names_set for set_name in get_fighter_sets(f))
+    ]
     if theme_filter:
         fighters = [f for f in fighters if any(t in theme_filter for t in f.get("themes", []))]
     return fighters

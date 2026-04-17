@@ -61,7 +61,7 @@
                 <img src="{{ url_for('static', filename=fighter.image_url.replace('/static/', '')) }}" alt="{{ fighter.name }}" class="fighter-image" onerror="this.onerror=null;this.src='https://placehold.co/100x150/e9ecef/6c757d?text={{ fighter.name | urlencode }}';">
                 <div class="fighter-details">
                     <h3 class="fighter-name">{{ fighter.name }}</h3>
-                    <p><strong>Set:</strong> {{ fighter.set }}</p>
+                    <p><strong>Set:</strong> {{ fighter.set if fighter.set is string else fighter.set | join(", ") }}</p>
                     <p><strong>Range:</strong> {{ fighter.range | titlecase_custom }}</p>
                     {# Display Major and Minor playstyles #}
                     <p>
@@ -234,8 +234,8 @@
                     <select id="p1_chosen_fighter" name="p1_chosen_fighter">
                         <option value="">— Select a Fighter —</option>
                         {% for fighter in all_fighters_for_select %}
-                        <option value="{{ fighter.id }}" data-set="{{ fighter.set }}" {% if fighter.id|string == selected_data.p1_chosen_fighter_id %}selected{% endif %}>
-                            {{ fighter.name }} ({{ fighter.set }})
+                        <option value="{{ fighter.id }}" data-set="{{ fighter.set if fighter.set is string else fighter.set | join(", ") }}" {% if fighter.id|string == selected_data.p1_chosen_fighter_id %}selected{% endif %}>
+                            {{ fighter.name }} ({{ fighter.set if fighter.set is string else fighter.set | join(", ") }})
                         </option>
                         {% endfor %}
                     </select>
