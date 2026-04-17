@@ -183,12 +183,23 @@ def title_case_filter(s):
 @app.context_processor
 def utility_processor():
     def get_real_win_rate(id_a, id_b):
-        if not id_a or not id_b: return 0
-        # Access the internal method of the engine instance
+        if not id_a or not id_b:
+            return "N/A"
         win_rate = engine._get_win_rate(id_a, id_b)
         return round(win_rate, 1) if win_rate is not None else "N/A"
-    
-    return dict(calculate_win_percentage=get_real_win_rate)
+
+    def get_games_played(id_a, id_b):
+        if not id_a or not id_b:
+            return "N/A"
+        games_played = engine._get_games_played(id_a, id_b)
+        if games_played is None:
+            return "N/A"
+        return int(round(games_played))
+
+    return dict(
+        calculate_win_percentage=get_real_win_rate,
+        calculate_games_played=get_games_played,
+    )
 # ---------------------------------------------------------
 # 4.  MAIN ROUTE  ─────────────────────────────────────────
 # ---------------------------------------------------------
@@ -299,6 +310,7 @@ def index():
         error_message=error_message,
         win_percentage_matrix=win_percentage_matrix,
         win_matrix=WIN_MATRIX,
+        games_matrix=GAMES_MATRIX,
         playstyle_definitions=PLAYSTYLE_DEFINITIONS_COMBINED
     )
 

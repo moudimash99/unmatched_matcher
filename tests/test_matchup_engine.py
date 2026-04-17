@@ -66,6 +66,26 @@ def test_get_win_rate_handles_invalid_values(sample_fighters):
     assert local_engine._get_win_rate("bravo", "alpha") is None
 
 
+def test_get_games_played_handles_direct_and_reverse_lookup(sample_fighters):
+    local_engine = MatchupEngine(
+        sample_fighters,
+        {"alpha": {"bravo": 60.0}},
+        {"alpha": {"bravo": 12}},
+    )
+    assert local_engine._get_games_played("alpha", "bravo") == pytest.approx(12.0)
+    assert local_engine._get_games_played("bravo", "alpha") == pytest.approx(12.0)
+
+
+def test_get_games_played_returns_none_when_missing_or_invalid(sample_fighters):
+    local_engine = MatchupEngine(
+        sample_fighters,
+        {"alpha": {"bravo": 60.0}},
+        {"alpha": {"bravo": -1}},
+    )
+    assert local_engine._get_games_played("alpha", "charlie") is None
+    assert local_engine._get_games_played("alpha", "bravo") is None
+
+
 def test_calculate_matchup_fairness_is_minimum_when_missing(engine):
     assert engine._calculate_matchup_fairness("alpha", "unknown") == pytest.approx(0.0)
 
