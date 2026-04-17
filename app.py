@@ -36,7 +36,7 @@ for _name, _desc in PLAYSTYLE_DEFINITIONS.get("minor", {}).items():
 for _name, _desc in PLAYSTYLE_DEFINITIONS.get("major", {}).items():
     _ps_combined[_name] = {"desc": _desc, "type": "major"}
 PLAYSTYLE_DEFINITIONS_COMBINED = dict(sorted(_ps_combined.items()))
-WIN_MATRIX = load_json_data("input/win_matrix.json", {})
+WIN_MATRIX = load_json_data("input/merged_win_pct.json", {})
 engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX) 
 
 ALL_SETS_LIST = sorted({f["set"] for f in FIGHTERS_DATA})
