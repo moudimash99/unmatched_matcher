@@ -6,9 +6,9 @@ def test_get_available_fighters_supports_multi_set_fighters(monkeypatch):
         app_module,
         "FIGHTERS_DATA",
         [
-            {"id": "single", "set": "Set A", "themes": []},
+            {"id": "single", "set": ["Set A"], "themes": []},
             {"id": "multi", "set": ["Set A", "Set B"], "themes": []},
-            {"id": "other", "set": "Set C", "themes": []},
+            {"id": "other", "set": ["Set C"], "themes": []},
         ],
     )
 
@@ -21,10 +21,15 @@ def test_get_available_fighters_applies_theme_filter_with_multi_set(monkeypatch)
         app_module,
         "FIGHTERS_DATA",
         [
-            {"id": "single", "set": "Set A", "themes": ["legend"]},
+            {"id": "single", "set": ["Set A"], "themes": ["legend"]},
             {"id": "multi", "set": ["Set A", "Set B"], "themes": ["superhero"]},
         ],
     )
 
     result = app_module.get_available_fighters(["Set B"], theme_filter=["legend"])
     assert result == []
+
+
+def test_all_fighters_use_array_set_schema():
+    for fighter in app_module.FIGHTERS_DATA:
+        assert isinstance(fighter.get("set"), list)
