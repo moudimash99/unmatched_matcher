@@ -81,7 +81,10 @@
                     <p class="win-percentage-text">
                     {% if vs_fighter %}
                         {% set win_pct = calculate_win_percentage(fighter.id, vs_fighter.id) %}
-                        <strong>Win vs {{ vs_fighter.name }}:</strong> {{ win_pct }}%
+                        {% set games_played = calculate_games_played(fighter.id, vs_fighter.id) %}
+                        <strong>Win vs {{ vs_fighter.name }}:</strong>
+                        {{ "N/A" if win_pct == "N/A" else (win_pct ~ "%") }}
+                        {% if games_played != "N/A" %} ({{ games_played }} games){% endif %}
                     {% endif %}
                     </p>
                 </div>
@@ -459,6 +462,7 @@
 <script>
     const ALL_FIGHTERS_JS = {{ all_fighters_for_select | tojson }};
     const WIN_MATRIX = {{ win_matrix | tojson }};
+    const GAMES_MATRIX = {{ games_matrix | tojson }};
 </script>
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>

@@ -699,7 +699,11 @@ function updateCardWinPct(card, opponentId) {
     const winPctData = getWinPctFromMatrix(cardFighterId, opponentId);
     const winHtmlElement = card.querySelector('.win-percentage-text');
     if (winHtmlElement) {
-        winHtmlElement.innerHTML = `<strong>Win vs ${winPctData.opponent_name}:</strong> ${winPctData.percentage}%`;
+        const percentageText = winPctData.percentage === 'N/A' ? 'N/A' : `${winPctData.percentage}%`;
+        const gamesText = typeof winPctData.games_played === 'number'
+            ? ` (${winPctData.games_played} games)`
+            : '';
+        winHtmlElement.innerHTML = `<strong>Win vs ${winPctData.opponent_name}:</strong> ${percentageText}${gamesText}`;
     }
 }
 
@@ -712,7 +716,7 @@ function updateCardWinPct(card, opponentId) {
  */
 function getWinRate(fighterId, opponentId) {
     if (!fighterId || !opponentId || typeof WIN_MATRIX !== 'object') {
-        return 50; // Default to fair
+        return null;
     }
     
     // Check A vs B
@@ -732,24 +736,49 @@ function getWinRate(fighterId, opponentId) {
 }
 
 /**
+ * Looks up games played from the global matrix.
+ * @param {string} fighterId - The ID of the first fighter.
+ * @param {string} opponentId - The ID of the second fighter.
+ * @returns {number|null} The game count for fighterId vs opponentId.
+ */
+function getGamesPlayed(fighterId, opponentId) {
+    if (!fighterId || !opponentId || typeof GAMES_MATRIX !== 'object') {
+        return null;
+    }
+
+    if (GAMES_MATRIX[fighterId] && GAMES_MATRIX[fighterId][opponentId] !== undefined) {
+        const g = GAMES_MATRIX[fighterId][opponentId];
+        if (typeof g === 'number' && g >= 0) return g;
+    }
+
+    if (GAMES_MATRIX[opponentId] && GAMES_MATRIX[opponentId][fighterId] !== undefined) {
+        const g2 = GAMES_MATRIX[opponentId][fighterId];
+        if (typeof g2 === 'number' && g2 >= 0) return g2;
+    }
+
+    return null;
+}
+
+/**
  * Looks up a win percentage from the global matrix and returns display info.
  * @param {string} fighterId - The ID of the first fighter.
  * @param {string} opponentId - The ID of the second fighter.
- * @returns {{percentage: number|string, opponent_name: string}}
+ * @returns {{percentage: number|string, opponent_name: string, games_played: number|null}}
  */
 function getWinPctFromMatrix(fighterId, opponentId) {
     if (!fighterId || !opponentId || typeof WIN_MATRIX !== 'object') {
-        return { percentage: 'N/A', opponent_name: 'Opponent' };
+        return { percentage: 'N/A', opponent_name: 'Opponent', games_played: null };
     }
 
     const winRate = getWinRate(fighterId, opponentId);
+    const gamesPlayed = getGamesPlayed(fighterId, opponentId);
     const opponentInfo = ALL_FIGHTERS_JS.find(f => f.id === opponentId);
     const opponentName = opponentInfo ? opponentInfo.name : 'Opponent';
 
     if (winRate === null || isNaN(winRate)) {
-        return { percentage: 'N/A', opponent_name: opponentName };
+        return { percentage: 'N/A', opponent_name: opponentName, games_played: gamesPlayed };
     }
-    return { percentage: Math.round(winRate), opponent_name: opponentName };
+    return { percentage: Math.round(winRate), opponent_name: opponentName, games_played: gamesPlayed };
 }
 
 /*************************** HTML HELPERS  ***************************/

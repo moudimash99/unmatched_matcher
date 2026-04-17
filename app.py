@@ -37,7 +37,8 @@ for _name, _desc in PLAYSTYLE_DEFINITIONS.get("major", {}).items():
     _ps_combined[_name] = {"desc": _desc, "type": "major"}
 PLAYSTYLE_DEFINITIONS_COMBINED = dict(sorted(_ps_combined.items()))
 WIN_MATRIX = load_json_data("input/merged_win_pct.json", {})
-engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX) 
+GAMES_MATRIX = load_json_data("input/merged_games.json", {})
+engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX, GAMES_MATRIX) 
 
 def get_fighter_sets(fighter):
     """Returns a fighter's set values as a normalized list."""
@@ -193,11 +194,23 @@ def title_case_filter(s):
 @app.context_processor
 def utility_processor():
     def get_real_win_rate(id_a, id_b):
-        if not id_a or not id_b: return 0
-        # Access the internal method of the engine instance
-        return round(engine._get_win_rate(id_a, id_b), 1)
-    
-    return dict(calculate_win_percentage=get_real_win_rate)
+        if not id_a or not id_b:
+            return "N/A"
+        win_rate = engine._get_win_rate(id_a, id_b)
+        return round(win_rate, 1) if win_rate is not None else "N/A"
+
+    def get_games_played(id_a, id_b):
+        if not id_a or not id_b:
+            return "N/A"
+        games_played = engine._get_games_played(id_a, id_b)
+        if games_played is None:
+            return "N/A"
+        return int(round(games_played))
+
+    return dict(
+        calculate_win_percentage=get_real_win_rate,
+        calculate_games_played=get_games_played,
+    )
 # ---------------------------------------------------------
 # 4.  MAIN ROUTE  ─────────────────────────────────────────
 # ---------------------------------------------------------
@@ -308,6 +321,7 @@ def index():
         error_message=error_message,
         win_percentage_matrix=win_percentage_matrix,
         win_matrix=WIN_MATRIX,
+        games_matrix=GAMES_MATRIX,
         playstyle_definitions=PLAYSTYLE_DEFINITIONS_COMBINED
     )
 

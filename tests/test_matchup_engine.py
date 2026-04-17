@@ -51,12 +51,64 @@ def test_set_mode_adjusts_weights_and_clamps(engine):
     assert engine.WEIGHT_FIT == pytest.approx(0.6)
 
 
-def test_get_win_rate_defaults_to_even_when_missing(engine):
-    assert engine._get_win_rate("alpha", "unknown") == 50.0
+def test_get_win_rate_returns_none_when_missing(engine):
+    assert engine._get_win_rate("alpha", "unknown") is None
 
 
 def test_get_win_rate_handles_reverse_lookup(engine):
     assert engine._get_win_rate("bravo", "alpha") == 40.0
+
+
+def test_get_win_rate_handles_invalid_values(sample_fighters):
+    sentinel_matrix = {"alpha": {"bravo": -2}}
+    local_engine = MatchupEngine(sample_fighters, sentinel_matrix)
+    assert local_engine._get_win_rate("alpha", "bravo") is None
+    assert local_engine._get_win_rate("bravo", "alpha") is None
+
+
+def test_get_games_played_handles_direct_and_reverse_lookup(sample_fighters):
+    local_engine = MatchupEngine(
+        sample_fighters,
+        {"alpha": {"bravo": 60.0}},
+        {"alpha": {"bravo": 12}},
+    )
+    assert local_engine._get_games_played("alpha", "bravo") == 12
+    assert local_engine._get_games_played("bravo", "alpha") == 12
+
+
+def test_get_games_played_returns_none_when_missing_or_invalid(sample_fighters):
+    local_engine = MatchupEngine(
+        sample_fighters,
+        {"alpha": {"bravo": 60.0}},
+        {"alpha": {"bravo": -1}},
+    )
+    assert local_engine._get_games_played("alpha", "charlie") is None
+    assert local_engine._get_games_played("alpha", "bravo") is None
+
+
+def test_calculate_matchup_fairness_is_minimum_when_missing(engine):
+    assert engine._calculate_matchup_fairness("alpha", "unknown") == pytest.approx(0.0)
+
+
+def test_calculate_matchup_fairness_penalizes_low_sample_size(sample_fighters):
+    local_engine = MatchupEngine(
+        sample_fighters,
+        {"alpha": {"bravo": 60.0}},
+        {"alpha": {"bravo": 2}},
+    )
+
+    # Base fairness for 60% is 0.8, then multiplied by 2/5 (games_played/5) due to low sample size.
+    assert local_engine._calculate_matchup_fairness("alpha", "bravo") == pytest.approx(0.32)
+
+
+def test_calculate_matchup_fairness_no_penalty_at_five_games(sample_fighters):
+    local_engine = MatchupEngine(
+        sample_fighters,
+        {"alpha": {"bravo": 60.0}},
+        {"alpha": {"bravo": 5}},
+    )
+
+    assert local_engine._calculate_matchup_fairness("alpha", "bravo") == pytest.approx(0.8)
 
 
 def test_individual_fit_accounts_for_range_and_tags(engine, sample_fighters):
@@ -98,7 +150,7 @@ def expanded_win_matrix(expanded_fighters):
         "alpha": {"bravo": 65.0, "delta": 60.0},
         "bravo": {"alpha": 35.0, "charlie": 55.0},
         "charlie": {"delta": 52.0},
-        # missing entries default to 50 via _get_win_rate
+        # missing entries are treated as unknown by _get_win_rate
     }
 
 
@@ -122,6 +174,24 @@ def test_generate_batch_respects_repeat_limits(expanded_engine, expanded_fighter
 
     assert all(count <= 3 for count in p1_counts.values())
     assert all(count <= 3 for count in opp_counts.values())
+
+
+def test_generate_fair_pools_with_two_fighters_and_invalid_rate():
+    fighters = [
+        {"id": "a", "range": "Melee", "major": [], "minor": []},
+        {"id": "b", "range": "Melee", "major": [], "minor": []},
+    ]
+    engine = MatchupEngine(fighters, {"a": {"b": -2}})
+
+    result = engine.generate_fair_pools(fighters, p1_tags=set(), opp_tags=set())
+
+    assert result is not None
+    p1_ids = {f["id"] for f in result["p1_pool"]}
+    opp_ids = {f["id"] for f in result["opp_pool"]}
+    assert len(p1_ids) == 1
+    assert len(opp_ids) == 1
+    assert p1_ids != opp_ids
+    assert p1_ids.union(opp_ids) == {"a", "b"}
 
 
 def test_generate_fair_pools_returns_highest_fit(expanded_engine, expanded_fighters):
