@@ -1068,6 +1068,44 @@
       ]
     },
     {
+      "id": "ancient_leshen",
+      "name": "Ancient Leshen",
+      "set": "The Witcher: Steel and Silver",
+      "foundational_mechanism": "Minion summoning and multi-attack sequencing",
+      "range": "Melee",
+      "image_url": "/static/pics/ancient_leshen.webp",
+      "major": [
+        "swarm"
+      ],
+      "minor": [
+        "control",
+        "attrition",
+        "rushdown"
+      ],
+      "themes": [
+        "monster"
+      ]
+    },
+    {
+      "id": "bruce_lee",
+      "name": "Bruce Lee",
+      "set": "Muhammad Ali vs. Bruce Lee",
+      "foundational_mechanism": "Sequential extra actions",
+      "range": "Melee",
+      "image_url": "/static/pics/bruce_lee.webp",
+      "major": [
+        "combo"
+      ],
+      "minor": [
+        "burst",
+        "evasion",
+        "technical"
+      ],
+      "themes": [
+        "legend"
+      ]
+    },
+    {
       "id": "muhammad_ali",
       "name": "Muhammad Ali",
       "set": "Muhammad Ali vs. Bruce Lee",
