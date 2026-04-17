@@ -138,12 +138,12 @@ class MatchupEngine:
         if id_a in self.games_played_matrix and id_b in self.games_played_matrix[id_a]:
             games = self.games_played_matrix[id_a][id_b]
             if isinstance(games, (int, float)) and games >= 0:
-                return int(games)
+                return float(games)
             return None
         if id_b in self.games_played_matrix and id_a in self.games_played_matrix[id_b]:
             games = self.games_played_matrix[id_b][id_a]
             if isinstance(games, (int, float)) and games >= 0:
-                return int(games)
+                return float(games)
             return None
         return None
 
@@ -356,7 +356,7 @@ class MatchupEngine:
         dist_from_50 = abs(win_rate - 50.0)
         fairness = 1.0 - (dist_from_50 / 50.0)
 
-        # Reduce confidence when sample size is very small (< 5 games).
+        # Reduces confidence when sample size is very small (< 5 games).
         games_played = self._get_games_played(fighter_id, opponent_id)
         if games_played is not None and games_played < 5:
             fairness *= (games_played / 5.0)

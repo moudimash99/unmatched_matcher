@@ -77,7 +77,7 @@ def test_calculate_matchup_fairness_penalizes_low_sample_size(sample_fighters):
         {"alpha": {"bravo": 2}},
     )
 
-    # Base fairness for 60% is 0.8, then reduced by 2/5 due to low sample size.
+    # Base fairness for 60% is 0.8, then multiplied by 2/5 (games_played/5) due to low sample size.
     assert local_engine._calculate_matchup_fairness("alpha", "bravo") == pytest.approx(0.32)
 
 
