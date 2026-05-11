@@ -127,7 +127,11 @@
         <div class="set-selection collapsed">
             <div class="set-selection-header">
                 <h3>Owned Sets</h3>
-                <button id="toggle-set-selection-btn" type="button" class="mode-toggle-heading-btn" aria-expanded="false">⬇ Show</button>
+                <div class="set-selection-controls">
+                    <button id="save-default-sets-btn" type="button" class="set-quick-action-btn">Save Default</button>
+                    <button id="load-default-sets-btn" type="button" class="set-quick-action-btn">Use Default</button>
+                    <button id="toggle-set-selection-btn" type="button" class="mode-toggle-heading-btn" aria-expanded="false">⬇ Show</button>
+                </div>
             </div>
             <div id="set-checkboxes" class="set-checkboxes">
                 {% for set_name_iter in all_sets_list %}

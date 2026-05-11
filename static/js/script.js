@@ -174,9 +174,15 @@ function setupSetSelection() {
     const toggleBtn = qs('#toggle-set-selection-btn');
     const SELECT_COLLAPSE_KEY = 'ufs_sets_collapsed';
     const ALL_SETS_KEY = 'ufs_owned_sets';
+    const DEFAULT_SETS_KEY = 'ufs_default_owned_sets';
     const selectAllBtn = qs('#select-all-sets-btn');
     const deselectAllBtn = qs('#deselect-all-sets-btn');
+    const saveDefaultBtn = qs('#save-default-sets-btn');
+    const loadDefaultBtn = qs('#load-default-sets-btn');
     const checkboxes = qsa('#set-checkboxes input[type="checkbox"]');
+    const getCheckedSetValues = () => checkboxes
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
     const updateToggleButton = (collapsed) => {
         if (!toggleBtn) return;
         toggleBtn.setAttribute('aria-expanded', String(!collapsed));
@@ -210,10 +216,24 @@ function setupSetSelection() {
 
     // Persist checkbox state on change (JSON)
     const persist = () => {
-        const checked = checkboxes
-            .filter(cb => cb.checked)
-            .map(cb => cb.value);
-        setCookie(ALL_SETS_KEY, JSON.stringify(checked));
+        setCookie(ALL_SETS_KEY, JSON.stringify(getCheckedSetValues()));
+    };
+
+    const getSavedDefaultSets = () => {
+        const storedDefault = getCookie(DEFAULT_SETS_KEY);
+        if (!storedDefault) return [];
+        try {
+            const parsed = JSON.parse(storedDefault);
+            return Array.isArray(parsed) ? parsed : [];
+        } catch (e) {
+            console.error("Could not parse default owned sets cookie:", e);
+            return [];
+        }
+    };
+
+    const updateDefaultButtons = () => {
+        if (!loadDefaultBtn) return;
+        loadDefaultBtn.disabled = getSavedDefaultSets().length === 0;
     };
 
     checkboxes.forEach(cb => cb.addEventListener('change', () => {
@@ -230,6 +250,24 @@ function setupSetSelection() {
         persist();
         recordAnalytics('sets_deselect_all', { total: checkboxes.length });
     });
+
+    saveDefaultBtn?.addEventListener('click', () => {
+        setCookie(DEFAULT_SETS_KEY, JSON.stringify(getCheckedSetValues()));
+        updateDefaultButtons();
+        recordAnalytics('sets_default_saved', { total: getCheckedSetValues().length });
+    });
+
+    loadDefaultBtn?.addEventListener('click', () => {
+        const defaultSetValues = new Set(getSavedDefaultSets());
+        if (!defaultSetValues.size) return;
+        checkboxes.forEach(cb => {
+            cb.checked = defaultSetValues.has(cb.value);
+        });
+        persist();
+        recordAnalytics('sets_default_loaded', { total: defaultSetValues.size });
+    });
+
+    updateDefaultButtons();
 }
 
 function setupPlaystyleToggles() {
