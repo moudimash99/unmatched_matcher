@@ -1,3 +1,5 @@
+import math
+
 import pytest
 
 import random
@@ -8,9 +10,9 @@ from matchup_engine import MatchupEngine
 @pytest.fixture
 def sample_fighters():
     return [
-        {"id": "alpha", "playstyles": ["aggressive"], "range": "Melee"},
-        {"id": "bravo", "playstyles": ["defensive"], "range": "Reach"},
-        {"id": "charlie", "playstyles": ["aggressive", "defensive"], "range": "Hybrid"},
+        {"id": "alpha", "major": ["aggressive"], "range": "Melee"},
+        {"id": "bravo", "major": ["defensive"], "range": "Reach"},
+        {"id": "charlie", "major": ["aggressive", "defensive"], "range": "Hybrid"},
     ]
 
 
@@ -83,11 +85,11 @@ def test_recommend_opponents_ranks_by_fairness_and_fit(engine, sample_fighters):
 @pytest.fixture
 def expanded_fighters():
     return [
-        {"id": "alpha", "playstyles": ["aggressive"], "range": "Melee"},
-        {"id": "bravo", "playstyles": ["defensive"], "range": "Reach"},
-        {"id": "charlie", "playstyles": ["aggressive", "defensive"], "range": "Hybrid"},
-        {"id": "delta", "playstyles": ["defensive"], "range": "Melee"},
-        {"id": "echo", "playstyles": ["aggressive"], "range": "Reach"},
+        {"id": "alpha", "major": ["aggressive"], "range": "Melee"},
+        {"id": "bravo", "major": ["defensive"], "range": "Reach"},
+        {"id": "charlie", "major": ["aggressive", "defensive"], "range": "Hybrid"},
+        {"id": "delta", "major": ["defensive"], "range": "Melee"},
+        {"id": "echo", "major": ["aggressive"], "range": "Reach"},
     ]
 
 
@@ -149,3 +151,97 @@ def test_generate_fair_pools_returns_highest_fit(expanded_engine, expanded_fight
     # The pool with bravo+charlie has better overall fairness, outweighing slightly lower fitness
     assert set(opp_ids) == {"bravo", "charlie"}
     assert opp_ids[0] == "bravo"
+
+
+def test_sentinel_win_rate_is_treated_as_unknown(sample_fighters):
+    # -2 is the "no data" sentinel written by win_calc.py
+    engine = MatchupEngine(sample_fighters, {
+        "alpha": {"bravo": -2, "charlie": -2},
+        "charlie": {"alpha": 70.0},
+    })
+
+    assert engine.lookup_win_rate("alpha", "bravo") is None
+    assert engine._get_win_rate("alpha", "bravo") == 50.0
+    # Falls back to the reversed entry instead of returning the sentinel
+    assert engine._get_win_rate("alpha", "charlie") == pytest.approx(30.0)
+    assert "bravo" in engine.fairness_map["alpha"]
+
+
+@pytest.mark.parametrize("count", [2, 3, 4, 5, 6])
+def test_generate_fair_pools_shrinks_for_small_collections(expanded_engine, expanded_fighters, count):
+    available = expanded_fighters[:count]
+    result = expanded_engine.generate_fair_pools(available, set(), set())
+
+    assert result is not None
+    p1_ids = {f["id"] for f in result["p1_pool"]}
+    opp_ids = {f["id"] for f in result["opp_pool"]}
+    assert p1_ids and opp_ids
+    assert not p1_ids & opp_ids
+
+
+def test_generate_fair_pools_falls_back_when_every_matchup_is_a_blowout():
+    fighters = [{"id": f"f{i}", "major": [], "range": "Melee"} for i in range(4)]
+    matrix = {a["id"]: {b["id"]: 100.0 for b in fighters if b is not a} for a in fighters}
+    engine = MatchupEngine(fighters, matrix)
+
+    result = engine.generate_fair_pools(fighters, set(), set())
+
+    assert result is not None
+    assert not {f["id"] for f in result["p1_pool"]} & {f["id"] for f in result["opp_pool"]}
+
+
+# ---- Confidence weighting -------------------------------------------------
+
+@pytest.fixture
+def weighted_engine():
+    fighters = [{"id": i, "major": [], "range": "Melee"} for i in ("strong", "weak", "mid")]
+    win = {
+        "strong": {"weak": 70.0, "mid": 0.0},   # strong vs mid: a 0% from 1 game
+        "weak": {"strong": 30.0, "mid": 45.0},
+        "mid": {"strong": 100.0, "weak": 55.0},
+    }
+    games = {
+        "strong": {"weak": 100, "mid": 1},
+        "weak": {"strong": 100, "mid": 10},
+        "mid": {"strong": 1, "weak": 10},
+    }
+    return MatchupEngine(fighters, win, games)
+
+
+def test_confidence_climbs_logarithmically_to_full_at_ten_games():
+    from matchup_engine import FULL_CONFIDENCE_GAMES
+    c = MatchupEngine.confidence
+    assert c(0) == 0.0
+    assert c(FULL_CONFIDENCE_GAMES) == 1.0
+    assert c(50) == 1.0
+    assert c(1) == pytest.approx(math.log(2) / math.log(11))
+    assert c(1) < c(3) < c(9) < 1.0
+    assert c(None) == 1.0  # no games data -> trust the matrix as-is
+
+
+def test_full_confidence_matchup_uses_its_own_record(weighted_engine):
+    assert weighted_engine.estimate_win_rate("weak", "mid") == pytest.approx(45.0)
+    assert weighted_engine.estimate_win_rate("strong", "weak") == pytest.approx(70.0)
+
+
+def test_low_sample_matchup_is_pulled_toward_expected(weighted_engine):
+    expected = weighted_engine.expected_win_rate("strong", "mid")
+    c = MatchupEngine.confidence(1)
+    est = weighted_engine.estimate_win_rate("strong", "mid")
+    assert est == pytest.approx(c * 0.0 + (1 - c) * expected)
+    assert 0.0 < est < expected
+    # Symmetric from the other side
+    assert weighted_engine.estimate_win_rate("mid", "strong") == pytest.approx(100.0 - est)
+
+
+def test_expected_rate_comes_from_overall_strength(weighted_engine):
+    assert weighted_engine.overall_win_rate("strong") > 50 > weighted_engine.overall_win_rate("weak")
+    assert weighted_engine.expected_win_rate("strong", "weak") > 50.0
+    # A fighter with no data has no overall rate, so the expectation is even
+    assert weighted_engine.expected_win_rate("strong", "nobody") == 50.0
+
+
+def test_with_mode_does_not_touch_the_shared_engine(engine):
+    fair = engine.with_mode("fairness")
+    assert fair.WEIGHT_FAIRNESS == pytest.approx(0.7)
+    assert engine.WEIGHT_FAIRNESS == pytest.approx(0.4)

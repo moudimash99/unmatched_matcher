@@ -1,8 +1,7 @@
-from flask import Flask, render_template, request, jsonify, send_from_directory, send_file
-from matchup_engine import MatchupEngine 
+from flask import Flask, render_template, request, send_from_directory, send_file
+from matchup_engine import MatchupEngine, FULL_CONFIDENCE_GAMES
 import random
 import json
-import hashlib
 import os
 import glob
 from io import BytesIO
@@ -29,9 +28,30 @@ def load_json_data(filename, default):
 FIGHTERS_DATA = load_json_data("input/fighters.json", {}).get("fighters", [])
 PLAYSTYLE_DEFINITIONS = load_json_data("input/fighters.json", {}).get("playstyle_definitions", {})
 WIN_MATRIX = load_json_data("input/win_matrix.json", {})
-engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX) 
+GAMES_MATRIX = load_json_data("input/merged_games.json", {})
+STATS_META = load_json_data("input/stats_meta.json", {})
+engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX, GAMES_MATRIX)
 
-ALL_SETS_LIST = sorted({f["set"] for f in FIGHTERS_DATA})
+CLUB_MATCHUP_URL = "https://www.the-unmatched.club/tools/matchups"
+
+# A fighter can ship in more than one box (e.g. Bruce Lee). Keep a single entry
+# per fighter and list every box it comes in under "sets".
+for f in FIGHTERS_DATA:
+    f["sets"] = [f["set"]] + f.get("other_sets", [])
+    overall, total_games = engine.overall_stats.get(f["id"], (None, 0))
+    f["overall_win_rate"] = None if overall is None else round(overall)
+    f["total_games"] = total_games
+
+# Every pairing's estimate for the page's JS: MATCHUPS[a][b] = [estimated win %, games]
+MATCHUPS = {
+    a["id"]: {
+        b["id"]: [round(engine.estimate_win_rate(a["id"], b["id"])), engine.games_played(a["id"], b["id"])]
+        for b in FIGHTERS_DATA if b["id"] != a["id"]
+    }
+    for a in FIGHTERS_DATA
+}
+
+ALL_SETS_LIST = sorted({s for f in FIGHTERS_DATA for s in f["sets"]})
 # Extract all unique playstyles from both major and minor
 all_playstyles_set = set()
 for f in FIGHTERS_DATA:
@@ -58,21 +78,15 @@ def get_available_fighters(owned_set_names):
     """Returns a list of fighters from the owned sets."""
     if not owned_set_names:
         return []
-    return [f for f in FIGHTERS_DATA if f["set"] in owned_set_names]
+    return [f for f in FIGHTERS_DATA if any(s in owned_set_names for s in f["sets"])]
 
 
-def calculate_win_percentage(id_a, id_b):
-    """Generates a deterministic, pseudo-random win percentage for id_a vs id_b."""
-    if not id_a or not id_b:
-        return None
-    pair = tuple(sorted((id_a, id_b)))
-    seed = int(hashlib.sha256(":".join(pair).encode()).hexdigest(), 16)
-    rnd = random.Random(seed)
-    base = rnd.uniform(0.3, 0.7)
-    pct = base if id_a == pair[0] else 1 - base
-    return round(pct, 1)
+def club_matchup_url(fighter_a, fighter_b):
+    """Link to this matchup on The Unmatched Club's matchup tool."""
+    return f"{CLUB_MATCHUP_URL}?h1={fighter_a['club_key']}&h2={fighter_b['club_key']}"
 
-def generate_suggestions(selected_data):
+
+def generate_suggestions(selected_data, engine=engine):
     results = {"p1_main": None, "p1_alternatives": [], "opp_main": None, "opp_alternatives": []}
     error = None
 
@@ -93,7 +107,7 @@ def generate_suggestions(selected_data):
         if p1_fighter:
             results["p1_main"] = p1_fighter
             # Ask Engine for Opponents tailored to P1
-            opp_recs = engine.recommend_opponents(p1_fighter, available, opp_tags)
+            opp_recs = engine.recommend_opponents(p1_fighter, available, opp_tags, opp_range, quantity=5)
             
             # If Opponent is ALSO locked, just set them
             if selected_data["locked_opp_id"]:
@@ -139,6 +153,8 @@ def generate_suggestions(selected_data):
                 # Extract alternatives (remaining fighters in each pool)
                 results["p1_alternatives"] = p1_pool[1:]
                 results["opp_alternatives"] = opp_pool[1:]
+        else:
+            error = "Your owned sets need at least two fighters to build a matchup."
 
     return results, error
 
@@ -152,36 +168,40 @@ def title_case_filter(s):
 
 @app.context_processor
 def utility_processor():
-    def get_real_win_rate(id_a, id_b):
-        if not id_a or not id_b: return 0
-        # Access the internal method of the engine instance
-        return round(engine._get_win_rate(id_a, id_b), 1)
-    
-    return dict(calculate_win_percentage=get_real_win_rate)
+    def matchup_info(fighter, vs_fighter):
+        """Estimated win % (rounded like the JS side), games played, and a link to the matchup."""
+        games = engine.games_played(fighter["id"], vs_fighter["id"])
+        return {
+            "win_pct": round(engine.estimate_win_rate(fighter["id"], vs_fighter["id"])),
+            "games": games,
+            "low_data": games < FULL_CONFIDENCE_GAMES,
+            "club_url": club_matchup_url(fighter, vs_fighter),
+        }
+
+    return dict(matchup_info=matchup_info)
 # ---------------------------------------------------------
 # 4.  MAIN ROUTE  ─────────────────────────────────────────
 # ---------------------------------------------------------
+_FAVICON_PNG_CACHE = {}
+
 @app.route("/favicon.ico")
 def favicon():
     """Serves a random fighter image as the favicon, converted to PNG for browser compatibility."""
     if _FIGHTER_IMAGES_CACHE:
         random_image_filename = random.choice(_FIGHTER_IMAGES_CACHE)
         image_path = os.path.join(_PICS_DIR, random_image_filename)
-        
+
         try:
-            # Open the WebP image and convert it to PNG
-            img = Image.open(image_path)
-            
-            # Resize to a standard favicon size (32x32) with uniform dimensions
-            img = img.resize((32, 32), Image.Resampling.LANCZOS)
-            
-            # Convert to PNG in memory
-            img_io = BytesIO()
-            img.save(img_io, 'PNG')
-            img_io.seek(0)
-            
-            # Send the PNG image with no-cache headers
-            response = send_file(img_io, mimetype='image/png')
+            # Convert each WebP to a 32x32 PNG once, then serve it from memory
+            png = _FAVICON_PNG_CACHE.get(random_image_filename)
+            if png is None:
+                img = Image.open(image_path).resize((32, 32), Image.Resampling.LANCZOS)
+                img_io = BytesIO()
+                img.save(img_io, 'PNG')
+                png = _FAVICON_PNG_CACHE[random_image_filename] = img_io.getvalue()
+
+            # Send the PNG image with no-cache headers so each page load gets a new one
+            response = send_file(BytesIO(png), mimetype='image/png')
             response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
             response.headers['Pragma'] = 'no-cache'
             response.headers['Expires'] = '0'
@@ -207,9 +227,21 @@ def index():
     }
     results_data = None
     error_message = None
-    win_percentage_matrix = {}
 
     all_fighters_sorted = sorted(FIGHTERS_DATA, key=lambda x: x["name"])
+
+    # Shared matchup link: /?p1=<id>&opp=<id>&sets=<set>&sets=<set>...
+    shared_p1 = find_fighter_by_id(request.args.get("p1"))
+    shared_opp = find_fighter_by_id(request.args.get("opp"))
+    if request.method == "GET" and shared_p1 and shared_opp:
+        owned = [s for s in request.args.getlist("sets") if s in ALL_SETS_LIST]
+        selected_data.update({
+            # Without sets in the link, assume the boxes these two fighters come in
+            "owned_sets": owned or sorted(set(shared_p1["sets"]) | set(shared_opp["sets"])),
+            "locked_p1_id": shared_p1["id"],
+            "locked_opp_id": shared_opp["id"],
+        })
+        results_data, error_message = generate_suggestions(selected_data)
 
     if request.method == "POST":
         action = request.form.get("action", "suggest_general")
@@ -230,6 +262,7 @@ def index():
         # Handle direct choices as implicit locks
         if selected_data["p1_selection_method"] == "direct_choice":
             p1_choice = request.form.get("p1_chosen_fighter")
+            selected_data["p1_chosen_fighter_id"] = p1_choice or None
             if p1_choice:
                 selected_data["locked_p1_id"] = p1_choice
         
@@ -248,10 +281,11 @@ def index():
         mode = selected_data.get("mode", "discovery")
         fw = selected_data.get("fairness_weight")
         effective_mode = "custom" if fw not in (None, "") else mode
-        engine.set_mode(effective_mode, fw)
+        # A per-request copy, so concurrent requests never share mode weights
+        request_engine = engine.with_mode(effective_mode, fw)
         # -----------------------------------------------------------
 
-        results_data, error_message = generate_suggestions(selected_data)
+        results_data, error_message = generate_suggestions(selected_data, request_engine)
 
     return render_template(
         "index.html",
@@ -262,8 +296,10 @@ def index():
         results=results_data,
         selected_data=selected_data,
         error_message=error_message,
-        win_percentage_matrix=win_percentage_matrix,
-        win_matrix=WIN_MATRIX
+        matchups=MATCHUPS,
+        stats_meta=STATS_META,
+        full_confidence_games=FULL_CONFIDENCE_GAMES,
+        club_matchup_url=CLUB_MATCHUP_URL
     )
 
 @app.route("/about")

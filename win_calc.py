@@ -1,3 +1,11 @@
+"""
+LEGACY: builds the win matrix from the 'Unmatched stats.xlsx' export.
+
+Superseded by fetch_stats.py, which pulls current Tabletop League + UnmatchedRu
+data from The Unmatched Club and also writes input/stats_meta.json. Kept only
+as an offline fallback. Known limitation: the main 'Games Played' sheet doesn't
+parse (0 columns), so only the UMLeague sheets are actually used.
+"""
 import pandas as pd
 import json
 import math
@@ -89,6 +97,13 @@ NAME_ALIAS_TO_FIGHTER_NAME = {
     "Yennefer (Triss)": "Yennefer & Triss",
     "Triss": "Yennefer & Triss",
     "Yennefer": "Yennefer & Triss",
+
+    # Short deck names used by the stats sheet
+    "Philippa": "Philippa Eilhart",
+    "Golden Bat": "The Golden Bat",
+    "InGen": "Robert Muldoon",
+    "Eredin": "Eredin Bréacc Glas",
+    "Invisible Man": "The Invisible Man",
 }
 
 
@@ -209,7 +224,10 @@ def merge_sources_to_fighter_ids(gp_main, wp_main, gp_um, wp_um):
                     w = parse_win_cell(wp.at[row_name, col_name])
 
                 if w is not None and g > 0:
-                    win_num[f1][f2] += (w / 100.0) * g
+                    # Sheet cells hold the *column* deck's win % vs the row deck
+                    # (e.g. row Achilles / col Medusa = 84 = Medusa's win %), so flip
+                    # it to get the row deck's win % vs the column.
+                    win_num[f1][f2] += ((100.0 - w) / 100.0) * g
                     win_den[f1][f2] += g
 
     # Accumulate from both sources
@@ -252,7 +270,8 @@ if __name__ == "__main__":
     )
 
     with open("input/merged_games.json", "w", encoding="utf-8") as f:
-        json.dump(merged_games, f, indent=2, ensure_ascii=False)
+        json.dump(merged_games, f, indent=2, ensure_ascii=False, sort_keys=True)
 
-    with open("input/merged_win_pct.json", "w", encoding="utf-8") as f:
-        json.dump(merged_win_pct, f, indent=2, ensure_ascii=False)
+    # The app reads its win-rate matrix from input/win_matrix.json
+    with open("input/win_matrix.json", "w", encoding="utf-8") as f:
+        json.dump(merged_win_pct, f, indent=2, ensure_ascii=False, sort_keys=True)

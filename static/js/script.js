@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupAnalyticsListeners();
     annotateLockButtons();
     setupResultCardActions();
+    setupShareButton();
 });
 
 /*************************** UI SETUP FUNCTIONS  ***************************/
@@ -524,60 +525,67 @@ function updateAllWinPercentages() {
  */
 function updateCardWinPct(card, opponentId) {
     const cardFighterId = extractFighterIdFromCard(card);
-    const winPctData = getWinPctFromMatrix(cardFighterId, opponentId);
     const winHtmlElement = card.querySelector('.win-percentage-text');
     if (winHtmlElement) {
-        winHtmlElement.innerHTML = `<strong>Win vs ${winPctData.opponent_name}:</strong> ${winPctData.percentage}%`;
+        winHtmlElement.innerHTML = winLineHTML(cardFighterId, opponentId);
     }
 }
 
 /**
- * Looks up a win percentage from the global matrix.
- * Mirrors the server-side _get_win_rate() logic.
+ * Builds the "Win vs X" line from the server-computed MATCHUPS estimates.
+ * Mirrors the win-percentage block in index.html.
  * @param {string} fighterId - The ID of the first fighter.
- * @param {string} opponentId - The ID of the second fighter.
- * @returns {number} The win percentage (0-100) for fighterId vs opponentId.
+ * @param {string} opponentId - The ID of the fighter they face.
+ * @returns {string} HTML for the win line.
  */
-function getWinRate(fighterId, opponentId) {
-    if (!fighterId || !opponentId || typeof WIN_MATRIX !== 'object') {
-        return 50; // Default to fair
-    }
-    
-    // Check A vs B
-    if (WIN_MATRIX[fighterId] && WIN_MATRIX[fighterId][opponentId] !== undefined) {
-        const v = WIN_MATRIX[fighterId][opponentId];
-        // Some entries use -2 (sentinel) or other negative values to mean "unknown".
-        if (typeof v === 'number' && v >= 0 && v <= 100) return v;
-    }
-    
-    // Check B vs A (and invert)
-    if (WIN_MATRIX[opponentId] && WIN_MATRIX[opponentId][fighterId] !== undefined) {
-        const v2 = WIN_MATRIX[opponentId][fighterId];
-        if (typeof v2 === 'number' && v2 >= 0 && v2 <= 100) return 100 - v2;
-    }
+function winLineHTML(fighterId, opponentId) {
+    const byId = id => ALL_FIGHTERS_JS.find(f => f.id === id);
+    const fighter = byId(fighterId);
+    const opponent = byId(opponentId);
+    const entry = MATCHUPS[fighterId] && MATCHUPS[fighterId][opponentId];
+    if (!fighter || !opponent || !entry) return '';
 
-    return null; // Unknown
+    const [pct, games] = entry;
+    let value;
+    if (games === 0) {
+        value = `~${pct}% <span class="games-note low-data" title="No recorded games; estimated from both fighters' overall win rates">· estimate, no games yet</span>`;
+    } else if (games < FULL_CONFIDENCE_GAMES) {
+        value = `~${pct}% <span class="games-note low-data" title="Fewer than ${FULL_CONFIDENCE_GAMES} games; blended with both fighters' overall win rates">· estimate, ${games} game${games === 1 ? '' : 's'}</span>`;
+    } else {
+        value = `${pct}% <span class="games-note">· ${games.toLocaleString('en-US')} games</span>`;
+    }
+    const clubUrl = `${CLUB_MATCHUP_URL}?h1=${fighter.club_key}&h2=${opponent.club_key}`;
+    return `<strong>Win vs ${opponent.name}:</strong> ${value} ` +
+        `<a class="club-link" href="${clubUrl}" target="_blank" rel="noopener" title="See this matchup on The Unmatched Club">stats ↗</a>`;
 }
 
+/*************************** SHARE LINK  ***************************/
 /**
- * Looks up a win percentage from the global matrix and returns display info.
- * @param {string} fighterId - The ID of the first fighter.
- * @param {string} opponentId - The ID of the second fighter.
- * @returns {{percentage: number|string, opponent_name: string}}
+ * Copies a link that reopens the current main matchup with the owned sets.
  */
-function getWinPctFromMatrix(fighterId, opponentId) {
-    if (!fighterId || !opponentId || typeof WIN_MATRIX !== 'object') {
-        return { percentage: 'N/A', opponent_name: 'Opponent' };
-    }
+function setupShareButton() {
+    const btn = qs('#share-matchup-btn');
+    if (!btn) return;
+    const status = qs('#share-status');
 
-    const winRate = getWinRate(fighterId, opponentId);
-    const opponentInfo = ALL_FIGHTERS_JS.find(f => f.id === opponentId);
-    const opponentName = opponentInfo ? opponentInfo.name : 'Opponent';
+    btn.addEventListener('click', async () => {
+        const p1 = extractFighterIdFromCard(qs('#p1-main-suggestion'));
+        const opp = extractFighterIdFromCard(qs('#opp-main-suggestion'));
+        if (!p1 || !opp) return;
 
-    if (winRate === null || isNaN(winRate)) {
-        return { percentage: 'N/A', opponent_name: opponentName };
-    }
-    return { percentage: Math.round(winRate), opponent_name: opponentName };
+        const params = new URLSearchParams({ p1, opp });
+        qsa('input[name="owned_sets"]:checked').forEach(cb => params.append('sets', cb.value));
+        const url = `${window.location.origin}${window.location.pathname}?${params}`;
+
+        try {
+            await navigator.clipboard.writeText(url);
+            status.textContent = 'Link copied!';
+        } catch (e) {
+            // Clipboard can be blocked (e.g. non-HTTPS); show the link to copy by hand
+            status.textContent = url;
+        }
+        recordAnalytics('matchup_shared', { p1, opp });
+    });
 }
 
 /*************************** HTML HELPERS  ***************************/

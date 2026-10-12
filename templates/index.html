@@ -33,7 +33,7 @@
                 <img src="{{ url_for('static', filename=fighter.image_url.replace('/static/', '')) }}" alt="{{ fighter.name }}" class="fighter-image" onerror="this.onerror=null;this.src='https://placehold.co/100x150/e9ecef/6c757d?text={{ fighter.name | urlencode }}';">
                 <div class="fighter-details">
                     <h3 class="fighter-name">{{ fighter.name }}</h3>
-                    <p><strong>Set:</strong> {{ fighter.set }}</p>
+                    <p><strong>Set:</strong> {{ fighter.sets | join(' / ') }}</p>
                     <p><strong>Range:</strong> {{ fighter.range | titlecase_custom }}</p>
                     {# Display Major and Minor playstyles #}
                     <p>
@@ -49,11 +49,28 @@
                         {% endfor %}
                     </p>
 
-                    {# Win percentage logic #}
+                    <p class="overall-win-text">
+                        <strong>Overall:</strong>
+                        {% if fighter.overall_win_rate is none %}
+                            no games recorded yet
+                        {% else %}
+                            {{ fighter.overall_win_rate }}% <span class="games-note">· {{ "{:,}".format(fighter.total_games) }} games</span>
+                        {% endif %}
+                    </p>
+
+                    {# Win percentage logic (keep in sync with winLineHTML in script.js) #}
                     <p class="win-percentage-text">
                     {% if vs_fighter %}
-                        {% set win_pct = calculate_win_percentage(fighter.id, vs_fighter.id) %}
-                        <strong>Win vs {{ vs_fighter.name }}:</strong> {{ win_pct }}%
+                        {% set info = matchup_info(fighter, vs_fighter) %}
+                        <strong>Win vs {{ vs_fighter.name }}:</strong>
+                        {% if info.games == 0 %}
+                            ~{{ info.win_pct }}% <span class="games-note low-data" title="No recorded games; estimated from both fighters' overall win rates">· estimate, no games yet</span>
+                        {% elif info.low_data %}
+                            ~{{ info.win_pct }}% <span class="games-note low-data" title="Fewer than {{ full_confidence_games }} games; blended with both fighters' overall win rates">· estimate, {{ info.games }} game{{ '' if info.games == 1 else 's' }}</span>
+                        {% else %}
+                            {{ info.win_pct }}% <span class="games-note">· {{ "{:,}".format(info.games) }} games</span>
+                        {% endif %}
+                        <a class="club-link" href="{{ info.club_url }}" target="_blank" rel="noopener" title="See this matchup on The Unmatched Club">stats ↗</a>
                     {% endif %}
                     </p>
                 </div>
@@ -182,8 +199,8 @@
                     <select id="p1_chosen_fighter" name="p1_chosen_fighter">
                         <option value="">— Select a Fighter —</option>
                         {% for fighter in all_fighters_for_select %}
-                        <option value="{{ fighter.id }}" data-set="{{ fighter.set }}" {% if fighter.id|string == selected_data.p1_chosen_fighter_id %}selected{% endif %}>
-                            {{ fighter.name }} ({{ fighter.set }})
+                        <option value="{{ fighter.id }}" data-set="{{ fighter.sets | join(' / ') }}" {% if fighter.id|string == selected_data.p1_chosen_fighter_id %}selected{% endif %}>
+                            {{ fighter.name }} ({{ fighter.sets | join(' / ') }})
                         </option>
                         {% endfor %}
                     </select>
@@ -244,13 +261,13 @@
     </section>
 </form>
 
+{% if error_message %}
+<div class="error-message active">{{ error_message }}</div>
+{% endif %}
+
 {% if results and results.p1_main and results.opp_main %}
 <section id="results-display-area" class="results-panel">
     <h2>Matchup Suggestion</h2>
-
-    {% if error_message %}
-    <div class="error-message active">{{ error_message }}</div>
-    {% endif %}
 
     <div class="player-columns-container">
         <div class="player-column results-column">
@@ -281,12 +298,26 @@
             {% endif %}
         </div>
     </div>
+
+    <div class="share-row">
+        <button type="button" id="share-matchup-btn" class="share-button">🔗 Copy link to this matchup</button>
+        <span id="share-status" class="share-status" aria-live="polite"></span>
+    </div>
 </section>
 {% endif %}
 </main>
 
 <footer>
-    
+    {% if stats_meta %}
+    <p class="footer-note">
+        Win rates as of {{ stats_meta.fetched_at }} · {{ "{:,}".format(stats_meta.total_games) }} games from
+        <a href="https://www.tabletopleague.com/games/unmatched/matches" target="_blank" rel="noopener">Tabletop League</a>
+        and UnmatchedRu, via
+        <a href="{{ club_matchup_url }}" target="_blank" rel="noopener">The Unmatched Club</a>.
+        Matchups with fewer than {{ full_confidence_games }} games are shown as estimates.
+    </p>
+    {% endif %}
+
     <p class="footer-note">
         For more info about the website, visit the developer at 
         <a href="https://mohammad.machaka.net" target="_blank" rel="noopener">mohammad.machaka.net</a>
@@ -366,7 +397,10 @@
 
 <script>
     const ALL_FIGHTERS_JS = {{ all_fighters_for_select | tojson }};
-    const WIN_MATRIX = {{ win_matrix | tojson }};
+    // MATCHUPS[a][b] = [estimated win % for a vs b, games played]
+    const MATCHUPS = {{ matchups | tojson }};
+    const FULL_CONFIDENCE_GAMES = {{ full_confidence_games }};
+    const CLUB_MATCHUP_URL = {{ club_matchup_url | tojson }};
 </script>
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>

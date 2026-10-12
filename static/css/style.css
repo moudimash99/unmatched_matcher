@@ -197,3 +197,12 @@ label { font-size: .9rem; }
     color: #fff;
     box-shadow: 0 2px 4px rgba(78, 205, 196, 0.2);
 }
+
+/* ===== MATCHUP DATA (games played, low-data estimates, share link) ===== */
+.games-note { color: var(--text-secondary); font-size: 0.8rem; }
+.games-note.low-data { color: #b8860b; font-style: italic; cursor: help; }
+.club-link { font-size: 0.8rem; margin-left: 0.25rem; color: var(--accent-primary); text-decoration: none; white-space: nowrap; }
+.club-link:hover { text-decoration: underline; }
+
+.share-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.75rem; margin-top: 1.25rem; }
+.share-status { color: var(--text-secondary); font-size: 0.85rem; overflow-wrap: anywhere; }

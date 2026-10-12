@@ -1,6 +1,16 @@
+import copy
+import math
 import random
 from itertools import combinations
 from collections import defaultdict
+
+# A matchup's own win rate is fully trusted from this many games on. Below it,
+# confidence climbs logarithmically from 0 (no games) to 1, and the estimate is
+# blended with what the two fighters' overall win rates predict.
+FULL_CONFIDENCE_GAMES = 10
+
+# Pools avoid matchups whose estimated win rate is further than this from 50%.
+BLOWOUT_MARGIN = 25.0
 def _pick_weighted_elite(score_list, k):
     """
     Selects up to k distinct fighters from score_list using
@@ -40,17 +50,23 @@ class MatchupEngine:
 
 
 
-    def __init__(self, fighters_db, win_rate_matrix):
+    def __init__(self, fighters_db, win_rate_matrix, games_matrix=None):
         self.fighters_db = fighters_db
         self.win_rate_matrix = win_rate_matrix
+        # games_matrix[a][b] = games played between a and b. Without it, every
+        # known win rate is trusted fully (no confidence weighting).
+        self.games_matrix = games_matrix
         self.WEIGHT_FIT = 0.6
         self.WEIGHT_FAIRNESS = 0.4
 
         self.P1_POOL_SIZE = 4
         self.OPP_POOL_SIZE = 3
-        
+
+        # Each fighter's games-weighted win rate across all opponents
+        self.overall_stats = self._build_overall_stats()
+
         # PRE-CALCULATION: Build the Fairness Map immediately (O(1) lookups later)
-        # Maps FighterID -> Set of IDs they are fair against (40-60%)
+        # Maps FighterID -> Set of IDs they are fair against (within BLOWOUT_MARGIN of 50%)
         self.fairness_map = self._build_fairness_map()
 
         # RANGE SCALE MAPPING
@@ -79,6 +95,15 @@ class MatchupEngine:
             "Any": None,
             "": None
         }
+
+    def with_mode(self, mode, custom_fairness_weight=None):
+        """
+        Returns a copy of the engine with the given mode applied, leaving this
+        shared instance untouched (safe to call per request).
+        """
+        engine = copy.copy(self)
+        engine.set_mode(mode, custom_fairness_weight)
+        return engine
 
     def set_mode(self, mode, custom_fairness_weight=None):
         """
@@ -115,30 +140,107 @@ class MatchupEngine:
             self.WEIGHT_FAIRNESS = 0.4
             self.WEIGHT_FIT = 0.6
 
+    @staticmethod
+    def _valid_rate(value):
+        """The matrix uses -2 as a 'no data' sentinel; only 0-100 is a real win rate."""
+        return isinstance(value, (int, float)) and 0 <= value <= 100
+
+    def lookup_win_rate(self, id_a, id_b):
+        """
+        Gets A's win rate vs B from the matrix (A vs B, else inverted B vs A).
+        Returns None if there is no usable data for the pairing.
+        """
+        v = self.win_rate_matrix.get(id_a, {}).get(id_b)
+        if self._valid_rate(v):
+            return v
+        v = self.win_rate_matrix.get(id_b, {}).get(id_a)
+        if self._valid_rate(v):
+            return 100.0 - v
+        return None
+
+    def games_played(self, id_a, id_b):
+        """Games recorded between A and B, or None when no games matrix was given."""
+        if self.games_matrix is None:
+            return None
+        n = self.games_matrix.get(id_a, {}).get(id_b)
+        if n is None:
+            n = self.games_matrix.get(id_b, {}).get(id_a, 0)
+        return n
+
+    @staticmethod
+    def confidence(games):
+        """0 with no games, climbing logarithmically to 1 at FULL_CONFIDENCE_GAMES."""
+        if games is None:
+            return 1.0
+        if games <= 0:
+            return 0.0
+        return min(1.0, math.log1p(games) / math.log1p(FULL_CONFIDENCE_GAMES))
+
+    def _build_overall_stats(self):
+        """Maps fighter id -> (games-weighted overall win %, total games)."""
+        stats = {}
+        if self.games_matrix is None:
+            return stats
+        for f in self.fighters_db:
+            fid = f['id']
+            total, weighted = 0, 0.0
+            for opp_id, n in self.games_matrix.get(fid, {}).items():
+                wr = self.lookup_win_rate(fid, opp_id)
+                if opp_id != fid and n and wr is not None:
+                    total += n
+                    weighted += wr * n
+            stats[fid] = (weighted / total if total else None, total)
+        return stats
+
+    def overall_win_rate(self, fighter_id):
+        """Overall win % for a fighter, or None if they have no recorded games."""
+        return self.overall_stats.get(fighter_id, (None, 0))[0]
+
+    def expected_win_rate(self, id_a, id_b):
+        """
+        What A's win % vs B 'should' be from their overall strength (log5 formula).
+        50.0 when either fighter has no overall data.
+        """
+        pa, pb = self.overall_win_rate(id_a), self.overall_win_rate(id_b)
+        if pa is None or pb is None:
+            return 50.0
+        pa, pb = pa / 100.0, pb / 100.0
+        denom = pa * (1 - pb) + pb * (1 - pa)
+        return 50.0 if denom == 0 else 100.0 * pa * (1 - pb) / denom
+
+    def estimate_win_rate(self, id_a, id_b):
+        """
+        A's win % vs B, weighted by confidence: the matchup's own record counts
+        fully from FULL_CONFIDENCE_GAMES games, and below that it is blended with
+        the expected win rate from both fighters' overall strength.
+        """
+        observed = self.lookup_win_rate(id_a, id_b)
+        if observed is None:
+            return self.expected_win_rate(id_a, id_b)
+        c = self.confidence(self.games_played(id_a, id_b))
+        if c >= 1.0:
+            return observed
+        return c * observed + (1 - c) * self.expected_win_rate(id_a, id_b)
+
     def _get_win_rate(self, id_a, id_b):
         """
-        Safely gets win rate from matrix (A vs B or B vs A). 
-        Defaults to 50.0 (percent) if no data exists.
-        This treats unknown matchups as 'Fair' (Benefit of the doubt).
+        Win rate used for scoring: the confidence-weighted estimate.
+        Unknown matchups fall back to the expected rate (50.0 without overall data).
         """
-        if id_a in self.win_rate_matrix and id_b in self.win_rate_matrix[id_a]:
-            return self.win_rate_matrix[id_a][id_b]
-        if id_b in self.win_rate_matrix and id_a in self.win_rate_matrix[id_b]:
-            return 100.0 - self.win_rate_matrix[id_b][id_a]
-        return 50.0 # Default to fair if unknown
+        return self.estimate_win_rate(id_a, id_b)
 
     def _build_fairness_map(self):
         """Generates the static map for the Fair Pool algorithm."""
         fair_map = defaultdict(set)
         all_ids = [f['id'] for f in self.fighters_db]
-        
+
         for id_a in all_ids:
             for id_b in all_ids:
                 if id_a == id_b: continue
-                
+
                 wr = self._get_win_rate(id_a, id_b)
-                # Strict Fairness Definition for Pools (40% - 60%)
-                if 1 <= wr <= 99:
+                # Pools exclude lopsided matchups (by the confidence-weighted estimate)
+                if abs(wr - 50.0) <= BLOWOUT_MARGIN:
                     fair_map[id_a].add(id_b)
         return fair_map
 
@@ -382,18 +484,25 @@ class MatchupEngine:
         """
         Generates optimal pools using the Symmetric Elite Strategy,
         but with asymmetric pool sizes:
-          - P1 pool: 5 fighters
-          - Opp pool: 3 fighters
+          - P1 pool: self.P1_POOL_SIZE fighters (default 4)
+          - Opp pool: self.OPP_POOL_SIZE fighters (default 3)
+        The two pools never share a fighter. Pools shrink when too few
+        fighters are available to fill both.
         Uses Set Intersection for O(1) fairness validation.
         """
-        # CONFIGURE POOL SIZES HERE
-        
         P1_POOL_SIZE = self.P1_POOL_SIZE
         OPP_POOL_SIZE = self.OPP_POOL_SIZE
 
-        # 0. Safety Check: Need enough fighters to make the *bigger* pool
-        if len(available_fighters) < max(P1_POOL_SIZE, OPP_POOL_SIZE):
+        # 0. Safety Check: Need at least one fighter per side
+        if len(available_fighters) < 2:
             return None
+
+        # Pools are disjoint, so shrink them (larger first) until both fit
+        while P1_POOL_SIZE + OPP_POOL_SIZE > len(available_fighters):
+            if P1_POOL_SIZE >= OPP_POOL_SIZE:
+                P1_POOL_SIZE -= 1
+            else:
+                OPP_POOL_SIZE -= 1
 
         # 1. Score ALL fighters individually (With Range)
         p1_scores = []
@@ -405,8 +514,7 @@ class MatchupEngine:
             p1_scores.append({'id': f['id'], 'score': s_p1, 'obj': f})
             opp_scores.append({'id': f['id'], 'score': s_opp, 'obj': f})
         
-        # 2. Get Elite Candidates (Top 12 or any k you like)
-                # 2. Get Elite Candidates (Weighted random across full list)
+        # 2. Get Elite Candidates (Weighted random across full list)
         ELITE_K = 12  # size of the elite pool
         p1_elite = _pick_weighted_elite(p1_scores, ELITE_K)
         opp_elite = _pick_weighted_elite(opp_scores, ELITE_K)
@@ -415,12 +523,6 @@ class MatchupEngine:
         p1_ids = [x['id'] for x in p1_elite]
         opp_ids = [x['id'] for x in opp_elite]
 
-        p1_ids = [x['id'] for x in p1_elite]
-        opp_ids = [x['id'] for x in opp_elite]
-        # Extract IDs for combination generation
-        p1_ids = [x['id'] for x in p1_elite]
-        opp_ids = [x['id'] for x in opp_elite]
-        
         # Create fast lookup map for scores
         p1_score_map = {x['id']: x['score'] for x in p1_scores}
         opp_score_map = {x['id']: x['score'] for x in opp_scores}
@@ -433,43 +535,52 @@ class MatchupEngine:
         opp_combos = list(combinations(opp_ids, OPP_POOL_SIZE))
 
         # 4. Matrix Validation
-        for pool_a_ids in p1_combos:
-            # OPTIMIZATION: Intersection Trick
-            # Universe of opponents fair against ALL P1 fighters in this pool
-            iterator = iter(pool_a_ids)
-            first_id = next(iterator)
-            valid_opp_universe = set(self.fairness_map[first_id])
-            for fid in iterator:
-                valid_opp_universe &= self.fairness_map[fid]
-            
-            # If universe is too small, no need to check Opp pools against it
-            if len(valid_opp_universe) < OPP_POOL_SIZE:
-                continue
+        # First pass only allows pools with no 0%/100% matchups; if nothing
+        # qualifies (e.g. few owned sets), retry allowing any disjoint pools.
+        for strict in (True, False):
+            for pool_a_ids in p1_combos:
+                if strict:
+                    # OPTIMIZATION: Intersection Trick
+                    # Universe of opponents fair against ALL P1 fighters in this pool
+                    # (fairness_map never contains a fighter itself, so pools stay disjoint)
+                    iterator = iter(pool_a_ids)
+                    first_id = next(iterator)
+                    valid_opp_universe = set(self.fairness_map[first_id])
+                    for fid in iterator:
+                        valid_opp_universe &= self.fairness_map[fid]
+                else:
+                    valid_opp_universe = set(opp_ids) - set(pool_a_ids)
 
-            for pool_b_ids in opp_combos:
-                # FAST SUBSET CHECK
-                if not set(pool_b_ids).issubset(valid_opp_universe):
+                # If universe is too small, no need to check Opp pools against it
+                if len(valid_opp_universe) < OPP_POOL_SIZE:
                     continue
 
-                # 5. Global Scoring (Weighted combination of Fit and Fairness)
-                avg_fit = self._calculate_pool_fitness(pool_a_ids, pool_b_ids, p1_score_map, opp_score_map, P1_POOL_SIZE, OPP_POOL_SIZE)
-                avg_fairness = self._calculate_pool_fairness(pool_a_ids, pool_b_ids)
-                total_score = (self.WEIGHT_FIT * avg_fit) + (self.WEIGHT_FAIRNESS * avg_fairness)
+                for pool_b_ids in opp_combos:
+                    # FAST SUBSET CHECK
+                    if not set(pool_b_ids).issubset(valid_opp_universe):
+                        continue
 
+                    # 5. Global Scoring (Weighted combination of Fit and Fairness)
+                    avg_fit = self._calculate_pool_fitness(pool_a_ids, pool_b_ids, p1_score_map, opp_score_map, P1_POOL_SIZE, OPP_POOL_SIZE)
+                    avg_fairness = self._calculate_pool_fairness(pool_a_ids, pool_b_ids)
+                    total_score = (self.WEIGHT_FIT * avg_fit) + (self.WEIGHT_FAIRNESS * avg_fairness)
 
-                if total_score > max_total_score:
-                    max_total_score = total_score
-                    # Retrieve actual fighter objects for the return
-                    p1_objs = [f for f in available_fighters if f['id'] in pool_a_ids]
-                    opp_objs = [f for f in available_fighters if f['id'] in pool_b_ids]
-                    
-                    best_result = {
-                        'p1_pool': p1_objs,
-                        'opp_pool': opp_objs,
-                        'total_score': total_score,
-                        'p1_ids': pool_a_ids,
-                        'opp_ids': pool_b_ids
-                    }
+                    if total_score > max_total_score:
+                        max_total_score = total_score
+                        # Retrieve actual fighter objects for the return
+                        p1_objs = [f for f in available_fighters if f['id'] in pool_a_ids]
+                        opp_objs = [f for f in available_fighters if f['id'] in pool_b_ids]
+
+                        best_result = {
+                            'p1_pool': p1_objs,
+                            'opp_pool': opp_objs,
+                            'total_score': total_score,
+                            'p1_ids': pool_a_ids,
+                            'opp_ids': pool_b_ids
+                        }
+
+            if best_result:
+                break
 
         # Sort the results internally if found
         if best_result:

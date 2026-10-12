@@ -14,7 +14,8 @@
         "resource_management",
         "combo",
         "rushdown"
-      ]
+      ],
+      "club_key": "king-arthur"
     },
     {
       "id": "alice",
@@ -24,11 +25,13 @@
       "range": "Melee",
       "image_url": "/static/pics/alice.webp",
       "major": [
-        "adaptive"
+        "stance"
       ],
       "minor": [
-        "stance"
-      ]
+        "adaptive",
+        "swarm"
+      ],
+      "club_key": "alice"
     },
     {
       "id": "medusa",
@@ -38,13 +41,14 @@
       "range": "Ranged Assist",
       "image_url": "/static/pics/medusa.webp",
       "major": [
-        "control"
+        "ranged_pressure"
       ],
       "minor": [
+        "burst",
         "disruption",
-        "ranged_pressure",
         "swarm"
-      ]
+      ],
+      "club_key": "medusa"
     },
     {
       "id": "sinbad",
@@ -57,10 +61,10 @@
         "scaling"
       ],
       "minor": [
-        "evasion",
-        "adaptive",
-        "burst"
-      ]
+        "rushdown",
+        "resource_management"
+      ],
+      "club_key": "sinbad"
     },
     {
       "id": "robin_hood",
@@ -73,10 +77,10 @@
         "evasion"
       ],
       "minor": [
-        "swarm",
-        "control",
-        "ranged_pressure"
-      ]
+        "ranged_pressure",
+        "swarm"
+      ],
+      "club_key": "robin-hood"
     },
     {
       "id": "bigfoot",
@@ -90,8 +94,10 @@
       ],
       "minor": [
         "burst",
-        "control"
-      ]
+        "evasion",
+        "swarm"
+      ],
+      "club_key": "bigfoot"
     },
     {
       "id": "bruce_lee",
@@ -107,7 +113,11 @@
         "burst",
         "evasion",
         "technical"
-      ]
+      ],
+      "other_sets": [
+        "Muhammad Ali vs. Bruce Lee"
+      ],
+      "club_key": "bruce-lee"
     },
     {
       "id": "robert_muldoon",
@@ -121,9 +131,9 @@
       ],
       "minor": [
         "swarm",
-        "ranged_pressure",
-        "disruption"
-      ]
+        "ranged_pressure"
+      ],
+      "club_key": "robert-muldoon"
     },
     {
       "id": "raptors",
@@ -138,7 +148,8 @@
       "minor": [
         "rushdown",
         "burst"
-      ]
+      ],
+      "club_key": "raptors"
     },
     {
       "id": "dracula",
@@ -151,10 +162,11 @@
         "attrition"
       ],
       "minor": [
-        "resource_management",
         "burst",
+        "swarm",
         "evasion"
-      ]
+      ],
+      "club_key": "dracula"
     },
     {
       "id": "invisible_man",
@@ -170,7 +182,8 @@
         "control",
         "disruption",
         "resource_management"
-      ]
+      ],
+      "club_key": "invisible-man"
     },
     {
       "id": "jekyll_hyde",
@@ -185,7 +198,8 @@
       "minor": [
         "burst",
         "adaptive"
-      ]
+      ],
+      "club_key": "jekyll-hyde"
     },
     {
       "id": "sherlock_holmes",
@@ -201,23 +215,25 @@
         "disruption",
         "combo",
         "technical"
-      ]
+      ],
+      "club_key": "sherlock-holmes"
     },
     {
       "id": "buffy",
       "name": "Buffy",
       "set": "Buffy the Vampire Slayer",
       "foundational_mechanism": "Phasing through opponents",
-      "range": "Reach",
+      "range": "Melee",
       "image_url": "/static/pics/buffy.webp",
       "major": [
-        "adaptive"
+        "rushdown"
       ],
       "minor": [
         "evasion",
-        "burst",
-        "swarm"
-      ]
+        "swarm",
+        "disruption"
+      ],
+      "club_key": "buffy"
     },
     {
       "id": "spike",
@@ -232,7 +248,8 @@
       "minor": [
         "resource_management",
         "disruption"
-      ]
+      ],
+      "club_key": "spike"
     },
     {
       "id": "willow",
@@ -246,9 +263,10 @@
       ],
       "minor": [
         "burst",
-        "scaling",
+        "ranged_pressure",
         "adaptive"
-      ]
+      ],
+      "club_key": "willow"
     },
     {
       "id": "angel",
@@ -262,8 +280,9 @@
       ],
       "minor": [
         "rushdown",
-        "control"
-      ]
+        "swarm"
+      ],
+      "club_key": "angel"
     },
     {
       "id": "little_red",
@@ -279,7 +298,8 @@
         "resource_management",
         "technical",
         "burst"
-      ]
+      ],
+      "club_key": "little-red"
     },
     {
       "id": "beowulf",
@@ -294,7 +314,8 @@
       "minor": [
         "attrition",
         "burst"
-      ]
+      ],
+      "club_key": "beowulf"
     },
     {
       "id": "deadpool",
@@ -307,9 +328,10 @@
         "rushdown"
       ],
       "minor": [
-        "resource_management",
+        "attrition",
         "disruption"
-      ]
+      ],
+      "club_key": "deadpool"
     },
     {
       "id": "achilles",
@@ -324,7 +346,8 @@
       "minor": [
         "rushdown",
         "burst"
-      ]
+      ],
+      "club_key": "achilles"
     },
     {
       "id": "bloody_mary",
@@ -340,7 +363,8 @@
         "technical",
         "burst",
         "combo"
-      ]
+      ],
+      "club_key": "bloody-mary"
     },
     {
       "id": "sun_wukong",
@@ -354,8 +378,9 @@
       ],
       "minor": [
         "evasion",
-        "control"
-      ]
+        "disruption"
+      ],
+      "club_key": "sun-wukong"
     },
     {
       "id": "yennenga",
@@ -370,7 +395,8 @@
       "minor": [
         "attrition",
         "ranged_pressure"
-      ]
+      ],
+      "club_key": "yennenga"
     },
     {
       "id": "luke_cage",
@@ -385,7 +411,8 @@
       "minor": [
         "resource_management",
         "burst"
-      ]
+      ],
+      "club_key": "luke-cage"
     },
     {
       "id": "ghost_rider",
@@ -399,9 +426,9 @@
       ],
       "minor": [
         "burst",
-        "rushdown",
-        "evasion"
-      ]
+        "rushdown"
+      ],
+      "club_key": "ghost-rider"
     },
     {
       "id": "moon_knight",
@@ -416,7 +443,8 @@
       "minor": [
         "adaptive",
         "technical"
-      ]
+      ],
+      "club_key": "moon-knight"
     },
     {
       "id": "daredevil",
@@ -432,7 +460,8 @@
         "resource_management",
         "burst",
         "technical"
-      ]
+      ],
+      "club_key": "daredevil"
     },
     {
       "id": "elektra",
@@ -446,9 +475,10 @@
       ],
       "minor": [
         "stance",
-        "rushdown",
+        "swarm",
         "burst"
-      ]
+      ],
+      "club_key": "elektra"
     },
     {
       "id": "bullseye",
@@ -461,17 +491,18 @@
         "ranged_pressure"
       ],
       "minor": [
-        "rushdown",
+        "combo",
         "evasion",
         "burst"
-      ]
+      ],
+      "club_key": "bullseye"
     },
     {
       "id": "dr_sattler",
       "name": "Dr. Sattler",
       "set": "Dr. Sattler vs. T-Rex",
       "foundational_mechanism": "Distraction and setup",
-      "range": "Reach",
+      "range": "Melee",
       "image_url": "/static/pics/dr_sattler.webp",
       "major": [
         "control"
@@ -480,23 +511,25 @@
         "disruption",
         "resource_management",
         "burst"
-      ]
+      ],
+      "club_key": "dr-sattler"
     },
     {
       "id": "t_rex",
       "name": "T. Rex",
       "set": "Dr. Sattler vs. T-Rex",
       "foundational_mechanism": "Area damage and survivability",
-      "range": "Melee",
+      "range": "Reach",
       "image_url": "/static/pics/t_rex.webp",
       "major": [
-        "rushdown"
+        "burst"
       ],
       "minor": [
-        "burst",
+        "attrition",
         "resource_management",
         "control"
-      ]
+      ],
+      "club_key": "t-rex"
     },
     {
       "id": "houdini",
@@ -509,10 +542,10 @@
         "evasion"
       ],
       "minor": [
-        "control",
-        "disruption",
-        "adaptive"
-      ]
+        "resource_management",
+        "technical"
+      ],
+      "club_key": "harry-houdini"
     },
     {
       "id": "the_genie",
@@ -522,13 +555,14 @@
       "range": "Ranged",
       "image_url": "/static/pics/the_genie.webp",
       "major": [
-        "burst"
+        "resource_management"
       ],
       "minor": [
-        "resource_management",
-        "control",
+        "burst",
+        "disruption",
         "technical"
-      ]
+      ],
+      "club_key": "the-genie"
     },
     {
       "id": "ms_marvel",
@@ -538,12 +572,14 @@
       "range": "Reach",
       "image_url": "/static/pics/ms_marvel.webp",
       "major": [
-        "adaptive"
+        "resource_management"
       ],
       "minor": [
+        "ranged_pressure",
         "evasion",
-        "ranged_pressure"
-      ]
+        "disruption"
+      ],
+      "club_key": "ms-marvel"
     },
     {
       "id": "squirrel_girl",
@@ -556,9 +592,10 @@
         "swarm"
       ],
       "minor": [
-        "rushdown",
-        "burst"
-      ]
+        "burst",
+        "disruption"
+      ],
+      "club_key": "squirrel-girl"
     },
     {
       "id": "cloak_and_dagger",
@@ -568,27 +605,30 @@
       "range": "Melee",
       "image_url": "/static/pics/cloak_and_dagger.webp",
       "major": [
-        "stance"
+        "combo"
       ],
       "minor": [
-        "control",
-        "resource_management"
-      ]
+        "burst",
+        "disruption",
+        "control"
+      ],
+      "club_key": "cloak-dagger"
     },
     {
       "id": "black_panther",
       "name": "Black Panther",
       "set": "For King and Country",
       "foundational_mechanism": "Storing and returning attacks",
-      "range": "Melee",
+      "range": "Hybrid",
       "image_url": "/static/pics/black_panther.webp",
       "major": [
         "resource_management"
       ],
       "minor": [
-        "attrition",
-        "burst"
-      ]
+        "burst",
+        "disruption"
+      ],
+      "club_key": "black-panther"
     },
     {
       "id": "black_widow",
@@ -604,7 +644,8 @@
         "control",
         "technical",
         "disruption"
-      ]
+      ],
+      "club_key": "black-widow"
     },
     {
       "id": "winter_soldier",
@@ -617,9 +658,10 @@
         "adaptive"
       ],
       "minor": [
-        "rushdown",
+        "burst",
         "ranged_pressure"
-      ]
+      ],
+      "club_key": "winter-soldier"
     },
     {
       "id": "she_hulk",
@@ -634,22 +676,24 @@
       "minor": [
         "burst",
         "disruption"
-      ]
+      ],
+      "club_key": "she-hulk"
     },
     {
       "id": "spider_man",
       "name": "Spider-Man",
       "set": "Brains and Brawn",
       "foundational_mechanism": "Spider-Sense card revelation",
-      "range": "Reach",
+      "range": "Melee",
       "image_url": "/static/pics/spider_man.webp",
       "major": [
-        "control"
+        "evasion"
       ],
       "minor": [
-        "evasion",
+        "control",
         "disruption"
-      ]
+      ],
+      "club_key": "spiderman"
     },
     {
       "id": "doctor_strange",
@@ -665,7 +709,8 @@
         "resource_management",
         "ranged_pressure",
         "burst"
-      ]
+      ],
+      "club_key": "doctor-strange"
     },
     {
       "id": "nikola_tesla",
@@ -679,8 +724,10 @@
       ],
       "minor": [
         "burst",
-        "technical"
-      ]
+        "technical",
+        "control"
+      ],
+      "club_key": "nikola-tesla"
     },
     {
       "id": "annie_christmas",
@@ -694,8 +741,9 @@
       ],
       "minor": [
         "burst",
-        "rushdown"
-      ]
+        "swarm"
+      ],
+      "club_key": "annie-christmas"
     },
     {
       "id": "the_golden_bat",
@@ -705,12 +753,13 @@
       "range": "Melee",
       "image_url": "/static/pics/the_golden_bat.webp",
       "major": [
-        "rushdown"
+        "burst"
       ],
       "minor": [
-        "burst",
-        "evasion"
-      ]
+        "rushdown",
+        "attrition"
+      ],
+      "club_key": "golden-bat"
     },
     {
       "id": "dr_jill_trent",
@@ -725,7 +774,8 @@
       "minor": [
         "disruption",
         "adaptive"
-      ]
+      ],
+      "club_key": "dr-jill-trent"
     },
     {
       "id": "oda_nobunaga",
@@ -738,9 +788,10 @@
         "swarm"
       ],
       "minor": [
-        "rushdown",
+        "control",
         "burst"
-      ]
+      ],
+      "club_key": "oda-nobunaga"
     },
     {
       "id": "tomoe_gozen",
@@ -755,7 +806,8 @@
       "minor": [
         "ranged_pressure",
         "disruption"
-      ]
+      ],
+      "club_key": "tomoe-gozen"
     },
     {
       "id": "william_shakespeare",
@@ -770,7 +822,8 @@
       "minor": [
         "technical",
         "resource_management"
-      ]
+      ],
+      "club_key": "shakespeare"
     },
     {
       "id": "hamlet",
@@ -780,34 +833,38 @@
       "range": "Melee",
       "image_url": "/static/pics/hamlet.webp",
       "major": [
-        "resource_management"
+        "stance"
       ],
       "minor": [
-        "stance",
-        "burst"
-      ]
+        "resource_management",
+        "burst",
+        "disruption"
+      ],
+      "club_key": "hamlet"
     },
     {
       "id": "titania",
       "name": "Titania",
       "set": "Slings and Arrows",
       "foundational_mechanism": "Hand and movement manipulation",
-      "range": "Melee",
+      "range": "Ranged Assist",
       "image_url": "/static/pics/titania.webp",
       "major": [
         "control"
       ],
       "minor": [
+        "disruption",
         "adaptive",
         "ranged_pressure"
-      ]
+      ],
+      "club_key": "titania"
     },
     {
       "id": "the_wayward_sisters",
       "name": "The Wayward Sisters",
       "set": "Slings and Arrows",
       "foundational_mechanism": "Cauldron ingredient mixing",
-      "range": "Ranged",
+      "range": "Melee",
       "image_url": "/static/pics/the_wayward_sisters.webp",
       "major": [
         "combo"
@@ -815,14 +872,15 @@
       "minor": [
         "swarm",
         "resource_management"
-      ]
+      ],
+      "club_key": "the-wayward-sisters"
     },
     {
       "id": "geralt",
       "name": "Geralt of Rivia",
       "set": "The Witcher: Steel and Silver",
       "foundational_mechanism": "Pre-planning and preparation",
-      "range": "Melee",
+      "range": "Hybrid",
       "image_url": "/static/pics/geralt.webp",
       "major": [
         "adaptive"
@@ -831,7 +889,8 @@
         "technical",
         "control",
         "burst"
-      ]
+      ],
+      "club_key": "geralt-of-rivia"
     },
     {
       "id": "ciri",
@@ -846,7 +905,8 @@
       "minor": [
         "evasion",
         "burst"
-      ]
+      ],
+      "club_key": "ciri"
     },
     {
       "id": "yennefer_triss",
@@ -856,28 +916,31 @@
       "range": "Ranged",
       "image_url": "/static/pics/yennefer_triss.webp",
       "major": [
-        "control"
+        "burst"
       ],
       "minor": [
-        "stance",
         "disruption",
-        "ranged_pressure"
-      ]
+        "ranged_pressure",
+        "adaptive"
+      ],
+      "club_key": "yennefer-triss"
     },
     {
       "id": "philippa_eilhart",
       "name": "Philippa Eilhart",
       "set": "The Witcher: Realms Fall",
       "foundational_mechanism": "Blinding and forced discard",
-      "range": "Ranged",
+      "range": "Ranged Assist",
       "image_url": "/static/pics/philippa_eilhart.webp",
       "major": [
         "control"
       ],
       "minor": [
         "disruption",
-        "rushdown"
-      ]
+        "resource_management",
+        "ranged_pressure"
+      ],
+      "club_key": "philippa"
     },
     {
       "id": "eredin",
@@ -893,23 +956,273 @@
         "swarm",
         "rushdown",
         "burst"
-      ]
+      ],
+      "club_key": "eredin"
     },
     {
       "id": "muhammad_ali",
       "name": "Muhammad Ali",
       "set": "Muhammad Ali vs. Bruce Lee",
       "foundational_mechanism": "Immediate post-attack mobility",
-      "range": "Melee",
+      "range": "Reach",
       "image_url": "/static/pics/muhammad_ali.webp",
       "major": [
-        "evasion"
+        "stance"
       ],
       "minor": [
-        "stance",
+        "evasion",
         "burst",
+        "combo"
+      ],
+      "club_key": "muhammad-ali"
+    },
+    {
+      "id": "ancient_leshen",
+      "name": "Ancient Leshen",
+      "set": "The Witcher: Steel and Silver",
+      "foundational_mechanism": "Wolves drag foes into double attacks",
+      "range": "Ranged Assist",
+      "image_url": "/static/pics/ancient_leshen.webp",
+      "major": [
+        "burst"
+      ],
+      "minor": [
+        "swarm",
+        "control",
+        "ranged_pressure"
+      ],
+      "club_key": "ancient-leshen"
+    },
+    {
+      "id": "blackbeard",
+      "name": "Blackbeard",
+      "set": "Battle of Legends Vol. 3",
+      "foundational_mechanism": "Doubloon tug-of-war for extra actions",
+      "range": "Ranged Assist",
+      "image_url": "/static/pics/blackbeard.webp",
+      "major": [
+        "resource_management"
+      ],
+      "minor": [
+        "disruption",
+        "ranged_pressure",
+        "burst"
+      ],
+      "club_key": "blackbeard"
+    },
+    {
+      "id": "chupacabra",
+      "name": "Chupacabra",
+      "set": "Battle of Legends Vol. 3",
+      "foundational_mechanism": "Draws after attacking, stronger when hurt",
+      "range": "Melee",
+      "image_url": "/static/pics/chupacabra.webp",
+      "major": [
+        "rushdown"
+      ],
+      "minor": [
+        "burst",
+        "attrition"
+      ],
+      "club_key": "chupacabra"
+    },
+    {
+      "id": "loki",
+      "name": "Loki",
+      "set": "Battle of Legends Vol. 3",
+      "foundational_mechanism": "Tricks seeded into the opponent's hand",
+      "range": "Melee",
+      "image_url": "/static/pics/loki.webp",
+      "major": [
         "control"
-      ]
+      ],
+      "minor": [
+        "disruption",
+        "technical",
+        "evasion"
+      ],
+      "club_key": "loki"
+    },
+    {
+      "id": "pandora",
+      "name": "Pandora",
+      "set": "Battle of Legends Vol. 3",
+      "foundational_mechanism": "Push-your-luck box of miseries",
+      "range": "Melee",
+      "image_url": "/static/pics/pandora.webp",
+      "major": [
+        "resource_management"
+      ],
+      "minor": [
+        "swarm",
+        "burst",
+        "technical"
+      ],
+      "club_key": "pandora"
+    },
+    {
+      "id": "leonardo",
+      "name": "Leonardo",
+      "set": "Teenage Mutant Ninja Turtles",
+      "foundational_mechanism": "Repositions any fighter each turn",
+      "range": "Melee",
+      "image_url": "/static/pics/leonardo.webp",
+      "major": [
+        "control"
+      ],
+      "minor": [
+        "adaptive",
+        "swarm"
+      ],
+      "club_key": "leonardo"
+    },
+    {
+      "id": "donatello",
+      "name": "Donatello",
+      "set": "Teenage Mutant Ninja Turtles",
+      "foundational_mechanism": "Permanent invention upgrades",
+      "range": "Melee",
+      "image_url": "/static/pics/donatello.webp",
+      "major": [
+        "scaling"
+      ],
+      "minor": [
+        "resource_management",
+        "technical"
+      ],
+      "club_key": "donatello"
+    },
+    {
+      "id": "raphael",
+      "name": "Raphael",
+      "set": "Teenage Mutant Ninja Turtles",
+      "foundational_mechanism": "Action refund after first lost combat",
+      "range": "Hybrid",
+      "image_url": "/static/pics/raphael.webp",
+      "major": [
+        "rushdown"
+      ],
+      "minor": [
+        "burst",
+        "attrition"
+      ],
+      "club_key": "raphael"
+    },
+    {
+      "id": "michelangelo",
+      "name": "Michelangelo",
+      "set": "Teenage Mutant Ninja Turtles",
+      "foundational_mechanism": "Draws after attacks with a tiny hand",
+      "range": "Hybrid",
+      "image_url": "/static/pics/michelangelo.webp",
+      "major": [
+        "combo"
+      ],
+      "minor": [
+        "resource_management",
+        "rushdown"
+      ],
+      "club_key": "michelangelo"
+    },
+    {
+      "id": "shredder",
+      "name": "Shredder",
+      "set": "TMNT: Shredder vs. Krang",
+      "foundational_mechanism": "Foot Soldier deployment and adjacency attacks",
+      "range": "Reach",
+      "image_url": "/static/pics/shredder.webp",
+      "major": [
+        "swarm"
+      ],
+      "minor": [
+        "control",
+        "rushdown"
+      ],
+      "club_key": "shredder"
+    },
+    {
+      "id": "krang",
+      "name": "Krang",
+      "set": "TMNT: Shredder vs. Krang",
+      "foundational_mechanism": "Doomsday machines and die-roll bonuses",
+      "range": "Melee",
+      "image_url": "/static/pics/krang.webp",
+      "major": [
+        "burst"
+      ],
+      "minor": [
+        "resource_management",
+        "attrition"
+      ],
+      "club_key": "krang"
+    },
+    {
+      "id": "wyatt_earp",
+      "name": "Wyatt Earp",
+      "set": "Stars and Stripes",
+      "foundational_mechanism": "Showdown: winning combat chains draws, attacks or moves",
+      "range": "Ranged",
+      "image_url": "/static/pics/wyatt_earp.webp",
+      "major": [
+        "burst"
+      ],
+      "minor": [
+        "ranged_pressure",
+        "combo",
+        "swarm"
+      ],
+      "club_key": "wyatt-earp"
+    },
+    {
+      "id": "john_henry",
+      "name": "John Henry",
+      "set": "Stars and Stripes",
+      "foundational_mechanism": "Lays track tokens that make movement free",
+      "range": "Melee",
+      "image_url": "/static/pics/john_henry.webp",
+      "major": [
+        "rushdown"
+      ],
+      "minor": [
+        "burst",
+        "control",
+        "attrition"
+      ],
+      "club_key": "john-henry"
+    },
+    {
+      "id": "george_washington",
+      "name": "George Washington",
+      "set": "Stars and Stripes",
+      "foundational_mechanism": "Ruse tokens bluff attacks or force random discards",
+      "range": "Melee",
+      "image_url": "/static/pics/george_washington.webp",
+      "major": [
+        "control"
+      ],
+      "minor": [
+        "disruption",
+        "burst",
+        "swarm"
+      ],
+      "club_key": "george-washington"
+    },
+    {
+      "id": "rosie_the_riveter",
+      "name": "Rosie the Riveter",
+      "set": "Stars and Stripes",
+      "foundational_mechanism": "Mech suit upgrades activate each turn, then reset",
+      "range": "Melee",
+      "image_url": "/static/pics/rosie_the_riveter.webp",
+      "major": [
+        "scaling"
+      ],
+      "minor": [
+        "burst",
+        "rushdown",
+        "swarm"
+      ],
+      "club_key": "rosie-the-riveter"
     }
   ],
   "playstyle_definitions": {
