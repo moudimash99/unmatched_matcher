@@ -53,12 +53,69 @@ def test_set_mode_adjusts_weights_and_clamps(engine):
     assert engine.WEIGHT_FIT == pytest.approx(0.6)
 
 
-def test_get_win_rate_defaults_to_even_when_missing(engine):
-    assert engine._get_win_rate("alpha", "unknown") == 50.0
+def test_get_win_rate_returns_none_when_missing(engine):
+    assert engine._get_win_rate("alpha", "unknown") is None
 
 
 def test_get_win_rate_handles_reverse_lookup(engine):
     assert engine._get_win_rate("bravo", "alpha") == 40.0
+
+
+def test_get_win_rate_handles_invalid_values(sample_fighters):
+    sentinel_matrix = {"alpha": {"bravo": -2}}
+    local_engine = MatchupEngine(sample_fighters, sentinel_matrix)
+    assert local_engine._get_win_rate("alpha", "bravo") is None
+    assert local_engine._get_win_rate("bravo", "alpha") is None
+
+
+def test_get_games_played_handles_direct_and_reverse_lookup(sample_fighters):
+    local_engine = MatchupEngine(
+        sample_fighters,
+        {"alpha": {"bravo": 60.0}},
+        {"alpha": {"bravo": 12}},
+    )
+    assert local_engine._get_games_played("alpha", "bravo") == 12
+    assert local_engine._get_games_played("bravo", "alpha") == 12
+
+
+def test_get_games_played_returns_none_when_missing_or_invalid(sample_fighters):
+    local_engine = MatchupEngine(
+        sample_fighters,
+        {"alpha": {"bravo": 60.0}},
+        {"alpha": {"bravo": -1}},
+    )
+    assert local_engine._get_games_played("alpha", "charlie") is None
+    assert local_engine._get_games_played("alpha", "bravo") is None
+
+
+def test_calculate_matchup_fairness_is_minimum_when_missing(engine):
+    assert engine._calculate_matchup_fairness("alpha", "unknown") == pytest.approx(0.0)
+
+
+def test_calculate_matchup_fairness_penalizes_low_sample_size(sample_fighters):
+    local_engine = MatchupEngine(
+        sample_fighters,
+        {"alpha": {"bravo": 60.0}},
+        {"alpha": {"bravo": 2}},
+    )
+
+    # 2 games: the 60% is blended toward the expectation (50%, bravo has no overall
+    # data), then fairness is scaled by the log confidence for 2 games.
+    c = MatchupEngine.confidence(2)
+    estimate = c * 60.0 + (1 - c) * 50.0
+    expected_fairness = (1.0 - abs(estimate - 50.0) / 50.0) * c
+    assert local_engine._calculate_matchup_fairness("alpha", "bravo") == pytest.approx(expected_fairness)
+    assert local_engine._calculate_matchup_fairness("alpha", "bravo") < 0.8
+
+
+def test_calculate_matchup_fairness_no_penalty_at_ten_games(sample_fighters):
+    local_engine = MatchupEngine(
+        sample_fighters,
+        {"alpha": {"bravo": 60.0}},
+        {"alpha": {"bravo": 10}},
+    )
+
+    assert local_engine._calculate_matchup_fairness("alpha", "bravo") == pytest.approx(0.8)
 
 
 def test_individual_fit_accounts_for_range_and_tags(engine, sample_fighters):
@@ -96,11 +153,13 @@ def expanded_fighters():
 @pytest.fixture
 def expanded_win_matrix(expanded_fighters):
     # Favor alpha over defensive, ensure non-symmetric entries exist
+    # Every pair has data: unknown matchups rank at minimum fairness, which
+    # would otherwise push a data-less fighter (echo) out of every pool.
     return {
-        "alpha": {"bravo": 65.0, "delta": 60.0},
-        "bravo": {"alpha": 35.0, "charlie": 55.0},
-        "charlie": {"delta": 52.0},
-        # missing entries default to 50 via _get_win_rate
+        "alpha": {"bravo": 65.0, "charlie": 50.0, "delta": 60.0, "echo": 50.0},
+        "bravo": {"alpha": 35.0, "charlie": 55.0, "delta": 50.0, "echo": 50.0},
+        "charlie": {"delta": 52.0, "echo": 50.0},
+        "delta": {"echo": 50.0},
     }
 
 
@@ -124,6 +183,24 @@ def test_generate_batch_respects_repeat_limits(expanded_engine, expanded_fighter
 
     assert all(count <= 3 for count in p1_counts.values())
     assert all(count <= 3 for count in opp_counts.values())
+
+
+def test_generate_fair_pools_with_two_fighters_and_invalid_rate():
+    fighters = [
+        {"id": "a", "range": "Melee", "major": [], "minor": []},
+        {"id": "b", "range": "Melee", "major": [], "minor": []},
+    ]
+    engine = MatchupEngine(fighters, {"a": {"b": -2}})
+
+    result = engine.generate_fair_pools(fighters, p1_tags=set(), opp_tags=set())
+
+    assert result is not None
+    p1_ids = {f["id"] for f in result["p1_pool"]}
+    opp_ids = {f["id"] for f in result["opp_pool"]}
+    assert len(p1_ids) == 1
+    assert len(opp_ids) == 1
+    assert p1_ids != opp_ids
+    assert p1_ids.union(opp_ids) == {"a", "b"}
 
 
 def test_generate_fair_pools_returns_highest_fit(expanded_engine, expanded_fighters):
@@ -154,14 +231,14 @@ def test_generate_fair_pools_returns_highest_fit(expanded_engine, expanded_fight
 
 
 def test_sentinel_win_rate_is_treated_as_unknown(sample_fighters):
-    # -2 is the "no data" sentinel written by win_calc.py
+    # -2 is the "no data" sentinel written by fetch_stats.py / win_calc.ipynb
     engine = MatchupEngine(sample_fighters, {
         "alpha": {"bravo": -2, "charlie": -2},
         "charlie": {"alpha": 70.0},
     })
 
     assert engine.lookup_win_rate("alpha", "bravo") is None
-    assert engine._get_win_rate("alpha", "bravo") == 50.0
+    assert engine.estimate_win_rate("alpha", "bravo") == 50.0
     # Falls back to the reversed entry instead of returning the sentinel
     assert engine._get_win_rate("alpha", "charlie") == pytest.approx(30.0)
     assert "bravo" in engine.fairness_map["alpha"]
@@ -245,3 +322,52 @@ def test_with_mode_does_not_touch_the_shared_engine(engine):
     fair = engine.with_mode("fairness")
     assert fair.WEIGHT_FAIRNESS == pytest.approx(0.7)
     assert engine.WEIGHT_FAIRNESS == pytest.approx(0.4)
+
+
+# ==========================================
+# THEME FILTERING TESTS
+# ==========================================
+
+@pytest.fixture
+def themed_fighters():
+    return [
+        {"id": "hero_a", "name": "Hero A", "set": "Heroes", "themes": ["superhero"], "range": "Melee", "major": [], "minor": []},
+        {"id": "monster_a", "name": "Monster A", "set": "Monsters", "themes": ["halloween", "monster"], "range": "Melee", "major": [], "minor": []},
+        {"id": "legend_a", "name": "Legend A", "set": "Legends", "themes": ["legend"], "range": "Melee", "major": [], "minor": []},
+        {"id": "multi_a", "name": "Multi A", "set": "Heroes", "themes": ["superhero", "halloween"], "range": "Melee", "major": [], "minor": []},
+    ]
+
+
+def _filter_by_themes(fighters, theme_filter):
+    """Mirrors the logic in app.get_available_fighters for theme filtering."""
+    if not theme_filter:
+        return fighters
+    return [f for f in fighters if any(t in theme_filter for t in f.get("themes", []))]
+
+
+def test_theme_filter_returns_only_matching_fighters(themed_fighters):
+    result = _filter_by_themes(themed_fighters, ["halloween"])
+    ids = [f["id"] for f in result]
+    assert "monster_a" in ids
+    assert "multi_a" in ids
+    assert "hero_a" not in ids
+    assert "legend_a" not in ids
+
+
+def test_theme_filter_multiple_themes(themed_fighters):
+    result = _filter_by_themes(themed_fighters, ["superhero", "legend"])
+    ids = [f["id"] for f in result]
+    assert "hero_a" in ids
+    assert "legend_a" in ids
+    assert "multi_a" in ids  # has superhero
+    assert "monster_a" not in ids
+
+
+def test_theme_filter_empty_returns_all(themed_fighters):
+    result = _filter_by_themes(themed_fighters, [])
+    assert len(result) == len(themed_fighters)
+
+
+def test_theme_filter_no_matches_returns_empty(themed_fighters):
+    result = _filter_by_themes(themed_fighters, ["witcher"])
+    assert result == []

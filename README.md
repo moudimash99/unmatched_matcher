@@ -10,9 +10,10 @@ python fetch_stats.py            # all sources
 python fetch_stats.py tabletopleague   # or: unmatchedru
 ```
 
-This writes `input/win_matrix.json`, `input/merged_games.json` and `input/stats_meta.json`.
+This writes `input/merged_win_pct.json`, `input/merged_games.json` and `input/stats_meta.json`.
 The `Refresh win-rate stats` GitHub workflow does this weekly and opens a PR when the numbers change
 (enable *Settings → Actions → Allow GitHub Actions to create pull requests*).
+`scripts/win_calc.ipynb` builds the same two matrices offline from `input/Unmatched_Stats.xlsx`.
 
 A matchup's own record is fully trusted from 10 games on. Below that, confidence climbs
 logarithmically from 0 and the estimate is blended with what both fighters' overall win rates

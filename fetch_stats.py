@@ -4,7 +4,7 @@ which aggregates Tabletop League (prev. UMLeague) and UnmatchedRu games.
 
 Writes:
   - input/merged_games.json : games[f1][f2] = games played
-  - input/win_matrix.json   : win[f1][f2]   = f1's win % vs f2, or -2 if no data
+  - input/merged_win_pct.json : win[f1][f2] = f1's win % vs f2, or -2 if no data
   - input/stats_meta.json   : when the stats were fetched, from which source, game count
 
 Each fighter's hero key on the site is its "club_key" in input/fighters.json.
@@ -116,8 +116,8 @@ if __name__ == "__main__":
     with open("input/merged_games.json", "w", encoding="utf-8") as f:
         json.dump(merged_games, f, indent=2, ensure_ascii=False, sort_keys=True)
 
-    # The app reads its win-rate matrix from input/win_matrix.json
-    with open("input/win_matrix.json", "w", encoding="utf-8") as f:
+    # The app reads its win-rate matrix from input/merged_win_pct.json
+    with open("input/merged_win_pct.json", "w", encoding="utf-8") as f:
         json.dump(win_pct, f, indent=2, ensure_ascii=False, sort_keys=True)
 
     with open("input/stats_meta.json", "w", encoding="utf-8") as f:

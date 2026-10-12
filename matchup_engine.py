@@ -50,12 +50,12 @@ class MatchupEngine:
 
 
 
-    def __init__(self, fighters_db, win_rate_matrix, games_matrix=None):
+    def __init__(self, fighters_db, win_rate_matrix, games_played_matrix=None):
         self.fighters_db = fighters_db
         self.win_rate_matrix = win_rate_matrix
-        # games_matrix[a][b] = games played between a and b. Without it, every
-        # known win rate is trusted fully (no confidence weighting).
-        self.games_matrix = games_matrix
+        # games_played_matrix[a][b] = games played between a and b. Without it,
+        # every known win rate is trusted fully (no confidence weighting).
+        self.games_matrix = games_played_matrix
         self.WEIGHT_FIT = 0.6
         self.WEIGHT_FAIRNESS = 0.4
 
@@ -162,10 +162,8 @@ class MatchupEngine:
         """Games recorded between A and B, or None when no games matrix was given."""
         if self.games_matrix is None:
             return None
-        n = self.games_matrix.get(id_a, {}).get(id_b)
-        if n is None:
-            n = self.games_matrix.get(id_b, {}).get(id_a, 0)
-        return n
+        n = self._get_games_played(id_a, id_b)
+        return 0 if n is None else int(n)
 
     @staticmethod
     def confidence(games):
@@ -186,7 +184,7 @@ class MatchupEngine:
             total, weighted = 0, 0.0
             for opp_id, n in self.games_matrix.get(fid, {}).items():
                 wr = self.lookup_win_rate(fid, opp_id)
-                if opp_id != fid and n and wr is not None:
+                if opp_id != fid and isinstance(n, (int, float)) and n > 0 and wr is not None:
                     total += n
                     weighted += wr * n
             stats[fid] = (weighted / total if total else None, total)
@@ -224,10 +222,25 @@ class MatchupEngine:
 
     def _get_win_rate(self, id_a, id_b):
         """
-        Win rate used for scoring: the confidence-weighted estimate.
-        Unknown matchups fall back to the expected rate (50.0 without overall data).
+        Raw win rate from the matrix (A vs B, else inverted B vs A).
+        Returns None if matchup data is missing or invalid.
         """
-        return self.estimate_win_rate(id_a, id_b)
+        return self.lookup_win_rate(id_a, id_b)
+
+    def _get_games_played(self, id_a, id_b):
+        """Safely gets games-played count from matrix (A vs B or B vs A)."""
+        games_matrix = self.games_matrix or {}
+        if id_a in games_matrix and id_b in games_matrix[id_a]:
+            games = games_matrix[id_a][id_b]
+            if isinstance(games, (int, float)) and games >= 0:
+                return float(games)
+            return None
+        if id_b in games_matrix and id_a in games_matrix[id_b]:
+            games = games_matrix[id_b][id_a]
+            if isinstance(games, (int, float)) and games >= 0:
+                return float(games)
+            return None
+        return None
 
     def _build_fairness_map(self):
         """Generates the static map for the Fair Pool algorithm."""
@@ -238,8 +251,9 @@ class MatchupEngine:
             for id_b in all_ids:
                 if id_a == id_b: continue
 
-                wr = self._get_win_rate(id_a, id_b)
-                # Pools exclude lopsided matchups (by the confidence-weighted estimate)
+                wr = self.estimate_win_rate(id_a, id_b)
+                # Pools exclude lopsided matchups (by the confidence-weighted estimate);
+                # missing data falls back to the expectation, so it never blocks pools alone.
                 if abs(wr - 50.0) <= BLOWOUT_MARGIN:
                     fair_map[id_a].add(id_b)
         return fair_map
@@ -328,9 +342,8 @@ class MatchupEngine:
                 continue
             
             # Fairness score
-            win_rate = self._get_win_rate(fighter['id'], opp['id'])
-            dist_from_50 = abs(win_rate - 50.0)
-            fairness = 1.0 - (dist_from_50 / 50.0)
+            win_rate = self.estimate_win_rate(fighter['id'], opp['id'])
+            fairness = self._calculate_matchup_fairness(fighter['id'], opp['id'])
             
             # Opponent tag and range fit
             tag_fit = self._calculate_individual_fit(opp, opponent_tags, opponent_range)
@@ -356,9 +369,8 @@ class MatchupEngine:
         dual_fit = (score_p1 + score_opp) / 2.0
 
         # 2. Fairness Score (Target 50%)
-        win_rate = self._get_win_rate(p1_fighter['id'], opp_fighter['id'])
-        dist_from_50 = abs(win_rate - 50.0)
-        fairness = 1.0 - (dist_from_50 / 50.0)
+        win_rate = self.estimate_win_rate(p1_fighter['id'], opp_fighter['id'])
+        fairness = self._calculate_matchup_fairness(p1_fighter['id'], opp_fighter['id'])
 
         total_score = (self.WEIGHT_FIT * dual_fit) + (self.WEIGHT_FAIRNESS * fairness)
         return total_score, win_rate
@@ -428,11 +440,16 @@ class MatchupEngine:
         """
         Calculate fairness score for a single matchup.
         
-        Fairness is measured as proximity to 50% win rate (1.0 = perfectly fair).
+        Fairness is measured as proximity of the confidence-weighted estimate
+        to 50% (1.0 = perfectly fair), then scaled by confidence so unproven
+        matchups rank lower: 0 with no data, full from FULL_CONFIDENCE_GAMES games.
         """
-        win_rate = self._get_win_rate(fighter_id, opponent_id)
-        dist_from_50 = abs(win_rate - 50.0)
-        return 1.0 - (dist_from_50 / 50.0)
+        if self._get_win_rate(fighter_id, opponent_id) is None:
+            # Unknown matchup data should rank at minimum fairness.
+            return 0.0
+        dist_from_50 = abs(self.estimate_win_rate(fighter_id, opponent_id) - 50.0)
+        fairness = 1.0 - (dist_from_50 / 50.0)
+        return fairness * self.confidence(self.games_played(fighter_id, opponent_id))
     
     def _calculate_pool_fitness(self, pool_a_ids, pool_b_ids, p1_score_map, opp_score_map, pool_a_size, pool_b_size):
         """
@@ -490,19 +507,20 @@ class MatchupEngine:
         fighters are available to fill both.
         Uses Set Intersection for O(1) fairness validation.
         """
-        P1_POOL_SIZE = self.P1_POOL_SIZE
-        OPP_POOL_SIZE = self.OPP_POOL_SIZE
-
-        # 0. Safety Check: Need at least one fighter per side
-        if len(available_fighters) < 2:
+        # 0. Safety Check: Need at least 2 fighters for a matchup
+        n = len(available_fighters)
+        if n < 2:
             return None
 
-        # Pools are disjoint, so shrink them (larger first) until both fit
-        while P1_POOL_SIZE + OPP_POOL_SIZE > len(available_fighters):
-            if P1_POOL_SIZE >= OPP_POOL_SIZE:
-                P1_POOL_SIZE -= 1
-            else:
-                OPP_POOL_SIZE -= 1
+        # CONFIGURE POOL SIZES (scaled down proportionally when fewer fighters are available)
+        total_default = self.P1_POOL_SIZE + self.OPP_POOL_SIZE
+        if n < total_default:
+            p1_ratio = self.P1_POOL_SIZE / total_default
+            P1_POOL_SIZE = max(1, min(self.P1_POOL_SIZE, round(n * p1_ratio)))
+            OPP_POOL_SIZE = max(1, min(self.OPP_POOL_SIZE, n - P1_POOL_SIZE))
+        else:
+            P1_POOL_SIZE = self.P1_POOL_SIZE
+            OPP_POOL_SIZE = self.OPP_POOL_SIZE
 
         # 1. Score ALL fighters individually (With Range)
         p1_scores = []

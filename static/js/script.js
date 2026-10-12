@@ -28,13 +28,20 @@ const CONSENT_COOKIE_KEY = 'ufc_cookie_consent';
 const INTRO_SEEN_KEY = 'ufc_intro_seen';
 const MATCHUP_MODE_HELP_SEEN_KEY = 'ufc_matchup_mode_help_seen';
 const ADVANCED_MODE_HELP_SEEN_KEY = 'ufc_advanced_mode_help_seen';
+const PLAYSTYLE_HELP_SEEN_KEY = 'ufc_playstyle_help_seen';
+const THEME_FILTER_HELP_SEEN_KEY = 'ufc_theme_filter_help_seen';
 
 /*************************** ANALYTICS & CONSENT ***************************/
 let analyticsEnabled = false;
+let sessionMatchupCount = 0;
 
 function enableAnalytics() {
     analyticsEnabled = true;
     window.ufcAnalyticsEvents = window.ufcAnalyticsEvents || [];
+    if (typeof gtag === 'function') {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+        gtag('event', 'page_view');
+    }
     recordAnalytics('analytics_enabled', { source: 'cookie_accept' });
 }
 
@@ -86,15 +93,79 @@ document.addEventListener('DOMContentLoaded', () => {
     initCookieConsent();
     setupSetSelection();
     setupPlaystyleToggles();
+    setupPlaystyleHelpButtons();
     setupP1SelectionToggle();
     setupModeControls();
+    setupThemeChips();
     setupModalCloseHandlers(); // Set up all modal close handlers first
     setupIntroModal();
     setupAnalyticsListeners();
     annotateLockButtons();
     setupResultCardActions();
     setupShareButton();
+    trackMatchupResult();
 });
+
+function setupThemeChips() {
+    const panel = qs('#theme-filter-panel');
+    const toggleBtn = qs('#toggle-theme-filter-btn');
+
+    // Collapse/expand toggle — mirrors Matchup Mode behaviour
+    if (panel && toggleBtn) {
+        // Ensure it starts collapsed (also applied via HTML class)
+        panel.classList.add('collapsed');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+
+        // If a theme chip is already checked (POST back) expand the panel so the state is visible
+        const anyChecked = qsa('.theme-chip input[type="checkbox"]:checked').length > 0;
+        if (anyChecked) {
+            panel.classList.remove('collapsed');
+            toggleBtn.setAttribute('aria-expanded', 'true');
+            toggleBtn.textContent = '⬆ Hide';
+        }
+
+        toggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const isCollapsed = panel.classList.contains('collapsed');
+            if (isCollapsed) {
+                panel.classList.remove('collapsed');
+                toggleBtn.setAttribute('aria-expanded', 'true');
+                toggleBtn.textContent = '⬆ Hide';
+                // Show help popup the first time the panel is opened
+                showThemeFilterHelpOnce();
+                recordAnalytics('panel_toggle', { panel: 'theme_filter', expanded: true });
+            } else {
+                panel.classList.add('collapsed');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+                toggleBtn.textContent = '⬇ Show';
+                recordAnalytics('panel_toggle', { panel: 'theme_filter', expanded: false });
+            }
+        });
+    }
+
+    const chips = qsa('.theme-chip');
+    chips.forEach(chip => {
+        const cb = chip.querySelector('input[type="checkbox"]');
+        if (!cb) return;
+        // Sync active class on change
+        cb.addEventListener('change', () => {
+            chip.classList.toggle('active', cb.checked);
+        });
+    });
+
+    // Wire up theme filter help button (always shows the modal)
+    const themeHelpBtn = qs('#theme-filter-help-btn');
+    if (themeHelpBtn) {
+        themeHelpBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modal = qs('#theme-filter-help-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                recordAnalytics('modal_view', { modal: 'theme_filter_help' });
+            }
+        });
+    }
+}
 
 /*************************** UI SETUP FUNCTIONS  ***************************/
 function setupSetSelection() {
@@ -104,9 +175,15 @@ function setupSetSelection() {
     const toggleBtn = qs('#toggle-set-selection-btn');
     const SELECT_COLLAPSE_KEY = 'ufs_sets_collapsed';
     const ALL_SETS_KEY = 'ufs_owned_sets';
+    const DEFAULT_SETS_KEY = 'ufs_default_owned_sets';
     const selectAllBtn = qs('#select-all-sets-btn');
     const deselectAllBtn = qs('#deselect-all-sets-btn');
+    const saveDefaultBtn = qs('#save-default-sets-btn');
+    const loadDefaultBtn = qs('#load-default-sets-btn');
     const checkboxes = qsa('#set-checkboxes input[type="checkbox"]');
+    const getCheckedSetValues = () => checkboxes
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
     const updateToggleButton = (collapsed) => {
         if (!toggleBtn) return;
         toggleBtn.setAttribute('aria-expanded', String(!collapsed));
@@ -122,6 +199,7 @@ function setupSetSelection() {
         const collapsed = wrapper.classList.toggle('collapsed');
         updateToggleButton(collapsed);
         setCookie(SELECT_COLLAPSE_KEY, collapsed ? '1' : '0');
+        recordAnalytics('panel_toggle', { panel: 'owned_sets', expanded: !collapsed });
     });
     // Restore checkboxes from cookie (JSON)
     const storedSets = getCookie(ALL_SETS_KEY);
@@ -139,10 +217,24 @@ function setupSetSelection() {
 
     // Persist checkbox state on change (JSON)
     const persist = () => {
-        const checked = checkboxes
-            .filter(cb => cb.checked)
-            .map(cb => cb.value);
-        setCookie(ALL_SETS_KEY, JSON.stringify(checked));
+        setCookie(ALL_SETS_KEY, JSON.stringify(getCheckedSetValues()));
+    };
+
+    const getSavedDefaultSets = () => {
+        const storedDefault = getCookie(DEFAULT_SETS_KEY);
+        if (!storedDefault) return [];
+        try {
+            const parsed = JSON.parse(storedDefault);
+            return Array.isArray(parsed) ? parsed : [];
+        } catch (e) {
+            console.error("Could not parse default owned sets cookie:", e);
+            return [];
+        }
+    };
+
+    const updateDefaultButtons = () => {
+        if (!loadDefaultBtn) return;
+        loadDefaultBtn.disabled = getSavedDefaultSets().length === 0;
     };
 
     checkboxes.forEach(cb => cb.addEventListener('change', () => {
@@ -159,6 +251,24 @@ function setupSetSelection() {
         persist();
         recordAnalytics('sets_deselect_all', { total: checkboxes.length });
     });
+
+    saveDefaultBtn?.addEventListener('click', () => {
+        setCookie(DEFAULT_SETS_KEY, JSON.stringify(getCheckedSetValues()));
+        updateDefaultButtons();
+        recordAnalytics('sets_default_saved', { total: getCheckedSetValues().length });
+    });
+
+    loadDefaultBtn?.addEventListener('click', () => {
+        const defaultSetValues = new Set(getSavedDefaultSets());
+        if (!defaultSetValues.size) return;
+        checkboxes.forEach(cb => {
+            cb.checked = defaultSetValues.has(cb.value);
+        });
+        persist();
+        recordAnalytics('sets_default_loaded', { total: defaultSetValues.size });
+    });
+
+    updateDefaultButtons();
 }
 
 function setupPlaystyleToggles() {
@@ -169,6 +279,29 @@ function setupPlaystyleToggles() {
         btn.addEventListener('click', () => {
             const collapsed = target.classList.toggle('collapsed');
             btn.setAttribute('aria-expanded', String(!collapsed));
+            if (!collapsed) {
+                showPlaystyleHelpOnce();
+            }
+        });
+    });
+}
+
+function showPlaystyleHelpOnce() {
+    const modal = qs('#playstyle-help-modal');
+    if (!modal) return;
+    if (window.localStorage && localStorage.getItem(PLAYSTYLE_HELP_SEEN_KEY) === '1') return;
+    modal.classList.remove('hidden');
+    recordAnalytics('modal_view', { modal: 'playstyle_help', first_time: true });
+}
+
+function setupPlaystyleHelpButtons() {
+    const modal = qs('#playstyle-help-modal');
+    if (!modal) return;
+    qsa('.playstyle-help-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.remove('hidden');
+            recordAnalytics('modal_view', { modal: 'playstyle_help' });
         });
     });
 }
@@ -222,10 +355,12 @@ function setupModeControls() {
                 modeToggleBtn.textContent = '⬆ Hide';
                 // Show the matchup mode help modal when opening
                 showMatchupModeHelpOnce();
+                recordAnalytics('panel_toggle', { panel: 'matchup_mode', expanded: true });
             } else {
                 modePanel.classList.add('collapsed');
                 modeToggleBtn.setAttribute('aria-expanded', 'false');
                 modeToggleBtn.textContent = '⬇ Show';
+                recordAnalytics('panel_toggle', { panel: 'matchup_mode', expanded: false });
             }
         });
     }
@@ -237,6 +372,7 @@ function setupModeControls() {
             const modal = qs('#matchup-mode-help-modal');
             if (modal) {
                 modal.classList.remove('hidden');
+                recordAnalytics('modal_view', { modal: 'matchup_mode_help' });
             }
         });
     }
@@ -263,6 +399,7 @@ function setupModeControls() {
             const modal = qs('#advanced-mode-help-modal');
             if (modal) {
                 modal.classList.remove('hidden');
+                recordAnalytics('modal_view', { modal: 'advanced_mode_help' });
             }
         });
     }
@@ -314,6 +451,36 @@ function setupModalCloseHandlers() {
             }
         });
     }
+
+    // Playstyle help modal close handler
+    const playstyleHelpModal = qs('#playstyle-help-modal');
+    const playstyleHelpClose = qs('#playstyle-help-close');
+    if (playstyleHelpModal && playstyleHelpClose) {
+        playstyleHelpClose.addEventListener('click', () => {
+            playstyleHelpModal.classList.add('hidden');
+            try { localStorage.setItem(PLAYSTYLE_HELP_SEEN_KEY, '1'); } catch (e) { /* ignore */ }
+        });
+        // Also close when clicking the overlay backdrop
+        playstyleHelpModal.addEventListener('click', (e) => {
+            if (e.target === playstyleHelpModal) {
+                playstyleHelpModal.classList.add('hidden');
+                try { localStorage.setItem(PLAYSTYLE_HELP_SEEN_KEY, '1'); } catch (e) { /* ignore */ }
+            }
+        });
+    }
+    // Theme filter help modal close handler
+    const themeFilterHelpModal = qs('#theme-filter-help-modal');
+    const themeFilterHelpClose = qs('#theme-filter-help-close');
+    if (themeFilterHelpModal && themeFilterHelpClose) {
+        themeFilterHelpClose.addEventListener('click', () => {
+            themeFilterHelpModal.classList.add('hidden');
+            try {
+                localStorage.setItem(THEME_FILTER_HELP_SEEN_KEY, '1');
+            } catch (e) {
+                // ignore storage errors
+            }
+        });
+    }
 }
 
 function setupIntroModal() {
@@ -326,6 +493,7 @@ function setupIntroModal() {
         introHelpBtn.addEventListener('click', (e) => {
             e.preventDefault();
             introModal.classList.remove('hidden');
+            recordAnalytics('modal_view', { modal: 'intro' });
         });
         introHelpBtn.dataset.clickHandlerSetup = '1';
     }
@@ -336,14 +504,20 @@ function setupIntroModal() {
     }
 
     introModal.classList.remove('hidden');
+    recordAnalytics('modal_view', { modal: 'intro', first_time: true });
 }
 
 function setupAnalyticsListeners() {
     const generateBtn = qs('#generate-matchup-btn');
     generateBtn?.addEventListener('click', () => {
+        sessionMatchupCount++;
         recordAnalytics('generate_matchup', {
             locked_p1: !!qs('#current_locked_p1_id')?.value,
-            locked_opp: !!qs('#current_locked_opp_id')?.value
+            locked_opp: !!qs('#current_locked_opp_id')?.value,
+            mode: qs('input[name="mode"]:checked')?.value || 'discovery',
+            p1_selection_method: qs('#p1_selection_method')?.value || 'suggest',
+            owned_sets_count: qsa('#set-checkboxes input[type="checkbox"]:checked').length,
+            session_matchup_number: sessionMatchupCount
         });
     });
 
@@ -374,6 +548,29 @@ function setupAnalyticsListeners() {
     oppRange?.addEventListener('change', () => recordAnalytics('range_pref', { player: 'opp', range: oppRange.value }));
 }
 
+function trackMatchupResult() {
+    const p1Card = qs('#p1-main-suggestion');
+    const oppCard = qs('#opp-main-suggestion');
+    if (!p1Card || !oppCard) return;
+
+    const p1Id = extractFighterIdFromCard(p1Card);
+    const oppId = extractFighterIdFromCard(oppCard);
+    const p1Info = ALL_FIGHTERS_JS.find(f => f.id === p1Id);
+    const oppInfo = ALL_FIGHTERS_JS.find(f => f.id === oppId);
+    const entry = MATCHUPS[p1Id] && MATCHUPS[p1Id][oppId];
+
+    recordAnalytics('matchup_result_shown', {
+        p1_fighter_id: p1Id,
+        p1_fighter_name: p1Info?.name || p1Id,
+        opp_fighter_id: oppId,
+        opp_fighter_name: oppInfo?.name || oppId,
+        win_rate: entry ? entry[0] : null,
+        games_played: entry ? entry[1] : null,
+        p1_alternatives_count: qsa('[data-player-prefix="p1"].alternative-suggestion').length,
+        opp_alternatives_count: qsa('[data-player-prefix="opp"].alternative-suggestion').length
+    });
+}
+
 function showMatchupModeHelpOnce() {
     const modal = qs('#matchup-mode-help-modal');
     if (!modal) return;
@@ -383,6 +580,7 @@ function showMatchupModeHelpOnce() {
     }
 
     modal.classList.remove('hidden');
+    recordAnalytics('modal_view', { modal: 'matchup_mode_help', first_time: true });
 }
 
 function showAdvancedModeHelpOnce() {
@@ -394,6 +592,19 @@ function showAdvancedModeHelpOnce() {
     }
 
     modal.classList.remove('hidden');
+    recordAnalytics('modal_view', { modal: 'advanced_mode_help', first_time: true });
+}
+
+function showThemeFilterHelpOnce() {
+    const modal = qs('#theme-filter-help-modal');
+    if (!modal) return;
+
+    if (window.localStorage && localStorage.getItem(THEME_FILTER_HELP_SEEN_KEY) === '1') {
+        return;
+    }
+
+    modal.classList.remove('hidden');
+    recordAnalytics('modal_view', { modal: 'theme_filter_help', first_time: true });
 }
 
 /*************************** CORE INTERACTION LOGIC  ***************************/

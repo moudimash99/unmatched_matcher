@@ -27,17 +27,32 @@ def load_json_data(filename, default):
 
 FIGHTERS_DATA = load_json_data("input/fighters.json", {}).get("fighters", [])
 PLAYSTYLE_DEFINITIONS = load_json_data("input/fighters.json", {}).get("playstyle_definitions", {})
-WIN_MATRIX = load_json_data("input/win_matrix.json", {})
+# Build a single alphabetically-sorted dict merging major and minor definitions.
+# Major entries take precedence for type when a name appears in both.
+_ps_combined: dict = {}
+for _name, _desc in PLAYSTYLE_DEFINITIONS.get("minor", {}).items():
+    _ps_combined[_name] = {"desc": _desc, "type": "minor"}
+for _name, _desc in PLAYSTYLE_DEFINITIONS.get("major", {}).items():
+    _ps_combined[_name] = {"desc": _desc, "type": "major"}
+PLAYSTYLE_DEFINITIONS_COMBINED = dict(sorted(_ps_combined.items()))
+WIN_MATRIX = load_json_data("input/merged_win_pct.json", {})
 GAMES_MATRIX = load_json_data("input/merged_games.json", {})
 STATS_META = load_json_data("input/stats_meta.json", {})
 engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX, GAMES_MATRIX)
 
 CLUB_MATCHUP_URL = "https://www.the-unmatched.club/tools/matchups"
 
-# A fighter can ship in more than one box (e.g. Bruce Lee). Keep a single entry
-# per fighter and list every box it comes in under "sets".
+def get_fighter_sets(fighter):
+    """Returns a fighter's set values as a normalized list."""
+    sets = fighter.get("set", [])
+    if isinstance(sets, list):
+        return sets
+    return [sets] if sets else []
+
+# A fighter can ship in more than one box (e.g. Bruce Lee): one entry per
+# fighter, with every box it comes in listed under "set".
 for f in FIGHTERS_DATA:
-    f["sets"] = [f["set"]] + f.get("other_sets", [])
+    f["sets"] = get_fighter_sets(f)
     overall, total_games = engine.overall_stats.get(f["id"], (None, 0))
     f["overall_win_rate"] = None if overall is None else round(overall)
     f["total_games"] = total_games
@@ -51,13 +66,28 @@ MATCHUPS = {
     for a in FIGHTERS_DATA
 }
 
-ALL_SETS_LIST = sorted({s for f in FIGHTERS_DATA for s in f["sets"]})
+ALL_SETS_LIST = sorted({set_name for f in FIGHTERS_DATA for set_name in get_fighter_sets(f)})
 # Extract all unique playstyles from both major and minor
 all_playstyles_set = set()
 for f in FIGHTERS_DATA:
     all_playstyles_set.update(f.get("major", []))
     all_playstyles_set.update(f.get("minor", []))
 ALL_PLAYSTYLES = sorted(all_playstyles_set)
+
+# Extract all unique themes from fighters
+all_themes_set = set()
+for f in FIGHTERS_DATA:
+    all_themes_set.update(f.get("themes", []))
+ALL_THEMES = sorted(all_themes_set)
+
+# Human-readable theme labels
+THEME_LABELS = {
+    "halloween": "🎃 Halloween",
+    "superhero": "🦸 Superhero",
+    "legend": "⚔️ Legend",
+    "monster": "👹 Monster",
+    "film": "🎬 Film",
+}
 
 # Define Custom Sort Order for Range Dropdown
 RANGE_ORDER = ["Melee", "Reach", "Hybrid", "Ranged Assist", "Ranged"]
@@ -74,11 +104,18 @@ def find_fighter_by_id(fid):
     """Finds a fighter dictionary by its ID."""
     return next((f for f in FIGHTERS_DATA if f["id"] == fid), None)
 
-def get_available_fighters(owned_set_names):
-    """Returns a list of fighters from the owned sets."""
+def get_available_fighters(owned_set_names, theme_filter=None):
+    """Returns a list of fighters from the owned sets, optionally filtered by themes."""
     if not owned_set_names:
         return []
-    return [f for f in FIGHTERS_DATA if any(s in owned_set_names for s in f["sets"])]
+    owned_set_names_set = set(owned_set_names)
+    fighters = [
+        f for f in FIGHTERS_DATA
+        if any(set_name in owned_set_names_set for set_name in get_fighter_sets(f))
+    ]
+    if theme_filter:
+        fighters = [f for f in fighters if any(t in theme_filter for t in f.get("themes", []))]
+    return fighters
 
 
 def club_matchup_url(fighter_a, fighter_b):
@@ -90,8 +127,11 @@ def generate_suggestions(selected_data, engine=engine):
     results = {"p1_main": None, "p1_alternatives": [], "opp_main": None, "opp_alternatives": []}
     error = None
 
-    available = get_available_fighters(selected_data["owned_sets"])
+    theme_filter = selected_data.get("theme_filter")
+    available = get_available_fighters(selected_data["owned_sets"], theme_filter)
     if not available:
+        if theme_filter and get_available_fighters(selected_data["owned_sets"]):
+            return results, "No fighters match the selected theme(s) in your owned sets. Try selecting different themes or more sets."
         return results, "Please select at least one owned set."
 
     p1_tags = set(selected_data["p1_playstyles"])
@@ -224,6 +264,7 @@ def index():
         "locked_p1_id": None, "locked_opp_id": None,
         "mode": "discovery",
         "fairness_weight": None,
+        "theme_filter": [],
     }
     results_data = None
     error_message = None
@@ -257,6 +298,7 @@ def index():
             "locked_opp_id": request.form.get("current_locked_opp_id"),
             "mode": request.form.get("mode", "discovery"),
             "fairness_weight": request.form.get("fairness_weight", "").strip() or None,
+            "theme_filter": request.form.getlist("theme_filter"),
         })
 
         # Handle direct choices as implicit locks
@@ -292,6 +334,8 @@ def index():
         all_sets_list=ALL_SETS_LIST,
         all_playstyles=ALL_PLAYSTYLES,
         all_ranges=ALL_RANGES,
+        all_themes=ALL_THEMES,
+        theme_labels=THEME_LABELS,
         all_fighters_for_select=all_fighters_sorted,
         results=results_data,
         selected_data=selected_data,
@@ -299,7 +343,8 @@ def index():
         matchups=MATCHUPS,
         stats_meta=STATS_META,
         full_confidence_games=FULL_CONFIDENCE_GAMES,
-        club_matchup_url=CLUB_MATCHUP_URL
+        club_matchup_url=CLUB_MATCHUP_URL,
+        playstyle_definitions=PLAYSTYLE_DEFINITIONS_COMBINED
     )
 
 @app.route("/about")
