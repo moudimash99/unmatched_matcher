@@ -1,8 +1,10 @@
-from flask import Flask, render_template, request, send_from_directory, send_file
+from flask import Flask, render_template, request, send_from_directory, send_file, abort, Response
 from matchup_engine import MatchupEngine, FULL_CONFIDENCE_GAMES
+import insights
 import random
 import json
 import os
+from urllib.parse import unquote
 import glob
 from io import BytesIO
 from PIL import Image
@@ -38,6 +40,11 @@ PLAYSTYLE_DEFINITIONS_COMBINED = dict(sorted(_ps_combined.items()))
 WIN_MATRIX = load_json_data("input/merged_win_pct.json", {})
 GAMES_MATRIX = load_json_data("input/merged_games.json", {})
 STATS_META = load_json_data("input/stats_meta.json", {})
+HEROES = load_json_data("input/heroes.json", {})
+_PRICES_RAW = load_json_data("input/prices.json", {})
+PRICES = {k: v for k, v in _PRICES_RAW.items() if not k.startswith("_")}
+PRICES_META = _PRICES_RAW.get("_meta", {})
+UPCOMING_SETS = _PRICES_RAW.get("_upcoming", {})
 engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX, GAMES_MATRIX)
 
 CLUB_MATCHUP_URL = "https://www.the-unmatched.club/tools/matchups"
@@ -357,7 +364,173 @@ def robots_txt():
 
 @app.route("/sitemap.xml")
 def sitemap_xml():
-    return send_from_directory("static", "sitemap.xml", mimetype="application/xml")
+    pages = ["/", "/about", "/fighters", "/buy-next", "/tiers", "/counter", "/game-night", "/draft", "/collection", "/log"]
+    pages += [f"/fighter/{f['id']}" for f in FIGHTERS_DATA]
+    urls = "".join(f"<url><loc>https://unmatched.machaka.net{p}</loc></url>" for p in pages)
+    xml = f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>'
+    return Response(xml, mimetype="application/xml")
+
+
+# ---------------------------------------------------------
+# 5.  TOOL PAGES  ─────────────────────────────────────────
+# ---------------------------------------------------------
+HEATMAP_MAX = 40
+COLLECTION_COOKIE = "ufs_default_owned_sets"   # "My collection" (also the matcher's saved default)
+CURRENT_SETS_COOKIE = "ufs_owned_sets"         # the matcher's current selection
+
+
+def _sets_from_cookie(name):
+    raw = request.cookies.get(name)
+    if not raw:
+        return None
+    try:
+        sets = json.loads(unquote(raw))
+    except (ValueError, TypeError):
+        return None
+    return sets if isinstance(sets, list) else None
+
+
+def get_collection():
+    """
+    The visitor's owned sets: ?sets=… in the URL (shareable) wins, then the saved
+    collection cookie, then the matcher's current selection. Empty = nothing chosen.
+    """
+    sets = request.args.getlist("sets")
+    if not sets:
+        sets = _sets_from_cookie(COLLECTION_COOKIE) or _sets_from_cookie(CURRENT_SETS_COOKIE) or []
+    return [s for s in sets if s in ALL_SETS_LIST]
+
+
+def collection_fighters(collection):
+    """Owned fighters, or every fighter when no collection is set."""
+    if not collection:
+        return list(FIGHTERS_DATA)
+    return get_available_fighters(collection)
+
+
+def render_tool(template, js_matchups=False, **ctx):
+    """Renders a tool page; js_matchups embeds the full matchup table for page scripts (~150 KB)."""
+    return render_template(
+        template,
+        fighters_js=[{k: f[k] for k in ("id", "name", "sets", "range", "image_url", "club_key", "major", "minor",
+                                        "overall_win_rate", "total_games")} for f in FIGHTERS_DATA],
+        matchups=MATCHUPS,
+        js_matchups=js_matchups,
+        stats_meta=STATS_META,
+        prices_meta=PRICES_META,
+        full_confidence_games=FULL_CONFIDENCE_GAMES,
+        club_matchup_url=CLUB_MATCHUP_URL,
+        fair_band=insights.FAIR_BAND,
+        all_sets_list=ALL_SETS_LIST,
+        **ctx,
+    )
+
+
+@app.route("/collection")
+def collection_page():
+    collection = get_collection()
+    sets = []
+    for set_name in ALL_SETS_LIST:
+        sets.append({
+            "name": set_name,
+            "fighters": [f for f in FIGHTERS_DATA if set_name in f["sets"]],
+            "price": PRICES.get(set_name),
+        })
+    return render_tool("collection.html", collection=collection, sets=sets)
+
+
+@app.route("/fighters")
+def fighters_page():
+    collection = get_collection()
+    fighters = sorted(FIGHTERS_DATA, key=lambda f: f["name"])
+    return render_tool("fighters.html", collection=collection, fighters=fighters)
+
+
+@app.route("/fighter/<fighter_id>")
+def fighter_page(fighter_id):
+    fighter = find_fighter_by_id(fighter_id)
+    if not fighter:
+        abort(404)
+    collection = get_collection()
+    rows = insights.fighter_matchups(engine, fighter, FIGHTERS_DATA)
+    best, worst = insights.best_and_worst(rows)
+    hero = HEROES.get(fighter_id)
+    return render_tool(
+        "fighter.html",
+        collection=collection,
+        fighter=fighter,
+        hero=hero,
+        deck=insights.deck_summary(hero["deck"]) if hero else None,
+        rows=rows,
+        best=best,
+        worst=worst,
+        prices={s: PRICES.get(s) for s in fighter["sets"]},
+    )
+
+
+@app.route("/buy-next")
+def buy_next_page():
+    collection = get_collection()
+    sort = request.args.get("sort", "fair")
+    in_stock_only = request.args.get("in_stock") == "1"
+    rows = insights.sort_buy_rows(
+        insights.buy_next(engine, FIGHTERS_DATA, collection, PRICES), sort, in_stock_only)
+    return render_tool("buy_next.html", collection=collection, rows=rows, sort=sort,
+                       in_stock_only=in_stock_only, upcoming=UPCOMING_SETS)
+
+
+@app.route("/tiers")
+def tiers_page():
+    collection = get_collection()
+    fighters = collection_fighters(collection)
+    rows = insights.tier_list(engine, fighters)
+    # A full 70+ fighter heatmap is ~1.4 MB of HTML; only draw it for collection-sized lists
+    heatmap = [r["fighter"] for r in rows] if len(rows) <= HEATMAP_MAX else []
+    return render_tool("tiers.html", collection=collection, rows=rows, heatmap=heatmap)
+
+
+@app.route("/counter")
+def counter_page():
+    collection = get_collection()
+    target = find_fighter_by_id(request.args.get("vs"))
+    rows = insights.counter_picks(engine, target, collection_fighters(collection)) if target else []
+    return render_tool("counter.html", collection=collection, target=target, rows=rows,
+                       all_fighters=sorted(FIGHTERS_DATA, key=lambda f: f["name"]))
+
+
+@app.route("/game-night")
+def game_night_page():
+    collection = get_collection()
+    fighters = collection_fighters(collection)
+    mode = request.args.get("mode", "ffa")
+    try:
+        players = max(2, min(6, int(request.args.get("players", 4))))
+    except ValueError:
+        players = 4
+    names = [n.strip() for n in request.args.get("names", "").split(",") if n.strip()]
+    result = None
+    if request.args.get("go"):
+        if mode == "2v2":
+            result = insights.teams_2v2(engine, fighters)
+        else:
+            result = insights.game_night(engine, fighters, players)
+    return render_tool("game_night.html", collection=collection, mode=mode, players=players,
+                       names=names, result=result, pool_size=len(fighters))
+
+
+@app.route("/draft")
+def draft_page():
+    collection = get_collection()
+    pool = sorted(collection_fighters(collection), key=lambda f: f["name"])
+    return render_tool("draft.html", js_matchups=True, collection=collection, pool=pool)
+
+
+@app.route("/log")
+def log_page():
+    collection = get_collection()
+    return render_tool("log.html", js_matchups=True, collection=collection,
+                       pool=sorted(collection_fighters(collection), key=lambda f: f["name"]),
+                       all_fighters=sorted(FIGHTERS_DATA, key=lambda f: f["name"]))
 
 # ---------------------------------------------------------
 # 5.  RUN  ────────────────────────────────────────────────

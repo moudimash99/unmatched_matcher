@@ -1,0 +1,11 @@
+{% if collection %}
+<div class="collection-banner">
+    <span>📦 Using <strong>your collection</strong>: {{ collection | length }} set{{ '' if collection | length == 1 else 's' }}</span>
+    <a href="/collection">Edit collection</a>
+</div>
+{% else %}
+<div class="collection-banner empty">
+    <span>📦 No collection saved yet, so {{ empty_collection_note | default("this shows <strong>every fighter</strong>.") | safe }}</span>
+    <a class="btn small" href="/collection">Set up my collection</a>
+</div>
+{% endif %}

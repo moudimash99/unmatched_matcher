@@ -45,9 +45,11 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tools.css') }}">
 </head>
 
 <body>
+{% include "_nav.html" %}
 
 {% macro render_fighter_card(fighter, is_main, player_prefix, locked_id, vs_fighter) %}
     {% if fighter %}
@@ -140,7 +142,7 @@
         </div>
         <div class="set-selection collapsed">
             <div class="set-selection-header">
-                <h3>Owned Sets</h3>
+                <h3>Owned Sets <a class="manage-collection-link" href="/collection">manage collection →</a></h3>
                 <div class="set-selection-controls">
                     <button id="save-default-sets-btn" type="button" class="set-quick-action-btn">Save Default</button>
                     <button id="load-default-sets-btn" type="button" class="set-quick-action-btn">Use Default</button>

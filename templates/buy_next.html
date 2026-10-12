@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}What Unmatched Set Should I Buy Next? – Unmatched Fighter Chooser{% endblock %}
+{% block description %}See which Unmatched set adds the most fair matchups, new playstyles and ranges to your collection, with current prices and stock.{% endblock %}
+{% block heading %}What should I buy next?{% endblock %}
+{% block subheading %}<p>What each set you don't own would add to your collection, with current price and stock.</p>{% endblock %}
+
+{% block content %}
+{% set empty_collection_note = "sets are ranked as if you own <strong>nothing yet</strong>." %}
+{% include "_collection_banner.html" %}
+
+<section class="panel">
+    <form method="get" class="row">
+        {% for s in request.args.getlist('sets') %}<input type="hidden" name="sets" value="{{ s }}">{% endfor %}
+        <label>Rank by
+            <select name="sort" onchange="this.form.submit()">
+                <option value="fair" {{ 'selected' if sort == 'fair' }}>Most new fair matchups</option>
+                <option value="value" {{ 'selected' if sort == 'value' }}>Best value (fair matchups per $10)</option>
+                <option value="variety" {{ 'selected' if sort == 'variety' }}>Most new playstyles & ranges</option>
+                <option value="price" {{ 'selected' if sort == 'price' }}>Cheapest</option>
+            </select>
+        </label>
+        <label><input type="checkbox" name="in_stock" value="1" {{ 'checked' if in_stock_only }} onchange="this.form.submit()"> In stock only</label>
+    </form>
+    <p class="muted" style="margin-top:.6rem">
+        A <strong>fair matchup</strong> is one where the estimate is within {{ fair_band | int }} points of 50% and backed by
+        {{ full_confidence_games }}+ games. Counted for every pairing the set adds, against your collection and within the set.
+    </p>
+</section>
+
+{% if not rows %}
+<section class="panel"><p>{{ 'Nothing in stock that you don\'t own.' if in_stock_only else 'You own every set. 🎉' }}</p></section>
+{% endif %}
+
+{% for r in rows %}
+<section class="panel">
+    <div class="row">
+        <h2 style="margin:0">{{ loop.index }}. {{ r.set }}</h2>
+        <span class="spacer"></span>
+        {% if r.price %}
+            <strong>${{ '%.0f' % r.price.price }}</strong>
+            {% set low = 'left' in r.price.stock_text %}
+            <span class="badge {{ 'out-of-stock' if not r.price.in_stock else ('low-stock' if low else 'in-stock') }}">{{ r.price.stock_text if r.price.in_stock else 'Out of stock' }}</span>
+            <a class="btn small {{ 'secondary' if not r.price.in_stock }}" href="{{ r.price.url }}" target="_blank" rel="noopener">{{ 'Buy' if r.price.in_stock else 'View' }} on Restoration Games ↗</a>
+        {% else %}
+            <span class="badge neutral">Not on the official store</span>
+        {% endif %}
+    </div>
+
+    <div class="stat-row">
+        <div class="stat"><b>{{ r.new_fighters | length }}</b><span>new fighters</span></div>
+        <div class="stat"><b>{{ r.new_fair }}</b><span>new fair matchups</span></div>
+        <div class="stat"><b>{{ r.new_matchups }}</b><span>new matchups</span></div>
+        {% if r.fair_per_10 is not none %}<div class="stat"><b>{{ '%.1f' % r.fair_per_10 }}</b><span>fair matchups / $10</span></div>{% endif %}
+    </div>
+
+    <div class="row">
+        {% for f in r.new_fighters %}
+        <a class="fighter-chip" href="/fighter/{{ f.id }}"><img src="{{ f.image_url }}" alt="">{{ f.name }}
+            <span class="games-note">{% if f.overall_win_rate is not none %}{{ f.overall_win_rate }}%{% endif %}</span></a>
+        {% else %}
+        <span class="muted">You already own every fighter in this set (it's a reprint or combo box).</span>
+        {% endfor %}
+    </div>
+    {% if r.new_styles or r.new_ranges %}
+    <p style="margin-top:.6rem"><strong>New to your collection:</strong>
+        {% for s in r.new_styles %}<span class="playstyle-tag minor">{{ s | titlecase_custom }}</span>{% endfor %}
+        {% for rg in r.new_ranges %}<span class="badge owned">{{ rg }} range</span>{% endfor %}
+    </p>
+    {% endif %}
+</section>
+{% endfor %}
+
+{% if upcoming %}
+<section class="panel">
+    <h2>New sets not in the matcher yet</h2>
+    <p class="muted">On sale, but there's no fighter or win-rate data for them yet.</p>
+    <table class="data">
+        {% for name, p in upcoming.items() %}
+        <tr><td><strong>{{ name }}</strong></td><td class="num">${{ '%.0f' % p.price }}</td>
+            <td><span class="badge {{ 'in-stock' if p.in_stock else 'out-of-stock' }}">{{ p.stock_text if p.in_stock else 'Out of stock' }}</span></td>
+            <td><a class="club-link" href="{{ p.url }}" target="_blank" rel="noopener">store ↗</a></td></tr>
+        {% endfor %}
+    </table>
+</section>
+{% endif %}
+{% endblock %}

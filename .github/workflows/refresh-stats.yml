@@ -1,6 +1,7 @@
 name: Refresh win-rate stats
 
-# Weekly: pull fresh matchup stats from The Unmatched Club and open a PR if they changed.
+# Weekly: pull fresh matchup stats (The Unmatched Club) and set prices/stock
+# (Restoration Games store) and open a PR if they changed.
 on:
   schedule:
     - cron: "0 6 * * 1" # Mondays 06:00 UTC
@@ -31,6 +32,9 @@ jobs:
       - name: Fetch stats
         run: python fetch_stats.py
 
+      - name: Fetch prices and stock
+        run: python fetch_prices.py
+
       - name: Run tests against the new stats
         run: pytest
 
@@ -38,18 +42,20 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # stats_meta.json always gets a new date; only the matrices matter
-          if git diff --quiet -- input/merged_win_pct.json input/merged_games.json; then
-            echo "Stats unchanged."
+          # The meta files always get a new date; only the data itself matters
+          strip_meta() { python -c "import json,sys; d=json.load(sys.stdin); d.pop('_meta',None); print(json.dumps(d,sort_keys=True))"; }
+          if git diff --quiet -- input/merged_win_pct.json input/merged_games.json \
+             && [ "$(git show HEAD:input/prices.json | strip_meta)" = "$(strip_meta < input/prices.json)" ]; then
+            echo "Stats and prices unchanged."
             exit 0
           fi
           branch="stats/refresh-$(date -u +%Y-%m-%d)"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$branch"
-          git add input/merged_win_pct.json input/merged_games.json input/stats_meta.json
-          git commit -m "Refresh win-rate stats ($(date -u +%Y-%m-%d))"
+          git add input/merged_win_pct.json input/merged_games.json input/stats_meta.json input/prices.json
+          git commit -m "Refresh win-rate stats and prices ($(date -u +%Y-%m-%d))"
           git push origin "$branch"
           gh pr create --base "${{ github.event.repository.default_branch }}" --head "$branch" \
-            --title "Refresh win-rate stats ($(date -u +%Y-%m-%d))" \
-            --body "Automated weekly pull from The Unmatched Club (Tabletop League + UnmatchedRu) via \`fetch_stats.py\`. Tests passed against the new data."
+            --title "Refresh win-rate stats and prices ($(date -u +%Y-%m-%d))" \
+            --body "Automated weekly pull from The Unmatched Club (Tabletop League + UnmatchedRu) via \`fetch_stats.py\`, and set prices/stock from the Restoration Games store via \`fetch_prices.py\`. Tests passed against the new data."

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}My Collection – Unmatched Fighter Chooser{% endblock %}
+{% block description %}Track which Unmatched sets you own. Every tool on the site – matchups, tier lists, counter-picks, game night – then works from your collection.{% endblock %}
+{% block heading %}My collection{% endblock %}
+{% block subheading %}<p>Tick the sets you own. It's saved in this browser and every tool uses it, including the matcher.</p>{% endblock %}
+
+{% block content %}
+<section class="panel">
+    <div class="row">
+        <div class="summary-stats" id="collection-summary"></div>
+        <span class="spacer"></span>
+        <button type="button" class="btn secondary small" id="select-all">Select all</button>
+        <button type="button" class="btn secondary small" id="select-none">Clear</button>
+        <a class="btn go small" href="/buy-next">What should I buy next? →</a>
+    </div>
+    <p class="muted" id="save-status" aria-live="polite" style="margin-top:.5rem"></p>
+</section>
+
+<section class="set-grid">
+    {% for s in sets %}
+    <div class="set-card {{ 'owned' if s.name in collection }}" data-set="{{ s.name }}">
+        <div class="set-head">
+            <input type="checkbox" id="set-{{ loop.index }}" value="{{ s.name }}" {{ 'checked' if s.name in collection }}>
+            <label for="set-{{ loop.index }}">{{ s.name }}</label>
+        </div>
+        <div class="set-fighters">
+            {% for f in s.fighters %}
+            <a href="/fighter/{{ f.id }}" title="{{ f.name }}"><img src="{{ f.image_url }}" alt="{{ f.name }}" loading="lazy"></a>
+            {% endfor %}
+        </div>
+        <div class="row muted">
+            <span>{{ s.fighters | length }} fighter{{ '' if s.fighters | length == 1 else 's' }}</span>
+            <span class="spacer"></span>
+            {% if s.price %}
+                <span>${{ '%.0f' % s.price.price }}</span>
+                {% set low = 'left' in s.price.stock_text %}
+                <span class="badge {{ 'out-of-stock' if not s.price.in_stock else ('low-stock' if low else 'in-stock') }}">{{ s.price.stock_text if s.price.in_stock else 'Out of stock' }}</span>
+            {% else %}
+                <span class="badge neutral" title="Not sold on the Restoration Games store">Not on official store</span>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const SET_PRICES = {{ sets | map(attribute='price') | list | tojson }};
+const SET_NAMES = {{ sets | map(attribute='name') | list | tojson }};
+
+function currentSets() {
+    return $$('.set-card input:checked').map(cb => cb.value);
+}
+
+function refresh() {
+    const owned = new Set(currentSets());
+    $$('.set-card').forEach(card => card.classList.toggle('owned', owned.has(card.dataset.set)));
+    const fighters = ALL_FIGHTERS_JS.filter(f => f.sets.some(s => owned.has(s)));
+    const value = SET_NAMES.reduce((sum, name, i) => sum + (owned.has(name) && SET_PRICES[i] ? SET_PRICES[i].price : 0), 0);
+    const pairs = fighters.length * (fighters.length - 1) / 2;
+    $('#collection-summary').innerHTML = [
+        [owned.size, 'sets'], [fighters.length, 'fighters'], [pairs.toLocaleString('en-US'), 'matchups'],
+        ['$' + Math.round(value).toLocaleString('en-US'), 'at store prices'],
+    ].map(([n, l]) => `<div class="stat"><b>${n}</b><span>${l}</span></div>`).join('');
+}
+
+function save() {
+    saveCollection(currentSets());
+    refresh();
+    $('#save-status').textContent = 'Saved. The matcher and every tool now use these sets.';
+}
+
+$$('.set-card input').forEach(cb => cb.addEventListener('change', save));
+$('#select-all').addEventListener('click', () => { $$('.set-card input').forEach(cb => cb.checked = true); save(); });
+$('#select-none').addEventListener('click', () => { $$('.set-card input').forEach(cb => cb.checked = false); save(); });
+refresh();
+</script>
+{% endblock %}

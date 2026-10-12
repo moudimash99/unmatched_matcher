@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+{% block title %}Unmatched Game Log and Underdog Challenges – Unmatched Fighter Chooser{% endblock %}
+{% block description %}Log your Unmatched games, compare your results with community win rates, and take on underdog challenges from your collection.{% endblock %}
+{% block heading %}Game log{% endblock %}
+{% block subheading %}<p>Record your games and see how you do compared with what the community numbers expect. Saved in this browser only.</p>{% endblock %}
+
+{% block content %}
+{% include "_collection_banner.html" %}
+
+<section class="panel">
+    <h2>🐺 Underdog challenge</h2>
+    <p class="muted">You get a fighter from your collection that's expected to <em>lose</em> (30–42%, backed by {{ full_confidence_games }}+ games). Can you pull off the upset?</p>
+    <div id="challenge"></div>
+</section>
+
+<section class="panel">
+    <h2>Log a game</h2>
+    <form id="log-form" class="row">
+        <label>I played
+            <select id="me" required>
+                <option value="">— fighter —</option>
+                {% for f in all_fighters %}<option value="{{ f.id }}">{{ f.name }}</option>{% endfor %}
+            </select>
+        </label>
+        <label>against
+            <select id="opp" required>
+                <option value="">— fighter —</option>
+                {% for f in all_fighters %}<option value="{{ f.id }}">{{ f.name }}</option>{% endfor %}
+            </select>
+        </label>
+        <label>Result
+            <select id="result"><option value="win">I won</option><option value="loss">I lost</option></select>
+        </label>
+        <label>Map <input type="text" id="map" placeholder="optional" style="width:9rem"></label>
+        <label>Date <input type="date" id="date"></label>
+        <button class="btn go" type="submit">Save game</button>
+    </form>
+    <p class="muted" id="form-hint" style="margin-top:.4rem"></p>
+</section>
+
+<section class="panel">
+    <div class="row">
+        <h2 style="margin:0">Your stats</h2>
+        <span class="spacer"></span>
+        <button type="button" class="btn secondary small" id="export">Export backup</button>
+        <label class="btn secondary small">Import backup <input type="file" id="import" accept="application/json" hidden></label>
+    </div>
+    <div id="summary" class="stat-row"></div>
+    <div class="table-wrap"><table class="data" id="by-fighter"></table></div>
+</section>
+
+<section class="panel">
+    <h2>History</h2>
+    <div class="table-wrap"><table class="data" id="history"></table></div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const POOL = {{ pool | map(attribute='id') | list | tojson }};
+const LOG_KEY = 'ufc_game_log';
+const CHALLENGE_KEY = 'ufc_challenge';
+
+const loadLog = () => storeGet(LOG_KEY, []);
+const saveLog = log => storeSet(LOG_KEY, log);
+const fname = id => FIGHTER_BY_ID[id] ? FIGHTER_BY_ID[id].name : id;
+
+function addGame(game) {
+    const log = loadLog();
+    const m = matchup(game.me, game.opp);
+    log.push({ ...game, id: Date.now() + Math.random().toString(36).slice(2, 6), expected: m ? m[0] : null });
+    if (!saveLog(log)) alert("Couldn't save: this browser is blocking local storage.");
+    renderStats();
+}
+
+/*************************** UNDERDOG CHALLENGE ***************************/
+function dealChallenge() {
+    const options = [];
+    for (const me of POOL) for (const opp of POOL) {
+        if (me === opp) continue;
+        const m = matchup(me, opp);
+        if (m && m[0] >= 30 && m[0] <= 42 && m[1] >= FULL_CONFIDENCE_GAMES) options.push({ me, opp });
+    }
+    if (!options.length) return null;
+    return options[Math.floor(Math.random() * options.length)];
+}
+
+function renderChallenge() {
+    const c = storeGet(CHALLENGE_KEY, null);
+    const log = loadLog().filter(g => g.challenge);
+    const wins = log.filter(g => g.result === 'win').length;
+    const record = log.length ? `<p class="muted">Challenges: ${wins} won of ${log.length} (expected ${Math.round(log.reduce((s, g) => s + (g.expected || 0), 0) / 100 * 10) / 10}).</p>` : '';
+    if (!c) {
+        $('#challenge').innerHTML = `<div class="challenge"><button type="button" class="btn go" id="deal">🎲 Deal me an underdog challenge</button>${record}</div>`;
+        $('#deal').addEventListener('click', () => {
+            const next = dealChallenge();
+            if (!next) { alert('No proven underdog matchups in your collection yet. Add more sets!'); return; }
+            storeSet(CHALLENGE_KEY, next);
+            renderChallenge();
+        });
+        return;
+    }
+    $('#challenge').innerHTML = `<div class="challenge">
+        <div class="vs"><div><img src="${FIGHTER_BY_ID[c.me].image_url}" alt=""><br><strong>You: ${escapeHtml(fname(c.me))}</strong></div>
+            <strong>vs</strong>
+            <div><img src="${FIGHTER_BY_ID[c.opp].image_url}" alt=""><br><strong>${escapeHtml(fname(c.opp))}</strong></div></div>
+        <p>Your odds: ${winText(c.me, c.opp)}</p>
+        <div class="row" style="justify-content:center">
+            <button type="button" class="btn go" data-res="win">🏆 I won</button>
+            <button type="button" class="btn secondary" data-res="loss">I lost</button>
+            <button type="button" class="btn secondary" id="skip">Skip</button>
+            <a class="btn secondary" href="/fighter/${c.me}">Study ${escapeHtml(fname(c.me))}</a>
+        </div>${record}</div>`;
+    $$('#challenge [data-res]').forEach(b => b.addEventListener('click', () => {
+        addGame({ me: c.me, opp: c.opp, result: b.dataset.res, map: '', date: new Date().toISOString().slice(0, 10), challenge: true });
+        storeSet(CHALLENGE_KEY, null);
+        renderChallenge();
+    }));
+    $('#skip').addEventListener('click', () => { storeSet(CHALLENGE_KEY, null); renderChallenge(); });
+}
+
+/*************************** STATS ***************************/
+function renderStats() {
+    const log = loadLog();
+    const wins = log.filter(g => g.result === 'win').length;
+    const withExp = log.filter(g => g.expected !== null);
+    const expected = withExp.reduce((s, g) => s + g.expected / 100, 0);
+    const actual = withExp.filter(g => g.result === 'win').length;
+    const diff = actual - expected;
+    $('#summary').innerHTML = [
+        [log.length, 'games'], [wins, 'wins'],
+        [log.length ? Math.round(wins / log.length * 100) + '%' : '—', 'win rate'],
+        [withExp.length ? (diff >= 0 ? '+' : '') + diff.toFixed(1) : '—', 'wins vs expected'],
+    ].map(([n, l]) => `<div class="stat"><b>${n}</b><span>${l}</span></div>`).join('');
+
+    const per = {};
+    for (const g of log) {
+        const p = per[g.me] ||= { games: 0, wins: 0, expected: 0, withExp: 0 };
+        p.games++; if (g.result === 'win') p.wins++;
+        if (g.expected !== null) { p.expected += g.expected / 100; p.withExp++; }
+    }
+    const rows = Object.entries(per).sort((a, b) => b[1].games - a[1].games);
+    $('#by-fighter').innerHTML = rows.length ? '<thead><tr><th>Fighter</th><th class="num">Games</th><th class="num">Win rate</th><th class="num">Community expected</th><th class="num">vs expected</th></tr></thead><tbody>' +
+        rows.map(([id, p]) => {
+            const d = p.wins - p.expected;
+            return `<tr><td>${fighterChip(id)}</td><td class="num">${p.games}</td><td class="num">${Math.round(p.wins / p.games * 100)}%</td>
+                <td class="num">${p.withExp ? Math.round(p.expected / p.withExp * 100) + '%' : '—'}</td>
+                <td class="num ${d >= 0 ? 'win' : 'loss'}">${(d >= 0 ? '+' : '') + d.toFixed(1)} wins</td></tr>`;
+        }).join('') + '</tbody>' : '<tbody><tr><td class="muted">No games logged yet.</td></tr></tbody>';
+
+    const hist = [...log].reverse();
+    $('#history').innerHTML = hist.length ? '<thead><tr><th>Date</th><th>You</th><th></th><th>Opponent</th><th>Map</th><th class="num">Expected</th><th></th></tr></thead><tbody>' +
+        hist.map(g => `<tr><td>${escapeHtml(g.date || '')}</td><td>${fighterChip(g.me)}</td>
+            <td class="${g.result}">${g.result === 'win' ? 'W' : 'L'}${g.challenge ? ' 🐺' : ''}</td><td>${fighterChip(g.opp)}</td>
+            <td>${escapeHtml(g.map || '')}</td><td class="num">${g.expected !== null ? g.expected + '%' : '—'}</td>
+            <td><button type="button" class="btn secondary small" data-del="${g.id}">Delete</button></td></tr>`).join('') + '</tbody>'
+        : '<tbody><tr><td class="muted">Nothing yet.</td></tr></tbody>';
+    $$('#history [data-del]').forEach(b => b.addEventListener('click', () => {
+        saveLog(loadLog().filter(g => g.id !== b.dataset.del));
+        renderStats();
+        renderChallenge();
+    }));
+}
+
+/*************************** FORM, IMPORT/EXPORT ***************************/
+function updateHint() {
+    const me = $('#me').value, opp = $('#opp').value;
+    $('#form-hint').innerHTML = me && opp && me !== opp ? `${escapeHtml(fname(me))}: ${winText(me, opp)}` : '';
+}
+
+$('#date').value = new Date().toISOString().slice(0, 10);
+const params = new URLSearchParams(location.search);
+if (FIGHTER_BY_ID[params.get('me')]) $('#me').value = params.get('me');
+if (FIGHTER_BY_ID[params.get('opp')]) $('#opp').value = params.get('opp');
+['#me', '#opp'].forEach(sel => $(sel).addEventListener('change', updateHint));
+updateHint();
+
+$('#log-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const me = $('#me').value, opp = $('#opp').value;
+    if (me === opp) { alert('Mirror matches aren\'t played in Unmatched.'); return; }
+    addGame({ me, opp, result: $('#result').value, map: $('#map').value.trim(), date: $('#date').value, challenge: false });
+    renderChallenge();
+});
+
+$('#export').addEventListener('click', () => {
+    const blob = new Blob([JSON.stringify(loadLog(), null, 2)], { type: 'application/json' });
+    const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: 'unmatched-game-log.json' });
+    a.click();
+    URL.revokeObjectURL(a.href);
+});
+
+$('#import').addEventListener('change', async e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    try {
+        const games = JSON.parse(await file.text());
+        if (!Array.isArray(games)) throw new Error('not a list');
+        const known = new Set(loadLog().map(g => g.id));
+        saveLog(loadLog().concat(games.filter(g => g && g.me && g.opp && !known.has(g.id))));
+        renderStats();
+        renderChallenge();
+    } catch (err) {
+        alert('That file is not a game-log backup.');
+    }
+});
+
+renderChallenge();
+renderStats();
+</script>
+{% endblock %}

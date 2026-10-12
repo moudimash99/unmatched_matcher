@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}All Unmatched Fighters – Stats, Win Rates and Decks{% endblock %}
+{% block description %}Every Unmatched fighter with overall win rate, games played, range and playstyles. Click any fighter for their deck, special ability and best and worst matchups.{% endblock %}
+{% block heading %}Fighters{% endblock %}
+{% block subheading %}<p>{{ fighters | length }} fighters with community win rates. Click one for its deck, ability and matchups.</p>{% endblock %}
+
+{% block content %}
+<section class="panel">
+    <div class="row">
+        <input type="text" id="search" placeholder="Search fighters or sets…" aria-label="Search fighters">
+        <select id="sort" aria-label="Sort">
+            <option value="name">Sort: name</option>
+            <option value="win">Sort: overall win rate</option>
+            <option value="games">Sort: games played</option>
+        </select>
+        <select id="range" aria-label="Range">
+            <option value="">Any range</option>
+            {% for r in ["Melee", "Reach", "Hybrid", "Ranged Assist", "Ranged"] %}<option>{{ r }}</option>{% endfor %}
+        </select>
+        {% if collection %}<label><input type="checkbox" id="owned-only"> Only my collection</label>{% endif %}
+    </div>
+</section>
+
+<section class="fighter-grid" id="grid">
+    {% for f in fighters %}
+    {% set owned = not collection or (f.sets | select('in', collection) | list) %}
+    <a class="fighter-tile {{ '' if owned else 'not-owned' }}" href="/fighter/{{ f.id }}"
+       data-name="{{ f.name | lower }} {{ f.sets | join(' ') | lower }}" data-win="{{ f.overall_win_rate if f.overall_win_rate is not none else -1 }}"
+       data-games="{{ f.total_games }}" data-range="{{ f.range }}" data-owned="{{ 1 if owned else 0 }}" data-sortname="{{ f.name }}">
+        <img src="{{ f.image_url }}" alt="{{ f.name }}" loading="lazy">
+        <div class="tile-body">
+            <div class="tile-name">{{ f.name }}</div>
+            <div class="tile-meta">{{ f.range }} · {{ f.major[0] | titlecase_custom }}</div>
+            <div class="tile-meta">
+                {% if f.overall_win_rate is none %}No games yet{% else %}<strong>{{ f.overall_win_rate }}%</strong> · {{ "{:,}".format(f.total_games) }} games{% endif %}
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const tiles = $$('#grid .fighter-tile');
+function apply() {
+    const q = $('#search').value.trim().toLowerCase();
+    const range = $('#range').value;
+    const ownedOnly = $('#owned-only')?.checked;
+    const sort = $('#sort').value;
+    tiles.forEach(t => {
+        const show = (!q || t.dataset.name.includes(q)) && (!range || t.dataset.range === range)
+            && (!ownedOnly || t.dataset.owned === '1');
+        t.style.display = show ? '' : 'none';
+    });
+    const key = { name: t => t.dataset.sortname, win: t => -Number(t.dataset.win), games: t => -Number(t.dataset.games) }[sort];
+    [...tiles].sort((a, b) => {
+        const ka = key(a), kb = key(b);
+        return ka < kb ? -1 : ka > kb ? 1 : 0;
+    }).forEach(t => $('#grid').appendChild(t));
+}
+['#search', '#sort', '#range', '#owned-only'].forEach(sel => $(sel)?.addEventListener('input', apply));
+</script>
+{% endblock %}

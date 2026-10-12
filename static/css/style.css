@@ -326,3 +326,6 @@ label { font-size: .9rem; }
     background: var(--accent-primary);
     color: #fff;
 }
+
+.manage-collection-link { font-size: 0.8rem; font-weight: 400; margin-left: 0.4rem; color: var(--accent-primary); text-decoration: none; }
+.manage-collection-link:hover { text-decoration: underline; }

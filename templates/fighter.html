@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block title %}{{ fighter.name }} – Unmatched Stats, Deck and Best Matchups{% endblock %}
+{% block description %}{{ fighter.name }} ({{ fighter.sets | join(', ') }}): {% if fighter.overall_win_rate is not none %}{{ fighter.overall_win_rate }}% overall win rate over {{ "{:,}".format(fighter.total_games) }} games, {% endif %}special ability, full deck list, and best and worst Unmatched matchups.{% endblock %}
+{% block heading %}{{ fighter.name }}{% endblock %}
+{% block subheading %}<p>{{ fighter.sets | join(' · ') }}</p>{% endblock %}
+
+{% block content %}
+<section class="panel profile">
+    <div>
+        <img class="portrait" src="{{ fighter.image_url }}" alt="{{ fighter.name }}">
+    </div>
+    <div>
+        <div class="stat-row">
+            <div class="stat"><b>{{ fighter.overall_win_rate if fighter.overall_win_rate is not none else '—' }}{{ '%' if fighter.overall_win_rate is not none }}</b><span>overall win rate</span></div>
+            <div class="stat"><b>{{ "{:,}".format(fighter.total_games) }}</b><span>games</span></div>
+            {% if hero %}
+            <div class="stat"><b>{{ hero.hp }}</b><span>health</span></div>
+            <div class="stat"><b>{{ hero.move }}</b><span>move</span></div>
+            <div class="stat"><b>{{ 'Ranged' if hero.attack == 'range' else 'Melee' }}</b><span>attack</span></div>
+            {% endif %}
+            <div class="stat"><b>{{ fighter.range }}</b><span>range</span></div>
+        </div>
+
+        <p>
+            <strong>Major:</strong> {% for ps in fighter.major %}<span class="playstyle-tag major">{{ ps | titlecase_custom }}</span>{% endfor %}
+            <strong style="margin-left:.5rem">Minor:</strong> {% for ps in fighter.minor %}<span class="playstyle-tag minor">{{ ps | titlecase_custom }}</span>{% endfor %}
+        </p>
+        <p class="muted">{{ fighter.foundational_mechanism }}</p>
+
+        {% if hero and hero.special_ability %}
+        <div class="ability"><strong>Special ability:</strong> {{ hero.special_ability }}</div>
+        {% endif %}
+        {% if hero and hero.sidekicks %}
+        <p><strong>Sidekick{{ 's' if hero.sidekicks | length > 1 or hero.sidekicks[0].count > 1 }}:</strong>
+            {% for s in hero.sidekicks %}{{ s.name }}{% if s.count > 1 %} ×{{ s.count }}{% endif %} ({{ s.hp }} HP{% if s.attack %}, {{ 'ranged' if s.attack == 'range' else s.attack }}{% endif %}){{ ', ' if not loop.last }}{% endfor %}
+        </p>
+        {% endif %}
+
+        <div class="row" style="margin-top:.75rem">
+            {% for set_name, price in prices.items() %}
+                {% if price %}
+                <a class="btn small {{ 'secondary' if not price.in_stock }}" href="{{ price.url }}" target="_blank" rel="noopener">
+                    {{ set_name }} · ${{ '%.0f' % price.price }} · {{ price.stock_text if price.in_stock else 'Out of stock' }}
+                </a>
+                {% endif %}
+            {% endfor %}
+            <a class="btn small secondary" href="/counter?vs={{ fighter.id }}">Who counters {{ fighter.name }}?</a>
+            <a class="btn small secondary" href="/?p1={{ fighter.id }}&opp={{ best[0].opponent.id if best else rows[0].opponent.id }}">Try in the matcher</a>
+        </div>
+    </div>
+</section>
+
+<section class="two-col">
+    <div class="panel">
+        <h2>Best matchups</h2>
+        <p class="muted">Only matchups with {{ full_confidence_games }}+ games.</p>
+        {% include "_matchup_table.html" with context %}
+    </div>
+    <div class="panel">
+        <h2>Worst matchups</h2>
+        <p class="muted">Only matchups with {{ full_confidence_games }}+ games.</p>
+        {% set table_rows = worst %}
+        {% include "_matchup_table.html" with context %}
+    </div>
+</section>
+
+{% if hero and deck %}
+<section class="panel">
+    <h2>Deck · {{ deck.total }} cards</h2>
+    <div class="row">
+        {% for t, n in deck.counts.items() if n %}
+        <div class="stat"><b>{{ n }}</b><span class="card-type">{{ t }}</span></div>
+        {% endfor %}
+        {% if deck.avg_value %}<div class="stat"><b>{{ '%.1f' % deck.avg_value }}</b><span>avg combat value</span></div>{% endif %}
+    </div>
+    {% if deck.value_counts %}
+    {% set peak = deck.value_counts.values() | max %}
+    <h3>Combat card values</h3>
+    <div class="bars" aria-label="Combat card value distribution">
+        {% for v, n in deck.value_counts.items() %}
+        <div style="height: {{ (n / peak * 100) | round }}%" title="{{ n }} cards with value {{ v }}"><span>{{ v }}</span></div>
+        {% endfor %}
+    </div>
+    <div style="height:1.3rem"></div>
+    {% endif %}
+    <div class="table-wrap">
+    <table class="data">
+        <thead><tr><th>Card</th><th>Type</th><th class="num">Value</th><th class="num">Boost</th><th class="num">Copies</th><th>Effect</th></tr></thead>
+        <tbody>
+        {% for c in hero.deck %}
+        <tr>
+            <td><strong>{{ c.title }}</strong>{% if c.character and c.character != 'Any' and c.character != fighter.name %}<br><span class="muted">{{ c.character }}</span>{% endif %}</td>
+            <td class="card-type">{{ c.type }}</td>
+            <td class="num">{{ c.value if c.value is not none else '–' }}</td>
+            <td class="num">{{ c.boost if c.boost is not none else '–' }}</td>
+            <td class="num">×{{ c.copies }}</td>
+            <td>{{ c.effect }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    <p class="muted" style="margin-top:.5rem">Card data via <a href="https://www.the-unmatched.club/heroes/{{ fighter.club_key }}" target="_blank" rel="noopener">The Unmatched Club</a>.</p>
+</section>
+{% endif %}
+
+<section class="panel">
+    <h2>Every matchup</h2>
+    <div class="table-wrap">
+    <table class="data">
+        <thead><tr><th>Opponent</th><th class="num">{{ fighter.name }} wins</th><th class="num">Games</th><th></th></tr></thead>
+        <tbody>
+        {% for r in rows %}
+        <tr>
+            <td><a class="fighter-chip" href="/fighter/{{ r.opponent.id }}"><img src="{{ r.opponent.image_url }}" alt="">{{ r.opponent.name }}</a></td>
+            <td class="num" data-win="{{ r.win_pct }}" data-games="{{ r.games }}">{{ '~' if r.confidence < 1 }}{{ r.win_pct | round | int }}%</td>
+            <td class="num">{{ "{:,}".format(r.games) }}{% if r.confidence < 1 %} <span class="games-note low-data">estimate</span>{% endif %}</td>
+            <td><a class="club-link" href="{{ club_matchup_url }}?h1={{ fighter.club_key }}&h2={{ r.opponent.club_key }}" target="_blank" rel="noopener">stats ↗</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</section>
+{% endblock %}
