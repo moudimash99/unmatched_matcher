@@ -81,6 +81,9 @@
 .tool-page .badge.low-stock { background: #fff3cd; color: #8a6100; }
 .tool-page .badge.owned { background: #e7f0ff; color: #0b5ed7; }
 .tool-page .badge.neutral { background: #eef0f3; color: #495057; }
+.tool-page .badge.preorder { background: #e7f0ff; color: #0b5ed7; }
+.tool-page .badge.not-released { background: #f1e8fd; color: #6f42c1; }
+.tool-page .section-divider { margin: 2rem 0 .25rem; padding-top: 1rem; border-top: 2px dashed #d5dae1; }
 .tool-page .tier { display: inline-flex; align-items: center; justify-content: center; width: 1.9rem; height: 1.9rem; border-radius: 6px; font-weight: 700; color: #fff; }
 .tool-page .tier-S { background: #d63384; } .tool-page .tier-A { background: #fd7e14; } .tool-page .tier-B { background: #20c997; }
 .tool-page .tier-C { background: #0d6efd; } .tool-page .tier-D { background: #6c757d; }

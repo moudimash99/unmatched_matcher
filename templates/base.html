@@ -48,6 +48,7 @@
         {% if prices_meta %}Prices and stock from the <a href="{{ prices_meta.store }}" target="_blank" rel="noopener">Restoration Games store</a> as of {{ prices_meta.fetched_at }}.{% endif %}
     </p>
     {% endif %}
+    {% if map_meta %}{% include "_map_credit.html" %}{% endif %}
     <p class="footer-note">
         <a href="/about">About</a> &nbsp;|&nbsp;
         <a href="https://github.com/moudimash99/unmatched_matcher" target="_blank" rel="noopener">GitHub</a> &nbsp;|&nbsp;

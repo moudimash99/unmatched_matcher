@@ -19,7 +19,6 @@
                 <option value="price" {{ 'selected' if sort == 'price' }}>Cheapest</option>
             </select>
         </label>
-        <label><input type="checkbox" name="in_stock" value="1" {{ 'checked' if in_stock_only }} onchange="this.form.submit()"> In stock only</label>
     </form>
     <p class="muted" style="margin-top:.6rem">
         A <strong>fair matchup</strong> is one where the estimate is within {{ fair_band | int }} points of 50% and backed by
@@ -27,22 +26,17 @@
     </p>
 </section>
 
-{% if not rows %}
-<section class="panel"><p>{{ 'Nothing in stock that you don\'t own.' if in_stock_only else 'You own every set. 🎉' }}</p></section>
-{% endif %}
-
-{% for r in rows %}
+{% macro set_card(r, rank) %}
 <section class="panel">
     <div class="row">
-        <h2 style="margin:0">{{ loop.index }}. {{ r.set }}</h2>
+        <h2 style="margin:0">{% if rank %}{{ rank }}. {% endif %}{{ r.set }}</h2>
         <span class="spacer"></span>
+        {% set st = stock_info(r.price) %}
+        {% if r.price %}<strong>${{ '%.0f' % r.price.price }}</strong>{% endif %}
+        <span class="badge {{ st.css }}">{{ st.label }}</span>
         {% if r.price %}
-            <strong>${{ '%.0f' % r.price.price }}</strong>
-            {% set low = 'left' in r.price.stock_text %}
-            <span class="badge {{ 'out-of-stock' if not r.price.in_stock else ('low-stock' if low else 'in-stock') }}">{{ r.price.stock_text if r.price.in_stock else 'Out of stock' }}</span>
-            <a class="btn small {{ 'secondary' if not r.price.in_stock }}" href="{{ r.price.url }}" target="_blank" rel="noopener">{{ 'Buy' if r.price.in_stock else 'View' }} on Restoration Games ↗</a>
-        {% else %}
-            <span class="badge neutral">Not on the official store</span>
+        <a class="btn small {{ 'secondary' if not st.buyable }}" href="{{ r.price.url }}" target="_blank" rel="noopener">
+            {{ 'Pre-order' if st.status == 'preorder' else ('Buy' if st.buyable else 'View') }} on Restoration Games ↗</a>
         {% endif %}
     </div>
 
@@ -68,16 +62,44 @@
     </p>
     {% endif %}
 </section>
-{% endfor %}
+{% endmacro %}
+
+{% set nothing_left = not (groups.buyable or groups.sold_out or groups.not_released or groups.not_sold) %}
+{% if nothing_left %}
+<section class="panel"><p>You own every set. 🎉</p></section>
+{% elif not groups.buyable %}
+<section class="panel"><p>None of the sets you don't own can be bought on the official store right now. The ones below are sold out or not out yet.</p></section>
+{% endif %}
+
+{% for r in groups.buyable %}{{ set_card(r, loop.index) }}{% endfor %}
+
+{% if groups.sold_out %}
+<h2 class="section-divider">Sold out right now <span class="muted">· {{ groups.sold_out | length }}</span></h2>
+<p class="muted">Released, but the official store has none left. Ranked the same way; check back or look at other shops.</p>
+{% for r in groups.sold_out %}{{ set_card(r, None) }}{% endfor %}
+{% endif %}
+
+{% if groups.not_released %}
+<h2 class="section-divider">Not in stores yet <span class="muted">· {{ groups.not_released | length }}</span></h2>
+<p class="muted">Announced and listed on the store, but not released yet.</p>
+{% for r in groups.not_released %}{{ set_card(r, None) }}{% endfor %}
+{% endif %}
+
+{% if groups.not_sold %}
+<h2 class="section-divider">Not on the official store <span class="muted">· {{ groups.not_sold | length }}</span></h2>
+<p class="muted">Restoration Games doesn't sell these itself; look for them at other shops.</p>
+{% for r in groups.not_sold %}{{ set_card(r, None) }}{% endfor %}
+{% endif %}
 
 {% if upcoming %}
 <section class="panel">
     <h2>New sets not in the matcher yet</h2>
-    <p class="muted">On sale, but there's no fighter or win-rate data for them yet.</p>
+    <p class="muted">Listed on the official store, but there's no fighter or win-rate data for them yet.</p>
     <table class="data">
         {% for name, p in upcoming.items() %}
         <tr><td><strong>{{ name }}</strong></td><td class="num">${{ '%.0f' % p.price }}</td>
-            <td><span class="badge {{ 'in-stock' if p.in_stock else 'out-of-stock' }}">{{ p.stock_text if p.in_stock else 'Out of stock' }}</span></td>
+            {% set st = stock_info(p) %}
+            <td><span class="badge {{ st.css }}">{{ st.label }}</span></td>
             <td><a class="club-link" href="{{ p.url }}" target="_blank" rel="noopener">store ↗</a></td></tr>
         {% endfor %}
     </table>

@@ -3,7 +3,8 @@ Pull current prices and stock for each Unmatched set from the Restoration Games
 store (its public WooCommerce Store API: /wp-json/wc/store/v1/products).
 
 Writes input/prices.json, keyed by our set names (the "set" values in input/fighters.json):
-  {set: {price, currency, in_stock, stock_text, url, product}}
+  {set: {price, currency, in_stock, status, stock_text, url, product}}
+status is in_stock, low_stock, preorder, sold_out or not_released (see stock_status).
 plus "_meta": {fetched_at, store}. Sets the store doesn't sell (e.g. Buffy, Deadpool) are absent.
 
 Usage:  python fetch_prices.py
@@ -63,6 +64,23 @@ def fetch_products():
         page += 1
 
 
+def stock_status(product):
+    """
+    in_stock / low_stock / preorder (orderable before release) / sold_out (released, none left) /
+    not_released (listed but never stocked yet; the page asks you to sign up for a notice).
+    """
+    button = ((product.get("add_to_cart") or {}).get("text") or "").lower()
+    if "pre-order" in button or "preorder" in button:
+        return "preorder"
+    if product["is_in_stock"]:
+        stock = ((product.get("stock_availability") or {}).get("text") or "").lower()
+        return "low_stock" if "left" in stock else "in_stock"
+    description = (product.get("short_description") or "").lower()
+    if "notified when" in description or product.get("low_stock_remaining") is None:
+        return "not_released"
+    return "sold_out"
+
+
 def to_entry(product):
     prices = product["prices"]
     price = int(prices["price"]) / 10 ** prices["currency_minor_unit"]
@@ -71,6 +89,7 @@ def to_entry(product):
         "price": price,
         "currency": prices["currency_code"],
         "in_stock": bool(product["is_in_stock"]),
+        "status": stock_status(product),
         "stock_text": stock or ("In stock" if product["is_in_stock"] else "Out of stock"),
         "url": product["permalink"],
         "product": html.unescape(product["name"]),

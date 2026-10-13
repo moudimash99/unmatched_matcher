@@ -103,6 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
     annotateLockButtons();
     setupResultCardActions();
     setupShareButton();
+    setupExplanations();
+    updateAllWinPercentages();  // also draws the map panel
+    renderMapPanel();
     trackMatchupResult();
 });
 
@@ -178,7 +181,6 @@ function setupSetSelection() {
     const DEFAULT_SETS_KEY = 'ufs_default_owned_sets';
     const selectAllBtn = qs('#select-all-sets-btn');
     const deselectAllBtn = qs('#deselect-all-sets-btn');
-    const saveDefaultBtn = qs('#save-default-sets-btn');
     const loadDefaultBtn = qs('#load-default-sets-btn');
     const checkboxes = qsa('#set-checkboxes input[type="checkbox"]');
     const getCheckedSetValues = () => checkboxes
@@ -232,9 +234,13 @@ function setupSetSelection() {
         }
     };
 
+    // DEFAULT_SETS_KEY is the collection saved on /collection
     const updateDefaultButtons = () => {
         if (!loadDefaultBtn) return;
-        loadDefaultBtn.disabled = getSavedDefaultSets().length === 0;
+        const none = getSavedDefaultSets().length === 0;
+        loadDefaultBtn.disabled = none;
+        loadDefaultBtn.title = none ? 'No collection saved yet: set it up on the My collection page'
+            : 'Tick exactly the sets saved on the My collection page';
     };
 
     checkboxes.forEach(cb => cb.addEventListener('change', () => {
@@ -252,12 +258,6 @@ function setupSetSelection() {
         recordAnalytics('sets_deselect_all', { total: checkboxes.length });
     });
 
-    saveDefaultBtn?.addEventListener('click', () => {
-        setCookie(DEFAULT_SETS_KEY, JSON.stringify(getCheckedSetValues()));
-        updateDefaultButtons();
-        recordAnalytics('sets_default_saved', { total: getCheckedSetValues().length });
-    });
-
     loadDefaultBtn?.addEventListener('click', () => {
         const defaultSetValues = new Set(getSavedDefaultSets());
         if (!defaultSetValues.size) return;
@@ -265,7 +265,7 @@ function setupSetSelection() {
             cb.checked = defaultSetValues.has(cb.value);
         });
         persist();
-        recordAnalytics('sets_default_loaded', { total: defaultSetValues.size });
+        recordAnalytics('collection_loaded', { total: defaultSetValues.size });
     });
 
     updateDefaultButtons();
@@ -727,6 +727,7 @@ function updateAllWinPercentages() {
     qsa(`[data-player-prefix="opp"]`).forEach(card => {
         updateCardWinPct(card, p1_main_id);
     });
+    renderMapPanel();
 }
 
 /**
@@ -756,18 +757,345 @@ function winLineHTML(fighterId, opponentId) {
     const entry = MATCHUPS[fighterId] && MATCHUPS[fighterId][opponentId];
     if (!fighter || !opponent || !entry) return '';
 
-    const [pct, games] = entry;
-    let value;
-    if (games === 0) {
-        value = `~${pct}% <span class="games-note low-data" title="No recorded games; estimated from both fighters' overall win rates">· estimate, no games yet</span>`;
-    } else if (games < FULL_CONFIDENCE_GAMES) {
-        value = `~${pct}% <span class="games-note low-data" title="Fewer than ${FULL_CONFIDENCE_GAMES} games; blended with both fighters' overall win rates">· estimate, ${games} game${games === 1 ? '' : 's'}</span>`;
-    } else {
-        value = `${pct}% <span class="games-note">· ${games.toLocaleString('en-US')} games</span>`;
-    }
     const clubUrl = `${CLUB_MATCHUP_URL}?h1=${fighter.club_key}&h2=${opponent.club_key}`;
-    return `<strong>Win vs ${opponent.name}:</strong> ${value} ` +
-        `<a class="club-link" href="${clubUrl}" target="_blank" rel="noopener" title="See this matchup on The Unmatched Club">stats ↗</a>`;
+    const clubLink = `<a class="club-link" href="${clubUrl}" target="_blank" rel="noopener" title="See this matchup on The Unmatched Club">stats ↗</a>`;
+    const mapKey = chosenMap();
+    const onMap = mapWinPct(fighterId, opponentId, mapKey);
+    if (onMap) {
+        const [mpct, mgames, mlow] = onMap;
+        return `<strong>Win vs ${opponent.name} on ${escapeHTML(MAP_INFO[mapKey].name)}:</strong> ${mlow ? '~' : ''}${mpct}% ` +
+            `${mapNote(mgames, mlow, `map|${fighterId}|${opponentId}|${mapKey}`)} ${clubLink}`;
+    }
+
+    const [pct, games] = entry;
+    const low = games < FULL_CONFIDENCE_GAMES;
+    const explain = explainData('base', fighterId, opponentId) ? `base|${fighterId}|${opponentId}` : '';
+    const value = `${low ? '~' : ''}${pct}% ${gamesNote(games, low, explain)}`;
+    return `<strong>Win vs ${opponent.name}:</strong> ${value} ${clubLink}`;
+}
+
+/*************************** MAPS & TURN ORDER  ***************************/
+const escapeHTML = s => String(s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+
+function noteHTML(text, low, explain) {
+    const cls = `games-note${low ? ' low-data' : ''}`;
+    return explain
+        ? `<button type="button" class="${cls} explain-btn" data-explain="${escapeHTML(explain)}" title="How is this worked out?">· ${text} <span aria-hidden="true">ⓘ</span></button>`
+        : `<span class="${cls}">· ${text}</span>`;
+}
+
+function gamesNote(games, low, explain) {
+    const text = games === 0 ? 'estimate, no games yet'
+        : `${low ? 'estimate, ' : ''}${games.toLocaleString('en-US')} game${games === 1 ? '' : 's'}`;
+    return noteHTML(text, low, explain);
+}
+
+// A note for a pairing's record on a map; with no games there, it's built from each fighter's record on the map
+function mapNote(games, low, explain) {
+    return games ? gamesNote(games, low, explain) : noteHTML("estimate, from each fighter's record here", true, explain);
+}
+
+// The map chosen in the picker (a key of MAP_INFO), kept in the form's hidden "map" input
+function chosenMap() {
+    const input = qs('#chosen_map');
+    const key = input ? input.value : '';
+    return typeof MAP_INFO !== 'undefined' && MAP_INFO[key] ? key : '';
+}
+
+function setChosenMap(key) {
+    const input = qs('#chosen_map');
+    if (input) input.value = key || '';
+    if (key) recordAnalytics('map_chosen', { map: key });
+    updateAllWinPercentages();
+}
+
+/**
+ * [win %, games, low data] for a fighter vs an opponent on a map, from whichever MAP_PANELS
+ * pairing holds them (P1 cards are keyed "p1|opp"; opponent cards are read from the other side).
+ */
+function mapWinPct(fighterId, opponentId, mapKey) {
+    if (typeof MAP_PANELS === 'undefined' || !mapKey) return null;
+    const direct = MAP_PANELS[`${fighterId}|${opponentId}`];
+    if (direct && direct.by_map[mapKey]) return direct.by_map[mapKey];
+    const reverse = MAP_PANELS[`${opponentId}|${fighterId}`];
+    if (reverse && reverse.by_map[mapKey]) {
+        const [pct, games, low] = reverse.by_map[mapKey];
+        return [100 - pct, games, low];
+    }
+    return null;
+}
+
+function mapThumbHTML(key, cls) {
+    const info = MAP_INFO[key];
+    return info && info.thumb
+        ? `<img class="${cls}" src="${STATIC_URL}${escapeHTML(info.thumb)}" alt="${escapeHTML(info.name)} map" loading="lazy">`
+        : `<div class="${cls} map-thumb-missing" aria-hidden="true">🗺️</div>`;
+}
+
+// rows hold P1's win %; flip shows the opponent's side instead
+function mapListHTML(title, rows, fighterName, flip = false, pair = '') {
+    if (!rows.length) return '';
+    const note = r => mapNote(r.games, r.low, pair && `map|${pair}|${r.key}`);
+    const items = rows.map(r =>
+        `<li><button type="button" class="map-name map-pick" data-map="${escapeHTML(r.key)}" title="${escapeHTML(r.set || '')}">${escapeHTML(r.name)}</button> ` +
+        `${escapeHTML(fighterName)} ${r.low ? '~' : ''}${flip ? 100 - r.pct : r.pct}% ${note(r)}</li>`).join('');
+    return `<div class="map-list"><h5>${escapeHTML(title)}</h5><ul>${items}</ul></div>`;
+}
+
+function fighterSets(f) {
+    return [].concat(f.set || [], f.sets || []);
+}
+
+function suggestedMapsHTML(rows, a, b, chosen) {
+    if (!rows.length) return '';
+    const homeOf = r => {
+        const owners = [a, b].filter(f => fighterSets(f).includes(r.set)).map(f => f.name);
+        return owners.length ? `<span class="map-home">${escapeHTML(owners.join(' & '))}'s box</span>` : '';
+    };
+    const tiles = rows.map(r =>
+        `<li><button type="button" class="map-tile map-pick${r.key === chosen ? ' chosen' : ''}" data-map="${escapeHTML(r.key)}" aria-pressed="${r.key === chosen}">` +
+        mapThumbHTML(r.key, 'map-thumb') +
+        `<span class="map-tile-name">${escapeHTML(r.name)}</span>` +
+        `<span class="map-tile-pct">${escapeHTML(a.name)} ${r.low ? '~' : ''}${r.pct}%</span>` +
+        homeOf(r) + `</button></li>`).join('');
+    return `<div class="map-suggested"><h5>Suggested maps <span class="games-note">· fairest first, ${escapeHTML(a.name)}'s win %</span></h5><ul class="map-tiles">${tiles}</ul></div>`;
+}
+
+function chosenMapHTML(panel, a, b, chosen) {
+    const keys = Object.keys(panel.by_map).sort((x, y) => MAP_INFO[x].name.localeCompare(MAP_INFO[y].name));
+    const options = keys.map(k =>
+        `<option value="${escapeHTML(k)}"${k === chosen ? ' selected' : ''}>${escapeHTML(MAP_INFO[k].name)} (${escapeHTML(a.name)} ${panel.by_map[k][0]}%)</option>`).join('');
+    let detail = '';
+    if (chosen && panel.by_map[chosen]) {
+        const info = MAP_INFO[chosen];
+        const [pct, games, low] = panel.by_map[chosen];
+        const layout = [info.size && `${info.size.toUpperCase()} map`, info.zones && `${info.zones} zones`,
+                        info.spaces && `${info.spaces} spaces`].filter(Boolean).join(' · ');
+        detail = `<div class="map-chosen">${mapThumbHTML(chosen, 'map-chosen-img')}<div>` +
+            `<strong>${escapeHTML(info.name)}</strong> <span class="games-note">${escapeHTML(info.set || '')}</span>` +
+            (layout ? `<div class="games-note">${escapeHTML(layout)}</div>` : '') +
+            `<div>${escapeHTML(a.name)} ${low ? '~' : ''}${pct}% · ${escapeHTML(b.name)} ${low ? '~' : ''}${100 - pct}% ` +
+            `${mapNote(games, low, `map|${a.id}|${b.id}|${chosen}`)}</div></div></div>`;
+    }
+    return `<div class="map-choice"><label for="map-choice-select"><strong>Map (optional):</strong></label> ` +
+        `<select id="map-choice-select"><option value="">No map chosen</option>${options}</select>${detail}</div>`;
+}
+
+/**
+ * Shows the map picker, suggested maps, first-player and closeness stats for the current main
+ * matchup (server-computed in MAP_PANELS for every P1 x opponent card pairing).
+ */
+function renderMapPanel() {
+    const el = qs('#map-panel');
+    if (!el || typeof MAP_PANELS === 'undefined') return;
+    const p1 = extractFighterIdFromCard(qs('#p1-main-suggestion'));
+    const opp = extractFighterIdFromCard(qs('#opp-main-suggestion'));
+    const panel = MAP_PANELS[`${p1}|${opp}`];
+    const byId = id => ALL_FIGHTERS_JS.find(f => f.id === id);
+    const a = byId(p1), b = byId(opp);
+    if (!panel || !a || !b) { el.innerHTML = ''; return; }
+    const chosen = panel.by_map[chosenMap()] ? chosenMap() : '';
+
+    const first = panel.first;
+    let facts = `<li><strong>Going first:</strong> ${first.low ? '~' : ''}${first.pct}% win ${gamesNote(first.games, first.low, `first|${p1}|${opp}`)}</li>`;
+    if (panel.closeness) {
+        const c = panel.closeness;
+        facts += `<li><strong>Winner ends on:</strong> ${c.low ? '~' : ''}${c.hp} HP on average ${gamesNote(c.games, c.low, `close|${p1}|${opp}`)}</li>`;
+    }
+    const lists = mapListHTML(`Maps that favor ${a.name}`, panel.favor_a, a.name, false, `${p1}|${opp}`) +
+        mapListHTML(`Maps that favor ${b.name}`, panel.favor_b, b.name, true, `${p1}|${opp}`);
+    el.innerHTML = `<h3>Maps &amp; turn order</h3>` +
+        (Object.keys(panel.by_map).length ? chosenMapHTML(panel, a, b, chosen) : '') +
+        suggestedMapsHTML(panel.suggested, a, b, chosen) +
+        `<ul class="map-facts">${facts}</ul>` +
+        (lists ? `<div class="map-lists">${lists}</div>` : '');
+
+    const select = el.querySelector('#map-choice-select');
+    if (select) select.addEventListener('change', () => setChosenMap(select.value));
+    el.querySelectorAll('.map-pick').forEach(btn => btn.addEventListener('click', () =>
+        setChosenMap(btn.dataset.map === chosenMap() ? '' : btn.dataset.map)));
+}
+
+/*************************** "HOW IS THIS WORKED OUT" POPUP  ***************************/
+const pctText = v => `${Math.round(v)}%`;
+const recordText = (wins, games) => `${wins}–${games - wins}`;
+const gamesText = n => `${n.toLocaleString('en-US')} game${n === 1 ? '' : 's'}`;
+const signedPts = v => `${v >= 0 ? '+' : '−'}${Math.abs(Math.round(v))} point${Math.abs(Math.round(v)) === 1 ? '' : 's'}`;
+const fighterName = id => (ALL_FIGHTERS_JS.find(f => f.id === id) || { name: id }).name;
+
+function trustText(games, conf, full) {
+    if (games >= full) return `${gamesText(games)} is enough to trust the record as it is (we fully trust a record from ${full} games).`;
+    return `With only ${gamesText(games)} it counts ${Math.round(conf * 100)}%; the other ${100 - Math.round(conf * 100)}% comes from the broader estimate. ` +
+        `(A record is fully trusted from ${full} games; trust grows fast over the first few games, then slower.)`;
+}
+
+/**
+ * The numbers behind an estimate, oriented so "a" is the fighter whose win % is shown.
+ * Map explanations live on the "p1|opp" panel; an opponent card's view is the same data flipped.
+ */
+function explainData(kind, a, b, map) {
+    if (kind === 'base') return (typeof MATCHUP_EXPLAIN !== 'undefined' && MATCHUP_EXPLAIN[`${a}|${b}`]) || null;
+    if (typeof MAP_PANELS === 'undefined') return null;
+    const direct = MAP_PANELS[`${a}|${b}`];
+    const reverse = MAP_PANELS[`${b}|${a}`];
+    if (kind === 'first' || kind === 'close') {
+        const panel = direct || reverse;
+        return panel ? panel.explain[kind === 'first' ? 'first' : 'closeness'] : null;
+    }
+    if (direct && direct.explain.maps[map]) return direct.explain.maps[map];
+    const e = reverse && reverse.explain.maps[map];
+    if (!e) return null;
+    return { ...e, a: e.b, b: e.a, base: 100 - e.base, shift_a: -e.shift_b, shift_b: -e.shift_a,
+             expected: 100 - e.expected, final: 100 - e.final, pair_wins: e.pair_games - e.pair_wins };
+}
+
+function explainBaseHTML(e, a, b) {
+    const A = escapeHTML(fighterName(a)), B = escapeHTML(fighterName(b));
+    const strength = e.a_overall == null || e.b_overall == null
+        ? `We don't have overall records for both, so this starts from 50%.`
+        : `${A} wins ${pctText(e.a_overall)} of all ${gamesText(e.a_total)} and ${B} wins ${pctText(e.b_overall)} of ${gamesText(e.b_total)}. ` +
+          `Two fighters that strong would be expected to split about ${pctText(e.expected)}–${pctText(100 - e.expected)}.`;
+    let steps;
+    if (!e.games) {
+        steps = `<li><strong>No recorded games</strong> between them, so the estimate comes only from how strong each fighter is overall.</li>` +
+            `<li>${strength}</li>`;
+    } else if (e.conf >= 1) {
+        steps = `<li><strong>Recorded games:</strong> ${A} won ${pctText(e.observed)} of ${gamesText(e.games)} against ${B}.</li>` +
+            `<li>${trustText(e.games, e.conf, e.full_games)}</li>`;
+    } else {
+        steps = `<li><strong>Recorded games:</strong> ${A} won ${pctText(e.observed)} of ${gamesText(e.games)} against ${B}.</li>` +
+            `<li>${trustText(e.games, e.conf, e.full_games)}</li>` +
+            `<li><strong>Broader estimate:</strong> ${strength}</li>` +
+            `<li><strong>Blend:</strong> ${Math.round(e.conf * 100)}% × ${pctText(e.observed)} + ${100 - Math.round(e.conf * 100)}% × ${pctText(e.expected)} = <strong>${pctText(e.final)}</strong>.</li>`;
+    }
+    return `<h2>${A} vs ${B}: ${pctText(e.final)}</h2><p class="explain-sub">${A}'s chance to win, all maps combined.</p><ol class="explain-steps">${steps}</ol>` +
+        `<p class="explain-source">Win rates from The Unmatched Club (Tabletop League and UnmatchedRu games).</p>`;
+}
+
+function explainSideText(side, name, isA) {
+    if (!side.games) return `<strong>${name}</strong> has no recorded games on this map, so it doesn't move the number.`;
+    const vs = side.all_maps == null ? '' : ` against ${pctText(side.all_maps)} across all ${gamesText(side.all_games)}`;
+    let text = `<strong>${name} on this map: ${recordText(side.wins, side.games)}</strong> (${pctText(side.on_map)})${vs}.`;
+    if (side.conf < 1) {
+        text += ` Only ${gamesText(side.games)} here, so it counts ${Math.round(side.conf * 100)}% and is treated as ${pctText(side.blended)}.`;
+    }
+    const better = side.blended > side.all_maps;
+    text += isA ? (better ? ` ${name} does better here than usual.` : ` ${name} does worse here than usual.`)
+                : (better ? ` ${name} does better here than usual, which hurts the other side.` : ` ${name} does worse here than usual, which helps the other side.`);
+    return text;
+}
+
+// Same clamp as the server (map_stats.py): 1% to 99%
+const clampPct = v => Math.min(99, Math.max(1, v));
+const odds = pct => clampPct(pct) / (100 - clampPct(pct));
+const oddsText = v => v >= 10 ? v.toFixed(0) : v >= 1 ? v.toFixed(2) : v.toFixed(2);
+
+/**
+ * The "Together" step worked out by hand: percentages become odds (wins per loss), each fighter's
+ * map record multiplies them, and the result is turned back into a percentage. This is the
+ * log-odds math in map_stats.py, written as multiplying odds.
+ */
+function oddsMathHTML(e, A, B) {
+    const factor = side => (side.games && side.all_maps != null) ? odds(side.blended) / odds(side.all_maps) : 1;
+    const fa = factor(e.a), fb = factor(e.b);
+    const start = odds(e.base), end = start * fa / fb;
+    const sideLine = (side, name, f, verb) => side.games && side.all_maps != null
+        ? `<li>${name}: ${pctText(side.blended)} on this map vs ${pctText(side.all_maps)} usually → odds ` +
+          `${oddsText(odds(side.blended))} vs ${oddsText(odds(side.all_maps))} → <strong>${verb} ${f.toFixed(2)}</strong></li>`
+        : `<li>${name}: no games on this map → ${verb} 1 (no change)</li>`;
+    return `<details class="explain-math"><summary>Show the math</summary>` +
+        `<p>Percentages are turned into <em>odds</em> (wins per loss), the map effects multiply the odds, then the odds are turned back into a percentage:</p>` +
+        `<ol>` +
+        `<li>Start: ${pctText(e.base)} → odds ${Math.round(clampPct(e.base))} ÷ ${100 - Math.round(clampPct(e.base))} = <strong>${oddsText(start)}</strong></li>` +
+        sideLine(e.a, A, fa, '×') +
+        sideLine(e.b, B, fb, '÷') +
+        `<li>${oddsText(start)} × ${fa.toFixed(2)} ÷ ${fb.toFixed(2)} = <strong>${oddsText(end)}</strong></li>` +
+        `<li>Back to a percentage: ${oddsText(end)} ÷ (1 + ${oddsText(end)}) = <strong>${pctText(100 * end / (1 + end))}</strong></li>` +
+        `</ol>` +
+        `<p class="explain-note">Why not just add the points? Take a map that turns a 50% matchup into 65%: ` +
+        `it multiplies the odds by 1.86 (1 to 1 becomes 1.86 to 1). Adding its +15 points to a 90% matchup would give 105%, ` +
+        `which is impossible. With odds, 90% is 9 to 1, × 1.86 is 16.7 to 1, which is 94%. ` +
+        `So the same map edge moves a close matchup a lot and a lopsided one only a little.</p>` +
+        `</details>`;
+}
+
+function explainMapHTML(e, a, b, map) {
+    const A = escapeHTML(fighterName(a)), B = escapeHTML(fighterName(b));
+    const M = escapeHTML(MAP_INFO[map] ? MAP_INFO[map].name : map);
+    let steps = `<li><strong>Start from the overall matchup:</strong> ${A} wins ${pctText(e.base)} against ${B}, all maps combined. ` +
+        `<button type="button" class="explain-link" data-explain="base|${a}|${b}">How is that worked out?</button></li>` +
+        `<li>${explainSideText(e.a, A, true)} Effect on ${A}'s chance: <strong>${signedPts(e.shift_a)}</strong>.</li>` +
+        `<li>${explainSideText(e.b, B, false)} Effect on ${A}'s chance: <strong>${signedPts(e.shift_b)}</strong>.</li>` +
+        `<li><strong>Together:</strong> ${pctText(e.base)} → <strong>${pctText(e.expected)}</strong>.` +
+        oddsMathHTML(e, A, B) + `</li>`;
+    if (!e.pair_games) {
+        steps += `<li><strong>${A} vs ${B} on ${M} itself:</strong> never recorded, so ${pctText(e.expected)} is the estimate.</li>`;
+    } else {
+        const own = 100 * e.pair_wins / e.pair_games;
+        steps += `<li><strong>${A} vs ${B} on ${M} itself:</strong> ${A} is ${recordText(e.pair_wins, e.pair_games)} (${pctText(own)}). ` +
+            `${trustText(e.pair_games, e.pair_conf, e.full_games)}` +
+            (e.pair_conf >= 1 ? ` So the answer is <strong>${pctText(e.final)}</strong>.`
+                : ` Blend: ${Math.round(e.pair_conf * 100)}% × ${pctText(own)} + ${100 - Math.round(e.pair_conf * 100)}% × ${pctText(e.expected)} = <strong>${pctText(e.final)}</strong>.`) + `</li>`;
+    }
+    return `<h2>${A} vs ${B} on ${M}: ${pctText(e.final)}</h2>` +
+        `<p class="explain-sub">Most pairings have few or no games on any one map, so this mostly uses how each fighter does on the map against everyone.</p>` +
+        `<ol class="explain-steps">${steps}</ol>` +
+        `<p class="explain-source">Map records: every Tabletop League game, from each fighter's stats page.</p>`;
+}
+
+function explainFirstHTML(e, a, b) {
+    const A = escapeHTML(fighterName(a)), B = escapeHTML(fighterName(b));
+    let steps = `<li><strong>In general:</strong> whoever went first won ${pctText(e.overall)} of ${gamesText(e.overall_games)} in our sample of recent matches.</li>`;
+    if (!e.games) {
+        steps += `<li><strong>${A} vs ${B}:</strong> no games in the sample yet, so the general ${pctText(e.overall)} is used.</li>`;
+    } else {
+        const own = 100 * e.wins / e.games;
+        steps += `<li><strong>${A} vs ${B}:</strong> the first player won ${e.wins} of ${gamesText(e.games)} (${pctText(own)}). ${trustText(e.games, e.conf, e.full_games)}` +
+            (e.conf >= 1 ? '' : ` Blend: ${Math.round(e.conf * 100)}% × ${pctText(own)} + ${100 - Math.round(e.conf * 100)}% × ${pctText(e.overall)} = <strong>${pctText(e.final)}</strong>.`) + `</li>`;
+    }
+    return `<h2>Going first: ${pctText(e.final)} win</h2><p class="explain-sub">The chance that whoever takes the first turn wins, either fighter.</p>` +
+        `<ol class="explain-steps">${steps}</ol>` +
+        `<p class="explain-source">Turn order is only shown on individual Tabletop League match pages, so this comes from a smaller sample of recent matches.</p>`;
+}
+
+function explainCloseHTML(e, a, b) {
+    const A = escapeHTML(fighterName(a)), B = escapeHTML(fighterName(b));
+    const hp = v => `${Math.round(v * 10) / 10} HP`;
+    let steps = `<li><strong>In general:</strong> the winner ends on ${hp(e.overall)} on average in our sample of recent matches.</li>`;
+    if (!e.games) {
+        steps += `<li><strong>${A} vs ${B}:</strong> no games in the sample yet, so the general ${hp(e.overall)} is used.</li>`;
+    } else {
+        steps += `<li><strong>${A} vs ${B}:</strong> the winner ended on ${hp(e.pair)} on average over ${gamesText(e.games)}. ${trustText(e.games, e.conf, e.full_games)}` +
+            (e.conf >= 1 ? '' : ` Blend: ${Math.round(e.conf * 100)}% × ${hp(e.pair)} + ${100 - Math.round(e.conf * 100)}% × ${hp(e.overall)} = <strong>${hp(e.final)}</strong>.`) + `</li>`;
+    }
+    return `<h2>Winner ends on ${hp(e.final)}</h2><p class="explain-sub">How much health the winner has left: lower means closer games.</p>` +
+        `<ol class="explain-steps">${steps}</ol>` +
+        `<p class="explain-source">End health is only shown on individual Tabletop League match pages, so this comes from a smaller sample of recent matches.</p>`;
+}
+
+function openExplanation(spec) {
+    const [kind, a, b, map] = spec.split('|');
+    const e = explainData(kind, a, b, map);
+    const modal = qs('#explain-modal');
+    if (!e || !modal) return;
+    const html = { base: explainBaseHTML, map: explainMapHTML, first: explainFirstHTML, close: explainCloseHTML }[kind](e, a, b, map);
+    qs('#explain-body').innerHTML = html;
+    modal.classList.remove('hidden');
+    qs('#explain-close').focus();
+    recordAnalytics('explanation_opened', { kind });
+}
+
+function setupExplanations() {
+    const modal = qs('#explain-modal');
+    if (!modal) return;
+    document.addEventListener('click', ev => {
+        const btn = ev.target.closest('[data-explain]');
+        if (btn) { ev.preventDefault(); openExplanation(btn.dataset.explain); }
+    });
+    const close = () => modal.classList.add('hidden');
+    qs('#explain-close').addEventListener('click', close);
+    modal.addEventListener('click', ev => { if (ev.target === modal) close(); });
+    document.addEventListener('keydown', ev => { if (ev.key === 'Escape' && !modal.classList.contains('hidden')) close(); });
 }
 
 /*************************** SHARE LINK  ***************************/
@@ -786,6 +1114,7 @@ function setupShareButton() {
 
         const params = new URLSearchParams({ p1, opp });
         qsa('input[name="owned_sets"]:checked').forEach(cb => params.append('sets', cb.value));
+        if (chosenMap()) params.set('map', chosenMap());
         const url = `${window.location.origin}${window.location.pathname}?${params}`;
 
         try {

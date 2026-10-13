@@ -112,3 +112,27 @@ def test_teams_2v2_split_is_balanced(engine, fighters):
     assert len(team_a | team_b) == 4 and not team_a & team_b
     assert abs(result["team_a_win_pct"] - 50.0) < 10.0
     assert len(result["cross"]) == 4
+
+
+def test_rerolls_vary_and_avoid_the_last_fighters(engine, fighters):
+    rng = random.Random(1)
+    first = {f["id"] for f in insights.game_night(engine, fighters, 2, rng=rng)["fighters"]}
+    seen = {frozenset(first)}
+    prev = first
+    for _ in range(8):
+        r = insights.game_night(engine, fighters, 2, rng=rng, avoid=prev)
+        prev = {f["id"] for f in r["fighters"]}
+        seen.add(frozenset(prev))
+    assert len(seen) > 1
+    assert all("eve" not in g for g in seen)  # variety never brings in the lopsided fighter
+
+
+def test_buy_rows_are_grouped_by_whether_you_can_buy_them(engine, fighters):
+    prices = {"Box B": {"price": 20.0, "in_stock": True, "status": "in_stock"},
+              "Box C": {"price": 10.0, "in_stock": False, "status": "not_released"}}
+    groups = insights.group_buy_rows(insights.buy_next(engine, fighters, [], prices))
+    assert [r["set"] for r in groups["buyable"]] == ["Box B"]
+    assert [r["set"] for r in groups["not_released"]] == ["Box C"]
+    assert [r["set"] for r in groups["not_sold"]] == ["Box A"]  # no store entry
+    assert insights.stock_info({"in_stock": False})["label"] == "Sold out"  # older prices.json
+    assert insights.stock_info(None)["status"] == "not_sold"

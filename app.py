@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, send_from_directory, send_file, abort, Response
 from matchup_engine import MatchupEngine, FULL_CONFIDENCE_GAMES
+from map_stats import MapStats, MAP_FULL_CONFIDENCE_GAMES, rounded
 import insights
+import tournaments_web
 import random
 import json
 import os
@@ -46,6 +48,9 @@ PRICES = {k: v for k, v in _PRICES_RAW.items() if not k.startswith("_")}
 PRICES_META = _PRICES_RAW.get("_meta", {})
 UPCOMING_SETS = _PRICES_RAW.get("_upcoming", {})
 engine = MatchupEngine(FIGHTERS_DATA, WIN_MATRIX, GAMES_MATRIX)
+MAPS = load_json_data("input/maps.json", {})
+map_engine = MapStats(engine, load_json_data("input/map_stats.json", {}), MAPS)
+MAP_META = map_engine.meta if map_engine.has_data else {}
 
 CLUB_MATCHUP_URL = "https://www.the-unmatched.club/tools/matchups"
 
@@ -128,6 +133,33 @@ def get_available_fighters(owned_set_names, theme_filter=None):
 def club_matchup_url(fighter_a, fighter_b):
     """Link to this matchup on The Unmatched Club's matchup tool."""
     return f"{CLUB_MATCHUP_URL}?h1={fighter_a['club_key']}&h2={fighter_b['club_key']}"
+
+
+def map_panels(results, owned_sets):
+    """Map suggestions and turn-order stats for every P1 x opponent card pairing, keyed 'p1|opp'."""
+    if not results or not map_engine.has_data or not results.get("p1_main") or not results.get("opp_main"):
+        return {}
+    p1s = [results["p1_main"]] + results.get("p1_alternatives", [])
+    opps = [results["opp_main"]] + results.get("opp_alternatives", [])
+    return {
+        f"{a['id']}|{b['id']}": map_engine.matchup_panel(
+            a["id"], b["id"], owned_sets, home_sets=(get_fighter_sets(a), get_fighter_sets(b)))
+        for a in p1s for b in opps if a["id"] != b["id"]
+    }
+
+
+def matchup_explanations(results):
+    """How each card's win % vs the other main fighter was worked out, keyed 'fighter|opponent'."""
+    if not results or not results.get("p1_main") or not results.get("opp_main"):
+        return {}
+    p1, opp = results["p1_main"], results["opp_main"]
+    pairs = [(f, opp) for f in [p1] + results.get("p1_alternatives", [])] +             [(f, p1) for f in [opp] + results.get("opp_alternatives", [])]
+    out = {}
+    for a, b in pairs:
+        if a["id"] != b["id"]:
+            out[f"{a['id']}|{b['id']}"] = rounded(engine.explain_estimate(a["id"], b["id"]))
+            out[f"{b['id']}|{a['id']}"] = rounded(engine.explain_estimate(b["id"], a["id"]))
+    return out
 
 
 def generate_suggestions(selected_data, engine=engine):
@@ -225,7 +257,7 @@ def utility_processor():
             "club_url": club_matchup_url(fighter, vs_fighter),
         }
 
-    return dict(matchup_info=matchup_info)
+    return dict(matchup_info=matchup_info, stock_info=insights.stock_info)
 # ---------------------------------------------------------
 # 4.  MAIN ROUTE  ─────────────────────────────────────────
 # ---------------------------------------------------------
@@ -336,6 +368,7 @@ def index():
 
         results_data, error_message = generate_suggestions(selected_data, request_engine)
 
+    panels = map_panels(results_data, selected_data["owned_sets"])
     return render_template(
         "index.html",
         all_sets_list=ALL_SETS_LIST,
@@ -351,7 +384,12 @@ def index():
         stats_meta=STATS_META,
         full_confidence_games=FULL_CONFIDENCE_GAMES,
         club_matchup_url=CLUB_MATCHUP_URL,
-        playstyle_definitions=PLAYSTYLE_DEFINITIONS_COMBINED
+        playstyle_definitions=PLAYSTYLE_DEFINITIONS_COMBINED,
+        map_panels=panels,
+        matchup_explain=matchup_explanations(results_data),
+        map_info=map_engine.map_info({k for p in panels.values() for k in p["by_map"]}),
+        chosen_map=request.values.get("map") or "",
+        map_meta=MAP_META,
     )
 
 @app.route("/about")
@@ -422,8 +460,16 @@ def render_tool(template, js_matchups=False, **ctx):
         club_matchup_url=CLUB_MATCHUP_URL,
         fair_band=insights.FAIR_BAND,
         all_sets_list=ALL_SETS_LIST,
+        map_meta=MAP_META,
+        map_full_confidence_games=MAP_FULL_CONFIDENCE_GAMES,
         **ctx,
     )
+
+
+# Tournaments (/tournaments): password-protected, saved on the server
+tournaments_web.configure(app)
+app.register_blueprint(tournaments_web.create_blueprint(
+    engine, render_tool, {f["id"]: f for f in FIGHTERS_DATA}, ALL_SETS_LIST, get_collection))
 
 
 @app.route("/collection")
@@ -465,6 +511,7 @@ def fighter_page(fighter_id):
         best=best,
         worst=worst,
         prices={s: PRICES.get(s) for s in fighter["sets"]},
+        map_rows=map_engine.fighter_maps(fighter_id),
     )
 
 
@@ -472,11 +519,9 @@ def fighter_page(fighter_id):
 def buy_next_page():
     collection = get_collection()
     sort = request.args.get("sort", "fair")
-    in_stock_only = request.args.get("in_stock") == "1"
-    rows = insights.sort_buy_rows(
-        insights.buy_next(engine, FIGHTERS_DATA, collection, PRICES), sort, in_stock_only)
-    return render_tool("buy_next.html", collection=collection, rows=rows, sort=sort,
-                       in_stock_only=in_stock_only, upcoming=UPCOMING_SETS)
+    groups = insights.group_buy_rows(insights.buy_next(engine, FIGHTERS_DATA, collection, PRICES), sort)
+    return render_tool("buy_next.html", collection=collection, groups=groups, sort=sort,
+                       upcoming=UPCOMING_SETS)
 
 
 @app.route("/tiers")
@@ -508,12 +553,14 @@ def game_night_page():
     except ValueError:
         players = 4
     names = [n.strip() for n in request.args.get("names", "").split(",") if n.strip()]
+    # The fighters shown last time, so a reroll brings different ones when the collection allows
+    avoid = [i for i in request.args.get("prev", "").split(",") if i]
     result = None
     if request.args.get("go"):
         if mode == "2v2":
-            result = insights.teams_2v2(engine, fighters)
+            result = insights.teams_2v2(engine, fighters, avoid=avoid)
         else:
-            result = insights.game_night(engine, fighters, players)
+            result = insights.game_night(engine, fighters, players, avoid=avoid)
     return render_tool("game_night.html", collection=collection, mode=mode, players=players,
                        names=names, result=result, pool_size=len(fighters))
 
@@ -528,12 +575,23 @@ def draft_page():
 @app.route("/log")
 def log_page():
     collection = get_collection()
+    # Maps for the map box: the collection's maps first, then the rest, alphabetically
+    owned = set(collection)
+    maps = sorted(MAPS.values(), key=lambda m: (m.get("set") not in owned, m["name"].lower()))
     return render_tool("log.html", js_matchups=True, collection=collection,
                        pool=sorted(collection_fighters(collection), key=lambda f: f["name"]),
-                       all_fighters=sorted(FIGHTERS_DATA, key=lambda f: f["name"]))
+                       all_fighters=sorted(FIGHTERS_DATA, key=lambda f: f["name"]),
+                       maps=[{"key": m["key"], "name": m["name"], "set": m.get("set"),
+                              "owned": m.get("set") in owned} for m in maps])
 
 # ---------------------------------------------------------
 # 5.  RUN  ────────────────────────────────────────────────
 # ---------------------------------------------------------
 if __name__ == "__main__":
+    # Local runs only (gunicorn never gets here): tournaments work without any setup
+    if not app.secret_key:
+        app.secret_key = "dev-only-secret"
+    if not app.config.get("TOURNAMENT_PASSWORD_HASH"):
+        app.config["TOURNAMENT_PASSWORD_HASH"] = tournaments_web.password_hash("dev")
+        print(" * Tournaments: no TOURNAMENT_PASSWORD_HASH set, so the local password is 'dev'")
     app.run(debug=True, port=5001)

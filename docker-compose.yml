@@ -8,6 +8,11 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
 
+    # Tournaments: secrets come from .env (gitignored, copy it to the server), saved data lives in ./data
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+
     # only needed inside docker; nginx will reach it via proxy_net
     expose:
       - "8001"

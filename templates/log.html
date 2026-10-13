@@ -31,10 +31,24 @@
         <label>Result
             <select id="result"><option value="win">I won</option><option value="loss">I lost</option></select>
         </label>
-        <label>Map <input type="text" id="map" placeholder="optional" style="width:9rem"></label>
+        <label>Went first
+            <select id="first"><option value="">—</option><option value="me">Me</option><option value="opp">Opponent</option></select>
+        </label>
+        <label>My HP left <input type="number" id="my-hp" min="0" max="30" placeholder="—" style="width:4.5rem"></label>
+        <label>Their HP left <input type="number" id="opp-hp" min="0" max="30" placeholder="—" style="width:4.5rem"></label>
+        <label>Map
+            {# Pick from the list or type any name (datalist) #}
+            <input type="text" id="map" list="map-options" placeholder="pick or type" autocomplete="off" style="width:12rem">
+            <datalist id="map-options">
+                {% for m in maps %}<option value="{{ m.name }}">{{ m.set or '' }}{{ ' · owned' if m.owned }}</option>{% endfor %}
+            </datalist>
+        </label>
         <label>Date <input type="date" id="date"></label>
+        <label>Opponent (player) <input type="text" id="opp-player" placeholder="optional" style="width:8rem"></label>
+        <label class="grow">Notes <input type="text" id="notes" placeholder="optional" style="min-width:12rem"></label>
         <button class="btn go" type="submit">Save game</button>
     </form>
+    <p class="muted" style="margin-top:.4rem">Only fighters and result are needed. HP is what each fighter's hero had left at the end (0 for whoever was defeated).</p>
     <p class="muted" id="form-hint" style="margin-top:.4rem"></p>
 </section>
 
@@ -46,6 +60,7 @@
         <label class="btn secondary small">Import backup <input type="file" id="import" accept="application/json" hidden></label>
     </div>
     <div id="summary" class="stat-row"></div>
+    <div id="detail-stats"></div>
     <div class="table-wrap"><table class="data" id="by-fighter"></table></div>
 </section>
 
@@ -58,6 +73,7 @@
 {% block scripts %}
 <script>
 const POOL = {{ pool | map(attribute='id') | list | tojson }};
+const MAP_KEY_BY_NAME = Object.fromEntries({{ maps | tojson }}.map(m => [m.name.toLowerCase(), m.key]));
 const LOG_KEY = 'ufc_game_log';
 const CHALLENGE_KEY = 'ufc_challenge';
 
@@ -148,11 +164,20 @@ function renderStats() {
                 <td class="num ${d >= 0 ? 'win' : 'loss'}">${(d >= 0 ? '+' : '') + d.toFixed(1)} wins</td></tr>`;
         }).join('') + '</tbody>' : '<tbody><tr><td class="muted">No games logged yet.</td></tr></tbody>';
 
+    renderDetailStats(log);
+
     const hist = [...log].reverse();
-    $('#history').innerHTML = hist.length ? '<thead><tr><th>Date</th><th>You</th><th></th><th>Opponent</th><th>Map</th><th class="num">Expected</th><th></th></tr></thead><tbody>' +
+    const hp = v => (v === null || v === undefined || v === '') ? '—' : v;
+    $('#history').innerHTML = hist.length ? '<thead><tr><th>Date</th><th>You</th><th></th><th>Opponent</th><th>Map</th>' +
+        '<th>First</th><th class="num">HP (you–them)</th><th class="num">Expected</th><th>Notes</th><th></th></tr></thead><tbody>' +
         hist.map(g => `<tr><td>${escapeHtml(g.date || '')}</td><td>${fighterChip(g.me)}</td>
-            <td class="${g.result}">${g.result === 'win' ? 'W' : 'L'}${g.challenge ? ' 🐺' : ''}</td><td>${fighterChip(g.opp)}</td>
-            <td>${escapeHtml(g.map || '')}</td><td class="num">${g.expected !== null ? g.expected + '%' : '—'}</td>
+            <td class="${g.result}">${g.result === 'win' ? 'W' : 'L'}${g.challenge ? ' 🐺' : ''}</td>
+            <td>${fighterChip(g.opp)}${g.opp_player ? `<div class="muted">${escapeHtml(g.opp_player)}</div>` : ''}</td>
+            <td>${escapeHtml(g.map || '')}</td>
+            <td>${g.first === 'me' ? 'You' : g.first === 'opp' ? 'Them' : '—'}</td>
+            <td class="num">${hp(g.my_hp)}–${hp(g.opp_hp)}</td>
+            <td class="num">${g.expected !== null ? g.expected + '%' : '—'}</td>
+            <td class="muted">${escapeHtml(g.notes || '')}</td>
             <td><button type="button" class="btn secondary small" data-del="${g.id}">Delete</button></td></tr>`).join('') + '</tbody>'
         : '<tbody><tr><td class="muted">Nothing yet.</td></tr></tbody>';
     $$('#history [data-del]').forEach(b => b.addEventListener('click', () => {
@@ -160,6 +185,29 @@ function renderStats() {
         renderStats();
         renderChallenge();
     }));
+}
+
+/** Going first vs second, how close your games are, and your record on each map. */
+function renderDetailStats(log) {
+    const rec = games => {
+        const w = games.filter(g => g.result === 'win').length;
+        return games.length ? `${w}–${games.length - w} (${Math.round(w / games.length * 100)}%)` : '—';
+    };
+    const first = log.filter(g => g.first === 'me'), second = log.filter(g => g.first === 'opp');
+    const withHp = log.filter(g => Number.isFinite(g.my_hp) && Number.isFinite(g.opp_hp));
+    const margin = withHp.length ? withHp.reduce((s, g) => s + Math.abs(g.my_hp - g.opp_hp), 0) / withHp.length : null;
+    const byMap = {};
+    for (const g of log) if (g.map) (byMap[g.map] ||= []).push(g);
+    const maps = Object.entries(byMap).sort((a, b) => b[1].length - a[1].length);
+    $('#detail-stats').innerHTML =
+        `<div class="stat-row">` +
+        `<div class="stat"><b>${rec(first)}</b><span>going first</span></div>` +
+        `<div class="stat"><b>${rec(second)}</b><span>going second</span></div>` +
+        `<div class="stat"><b>${margin === null ? '—' : margin.toFixed(1) + ' HP'}</b><span>average HP gap at the end${withHp.length ? ` (${withHp.length} game${withHp.length === 1 ? '' : 's'})` : ''}</span></div>` +
+        `</div>` +
+        (maps.length ? '<div class="table-wrap"><table class="data"><thead><tr><th>Map</th><th class="num">Games</th><th class="num">Your record</th></tr></thead><tbody>' +
+            maps.map(([name, games]) => `<tr><td>${escapeHtml(name)}</td><td class="num">${games.length}</td><td class="num">${rec(games)}</td></tr>`).join('') +
+            '</tbody></table></div>' : '');
 }
 
 /*************************** FORM, IMPORT/EXPORT ***************************/
@@ -179,7 +227,17 @@ $('#log-form').addEventListener('submit', e => {
     e.preventDefault();
     const me = $('#me').value, opp = $('#opp').value;
     if (me === opp) { alert('Mirror matches aren\'t played in Unmatched.'); return; }
-    addGame({ me, opp, result: $('#result').value, map: $('#map').value.trim(), date: $('#date').value, challenge: false });
+    const num = sel => $(sel).value === '' ? null : Number($(sel).value);
+    const mapName = $('#map').value.trim();
+    addGame({
+        me, opp, result: $('#result').value, date: $('#date').value, challenge: false,
+        map: mapName, map_key: MAP_KEY_BY_NAME[mapName.toLowerCase()] || null,
+        first: $('#first').value || null, my_hp: num('#my-hp'), opp_hp: num('#opp-hp'),
+        opp_player: $('#opp-player').value.trim(), notes: $('#notes').value.trim(),
+    });
+    // Keep fighters, map and date for the next game; clear the per-game details
+    ['#first', '#my-hp', '#opp-hp', '#notes'].forEach(sel => { $(sel).value = ''; });
+    $('#form-hint').innerHTML = 'Saved. ' + $('#form-hint').innerHTML.replace(/^Saved\. /, '');
     renderChallenge();
 });
 

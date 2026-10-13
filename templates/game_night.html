@@ -11,6 +11,10 @@
     <form method="get" class="row">
         {% for s in request.args.getlist('sets') %}<input type="hidden" name="sets" value="{{ s }}">{% endfor %}
         <input type="hidden" name="go" value="1">
+        {% if result %}
+        {% set shown = (result.team_a + result.team_b) if mode == '2v2' else result.fighters %}
+        <input type="hidden" name="prev" value="{{ shown | map(attribute='id') | join(',') }}">
+        {% endif %}
         <label>Format
             <select name="mode" id="mode">
                 <option value="ffa" {{ 'selected' if mode == 'ffa' }}>Round-robin (everyone plays everyone)</option>

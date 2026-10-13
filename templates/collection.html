@@ -2,7 +2,7 @@
 {% block title %}My Collection – Unmatched Fighter Chooser{% endblock %}
 {% block description %}Track which Unmatched sets you own. Every tool on the site – matchups, tier lists, counter-picks, game night – then works from your collection.{% endblock %}
 {% block heading %}My collection{% endblock %}
-{% block subheading %}<p>Tick the sets you own. It's saved in this browser and every tool uses it, including the matcher.</p>{% endblock %}
+{% block subheading %}<p>Tick the sets you own, then press <strong>Save collection</strong>. It's saved in this browser and every tool uses it, including the matcher.</p>{% endblock %}
 
 {% block content %}
 <section class="panel">
@@ -11,7 +11,8 @@
         <span class="spacer"></span>
         <button type="button" class="btn secondary small" id="select-all">Select all</button>
         <button type="button" class="btn secondary small" id="select-none">Clear</button>
-        <a class="btn go small" href="/buy-next">What should I buy next? →</a>
+        <button type="button" class="btn go" id="save-collection">💾 Save collection</button>
+        <a class="btn secondary small" href="/buy-next">What should I buy next? →</a>
     </div>
     <p class="muted" id="save-status" aria-live="polite" style="margin-top:.5rem"></p>
 </section>
@@ -31,13 +32,9 @@
         <div class="row muted">
             <span>{{ s.fighters | length }} fighter{{ '' if s.fighters | length == 1 else 's' }}</span>
             <span class="spacer"></span>
-            {% if s.price %}
-                <span>${{ '%.0f' % s.price.price }}</span>
-                {% set low = 'left' in s.price.stock_text %}
-                <span class="badge {{ 'out-of-stock' if not s.price.in_stock else ('low-stock' if low else 'in-stock') }}">{{ s.price.stock_text if s.price.in_stock else 'Out of stock' }}</span>
-            {% else %}
-                <span class="badge neutral" title="Not sold on the Restoration Games store">Not on official store</span>
-            {% endif %}
+            {% set st = stock_info(s.price) %}
+            {% if s.price %}<span>${{ '%.0f' % s.price.price }}</span>{% endif %}
+            <span class="badge {{ st.css }}">{{ st.label }}</span>
         </div>
     </div>
     {% endfor %}
@@ -65,15 +62,36 @@ function refresh() {
     ].map(([n, l]) => `<div class="stat"><b>${n}</b><span>${l}</span></div>`).join('');
 }
 
-function save() {
-    saveCollection(currentSets());
-    refresh();
-    $('#save-status').textContent = 'Saved. The matcher and every tool now use these sets.';
+// What's saved now, to tell whether the ticks have unsaved changes
+let savedSets = JSON.stringify([...currentSets()].sort());
+
+function isDirty() {
+    return JSON.stringify([...currentSets()].sort()) !== savedSets;
 }
 
-$$('.set-card input').forEach(cb => cb.addEventListener('change', save));
-$('#select-all').addEventListener('click', () => { $$('.set-card input').forEach(cb => cb.checked = true); save(); });
-$('#select-none').addEventListener('click', () => { $$('.set-card input').forEach(cb => cb.checked = false); save(); });
+function showSaveState() {
+    const dirty = isDirty();
+    $('#save-collection').disabled = !dirty;
+    $('#save-collection').textContent = dirty ? '💾 Save collection' : '✓ Saved';
+    $('#save-status').textContent = dirty ? 'You have unsaved changes.' : '';
+}
+
+function changed() {
+    refresh();
+    showSaveState();
+}
+
+$('#save-collection').addEventListener('click', () => {
+    saveCollection(currentSets());
+    savedSets = JSON.stringify([...currentSets()].sort());
+    showSaveState();
+    $('#save-status').textContent = 'Saved. The matcher and every tool now use these sets.';
+});
+$$('.set-card input').forEach(cb => cb.addEventListener('change', changed));
+$('#select-all').addEventListener('click', () => { $$('.set-card input').forEach(cb => cb.checked = true); changed(); });
+$('#select-none').addEventListener('click', () => { $$('.set-card input').forEach(cb => cb.checked = false); changed(); });
+window.addEventListener('beforeunload', e => { if (isDirty()) { e.preventDefault(); e.returnValue = ''; } });
 refresh();
+showSaveState();
 </script>
 {% endblock %}

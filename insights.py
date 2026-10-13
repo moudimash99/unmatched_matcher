@@ -156,6 +156,45 @@ def sort_buy_rows(rows, sort="fair", in_stock_only=False):
     return sorted(rows, key=BUY_SORTS.get(sort, BUY_SORTS["fair"]), reverse=True)
 
 
+# status -> (label, badge css class). "not_sold" = the Restoration Games store doesn't carry it.
+STOCK_LABELS = {
+    "in_stock": ("In stock", "in-stock"),
+    "low_stock": ("Low stock", "low-stock"),
+    "preorder": ("Pre-order", "preorder"),
+    "sold_out": ("Sold out", "out-of-stock"),
+    "not_released": ("Not in stores yet", "not-released"),
+    "not_sold": ("Not on the official store", "neutral"),
+}
+BUYABLE = {"in_stock", "low_stock", "preorder"}
+
+
+def stock_status(price):
+    """A set's stock status from its prices.json entry (older files only have in_stock)."""
+    if not price:
+        return "not_sold"
+    return price.get("status") or ("in_stock" if price.get("in_stock") else "sold_out")
+
+
+def stock_info(price):
+    status = stock_status(price)
+    label, css = STOCK_LABELS[status]
+    if status == "low_stock" and price.get("stock_text"):
+        label = price["stock_text"]  # e.g. "Only 3 left in stock"
+    return {"status": status, "label": label, "css": css, "buyable": status in BUYABLE}
+
+
+def group_buy_rows(rows, sort="fair"):
+    """
+    Ranked rows split by whether you can buy the set right now: buyable (in stock or pre-order)
+    first, then sold out, then not released yet, then not sold on the official store.
+    """
+    groups = {"buyable": [], "sold_out": [], "not_released": [], "not_sold": []}
+    for r in sort_buy_rows(rows, sort):
+        status = stock_status(r["price"])
+        groups["buyable" if status in BUYABLE else status].append(r)
+    return groups
+
+
 # ---------------------------------------------------------------------------
 # Game night: N players, everyone vs everyone, all games as fair as possible
 # ---------------------------------------------------------------------------
@@ -169,11 +208,33 @@ def _group_score(engine, ids):
     return sum(_fairness(engine, a, b) for a, b in pairs) / len(pairs)
 
 
-def game_night(engine, fighters, players, rng=None, restarts=12):
+# Rerolls pick at random among every group scoring this close to the best one found (score is 0-1),
+# and at least this many groups, so the same fighters don't come back every time.
+REROLL_TOLERANCE = 0.08
+REROLL_MIN_CHOICES = 12
+
+
+def _pick_varied(scored, rng, avoid=()):
+    """
+    scored: {frozenset(ids): (score, extra)}. Picks one at random from the near-best groups,
+    preferring the ones sharing the fewest fighters with `avoid` (the last result shown).
+    """
+    ranked = sorted(scored.items(), key=lambda kv: kv[1][0], reverse=True)
+    best = ranked[0][1][0]
+    # Small collections have few good groups: widen the pool to REROLL_MIN_CHOICES, but never to bad ones
+    near = [kv for i, kv in enumerate(ranked) if kv[1][0] >= best - REROLL_TOLERANCE
+            or (i < REROLL_MIN_CHOICES and kv[1][0] >= best - 2 * REROLL_TOLERANCE)]
+    avoid = set(avoid)
+    least = min(len(group & avoid) for group, _ in near)
+    return rng.choice([kv for kv in near if len(kv[0] & avoid) == least])
+
+
+def game_night(engine, fighters, players, rng=None, restarts=12, avoid=()):
     """
     Picks `players` distinct fighters whose round-robin matchups are as fair
-    (and well tested) as possible. Local search from random starts; the best
-    few groups are sampled so rerolls give variety.
+    (and well tested) as possible. Local search from random starts; every group
+    it scores is kept, and one of the near-best is picked (avoiding the fighters
+    in `avoid`, the last result) so rerolls give variety.
     """
     rng = rng or random.Random()
     ids = [f["id"] for f in fighters]
@@ -184,6 +245,7 @@ def game_night(engine, fighters, players, rng=None, restarts=12):
     for _ in range(restarts):
         group = rng.sample(ids, players)
         score = _group_score(engine, group)
+        found[frozenset(group)] = (score, None)
         improved = True
         while improved:
             improved = False
@@ -193,12 +255,11 @@ def game_night(engine, fighters, players, rng=None, restarts=12):
                         continue
                     trial = group[:i] + [cand] + group[i + 1:]
                     s = _group_score(engine, trial)
+                    found[frozenset(trial)] = (s, None)
                     if s > score + 1e-9:
                         group, score, improved = trial, s, True
-        found[frozenset(group)] = score
 
-    best = sorted(found.items(), key=lambda kv: kv[1], reverse=True)[:3]
-    group, score = rng.choice(best)
+    group, (score, _) = _pick_varied(found, rng, avoid)
     by_id = {f["id"]: f for f in fighters}
     picked = [by_id[i] for i in group]
     rng.shuffle(picked)
@@ -206,7 +267,7 @@ def game_night(engine, fighters, players, rng=None, restarts=12):
     return {"fighters": picked, "score": score, "games": games}
 
 
-def teams_2v2(engine, fighters, rng=None, restarts=12):
+def teams_2v2(engine, fighters, rng=None, restarts=12, avoid=()):
     """
     Two teams of two whose cross matchups average closest to 50%, preferring
     well-tested matchups. Team win estimate = mean of the four cross matchups.
@@ -231,6 +292,7 @@ def teams_2v2(engine, fighters, rng=None, restarts=12):
     for _ in range(restarts):
         four = rng.sample(ids, 4)
         score, t1, t2 = best_split(four)
+        found[frozenset(four)] = (score, (t1, t2))
         improved = True
         while improved:
             improved = False
@@ -240,12 +302,11 @@ def teams_2v2(engine, fighters, rng=None, restarts=12):
                         continue
                     trial = four[:i] + [cand] + four[i + 1:]
                     s, u1, u2 = best_split(trial)
+                    found[frozenset(trial)] = (s, (u1, u2))
                     if s > score + 1e-9:
                         four, score, t1, t2, improved = trial, s, u1, u2, True
-        found[frozenset(four)] = (score, t1, t2)
 
-    best = sorted(found.values(), key=lambda v: v[0], reverse=True)[:3]
-    score, t1, t2 = rng.choice(best)
+    _, (score, (t1, t2)) = _pick_varied(found, rng, avoid)
     by_id = {f["id"]: f for f in fighters}
     _, est = split_score(*t1, *t2)
     return {

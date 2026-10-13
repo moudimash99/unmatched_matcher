@@ -39,8 +39,9 @@
         <div class="row" style="margin-top:.75rem">
             {% for set_name, price in prices.items() %}
                 {% if price %}
-                <a class="btn small {{ 'secondary' if not price.in_stock }}" href="{{ price.url }}" target="_blank" rel="noopener">
-                    {{ set_name }} · ${{ '%.0f' % price.price }} · {{ price.stock_text if price.in_stock else 'Out of stock' }}
+                {% set st = stock_info(price) %}
+                <a class="btn small {{ 'secondary' if not st.buyable }}" href="{{ price.url }}" target="_blank" rel="noopener">
+                    {{ set_name }} · ${{ '%.0f' % price.price }} · {{ st.label }}
                 </a>
                 {% endif %}
             {% endfor %}
@@ -63,6 +64,30 @@
         {% include "_matchup_table.html" with context %}
     </div>
 </section>
+
+{% if map_rows %}
+<section class="panel">
+    <h2>Maps</h2>
+    <p class="muted">{{ fighter.name }}'s overall win rate shifted by how they do on each map in Tabletop League games.
+        Maps with fewer than {{ map_full_confidence_games }} games lean on the overall rate.</p>
+    <div class="table-wrap">
+    <table class="data">
+        <thead><tr><th>Map</th><th>Set</th><th class="num">{{ fighter.name }} wins</th><th class="num">vs usual</th><th class="num">Games</th></tr></thead>
+        <tbody>
+        {% for r in map_rows %}
+        <tr>
+            <td><strong>{{ r.map.name }}</strong></td>
+            <td>{{ r.map.set or '–' }}{% if collection and r.map.set in collection %} <span class="muted">· owned</span>{% endif %}</td>
+            <td class="num" data-win="{{ r.win_pct }}" data-games="{{ r.games }}">{{ '~' if r.low_data }}{{ r.win_pct | round | int }}%</td>
+            <td class="num">{{ '%+d' % (r.lean_pts | round | int) }}</td>
+            <td class="num">{{ "{:,}".format(r.games) }}{% if r.low_data %} <span class="games-note low-data">estimate</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</section>
+{% endif %}
 
 {% if hero and deck %}
 <section class="panel">

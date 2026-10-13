@@ -166,13 +166,13 @@ class MatchupEngine:
         return 0 if n is None else int(n)
 
     @staticmethod
-    def confidence(games):
-        """0 with no games, climbing logarithmically to 1 at FULL_CONFIDENCE_GAMES."""
+    def confidence(games, full_games=FULL_CONFIDENCE_GAMES):
+        """0 with no games, climbing logarithmically to 1 at full_games."""
         if games is None:
             return 1.0
         if games <= 0:
             return 0.0
-        return min(1.0, math.log1p(games) / math.log1p(FULL_CONFIDENCE_GAMES))
+        return min(1.0, math.log1p(games) / math.log1p(full_games))
 
     def _build_overall_stats(self):
         """Maps fighter id -> (games-weighted overall win %, total games)."""
@@ -219,6 +219,20 @@ class MatchupEngine:
         if c >= 1.0:
             return observed
         return c * observed + (1 - c) * self.expected_win_rate(id_a, id_b)
+
+    def explain_estimate(self, id_a, id_b):
+        """The pieces behind estimate_win_rate(A, B), for showing how it was worked out."""
+        observed = self.lookup_win_rate(id_a, id_b)
+        games = self.games_played(id_a, id_b) if observed is not None else 0
+        return {
+            "a_overall": self.overall_win_rate(id_a), "a_total": self.overall_stats.get(id_a, (None, 0))[1],
+            "b_overall": self.overall_win_rate(id_b), "b_total": self.overall_stats.get(id_b, (None, 0))[1],
+            "expected": self.expected_win_rate(id_a, id_b),
+            "observed": observed, "games": games,
+            "conf": self.confidence(games) if observed is not None else 0.0,
+            "full_games": FULL_CONFIDENCE_GAMES,
+            "final": self.estimate_win_rate(id_a, id_b),
+        }
 
     def _get_win_rate(self, id_a, id_b):
         """

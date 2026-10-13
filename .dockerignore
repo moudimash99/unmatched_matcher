@@ -1,0 +1,7 @@
+.env
+data/
+scratch/
+.git/
+__pycache__/
+*.pyc
+tests/
