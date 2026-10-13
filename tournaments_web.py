@@ -1,11 +1,17 @@
 """
 Tournament pages and API (/tournaments), behind one shared password.
 
+Each password opens its own tournaments: anyone can make a password on the login page
+(a "space"), and only that password sees the tournaments created with it.
+
 Configuration (environment, or a .env file next to app.py, which is gitignored):
   SECRET_KEY                 signs the login cookie (required; same value for every worker)
-  TOURNAMENT_PASSWORD_HASH   sha256 hex of the password (the old app's PASSWORD_HASH works too)
+  TOURNAMENT_PASSWORD_HASH   optional: sha256 hex of the first password (the old app's PASSWORD_HASH
+                             works too). Logging in with it makes its space and gives it every
+                             tournament that has no owner yet (from before passwords had spaces).
+  TOURNAMENT_SIGNUP          "0" turns off making new passwords on the login page
   TOURNAMENT_DATA_DIR        where tournaments are saved (default: data/tournaments)
-Without SECRET_KEY and a password hash the pages say the feature isn't set up.
+Without SECRET_KEY the pages say the feature isn't set up.
 Both secrets stay out of git: the repo is public, and anyone with SECRET_KEY could forge a login.
 """
 import hashlib
@@ -55,17 +61,62 @@ def record_failure(addr, now=None):
         _failures[addr] = _recent_failures(addr, now) + [now]
 
 
+# New passwords: at most SIGNUP_MAX per address per SIGNUP_WINDOW_SECONDS, so nobody can fill the disk
+SIGNUP_MAX = 5
+SIGNUP_WINDOW_SECONDS = 24 * 60 * 60
+MIN_PASSWORD_LENGTH = 6
+_signups = {}
+
+
+def signup_allowed(addr, now=None):
+    now = now or time.time()
+    with _failures_lock:
+        _signups[addr] = [t for t in _signups.get(addr, []) if now - t < SIGNUP_WINDOW_SECONDS]
+        return len(_signups[addr]) < SIGNUP_MAX
+
+
+def record_signup(addr, now=None):
+    now = now or time.time()
+    with _failures_lock:
+        _signups.setdefault(addr, []).append(now)
+
+
 def create_blueprint(engine, render_tool, fighters_by_id, all_sets, get_collection):
     bp = Blueprint("tournaments", __name__)
 
     def store():
         return T.TournamentStore(current_app.config["TOURNAMENT_DATA_DIR"])
 
+    def spaces():
+        return T.SpaceStore(current_app.config["TOURNAMENT_DATA_DIR"])
+
     def configured():
-        return bool(current_app.secret_key and current_app.config.get("TOURNAMENT_PASSWORD_HASH"))
+        return bool(current_app.secret_key)
+
+    def signup_enabled():
+        return current_app.config.get("TOURNAMENT_SIGNUP", True)
+
+    def space():
+        """The logged-in password's space id, or None."""
+        sid = session.get("tournament_space") if configured() else None
+        return sid if sid and spaces().exists(sid) else None
 
     def authed():
-        return configured() and session.get("tournaments_auth") is True
+        return space() is not None
+
+    def owned(t):
+        return t if (t and t.get("owner") == space()) else None
+
+    def log_in(sid):
+        session["tournament_space"] = sid
+        session.permanent = True
+
+    def claim_unowned(sid):
+        """Tournaments from before passwords had spaces go to the first (legacy) password."""
+        st = store()
+        for t in st.list():
+            if not t.get("owner"):
+                st.save(dict(t, owner=sid), t["version"], "Moved to its password's space")
 
     def win_pct(a, b):
         if not a or not b or a == b or a not in fighters_by_id or b not in fighters_by_id:
@@ -92,6 +143,8 @@ def create_blueprint(engine, render_tool, fighters_by_id, all_sets, get_collecti
             **{k: t[k] for k in ("id", "name", "version", "updated", "players", "scoring", "rounds", "bench")},
             "matches": out,
             "scores": T.scores(t, win_pct),
+            "adjustments": t.get("adjustments", []),
+            "adjustment_totals": T.adjustment_totals(t),
             "current_round": T.current_round(t),
             "champion": final["winner"] if final else None,
             "notes": T.notes(t),
@@ -108,9 +161,11 @@ def create_blueprint(engine, render_tool, fighters_by_id, all_sets, get_collecti
     @bp.route("/tournaments")
     def index():
         if not authed():
-            return render_tool("tournaments.html", configured=configured(), authed=False,
-                               collection=get_collection(), error=request.args.get("error"))
-        items = [dict(t, progress=progress(t)) for t in store().list()]
+            return render_tool("tournaments.html", configured=configured(), authed=False, signup=signup_enabled(),
+                               collection=get_collection(), error=request.args.get("error"),
+                               min_password=MIN_PASSWORD_LENGTH)
+        items = [dict(t, progress=progress(t), current=T.current_round(t), champion=(T.final_match(t) or {}).get("winner"))
+                 for t in store().list(owner=space())]
         return render_tool("tournaments.html", configured=True, authed=True, items=items,
                            all_sets=all_sets, collection=get_collection(),
                            error=request.args.get("error"))
@@ -122,17 +177,42 @@ def create_blueprint(engine, render_tool, fighters_by_id, all_sets, get_collecti
         addr = _client_address()
         if login_blocked(addr):
             return redirect(url_for("tournaments.index", error="Too many wrong passwords. Try again in 15 minutes."))
-        given = password_hash(request.form.get("password", ""))
-        if hmac.compare_digest(given, current_app.config["TOURNAMENT_PASSWORD_HASH"]):
-            session["tournaments_auth"] = True
-            session.permanent = True
+        password = request.form.get("password", "")
+        sid = spaces().find(password) if password else None
+        legacy = current_app.config.get("TOURNAMENT_PASSWORD_HASH")
+        if not sid and password and legacy and hmac.compare_digest(password_hash(password), legacy):
+            sid = spaces().create(password)
+        if sid:
+            if legacy and hmac.compare_digest(password_hash(password), legacy):
+                claim_unowned(sid)
+            log_in(sid)
             return redirect(url_for("tournaments.index"))
         record_failure(addr)
-        return redirect(url_for("tournaments.index", error="Wrong password."))
+        return redirect(url_for("tournaments.index", error="No tournaments open with that password. Check it, or make a new password below."))
+
+    @bp.route("/tournaments/signup", methods=["POST"])
+    def signup():
+        if not configured() or not signup_enabled():
+            abort(404)
+        password = request.form.get("password", "")
+        if len(password) < MIN_PASSWORD_LENGTH:
+            return redirect(url_for("tournaments.index", error=f"Use at least {MIN_PASSWORD_LENGTH} characters."))
+        if password != request.form.get("confirm", ""):
+            return redirect(url_for("tournaments.index", error="The two passwords don't match."))
+        existing = spaces().find(password)
+        if existing:  # it's already someone's password; whoever knows it may open it
+            log_in(existing)
+            return redirect(url_for("tournaments.index"))
+        addr = _client_address()
+        if not signup_allowed(addr):
+            return redirect(url_for("tournaments.index", error="Too many new passwords from here today. Try again tomorrow."))
+        record_signup(addr)
+        log_in(spaces().create(password))
+        return redirect(url_for("tournaments.index"))
 
     @bp.route("/tournaments/logout")
     def logout():
-        session.pop("tournaments_auth", None)
+        session.pop("tournament_space", None)
         return redirect(url_for("tournaments.index"))
 
     @bp.route("/tournaments/new", methods=["POST"])
@@ -145,7 +225,7 @@ def create_blueprint(engine, render_tool, fighters_by_id, all_sets, get_collecti
             t = T.new_tournament(request.form.get("name"), players, fighters, fairness)
         except T.TournamentError as e:
             return redirect(url_for("tournaments.index", error=str(e)))
-        t = store().create(t)
+        t = store().create(dict(t, owner=space()))
         return redirect(url_for("tournaments.page", tid=t["id"]))
 
     @bp.route("/tournaments/import", methods=["POST"])
@@ -162,21 +242,22 @@ def create_blueprint(engine, render_tool, fighters_by_id, all_sets, get_collecti
         unknown = sorted(f for f in T.all_fighters(t) if f not in fighters_by_id)
         if unknown:
             return redirect(url_for("tournaments.index", error="Unknown fighters in the bracket: " + ", ".join(unknown)))
-        t = store().create(t)
+        t = store().create(dict(t, owner=space()))
         return redirect(url_for("tournaments.page", tid=t["id"]))
 
     @bp.route("/tournaments/<tid>/delete", methods=["POST"])
     def delete(tid):
         if not authed():
             abort(401)
-        store().delete(tid)
+        if owned(store().get(tid)):
+            store().delete(tid)
         return redirect(url_for("tournaments.index"))
 
     @bp.route("/tournaments/<tid>")
     def page(tid):
         if not authed():
             return redirect(url_for("tournaments.index"))
-        t = store().get(tid)
+        t = owned(store().get(tid))
         if not t:
             abort(404)
         return render_tool("tournament.html", js_matchups=True, tournament=view(t), all_sets=all_sets,
@@ -187,7 +268,7 @@ def create_blueprint(engine, render_tool, fighters_by_id, all_sets, get_collecti
     def api_guard(tid):
         if not authed():
             abort(401)
-        t = store().get(tid)
+        t = owned(store().get(tid))
         if not t:
             abort(404)
         return t
@@ -231,7 +312,8 @@ def create_blueprint(engine, render_tool, fighters_by_id, all_sets, get_collecti
         if old is None:
             return jsonify({"error": "That version isn't in the history any more."}), 404
         try:
-            new = store().save(dict(old, updated=T._now()), t["version"], f"Restored version {body.get('restore')}")
+            new = store().save(dict(old, updated=T._now(), owner=t.get("owner")), t["version"],
+                               f"Restored version {body.get('restore')}")
         except T.VersionConflict as e:
             return jsonify({"error": "This tournament changed on another device; it has been reloaded.",
                             "tournament": view(e.args[0])}), 409
@@ -262,5 +344,6 @@ def configure(app):
     app.config.setdefault("TOURNAMENT_PASSWORD_HASH",
                           os.environ.get("TOURNAMENT_PASSWORD_HASH") or os.environ.get("PASSWORD_HASH"))
     app.config.setdefault("TOURNAMENT_DATA_DIR", os.environ.get("TOURNAMENT_DATA_DIR", os.path.join("data", "tournaments")))
+    app.config.setdefault("TOURNAMENT_SIGNUP", os.environ.get("TOURNAMENT_SIGNUP", "1") != "0")
     app.config.setdefault("SESSION_COOKIE_SAMESITE", "Lax")
     app.config.setdefault("PERMANENT_SESSION_LIFETIME", 60 * 60 * 24 * 90)

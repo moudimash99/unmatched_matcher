@@ -164,6 +164,10 @@ def problems(t):
                 out.append(f"{m['label']} has a winner who isn't in it.")
         if m["player"] and m["player"] not in {p["id"] for p in t["players"]}:
             out.append(f"{m['label']} is credited to a player who isn't in the tournament.")
+    player_ids = {p["id"] for p in t["players"]}
+    for adj in t.get("adjustments", []):
+        if adj["player"] not in player_ids:
+            out.append("A score adjustment is for a player who isn't in the tournament.")
     for mid, n in used_sources.items():
         if n > 1:
             out.append(f"The winner of {matches[mid]['label']} is sent to {n} matches.")
@@ -188,6 +192,9 @@ def notes(t):
 # Scores and win chances
 # ---------------------------------------------------------------------------
 
+SCORING_MODES = ("standard", "weighted")
+
+
 def win_reward(top_pct, side):
     """Weighted scoring: an upset is worth up to 1.8 points, a heavy favourite as little as 0.2."""
     if top_pct is None:
@@ -208,8 +215,23 @@ def scores(t, win_pct=None):
         pct = win_pct(top, bot) if (win_pct and top and bot) else None
         out[m["player"]]["standard"] += 1
         out[m["player"]]["weighted"] += win_reward(pct, side)
+    for adj in t.get("adjustments", []):
+        if adj["player"] in out:
+            for mode in SCORING_MODES if adj["scoring"] == "both" else (adj["scoring"],):
+                out[adj["player"]][mode] += adj["points"]
     for s in out.values():
         s["weighted"] = round(s["weighted"], 2)
+        s["standard"] = round(s["standard"], 2)
+    return out
+
+
+def adjustment_totals(t):
+    """{player id: {"standard": points, "weighted": points}} from score adjustments alone."""
+    out = {p["id"]: {"standard": 0.0, "weighted": 0.0} for p in t["players"]}
+    for adj in t.get("adjustments", []):
+        if adj["player"] in out:
+            for mode in SCORING_MODES if adj["scoring"] == "both" else (adj["scoring"],):
+                out[adj["player"]][mode] = round(out[adj["player"]][mode] + adj["points"], 2)
     return out
 
 
@@ -493,7 +515,7 @@ def op_set_players(t, names):
     names = [n.strip() for n in names]
     if not any(names):
         raise TournamentError("Keep at least one player.")
-    credited = {m["player"] for m in t["matches"] if m["player"]}
+    credited = {m["player"] for m in t["matches"] if m["player"]} | {a["player"] for a in t.get("adjustments", [])}
     players = []
     for i, n in enumerate(names):
         pid = t["players"][i]["id"] if i < len(t["players"]) else f"P{i + 1}"
@@ -513,6 +535,37 @@ def op_set_scoring(t, scoring):
         raise TournamentError("Unknown scoring.")
     t["scoring"] = scoring
     return f"Scoring: {scoring}"
+
+
+def op_add_adjustment(t, player, points, scoring="weighted", note=""):
+    """Extra (or fewer, if negative) points for a player, in one scoring mode or both."""
+    if player not in {p["id"] for p in t["players"]}:
+        raise TournamentError("That player isn't in this tournament.")
+    if scoring not in SCORING_MODES + ("both",):
+        raise TournamentError("Pick standard, weighted or both.")
+    try:
+        points = round(float(points), 2)
+    except (TypeError, ValueError):
+        raise TournamentError("Points must be a number, like 0.8 or -1.") from None
+    if not points or abs(points) > 1000:
+        raise TournamentError("Points must be a number other than 0.")
+    adjs = t.setdefault("adjustments", [])
+    n = 1
+    while any(a["id"] == f"adj{n}" for a in adjs):
+        n += 1
+    adjs.append({"id": f"adj{n}", "player": player, "points": points, "scoring": scoring,
+                 "note": (note or "").strip()[:200], "at": _now()})
+    name = next(p["name"] for p in t["players"] if p["id"] == player)
+    where = "both scorings" if scoring == "both" else f"{scoring} scoring"
+    return f"{'+' if points > 0 else ''}{points:g} points for {name} ({where})"
+
+
+def op_remove_adjustment(t, adjustment_id):
+    adjs = t.get("adjustments", [])
+    if not any(a["id"] == adjustment_id for a in adjs):
+        raise TournamentError("That adjustment isn't there any more.")
+    t["adjustments"] = [a for a in adjs if a["id"] != adjustment_id]
+    return "Removed a score adjustment"
 
 
 def op_add_to_bench(t, fighters):
@@ -835,6 +888,7 @@ def op_slot_in(t, round_id, win_pct, fighters=None):
 
 OPS = {
     "slot_in": op_slot_in, "pair_bench": op_pair_bench, "move_to_round": op_move_to_round,
+    "add_adjustment": op_add_adjustment, "remove_adjustment": op_remove_adjustment,
     "set_result": op_set_result, "set_player": op_set_player, "undo_result": op_undo_result,
     "rename": op_rename, "set_players": op_set_players, "set_scoring": op_set_scoring,
     "add_to_bench": op_add_to_bench, "remove_fighter": op_remove_fighter,
@@ -929,14 +983,15 @@ class TournamentStore:
             json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
         os.replace(tmp, path)
 
-    def list(self):
+    def list(self, owner=None):
+        """Every tournament, or only those of one owner (a password's space)."""
         if not os.path.isdir(self.dir):
             return []
         out = []
         for name in os.listdir(self.dir):
-            if name.endswith(".json") and not name.endswith(".history.json"):
+            if name.startswith("t_") and name.endswith(".json") and not name.endswith(".history.json"):
                 t = self._read(os.path.join(self.dir, name))
-                if t:
+                if t and (owner is None or t.get("owner") == owner):
                     out.append(t)
         return sorted(out, key=lambda t: t["updated"], reverse=True)
 
@@ -988,3 +1043,53 @@ class TournamentStore:
                     os.remove(self._path(tid, suffix))
                 except FileNotFoundError:
                     pass
+
+
+# ---------------------------------------------------------------------------
+# Passwords ("spaces"): each password opens its own set of tournaments
+# ---------------------------------------------------------------------------
+
+class SpaceStore:
+    """
+    spaces.json next to the tournaments: {"pepper": hex, "spaces": {space id: {"key", "created"}}}.
+    A space is found by key = HMAC-SHA256(pepper, password), so passwords are never stored and the
+    lookup stays fast. The pepper is made once and lives with the data, so it moves with backups.
+    """
+
+    def __init__(self, directory):
+        self.dir = directory
+        self.path = os.path.join(directory, "spaces.json")
+        self._lock_owner = TournamentStore(directory)
+
+    def _load(self):
+        data = TournamentStore._read(self.path, None)
+        if data is None:
+            data = {"pepper": secrets.token_hex(32), "spaces": {}}
+        return data
+
+    def _key(self, data, password):
+        import hmac
+        import hashlib
+        return hmac.new(bytes.fromhex(data["pepper"]), password.encode("utf-8"), hashlib.sha256).hexdigest()
+
+    def find(self, password):
+        """The space id this password opens, or None."""
+        data = self._load()
+        key = self._key(data, password)
+        return next((sid for sid, sp in data["spaces"].items() if sp["key"] == key), None)
+
+    def exists(self, space_id):
+        return space_id in self._load()["spaces"]
+
+    def create(self, password):
+        """Makes a space for a new password (or returns the one it already opens)."""
+        with self._lock_owner._lock():
+            data = self._load()
+            key = self._key(data, password)
+            for sid, sp in data["spaces"].items():
+                if sp["key"] == key:
+                    return sid
+            sid = "s_" + secrets.token_hex(5)
+            data["spaces"][sid] = {"key": key, "created": _now()}
+            TournamentStore._write(self.path, data)
+            return sid

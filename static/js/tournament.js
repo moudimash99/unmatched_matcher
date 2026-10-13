@@ -76,26 +76,46 @@ function fighterHTML(id, cls = '') {
     return `<span class="t-fighter ${cls}"><img src="${f.image_url}" alt="" loading="lazy">${escapeHtml(f.name)}</span>`;
 }
 
-function slotHTML(m, side) {
+const fmtScore = (v, mode) => (mode === 'weighted' ? v.toFixed(2) : (Number.isInteger(v) ? String(v) : v.toFixed(2)));
+const statusLabel = { played: 'Played', ready: 'Ready', waiting: 'Waiting' };
+
+/** One fighter row of a match card: portrait, name, their win chance, edit tools. */
+function slotRowHTML(m, side, edit) {
     const slot = m[side];
     const fighter = side === 'top' ? m.top_fighter : m.bot_fighter;
+    const unplayed = !m.winner;
+    const grip = (edit && unplayed && slot)
+        ? `<span class="t-grip" data-drag="slot" data-mid="${m.id}" data-side="${side}" title="Drag onto another slot to swap, or onto the bench">⠿</span>` : '';
+    const tools = (edit && unplayed) ? `<span class="t-slot-tools">
+        <button type="button" data-act="change" data-mid="${m.id}" data-side="${side}" title="Put someone else in this slot">change</button>
+        <button type="button" data-act="swap" data-mid="${m.id}" data-side="${side}" class="${pendingSwap && pendingSwap.mid === m.id && pendingSwap.side === side ? 'on' : ''}" title="Swap this slot with another">⇄</button>
+        ${slot ? `<button type="button" data-act="playin" data-mid="${m.id}" data-side="${side}" title="Make whoever is here win a play-in match first">+ play-in</button>` : ''}
+        </span>` : '';
+    let body;
+    let state = '';
     if (fighter) {
-        const cls = m.winner ? (m.winner === fighter ? 'won' : 'lost') : '';
-        return fighterHTML(fighter, cls) + (m.winner === fighter ? ' <span class="t-crown">♛</span>' : '');
+        const f = FIGHTER_BY_ID[fighter];
+        state = m.winner ? (m.winner === fighter ? 'won' : 'lost') : '';
+        const pct = m.win_pct == null ? null : (side === 'top' ? m.win_pct : 100 - m.win_pct);
+        const low = m.games < FULL_CONFIDENCE_GAMES;
+        body = `<span class="t-ava">${f ? `<img src="${f.image_url}" alt="" loading="lazy">` : ''}</span>
+            <span class="t-name">${escapeHtml(f ? f.name : fighter)}${state === 'won' ? ' <span class="t-crown" title="Winner">♛</span>' : ''}</span>
+            ${pct != null && !m.winner ? `<span class="t-pct" title="Chance to win${low ? ' (estimate: few games)' : ''}">${low ? '~' : ''}${Math.round(pct)}%</span>` : ''}`;
+    } else if (!slot) {
+        body = '<span class="t-ava t-ava-empty">+</span><span class="t-name t-tbd">Empty slot</span>';
+    } else {
+        const src = byMatch()[slot.from];
+        body = `<span class="t-ava t-ava-empty">?</span><span class="t-name t-tbd">Winner of ${escapeHtml(src ? src.label : '?')}</span>`;
     }
-    if (!slot) return '<span class="t-tbd">Empty slot</span>';
-    const src = byMatch()[slot.from];
-    return `<span class="t-tbd">Winner of ${escapeHtml(src ? src.label : '?')}</span>`;
+    return `<div class="t-slot ${state}" data-mid="${m.id}" data-side="${side}" ${unplayed ? 'data-open="1"' : ''}>${grip}${body}${tools}</div>`;
 }
 
 function winBarHTML(m) {
-    if (m.win_pct == null) return '';
+    if (m.win_pct == null || m.winner) return '';
     const d = Math.abs(m.win_pct - 50);
-    const color = d <= 2 ? '#22c55e' : d <= 3.5 ? '#84cc16' : d <= 5 ? '#eab308' : '#ef4444';
-    const low = m.games < FULL_CONFIDENCE_GAMES;
-    return `<div class="t-bar"><div style="width:${m.win_pct}%;background:${color}"></div></div>
-        <div class="t-bar-text">${low ? '~' : ''}${Math.round(m.win_pct)}% vs ${low ? '~' : ''}${Math.round(100 - m.win_pct)}%
-        <span class="games-note${low ? ' low-data' : ''}">· ${m.games ? m.games.toLocaleString('en-US') + ' games' : 'estimate'}</span></div>`;
+    const fair = d <= 2 ? 'Even' : d <= 5 ? 'Close' : d <= 10 ? 'Leaning' : 'Lopsided';
+    return `<div class="t-bar ${fair.toLowerCase()}" title="${fair} matchup"><span style="width:${m.win_pct}%"></span></div>
+        <div class="t-bar-text"><span>${fair}</span><span class="games-note${m.games < FULL_CONFIDENCE_GAMES ? ' low-data' : ''}">${m.games ? m.games.toLocaleString('en-US') + ' games' : 'estimate'}</span></div>`;
 }
 
 function playerButtons(m) {
@@ -104,19 +124,42 @@ function playerButtons(m) {
 }
 
 /*************************** RENDERING ***************************/
-function renderScoreboard() {
+function renderHero() {
     const mode = TOURNAMENT.scoring;
+    $('#hero-title').textContent = TOURNAMENT.name;
+    document.title = `${TOURNAMENT.name} – Tournament`;
+    const played = TOURNAMENT.matches.filter(m => m.winner).length;
+    const total = TOURNAMENT.matches.length;
+    const cur = TOURNAMENT.rounds.find(r => r.id === TOURNAMENT.current_round);
+    $('#hero-meta').textContent = `${TOURNAMENT.players.map(p => p.name).join(' vs ')} · ${played} of ${total} matches played` +
+        (cur ? ` · now: ${cur.name}` : '');
+    $('#hero-progress').style.width = `${total ? (100 * played / total) : 0}%`;
+
     const vals = TOURNAMENT.players.map(p => TOURNAMENT.scores[p.id][mode]);
-    const top = Math.max(...vals);
-    $('#scoreboard').innerHTML = TOURNAMENT.players.map((p, i) => `
-        <div class="t-score ${vals[i] === top && vals.filter(v => v === top).length === 1 ? 'lead' : ''}" style="--pc:${playerColor(p.id)}">
-            <span class="t-score-tag">${escapeHtml(p.id)}</span><span class="t-score-name">${escapeHtml(p.name)}</span>
-            <b>${mode === 'weighted' ? vals[i].toFixed(2) : vals[i]}</b></div>`).join('<span class="t-vs">vs</span>') +
+    const best = Math.max(...vals);
+    const leader = vals.filter(v => v === best).length === 1 ? best : null;
+    $('#scoreboard').innerHTML = TOURNAMENT.players.map((p, i) => {
+        const adj = (TOURNAMENT.adjustment_totals[p.id] || {})[mode] || 0;
+        return `<div class="t-score ${vals[i] === leader ? 'lead' : ''}" style="--pc:${playerColor(p.id)}">
+            <span class="t-score-name">${escapeHtml(p.name)}${vals[i] === leader ? ' <span class="t-score-crown">👑</span>' : ''}</span>
+            <b>${fmtScore(vals[i], mode)}</b>
+            <span class="t-score-sub">${adj ? `incl. ${adj > 0 ? '+' : ''}${adj} adjustment` : (mode === 'weighted' ? 'weighted points' : 'wins')}</span>
+        </div>`;
+    }).join('') +
         (TOURNAMENT.champion ? `<div class="t-champion">🏆 Champion: ${fighterHTML(TOURNAMENT.champion)}</div>` : '');
-    $('#toggle-scoring').textContent = mode === 'weighted' ? '🎯 Switch to standard scoring' : '⚖ Switch to weighted scoring';
-    $('#toggle-scoring').title = mode === 'weighted'
-        ? 'Weighted: an upset win is worth up to 1.8 points, a heavy favourite as little as 0.2'
-        : 'Standard: every win is 1 point';
+    $$('.t-segment [data-scoring]').forEach(b => b.classList.toggle('on', b.dataset.scoring === mode));
+}
+
+function renderRoundNav() {
+    $('#round-nav').innerHTML = TOURNAMENT.rounds.map(r => {
+        const ms = TOURNAMENT.matches.filter(m => m.round === r.id);
+        const done = ms.length && ms.every(m => m.winner);
+        const now = TOURNAMENT.current_round === r.id;
+        const state = done ? 'done' : now ? 'now' : 'later';
+        return `<a href="#round-${r.id}" class="t-pill ${state}" data-round-link="${r.id}">
+            <span class="t-pill-dot">${done ? '✓' : ''}</span>${escapeHtml(r.name)}
+            <span class="t-pill-count">${ms.filter(m => m.winner).length}/${ms.length}</span></a>`;
+    }).join('');
 }
 
 function matchCardHTML(m) {
@@ -125,25 +168,17 @@ function matchCardHTML(m) {
     const unplayed = !m.winner;
     let action = '';
     if (m.status === 'ready') {
-        action = `<div class="t-win-btns">
-            <button type="button" data-act="win" data-mid="${m.id}" data-side="top">${escapeHtml(fighterName(m.top_fighter))} wins</button>
-            <button type="button" data-act="win" data-mid="${m.id}" data-side="bot">${escapeHtml(fighterName(m.bot_fighter))} wins</button></div>`;
+        action = `<p class="t-ask">Who won?</p><div class="t-win-btns">
+            <button type="button" data-act="win" data-mid="${m.id}" data-side="top">${escapeHtml(fighterName(m.top_fighter))}</button>
+            <button type="button" data-act="win" data-mid="${m.id}" data-side="bot">${escapeHtml(fighterName(m.bot_fighter))}</button></div>`;
     } else if (m.winner && !m.player) {
         action = `<p class="t-ask">♛ ${escapeHtml(fighterName(m.winner))} won. Who played them?</p><div class="t-player-btns">${playerButtons(m)}</div>
             <button type="button" class="t-link" data-act="undo" data-mid="${m.id}">↩ undo result</button>`;
     } else if (m.winner) {
         const p = playerOf(m.player);
-        action = `<div class="t-result"><span style="color:${playerColor(m.player)}">🎮 ${escapeHtml(p ? p.name : m.player)}</span>
-            <button type="button" class="t-link" data-act="undo" data-mid="${m.id}" title="Undo this result">↩</button></div>`;
+        action = `<div class="t-result"><span class="t-player-tag" style="--pc:${playerColor(m.player)}">🎮 ${escapeHtml(p ? p.name : m.player)}</span>
+            <button type="button" class="t-link" data-act="undo" data-mid="${m.id}" title="Undo this result">↩ undo</button></div>`;
     }
-    const slotTools = side => (edit && unplayed) ? `<span class="t-slot-tools">
-        <button type="button" data-act="change" data-mid="${m.id}" data-side="${side}" title="Put someone else in this slot">change</button>
-        <button type="button" data-act="swap" data-mid="${m.id}" data-side="${side}" class="${pendingSwap && pendingSwap.mid === m.id && pendingSwap.side === side ? 'on' : ''}" title="Swap this slot with another">⇄</button>
-        ${m[side] ? `<button type="button" data-act="playin" data-mid="${m.id}" data-side="${side}" title="Make whoever is here win a play-in match first">+ play-in</button>` : ''}
-        </span>` : '';
-    // Drag handle for a filled slot of a match not played yet (edit mode)
-    const grip = side => (edit && unplayed && m[side])
-        ? `<span class="t-grip" data-drag="slot" data-mid="${m.id}" data-side="${side}" title="Drag onto another slot to swap, or onto the bench">⠿</span>` : '';
     const next = m.next ? ms[m.next] : null;
     const goesTo = next ? `<div class="t-next">Winner → ${escapeHtml(next.label)}</div>`
         : (TOURNAMENT.open_winners.includes(m.id) ? '<div class="t-next warn">Winner doesn\'t go anywhere yet</div>' : '');
@@ -154,12 +189,14 @@ function matchCardHTML(m) {
         <button type="button" data-act="move" data-mid="${m.id}" data-dir="up" title="Move up">↑</button>
         <button type="button" data-act="move" data-mid="${m.id}" data-dir="down" title="Move down">↓</button>
         ${unplayed ? `<button type="button" data-act="delete-match" data-mid="${m.id}" title="Delete this match">🗑</button>` : ''}</span>` : '';
-    const cls = ['t-card', m.status, m.win_pct != null && Math.abs(m.win_pct - 50) > 5 ? 'lopsided' : ''].join(' ');
+    const needsPlayer = m.winner && !m.player;
+    const cls = ['t-card', m.status, needsPlayer ? 'needs-player' : ''].join(' ');
     return `<div class="${cls}" id="card-${m.id}" data-mid="${m.id}">
-        <div class="t-card-head"><span class="t-label">${escapeHtml(m.label)}</span>${m.status === 'played' && m.player ? '<span class="t-done">✓</span>' : ''}${cardTools}</div>
-        <div class="t-slot" data-mid="${m.id}" data-side="top" ${unplayed ? 'data-open="1"' : ''}>${grip('top')}${slotHTML(m, 'top')}${slotTools('top')}</div>
-        <div class="t-vs-line">${m.winner ? 'def.' : 'vs'}</div>
-        <div class="t-slot" data-mid="${m.id}" data-side="bot" ${unplayed ? 'data-open="1"' : ''}>${grip('bot')}${slotHTML(m, 'bot')}${slotTools('bot')}</div>
+        <div class="t-card-head"><span class="t-label">${escapeHtml(m.label)}</span>
+            <span class="t-status ${needsPlayer ? 'ask' : m.status}">${needsPlayer ? 'Who played?' : statusLabel[m.status]}</span>${cardTools}</div>
+        ${slotRowHTML(m, 'top', edit)}
+        <div class="t-vs"><span>${m.winner ? 'def.' : 'vs'}</span></div>
+        ${slotRowHTML(m, 'bot', edit)}
         ${winBarHTML(m)}${action}${goesTo}</div>`;
 }
 
@@ -169,25 +206,40 @@ function renderRounds() {
         const ms = TOURNAMENT.matches.filter(m => m.round === r.id);
         const played = ms.filter(m => m.winner).length;
         const tools = edit ? `<span class="t-round-tools">
-            <button type="button" class="btn secondary small" data-act="add-match" data-round="${r.id}">+ match</button>
-            <button type="button" class="btn secondary small" data-act="rebalance" data-round="${r.id}">⇄ rebalance</button>
-            <button type="button" class="btn secondary small" data-act="rename-round" data-round="${r.id}">✎ rename</button>
-            <button type="button" class="btn secondary small" data-act="add-round" data-round="${r.id}">+ round before</button>
-            ${ms.length ? '' : `<button type="button" class="btn secondary small" data-act="delete-round" data-round="${r.id}">🗑 delete</button>`}</span>` : '';
-        const current = TOURNAMENT.current_round === r.id ? '<span class="badge in-stock">now playing</span>' : '';
+            <button type="button" class="t-tool-sm" data-act="add-match" data-round="${r.id}">+ match</button>
+            <button type="button" class="t-tool-sm" data-act="rebalance" data-round="${r.id}">⇄ rebalance</button>
+            <button type="button" class="t-tool-sm" data-act="rename-round" data-round="${r.id}">✎ rename</button>
+            <button type="button" class="t-tool-sm" data-act="add-round" data-round="${r.id}">+ round before</button>
+            ${ms.length ? '' : `<button type="button" class="t-tool-sm" data-act="delete-round" data-round="${r.id}">🗑 delete</button>`}</span>` : '';
+        const now = TOURNAMENT.current_round === r.id;
         // Rounds where every match is played fold away (except while editing) so the current round is near the top
         const done = ms.length && played === ms.length;
         const folded = done && !edit && !expandedRounds.has(r.id);
-        const toggle = done && !edit ? `<button type="button" class="btn secondary small t-toggle-round" data-act="toggle-round" data-round="${r.id}">${folded ? `Show ${ms.length} results ▾` : 'Hide ▴'}</button>` : '';
-        return `<section class="panel t-round${folded ? ' collapsed' : ''}" data-round="${r.id}">
-            <div class="row"><h2 style="margin:0">${escapeHtml(r.name)}</h2>${current}<span class="muted">${played} / ${ms.length} played</span>${toggle}<span class="spacer"></span>${tools}</div>
-            <div class="t-grid">${ms.map(matchCardHTML).join('') || '<p class="muted">No matches in this round yet.</p>'}</div></section>`;
+        const toggle = done && !edit ? `<button type="button" class="t-tool-sm" data-act="toggle-round" data-round="${r.id}">${folded ? `Show ${ms.length} results ▾` : 'Hide ▴'}</button>` : '';
+        return `<section class="t-round${folded ? ' collapsed' : ''}${now ? ' now' : ''}${done ? ' done' : ''}" data-round="${r.id}" id="round-${r.id}">
+            <div class="t-round-head"><h2>${escapeHtml(r.name)}</h2>
+                ${now ? '<span class="t-chip now">● Now playing</span>' : done ? '<span class="t-chip done">✓ Done</span>' : ''}
+                <span class="t-round-count">${played} / ${ms.length} played</span>${toggle}<span class="spacer"></span>${tools}</div>
+            <div class="t-grid">${ms.map(matchCardHTML).join('') || '<p class="muted">No matches in this round yet. Drag a bench fighter here, or use + match.</p>'}</div></section>`;
     }).join('');
+}
+
+function renderAdjustments() {
+    $('#adj-player').innerHTML = TOURNAMENT.players.map(p => `<option value="${p.id}">${escapeHtml(p.name)}</option>`).join('');
+    const where = { weighted: 'weighted', standard: 'standard', both: 'both scorings' };
+    $('#adjustments').innerHTML = TOURNAMENT.adjustments.length ? `<ul class="t-adj-list">${TOURNAMENT.adjustments.map(a => {
+        const p = playerOf(a.player);
+        return `<li><span class="t-player-tag" style="--pc:${playerColor(a.player)}">${escapeHtml(p ? p.name : a.player)}</span>
+            <strong>${a.points > 0 ? '+' : ''}${a.points}</strong> <span class="muted">${where[a.scoring]}${a.note ? ' · ' + escapeHtml(a.note) : ''}</span>
+            <button type="button" class="t-link" data-act="remove-adjustment" data-adj="${a.id}" title="Remove">✕</button></li>`;
+    }).join('')}</ul>` : '';
 }
 
 function renderEditPanel() {
     $('#edit-panel').hidden = !editing();
+    document.body.classList.toggle('t-editing', editing());
     if (!editing()) return;
+    renderAdjustments();
     if (document.activeElement !== $('#edit-name')) $('#edit-name').value = TOURNAMENT.name;
     if (!$('#edit-players').contains(document.activeElement)) {
         $('#edit-players').innerHTML = TOURNAMENT.players.map(p =>
@@ -224,7 +276,8 @@ function renderEditPanel() {
 }
 
 function render() {
-    renderScoreboard();
+    renderHero();
+    renderRoundNav();
     renderEditPanel();
     renderRounds();
 }
@@ -577,6 +630,9 @@ document.addEventListener('click', async e => {
             break;
         }
         case 'delete-round': await op('delete_round', { round_id: round }); break;
+        case 'remove-adjustment':
+            if (confirm('Remove this score adjustment?')) await op('remove_adjustment', { adjustment_id: btn.dataset.adj });
+            break;
         case 'toggle-round':
             if (expandedRounds.has(round)) expandedRounds.delete(round); else expandedRounds.add(round);
             renderRounds();
@@ -592,7 +648,15 @@ $('#edit-mode').addEventListener('change', () => {
     pendingSwap = null;
     render();
 });
-$('#toggle-scoring').addEventListener('click', () => op('set_scoring', { scoring: TOURNAMENT.scoring === 'weighted' ? 'standard' : 'weighted' }));
+$$('.t-segment [data-scoring]').forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.scoring !== TOURNAMENT.scoring) op('set_scoring', { scoring: b.dataset.scoring });
+}));
+$('#add-adjustment').addEventListener('click', async () => {
+    const points = parseFloat($('#adj-points').value);
+    if (!points) { alert('Enter the points, like 0.8 (or -1 to take a point away).'); return; }
+    const ok = await op('add_adjustment', { player: $('#adj-player').value, points, scoring: $('#adj-scoring').value, note: $('#adj-note').value });
+    if (ok) { $('#adj-points').value = ''; $('#adj-note').value = ''; }
+});
 $('#rebalance-current').addEventListener('click', () => {
     if (!TOURNAMENT.current_round) { alert('Every match has been played.'); return; }
     op('rebalance_round', { round_id: TOURNAMENT.current_round });
@@ -617,6 +681,15 @@ $('#slot-in').addEventListener('click', () => {
 $('#add-round-end').addEventListener('click', async () => {
     const name = prompt('Name of the new round', 'New round');
     if (name) await op('add_round', { name });
+});
+$('#round-nav').addEventListener('click', e => {
+    const link = e.target.closest('[data-round-link]');
+    if (!link) return;
+    e.preventDefault();
+    const rid = link.dataset.roundLink;
+    if (!expandedRounds.has(rid)) { expandedRounds.add(rid); renderRounds(); }
+    const target = document.getElementById(`round-${rid}`);
+    if (target) window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
 });
 $('#t-modal-close').addEventListener('click', closeModal);
 $('#t-modal').addEventListener('click', e => { if (e.target.id === 't-modal') closeModal(); });
