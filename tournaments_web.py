@@ -33,8 +33,10 @@ _failures_lock = threading.Lock()
 
 
 def _client_address():
-    # nginx passes the visitor's address in X-Real-IP
-    return request.headers.get("X-Real-IP") or request.remote_addr or "?"
+    # The site is reached through a Cloudflare tunnel, so nginx's X-Real-IP is the tunnel's address for
+    # every visitor; Cloudflare passes the visitor's own address in CF-Connecting-IP.
+    return (request.headers.get("CF-Connecting-IP") or request.headers.get("X-Real-IP")
+            or request.remote_addr or "?")
 
 
 def _recent_failures(addr, now):

@@ -388,3 +388,13 @@ def test_matches_move_between_rounds_when_the_bracket_still_flows():
     # Reorder within a round by dropping before another match
     t, _ = T.apply_op(t, "move_to_round", {"mid": "r1_4", "round_id": "r1", "before": "r1_2"})
     assert [m["id"] for m in t["matches"] if m["round"] == "r1"] == ["r1_4", "r1_2", "r1_3"]
+
+
+def test_lockout_is_per_visitor_behind_the_cloudflare_tunnel(client):
+    tournaments_web._failures.clear()
+    tunnel = {"X-Real-IP": "172.18.0.5"}  # what nginx sees for everyone coming through the tunnel
+    for _ in range(tournaments_web.LOGIN_MAX_FAILURES):
+        client.post("/tournaments/login", data={"password": "wrong"}, headers={**tunnel, "CF-Connecting-IP": "198.51.100.1"})
+    r = client.post("/tournaments/login", data={"password": "pw"}, headers={**tunnel, "CF-Connecting-IP": "198.51.100.2"})
+    assert "error" not in r.headers["Location"]  # someone else can still log in
+    tournaments_web._failures.clear()
