@@ -1,77 +1,50 @@
 {% extends "base.html" %}
 {% block title %}{{ tournament.name }} – Tournament{% endblock %}
 {% block head %}<meta name="robots" content="noindex"><link rel="stylesheet" href="{{ url_for('static', filename='css/tournament.css') }}">{% endblock %}
-{% block body_class %}t-page{% endblock %}
-{% block header %}{% endblock %}
+{% block heading %}{{ tournament.name }}{% endblock %}
+{% block subheading %}<p><a href="{{ url_for('tournaments.index') }}">← All tournaments</a></p>{% endblock %}
 
 {% block content %}
-<section class="t-hero">
-    <div class="t-hero-top">
-        <a class="t-back" href="{{ url_for('tournaments.index') }}">← All tournaments</a>
-        <a class="t-back" href="{{ url_for('tournaments.logout') }}">Log out</a>
-    </div>
-    <p class="t-eyebrow">Tournament</p>
-    <h1 class="t-title" id="hero-title">{{ tournament.name }}</h1>
-    <p class="t-meta" id="hero-meta"></p>
+<section class="panel t-top">
     <div id="scoreboard" class="t-scoreboard"></div>
-    <div class="t-progress" title="Matches played"><div id="hero-progress"></div></div>
-    <div class="t-toolbar">
-        <div class="t-segment" role="group" aria-label="Scoring">
-            <button type="button" data-scoring="standard" title="Every win is 1 point">Standard</button>
-            <button type="button" data-scoring="weighted" title="An upset win is worth up to 1.8 points, a heavy favourite as little as 0.2">Weighted</button>
-        </div>
-        <button type="button" class="t-tool" id="rebalance-current" title="Re-pair the current round's unplayed matches as close to 50/50 as possible">⇄ Rebalance round</button>
-        <button type="button" class="t-tool" id="open-history">🕘 History</button>
-        <label class="t-switch"><input type="checkbox" id="edit-mode"><span class="t-switch-track"></span> Edit bracket</label>
+    <div class="row t-toolbar">
+        <button type="button" class="btn secondary small" id="toggle-scoring"></button>
+        <button type="button" class="btn secondary small" id="rebalance-current">⇄ Rebalance current round</button>
+        <button type="button" class="btn secondary small" id="open-history">🕘 History</button>
+        <span class="spacer"></span>
+        <label class="t-edit-toggle"><input type="checkbox" id="edit-mode"> ✏️ Edit bracket</label>
     </div>
-    <p class="t-sync" id="sync-status" aria-live="polite"></p>
+    <p class="muted" id="sync-status" aria-live="polite"></p>
 </section>
 
-<nav class="t-roundnav" id="round-nav" aria-label="Rounds"></nav>
-
-<section class="t-edit-panel" id="edit-panel" hidden>
-    <div class="t-edit-head">
-        <h2>✏️ Editing</h2>
-        <p>Matches already played never change. <strong>Drag and drop</strong> by the ⠿ handles (mouse or finger):
-            a <strong>match</strong> onto another round or before another match; a <strong>fighter</strong> onto another slot
-            to swap, or onto the bench; a <strong>bench fighter</strong> onto a slot (empty: they go in; filled: replace or
-            play-in) or onto a round to start a new match. The small buttons on each card do the same by tapping.
-            Every change is saved as a version (🕘 History).</p>
-        <div id="edit-notes"></div>
-    </div>
+<section class="panel t-edit-panel" id="edit-panel" hidden>
+    <h2>Edit</h2>
+    <p class="muted">Matches already played never change. In edit mode every match not played yet shows tools for its slots:
+        <strong>change</strong> who's in a slot, <strong>⇄ swap</strong> two slots, or <strong>+ play-in</strong> to make
+        whoever is in a slot win an extra match first (handy for adding new fighters). <br><strong>Drag and drop</strong> (mouse or finger, by the ⠿ handles):
+        a <strong>match</strong> onto another round or before another match; a <strong>fighter</strong> onto another slot to swap them,
+        or onto the bench; a <strong>bench fighter</strong> onto a slot (empty: they go in; filled: replace or play-in) or onto a
+        round to start a new match. Every change is saved as a version you can go back to (🕘 History).</p>
+    <div id="edit-notes"></div>
     <div class="t-edit-grid">
-        <div class="t-edit-box">
-            <h3>Name & players</h3>
+        <div>
+            <h3>Name</h3>
             <div class="row"><input type="text" id="edit-name"><button type="button" class="btn small" id="save-name">Save</button></div>
-            <div class="row" id="edit-players" style="margin-top:.5rem"></div>
+            <h3>Players</h3>
+            <div class="row" id="edit-players"></div>
             <div class="row" style="margin-top:.4rem">
                 <button type="button" class="btn secondary small" id="add-player">+ player</button>
                 <button type="button" class="btn small" id="save-players">Save players</button>
             </div>
-            <h3>Score adjustments</h3>
-            <p class="muted">Extra (or, with a minus, fewer) points for a player, in one scoring or both.</p>
-            <div id="adjustments"></div>
-            <div class="row t-adj-form">
-                <select id="adj-player"></select>
-                <input type="number" id="adj-points" step="0.1" placeholder="0.8" style="width:5.5rem">
-                <select id="adj-scoring">
-                    <option value="weighted">weighted only</option>
-                    <option value="standard">standard only</option>
-                    <option value="both">both</option>
-                </select>
-                <input type="text" id="adj-note" placeholder="Reason (optional)" style="min-width:9rem;flex:1">
-                <button type="button" class="btn small" id="add-adjustment">Add</button>
-            </div>
         </div>
-        <div class="t-edit-box">
-            <h3>Bench <span class="muted">· added, not in the bracket yet</span></h3>
+        <div>
+            <h3>Bench <span class="muted">· fighters added but not in the bracket yet</span></h3>
             <div id="bench" class="t-bench"></div>
-            <button type="button" class="btn small" id="open-add-fighters" style="margin-top:.5rem">+ Add fighters</button>
+            <button type="button" class="btn small" id="open-add-fighters" style="margin-top:.4rem">+ Add fighters</button>
             <div class="t-slot-in" id="pair-box">
                 <h3>Let the bench fight each other</h3>
                 <p class="muted">Makes the fairest matches among the benched fighters. Their winners can then join the bracket
-                    with "Slot them in" below, or by hand. To pick the pairs yourself, drag a bench fighter onto a round, or use
-                    <strong>+ match</strong>.</p>
+                    with "Slot them in" below, or by hand. To pick the pairs yourself, use <strong>+ match</strong> on a round instead.</p>
                 <div class="row"><label>In <select id="pair-round"></select></label>
                     <button type="button" class="btn go small" id="pair-bench">Pair them up</button></div>
             </div>
@@ -79,7 +52,8 @@
                 <h3>Slot them into the bracket</h3>
                 <p class="muted">Each benched fighter, and each winner that doesn't go anywhere yet (like a qualifier's), gets a
                     play-in against someone already in the round you pick: whoever has played the fewest matches (the ones who
-                    had byes), fairest pairings first.</p>
+                    had byes), fairest pairings first. You can still change anything afterwards, or do it by hand with
+                    <strong>+ play-in</strong> on any slot.</p>
                 <div class="row"><label>Into <select id="slot-in-round"></select></label>
                     <button type="button" class="btn go small" id="slot-in">Slot them in</button></div>
             </div>

@@ -4,6 +4,7 @@ from map_stats import MapStats, MAP_FULL_CONFIDENCE_GAMES, rounded
 import insights
 import tournaments_web
 import random
+import hashlib
 import json
 import os
 from urllib.parse import unquote
@@ -13,6 +14,27 @@ from PIL import Image
 
 app = Flask(__name__)
 
+
+
+# Cloudflare tells browsers to keep static files for hours, so a page could load with an older
+# CSS/JS file after a deploy. Every css/js link gets ?v=<fingerprint of the file>, which changes
+# exactly when the file does.
+_STATIC_VERSIONS = {}
+
+
+@app.url_defaults
+def _version_static_files(endpoint, values):
+    filename = values.get("filename") if endpoint == "static" else None
+    if not filename or not filename.endswith((".css", ".js")):
+        return
+    if filename not in _STATIC_VERSIONS:
+        try:
+            with open(os.path.join(app.static_folder, filename), "rb") as f:
+                _STATIC_VERSIONS[filename] = hashlib.md5(f.read()).hexdigest()[:10]
+        except OSError:
+            _STATIC_VERSIONS[filename] = None
+    if _STATIC_VERSIONS[filename]:
+        values.setdefault("v", _STATIC_VERSIONS[filename])
 # ---------------------------------------------------------
 # 1.  DATA  ────────────────────────────────────────────────
 # ---------------------------------------------------------
