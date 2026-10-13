@@ -45,9 +45,11 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tools.css') }}">
 </head>
 
 <body>
+{% include "_nav.html" %}
 
 {% macro render_fighter_card(fighter, is_main, player_prefix, locked_id, vs_fighter) %}
     {% if fighter %}
@@ -130,6 +132,7 @@
 <form id="fighter-chooser-form" method="POST" action="{{ url_for('index') }}">
     <input type="hidden" id="current_locked_p1_id"  name="current_locked_p1_id"
            value="{{ selected_data.locked_p1_id if selected_data.locked_p1_id else '' }}">
+    <input type="hidden" id="chosen_map" name="map" value="{{ chosen_map }}">
     <input type="hidden" id="current_locked_opp_id" name="current_locked_opp_id"
            value="{{ selected_data.locked_opp_id if selected_data.locked_opp_id else '' }}">
 
@@ -140,10 +143,10 @@
         </div>
         <div class="set-selection collapsed">
             <div class="set-selection-header">
-                <h3>Owned Sets</h3>
+                <h3>Owned Sets <a class="manage-collection-link" href="/collection">manage collection →</a></h3>
                 <div class="set-selection-controls">
-                    <button id="save-default-sets-btn" type="button" class="set-quick-action-btn">Save Default</button>
-                    <button id="load-default-sets-btn" type="button" class="set-quick-action-btn">Use Default</button>
+                    <button id="load-default-sets-btn" type="button" class="set-quick-action-btn"
+                            title="Tick exactly the sets saved on the My collection page">Load my collection</button>
                     <button id="toggle-set-selection-btn" type="button" class="mode-toggle-heading-btn" aria-expanded="false">⬇ Show</button>
                 </div>
             </div>
@@ -357,6 +360,11 @@
         </div>
     </div>
 
+    {% if map_panels %}
+    {# Filled by renderMapPanel() in script.js for whichever pairing is the main matchup #}
+    <div id="map-panel" class="map-panel" aria-live="polite"></div>
+    {% endif %}
+
     <div class="share-row">
         <button type="button" id="share-matchup-btn" class="share-button">🔗 Copy link to this matchup</button>
         <span id="share-status" class="share-status" aria-live="polite"></span>
@@ -375,6 +383,7 @@
         Matchups with fewer than {{ full_confidence_games }} games are shown as estimates.
     </p>
     {% endif %}
+    {% if map_meta %}{% include "_map_credit.html" %}{% endif %}
 
     <p class="footer-note">
         <a href="/about">About</a>
@@ -474,6 +483,13 @@
 </div>
 
 <!-- Playstyle definitions popup -->
+<div id="explain-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="explain-body">
+    <div class="modal-content modal-content-scrollable explain-modal">
+        <div id="explain-body"></div>
+        <button type="button" id="explain-close">Got it</button>
+    </div>
+</div>
+
 <div id="playstyle-help-modal" class="modal-overlay hidden">
     <div class="modal-content modal-content-scrollable">
         <h2>Playstyle Glossary 📖</h2>
@@ -497,6 +513,13 @@
     const MATCHUPS = {{ matchups | tojson }};
     const FULL_CONFIDENCE_GAMES = {{ full_confidence_games }};
     const CLUB_MATCHUP_URL = {{ club_matchup_url | tojson }};
+    // MAP_PANELS["p1|opp"] = map suggestions, first-player and closeness stats for that pairing
+    const MAP_PANELS = {{ map_panels | tojson }};
+    // MATCHUP_EXPLAIN["a|b"] = the numbers behind a's overall win % vs b, for the "how is this worked out" popup
+    const MATCHUP_EXPLAIN = {{ matchup_explain | tojson }};
+    // MAP_INFO[key] = name, box, image and layout for every map in MAP_PANELS
+    const MAP_INFO = {{ map_info | tojson }};
+    const STATIC_URL = {{ url_for('static', filename='') | tojson }};
 </script>
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>

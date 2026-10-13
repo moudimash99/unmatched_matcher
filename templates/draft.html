@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+{% block title %}Unmatched Draft – Pick and Ban With Win Rates{% endblock %}
+{% block description %}Run a competitive-style Unmatched draft: ban, pick, then blind-pick your fighter, with community win rates for every possible matchup.{% endblock %}
+{% block heading %}Draft{% endblock %}
+{% block subheading %}<p>Ban, pick in turns, then both players secretly choose which of their picks to play.</p>{% endblock %}
+
+{% block content %}
+{% include "_collection_banner.html" %}
+
+<section class="panel" id="setup">
+    <div class="row">
+        <label>Player 1 <input type="text" id="name-a" value="Player 1" style="width:9rem"></label>
+        <label>Player 2 <input type="text" id="name-b" value="Player 2" style="width:9rem"></label>
+        <label>Bans each <input type="number" id="bans" min="0" max="3" value="1" style="width:4rem"></label>
+        <label>Picks each <input type="number" id="picks" min="1" max="4" value="3" style="width:4rem"></label>
+        <label><input type="checkbox" id="random-first" checked> Random first player</label>
+        <button type="button" class="btn go" id="start">Start draft</button>
+    </div>
+    <p class="muted" style="margin-top:.5rem">Pool: {{ pool | length }} fighters. Hover a fighter during picks to see how it does against the other side's picks.</p>
+</section>
+
+<section class="panel" id="board" hidden>
+    <div class="row">
+        <h2 id="turn" style="margin:0"></h2>
+        <span class="spacer"></span>
+        <button type="button" class="btn secondary small" id="undo">Undo</button>
+        <button type="button" class="btn secondary small" id="restart">Restart</button>
+    </div>
+    <div class="two-col" style="margin:.75rem 0">
+        <div><strong class="side-a" id="label-a"></strong> <span id="picks-a"></span><div class="muted" id="bans-a"></div></div>
+        <div><strong class="side-b" id="label-b"></strong> <span id="picks-b"></span><div class="muted" id="bans-b"></div></div>
+    </div>
+    <div class="pool" id="pool">
+        {% for f in pool %}
+        <button type="button" data-id="{{ f.id }}" title="{{ f.name }}"><img src="{{ f.image_url }}" alt="">{{ f.name }}</button>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="panel" id="final" hidden>
+    <h2>Every possible matchup</h2>
+    <p class="muted">Row = <span class="side-a" id="row-label"></span>'s pick, column = <span class="side-b" id="col-label"></span>'s pick, as the row's win rate.</p>
+    <div class="table-wrap"><table class="heatmap" id="matrix"></table></div>
+
+    <h2 style="margin-top:1.25rem">Blind pick</h2>
+    <div id="blind"></div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const POOL = {{ pool | map(attribute='id') | list | tojson }};
+let state = null;  // {names, order: [{side, action}], step, bans:{a,b}, picks:{a,b}, history, final:{a,b}}
+
+function buildOrder(first, bans, picks) {
+    const other = first === 'a' ? 'b' : 'a';
+    const order = [];
+    for (let i = 0; i < bans; i++) order.push({ side: first, action: 'ban' }, { side: other, action: 'ban' });
+    for (let i = 0; i < picks; i++) order.push({ side: first, action: 'pick' }, { side: other, action: 'pick' });
+    return order;
+}
+
+function start() {
+    const bans = Math.max(0, Math.min(3, Number($('#bans').value) || 0));
+    const picks = Math.max(1, Math.min(4, Number($('#picks').value) || 1));
+    if (POOL.length < 2 * (bans + picks)) {
+        alert(`Your collection needs at least ${2 * (bans + picks)} fighters for this draft.`);
+        return;
+    }
+    const first = $('#random-first').checked && Math.random() < 0.5 ? 'b' : 'a';
+    state = {
+        names: { a: $('#name-a').value || 'Player 1', b: $('#name-b').value || 'Player 2' },
+        order: buildOrder(first, bans, picks), step: 0,
+        bans: { a: [], b: [] }, picks: { a: [], b: [] }, history: [], final: { a: null, b: null },
+    };
+    $('#setup').hidden = true;
+    $('#board').hidden = false;
+    $('#final').hidden = true;
+    render();
+}
+
+function taken() {
+    return new Set([...state.bans.a, ...state.bans.b, ...state.picks.a, ...state.picks.b]);
+}
+
+function render() {
+    const done = state.step >= state.order.length;
+    const cur = state.order[state.step];
+    $('#turn').innerHTML = done ? 'Draft complete' :
+        `<span class="side-${cur.side}">${escapeHtml(state.names[cur.side])}</span>: ${cur.action === 'ban' ? 'ban a fighter' : 'pick a fighter'}`;
+    for (const s of ['a', 'b']) {
+        $(`#label-${s}`).textContent = state.names[s];
+        $(`#picks-${s}`).innerHTML = state.picks[s].map(fighterChip).join(' ');
+        $(`#bans-${s}`).textContent = state.bans[s].length ? 'Banned: ' + state.bans[s].map(id => FIGHTER_BY_ID[id].name).join(', ') : '';
+    }
+    const used = taken();
+    $$('#pool button').forEach(b => {
+        const id = b.dataset.id;
+        b.className = state.bans.a.includes(id) || state.bans.b.includes(id) ? 'banned'
+            : state.picks.a.includes(id) ? 'picked-a' : state.picks.b.includes(id) ? 'picked-b' : '';
+        b.disabled = done || used.has(id);
+    });
+    $('#undo').disabled = !state.history.length;
+    if (done) showFinal();
+}
+
+function choose(id) {
+    const cur = state.order[state.step];
+    if (!cur || taken().has(id)) return;
+    (cur.action === 'ban' ? state.bans : state.picks)[cur.side].push(id);
+    state.history.push(cur);
+    state.step++;
+    render();
+}
+
+function undo() {
+    const last = state.history.pop();
+    if (!last) return;
+    (last.action === 'ban' ? state.bans : state.picks)[last.side].pop();
+    state.step--;
+    state.final = { a: null, b: null };
+    $('#final').hidden = true;
+    render();
+}
+
+function showFinal() {
+    $('#final').hidden = false;
+    $('#row-label').textContent = state.names.a;
+    $('#col-label').textContent = state.names.b;
+    const head = '<tr><th></th>' + state.picks.b.map(id => `<th class="col" title="${escapeHtml(FIGHTER_BY_ID[id].name)}"><img src="${FIGHTER_BY_ID[id].image_url}" alt=""></th>`).join('') + '</tr>';
+    const body = state.picks.a.map(a => '<tr><th class="rowh"><img src="' + FIGHTER_BY_ID[a].image_url + '" alt="">' + escapeHtml(FIGHTER_BY_ID[a].name) + '</th>' +
+        state.picks.b.map(b => {
+            const [pct, games] = matchup(a, b);
+            return `<td style="background:${winColor(pct, games)}" title="${pct}% (${games} games)">${pct}</td>`;
+        }).join('') + '</tr>').join('');
+    $('#matrix').innerHTML = head + body;
+    renderBlind();
+}
+
+function renderBlind() {
+    const side = !state.final.a ? 'a' : !state.final.b ? 'b' : null;
+    if (side) {
+        $('#blind').innerHTML = `<p><strong class="side-${side}">${escapeHtml(state.names[side])}</strong>, choose secretly (the other player looks away):</p>
+            <div class="row">${state.picks[side].map(id => `<button type="button" class="btn secondary" data-final="${id}">${escapeHtml(FIGHTER_BY_ID[id].name)}</button>`).join('')}</div>`;
+        $$('#blind [data-final]').forEach(btn => btn.addEventListener('click', () => {
+            state.final[side] = btn.dataset.final;
+            renderBlind();
+        }));
+        return;
+    }
+    const { a, b } = state.final;
+    $('#blind').innerHTML = `<div class="challenge">
+        <div class="vs">${fighterChip(a)} <strong>vs</strong> ${fighterChip(b)}</div>
+        <p><span class="side-a">${escapeHtml(state.names.a)}</span>: ${winText(a, b)}</p>
+        <div class="row" style="justify-content:center">
+            <a class="btn go" href="/?p1=${a}&opp=${b}">Open in the matcher</a>
+            <a class="btn secondary" href="/log?me=${a}&opp=${b}">Log the result</a>
+            <button type="button" class="btn secondary" id="reblind">Choose again</button>
+        </div></div>`;
+    $('#reblind').addEventListener('click', () => { state.final = { a: null, b: null }; renderBlind(); });
+}
+
+$('#start').addEventListener('click', start);
+$('#undo').addEventListener('click', undo);
+$('#restart').addEventListener('click', () => { $('#setup').hidden = false; $('#board').hidden = true; $('#final').hidden = true; });
+$$('#pool button').forEach(b => {
+    b.addEventListener('click', () => choose(b.dataset.id));
+    // During picks, show how this fighter does against the other side's picks
+    b.addEventListener('mouseenter', () => {
+        const cur = state && state.order[state.step];
+        if (!cur || cur.action !== 'pick') return;
+        const other = state.picks[cur.side === 'a' ? 'b' : 'a'];
+        b.title = FIGHTER_BY_ID[b.dataset.id].name + (other.length ? '\n' + other.map(o => `vs ${FIGHTER_BY_ID[o].name}: ${matchup(b.dataset.id, o)[0]}%`).join('\n') : '');
+    });
+});
+</script>
+{% endblock %}

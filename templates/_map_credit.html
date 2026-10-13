@@ -1,0 +1,10 @@
+<p class="footer-note">
+    {% if map_meta.map_source == "fighter_pages" %}
+    Map stats from {{ "{:,}".format(map_meta.map_games) }} games (all time, as of {{ map_meta.map_fetched }})
+    {%- if map_meta.games %}; turn order from {{ "{:,}".format(map_meta.games) }} recent games ({{ map_meta["from"] }} to {{ map_meta["to"] }}){% endif %}
+    on <a href="https://www.tabletopleague.com/games/unmatched/stats/characters" target="_blank" rel="noopener">Tabletop League</a>.
+    {% else %}
+    Map and turn-order stats from {{ "{:,}".format(map_meta.games) }} games ({{ map_meta["from"] }} to {{ map_meta["to"] }}) on
+    <a href="https://www.tabletopleague.com/games/unmatched/matches" target="_blank" rel="noopener">Tabletop League</a>.
+    {% endif %}
+</p>

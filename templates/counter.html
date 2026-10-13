@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}{% if target %}Best Counters to {{ target.name }}{% else %}Counter-pick{% endif %} – Unmatched Fighter Chooser{% endblock %}
+{% block description %}Your friend picked a fighter? See which of your Unmatched fighters beat them, using community win rates.{% endblock %}
+{% block heading %}Counter-pick{% endblock %}
+{% block subheading %}<p>Your opponent picked first. Here's what in your collection beats them.</p>{% endblock %}
+
+{% block content %}
+{% include "_collection_banner.html" %}
+
+<section class="panel">
+    <form method="get" class="row">
+        {% for s in request.args.getlist('sets') %}<input type="hidden" name="sets" value="{{ s }}">{% endfor %}
+        <label>Opponent's fighter
+            <select name="vs" onchange="this.form.submit()">
+                <option value="">— choose —</option>
+                {% for f in all_fighters %}<option value="{{ f.id }}" {{ 'selected' if target and f.id == target.id }}>{{ f.name }}</option>{% endfor %}
+            </select>
+        </label>
+        <label><input type="checkbox" id="proven-only" checked> Only matchups with {{ full_confidence_games }}+ games</label>
+    </form>
+</section>
+
+{% if target %}
+<section class="panel">
+    <div class="row">
+        <a class="fighter-chip" href="/fighter/{{ target.id }}"><img src="{{ target.image_url }}" alt="">{{ target.name }}</a>
+        <span class="muted">{% if target.overall_win_rate is not none %}{{ target.overall_win_rate }}% overall{% endif %}</span>
+    </div>
+    <div class="table-wrap" style="margin-top:.75rem">
+    <table class="data" id="counter-table">
+        <thead><tr><th>#</th><th>Your fighter</th><th class="num">Win rate vs {{ target.name }}</th><th class="num">Games</th><th></th></tr></thead>
+        <tbody>
+        {% for r in rows %}
+        <tr data-proven="{{ 1 if r.confidence >= 1 else 0 }}">
+            <td class="muted rank"></td>
+            <td><a class="fighter-chip" href="/fighter/{{ r.fighter.id }}"><img src="{{ r.fighter.image_url }}" alt="">{{ r.fighter.name }}</a></td>
+            <td class="num" data-win="{{ r.win_pct }}" data-games="{{ r.games }}">{{ '~' if r.confidence < 1 }}{{ r.win_pct | round | int }}%</td>
+            <td class="num">{{ "{:,}".format(r.games) }}{% if r.confidence < 1 %} <span class="games-note low-data">estimate</span>{% endif %}</td>
+            <td><a class="club-link" href="/?p1={{ r.fighter.id }}&opp={{ target.id }}">matcher →</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    <p class="muted" id="none-proven" hidden>None of your fighters has {{ full_confidence_games }}+ games against {{ target.name }} yet. Untick the box to see estimates.</p>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+function applyFilter() {
+    const provenOnly = $('#proven-only').checked;
+    let n = 0;
+    $$('#counter-table tbody tr').forEach(tr => {
+        const show = !provenOnly || tr.dataset.proven === '1';
+        tr.style.display = show ? '' : 'none';
+        if (show) tr.querySelector('.rank').textContent = ++n;
+    });
+    const none = $('#none-proven');
+    if (none) none.hidden = n > 0;
+}
+$('#proven-only')?.addEventListener('change', applyFilter);
+if ($('#counter-table')) applyFilter();
+</script>
+{% endblock %}

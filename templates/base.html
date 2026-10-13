@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): stays off unless the visitor accepted cookies on the main page -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VX153VVW52"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage: 'denied' });
+    gtag('js', new Date());
+    gtag('config', 'G-VX153VVW52', { send_page_view: false });
+    if (document.cookie.split('; ').includes('ufc_cookie_consent=accepted')) {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+        gtag('event', 'page_view');
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Unmatched Fighter Chooser{% endblock %}</title>
+    <meta name="description" content="{% block description %}Free fan-made tools for the Unmatched board game: matchups, fighter stats, tier lists and what to buy next.{% endblock %}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://unmatched.machaka.net{{ request.path }}">
+    <link rel="icon" type="image/png" href="{{ url_for('favicon') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tools.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body class="tool-page">
+
+{% include "_nav.html" %}
+
+<header class="tool-header">
+    <h1>{% block heading %}{% endblock %}</h1>
+    {% block subheading %}{% endblock %}
+</header>
+
+<main class="tool-main">
+{% block content %}{% endblock %}
+</main>
+
+<footer>
+    {% if stats_meta %}
+    <p class="footer-note">
+        Win rates as of {{ stats_meta.fetched_at }} · {{ "{:,}".format(stats_meta.total_games) }} games from
+        <a href="https://www.tabletopleague.com/games/unmatched/matches" target="_blank" rel="noopener">Tabletop League</a>
+        and UnmatchedRu, via <a href="{{ club_matchup_url }}" target="_blank" rel="noopener">The Unmatched Club</a>.
+        {% if prices_meta %}Prices and stock from the <a href="{{ prices_meta.store }}" target="_blank" rel="noopener">Restoration Games store</a> as of {{ prices_meta.fetched_at }}.{% endif %}
+    </p>
+    {% endif %}
+    {% if map_meta %}{% include "_map_credit.html" %}{% endif %}
+    <p class="footer-note">
+        <a href="/about">About</a> &nbsp;|&nbsp;
+        <a href="https://github.com/moudimash99/unmatched_matcher" target="_blank" rel="noopener">GitHub</a> &nbsp;|&nbsp;
+        Fan-made; not affiliated with Restoration Games.
+    </p>
+</footer>
+
+<script>
+    const ALL_FIGHTERS_JS = {{ fighters_js | tojson }};
+    // MATCHUPS[a][b] = [estimated win % for a vs b, games played]
+    const MATCHUPS = {{ (matchups if js_matchups else {}) | tojson }};
+    const FULL_CONFIDENCE_GAMES = {{ full_confidence_games }};
+    const CLUB_MATCHUP_URL = {{ club_matchup_url | tojson }};
+    const COLLECTION = {{ collection | tojson }};
+</script>
+<script src="{{ url_for('static', filename='js/tools.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

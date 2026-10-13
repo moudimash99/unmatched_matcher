@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}Unmatched Game Night Planner – Fair Fighters for 3–6 Players{% endblock %}
+{% block description %}Assign Unmatched fighters to a group so every round-robin game is close to 50/50, or build two fair 2v2 teams from your collection.{% endblock %}
+{% block heading %}Game night{% endblock %}
+{% block subheading %}<p>Everyone gets a fighter, and every game in the round-robin is as close to 50/50 as your collection allows.</p>{% endblock %}
+
+{% block content %}
+{% include "_collection_banner.html" %}
+
+<section class="panel">
+    <form method="get" class="row">
+        {% for s in request.args.getlist('sets') %}<input type="hidden" name="sets" value="{{ s }}">{% endfor %}
+        <input type="hidden" name="go" value="1">
+        {% if result %}
+        {% set shown = (result.team_a + result.team_b) if mode == '2v2' else result.fighters %}
+        <input type="hidden" name="prev" value="{{ shown | map(attribute='id') | join(',') }}">
+        {% endif %}
+        <label>Format
+            <select name="mode" id="mode">
+                <option value="ffa" {{ 'selected' if mode == 'ffa' }}>Round-robin (everyone plays everyone)</option>
+                <option value="2v2" {{ 'selected' if mode == '2v2' }}>2v2 teams</option>
+            </select>
+        </label>
+        <label id="players-field">Players
+            <input type="number" name="players" min="2" max="6" value="{{ players }}" style="width:4.5rem">
+        </label>
+        <label>Names (optional)
+            <input type="text" name="names" value="{{ names | join(', ') }}" placeholder="Ana, Ben, Cy, Dee" style="min-width:16rem">
+        </label>
+        <button class="btn go" type="submit">{{ '🎲 Reroll' if result else '🎲 Assign fighters' }}</button>
+    </form>
+    <p class="muted" style="margin-top:.5rem">Picks from {{ pool_size }} fighters. Well-tested matchups are preferred over estimates.</p>
+</section>
+
+{% if request.args.get('go') and not result %}
+<section class="panel"><p>Not enough fighters in your collection for this format.</p></section>
+{% endif %}
+
+{% if result and mode == '2v2' %}
+<section class="two-col">
+    {% for team, label, cls in [(result.team_a, 'Team A', 'side-a'), (result.team_b, 'Team B', 'side-b')] %}
+    <div class="panel">
+        <h2 class="{{ cls }}">{{ label }}</h2>
+        {% for f in team %}
+        {% set idx = (0 if label == 'Team A' else 2) + loop.index0 %}
+        <p><strong>{{ names[idx] if names | length > idx else 'Player ' ~ (idx + 1) }}</strong> plays
+            <a class="fighter-chip" href="/fighter/{{ f.id }}"><img src="{{ f.image_url }}" alt="">{{ f.name }}</a></p>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</section>
+<section class="panel">
+    <h2>Team A wins ~{{ result.team_a_win_pct | round | int }}% (average of the cross matchups)</h2>
+    <table class="data">
+        {% for r in result.cross %}
+        <tr><td><a class="fighter-chip" href="/fighter/{{ r.fighter.id }}"><img src="{{ r.fighter.image_url }}" alt="">{{ r.fighter.name }}</a></td>
+            <td class="muted">vs</td>
+            <td><a class="fighter-chip" href="/fighter/{{ r.opponent.id }}"><img src="{{ r.opponent.image_url }}" alt="">{{ r.opponent.name }}</a></td>
+            <td class="num" data-win="{{ r.win_pct }}" data-games="{{ r.games }}">{{ '~' if r.confidence < 1 }}{{ r.win_pct | round | int }}%</td>
+            <td class="num muted">{{ r.games }} games</td></tr>
+        {% endfor %}
+    </table>
+    <p class="muted" style="margin-top:.5rem">There's no 2v2 win-rate data, so team balance comes from the 1v1 matchups between the two teams.</p>
+</section>
+{% elif result %}
+<section class="panel">
+    <h2>Fighters</h2>
+    <div class="row">
+        {% for f in result.fighters %}
+        <div class="stat" style="text-align:left">
+            <span>{{ names[loop.index0] if names | length > loop.index0 else 'Player ' ~ loop.index }}</span>
+            <b><a class="fighter-chip" href="/fighter/{{ f.id }}"><img src="{{ f.image_url }}" alt="">{{ f.name }}</a></b>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section class="panel">
+    <h2>Round-robin · {{ result.games | length }} games</h2>
+    <p class="muted">Fairness score {{ (result.score * 100) | round | int }}/100 (100 = every game a proven 50/50).</p>
+    <table class="data">
+        {% for r in result.games %}
+        <tr><td class="muted">Game {{ loop.index }}</td>
+            <td><a class="fighter-chip" href="/fighter/{{ r.fighter.id }}"><img src="{{ r.fighter.image_url }}" alt="">{{ r.fighter.name }}</a></td>
+            <td class="muted">vs</td>
+            <td><a class="fighter-chip" href="/fighter/{{ r.opponent.id }}"><img src="{{ r.opponent.image_url }}" alt="">{{ r.opponent.name }}</a></td>
+            <td class="num" data-win="{{ r.win_pct }}" data-games="{{ r.games }}">{{ '~' if r.confidence < 1 }}{{ r.win_pct | round | int }}%</td>
+            <td class="num muted">{{ "{:,}".format(r.games) }} games</td>
+            <td><a class="club-link" href="/?p1={{ r.fighter.id }}&opp={{ r.opponent.id }}">matcher →</a></td></tr>
+        {% endfor %}
+    </table>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+const toggle = () => { $('#players-field').style.display = $('#mode').value === '2v2' ? 'none' : ''; };
+$('#mode').addEventListener('change', toggle);
+toggle();
+</script>
+{% endblock %}

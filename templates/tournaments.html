@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% block title %}Tournaments – Unmatched Fighter Chooser{% endblock %}
+{% block description %}Run knockout tournaments of Unmatched fighters with fair pairings, scores per player and a bracket you can edit at any time.{% endblock %}
+{% block head %}<meta name="robots" content="noindex"><link rel="stylesheet" href="{{ url_for('static', filename='css/tournament.css') }}">{% endblock %}
+{% block heading %}Tournaments{% endblock %}
+{% block subheading %}<p>Knockout brackets of fighters. Take turns playing the matches; whoever plays the winning fighter scores. Saved on the server, so every phone sees the same bracket.</p>{% endblock %}
+
+{% block content %}
+{% if error %}<div class="t-error">{{ error }}</div>{% endif %}
+
+{% if not configured %}
+<section class="panel">
+    <h2>Not set up on this server</h2>
+    <p class="muted">Tournaments need <code>SECRET_KEY</code> and <code>TOURNAMENT_PASSWORD_HASH</code> in the server's environment (see the README).</p>
+</section>
+
+{% elif not authed %}
+<section class="panel t-login">
+    <h2>🔒 Enter the password</h2>
+    <form method="post" action="{{ url_for('tournaments.login') }}" class="row">
+        <input type="password" name="password" placeholder="Password" autofocus required>
+        <button class="btn go" type="submit">Enter</button>
+    </form>
+</section>
+
+{% else %}
+<section class="panel">
+    <div class="row">
+        <h2 style="margin:0">Your tournaments</h2>
+        <span class="spacer"></span>
+        <a class="btn secondary small" href="{{ url_for('tournaments.logout') }}">Log out</a>
+    </div>
+    {% if items %}
+    <div class="table-wrap"><table class="data">
+        <thead><tr><th>Name</th><th>Players</th><th class="num">Matches played</th><th class="num">Fighters</th><th>Last change</th><th></th></tr></thead>
+        <tbody>
+        {% for t in items %}
+        <tr>
+            <td><a href="{{ url_for('tournaments.page', tid=t.id) }}"><strong>{{ t.name }}</strong></a></td>
+            <td>{{ t.players | map(attribute='name') | join(' vs ') }}</td>
+            <td class="num">{{ t.progress.played }} / {{ t.progress.total }}</td>
+            <td class="num">{{ t.progress.fighters }}</td>
+            <td class="muted">{{ t.updated[:16] | replace('T', ' ') }} UTC</td>
+            <td class="num">
+                <form method="post" action="{{ url_for('tournaments.delete', tid=t.id) }}"
+                      onsubmit="return confirm('Delete {{ t.name | e }} for good? This can\'t be undone.')">
+                    <button class="btn secondary small" type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table></div>
+    {% else %}
+    <p class="muted">No tournaments yet. Start one below, or bring over one from the old tournament app.</p>
+    {% endif %}
+</section>
+
+<section class="panel">
+    <h2>New tournament</h2>
+    <form method="post" action="{{ url_for('tournaments.create') }}" id="new-form">
+        <div class="row">
+            <label>Name <input type="text" name="name" placeholder="Summer cup" required style="min-width:14rem"></label>
+        </div>
+        <h3>Players</h3>
+        <div class="row" id="player-inputs">
+            <input type="text" name="players" placeholder="Player 1" required>
+            <input type="text" name="players" placeholder="Player 2">
+            <button type="button" class="btn secondary small" id="add-player">+ player</button>
+        </div>
+        <h3>Fighters</h3>
+        <p class="muted">Tick the sets to use, then untick any fighter you want to leave out. Your collection is ticked to start with.</p>
+        <div class="t-set-list">
+            {% for s in all_sets %}
+            <label><input type="checkbox" class="new-set" value="{{ s }}" {{ 'checked' if s in collection }}> {{ s }}</label>
+            {% endfor %}
+        </div>
+        <div class="row" style="margin-top:.6rem">
+            <strong id="fighter-count"></strong>
+            <button type="button" class="btn secondary small" id="all-fighters">Tick all</button>
+        </div>
+        <div class="t-fighter-picks" id="fighter-picks"></div>
+        <p class="muted" style="margin-top:.6rem">Round 1 pairs the fairest matchups; when the number of fighters isn't 2, 4, 8, 16, 32… some get a bye to round 2. You can change anything afterwards.</p>
+        <button class="btn go" type="submit" style="margin-top:.6rem">Create tournament</button>
+    </form>
+</section>
+
+<section class="panel">
+    <h2>Bring over a tournament from the old app</h2>
+    <p class="muted">From the Unmatched-Tournament server: <code>data/bracket.json</code> and <code>data/state.json</code>. Results, players and scores come across as they are.</p>
+    <form method="post" action="{{ url_for('tournaments.import_old') }}" enctype="multipart/form-data" class="row">
+        <label>bracket.json <input type="file" name="bracket" accept="application/json" required></label>
+        <label>state.json <input type="file" name="state" accept="application/json"></label>
+        <label>Name <input type="text" name="name" placeholder="Imported tournament"></label>
+        <label>P1 <input type="text" name="p1" placeholder="Ahmad" style="width:7rem"></label>
+        <label>P2 <input type="text" name="p2" placeholder="Mohammad" style="width:7rem"></label>
+        <button class="btn go" type="submit">Import</button>
+    </form>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if authed %}
+<script>
+const pickBox = $('#fighter-picks');
+
+function renderPicks() {
+    const sets = new Set($$('.new-set:checked').map(cb => cb.value));
+    const before = new Set($$('#fighter-picks input:not(:checked)').map(cb => cb.value));  // keep unticks
+    const fighters = ALL_FIGHTERS_JS.filter(f => f.sets.some(s => sets.has(s)))
+        .sort((a, b) => a.name.localeCompare(b.name));
+    pickBox.innerHTML = fighters.map(f => `<label class="t-pick"><input type="checkbox" name="fighters" value="${f.id}" ${before.has(f.id) ? '' : 'checked'}>
+        <img src="${f.image_url}" alt="" loading="lazy"> ${escapeHtml(f.name)}</label>`).join('');
+    count();
+}
+
+function count() {
+    const n = $$('#fighter-picks input:checked').length;
+    $('#fighter-count').textContent = `${n} fighter${n === 1 ? '' : 's'}`;
+}
+
+$$('.new-set').forEach(cb => cb.addEventListener('change', renderPicks));
+pickBox.addEventListener('change', count);
+$('#all-fighters').addEventListener('click', () => { $$('#fighter-picks input').forEach(cb => cb.checked = true); count(); });
+$('#add-player').addEventListener('click', () => {
+    const n = $$('#player-inputs input').length + 1;
+    $('#add-player').insertAdjacentHTML('beforebegin', `<input type="text" name="players" placeholder="Player ${n}">`);
+});
+$('#new-form').addEventListener('submit', e => {
+    if ($$('#fighter-picks input:checked').length < 2) { e.preventDefault(); alert('Pick at least two fighters.'); }
+});
+renderPicks();
+</script>
+{% endif %}
+{% endblock %}

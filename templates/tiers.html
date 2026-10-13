@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Unmatched Tier List for Your Collection – Unmatched Fighter Chooser{% endblock %}
+{% block description %}A tier list and matchup heatmap of the Unmatched fighters you own, from community win rates.{% endblock %}
+{% block heading %}Tier list{% endblock %}
+{% block subheading %}<p>Your fighters ranked by their average win rate against the rest of your collection.</p>{% endblock %}
+
+{% block content %}
+{% include "_collection_banner.html" %}
+
+<section class="panel">
+    <h2>Ranking</h2>
+    <div class="table-wrap">
+    <table class="data">
+        <thead><tr><th>Tier</th><th>#</th><th>Fighter</th><th class="num">Avg win rate</th><th class="num">Proven matchups</th></tr></thead>
+        <tbody>
+        {% for r in rows %}
+        <tr>
+            <td><span class="tier tier-{{ r.tier }}">{{ r.tier }}</span></td>
+            <td class="muted">{{ loop.index }}</td>
+            <td><a class="fighter-chip" href="/fighter/{{ r.fighter.id }}"><img src="{{ r.fighter.image_url }}" alt="">{{ r.fighter.name }}</a></td>
+            <td class="num" data-win="{{ r.avg }}" data-games="{{ full_confidence_games }}">{{ '%.1f' % r.avg }}%</td>
+            <td class="num">{{ r.proven }} / {{ r.opponents }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    <p class="muted" style="margin-top:.5rem">Tiers: S ≥ 56%, A ≥ 53%, B ≥ 50%, C ≥ 47%, D below. "Proven" = {{ full_confidence_games }}+ games; the rest are estimates.</p>
+</section>
+
+{% if not heatmap and rows | length > 1 %}
+<section class="panel"><h2>Matchup heatmap</h2><p class="muted">The heatmap is shown for up to 40 fighters. <a href="/collection">Set up your collection</a> to see yours.</p></section>
+{% endif %}
+{% if heatmap | length > 1 %}
+<section class="panel">
+    <h2>Matchup heatmap</h2>
+    <p class="muted">Row fighter's win rate against the column fighter. Green favours the row, red the column; faded cells have fewer than {{ full_confidence_games }} games. Click a cell to open it in the matcher.</p>
+    <div class="table-wrap">
+    <table class="heatmap">
+        <thead><tr><th></th>
+            {% for c in heatmap %}<th class="col" title="{{ c.name }}"><img src="{{ c.image_url }}" alt="{{ c.name }}"></th>{% endfor %}
+        </tr></thead>
+        <tbody>
+        {% for r in heatmap %}
+        <tr>
+            <th class="rowh"><img src="{{ r.image_url }}" alt="">{{ r.name }}</th>
+            {% for c in heatmap %}
+                {% if r.id == c.id %}<td class="self"></td>
+                {% else %}
+                {% set m = matchups[r.id][c.id] %}
+                <td data-win="{{ m[0] }}" data-games="{{ m[1] }}" title="{{ r.name }} vs {{ c.name }}: {{ m[0] }}% ({{ m[1] }} games)"><a href="/?p1={{ r.id }}&opp={{ c.id }}">{{ m[0] }}</a></td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</section>
+{% endif %}
+{% endblock %}

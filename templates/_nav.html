@@ -1,0 +1,20 @@
+{% set nav_items = [
+    ("/", "Matcher"),
+    ("/collection", "My collection"),
+    ("/fighters", "Fighters"),
+    ("/buy-next", "Buy next"),
+    ("/tiers", "Tier list"),
+    ("/counter", "Counter-pick"),
+    ("/game-night", "Game night"),
+    ("/draft", "Draft"),
+    ("/log", "Game log"),
+    ("/tournaments", "Tournaments"),
+] %}
+<nav class="site-nav" aria-label="Site">
+    <a class="site-nav-brand" href="/">🧭 Unmatched Chooser</a>
+    <div class="site-nav-links">
+        {% for href, label in nav_items %}
+        <a href="{{ href }}" class="{{ 'active' if request.path == href or (href == '/fighters' and request.path.startswith('/fighter/')) or (href == '/tournaments' and request.path.startswith('/tournaments')) }}">{{ label }}</a>
+        {% endfor %}
+    </div>
+</nav>

@@ -1,0 +1,16 @@
+{% set table_rows = table_rows if table_rows is defined else best %}
+{% if table_rows %}
+<table class="data">
+    <tbody>
+    {% for r in table_rows %}
+    <tr>
+        <td><a class="fighter-chip" href="/fighter/{{ r.opponent.id }}"><img src="{{ r.opponent.image_url }}" alt="">{{ r.opponent.name }}</a></td>
+        <td class="num" data-win="{{ r.win_pct }}" data-games="{{ r.games }}">{{ r.win_pct | round | int }}%</td>
+        <td class="num muted">{{ "{:,}".format(r.games) }} games</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p class="muted">Not enough games yet.</p>
+{% endif %}
