@@ -70,7 +70,10 @@ from 10 games (`MAP_FULL_CONFIDENCE_GAMES` in `map_stats.py`), and blended towar
 `/tournaments` runs knockout tournaments of fighters: players take turns playing the matches, and
 whoever plays the winning fighter scores (every win is 1 point, or weighted so upsets count more).
 Several tournaments can run at once. They're saved on the server, so every phone sees the same
-bracket (pages refresh every few seconds), and one shared password protects the whole area.
+bracket (pages refresh every few seconds). **Each password opens its own tournaments:** anyone can
+make a password on the login page, and only that password sees the tournaments made with it.
+Passwords aren't stored: a space is found by an HMAC of the password with a secret kept next to the
+data (`spaces.json`).
 
 - **New tournament:** pick sets and fighters. Round 1 pairs the fairest matchups; if the number of
   fighters isn't a power of two, the rest get byes into round 2.
@@ -79,6 +82,8 @@ bracket (pages refresh every few seconds), and one shared password protects the 
   challenger first), and add, rename, move or delete matches and rounds. New fighters wait on the
   **bench**; "Slot them in" gives each one a play-in against the fighters in a round who have
   played the fewest matches (the ones who had byes), fairest pairings first.
+- **Score adjustments:** extra (or fewer) points for a player, in standard or weighted scoring
+  or both, with a reason; shown on the scoreboard.
 - **History:** every change is a version; restoring one saves it as the newest version.
 - The model and every change live in `tournaments.py` (each change is checked so a bad edit can't
   break a bracket); the pages and API are in `tournaments_web.py`.
@@ -93,6 +98,8 @@ SECRET_KEY=<long random string>
 TOURNAMENT_PASSWORD_HASH=<sha256 hex of the password>
 ```
 
+`TOURNAMENT_PASSWORD_HASH` is optional: it's the first password, which gets every tournament from
+before passwords had their own spaces. `TOURNAMENT_SIGNUP=0` turns off making new passwords.
 `python app.py` and docker-compose both read it. docker-compose also mounts `./data` for the saved
 tournaments, so on the server: copy `.env` next to `docker-compose.yml`, then `docker compose up -d --build`.
 Without `.env`, local runs fall back to the password `dev`. Five wrong passwords from one address

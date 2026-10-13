@@ -219,10 +219,10 @@ def _login(c, password="pw"):
 
 
 def test_tournaments_need_the_password(client):
-    assert "Enter the password" in client.get("/tournaments").get_data(as_text=True)
+    assert "Open my tournaments" in client.get("/tournaments").get_data(as_text=True)
     assert client.post("/tournaments/new", data={}).status_code == 401
     _login(client, "wrong")
-    assert "Enter the password" in client.get("/tournaments").get_data(as_text=True)
+    assert "Open my tournaments" in client.get("/tournaments").get_data(as_text=True)
     _login(client)
     assert "New tournament" in client.get("/tournaments").get_data(as_text=True)
 
@@ -388,3 +388,110 @@ def test_matches_move_between_rounds_when_the_bracket_still_flows():
     # Reorder within a round by dropping before another match
     t, _ = T.apply_op(t, "move_to_round", {"mid": "r1_4", "round_id": "r1", "before": "r1_2"})
     assert [m["id"] for m in t["matches"] if m["round"] == "r1"] == ["r1_4", "r1_2", "r1_3"]
+
+
+def test_lockout_is_per_visitor_behind_the_cloudflare_tunnel(client):
+    tournaments_web._failures.clear()
+    tunnel = {"X-Real-IP": "172.18.0.5"}  # what nginx sees for everyone coming through the tunnel
+    for _ in range(tournaments_web.LOGIN_MAX_FAILURES):
+        client.post("/tournaments/login", data={"password": "wrong"}, headers={**tunnel, "CF-Connecting-IP": "198.51.100.1"})
+    r = client.post("/tournaments/login", data={"password": "pw"}, headers={**tunnel, "CF-Connecting-IP": "198.51.100.2"})
+    assert "error" not in r.headers["Location"]  # someone else can still log in
+    tournaments_web._failures.clear()
+
+
+
+# ---------------------------------------------------------------------------
+# Score adjustments
+# ---------------------------------------------------------------------------
+
+def test_adjustments_add_to_one_scoring_or_both():
+    t = T.new_tournament("Cup", ["Ann", "Ben"], _ids(4))
+    t = _play(t, "r1_1", "top", "P1")
+    t, summary = T.apply_op(t, "add_adjustment", {"player": "P1", "points": 0.8, "scoring": "weighted", "note": "bonus"})
+    assert summary == "+0.8 points for Ann (weighted scoring)"
+    s = T.scores(t)
+    assert s["P1"]["standard"] == 1 and s["P1"]["weighted"] == pytest.approx(1.8)
+    t, _ = T.apply_op(t, "add_adjustment", {"player": "P2", "points": "-1", "scoring": "both"})
+    s = T.scores(t)
+    assert s["P2"]["standard"] == -1 and s["P2"]["weighted"] == -1
+    assert T.adjustment_totals(t)["P1"] == {"standard": 0.0, "weighted": 0.8}
+    # A player with an adjustment can't be removed; adjustments can
+    with pytest.raises(T.TournamentError, match="can't be removed"):
+        T.apply_op(t, "set_players", {"names": ["Ann", ""]})
+    t, _ = T.apply_op(t, "remove_adjustment", {"adjustment_id": t["adjustments"][1]["id"]})
+    assert T.scores(t)["P2"]["standard"] == 0
+    for bad in ({"player": "P9", "points": 1}, {"player": "P1", "points": 0}, {"player": "P1", "points": "x"},
+                {"player": "P1", "points": 1, "scoring": "odd"}):
+        with pytest.raises(T.TournamentError):
+            T.apply_op(t, "add_adjustment", bad)
+
+
+# ---------------------------------------------------------------------------
+# One password per person
+# ---------------------------------------------------------------------------
+
+def _new(client, name):
+    r = client.post("/tournaments/new", data={"name": name, "players": ["Ann"], "fighters": ["medusa", "sinbad"]})
+    return r.headers["Location"].rsplit("/", 1)[1]
+
+
+def test_each_password_sees_only_its_own_tournaments(client):
+    _login(client)  # the legacy password ("pw") makes the first space
+    mine = _new(client, "Mine")
+    client.get("/tournaments/logout")
+
+    r = client.post("/tournaments/signup", data={"password": "friend123", "confirm": "friend123"})
+    assert "error" not in r.headers["Location"]
+    theirs = _new(client, "Theirs")
+    page = client.get("/tournaments").get_data(as_text=True)
+    assert "Theirs" in page and "Mine" not in page
+    assert client.get(f"/api/tournaments/{mine}").status_code == 404  # not theirs
+    assert client.get(f"/tournaments/{mine}").status_code == 404
+    client.post(f"/tournaments/{mine}/delete")  # can't delete it either
+    client.get("/tournaments/logout")
+
+    _login(client)
+    page = client.get("/tournaments").get_data(as_text=True)
+    assert "Mine" in page and "Theirs" not in page
+    assert client.get(f"/api/tournaments/{theirs}").status_code == 404
+    client.get("/tournaments/logout")
+    client.post("/tournaments/login", data={"password": "friend123"})
+    assert "Theirs" in client.get("/tournaments").get_data(as_text=True)
+
+
+def test_signup_rules(client):
+    tournaments_web._signups.clear()
+    r = client.post("/tournaments/signup", data={"password": "abc", "confirm": "abc"})
+    assert "at+least" in r.headers["Location"] or "at%20least" in r.headers["Location"]
+    r = client.post("/tournaments/signup", data={"password": "abcdef", "confirm": "abcdeg"})
+    assert "match" in r.headers["Location"]
+    client.post("/tournaments/login", data={"password": "nobody-has-this"})
+    assert "Open my tournaments" in client.get("/tournaments").get_data(as_text=True)  # unknown password: not in
+
+
+def test_signup_can_be_turned_off(client, monkeypatch):
+    import app as app_module
+    monkeypatch.setitem(app_module.app.config, "TOURNAMENT_SIGNUP", False)
+    assert "Make my password" not in client.get("/tournaments").get_data(as_text=True)
+    assert client.post("/tournaments/signup", data={"password": "abcdef", "confirm": "abcdef"}).status_code == 404
+
+
+def test_legacy_password_claims_tournaments_without_an_owner(client, tmp_path):
+    store = T.TournamentStore(str(tmp_path))
+    old = store.create(T.new_tournament("From before", ["Ann"], _ids(2)))  # no owner
+    _login(client)
+    assert "From before" in client.get("/tournaments").get_data(as_text=True)
+    assert store.get(old["id"])["owner"]
+    # Restoring the version from before the claim keeps the owner
+    r = client.post(f"/api/tournaments/{old['id']}/restore", json={"restore": 1})
+    assert r.status_code == 200 and store.get(old["id"])["owner"]
+
+
+def test_spaces_never_store_the_password(tmp_path):
+    spaces = T.SpaceStore(str(tmp_path))
+    sid = spaces.create("hunter22")
+    assert spaces.find("hunter22") == sid and spaces.find("hunter23") is None
+    assert spaces.create("hunter22") == sid  # same password, same space
+    assert "hunter22" not in (tmp_path / "spaces.json").read_text()
+    assert [t for t in T.TournamentStore(str(tmp_path)).list()] == []  # spaces.json isn't a tournament
