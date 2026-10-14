@@ -141,11 +141,10 @@ function renderHero() {
     const best = Math.max(...vals);
     const leader = vals.filter(v => v === best).length === 1 ? best : null;
     $('#scoreboard').innerHTML = TOURNAMENT.players.map((p, i) => {
-        const adj = (TOURNAMENT.adjustment_totals[p.id] || {})[mode] || 0;
         return `<div class="t-score ${vals[i] === leader ? 'lead' : ''}" style="--pc:${playerColor(p.id)}">
             <span class="t-score-name">${escapeHtml(p.name)}${vals[i] === leader ? ' <span class="t-score-crown">👑</span>' : ''}</span>
             <b>${fmtScore(vals[i], mode)}</b>
-            <span class="t-score-sub">${adj ? `incl. ${adj > 0 ? '+' : ''}${adj} adjustment` : (mode === 'weighted' ? 'weighted points' : 'wins')}</span>
+            <span class="t-score-sub">${mode === 'weighted' ? 'weighted points' : 'wins'}</span>
         </div>`;
     }).join('') +
         (TOURNAMENT.champion ? `<div class="t-champion">🏆 Champion: ${fighterHTML(TOURNAMENT.champion)}</div>` : '');
