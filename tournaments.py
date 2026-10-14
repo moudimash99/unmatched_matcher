@@ -493,8 +493,53 @@ def op_set_result(t, mid, winner, player=None):
     m["winner"] = fighter
     if player is not None:
         m["player"] = player or None
+    elif match_picks(t, m, matches).get(winner):  # picked beforehand: whoever was to play the winner scores
+        m["player"] = match_picks(t, m, matches)[winner]
     m["played_at"] = m["played_at"] or _now()
     return f"{m['label']}: {fighter} won"
+
+
+def match_picks(t, m, matches=None):
+    """{"top"/"bot": player id} picked beforehand for the fighters now in the match (picks are kept per
+    fighter, so ones for a fighter who has since been moved out no longer count)."""
+    matches = matches or match_index(t)
+    players = {p["id"] for p in t["players"]}
+    picks = m.get("picks") or {}
+    out = {}
+    for side, slot in sides(m):
+        fighter = resolve(t, slot, matches)
+        if fighter and picks.get(fighter) in players:
+            out[side] = picks[fighter]
+    return out
+
+
+def op_set_picks(t, mid, picks):
+    """Who will play which fighter of a match not played yet: {"top"/"bot": player id or None}.
+    With two players, picking one side gives the other side to the other player."""
+    m = _match(t, mid)
+    if m["winner"]:
+        raise TournamentError(f"{m['label']} has already been played.")
+    matches = match_index(t)
+    fighters = {side: resolve(t, slot, matches) for side, slot in sides(m)}
+    players = [p["id"] for p in t["players"]]
+    picks = {side: pid or None for side, pid in (picks or {}).items() if side in ("top", "bot")}
+    if any(pid and pid not in players for pid in picks.values()):
+        raise TournamentError("That player isn't in this tournament.")
+    if any(not fighters[side] for side, pid in picks.items() if pid):
+        raise TournamentError(f"Both fighters of {m['label']} need to be known first.")
+    if len(players) == 2 and len(picks) == 1:
+        (side, pid), = picks.items()
+        other = "bot" if side == "top" else "top"
+        picks[other] = (players[1] if pid == players[0] else players[0]) if pid else None
+    by_side = {**match_picks(t, m, matches), **picks}  # sides not mentioned keep their pick
+    if by_side.get("top") and by_side.get("top") == by_side.get("bot"):
+        raise TournamentError("One player can't play both fighters.")
+    kept = {fighters[side]: pid for side, pid in by_side.items() if pid and fighters[side]}
+    if not kept:
+        m.pop("picks", None)
+        return f"{m['label']}: no players picked"
+    m["picks"] = kept
+    return f"{m['label']}: " + ", ".join(f"{pid} plays {f}" for f, pid in kept.items())
 
 
 def op_set_player(t, mid, player):
@@ -899,7 +944,7 @@ def op_slot_in(t, round_id, win_pct, fighters=None):
 
 OPS = {
     "slot_in": op_slot_in, "pair_bench": op_pair_bench, "move_to_round": op_move_to_round,
-    "add_adjustment": op_add_adjustment, "remove_adjustment": op_remove_adjustment,
+    "set_picks": op_set_picks, "add_adjustment": op_add_adjustment, "remove_adjustment": op_remove_adjustment,
     "set_result": op_set_result, "set_player": op_set_player, "undo_result": op_undo_result,
     "rename": op_rename, "set_players": op_set_players, "set_scoring": op_set_scoring,
     "add_to_bench": op_add_to_bench, "remove_fighter": op_remove_fighter,

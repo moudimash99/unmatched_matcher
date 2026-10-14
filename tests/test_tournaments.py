@@ -424,6 +424,44 @@ def test_lockout_is_per_visitor_behind_the_cloudflare_tunnel(client):
 
 
 # ---------------------------------------------------------------------------
+# Players picked before a match
+# ---------------------------------------------------------------------------
+
+def test_picked_players_score_without_asking():
+    t = T.new_tournament("Cup", ["Ann", "Ben"], _ids(4))
+    m = T.match_index(t)["r1_1"]
+    top, bot = T.resolve(t, m["top"]), T.resolve(t, m["bot"])
+    # With two players, picking one side gives the other side to the other player
+    t, summary = T.apply_op(t, "set_picks", {"mid": "r1_1", "picks": {"top": "P2"}})
+    assert T.match_picks(t, T.match_index(t)["r1_1"]) == {"top": "P2", "bot": "P1"}
+    assert summary == f"{m['label']}: P2 plays {top}, P1 plays {bot}"
+    # The winner's player scores straight away; an explicit player still wins over the pick
+    t2, _ = T.apply_op(t, "set_result", {"mid": "r1_1", "winner": "bot"})
+    assert T.match_index(t2)["r1_1"]["player"] == "P1" and T.scores(t2)["P1"]["standard"] == 1
+    t3, _ = T.apply_op(t, "set_result", {"mid": "r1_1", "winner": "bot", "player": "P2"})
+    assert T.match_index(t3)["r1_1"]["player"] == "P2"
+    # Played matches can't be re-picked; undoing keeps the picks
+    with pytest.raises(T.TournamentError, match="already been played"):
+        T.apply_op(t2, "set_picks", {"mid": "r1_1", "picks": {"top": "P1"}})
+    t4, _ = T.apply_op(t2, "undo_result", {"mid": "r1_1"})
+    assert T.match_picks(t4, T.match_index(t4)["r1_1"]) == {"top": "P2", "bot": "P1"}
+    # Picks follow the fighter: swap a fighter out and their pick no longer counts
+    t5, _ = T.apply_op(t, "swap_slots", {"mid_a": "r1_1", "side_a": "top", "mid_b": "r1_2", "side_b": "top"})
+    assert T.match_picks(t5, T.match_index(t5)["r1_1"]) == {"bot": "P1"}
+    # Clearing, and refusals
+    t6, summary = T.apply_op(t, "set_picks", {"mid": "r1_1", "picks": {"top": None}})
+    assert "picks" not in T.match_index(t6)["r1_1"] and "no players picked" in summary
+    with pytest.raises(T.TournamentError, match="isn't in this tournament"):
+        T.apply_op(t, "set_picks", {"mid": "r1_1", "picks": {"top": "P9"}})
+    three = T.new_tournament("Cup", ["Ann", "Ben", "Cy"], _ids(4))
+    with pytest.raises(T.TournamentError, match="both fighters"):
+        T.apply_op(three, "set_picks", {"mid": "r1_1", "picks": {"top": "P3", "bot": "P3"}})
+    three, _ = T.apply_op(three, "set_picks", {"mid": "r1_1", "picks": {"top": "P3"}})
+    assert T.match_picks(three, T.match_index(three)["r1_1"]) == {"top": "P3"}  # 3 players: no guessing
+    assert T.problems(t) == [] and T.problems(three) == []
+
+
+# ---------------------------------------------------------------------------
 # Score adjustments
 # ---------------------------------------------------------------------------
 

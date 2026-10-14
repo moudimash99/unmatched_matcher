@@ -96,13 +96,15 @@ function slotRowHTML(m, side, edit) {
         </span>` : '';
     let body;
     let state = '';
+    const pick = side === 'top' ? m.top_player : m.bot_player;
     if (fighter) {
         const f = FIGHTER_BY_ID[fighter];
         state = m.winner ? (m.winner === fighter ? 'won' : 'lost') : '';
         const pct = m.win_pct == null ? null : (side === 'top' ? m.win_pct : 100 - m.win_pct);
         const low = m.games < FULL_CONFIDENCE_GAMES;
         body = `<span class="t-ava">${f ? `<img src="${f.image_url}" alt="" loading="lazy">` : ''}</span>
-            <span class="t-name">${escapeHtml(f ? f.name : fighter)}${state === 'won' ? ' <span class="t-crown" title="Winner">♛</span>' : ''}</span>
+            <span class="t-name">${escapeHtml(f ? f.name : fighter)}${state === 'won' ? ' <span class="t-crown" title="Winner">♛</span>' : ''}${pick && !m.winner
+                ? `<span class="t-player-tag t-pick-tag" style="--pc:${playerColor(pick)}" title="Picked to play this fighter">🎮 ${escapeHtml(playerOf(pick) ? playerOf(pick).name : pick)}</span>` : ''}</span>
             ${pct != null && !m.winner ? `<span class="t-pct" title="Chance to win${low ? ' (estimate: few games)' : ''}">${low ? '~' : ''}${Math.round(pct)}%</span>` : ''}`;
     } else if (!slot) {
         body = '<span class="t-ava t-ava-empty">+</span><span class="t-name t-tbd">Empty slot</span>';
@@ -172,7 +174,8 @@ function matchCardHTML(m) {
     if (m.status === 'ready') {
         action = `<p class="t-ask">Who won?</p><div class="t-win-btns">
             <button type="button" data-act="win" data-mid="${m.id}" data-side="top">${escapeHtml(fighterName(m.top_fighter))}</button>
-            <button type="button" data-act="win" data-mid="${m.id}" data-side="bot">${escapeHtml(fighterName(m.bot_fighter))}</button></div>`;
+            <button type="button" data-act="win" data-mid="${m.id}" data-side="bot">${escapeHtml(fighterName(m.bot_fighter))}</button></div>
+            <button type="button" class="t-link t-pick-link" data-act="picks" data-mid="${m.id}">${m.top_player || m.bot_player ? '🎮 Change who plays' : '🎮 Pick who plays (optional)'}</button>`;
     } else if (m.winner && !m.player) {
         action = `<p class="t-ask">♛ ${escapeHtml(fighterName(m.winner))} won. Who played them?</p><div class="t-player-btns">${playerButtons(m)}</div>
             <button type="button" class="t-link" data-act="undo" data-mid="${m.id}">↩ undo result</button>`;
@@ -407,6 +410,42 @@ function openMatchBuilder(roundId) {
     draw();
 }
 
+/** Who will play which fighter of a match (optional): their point is then counted without asking. */
+function openPlayerPicks(mid) {
+    const draw = () => {
+        const m = byMatch()[mid];
+        if (!m || m.winner) { closeModal(); return; }
+        const top = escapeHtml(fighterName(m.top_fighter)), bot = escapeHtml(fighterName(m.bot_fighter));
+        const name = pid => escapeHtml(playerOf(pid) ? playerOf(pid).name : pid);
+        const tag = pid => `<span class="t-player-tag" style="--pc:${playerColor(pid)}">${name(pid)}</span>`;
+        let options;
+        if (TOURNAMENT.players.length === 2) {
+            const [a, b] = TOURNAMENT.players.map(p => p.id);
+            const opt = (t, o) => `<button type="button" class="t-option${m.top_player === t && m.bot_player === o ? ' picked' : ''}"
+                data-picks='${JSON.stringify({ top: t, bot: o })}'>${tag(t)} plays ${top} &nbsp;·&nbsp; ${tag(o)} plays ${bot}</button>`;
+            options = `<div class="t-options">${opt(a, b)}${opt(b, a)}</div>`;
+        } else {
+            const row = (side, fname) => {
+                const cur = side === 'top' ? m.top_player : m.bot_player;
+                return `<h3>${fname}</h3><div class="t-player-btns">${TOURNAMENT.players.map(p =>
+                    `<button type="button" class="t-player-btn${cur === p.id ? ' on' : ''}" style="--pc:${playerColor(p.id)}"
+                        data-picks='${JSON.stringify({ [side]: cur === p.id ? null : p.id })}'>${escapeHtml(p.name)}</button>`).join('')}</div>`;
+            };
+            options = row('top', top) + row('bot', bot);
+        }
+        $('#t-modal-body').innerHTML = `<h2>Who plays ${escapeHtml(m.label)}?</h2>
+            <p class="muted">Optional. When the winner is picked, the point goes straight to whoever plays them, without asking.</p>
+            ${options}
+            ${m.top_player || m.bot_player ? `<div class="t-options" style="margin-top:.5rem"><button type="button" class="t-option" data-picks='${JSON.stringify({ top: null, bot: null })}'>No picks</button></div>` : ''}`;
+        $$('#t-modal-body [data-picks]').forEach(btn => btn.addEventListener('click', async () => {
+            const ok = await op('set_picks', { mid, picks: JSON.parse(btn.dataset.picks) });
+            if (ok && TOURNAMENT.players.length === 2) closeModal(); else if (ok) draw();
+        }));
+    };
+    openModal('');
+    draw();
+}
+
 /** Phone-friendly way to move a match to another round (dragging does the same on a computer). */
 function openMoveToRound(mid) {
     const m = byMatch()[mid];
@@ -609,6 +648,7 @@ document.addEventListener('click', async e => {
             if (confirm(`Undo the result of ${m.label}?`)) await op('undo_result', { mid });
             break;
         case 'change': openSlotPicker(mid, side); break;
+        case 'picks': openPlayerPicks(mid); break;
         case 'playin': openPlayInPicker(mid, side); break;
         case 'swap':
             if (!pendingSwap) { pendingSwap = { mid, side }; setStatus('Now pick the slot to swap with (⇄ on another slot).'); render(); }

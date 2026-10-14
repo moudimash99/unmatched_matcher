@@ -135,7 +135,9 @@ def create_blueprint(engine, render_tool, fighters_by_id, all_sets, get_collecti
             pct = win_pct(top, bot)
             games = engine.games_played(top, bot) if pct is not None else 0
             nxt = T.consumers(t, m["id"])
+            picks = T.match_picks(t, m, matches)
             out.append(dict(m, top_fighter=top, bot_fighter=bot, status=T.status(t, m, matches),
+                            top_player=picks.get("top"), bot_player=picks.get("bot"),
                             win_pct=None if pct is None else round(pct, 1), games=games,
                             next=nxt[0][0]["id"] if nxt else None))
         final = T.final_match(t)
