@@ -49,11 +49,13 @@
                 <button type="button" class="btn small" id="save-players">Save players</button>
             </div>
             <h3>Score adjustments</h3>
-            <p class="muted">Extra (or, with a minus, fewer) points for a player, in one scoring or both.</p>
+            <p class="muted">Extra (or, with a minus, fewer) points for a player, in one scoring or both. They count in the
+                scores but aren't shown anywhere else, not even in the history.</p>
+            <button type="button" class="btn secondary small" id="show-adjustments">Show adjustments</button>
             <div id="adjustments"></div>
             <div class="row t-adj-form">
                 <select id="adj-player"></select>
-                <input type="number" id="adj-points" step="0.1" placeholder="0.8" style="width:5.5rem">
+                <input type="number" id="adj-points" step="0.1" placeholder="Points" style="width:5.5rem">
                 <select id="adj-scoring">
                     <option value="weighted">weighted only</option>
                     <option value="standard">standard only</option>

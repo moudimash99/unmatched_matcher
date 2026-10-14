@@ -11,6 +11,7 @@ const EDIT_KEY = 'ufc_tournament_edit';
 let pendingSwap = null;   // {mid, side} picked first when swapping two slots
 let modalOpen = false;
 let busy = false;
+let adjustments = null;   // the score adjustments, once "Show adjustments" is pressed (they aren't sent with the page)
 const folded = new Map();  // round id → folded? Rounds already finished when first shown start folded
 
 const byMatch = () => Object.fromEntries(TOURNAMENT.matches.map(m => [m.id, m]));
@@ -230,12 +231,21 @@ function renderRounds() {
 function renderAdjustments() {
     $('#adj-player').innerHTML = TOURNAMENT.players.map(p => `<option value="${p.id}">${escapeHtml(p.name)}</option>`).join('');
     const where = { weighted: 'weighted', standard: 'standard', both: 'both scorings' };
-    $('#adjustments').innerHTML = TOURNAMENT.adjustments.length ? `<ul class="t-adj-list">${TOURNAMENT.adjustments.map(a => {
+    $('#show-adjustments').textContent = adjustments ? 'Hide adjustments' : 'Show adjustments';
+    if (!adjustments) { $('#adjustments').innerHTML = ''; return; }
+    $('#adjustments').innerHTML = adjustments.length ? `<ul class="t-adj-list">${adjustments.map(a => {
         const p = playerOf(a.player);
         return `<li><span class="t-player-tag" style="--pc:${playerColor(a.player)}">${escapeHtml(p ? p.name : a.player)}</span>
             <strong>${a.points > 0 ? '+' : ''}${a.points}</strong> <span class="muted">${where[a.scoring]}${a.note ? ' · ' + escapeHtml(a.note) : ''}</span>
             <button type="button" class="t-link" data-act="remove-adjustment" data-adj="${a.id}" title="Remove">✕</button></li>`;
-    }).join('')}</ul>` : '';
+    }).join('')}</ul>` : '<p class="muted">No adjustments.</p>';
+}
+
+async function loadAdjustments() {
+    const r = await fetch(`${API}/adjustments`).catch(() => null);
+    adjustments = r && r.ok ? await r.json() : null;
+    if (!adjustments) setStatus("Couldn't load the adjustments.");
+    renderAdjustments();
 }
 
 function renderEditPanel() {
@@ -634,7 +644,10 @@ document.addEventListener('click', async e => {
         }
         case 'delete-round': await op('delete_round', { round_id: round }); break;
         case 'remove-adjustment':
-            if (confirm('Remove this score adjustment?')) await op('remove_adjustment', { adjustment_id: btn.dataset.adj });
+            if (confirm('Remove this score adjustment?') && await op('remove_adjustment', { adjustment_id: btn.dataset.adj })) {
+                setStatus('Saved.');
+                await loadAdjustments();
+            }
             break;
         case 'toggle-round':
             folded.set(round, !folded.get(round));
@@ -646,8 +659,12 @@ document.addEventListener('click', async e => {
     }
 });
 
+$('#show-adjustments').addEventListener('click', () => {
+    if (adjustments) { adjustments = null; renderAdjustments(); } else loadAdjustments();
+});
 $('#edit-mode').addEventListener('change', () => {
     storeSet(EDIT_KEY, editing());
+    adjustments = null;  // hidden again next time
     pendingSwap = null;
     render();
 });
@@ -656,9 +673,13 @@ $$('.t-segment [data-scoring]').forEach(b => b.addEventListener('click', () => {
 }));
 $('#add-adjustment').addEventListener('click', async () => {
     const points = parseFloat($('#adj-points').value);
-    if (!points) { alert('Enter the points, like 0.8 (or -1 to take a point away).'); return; }
+    if (!points) { alert('Enter the points (with a minus to take points away).'); return; }
     const ok = await op('add_adjustment', { player: $('#adj-player').value, points, scoring: $('#adj-scoring').value, note: $('#adj-note').value });
-    if (ok) { $('#adj-points').value = ''; $('#adj-note').value = ''; }
+    if (ok) {
+        $('#adj-points').value = ''; $('#adj-note').value = '';
+        setStatus('Saved.');  // not the summary, which names the points and the player
+        if (adjustments) await loadAdjustments();
+    }
 });
 $('#rebalance-current').addEventListener('click', () => {
     if (!TOURNAMENT.current_round) { alert('Every match has been played.'); return; }

@@ -142,9 +142,9 @@ def create_blueprint(engine, render_tool, fighters_by_id, all_sets, get_collecti
         return {
             **{k: t[k] for k in ("id", "name", "version", "updated", "players", "scoring", "rounds", "bench")},
             "matches": out,
+            # Scores include any adjustments; the adjustments themselves aren't sent with the page
+            # (they're kept out of sight) and load only from /adjustments when asked for in edit mode.
             "scores": T.scores(t, win_pct),
-            "adjustments": t.get("adjustments", []),
-            "adjustment_totals": T.adjustment_totals(t),
             "current_round": T.current_round(t),
             "champion": final["winner"] if final else None,
             "notes": T.notes(t),
@@ -302,7 +302,11 @@ def create_blueprint(engine, render_tool, fighters_by_id, all_sets, get_collecti
     @bp.route("/api/tournaments/<tid>/history")
     def api_history(tid):
         api_guard(tid)
-        return jsonify(store().history(tid))
+        return jsonify([h for h in store().history(tid) if not T.is_adjustment_change(h["summary"])])
+
+    @bp.route("/api/tournaments/<tid>/adjustments")
+    def api_adjustments(tid):
+        return jsonify(api_guard(tid).get("adjustments", []))
 
     @bp.route("/api/tournaments/<tid>/restore", methods=["POST"])
     def api_restore(tid):

@@ -225,6 +225,17 @@ def scores(t, win_pct=None):
     return out
 
 
+# History entries made by adding or removing a score adjustment (see op_add_adjustment and
+# op_remove_adjustment). Adjustments are kept out of sight on the page, so these are left out of the
+# history list too.
+_ADJUSTMENT_SUMMARY = re.compile(r"^[+-]?[\d.]+ points for .+ \((both scorings|weighted scoring|standard scoring)\)$"
+                                 r"|^Removed a score adjustment$")
+
+
+def is_adjustment_change(summary):
+    return bool(_ADJUSTMENT_SUMMARY.match(summary or ""))
+
+
 def adjustment_totals(t):
     """{player id: {"standard": points, "weighted": points}} from score adjustments alone."""
     out = {p["id"]: {"standard": 0.0, "weighted": 0.0} for p in t["players"]}

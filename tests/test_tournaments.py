@@ -254,6 +254,28 @@ def test_create_play_and_edit_over_the_api(client):
     assert r.status_code == 200 and r.get_json()["tournament"]["scores"]["P2"]["standard"] == 0
 
 
+def test_adjustments_count_but_stay_out_of_sight(client):
+    _login(client)
+    r = client.post("/tournaments/new", data={"name": "Cup", "players": ["Ann", "Ben"],
+                                              "fighters": ["medusa", "sinbad", "alice", "king_arthur"]})
+    tid = r.headers["Location"].rsplit("/", 1)[1]
+    v = client.get(f"/api/tournaments/{tid}").get_json()["version"]
+    r = client.post(f"/api/tournaments/{tid}/op", json={"op": "add_adjustment", "version": v,
+                                                          "args": {"player": "P1", "points": 0.8, "scoring": "weighted"}})
+    view = r.get_json()["tournament"]
+    assert view["scores"]["P1"]["weighted"] == 0.8  # counted…
+    assert "adjustments" not in view and "adjustment_totals" not in view  # …but not sent with the page
+    page = client.get(f"/tournaments/{tid}").get_data(as_text=True)
+    assert '"adjustments": ' not in page and '"points": ' not in page and "points for Ann" not in page
+    assert [a["points"] for a in client.get(f"/api/tournaments/{tid}/adjustments").get_json()] == [0.8]
+    r = client.post(f"/api/tournaments/{tid}/op", json={"op": "remove_adjustment", "version": v + 1,
+                                                          "args": {"adjustment_id": "adj1"}})
+    assert r.status_code == 200
+    # The history leaves out adding and removing it; the versions are still there to restore
+    assert [h["summary"] for h in client.get(f"/api/tournaments/{tid}/history").get_json()] == ["Created"]
+    assert client.post(f"/api/tournaments/{tid}/restore", json={"restore": v + 1}).status_code == 200
+
+
 def test_import_the_old_app_over_the_page(client):
     _login(client)
     bracket = {k: dict(v) for k, v in LEGACY_BRACKET.items()}
