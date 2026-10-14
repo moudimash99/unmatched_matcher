@@ -164,6 +164,8 @@ def problems(t):
                 out.append(f"{m['label']} has a winner who isn't in it.")
         if m["player"] and m["player"] not in {p["id"] for p in t["players"]}:
             out.append(f"{m['label']} is credited to a player who isn't in the tournament.")
+        if m.get("loser_player") and m["loser_player"] not in {p["id"] for p in t["players"]}:
+            out.append(f"{m['label']} has a loser played by someone who isn't in the tournament.")
     player_ids = {p["id"] for p in t["players"]}
     for adj in t.get("adjustments", []):
         if adj["player"] not in player_ids:
@@ -495,6 +497,9 @@ def op_set_result(t, mid, winner, player=None):
         m["player"] = player or None
     elif match_picks(t, m, matches).get(winner):  # picked beforehand: whoever was to play the winner scores
         m["player"] = match_picks(t, m, matches)[winner]
+    loser_pick = match_picks(t, m, matches).get("bot" if winner == "top" else "top")
+    if loser_pick and loser_pick != m["player"] and not m.get("loser_player"):
+        m["loser_player"] = loser_pick
     m["played_at"] = m["played_at"] or _now()
     return f"{m['label']}: {fighter} won"
 
@@ -542,12 +547,39 @@ def op_set_picks(t, mid, picks):
     return f"{m['label']}: " + ", ".join(f"{pid} plays {f}" for f, pid in kept.items())
 
 
-def op_set_player(t, mid, player):
+def op_set_player(t, mid, player, role="winner"):
+    """Who played the winning fighter (role "winner"), or the losing one (role "loser"; no player means
+    "don't know", so it isn't asked again)."""
     m = _match(t, mid)
     if not m["winner"]:
         raise TournamentError("Pick the winning fighter first.")
+    if player and player not in {p["id"] for p in t["players"]}:
+        raise TournamentError("That player isn't in this tournament.")
+    if role == "loser":
+        if player and player == m["player"]:
+            raise TournamentError("One player can't play both fighters.")
+        m["loser_player"] = player or ""
+        return f"{m['label']}: lost by {player or 'nobody known'}"
     m["player"] = player or None
+    if player and m.get("loser_player") == player:
+        m["loser_player"] = None  # they can't have played both; ask again
     return f"{m['label']}: played by {player or 'nobody'}"
+
+
+def loser_player(t, m):
+    """Who played the losing fighter: as recorded, or with two players, whoever didn't play the winner."""
+    if m.get("loser_player"):
+        return m["loser_player"]
+    ids = [p["id"] for p in t["players"]]
+    if len(ids) == 2 and m["player"] in ids:
+        return ids[1] if m["player"] == ids[0] else ids[0]
+    return None
+
+
+def needs_loser_player(t, m):
+    """With three or more players, a played match still has to say who played the loser (None: not asked
+    yet; "": asked, and nobody knows)."""
+    return bool(m["winner"] and m["player"] and len(t["players"]) > 2 and m.get("loser_player") is None)
 
 
 def op_undo_result(t, mid):
@@ -556,6 +588,7 @@ def op_undo_result(t, mid):
     if later:
         raise TournamentError(f"{', '.join(later)} already used this result. Undo that first.")
     m["winner"] = m["player"] = m["played_at"] = None
+    m.pop("loser_player", None)
     return f"{m['label']}: result undone"
 
 
@@ -571,7 +604,8 @@ def op_set_players(t, names):
     names = [n.strip() for n in names]
     if not any(names):
         raise TournamentError("Keep at least one player.")
-    credited = {m["player"] for m in t["matches"] if m["player"]} | {a["player"] for a in t.get("adjustments", [])}
+    credited = ({m["player"] for m in t["matches"] if m["player"]} | {m["loser_player"] for m in t["matches"] if m.get("loser_player")}
+                | {a["player"] for a in t.get("adjustments", [])})
     players = []
     for i, n in enumerate(names):
         pid = t["players"][i]["id"] if i < len(t["players"]) else f"P{i + 1}"

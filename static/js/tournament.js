@@ -20,7 +20,7 @@ const playerOf = pid => TOURNAMENT.players.find(p => p.id === pid);
 const playerColor = pid => PLAYER_COLORS[Math.max(0, TOURNAMENT.players.findIndex(p => p.id === pid)) % PLAYER_COLORS.length];
 const editing = () => $('#edit-mode').checked;
 // Finished: has a winner and, when there are players, who played it (so the "Who played?" step stays in view)
-const finished = m => m.winner && (m.player || !TOURNAMENT.players.length);
+const finished = m => m.winner && (m.player || !TOURNAMENT.players.length) && !m.ask_loser;
 
 /*************************** TALKING TO THE SERVER ***************************/
 async function op(name, args = {}) {
@@ -123,10 +123,14 @@ function winBarHTML(m) {
         <div class="t-bar-text"><span>${fair}</span><span class="games-note${m.games < FULL_CONFIDENCE_GAMES ? ' low-data' : ''}">${m.games ? m.games.toLocaleString('en-US') + ' games' : 'estimate'}</span></div>`;
 }
 
-function playerButtons(m) {
-    return TOURNAMENT.players.map(p => `<button type="button" class="t-player-btn" style="--pc:${playerColor(p.id)}"
-        data-act="player" data-mid="${m.id}" data-player="${p.id}">${escapeHtml(p.name)}</button>`).join('');
+/** Buttons to say who played the winner (role "winner") or the loser (role "loser": not the winner's player). */
+function playerButtons(m, role = 'winner') {
+    return TOURNAMENT.players.filter(p => role === 'winner' || p.id !== m.player).map(p => `<button type="button"
+        class="t-player-btn" style="--pc:${playerColor(p.id)}" data-act="player" data-role="${role}" data-mid="${m.id}"
+        data-player="${p.id}">${escapeHtml(p.name)}</button>`).join('');
 }
+
+const playerTag = pid => `<span class="t-player-tag" style="--pc:${playerColor(pid)}">🎮 ${escapeHtml(playerOf(pid) ? playerOf(pid).name : pid)}</span>`;
 
 /*************************** RENDERING ***************************/
 function renderHero() {
@@ -179,9 +183,16 @@ function matchCardHTML(m) {
     } else if (m.winner && !m.player) {
         action = `<p class="t-ask">♛ ${escapeHtml(fighterName(m.winner))} won. Who played them?</p><div class="t-player-btns">${playerButtons(m)}</div>
             <button type="button" class="t-link" data-act="undo" data-mid="${m.id}">↩ undo result</button>`;
+    } else if (m.ask_loser) {
+        const loser = m.winner === m.top_fighter ? m.bot_fighter : m.top_fighter;
+        action = `<div class="t-result">${playerTag(m.player)}</div>
+            <p class="t-ask">And who played ${escapeHtml(fighterName(loser))}?</p><div class="t-player-btns">${playerButtons(m, 'loser')}</div>
+            <div class="t-result"><button type="button" class="t-link" data-act="player" data-role="loser" data-mid="${m.id}" data-player="">skip, don't know</button>
+            <button type="button" class="t-link" data-act="undo" data-mid="${m.id}">↩ undo result</button></div>`;
     } else if (m.winner) {
-        const p = playerOf(m.player);
-        action = `<div class="t-result"><span class="t-player-tag" style="--pc:${playerColor(m.player)}">🎮 ${escapeHtml(p ? p.name : m.player)}</span>
+        // With two players the loser's player is obvious; with more, say who they beat
+        const beat = TOURNAMENT.players.length > 2 && m.loser_player ? ` <span class="t-beat">beat</span> ${playerTag(m.loser_player)}` : '';
+        action = `<div class="t-result"><span>${playerTag(m.player)}${beat}</span>
             <button type="button" class="t-link" data-act="undo" data-mid="${m.id}" title="Undo this result">↩ undo</button></div>`;
     }
     const next = m.next ? ms[m.next] : null;
@@ -194,7 +205,7 @@ function matchCardHTML(m) {
         <button type="button" data-act="move" data-mid="${m.id}" data-dir="up" title="Move up">↑</button>
         <button type="button" data-act="move" data-mid="${m.id}" data-dir="down" title="Move down">↓</button>
         ${unplayed ? `<button type="button" data-act="delete-match" data-mid="${m.id}" title="Delete this match">🗑</button>` : ''}</span>` : '';
-    const needsPlayer = m.winner && !m.player;
+    const needsPlayer = m.winner && (!m.player || m.ask_loser);
     const cls = ['t-card', m.status, needsPlayer ? 'needs-player' : ''].join(' ');
     return `<div class="${cls}" id="card-${m.id}" data-mid="${m.id}">
         <div class="t-card-head"><span class="t-label">${escapeHtml(m.label)}</span>
@@ -643,7 +654,7 @@ document.addEventListener('click', async e => {
     const m = mid ? byMatch()[mid] : null;
     switch (act) {
         case 'win': await op('set_result', { mid, winner: side }); break;
-        case 'player': await op('set_player', { mid, player: btn.dataset.player }); break;
+        case 'player': await op('set_player', { mid, player: btn.dataset.player || null, role: btn.dataset.role || 'winner' }); break;
         case 'undo':
             if (confirm(`Undo the result of ${m.label}?`)) await op('undo_result', { mid });
             break;

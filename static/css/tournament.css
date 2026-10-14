@@ -161,6 +161,7 @@
 .t-player-tag { display: inline-flex; align-items: center; gap: .3rem; font-weight: 700; font-size: .82rem; color: var(--pc);
     background: color-mix(in srgb, var(--pc) 10%, #fff); border-radius: 99px; padding: .15rem .6rem; }
 .t-pick-tag { display: flex; width: fit-content; margin-top: .2rem; font-size: .72rem; padding: .05rem .45rem; white-space: nowrap; }
+.t-beat { font-size: .78rem; color: var(--t-muted); margin: 0 .2rem; }
 .t-pick-link { display: block; margin: .4rem auto 0; }
 .t-player-btn.on { background: var(--pc); color: #fff; }
 .t-link { border: 0; background: none; color: var(--t-muted); cursor: pointer; font-size: .78rem; padding: .1rem .2rem; box-shadow: none; }

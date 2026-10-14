@@ -461,6 +461,40 @@ def test_picked_players_score_without_asking():
     assert T.problems(t) == [] and T.problems(three) == []
 
 
+def test_who_played_the_loser():
+    # Two players: whoever didn't play the winner, without asking
+    t = T.new_tournament("Cup", ["Ann", "Ben"], _ids(4))
+    t = _play(t, "r1_1", "top", "P1")
+    m = T.match_index(t)["r1_1"]
+    assert T.loser_player(t, m) == "P2" and not T.needs_loser_player(t, m)
+    # Three players: asked after the winner's player, never the same person; skipping stops the asking
+    t = T.new_tournament("Cup", ["Ann", "Ben", "Cy"], _ids(4))
+    t, _ = T.apply_op(t, "set_result", {"mid": "r1_1", "winner": "top"})
+    assert not T.needs_loser_player(t, T.match_index(t)["r1_1"])  # the winner's player comes first
+    t, _ = T.apply_op(t, "set_player", {"mid": "r1_1", "player": "P3"})
+    assert T.needs_loser_player(t, T.match_index(t)["r1_1"])
+    with pytest.raises(T.TournamentError, match="both fighters"):
+        T.apply_op(t, "set_player", {"mid": "r1_1", "player": "P3", "role": "loser"})
+    t2, _ = T.apply_op(t, "set_player", {"mid": "r1_1", "player": "P1", "role": "loser"})
+    m = T.match_index(t2)["r1_1"]
+    assert T.loser_player(t2, m) == "P1" and not T.needs_loser_player(t2, m) and T.problems(t2) == []
+    assert T.scores(t2)["P3"]["standard"] == 1 and T.scores(t2)["P1"]["standard"] == 0  # scoring unchanged
+    with pytest.raises(T.TournamentError, match="has results"):
+        T.apply_op(t2, "set_players", {"names": ["", "Ben", "Cy"]})  # Ann lost a match: she has results
+    skipped, _ = T.apply_op(t, "set_player", {"mid": "r1_1", "player": None, "role": "loser"})
+    m = T.match_index(skipped)["r1_1"]
+    assert T.loser_player(skipped, m) is None and not T.needs_loser_player(skipped, m)
+    # Undoing the result forgets both
+    t3, _ = T.apply_op(t2, "undo_result", {"mid": "r1_1"})
+    assert "loser_player" not in T.match_index(t3)["r1_1"]
+    # Picked beforehand: both are filled in when the winner is set
+    t = T.new_tournament("Cup", ["Ann", "Ben", "Cy"], _ids(4))
+    t, _ = T.apply_op(t, "set_picks", {"mid": "r1_1", "picks": {"top": "P2", "bot": "P3"}})
+    t, _ = T.apply_op(t, "set_result", {"mid": "r1_1", "winner": "bot"})
+    m = T.match_index(t)["r1_1"]
+    assert (m["player"], T.loser_player(t, m), T.needs_loser_player(t, m)) == ("P3", "P2", False)
+
+
 # ---------------------------------------------------------------------------
 # Score adjustments
 # ---------------------------------------------------------------------------
