@@ -26,14 +26,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/tools.css') }}">
     {% block head %}{% endblock %}
 </head>
-<body class="tool-page">
+<body class="tool-page {% block body_class %}{% endblock %}">
 
 {% include "_nav.html" %}
 
+{% block header %}
 <header class="tool-header">
     <h1>{% block heading %}{% endblock %}</h1>
     {% block subheading %}{% endblock %}
 </header>
+{% endblock %}
 
 <main class="tool-main">
 {% block content %}{% endblock %}
