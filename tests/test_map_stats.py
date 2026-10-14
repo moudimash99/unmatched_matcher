@@ -299,17 +299,25 @@ def client_with_maps(monkeypatch):
         yield c
 
 
+def _page_data(html):
+    """The matchup data the matcher page embeds for script.js (map panels, explanations, map info)."""
+    return json.loads(html.split('<script type="application/json" id="matcher-results-data">', 1)[1].split("</script>", 1)[0])
+
+
 def test_matchup_page_embeds_map_panels_for_every_pairing(client_with_maps):
     resp = client_with_maps.get("/?p1=medusa&opp=alice&sets=Battle of Legends Vol. 1")
     html = resp.get_data(as_text=True)
     assert 'id="map-panel"' in html
-    panels = json.loads(html.split("const MAP_PANELS = ", 1)[1].split(";\n", 1)[0])
+    # script.js swaps this block (results and their data) in place when Generate is pressed
+    block = html.split('<div id="matcher-results">', 1)[1]
+    assert 'id="results-display-area"' in block and 'id="matcher-results-data"' in block
+    panels = _page_data(html)["map_panels"]
     assert "medusa|alice" in panels
     panel = panels["medusa|alice"]
     listed = {r["key"] for kind in ("suggested", "favor_a", "favor_b") for r in panel[kind]}
     assert panel["maps_considered"] == 1 and listed <= {"marmoreal"}  # Globe Theatre's set isn't owned
     assert set(panel["by_map"]) == {"marmoreal"} and panel["suggested"][0]["home"]
-    info = json.loads(html.split("const MAP_INFO = ", 1)[1].split(";\n", 1)[0])
+    info = _page_data(html)["map_info"]
     assert info["marmoreal"]["name"] == "Marmoreal"
     # A chosen map (from a shared link) is kept in the form
     html = client_with_maps.get("/?p1=medusa&opp=alice&map=marmoreal").get_data(as_text=True)
@@ -340,7 +348,7 @@ def test_pages_render_without_map_data(monkeypatch):
     monkeypatch.setattr(app_module, "MAP_META", {})
     with app_module.app.test_client() as c:
         home = c.get("/?p1=medusa&opp=alice").get_data(as_text=True)
-        assert 'id="map-panel"' not in home and "const MAP_PANELS = {}" in home
+        assert 'id="map-panel"' not in home and _page_data(home)["map_panels"] == {}
         assert "<h2>Maps</h2>" not in c.get("/fighter/medusa").get_data(as_text=True)
 
 
@@ -445,9 +453,9 @@ def test_explanations_reach_the_numbers_shown(engine):
 
 def test_matchup_page_embeds_explanations(client_with_maps):
     html = client_with_maps.get("/?p1=medusa&opp=alice&sets=Battle of Legends Vol. 1").get_data(as_text=True)
-    explain = json.loads(html.split("const MATCHUP_EXPLAIN = ", 1)[1].split(";\n", 1)[0])
+    explain = _page_data(html)["matchup_explain"]
     assert {"medusa|alice", "alice|medusa"} <= set(explain)
-    panel = json.loads(html.split("const MAP_PANELS = ", 1)[1].split(";\n", 1)[0])["medusa|alice"]
+    panel = _page_data(html)["map_panels"]["medusa|alice"]
     assert set(panel["explain"]["maps"]) == set(panel["by_map"])
     assert panel["explain"]["first"]["games"] == 6
     assert 'id="explain-modal"' in html

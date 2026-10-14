@@ -322,6 +322,8 @@
     </section>
 </form>
 
+{# Everything below changes with each matchup: script.js swaps this block in place when Generate is pressed #}
+<div id="matcher-results">
 {% if error_message %}
 <div class="error-message active">{{ error_message }}</div>
 {% endif %}
@@ -371,6 +373,8 @@
     </div>
 </section>
 {% endif %}
+<script type="application/json" id="matcher-results-data">{{ {"map_panels": map_panels, "matchup_explain": matchup_explain, "map_info": map_info} | tojson }}</script>
+</div>
 </main>
 
 <footer>
@@ -513,12 +517,12 @@
     const MATCHUPS = {{ matchups | tojson }};
     const FULL_CONFIDENCE_GAMES = {{ full_confidence_games }};
     const CLUB_MATCHUP_URL = {{ club_matchup_url | tojson }};
+    // For the matchup on screen (script.js replaces them when a new matchup comes in):
     // MAP_PANELS["p1|opp"] = map suggestions, first-player and closeness stats for that pairing
-    const MAP_PANELS = {{ map_panels | tojson }};
     // MATCHUP_EXPLAIN["a|b"] = the numbers behind a's overall win % vs b, for the "how is this worked out" popup
-    const MATCHUP_EXPLAIN = {{ matchup_explain | tojson }};
     // MAP_INFO[key] = name, box, image and layout for every map in MAP_PANELS
-    const MAP_INFO = {{ map_info | tojson }};
+    let { map_panels: MAP_PANELS, matchup_explain: MATCHUP_EXPLAIN, map_info: MAP_INFO } =
+        JSON.parse(document.getElementById('matcher-results-data').textContent);
     const STATIC_URL = {{ url_for('static', filename='') | tojson }};
 </script>
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>

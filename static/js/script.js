@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupResultCardActions();
     setupShareButton();
     setupExplanations();
+    setupInPlaceGenerate();
     updateAllWinPercentages();  // also draws the map panel
     renderMapPanel();
     trackMatchupResult();
@@ -1096,6 +1097,66 @@ function setupExplanations() {
     qs('#explain-close').addEventListener('click', close);
     modal.addEventListener('click', ev => { if (ev.target === modal) close(); });
     document.addEventListener('keydown', ev => { if (ev.key === 'Escape' && !modal.classList.contains('hidden')) close(); });
+}
+
+/*************************** NEW MATCHUP WITHOUT RELOADING  ***************************/
+/**
+ * Generate sends the form in the background and swaps in only the results, so the page doesn't
+ * jump back to the top; then it scrolls to the new matchup. If anything goes wrong it falls back to
+ * an ordinary form submit.
+ */
+function setupInPlaceGenerate() {
+    const form = qs('#fighter-chooser-form');
+    if (!form || !window.fetch || !window.DOMParser) return;
+    // Not form.action: the form has a button named "action", which that property returns instead
+    const url = new URL(form.getAttribute('action') || '', window.location.href).href;
+    let busy = false;
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (busy) return;
+        busy = true;
+        const btn = qs('#generate-matchup-btn');
+        const label = btn ? btn.innerHTML : '';
+        if (btn) { btn.disabled = true; btn.innerHTML = '🎲 Generating…'; }
+        try {
+            const r = await fetch(url, { method: 'POST', body: new FormData(form, e.submitter || undefined) });
+            if (!r.ok) throw new Error(`HTTP ${r.status}`);
+            const doc = new DOMParser().parseFromString(await r.text(), 'text/html');
+            if (!doc.getElementById('matcher-results')) throw new Error('no results in the response');
+            showNewResults(doc, url);
+        } catch (err) {
+            form.submit();  // doesn't fire 'submit' again
+        } finally {
+            busy = false;
+            if (btn) { btn.disabled = false; btn.innerHTML = label; }
+        }
+    });
+}
+
+function showNewResults(doc, url) {
+    // The server may change the locks (e.g. "Let me choose" locks Player 1), so take its values
+    ['current_locked_p1_id', 'current_locked_opp_id', 'chosen_map'].forEach(id => {
+        const fresh = doc.getElementById(id);
+        if (fresh && qs(`#${id}`)) qs(`#${id}`).value = fresh.value;
+    });
+    qs('#matcher-results').replaceWith(doc.getElementById('matcher-results'));
+    ({ map_panels: MAP_PANELS, matchup_explain: MATCHUP_EXPLAIN, map_info: MAP_INFO } =
+        JSON.parse(qs('#matcher-results-data').textContent));
+    // A page opened from a shared link would bring that matchup back on reload; drop the link's query
+    if (window.location.search) history.replaceState(null, '', url);
+
+    annotateLockButtons();
+    setupResultCardActions();
+    setupShareButton();
+    updateAllWinPercentages();
+    renderMapPanel();
+    trackMatchupResult();
+
+    const results = qs('#results-display-area');
+    const error = qs('#matcher-results .error-message');
+    if (results) results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    else if (error) error.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 /*************************** SHARE LINK  ***************************/
