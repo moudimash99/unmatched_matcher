@@ -219,10 +219,10 @@ def _login(c, password="pw"):
 
 
 def test_tournaments_need_the_password(client):
-    assert "Enter the password" in client.get("/tournaments").get_data(as_text=True)
+    assert "Open my tournaments" in client.get("/tournaments").get_data(as_text=True)
     assert client.post("/tournaments/new", data={}).status_code == 401
     _login(client, "wrong")
-    assert "Enter the password" in client.get("/tournaments").get_data(as_text=True)
+    assert "Open my tournaments" in client.get("/tournaments").get_data(as_text=True)
     _login(client)
     assert "New tournament" in client.get("/tournaments").get_data(as_text=True)
 
@@ -467,7 +467,7 @@ def test_signup_rules(client):
     r = client.post("/tournaments/signup", data={"password": "abcdef", "confirm": "abcdeg"})
     assert "match" in r.headers["Location"]
     client.post("/tournaments/login", data={"password": "nobody-has-this"})
-    assert "Enter the password" in client.get("/tournaments").get_data(as_text=True)  # unknown password: not in
+    assert "Open my tournaments" in client.get("/tournaments").get_data(as_text=True)  # unknown password: not in
 
 
 def test_signup_can_be_turned_off(client, monkeypatch):

@@ -2,101 +2,135 @@
 {% block title %}Tournaments – Unmatched Fighter Chooser{% endblock %}
 {% block description %}Run knockout tournaments of Unmatched fighters with fair pairings, scores per player and a bracket you can edit at any time.{% endblock %}
 {% block head %}<meta name="robots" content="noindex"><link rel="stylesheet" href="{{ url_for('static', filename='css/tournament.css') }}">{% endblock %}
-{% block heading %}Tournaments{% endblock %}
-{% block subheading %}<p>Knockout brackets of fighters. Take turns playing the matches; whoever plays the winning fighter scores. Saved on the server, so every phone sees the same bracket.</p>{% endblock %}
+{% block body_class %}t-list-page{% endblock %}
+{% block header %}{% endblock %}
 
 {% block content %}
-{% if error %}<div class="t-error">{{ error }}</div>{% endif %}
-
-{% if not configured %}
-<section class="panel">
-    <h2>Not set up on this server</h2>
-    <p class="muted">Tournaments need <code>SECRET_KEY</code> and <code>TOURNAMENT_PASSWORD_HASH</code> in the server's environment (see the README).</p>
-</section>
-
-{% elif not authed %}
-<section class="panel t-login">
-    <h2>🔒 Enter the password</h2>
-    <form method="post" action="{{ url_for('tournaments.login') }}" class="row">
-        <input type="password" name="password" placeholder="Password" autofocus required>
-        <button class="btn go" type="submit">Enter</button>
-    </form>
-</section>
-
-{% else %}
-<section class="panel">
-    <div class="row">
-        <h2 style="margin:0">Your tournaments</h2>
-        <span class="spacer"></span>
-        <a class="btn secondary small" href="{{ url_for('tournaments.logout') }}">Log out</a>
+<section class="t-hero">
+    <div class="t-hero-top">
+        <span></span>
+        {% if authed %}<a class="t-back" href="{{ url_for('tournaments.logout') }}">Log out</a>{% endif %}
     </div>
-    {% if items %}
-    <div class="table-wrap"><table class="data">
-        <thead><tr><th>Name</th><th>Players</th><th class="num">Matches played</th><th class="num">Fighters</th><th>Last change</th><th></th></tr></thead>
-        <tbody>
-        {% for t in items %}
-        <tr>
-            <td><a href="{{ url_for('tournaments.page', tid=t.id) }}"><strong>{{ t.name }}</strong></a></td>
-            <td>{{ t.players | map(attribute='name') | join(' vs ') }}</td>
-            <td class="num">{{ t.progress.played }} / {{ t.progress.total }}</td>
-            <td class="num">{{ t.progress.fighters }}</td>
-            <td class="muted">{{ t.updated[:16] | replace('T', ' ') }} UTC</td>
-            <td class="num">
-                <form method="post" action="{{ url_for('tournaments.delete', tid=t.id) }}"
-                      onsubmit="return confirm('Delete {{ t.name | e }} for good? This can\'t be undone.')">
-                    <button class="btn secondary small" type="submit">Delete</button>
-                </form>
-            </td>
-        </tr>
-        {% endfor %}
-        </tbody>
-    </table></div>
-    {% else %}
-    <p class="muted">No tournaments yet. Start one below, or bring over one from the old tournament app.</p>
+    <p class="t-eyebrow">Unmatched</p>
+    <h1 class="t-title">Tournaments</h1>
+    <p class="t-meta">Knockout brackets of fighters. Take turns playing the matches; whoever plays the winning fighter scores.
+        Saved on the server, so every phone sees the same bracket.</p>
+    {% if authed %}
+    <div class="t-hero-actions">
+        <a class="t-hero-btn" href="#new">+ New tournament</a>
+        <a class="t-hero-btn ghost" href="#import">Import from the old app</a>
+    </div>
     {% endif %}
 </section>
 
-<section class="panel">
-    <h2>New tournament</h2>
-    <form method="post" action="{{ url_for('tournaments.create') }}" id="new-form">
-        <div class="row">
-            <label>Name <input type="text" name="name" placeholder="Summer cup" required style="min-width:14rem"></label>
-        </div>
-        <h3>Players</h3>
-        <div class="row" id="player-inputs">
-            <input type="text" name="players" placeholder="Player 1" required>
-            <input type="text" name="players" placeholder="Player 2">
-            <button type="button" class="btn secondary small" id="add-player">+ player</button>
-        </div>
-        <h3>Fighters</h3>
-        <p class="muted">Tick the sets to use, then untick any fighter you want to leave out. Your collection is ticked to start with.</p>
-        <div class="t-set-list">
-            {% for s in all_sets %}
-            <label><input type="checkbox" class="new-set" value="{{ s }}" {{ 'checked' if s in collection }}> {{ s }}</label>
-            {% endfor %}
-        </div>
-        <div class="row" style="margin-top:.6rem">
-            <strong id="fighter-count"></strong>
-            <button type="button" class="btn secondary small" id="all-fighters">Tick all</button>
-        </div>
-        <div class="t-fighter-picks" id="fighter-picks"></div>
-        <p class="muted" style="margin-top:.6rem">Round 1 pairs the fairest matchups; when the number of fighters isn't 2, 4, 8, 16, 32… some get a bye to round 2. You can change anything afterwards.</p>
-        <button class="btn go" type="submit" style="margin-top:.6rem">Create tournament</button>
-    </form>
+{% if error %}<div class="t-error">{{ error }}</div>{% endif %}
+
+{% if not configured %}
+<section class="t-empty">
+    <h2>Not set up on this server</h2>
+    <p>Tournaments need <code>SECRET_KEY</code> in the server's environment (see the README).</p>
 </section>
 
-<section class="panel">
-    <h2>Bring over a tournament from the old app</h2>
-    <p class="muted">From the Unmatched-Tournament server: <code>data/bracket.json</code> and <code>data/state.json</code>. Results, players and scores come across as they are.</p>
-    <form method="post" action="{{ url_for('tournaments.import_old') }}" enctype="multipart/form-data" class="row">
-        <label>bracket.json <input type="file" name="bracket" accept="application/json" required></label>
-        <label>state.json <input type="file" name="state" accept="application/json"></label>
-        <label>Name <input type="text" name="name" placeholder="Imported tournament"></label>
-        <label>P1 <input type="text" name="p1" placeholder="Ahmad" style="width:7rem"></label>
-        <label>P2 <input type="text" name="p2" placeholder="Mohammad" style="width:7rem"></label>
-        <button class="btn go" type="submit">Import</button>
-    </form>
-</section>
+{% elif not authed %}
+<div class="t-login-wrap">
+    <section class="t-login-card primary">
+        <h2>🔒 Open my tournaments</h2>
+        <p>Your password opens your own tournaments. Nobody else sees them.</p>
+        <form method="post" action="{{ url_for('tournaments.login') }}">
+            <input type="password" name="password" placeholder="Your password" autofocus required autocomplete="current-password">
+            <button class="btn" type="submit">Open</button>
+        </form>
+    </section>
+    {% if signup %}
+    <section class="t-login-card">
+        <h2>✨ New here?</h2>
+        <p>Make a password (at least {{ min_password }} characters). It's the only key to your tournaments, so keep it somewhere safe;
+            there's no way to reset it.</p>
+        <form method="post" action="{{ url_for('tournaments.signup') }}">
+            <input type="password" name="password" placeholder="New password" minlength="{{ min_password }}" required autocomplete="new-password">
+            <input type="password" name="confirm" placeholder="Same password again" minlength="{{ min_password }}" required autocomplete="new-password">
+            <button class="btn go" type="submit">Make my password</button>
+        </form>
+    </section>
+    {% endif %}
+</div>
+
+{% else %}
+{% if items %}
+<div class="t-cards">
+    {% for t in items %}
+    {% set pct = (100 * t.progress.played / t.progress.total) if t.progress.total else 0 %}
+    <div class="t-tcard">
+        <a href="{{ url_for('tournaments.page', tid=t.id) }}" style="position:absolute;inset:0" aria-label="Open {{ t.name }}"></a>
+        <h3>{{ t.name }}</h3>
+        <div class="t-tcard-players">{{ t.players | map(attribute='name') | join(' vs ') }} · {{ t.progress.fighters }} fighters</div>
+        <div class="t-tcard-progress"><span style="width:{{ pct }}%"></span></div>
+        <div class="t-tcard-foot">
+            <span>
+                {% if t.champion %}🏆 Finished
+                {% else %}{{ t.progress.played }} / {{ t.progress.total }} played{% for r in t.rounds if r.id == t.current %} · now {{ r.name }}{% endfor %}{% endif %}
+            </span>
+            <span>{{ t.updated[:10] }}</span>
+        </div>
+        <form class="t-tcard-del" method="post" action="{{ url_for('tournaments.delete', tid=t.id) }}"
+              onsubmit="return confirm('Delete {{ t.name | e }} for good? This can\'t be undone.')">
+            <button type="submit" title="Delete" style="position:relative">🗑</button>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="t-empty">
+    <h2>No tournaments yet</h2>
+    <p>Start one below, or bring one over from the old tournament app.</p>
+</div>
+{% endif %}
+
+<details class="t-block" id="new" {{ 'open' if not items }}>
+    <summary>➕ New tournament</summary>
+    <div class="t-block-body">
+        <form method="post" action="{{ url_for('tournaments.create') }}" id="new-form">
+            <div class="row">
+                <label>Name <input type="text" name="name" placeholder="Summer cup" required style="min-width:14rem"></label>
+            </div>
+            <h3>Players</h3>
+            <div class="row" id="player-inputs">
+                <input type="text" name="players" placeholder="Player 1" required>
+                <input type="text" name="players" placeholder="Player 2">
+                <button type="button" class="btn secondary small" id="add-player">+ player</button>
+            </div>
+            <h3>Fighters</h3>
+            <p class="muted">Tick the sets to use, then untick any fighter you want to leave out. Your collection is ticked to start with.</p>
+            <div class="t-set-list">
+                {% for s in all_sets %}
+                <label><input type="checkbox" class="new-set" value="{{ s }}" {{ 'checked' if s in collection }}> {{ s }}</label>
+                {% endfor %}
+            </div>
+            <div class="row" style="margin-top:.6rem">
+                <strong id="fighter-count"></strong>
+                <button type="button" class="btn secondary small" id="all-fighters">Tick all</button>
+            </div>
+            <div class="t-fighter-picks" id="fighter-picks"></div>
+            <p class="muted" style="margin-top:.6rem">Round 1 pairs the fairest matchups; when the number of fighters isn't 2, 4, 8, 16, 32… some get a bye to round 2. You can change anything afterwards.</p>
+            <button class="btn go" type="submit" style="margin-top:.6rem">Create tournament</button>
+        </form>
+    </div>
+</details>
+
+<details class="t-block" id="import">
+    <summary>📥 Import from the old tournament app</summary>
+    <div class="t-block-body">
+        <p class="muted">From the Unmatched-Tournament server: <code>data/bracket.json</code> and <code>data/state.json</code>. Results, players and scores come across as they are.</p>
+        <form method="post" action="{{ url_for('tournaments.import_old') }}" enctype="multipart/form-data" class="row" style="margin-top:.6rem">
+            <label>bracket.json <input type="file" name="bracket" accept="application/json" required></label>
+            <label>state.json <input type="file" name="state" accept="application/json"></label>
+            <label>Name <input type="text" name="name" placeholder="Imported tournament"></label>
+            <label>P1 <input type="text" name="p1" placeholder="Ahmad" style="width:7rem"></label>
+            <label>P2 <input type="text" name="p2" placeholder="Mohammad" style="width:7rem"></label>
+            <button class="btn go" type="submit">Import</button>
+        </form>
+    </div>
+</details>
 {% endif %}
 {% endblock %}
 
@@ -130,6 +164,11 @@ $('#add-player').addEventListener('click', () => {
 $('#new-form').addEventListener('submit', e => {
     if ($$('#fighter-picks input:checked').length < 2) { e.preventDefault(); alert('Pick at least two fighters.'); }
 });
+// "+ New tournament" / "Import" in the hero open their section
+$$('a[href="#new"], a[href="#import"]').forEach(a => a.addEventListener('click', () => {
+    const d = document.querySelector(a.getAttribute('href'));
+    if (d) d.open = true;
+}));
 renderPicks();
 </script>
 {% endif %}
