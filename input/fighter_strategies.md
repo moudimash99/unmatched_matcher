@@ -1762,124 +1762,152 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: ms_marvel -->
 ## Ms. Marvel
 
-**In short:** A stretchy melee fighter who hits from 2 spaces away and steps 1 space every turn. She keeps opponents chasing her and hits hardest when she shares no zone with them.
+**In short:** A solo melee hero with 14 health and 2 movement who may move 1 space at the start of her turn and can attack from up to 2 spaces away, ignoring zones [1]. Half her deck cares about zones and half about her hand size [2], which makes her probably the most map-dependent fighter in the game [2][3].
 
-### Plan A: Stretch and stay out of reach
-**Goal:** Hit them from 2 spaces away while they can't hit back.
-**How to do it:** At the start of every turn, step 1 space away from the enemy (or toward them to set up a double attack), then attack from 2 spaces away. When her space shares no zone with the enemy, Big Wind Up (4) can be boosted, I'm Not Touching You (4) draws 2, and Shrink! Shrink! Shrink! makes them discard and also moves them 3 spaces. Momentous Shift is worth 5 after her free step. Making them chase her means they can usually only attack once per turn.
-**Watch out for:** She depends on the map. Pick maps with hard zone boundaries, small zones and triple-zone spaces. On some maps she can't set up her effects at all.
+### Plan A: Stretch and strike
+**Goal:** Attack from spaces that share no zone with the opponent, or that sit in more zones than theirs [3][4].
+**How to do it:** Use her free step at the start of every turn to move 1 away from the opponent, or toward them to set up a double attack [3]. Big Wind Up (4) can be boosted, and I'm Not Touching You (4) draws 2, if her space shares no zones with the target; Shrink! Shrink! Shrink! then does both of its effects, a discard and a 3-space push [1]. Embiggen is worth 6 if she's in more zones than the opponent [1], the hardest card to set up [3]; one player defends with it from a three-zone space [5]. Her free step also turns on Momentous Shift every turn [3].
+**Watch out for:** The opponent controls positioning as much as you do, and can move where her effects won't trigger [2][3].
 
-### Plan B: Big hand, big hits
-**Goal:** Keep your hand full and turn it into damage.
-**How to do it:** Fangirl is worth the number of cards in your hand, up to 7. Gyro and Fries heals 2 and gains an action with 4 or more cards in hand. Friends and Family draws 2 (or up to 7 with an extra action), but its boost value of 4 often works better on Big Wind Up, for up to 8.
-**Watch out for:** Her aggression can run her out of cards.
+### Plan B: Embiggen the hand
+**Goal:** Keep a big hand so her hand-size cards hit hard [2][3].
+**How to do it:** Fangirl is worth the number of cards in your hand [1], up to 7 [3]. Easy Peasy draws 1 and, with 4 or more cards, deals 1 damage to an adjacent fighter; Gyro and Fries heals 2 and gains an action with 4 or more [1]. Friends and Family draws 2, then can spend an action to draw up to 7 [1]. Sources disagree on it: Gridbeast uses it to recover under pressure, or as a 4 boost on Big Wind Up [3]; another player never plays it as a scheme, only as the boost [4].
+**Watch out for:** She wants 4 or more cards in hand almost all the time, which makes it hard to keep up an offense [2].
 
 ### How they lose
-- Good positioning by the opponent, sharing her zone, turns off her best effects.
-- Well-timed Feints cancel her big hits.
-- Her defenses are weak, so she struggles when caught.
+- Map dependency: maps without hard zone cut-offs or three-zone spaces cripple her [2][3][4].
+- Good positioning and well-timed Feints counter her [4].
+- Weak defense [3].
+- Aggressive opponents who keep her hand small [2].
+- Low health, which one analyst says forces her to play cautiously [2].
 
 ### Key cards
-- **Big Wind Up**: a 4-value attack you can boost when she shares no zone with the target.
-- **I'm Not Touching You**: attack 4 and draw 2 from a separate zone. A good way to punish a Feint.
-- **Embiggen**: worth 6 if she's in more zones than the enemy. It can also work on defense from a triple-zone space.
-- **Slingshot**: her only defense card (3); it places her anywhere in her zone.
+- **Big Wind Up**: boost it for a big hit; with Friends and Family, an 8 [1][3].
+- **Fangirl**: scales with your hand [1][3].
+- **Shrink! Shrink! Shrink!**: discard and push [1]. Restoration Games' owner advises holding one to handle the counterattack after attacking with Big Wind Up [6].
+- **Slingshot**: her only defense card, placing her anywhere in her zone [1][3].
+- **I'm Not Touching You**: a good punish for a Feint that preserves your bigger attacks [5].
 
 ### Tips
-- When choosing between map and starting position, she usually wants the map.
-- Use Easy Peasy on defense; it draws and pings 1 damage with 4+ cards in hand.
-- Keep a defense ready for the counterattack after a Big Wind Up.
+- When choosing between map and starting position, take the map [7].
+- Look for maps with small zones and hard cut-offs [4][7].
+- Making melee opponents chase her means they can usually attack only once per turn [3].
 
-### Further reading
-- [Unmatched – Ms. Marvel](https://gridbeast.gg/unmatched-ms-marvel/): Gridbeast · written guide
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [Any tips on using Ms. Marvel?](https://www.reddit.com/r/Unmatched/comments/1th0ed8/): Reddit: BeneficialMethod3866 · thread
-- [Ms. Marvel - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=kIBhEhVQYHs): To The Table Top! · video
-- [Ms. Marvel - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=L8RoDnRiRHg): Baked Goods · video
+### References
+1. Restoration Games. *Unmatched: Marvel – Teen Spirit*, Ms. Marvel deck. Card text as recorded in `input/heroes.json`.
+2. TFJ383. "An Unmatched Roster: It's Less Dangerous." *BoardGameGeek*, 10 December 2023. https://boardgamegeek.com/thread/3205520/an-unmatched-roster-its-less-dangerous
+3. Gridbeast. "Unmatched – Ms. Marvel." *Gridbeast*. https://gridbeast.gg/unmatched-ms-marvel/
+4. u/LabRat2329. Comment on "Any tips on using Ms. Marvel?" by u/BeneficialMethod3866. *r/Unmatched*, Reddit, 18 May 2026. https://www.reddit.com/r/Unmatched/comments/1th0ed8/
+5. u/Life-Rip183. Comment on "Any tips on using Ms. Marvel?" (see [4]).
+6. Justin D. Jacobson (Restoration Games), interviewed in "Unmatched: Marvel — Who to Play, How to Win." *The Pop Insider*. https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/
+7. u/itsactuallyoctopuses. Comment on "Any tips on using Ms. Marvel?" (see [4]).
+
+### Not cited
+- [Ms. Marvel - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=kIBhEhVQYHs): To The Table Top! · video (not yet reviewed)
+- [Ms. Marvel - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=L8RoDnRiRHg): Baked Goods · video (not yet reviewed)
 
 ---
 
 <!-- id: squirrel_girl -->
 ## Squirrel Girl
 
-**In short:** A melee hero who floods the board with up to 8 tiny squirrels. She's weak early, but once four or more squirrels surround a target her cards get dramatically stronger.
+**In short:** A melee hero with 13 health and 2 movement who summons a Squirrel next to her at the start of each turn, up to 8 [1]. Squirrels are 1-health small fighters: they share spaces, move through enemies, and all die together if their space takes damage [2][3]. Restoration Games' owner calls her horde one of the most unusual play styles in the game [4]; most of her best cards need four or more Squirrels in place [2][3].
 
-### Plan A: Build the army
-**Goal:** Get as many squirrels on the board as fast as you can.
-**How to do it:** Her ability summons a squirrel next to her at the start of every turn. Speed it up with Get 'Em Tippy-Toe! (summon 2 anywhere), Eat Nuts (heal 2 and summon 1) and Squirmish (summon 1 in her space, then place her anywhere in her zone). Squirrels are small fighters: they move through enemies, can share a space (up to 4) and can attack fighters in their own space.
-**Watch out for:** Any damage to a squirrel defeats every squirrel in that space. Keep them spread out against area damage until you're ready to pile in.
+### Plan A: Build the horde
+**Goal:** Get as many Squirrels on the board as fast as you can [2][5].
+**How to do it:** Her ability adds one a turn [1]. Get 'Em Tippy-Toe! summons two in any space [1], an important early card [5], and can set up your next turn when played on defense [2]. Eat Nuts heals 2 and summons one, even into an occupied space, and Squirmish summons one in her space and moves her within her zone [1][2]. Keep them spread out so area attacks can't wipe several at once; only stack them with a good reason [2][5].
+**Watch out for:** She is noticeably weaker before her Squirrels are out [2]. One analyst finds she often has only 1 or 2 Squirrels in play, and depends heavily on deck order [3].
 
 ### Plan B: Swarm the target
-**Goal:** Get four or more squirrels next to (or in the zone of) the enemy and cash in.
-**How to do it:** Kick Butts gets +1 for each squirrel adjacent to the target, up to 9. Bite of Steel becomes 5 with four squirrels in the target's zone. Unbeatable Squirrel Girl, with four squirrels adjacent, cancels their card's effects and ignores its value. Horde of Squirrels deals 2 damage to a fighter next to four squirrels. Nutwork of Spies makes them discard 2 cards you choose when four squirrels surround them. Fuzzball Special moves every squirrel 3 spaces to set it up.
-**Watch out for:** Stacking squirrels in one space lets the opponent kill several with one hit.
+**Goal:** Surround the opponent so her horde cards switch on [2].
+**How to do it:** Kick Butts is +1 for each Squirrel adjacent to the opponent, up to 9 [1][2]. Bite of Steel, a Squirrel attack, becomes a 5 with four Squirrels in the target's zone [1]. Unbeatable Squirrel Girl (4) cancels the opponent's effects and ignores their card's value with four Squirrels adjacent [1]; even without that it deals 2 over a Feint [5]. Horde of Squirrels deals 2 damage into a space surrounded by four Squirrels, and Nutwork of Spies discards 1 chosen card, or 2 when four Squirrels are adjacent [1]. Fuzzball Special moves every Squirrel up to 3 spaces [1].
+**Watch out for:** Many opponents can kill all adjacent Squirrels in reply, so decide which horde cards are worth cashing in [5].
 
 ### How they lose
-- She's slow and weak early, before the squirrels are out.
-- Area damage and "hit everything adjacent" effects wipe the swarm.
-- She has few defenses and only 13 health.
+- A slow early game [2][3].
+- Area damage that wipes stacked Squirrels [2][5].
+- Few defense cards [2], and only Call of the Mild for Squirrels to defend with [1][2].
+- Low movement without card effects [2].
+- Turns get slow with a big army to manage [3].
 
 ### Key cards
-- **Get 'Em Tippy-Toe!**: two squirrels anywhere. The key early card.
-- **Kick Butts**: an attack that scales with the swarm.
-- **Unbeatable Squirrel Girl**: a 4-value card that shuts down their whole card once she's surrounded them.
-- **Squirgility**: a 3-value defense that moves her 3 spaces, and spaces with sidekicks (hers or theirs) don't count toward that.
+- **Get 'Em Tippy-Toe!**: two Squirrels anywhere [1][5].
+- **Kick Butts**: scales with Squirrels around the target [1][2].
+- **Squirgility**: a 3-value defense that moves her 3 spaces through sidekicks without counting those spaces [1]; with Squirrels spread out, she can cross the map [2].
+- **Call of the Mild**: a 4 with four Squirrels in your zone, and draws 2 if you win [1]. Best on defense [2].
+- **Unbeatable Squirrel Girl**: shuts down a defense or attack with four Squirrels adjacent [1][2].
 
 ### Tips
-- Squirrels can slip past sidekicks to reach heroes who hide behind them.
-- Call of the Mild is the squirrels' only defense; with four squirrels in the zone it's worth 4.
-- Fatigue can be an option: she has 5 schemes and many escape cards.
+- Squirrels can slip past sidekicks that heroes hide behind [2].
+- One player suggests she can play the exhaustion game, with 5 schemes and many escape cards [6].
 
-### Further reading
-- [Unmatched – Squirrel Girl](https://gridbeast.gg/unmatched-squirrel-girl/): Gridbeast · written guide
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [Tips for Squirrel Girl?](https://www.reddit.com/r/Unmatched/comments/1rxdwrr/): Reddit: Commander_Jelly0 · thread
-- [Squirrel Girl - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=YxARGfUu0vQ): To The Table Top! · video
-- [Squirrel Girl - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=o5qHzhbOw7E): Baked Goods · video
+### References
+1. Restoration Games. *Unmatched: Marvel – Teen Spirit*, Squirrel Girl deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Squirrel Girl." *Gridbeast*. https://gridbeast.gg/unmatched-squirrel-girl/
+3. TFJ383. "An Unmatched Roster: It's Less Dangerous." *BoardGameGeek*, 10 December 2023. https://boardgamegeek.com/thread/3205520/an-unmatched-roster-its-less-dangerous
+4. Justin D. Jacobson (Restoration Games), interviewed in "Unmatched: Marvel — Who to Play, How to Win." *The Pop Insider*. https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/
+5. u/CD_North. Comment on "Tips for Squirrel Girl?" by u/Commander_Jelly0. *r/Unmatched*, Reddit, 18 March 2026. https://www.reddit.com/r/Unmatched/comments/1rxdwrr/
+6. u/dd_kanon. Comment on "Tips for Squirrel Girl?" (see [5]).
+
+### Not cited
+- [Squirrel Girl - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=YxARGfUu0vQ): To The Table Top! · video (not yet reviewed)
+- [Squirrel Girl - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=o5qHzhbOw7E): Baked Goods · video (not yet reviewed)
 
 ---
 
 <!-- id: cloak_and_dagger -->
-## Cloak & Dagger
+## Cloak and Dagger
 
-**In short:** Two 8-health heroes who work as a team: Cloak strips the opponent's hand, then Dagger unloads a chain of attacks that can end the game in one turn.
+**In short:** Two melee heroes with 8 health and 2 movement each, and no sidekicks; both must be defeated [1][2]. After Cloak deals at least 2 combat damage, the opponent discards a card; after Dagger does, you gain an action [1]. They are swingy and high-risk [2][3], widely rated low tier [4], but capable of huge burst turns [5][6].
 
-### Plan A: Cloak softens, Dagger finishes
-**Goal:** Drain the opponent's defenses with Cloak, then let Dagger chain attacks.
-**How to do it:** If Cloak deals at least 2 combat damage, the opponent discards a card. If Dagger deals at least 2 combat damage, you gain an action, so she can keep attacking while she keeps landing hits. These abilities can't be Feinted. Engage with Cloak first, keeping Dagger close behind. Channel the Dark (played by Cloak) pulls the enemy next to Dagger and gains an action. Perfect Balance is worth 6 when both are adjacent to the target. Then unload Dagger's attacks once they're low on defenses.
-**Watch out for:** They need several high-value attacks in hand to make the chain work. Build up a hand before you go in.
+### Plan A: Cloak sets the table
+**Goal:** Use Cloak to drain the opponent's hand and drag them into position while you collect attacks for Dagger [4].
+**How to do it:** Lead with Cloak and keep Dagger close behind [4]. Every Cloak hit for 2 strips a card [1]. Channel the Dark, played by Cloak, places the opponent next to Dagger and gains an action [1], so they either block or discard, and end up beside Dagger either way [6]. Darkforce Dimension places the opponent anywhere and makes them discard [1]; it's a good card to take a Feint [6]. Throwing weaker cards early makes the opponent spend good blocks on them [7].
+**Watch out for:** Opponents often Feint Cloak's cards and block Dagger's with high values; mix up your attacks to play on that [6].
 
-### Plan B: Lightforce finish
-**Goal:** End the game with Dagger's huge attack.
-**How to do it:** Lightforce Barrage is a 7-value attack whose effects can't be canceled, but if you win, Dagger takes the same damage she dealt. Save it as a finisher. If she survives, Refraction gives her another action, maybe for the second copy.
-**Watch out for:** Never use it early or on a sidekick; it can knock out your own Dagger.
+### Plan B: Dagger's combo turn
+**Goal:** Once the opponent is down to about five cards or fewer, chain Dagger's attacks while each one deals 2 and gains another action [4][5].
+**How to do it:** Store up at least three big attacks for Dagger [8]. Perfect Balance is a 6 when both are adjacent to the opponent [1], a good opener over high defenses [9]. Commanding Impact (5) keeps the chain going [4][9]. Lightforce Barrage is a 7 that can't be cancelled, but Dagger takes damage equal to what she deals if she wins [1]; save it as a finisher, never against a sidekick [2][10]. Use it when Dagger is at full health, or the opponent has less health than she does [4].
+**Watch out for:** Lightforce Barrage can kill Dagger if you're not looking to end the game [3][10].
 
 ### How they lose
-- One of them is focused down. Losing either partner, especially Dagger, cripples the team.
-- Opponents with high-value defenses keep them from dealing the 2 damage their abilities need.
-- Aggressive fighters with high damage burst them down.
+- Losing either fighter: their abilities depend on each other [2][3][10].
+- Low health on each, and low defense values [2][4].
+- Opponents with high defense values make 2 damage hard to reach [4].
+- No early wins: without a few early wins they fizzle out on low card values [3].
+- Low boost values [8][10].
 
 ### Key cards
-- **Living Shadow**: if Dagger plays it, she swaps with Cloak, who becomes the defender with a 4-value defense. Keep one to save Dagger.
-- **Darkforce Dimension**: Cloak places the enemy anywhere and makes them discard.
-- **Channel the Dark**: Cloak pulls the target next to Dagger and gains an action.
-- **Chosen Fate**: move up to 4 health from one partner to the other and draw 2.
+- **Channel the Dark**: Cloak's setup for Dagger [1][6].
+- **Living Shadow**: a 4 when Dagger plays it, swapping her with Cloak as defender [1]; keep it to save Dagger [2][10].
+- **Chosen Fate**: shift up to 4 health between them and draw 2 [1]. Keep each fighter at 4 or more health [10].
+- **The Living Light**: heals the other fighter 2 when Cloak defends or Dagger attacks with it [1].
+- **Lightforce Barrage**: Dagger's finisher [2].
 
 ### Tips
-- Throw weaker cards early so the opponent spends good blocks on them.
-- Go first, and pick maps where you can pin opponents.
-- Commanding Impact (5, draw 1) keeps Dagger's chain going.
+- Keep a healthy hand; they don't manage well on few cards [11].
+- Never let the opponent focus one of them down [11].
+- They want to go first, and prefer maps with items, high ground or a central spot with 3 movement [8][10].
 
-### Further reading
-- [Unmatched – Cloak & Dagger](https://gridbeast.gg/unmatched-cloak-dagger/): Gridbeast · written guide
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [Any tips to make cloak and dagger work?](https://www.reddit.com/r/Unmatched/comments/14uufd9/): Reddit: Stopipo_69 · thread
-- [Cloak and Dagger tips](https://www.reddit.com/r/Unmatched/comments/154k23s/): Reddit: Life-Rip183 · thread
-- [Tips on using Cloak and Dagger?](https://www.reddit.com/r/Unmatched/comments/1tf29n6/): Reddit: BeneficialMethod3866 · thread
-- [Cloak & Dagger - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=L4lKirHrfSk): To The Table Top! · video
-- [Cloak & Dagger - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=5bgmQGRcLyM): Baked Goods · video
-- [Strategy Sunday Vol. 5](https://www.youtube.com/watch?v=6JjrLDppsOg): Karma · video
-- [Cloak & Dagger Advanced Strategy Guide](https://www.youtube.com/watch?v=-9dJUO4tGII): The Gaming Geek Net · video
+### References
+1. Restoration Games. *Unmatched: Marvel – Teen Spirit*, Cloak and Dagger deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Cloak & Dagger." *Gridbeast*. https://gridbeast.gg/unmatched-cloak-dagger/
+3. TFJ383. "An Unmatched Roster: It's Less Dangerous." *BoardGameGeek*, 10 December 2023. https://boardgamegeek.com/thread/3205520/an-unmatched-roster-its-less-dangerous
+4. u/LabRat2329. Comment on "Tips on using Cloak and Dagger?" by u/BeneficialMethod3866. *r/Unmatched*, Reddit, 16 May 2026. https://www.reddit.com/r/Unmatched/comments/1tf29n6/
+5. u/lilBlue717. Comment on "Any tips to make cloak and dagger work?" by u/Stopipo_69. *r/Unmatched*, Reddit, 9 July 2023. https://www.reddit.com/r/Unmatched/comments/14uufd9/
+6. u/Darkblade113. Comments on "Cloak and Dagger tips" by u/Life-Rip183. *r/Unmatched*, Reddit, 20 July 2023. https://www.reddit.com/r/Unmatched/comments/154k23s/
+7. u/BuckNasty789. Comment on "Any tips to make cloak and dagger work?" (see [5]).
+8. u/CaptainCrockpot. Comments on "Any tips to make cloak and dagger work?" (see [5]) and "Tips on using Cloak and Dagger?" (see [4]).
+9. u/IGotAnotherOneFuck. Comment on "Any tips to make cloak and dagger work?" (see [5]).
+10. u/Darkblade113. "Cloak and Dagger tips" (see [6]).
+11. u/Gumbolya. Comment on "Any tips to make cloak and dagger work?" (see [5]).
+
+### Not cited
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; nothing on Cloak and Dagger)
+- [Cloak & Dagger - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=L4lKirHrfSk): To The Table Top! · video (not yet reviewed)
+- [Cloak & Dagger - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=5bgmQGRcLyM): Baked Goods · video (not yet reviewed)
+- [Strategy Sunday Vol. 5](https://www.youtube.com/watch?v=6JjrLDppsOg): Karma · video (not yet reviewed)
+- [Cloak & Dagger Advanced Strategy Guide](https://www.youtube.com/watch?v=-9dJUO4tGII): The Gaming Geek Net · video (not yet reviewed)
 
 ---
 

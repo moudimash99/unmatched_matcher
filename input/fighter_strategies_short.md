@@ -1089,75 +1089,98 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: ms_marvel -->
 ## Ms. Marvel
 
-**In short:** Hits from 2 spaces away, steps 1 every turn, and hits hardest when she shares no zone with her target.
+**In short:** A stretchy fighter who attacks from 2 spaces away, with cards that care about zones and hand size; very map dependent [1][2][3].
 
-### Plan A: Stretch and stay out of reach
-**Goal:** Hit without being hit · **How:** free step each turn; Big Wind Up and I'm Not Touching You from a separate zone · **Watch out:** very map dependent.
+### Plan A: Stretch and strike
+**Goal:** Attack from a space sharing no zones with them [3] · **How:** free step each turn; Big Wind Up and I'm Not Touching You [1][3] · **Watch out:** opponents can deny her positioning [2].
 
-### Plan B: Big hand, big hits
-**Goal:** Turn a full hand into damage · **How:** Fangirl is worth your hand size; boost Big Wind Up with Friends and Family · **Watch out:** aggression drains cards.
+### Plan B: Embiggen the hand
+**Goal:** Keep 4+ cards [2] · **How:** Fangirl scales with your hand; Gyro and Fries gains an action [1] · **Watch out:** a shrinking hand stalls her offense [2].
 
 ### How they lose
-- Opponents share her zone and switch off her effects.
-- Weak defenses when caught.
+- The wrong map [3][4].
+- Good positioning and Feints [4].
 
 ### Key cards
-- **Big Wind Up**: a 4-value attack that can be boosted.
-- **Fangirl**: up to 7.
+- **Big Wind Up**: boost it for big damage [3].
+- **Slingshot**: her only defense card [3].
 
 ### Tips
-- Pick maps with hard zone boundaries.
-- Keep your hand big.
+- Pick the map over starting position [5].
+- Keep a defense after attacking [6].
+
+### References
+1. Restoration Games. *Unmatched: Marvel – Teen Spirit*, Ms. Marvel deck.
+2. TFJ383. "An Unmatched Roster: It's Less Dangerous." *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3205520/
+3. Gridbeast. "Unmatched – Ms. Marvel." https://gridbeast.gg/unmatched-ms-marvel/
+4. u/LabRat2329. Comment on "Any tips on using Ms. Marvel?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1th0ed8/
+5. u/itsactuallyoctopuses. Comment on "Any tips on using Ms. Marvel?" (see [4]).
+6. Justin D. Jacobson, interviewed in "Unmatched: Marvel — Who to Play, How to Win." *The Pop Insider*.
 
 ---
 
 <!-- id: squirrel_girl -->
 ## Squirrel Girl
 
-**In short:** Floods the board with squirrels. Weak early, deadly once four or more surround a target.
+**In short:** A hero who summons up to 8 tiny Squirrels; her best cards need four of them around the target [1][2][3].
 
-### Plan A: Build the army
-**Goal:** Squirrels out fast · **How:** one per turn, plus Get 'Em Tippy-Toe! and Eat Nuts · **Watch out:** one hit kills every squirrel in a space.
+### Plan A: Build the horde
+**Goal:** Squirrels out fast [2][4] · **How:** her ability, Get 'Em Tippy-Toe! and Eat Nuts [1][4] · **Watch out:** spread them out against area damage [4].
 
 ### Plan B: Swarm the target
-**Goal:** Four or more squirrels around the enemy · **How:** Kick Butts (+1 per adjacent squirrel), Unbeatable Squirrel Girl, Horde of Squirrels · **Watch out:** don't over-stack.
+**Goal:** Four Squirrels on the opponent [2] · **How:** Kick Butts, Bite of Steel and Unbeatable Squirrel Girl [1][2] · **Watch out:** opponents can wipe adjacent Squirrels [4].
 
 ### How they lose
-- Weak early game.
-- Area damage wipes the swarm.
+- A slow start [2][3].
+- Few defense cards [2].
 
 ### Key cards
-- **Get 'Em Tippy-Toe!**: two squirrels anywhere.
-- **Kick Butts**: up to 9.
+- **Kick Butts**: up to a 9 [2].
+- **Squirgility**: a long-range escape [2].
 
 ### Tips
-- Spread squirrels until it's time to swarm.
-- Squirgility gives huge movement through sidekicks.
+- Use Get 'Em Tippy-Toe! early [4].
+- Squirrels slip past sidekicks [2].
+
+### References
+1. Restoration Games. *Unmatched: Marvel – Teen Spirit*, Squirrel Girl deck.
+2. Gridbeast. "Unmatched – Squirrel Girl." https://gridbeast.gg/unmatched-squirrel-girl/
+3. TFJ383. "An Unmatched Roster: It's Less Dangerous." *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3205520/
+4. u/CD_North. Comment on "Tips for Squirrel Girl?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1rxdwrr/
 
 ---
 
 <!-- id: cloak_and_dagger -->
-## Cloak & Dagger
+## Cloak and Dagger
 
-**In short:** Two 8-health partners: Cloak strips the opponent's hand, Dagger chains attacks to finish.
+**In short:** Two fragile heroes: Cloak's hits strip cards, Dagger's hits chain extra actions into a burst turn [1][2].
 
-### Plan A: Cloak softens, Dagger finishes
-**Goal:** Drain defenses, then chain attacks · **How:** Cloak's 2+ damage forces discards; Dagger's 2+ damage gains actions · **Watch out:** you need several big attacks in hand.
+### Plan A: Cloak sets the table
+**Goal:** Drain their hand and drag them to Dagger [3] · **How:** Channel the Dark and Darkforce Dimension [1][4] · **Watch out:** opponents Feint Cloak's cards [4].
 
-### Plan B: Lightforce finish
-**Goal:** End it with a 7-value attack · **How:** Lightforce Barrage can't be canceled · **Watch out:** Dagger takes the damage she deals.
+### Plan B: Dagger's combo turn
+**Goal:** Chain Dagger's 2-damage hits [3] · **How:** save Perfect Balance, Commanding Impact and Lightforce Barrage for one turn [3][5] · **Watch out:** Lightforce Barrage can kill Dagger [2].
 
 ### How they lose
-- One partner gets focused down.
-- High defenses stop the 2-damage triggers.
+- Losing either fighter [2][6].
+- Low health and low defense [2].
 
 ### Key cards
-- **Living Shadow**: saves Dagger.
-- **Channel the Dark**: pulls the target to Dagger.
+- **Channel the Dark**: sets up Dagger [4].
+- **Living Shadow**: saves Dagger [2].
 
 ### Tips
-- Engage with Cloak first.
-- Save Lightforce Barrage for the kill.
+- Keep both above 4 health with Chosen Fate [4].
+- Keep a healthy hand [7].
+
+### References
+1. Restoration Games. *Unmatched: Marvel – Teen Spirit*, Cloak and Dagger deck.
+2. Gridbeast. "Unmatched – Cloak & Dagger." https://gridbeast.gg/unmatched-cloak-dagger/
+3. u/LabRat2329. Comment on "Tips on using Cloak and Dagger?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1tf29n6/
+4. u/Darkblade113. Comment on "Cloak and Dagger tips." *r/Unmatched*, Reddit, 2023. https://www.reddit.com/r/Unmatched/comments/154k23s/
+5. u/CaptainCrockpot. Comment on "Any tips to make cloak and dagger work?" *r/Unmatched*, Reddit, 2023. https://www.reddit.com/r/Unmatched/comments/14uufd9/
+6. TFJ383. "An Unmatched Roster: It's Less Dangerous." *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3205520/
+7. u/Gumbolya. Comment on "Any tips to make cloak and dagger work?" (see [5]).
 
 ---
 
