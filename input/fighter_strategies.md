@@ -892,81 +892,101 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: little_red -->
 ## Little Red Riding Hood
 
-**In short:** A tricky melee fighter who plans each card around the symbol on top of her discard pile (her "basket"), dealing steady damage on both attack and defense.
+**In short:** A melee hero with 14 health and 2 movement, plus the ranged Huntsman (9 health) [1]. Most of her card effects only resolve if their symbol (wolf, knives or rose) matches the top card of her discard pile, her "basket" [1][2]. Sources call her one of the best-designed and most carefully crafted heroes in the game [3][4], and a complicated one [2].
 
-### Plan A: Match the basket
-**Goal:** Trigger the bonus effect on almost every card you play.
-**How to do it:** Most of her cards have an extra effect that only works if its symbol (wolf, knives or rose) matches the top card of her discard pile. Plan two cards ahead: the card you play now sets up the next one. What's That In My Basket? (4 copies) is a wild card and a solid 4-value card on attack or defense. Into the Woods moves her 3 spaces and gains an action, and Never Leave the Path can place her anywhere and gain an action with the wolf symbol.
-**Watch out for:** Discard effects and Feints scramble her basket and cancel the effects she worked to set up.
+### Plan A: Chain the basket
+**Goal:** Trigger the bonus effect on almost every card you play [2][3].
+**How to do it:** Each card you play sets the symbol for the next, so plan ahead and chain them [2][3]. What's That In My Basket? (4 copies) is a 4-value versatile card whose star counts as any symbol, making it a wild card to reset the basket [1][2][3]. Into the Woods moves her 3 spaces and gains an action, which gets her into combat range [1][4]. Never Leave the Path can place her anywhere and gain an action (wolf), deal 2 damage to every opponent in her zone (knives), or draw 3 (rose) [1]; Gridbeast calls the wolf effect the most reliable and suggests avoiding the rose one unless you badly need cards [2].
+**Watch out for:** Forced discards cut her options and change which symbol ends up on top of her basket [4].
 
-### Plan B: Punish them on defense
-**Goal:** Make attacking her painful.
-**How to do it:** What a Terrible Big Mouth You Have (with the wolf) deals damage equal to the printed value of their attack. That's brutal against big hitters, but you take the hit too. What Big Eyes You Have cancels their effects, and with the rose also ignores their attack value. Heal back up with A Grimm Tale (2 health, or 4 with the wolf).
-**Watch out for:** She has 14 health and often has to take damage to deal it.
+### Plan B: Bite back
+**Goal:** Deal damage on both attack and defense [2].
+**How to do it:** With the wolf, What a Terrible Big Mouth You Have deals damage equal to the printed value of the attacker's card [1]; it's devastating against big attacks, though you take a big hit too [2]. What Big Eyes You Have cancels the attacker's effects and, with the rose, ignores their attack value [1]; Gridbeast uses it only on defense [2]. With the knives, Once Upon a Time deals 3 damage after combat and Stones in the Belly makes the opponent discard a random card and adds its boost [1]; only play Stones when you can trigger it [2]. A Grimm Tale heals her 2, or 4 with the wolf [1].
+**Watch out for:** She often has to take damage to deal it [2].
 
 ### How they lose
-- Opponents with lots of Feints or cancel effects break her combos.
-- She ends up with no matching symbols for the cards in her hand.
-- The Huntsman dies before A Grimm Tale has been played.
+- Opponents with many ways to cancel card effects [2]; a well-timed Feint can ruin a combo she worked to set up [4].
+- The basket shows the wrong symbol for the cards in her hand [2].
+- Forced discards [4].
+- All her card values are 4 or less, so she depends on her effects [3].
 
 ### Key cards
-- **What's That In My Basket?**: the wild card that matches any symbol.
-- **What Large Hands You Have**: a 2-value attack that returns to your hand, so you can keep forcing defenses. With the rose, it returns the top card of your discard pile instead.
-- **Never Leave the Path**: teleport with an extra action, deal 2 damage to everyone in her zone, or draw 3, depending on the symbol.
-- **Once Upon a Time**: with the knives, deals 3 damage after combat.
+- **What's That In My Basket?**: perhaps her best card [2].
+- **Never Leave the Path**: her most important card [2].
+- **What Large Hands You Have**: a 2-value attack that returns to your hand, to keep forcing defenses [1][2]. With the rose, it returns the top card of your discard pile instead [1]. One reviewer found it predictable [4].
+- **A Grimm Tale**: the Huntsman's most important card; keep him alive until you've used it [2].
+- **Long Have I Sought You**: the Huntsman's 4-value attack, worth 6 if he's adjacent to the opponent [1].
 
 ### Tips
-- The Huntsman's Long Have I Sought You is worth 6 when he's next to the enemy, which punishes anyone who rushes in.
-- Use Stones in the Belly only when you can trigger its knives effect.
-- Avoid Never Leave the Path's rose effect unless you really need cards.
+- Keep the Huntsman close to Little Red but away from the enemy [2]. He can't trigger her basket, but his cards' symbols can reset it [3].
+- Sometimes leave attacks on the Huntsman undefended, to save versatile cards for Little Red [2].
+- Use the Huntsman's attacks early rather than holding them [2].
 
-### Further reading
-- [Unmatched – Little Red Riding Hood](https://gridbeast.gg/unmatched-little-red-riding-hood/): Gridbeast · written guide
-- [Unmatched – Hero Analysis: Little Red Riding Hood](https://antlerflaxbooks.wordpress.com/2022/09/06/unmatched-hero-analysis-little-red-riding-hood/): Antlerflax Books · written analysis
-- [Little Red Riding Hood (Unmatched Strategy Guide 7)](https://www.youtube.com/watch?v=FfcDojVIbI4): Baked Goods · video
-- [Little Red - Unmatched Fighter Review](https://www.youtube.com/watch?v=RS8r05kTOis): To The Table Top! · video
-- [Little Red Riding Hood Strategy Guide (Strategy Sunday playlist, #1)](https://www.youtube.com/watch?v=23fRvsJEaUU): Karma · video
+### References
+1. Restoration Games. *Unmatched: Little Red Riding Hood vs. Beowulf*, Little Red Riding Hood deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Little Red Riding Hood." *Gridbeast*. https://gridbeast.gg/unmatched-little-red-riding-hood/
+3. TFJ383. "An Unmatched Roster: Ferociously Fantastic." *BoardGameGeek*, 10 April 2024. https://boardgamegeek.com/thread/3281478/an-unmatched-roster-ferociously-fantastic
+4. Antlerflax Books. "Unmatched – Hero Analysis: Little Red Riding Hood." 6 September 2022. https://antlerflaxbooks.wordpress.com/2022/09/06/unmatched-hero-analysis-little-red-riding-hood/
+
+### Not cited
+- [Little Red Riding Hood (Unmatched Strategy Guide 7)](https://www.youtube.com/watch?v=FfcDojVIbI4): Baked Goods · video (not yet reviewed)
+- [Little Red - Unmatched Fighter Review](https://www.youtube.com/watch?v=RS8r05kTOis): To The Table Top! · video (not yet reviewed)
+- [Little Red Riding Hood Strategy Guide (Strategy Sunday playlist, #1)](https://www.youtube.com/watch?v=23fRvsJEaUU): Karma · video (not yet reviewed)
 
 ---
 
 <!-- id: beowulf -->
 ## Beowulf
 
-**In short:** A huge-health melee warrior who turns the damage he takes into Rage, then spends it on brutal attacks and punishing defenses.
+**In short:** A melee hero with 17 health and 2 movement, plus Wiglaf (9 health) [1]. Beowulf starts with 1 Rage and gains 1 each time he is dealt damage, up to 3 [1]; his cards spend Rage for big effects. One analyst praises the design: he decides whether to spend Rage after the cards are revealed, so opponents can't always see it coming [2].
 
-### Plan A: Bank Rage, then spend it big
-**Goal:** Build Rage by taking hits, then cash it in at the right moment.
-**How to do it:** He starts with 1 Rage, gains 1 each time he is dealt damage, and holds up to 3. The Ancient Heirloom can't be canceled: spend 2 Rage to make it a 5, and 1 more to boost it. The War-King gets +2 per Rage spent, up to 7, on attack or defense. Epic Poem gains a Rage and gets +1 for each Rage you have. Vigor and Courage makes them discard a random card and refills your Rage by its boost value.
-**Watch out for:** Try not to end your turn with less than 2 Rage. That's what keeps his defense scary.
+### Plan A: Feed the rage
+**Goal:** Keep Rage coming in and spend it at the right moment [3].
+**How to do it:** Take a little damage when you defend: if you're not at full Rage, about 1 or 2 damage per defense is better than blocking everything [2][4][5]. Try to hold at least 2 Rage at all times, and don't end your turn exposed with less [3][5]. Epic Poem gains 1 Rage and is +1 for each Rage you have [1]. Vigor and Courage makes the opponent discard a random card and gives you Rage equal to its boost [1], a way to win back Rage you've spent [3][5].
+**Watch out for:** Spending Rage recklessly; plan how you'll use it before each fight [3].
 
-### Plan B: The long game
-**Goal:** Outlast the opponent with 17 health and a slow-burning deck.
-**How to do it:** Make opponents come to you, which covers for his 2 movement. Take some hits undefended, since every hit gives Rage. Use Golden Drinking Horn and Remnant of Valor as "passes" (heal or move instead of drawing) so your deck stays bigger than theirs. Save versatile cards like Skirmish for defense.
-**Watch out for:** Don't overdraw with Golden Drinking Horn if you're playing for exhaustion.
+### Plan B: Make them come to you
+**Goal:** Play the long game and let the opponent approach his slow but heavy-hitting fighters [6][7][8].
+**How to do it:** His schemes don't draw cards, so they let him pass a turn without fighting or overdrawing; one player counts 7 of them [8][9]. Golden Drinking Horn gives one effect per Rage spent: draw 2, move 4 or heal 2 [1]; one player rarely uses it to draw, and mostly heals and passes [6]. Wiglaf's Remnant of Valor deals 1 damage to each adjacent fighter, and gains an action if it hit Beowulf [1]: a cheap Rage and a pass [3][6]. Don't boost your movement to chase [8]. Gridbeast suggests separating Wiglaf and Beowulf to give opponents a false sense of security [3].
+**Watch out for:** He has few combat cards worth playing [9], so avoid unnecessary combats [9]. Some players prefer to simply attack until the opponent drops; his plan is flexible [10].
 
 ### How they lose
-- He is kited by faster or ranged fighters he can't catch.
-- He has few defenses, and he spends his Rage carelessly, leaving none for defense.
-- Opponents who deal little damage at a time don't feed him Rage.
+- Low mobility [3].
+- Few defense cards [3][11].
+- He mostly has to take damage to gain Rage [3].
+- His Ancient Heirlooms get discarded [11].
+- Wiglaf dies too easily [8].
 
 ### Key cards
-- **The Equal of Grendel**: his only defense. Spend 2 Rage to deal damage equal to the printed value of their attack, which is devastating against big hitters.
-- **The Ancient Heirloom**: an attack that can't be canceled, worth up to 5 plus a boost.
-- **The War-King**: +2 per Rage spent.
-- **Golden Drinking Horn**: spend Rage to draw 2, move 4 or heal 2, one effect per Rage spent.
+- **The Equal of Grendel**: his only defense card [3]. Spend 2 Rage to deal damage equal to the attacker's printed value [1]. One of his scariest cards, so keep 2 Rage ready to keep the threat alive [5][12]. Don't let a low attack bait it out [3].
+- **The Ancient Heirloom**: its effects can't be cancelled [1]. Spend 2 Rage to make it a 5, 1 Rage to boost it, or both [1]. Several players prefer spending 1 Rage to boost it rather than 2 for the 5 [5][8], and Gridbeast agrees when you have under 3 [3].
+- **The War-King**: a 1-value versatile card, +2 per Rage spent, up to 7 [1][3]. A flexible block in a pinch [3][5].
+- **No Contest Expecteth**: spend 3 Rage to defeat a sidekick you beat in combat [1]. Gridbeast doubts it's worth the Rage [3]; one analyst values taking down a threatening sidekick in one blow [2].
 
 ### Tips
-- With fewer than 3 Rage, boost The Ancient Heirloom before setting it to 5.
-- Use Remnant of Valor next to Beowulf on purpose to gain Rage and an extra action.
-- No Contest Expecteth can kill a key sidekick for 3 Rage, but it's often not worth the Rage late in the game.
+- Save Skirmish and your other versatile cards for defense [3][6].
+- Use Wiglaf to body-block for him [11].
+- He has a good exhaustion game, and exhaustion damage gives him Rage too [11].
 
-### Further reading
-- [Unmatched – Beowulf](https://gridbeast.gg/unmatched-beowulf/): Gridbeast · written guide
-- [Beo Strategy Tips](https://www.reddit.com/r/Unmatched/comments/1d1y8tj/): Reddit: Free-Neighborhood425 · thread
-- [Tips on effectively playing Beowulf?](https://www.reddit.com/r/Unmatched/comments/1rha060/): Reddit: ronchman · thread
-- [Beowulf (Unmatched Strategy Guide 8)](https://www.youtube.com/watch?v=oUaiVR2PlwY): Baked Goods · video
-- [Unmatched - BEOWULF - Overview & Strategy Guide](https://www.youtube.com/watch?v=5HixnGp8mbE): Lord of the Board · video
-- [Beowulf - Unmatched Fighter Review](https://www.youtube.com/watch?v=hPfrcSdpD84): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Little Red Riding Hood vs. Beowulf*, Beowulf deck. Card text as recorded in `input/heroes.json`.
+2. TFJ383. "An Unmatched Roster: Ferociously Fantastic." *BoardGameGeek*, 10 April 2024. https://boardgamegeek.com/thread/3281478/an-unmatched-roster-ferociously-fantastic
+3. Gridbeast. "Unmatched – Beowulf." *Gridbeast*. https://gridbeast.gg/unmatched-beowulf/
+4. u/CupAlternative. Comment on "Tips on effectively playing Beowulf?" by u/ronchman. *r/Unmatched*, Reddit, 28 February 2026. https://www.reddit.com/r/Unmatched/comments/1rha060/
+5. u/Life-Rip183. Comment on "Tips on effectively playing Beowulf?" (see [4]).
+6. u/Dear_Huckleberry_394. Comment on "Beo Strategy Tips" by u/Free-Neighborhood425. *r/Unmatched*, Reddit, 27 May 2024. https://www.reddit.com/r/Unmatched/comments/1d1y8tj/
+7. u/BuckNasty789. Comment on "Beo Strategy Tips" (see [6]).
+8. u/d_Shirt. Comment on "Tips on effectively playing Beowulf?" (see [4]).
+9. u/Derf1OO. Comment on "Tips on effectively playing Beowulf?" (see [4]).
+10. u/Sneikss. Comment on "Beo Strategy Tips" (see [6]).
+11. u/itsactuallyoctopuses. Comment on "Tips on effectively playing Beowulf?" (see [4]).
+12. u/SethCremmul. Comment on "Tips on effectively playing Beowulf?" (see [4]).
+
+### Not cited
+- [Beovulf against Sherlock](https://www.reddit.com/r/Unmatched/comments/1ic00hv/): Reddit: why_-not · thread (read; a rules question)
+- [Beowulf (Unmatched Strategy Guide 8)](https://www.youtube.com/watch?v=oUaiVR2PlwY): Baked Goods · video (not yet reviewed)
+- [Unmatched - BEOWULF - Overview & Strategy Guide](https://www.youtube.com/watch?v=5HixnGp8mbE): Lord of the Board · video (not yet reviewed)
+- [Beowulf - Unmatched Fighter Review](https://www.youtube.com/watch?v=hPfrcSdpD84): To The Table Top! · video (not yet reviewed)
 
 ---
 

@@ -544,50 +544,64 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: little_red -->
 ## Little Red Riding Hood
 
-**In short:** A tricky fighter who plans each card around her "basket" symbol and deals damage on attack and defense.
+**In short:** A tricky fighter whose cards gain effects when their symbol matches the top of her discard pile, her basket [1][2].
 
-### Plan A: Match the basket
-**Goal:** Trigger bonus effects every turn · **How:** sequence cards so the top of your discard pile matches the next one; What's That In My Basket? is wild · **Watch out:** discards and Feints scramble the basket.
+### Plan A: Chain the basket
+**Goal:** Trigger an effect on most cards [2] · **How:** plan your card order; What's That In My Basket? resets the symbol [2][3] · **Watch out:** forced discards scramble the basket [4].
 
-### Plan B: Punish them on defense
-**Goal:** Make attacking her hurt · **How:** What a Terrible Big Mouth You Have hits back for their printed value; heal with A Grimm Tale · **Watch out:** 14 health.
+### Plan B: Bite back
+**Goal:** Deal damage on defense too [2] · **How:** What a Terrible Big Mouth You Have returns the attacker's printed value as damage [1][2] · **Watch out:** you take the hit as well [2].
 
 ### How they lose
-- Lots of Feints or cancels.
-- No matching symbols in hand.
+- Opponents with many cancels [2].
+- The wrong symbol on top for her hand [2].
 
 ### Key cards
-- **What Large Hands You Have**: an attack that comes back to your hand.
-- **Never Leave the Path**: teleport, area damage or draw.
+- **Never Leave the Path**: her most important card [2].
+- **A Grimm Tale**: heals 2, or 4 with the wolf [1].
 
 ### Tips
-- Keep the Huntsman alive until A Grimm Tale is played.
-- Plan two cards ahead.
+- Keep the Huntsman close to her but away from the enemy [2].
+- Use What Big Eyes You Have on defense [2].
+
+### References
+1. Restoration Games. *Unmatched: Little Red Riding Hood vs. Beowulf*, Little Red Riding Hood deck.
+2. Gridbeast. "Unmatched – Little Red Riding Hood." https://gridbeast.gg/unmatched-little-red-riding-hood/
+3. TFJ383. "An Unmatched Roster: Ferociously Fantastic." *BoardGameGeek*, 2024. https://boardgamegeek.com/thread/3281478/
+4. Antlerflax Books. "Unmatched – Hero Analysis: Little Red Riding Hood." 2022.
 
 ---
 
 <!-- id: beowulf -->
 ## Beowulf
 
-**In short:** A huge-health warrior who turns damage into Rage and spends it on brutal hits and punishing defenses.
+**In short:** A tough warrior who gains Rage when hurt and spends it on big attacks and punishing defenses [1][2].
 
-### Plan A: Bank Rage, then spend it
-**Goal:** Cash in Rage at the right time · **How:** The Ancient Heirloom (can't be canceled, up to 5 plus a boost) and The War-King (+2 per Rage) · **Watch out:** keep 2 Rage for defense.
+### Plan A: Feed the rage
+**Goal:** Keep Rage flowing [2] · **How:** take 1 or 2 damage when defending; refill with Vigor and Courage [2][3] · **Watch out:** don't end a turn with under 2 Rage [2].
 
-### Plan B: The long game
-**Goal:** Outlast them · **How:** make them come to you, take some hits, and use schemes as passes · **Watch out:** don't overdraw.
+### Plan B: Make them come to you
+**Goal:** Win the long game [4] · **How:** pass with schemes that don't draw, and let them approach [4][5] · **Watch out:** few good combat cards, so avoid needless fights [5].
 
 ### How they lose
-- Kited by faster or ranged fighters.
-- Out of Rage with no defenses.
+- Low mobility and few defenses [2].
+- He must take damage to gain Rage [2].
 
 ### Key cards
-- **The Equal of Grendel**: hits back for their printed value.
-- **The Ancient Heirloom**: an attack that can't be canceled.
+- **The Equal of Grendel**: his most feared defense [3].
+- **The Ancient Heirloom**: can't be cancelled; boost it for 1 Rage [1][4].
 
 ### Tips
-- Let some hits through to gain Rage.
-- Save Skirmish for defense.
+- Save versatile cards for defense [2].
+- Use Wiglaf as a body-blocker [6].
+
+### References
+1. Restoration Games. *Unmatched: Little Red Riding Hood vs. Beowulf*, Beowulf deck.
+2. Gridbeast. "Unmatched – Beowulf." https://gridbeast.gg/unmatched-beowulf/
+3. u/Life-Rip183. Comment on "Tips on effectively playing Beowulf?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1rha060/
+4. u/d_Shirt. Comment on "Tips on effectively playing Beowulf?" (see [3]).
+5. u/Derf1OO. Comment on "Tips on effectively playing Beowulf?" (see [3]).
+6. u/itsactuallyoctopuses. Comment on "Tips on effectively playing Beowulf?" (see [3]).
 
 ---
 
