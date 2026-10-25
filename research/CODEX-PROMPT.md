@@ -12,7 +12,12 @@ For each fighter in `input/fighters.json`, in that order:
 
 1. Read the fighter's pack, `research/private/packs/{id}.md`: their deck, their own sources and the shared sources (S1, S2, …) that cover them. The full text is in `research/private/unmatched-fighter-sources.md` if you need more.
 2. Read the fighter's deck in `input/heroes.json`. Card names, values, copies and effects come from there, cited as reference [1], except where "Card data corrections" below says otherwise.
-3. Rewrite the fighter's entry in both files.
+3. Reword the fighter's entry in both files. **This is a wording pass, not new research.** The entries were already researched and checked, so:
+   - Every claim in the current entry stays, with the same sources cited for it. You may merge, split or reorder sentences, but don't drop a claim, a number or a citation, and don't move a claim to a different source.
+   - Don't add claims or sources, including to the short entry from the medium one.
+   - Keep every reference line word for word. The only allowed change is renumbering, if the new wording changes the order of first use; then update every [n] in the body to match.
+   - Keep the stats sentence in "In short" cited to [1].
+   - The source pack is for checking meaning when you reword, not for finding new material. The one exception is the "Card data corrections" list below.
 
 **Rules. Breaking any of these makes the entry wrong, however well it reads:**
 - **Every claim carries a numbered citation** [n] that points to the entry's own References list, academic style, numbered in order of first use. Cite each forum commenter as a separate reference (author, "Reply to [n]" or "Comment on <thread title>", site, date). Card facts cite the deck [1].

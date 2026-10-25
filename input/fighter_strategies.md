@@ -11,41 +11,41 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: king_arthur -->
 ## King Arthur
 
-**In short:** A melee hero with 18 health and 2 movement, backed by the ranged sidekick Merlin (7 health) [1]. Arthur may boost his attacks, but the boost card goes face down with the attack and is discarded without effect if the opponent cancels the attack card's effects [1]. Reviewers rank him among the weakest fighters [3][4]; Gridbeast calls him hard to win with but not necessarily bad [2].
+**In short:** King Arthur is a melee hero with 18 health and 2 movement, supported by Merlin, a ranged sidekick with 7 health [1]. Arthur may boost his attacks by playing the boost card face down alongside the attack; cancelling the attack card's effects also discards the boost without effect [1]. Reviewers place him among the weakest fighters [2][3]; Gridbeast calls him hard to win with but not necessarily bad [4].
 
 ### Plan A: Merlin leads, Arthur shields
-**Goal:** Keep Merlin alive and attacking from range while Arthur soaks up damage [2][4][5].
-**How to do it:** Several sources treat Merlin as the main fighter and Arthur as his bodyguard [2][4][5]. Put Merlin on a space that touches several zones [6] and Arthur between the enemy and Merlin [7]. Attack with Merlin using cards any fighter can play, so his one attack, Aid the Chosen One, isn't obvious [2]. Opponents tend to save their Feints for Arthur's boosts, so Momentous Shift after Merlin moves often lands for 5 [8].
-**Watch out for:** Merlin's only defense is Bewilderment, which prevents all damage and moves him anywhere [1]; save it for when an enemy gets past Arthur [2].
+**Goal:** Keep Merlin alive to attack from range while Arthur absorbs the damage [4][3][5].
+**How to do it:** Treat Merlin as the main fighter, with Arthur as his bodyguard [4][3][5]. Position Merlin where several zones meet [6] and Arthur between the enemy and Merlin [7]. Give Merlin attacks with cards either fighter can play, so his single attack, Aid the Chosen One, is harder to predict [4]. Opponents tend to save their Feints for Arthur's boosts, so Momentous Shift after Merlin moves often lands for 5 [8].
+**Watch out for:** Bewilderment is Merlin's only defense card, preventing all damage and letting him move anywhere [1]. Save it for when an enemy gets past Arthur [4].
 
 ### Plan B: Boost at the right moment
-**Goal:** Land a boosted attack the opponent can't cancel.
-**How to do it:** Keep count of the opponent's Feints [2][9] and boost when they have none left, or when their hand is low [9]. Bait Feints by boosting with cards you don't mind losing, such as Regroup [2][5], or attack with Skirmish, which still does damage if Feinted [2][8].
-**Watch out for:** Players disagree on how often to boost: skip the ability 90% of the time [6]; boost only attacks worth 4 or more [10][11]; or never attack with Arthur unboosted, waiting for a full hand [12]. A reply counters that a boost is only worth its card on an attack reaching 6 or 7 [5].
+**Goal:** Land a boosted attack the opponent can't cancel [4][9].
+**How to do it:** Track the opponent's remaining Feints [4][9] and boost when they have none left, or when their hand is low [9]. Draw out Feints by boosting with expendable cards such as Regroup [4][5], or attack with Skirmish, which still does damage if Feinted [4][8].
+**Watch out for:** Players disagree about boosting: one advises skipping the ability 90% of the time [6]; others recommend boosting only attacks worth 4 or more [10][11]; another never attacks with Arthur unboosted, waiting for a full hand [12]. Another argues that spending a card to boost is worthwhile only when the attack reaches 6 or 7 [5].
 
 ### How they lose
-- Cancels: a Feint wastes both the boost and the attack's effect [1][5], and heroes with many cancels are his main weakness [2].
-- Predictability: the face-down boost tells the opponent when to Feint [2][3], and once his single Excalibur is played they have little left to fear [3].
-- Weak boosts: 12 of his cards boost for only 1 [1][5], so boosting with a good card like Momentous Shift throws away value [3].
-- An empty hand: boosting costs cards, and forced discards hurt him [8].
-- Losing Merlin early leaves Arthur with many cards he can't use well [4].
+- A Feint wastes both the boost and the attack's effect [1][5], and heroes with many cancels are his main weakness [4].
+- The face-down boost tells the opponent when to Feint [4][2], and once his single Excalibur is played they have little left to fear [2].
+- With 12 cards that boost for only 1 [1][5], boosting with a good card such as Momentous Shift throws away value [2].
+- Boosting depletes his hand, and forced discards make that worse [8].
+- Losing Merlin early leaves Arthur with many cards he can't use well [3].
 
 ### Key cards
-- **Excalibur**: a 6-value attack with no effect [1]. Always boost it, ideally with a 3-boost card: 9 if it lands, and 4 damage even if Feinted [2][5].
-- **The Lady of the Lake**: finds Excalibur in your deck or discard pile [1]. Most advice is to play it only after Excalibur has been used, for a second swing [2][13][11]; WarBand says play it early if the opponent can make you discard [4].
-- **Noble Sacrifice**: 3 copies with boost 3 [1]. Usually best as a boost card [2][14].
-- **The Holy Grail**: sets Arthur to 8 health if he survives at 4 or less [1], a large part of how he lasts [4].
+- **Excalibur**: A 6-value attack with no effect [1]. Always boost it, ideally with a 3-boost card: 9 if it lands, and 4 damage even if Feinted [4][5].
+- **The Lady of the Lake**: Retrieves Excalibur from your deck or discard pile [1]. Most advice favors saving it until after Excalibur has been played, giving you a second swing [4][13][11]; WarBand says play it early if the opponent can make you discard [3].
+- **Noble Sacrifice**: Three copies, each with boost 3 [1]. Usually best as a boost card [4][14].
+- **The Holy Grail**: Sets Arthur to 8 health if he survives at 4 or less [1], an important part of his staying power [3].
 
 ### Tips
-- Keep at least 5 cards in hand [2]; one player maneuvers twice to rebuild and won't attack with fewer than 6 or 7 [8].
+- Keep at least 5 cards in hand [4]; one player rebuilds with two maneuvers and waits for 6 or 7 before attacking [8].
 - Health is a resource: let Arthur take hits [8][15].
 - He is noticeably stronger in 2v2 [16][17].
 
 ### References
 1. Restoration Games. *Unmatched: Battle of Legends, Volume 1*, King Arthur deck. Card text as recorded in `input/heroes.json`.
-2. Gridbeast. "Unmatched – King Arthur." *Gridbeast*. https://gridbeast.gg/unmatched-king-arthur/
-3. Antlerflax Books. "Tabletop Review 9: Battle of Legends (Volume 1)." 31 December 2019. https://antlerflaxbooks.wordpress.com/2019/12/31/board-game-review-9-unmatched-battle-of-legends-volume-1/
-4. WarBand.ru. "Как побеждать в Unmatched Vol. 1" [How to win in Unmatched Vol. 1] (in Russian). https://warband.ru/85-kak-pobezhdat-v-unmatched-vol-1.html
+2. Antlerflax Books. "Tabletop Review 9: Battle of Legends (Volume 1)." 31 December 2019. https://antlerflaxbooks.wordpress.com/2019/12/31/board-game-review-9-unmatched-battle-of-legends-volume-1/
+3. WarBand.ru. "Как побеждать в Unmatched Vol. 1" [How to win in Unmatched Vol. 1] (in Russian). https://warband.ru/85-kak-pobezhdat-v-unmatched-vol-1.html
+4. Gridbeast. "Unmatched – King Arthur." *Gridbeast*. https://gridbeast.gg/unmatched-king-arthur/
 5. u/jclayton111. Comment on "How do I win with Arthur?" by u/tofudelivery300. *r/Unmatched*, Reddit, 7 July 2024. https://www.reddit.com/r/Unmatched/comments/1dxmgn3/
 6. u/FamousWerewolf. Comment on "Some noob advice about Arthur?" by u/Piteas_de_Adunte. *r/Unmatched*, Reddit, 17 May 2021. https://www.reddit.com/r/Unmatched/comments/nenz66/
 7. u/TNicTrips. Comment on "Some noob advice about Arthur?" (see [6]).
@@ -71,40 +71,40 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: alice -->
 ## Alice
 
-**In short:** A melee hero with 13 health and 2 movement who is either BIG (+2 to her attack cards) or SMALL (+1 to her defense cards), fighting alongside the Jabberwock (8 health) [1]. Sources call her a jack of all trades who can do a bit of everything [2][4] but nothing better than the specialists [4].
+**In short:** Alice is a melee hero with 13 health and 2 movement, accompanied by the 8-health Jabberwock; she is either BIG (+2 to her attack cards) or SMALL (+1 to her defense cards) [1]. She is a jack of all trades, able to do a little of everything [2][3] though specialists do each part better [3].
 
 ### Plan A: Hit big, defend small
-**Goal:** Attack while BIG and be SMALL when the opponent swings back [3][5].
-**How to do it:** Gridbeast recommends starting BIG, treating it as her default and attacking first [2]. 11 of her cards change size [1], so plan chains that leave her in the right form on your turn and on your opponent's [5]. The Other Side of the Mushroom hits, moves her up to 3 spaces and changes size, so she can strike BIG and end SMALL [1][2]. Her schemes, Drink Me and Eat Me, change size without a combat the opponent can interfere with [1][5]. A Feint cancels a card's size change but not the +2 she already has from being BIG [3].
-**Watch out for:** Her card values are low to compensate for the bonus [5], and with 13 health she has to be careful how aggressively she plays [5].
+**Goal:** Attack while BIG, then be SMALL when the opponent strikes back [4][5].
+**How to do it:** Start BIG, treat it as her default form and attack first [2]. Eleven of her cards change size [1], so plan your sequence to leave her in the right form for both your turn and your opponent's [5]. The Other Side of the Mushroom hits, moves her up to 3 spaces and changes size, so she can strike BIG and end SMALL [1][2]. Drink Me and Eat Me let her change size through schemes, avoiding combat that the opponent could interfere with [1][5]. A Feint cancels a card's size change but not the +2 she already has from being BIG [4].
+**Watch out for:** Her low card values compensate for the size bonus [5], and her 13 health leaves little room for reckless aggression [5].
 
 ### Plan B: Unleash the Jabberwock
-**Goal:** Use the Jabberwock as both a heavy hitter and a distraction [3][5].
-**How to do it:** Claws That Catch is worth 5 against a hero [1], so never use it on sidekicks [2]. Jaws That Bite deals 2 damage to a fighter adjacent to the Jabberwock after combat [1], useful pressure or a way to finish a sidekick [2]. Opponents tend to save Feints for Jabberwock attacks on their hero [3], so attack with him using ordinary cards such as Skirmish or Momentous Shift sometimes, both to keep them guessing [2] and to draw out those Feints [3].
-**Watch out for:** He has only 4 cards of his own [1], so they can arrive late or not at all [2].
+**Goal:** Use the Jabberwock as both a heavy hitter and a distraction [4][5].
+**How to do it:** Claws That Catch is worth 5 against a hero [1], so never use it on sidekicks [2]. Jaws That Bite deals 2 damage to a fighter adjacent to the Jabberwock after combat [1], providing pressure or finishing off a sidekick [2]. Opponents tend to save Feints for Jabberwock attacks on their hero [4], so mix in ordinary attacks such as Skirmish or Momentous Shift to keep them guessing [2] and draw out those Feints [4].
+**Watch out for:** Only 4 cards are exclusive to him [1], and they may arrive late or never reach your hand [2].
 
 ### How they lose
-- Her cards don't come in a predictable order; 15 different cards, 3 of them single copies, make long-term plans hard [2][3].
-- Low card draw [2].
-- With 2 movement she can be kept at distance by ranged opponents [5]; spend cards boosting movement if that's what it takes to pin her target [3].
-- Low health punishes over-aggression [5].
+- With 15 different cards, 3 of them single copies, her unpredictable draws make long-term planning difficult [2][4].
+- She has little card draw [2].
+- With 2 movement she can be kept at distance by ranged opponents [5]; spend cards boosting movement if that's what it takes to pin her target [4].
+- Her low health punishes over-aggression [5].
 
 ### Key cards
-- **Snicker-Snack**: a 3-value attack that, if you win the combat, lets you look at the opponent's hand and choose a card to discard [1]. Gridbeast calls it her best card; there's only one, so take full advantage when you draw it [2].
-- **Looking Glass**: her only defense card [1][5]. Pick two of draw 2, recover 3 health, or move anywhere [1]. One of the best defense cards in the game [2].
-- **I'm Late, I'm Late**: moves Alice up to 5 spaces and changes size [1]. Played on defense, it sets up your next attack and closes distance on ranged opponents [2].
-- **Manxome Foe**: adds the boost of your top card to its value [1]. WarBand rates it more harmful than helpful, since it can discard her single-copy cards; use it as a Jabberwock attack or for a finishing blow while BIG [3].
+- **Snicker-Snack**: A 3-value attack that lets you inspect the opponent's hand and choose a card to discard if you win the combat [1]. It is her best card, with only one copy, so make the most of it when it arrives [2].
+- **Looking Glass**: Her only defense card [1][5]. Pick two of draw 2, recover 3 health, or move anywhere [1]. It is one of the best defense cards in the game [2].
+- **I'm Late, I'm Late**: Moves Alice up to 5 spaces and changes size [1]. Played on defense, it sets up your next attack and closes distance on ranged opponents [2].
+- **Manxome Foe**: Adds the boost value of your top card to its own value [1]. It can discard her single-copy cards, making it more harmful than helpful; use it for a Jabberwock attack or a finishing blow while BIG [4].
 
 ### Tips
-- Stay BIG unless you have spare size-change cards or a safe position: BIG is the bigger threat [3].
-- Her healing is underrated [4].
-- She has enough draw that exhaustion is rarely a worry [3].
+- Stay BIG for the greater threat unless you have spare size-change cards or a safe position [4].
+- Her healing is underrated [3].
+- She has enough draw that exhaustion is rarely a worry [4].
 
 ### References
 1. Restoration Games. *Unmatched: Battle of Legends, Volume 1*, Alice deck. Card text as recorded in `input/heroes.json`.
 2. Gridbeast. "Unmatched – Alice." *Gridbeast*. https://gridbeast.gg/unmatched-alice/
-3. WarBand.ru. "Как побеждать в Unmatched Vol. 1" [How to win in Unmatched Vol. 1] (in Russian). https://warband.ru/85-kak-pobezhdat-v-unmatched-vol-1.html
-4. Antlerflax Books. "Tabletop Review 9: Battle of Legends (Volume 1)." 31 December 2019. https://antlerflaxbooks.wordpress.com/2019/12/31/board-game-review-9-unmatched-battle-of-legends-volume-1/
+3. Antlerflax Books. "Tabletop Review 9: Battle of Legends (Volume 1)." 31 December 2019. https://antlerflaxbooks.wordpress.com/2019/12/31/board-game-review-9-unmatched-battle-of-legends-volume-1/
+4. WarBand.ru. "Как побеждать в Unmatched Vol. 1" [How to win in Unmatched Vol. 1] (in Russian). https://warband.ru/85-kak-pobezhdat-v-unmatched-vol-1.html
 5. TFJ383. "An Unmatched Roster: Humble Beginnings." *BoardGameGeek*, 26 May 2023. https://boardgamegeek.com/thread/3090133/an-unmatched-roster-humble-beginnings
 
 ### Not cited
@@ -117,34 +117,34 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: medusa -->
 ## Medusa
 
-**In short:** A ranged hero with 16 health and 3 movement, three 1-health Harpies, and an ability that deals 1 damage to an opposing fighter in her zone at the start of each turn [1]. Widely rated one of the strongest fighters [2][3][4], and one of the easiest to play well [5].
+**In short:** Medusa is a ranged hero with 16 health, 3 movement and three 1-health Harpies; at the start of each turn, her ability deals 1 damage to an opposing fighter in her zone [1]. She is widely rated among the strongest fighters [2][3][4], and one of the easiest to play well [5].
 
 ### Plan A: Hold the high ground
 **Goal:** Keep the enemy at a distance, chip them down and drain their hand [2][6].
-**How to do it:** Put Medusa on a space that touches several zones to widen her range and her ability [2][3]. Use the Harpies to block the routes to her, so the opponent spends attacks on Harpies first [2], ideally while standing in Medusa's zone, where her ability hits them next turn [2][3]. Keep a Harpy between Medusa and melee attackers [7]; if the opponent can damage an area, spread the Harpies out instead [3]. Winged Frenzy returns a defeated Harpy, for 5 Harpies in total [1][2].
-**Watch out for:** Rarely send a Harpy out alone to attack [2], and don't waste them as fodder [8]. Never spend a Feint protecting a Harpy [3].
+**How to do it:** Position Medusa where several zones meet to extend both her range and her ability [2][3]. Block the routes to her with Harpies, forcing the opponent to attack them first [2], ideally from within Medusa's zone, where her ability will hit them next turn [2][3]. Keep a Harpy between Medusa and melee attackers [7]; if the opponent can damage an area, spread the Harpies out instead [3]. Winged Frenzy brings back a defeated Harpy, giving her 5 Harpies in total [1][2].
+**Watch out for:** Avoid sending a Harpy out alone to attack [2], and don't waste them as fodder [8]. Never spend a Feint protecting a Harpy [3].
 
 ### Plan B: Discard, then turn them to stone
-**Goal:** Empty the opponent's hand so Gaze of Stone can land.
-**How to do it:** Hiss and Slither and Clutching Claws make the opponent discard [1]. WarBand aims to play three discard cards before the Harpies are gone [3]. Gaze of Stone is only a 2-value attack, but if it wins the combat it deals 8 more damage [1], so once the opponent may be out of defense cards, attack often and finish with it [3].
-**Watch out for:** Don't build your plan around Gaze of Stone [2]. Against an opponent with plenty of defense, it's usually better used as a 4-boost on Second Shot for a 7-value attack, and you can do that three times [2][3][7]. One player finds that efficient but dull [9].
+**Goal:** Empty the opponent's hand so Gaze of Stone can land [3].
+**How to do it:** Hiss and Slither and Clutching Claws make the opponent discard [1]. Aim to play three discard cards before losing the Harpies [3]. Gaze of Stone is only a 2-value attack, but if it wins the combat it deals 8 more damage [1], so attack frequently once the opponent may be out of defenses, then use it to finish [3].
+**Watch out for:** Don't build your plan around Gaze of Stone [2]. Against an opponent with plenty of defense, it's usually better used as a 4-boost on Second Shot for a 7-value attack, and you can do that three times [2][3][7]. One player considers this efficient but dull [9].
 
 ### How they lose
-- Her Harpies die quickly, taking her discards and board control with them; many players make that their first goal [10][11][12]. The designer disagrees: play around the Harpies rather than engaging them, except with cards that are very efficient against them [13].
-- The opponent refuses to come to her: they stay outside her zone using hard zone cut-offs, draw up, and make her approach [6][14][15].
-- An opponent who gets in her face: she has only 16 health and three 4-value defense cards [11]. Her attack values are among the lowest in the game, with no attack card above 3 [16].
-- A low hand: she is vulnerable when her own hand runs low, so maneuver often [7].
+- Harpies die quickly, costing her discards and board control; many players prioritize killing them [10][11][12]. The designer disagrees: play around the Harpies rather than engaging them, except with cards that are very efficient against them [13].
+- Opponents can stay beyond clear zone boundaries, build their hands and force her to approach [6][14][15].
+- Close pressure threatens her 16 health and just three 4-value defense cards [11]. Her attack values are among the lowest in the game, with no attack card above 3 [16].
+- A small hand leaves her vulnerable, so maneuver often [7].
 
 ### Key cards
-- **Gaze of Stone**: 3 copies [1]. The threat alone forces opponents to block every attack [6][17]. Keep track of how many she has played [18].
-- **Second Shot**: a 3-value attack you may boost [1]. Her main damage dealer [2][3].
-- **Hiss and Slither**: a 4-value defense that makes the opponent discard [1]. Among the better defense cards in the game [9].
-- **Winged Frenzy**: moves each of her fighters up to 3 spaces, through enemies, and revives a Harpy [1].
+- **Gaze of Stone**: Three copies [1]. The threat alone forces opponents to block every attack [6][17]. Keep track of how many she has played [18].
+- **Second Shot**: A 3-value attack you may boost [1]. It is her main source of damage [2][3].
+- **Hiss and Slither**: A 4-value defense that makes the opponent discard [1]. It ranks among the better defense cards in the game [9].
+- **Winged Frenzy**: Moves each of her fighters up to 3 spaces through enemies and revives a Harpy [1].
 
 ### Tips
 - Don't forget her ability at the start of each turn [7].
 - Use Clutching Claws and The Hounds of Mighty Zeus on defense, so opponents need higher attacks to beat a Harpy [2].
-- Play Regroup on attack, and with a bigger hand [7].
+- Use Regroup to attack when you have a larger hand [7].
 - Use the Harpies to push the opponent into the zones you want [7][19].
 
 ### References
@@ -179,33 +179,33 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: sinbad -->
 ## Sinbad
 
-**In short:** A melee hero with 15 health and 2 movement, plus the Porter (6 health) [1], who starts weak and grows stronger as his seven Voyage cards reach the discard pile [2][3]. Each Voyage there adds 1 to his maneuvers and to the value of his other Voyages [1]. A reviewer calls him a ticking time bomb and the hero with the highest skill barrier in his box [4].
+**In short:** Sinbad is a melee hero with 15 health and 2 movement, accompanied by the 6-health Porter [1]. He starts weak and grows stronger as his seven Voyage cards reach the discard pile [2][3]. Each Voyage there adds 1 to his maneuvers and to the value of his other Voyages [1]. He has been described as a ticking time bomb, with the highest skill barrier in his box [4].
 
 ### Plan A: Survive and set sail
 **Goal:** Get Voyages into the discard pile while staying out of danger [2][3].
-**How to do it:** Early on, maneuver away from the opponent [2] and play Voyages on the nearest target: they're weak at first, but the opponent may still spend a defense on them [3]. Discard Voyages when you go over the hand limit, since they have no boost value to discard otherwise [1][3]. Toil and Danger and Leap Away help him escape [2]. Use the Porter to distract and body-block [2][3]; By Fortune and Fate draws 2 and is rarely Feinted [2].
+**How to do it:** Early on, maneuver away from the opponent [2] and play Voyages on the nearest target: they're weak at first, but the opponent may still spend a defense on them [3]. Discard Voyages when you exceed the hand limit; without a boost value, they cannot be discarded as boosts [1][3]. Toil and Danger and Leap Away help him escape [2]. Use the Porter as a distraction and to block paths [2][3]; By Fortune and Fate draws 2 and is rarely Feinted [2].
 **Watch out for:** Sources disagree on which Voyages to spend first. Gridbeast keeps Man-Eating Apes and Serendib for later and plays the movement and random-discard Voyages early [2]; some players play their nastiest Voyages early, because opponents save Feints for later [5][6].
 
 ### Plan B: Bring the Voyages home
-**Goal:** Once most Voyages are discarded, use his huge movement and big Voyage attacks to overwhelm the opponent [2].
-**How to do it:** Voyage Home returns every other Voyage from your discard pile to your hand [1]. Play it as your second- or third-to-last Voyage [2], with a hand of 5 or 6 good cards, so you can keep the Voyages you need and discard the rest [2]; WarBand adds that discarding them again restores your movement [3]. Bait out Feints first with Regroup, Commanding Impact or Exploit [2][7].
+**Goal:** Overwhelm the opponent with huge movement and powerful attacks once most Voyages are discarded [2].
+**How to do it:** Voyage Home returns every other Voyage from your discard pile to your hand [1]. Play it as your second- or third-to-last Voyage [2], while holding 5 or 6 good cards, allowing you to keep the Voyages you need and discard the rest [2]; discarding them again restores your movement [3]. Bait out Feints first with Regroup, Commanding Impact or Exploit [2][7].
 **Watch out for:** Opponents try to catch Voyage Home with a Feint, and the fewer Voyages you have left to play, the easier that is [3]; one player waits until all the opponent's Feints are gone [7].
 
 ### How they lose
-- Feints cancel Voyages completely, however many are in the discard pile, so opponents save them for later [7][8]. Catching Voyage Home with a Feint or a discard is close to decisive [3][9].
-- Early pressure: he is weakest before his Voyages are out, so opponents attack him and the Porter early [10][11].
-- Exhaustion: his heavy card draw can run him out of cards [3][12][9].
-- Big attacks: his defenses are versatile cards worth 3 or 4, so he can't block huge hits [7][13].
+- Feints cancel Voyages completely, however many are in the discard pile, so opponents save them for later [7][8]. A Feint or discard that catches Voyage Home can all but decide the game [3][9].
+- He is weakest before his Voyages are out, inviting early attacks on both him and the Porter [10][11].
+- His heavy card draw can leave him exhausted [3][12][9].
+- His defenses are versatile cards worth 3 or 4, leaving him unable to block huge hits [7][13].
 
 ### Key cards
-- **Voyage Home**: his best Voyage [2]. If the opponent can discard cards at random, mulligan it back into your deck [14].
-- **Voyage to the City of the Man-Eating Apes**: deals 2 damage after combat [1]; devastating late, so keep it away from Feints [2].
-- **Riches Beyond Compare**: draws 3 [1]. Gridbeast uses it to dig for Voyages [2]; WarBand avoids it unless you have no Voyages, because of exhaustion [3].
-- **Commanding Impact**: a 5-value attack that draws 1 [1]. A good card to draw out a Feint [2].
+- **Voyage Home**: His best Voyage [2]. If the opponent can discard cards at random, mulligan it back into your deck [14].
+- **Voyage to the City of the Man-Eating Apes**: Deals 2 damage after combat [1]; devastating late in the game, so keep it clear of Feints [2].
+- **Riches Beyond Compare**: Draws 3 [1]. Gridbeast uses it to dig for Voyages [2]; WarBand avoids it unless you have no Voyages, because of exhaustion [3].
+- **Commanding Impact**: A 5-value attack that draws 1 [1]. A good card to draw out a Feint [2].
 
 ### Tips
-- Gridbeast suggests a separate pile for discarded Voyages, so they're easy to count [2].
-- His throwaway cards let him double maneuver and discard at the hand limit while the opponent loses better cards [7].
+- Keep discarded Voyages in a separate pile so they are easy to count [2].
+- He can double maneuver and discard expendable cards at the hand limit while the opponent has to lose better cards [7].
 - With many Voyages out, end your turn where opponents can only reach him by boosting their movement [3].
 
 ### References
@@ -236,36 +236,36 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: robin_hood -->
 ## Robin Hood
 
-**In short:** A ranged hero with 13 health and 2 movement, plus four 1-health Outlaws [1]. After any of his fighters attacks, it may move up to 2 spaces [1], so he wins by hitting and slipping away rather than blocking [2]. One analyst calls him the best example of mind games in Unmatched [3].
+**In short:** Robin Hood is a ranged hero with 13 health, 2 movement and four 1-health Outlaws [1]. After any of his fighters attacks, it may move up to 2 spaces [1], so he wins by striking and retreating rather than relying on blocks [2]. He has been called the best example of mind games in Unmatched [3].
 
 ### Plan A: Hit and run
 **Goal:** Keep pressure on the opponent from range while they struggle to reach him [2].
-**How to do it:** Attack, then use his ability to step back to safety [2][4]. Moving after every attack keeps the opponent chasing and makes it hard for them to attack him twice in a turn [2]. A Hunter's Eye is a 5-value attack with no effect, so a Feint does nothing to it [1][2]; Piercing Shot (draw 2) and Disarming Shot (draw 1 card per damage dealt) keep cards coming [1][2]. Don't wait: keep attacking so the opponent stays on the defensive [2].
-**Watch out for:** All that draw can run him out of cards before the opponent [2][3], which pushes him to play aggressively [3].
+**How to do it:** Attack, then use his ability to step back to safety [2][4]. Moving after each attack keeps the opponent chasing and makes a double attack difficult [2]. A Hunter's Eye is a 5-value attack with no effect, so a Feint does nothing to it [1][2]; Piercing Shot (draw 2) and Disarming Shot (draw 1 card per damage dealt) keep cards coming [1][2]. Keep attacking to hold the opponent on the defensive [2].
+**Watch out for:** His heavy draw can exhaust his deck before the opponent's [2][3], which pushes him to play aggressively [3].
 
 ### Plan B: The Outlaws' bluff
 **Goal:** Make every Outlaw attack a guessing game [2][3].
-**How to do it:** Highway Robbery, which only Outlaws can play, cancels the defending card's effects and ignores its value: 2 unblockable damage [1]. With 4 copies, opponents either Feint it or take the 2, so many stop defending Outlaws [3][4]. That's when an Outlaw attacks with Regroup, Snark or Wily Fighting instead [2][4]. If they spend their Feints on Highway Robbery, Robin's own attacks go through uncancelled [3]. Outlaws share his move-after-attack ability [3].
+**How to do it:** Highway Robbery, which only Outlaws can play, cancels the defending card's effects and ignores its value: 2 unblockable damage [1]. With 4 copies to face, opponents must either Feint it or take the 2 damage, leading many to stop defending against Outlaws [3][4]. When that happens, attack with Regroup, Snark or Wily Fighting instead [2][4]. If they spend their Feints on Highway Robbery, Robin's own attacks go through uncancelled [3]. Outlaws share his move-after-attack ability [3].
 **Watch out for:** Outlaws are melee, so they need setup to attack, and once they're gone so is Highway Robbery [3]. A Feint still cancels it [2].
 
 ### How they lose
-- Low health and weak defenses: nothing defends for more than 3 [1][2][4].
-- Running out of cards from his own heavy draw [2].
-- An opponent who reaches him: he relies on avoiding damage, not blocking it [2].
-- Losing the Outlaw screen and the Highway Robbery threat with it [3][4].
+- His health is low, and no defense is worth more than 3 [1][2][4].
+- His heavy draw can run him out of cards [2].
+- He is vulnerable once reached, because he relies on avoiding damage rather than blocking it [2].
+- Losing the Outlaws costs him both his protective screen and the threat of Highway Robbery [3][4].
 
 ### Key cards
-- **Highway Robbery**: the key to his win [2], and why opponents second-guess every Outlaw attack [2][3].
-- **A Hunter's Eye**: 3 copies of a 5-value attack [1] that a Feint can't hurt [2].
-- **Defenders of Sherwood**: a 3-value defense that draws a card and returns a defeated Outlaw [1]. Only use it when you have an Outlaw to bring back [2].
-- **Disarming Shot**: overkill damage counts, so an undefended hit on a 1-health sidekick draws 4 [2].
-- **Ambush**: makes the opponent discard a random card and adds its boost [1]. Best in an Outlaw's hands [2].
+- **Highway Robbery**: The key to winning [2], and why opponents second-guess every Outlaw attack [2][3].
+- **A Hunter's Eye**: Three copies of a 5-value attack [1] that a Feint can't hurt [2].
+- **Defenders of Sherwood**: A 3-value defense that draws a card and returns a defeated Outlaw [1]. Only use it when you have an Outlaw to bring back [2].
+- **Disarming Shot**: Overkill damage counts toward its draw, so an undefended hit on a 1-health sidekick draws 4 [2].
+- **Ambush**: Forces a random discard and adds that card's boost [1]. Best in an Outlaw's hands [2].
 
 ### Tips
 - Build a barrier of Outlaws around Robin, and jump back into it after attacking [4][5].
-- It can be right not to defend attacks on Outlaws [2].
+- Sometimes it is better to leave attacks on Outlaws undefended [2].
 - Snark and Wily Fighting do nothing if the Outlaw defending with them is defeated [2].
-- Patience suits him: move away, and use Outlaws to block access [6].
+- Play patiently, retreating and using Outlaws to block access [6].
 
 ### References
 1. Restoration Games. *Unmatched: Robin Hood vs. Bigfoot*, Robin Hood deck. Card text as recorded in `input/heroes.json`.
@@ -284,35 +284,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: bigfoot -->
 ## Bigfoot
 
-**In short:** A melee hero with 16 health and 3 movement, plus the Jackalope (6 health) [1]. At the end of your turn, if no opposing fighter is in his zone, you may draw a card [1]. Big attack values, strong defenses and great mobility [2] make him one of the strongest and easiest fighters to win with [2][3].
+**In short:** Bigfoot is a melee hero with 16 health and 3 movement, accompanied by the 6-health Jackalope [1]. At the end of your turn, if no opposing fighter is in his zone, you may draw a card [1]. High attack values, strong defenses and excellent mobility [2] make him one of the strongest and easiest fighters to win with [2][3].
 
 ### Plan A: Hit hard, then vanish
-**Goal:** Land big attacks, then retreat out of the opponent's zone so his ability draws you a card [2].
-**How to do it:** Larger Than Life is a 6-value attack with no effect, so a Feint can't touch it; with 3 copies, play it when you draw it [1][2]. Savagery (4) deals 1 damage to each fighter adjacent to Bigfoot if he wins [1], which punishes opponents with 1-health sidekicks [2]. Then get away: Crash Through the Trees moves him up to 5 spaces, even through enemies, and Hoax does the same on defense, also closing the gap on ranged fighters [1][2]. End your turn in a zone with no opposing fighters [2].
-**Watch out for:** His offense is "honest": no extra actions, no ways to raise card values and no discards, so opponents can predict how much damage is coming [4][5].
+**Goal:** Land heavy attacks, then leave the opponent's zone to draw with his ability [2].
+**How to do it:** Larger Than Life is a 6-value attack with no effect, so a Feint can't touch it; with 3 copies, play it when you draw it [1][2]. Savagery (4) deals 1 damage to each fighter adjacent to Bigfoot if he wins [1], which punishes opponents with 1-health sidekicks [2]. Retreat with Crash Through the Trees, which moves him up to 5 spaces through enemies, or Hoax, which does the same on defense and can also close the gap on ranged fighters [1][2]. End your turn in a zone with no opposing fighters [2].
+**Watch out for:** Without extra actions, increases to card values or discards, his offense is predictable: opponents can judge how much damage is coming [4][5].
 
 ### Plan B: Send the Jackalope
 **Goal:** Use the Jackalope's 3 copies of Jackalope Horns for up to 6 damage the opponent can't block [1][2].
-**How to do it:** Jackalope Horns moves it up to 5 spaces through enemies, then deals 2 damage to an adjacent fighter [1]. It pairs well with Momentous Shift [2][6]. Use Disengage on the Jackalope to keep it engaged and alive, and on Bigfoot only if you have nothing else [2]. The Jackalope can use all your shared versatile and defense cards [2][6].
-**Watch out for:** Every card the Jackalope uses is one Bigfoot can't [4]. Many opponents make killing it their first priority, before it gets full value from Horns [4][5][7].
+**How to do it:** Jackalope Horns moves it up to 5 spaces through enemies, then deals 2 damage to an adjacent fighter [1]. It pairs well with Momentous Shift [2][6]. Use Disengage to keep the Jackalope engaged and alive; spend it on Bigfoot only if you have no alternative [2]. The Jackalope can use all your shared versatile and defense cards [2][6].
+**Watch out for:** Each card spent on the Jackalope is unavailable to Bigfoot [4]. Many opponents make killing it their first priority, before it gets full value from Horns [4][5][7].
 
 ### How they lose
-- He runs out of good blocks: about 11, counting Hoax, Skirmish and his 5 cancel cards, and each defense forces a choice between a high value and cancelling an effect [4][8].
-- The Jackalope dies early [4][5][7].
+- He can run out of his roughly 11 good blocks, counting Hoax, Skirmish and his 5 cancel cards; defending forces a choice between a high value and cancelling an effect [4][8].
+- An early Jackalope loss hurts him [4][5][7].
 - Opponents keep fighters in his zone to deny his card draw [2][7][9]. That's harder for him in games with three or more players [2].
-- Small or narrow maps [2], or maps with blended zones that let opponents keep pressure on him [7].
-- Heroes who punish high attack values [2].
+- Small or narrow maps are difficult [2], as are maps with blended zones that let opponents keep pressure on him [7].
+- Opponents who punish high attack values are a weakness [2].
 
 ### Key cards
-- **Larger Than Life**: 3 copies of a 6-value attack that can't be Feinted [1][2].
-- **It's Just Your Imagination**: a 3-value defense that cancels the attacker's effects, effectively giving him 5 Feints [1][2].
-- **Jackalope Horns**: 6 damage across three copies [1][2].
-- **Hoax**: a 4-value versatile card that moves up to 5 through enemies [1]. Best on defense [2].
+- **Larger Than Life**: Three copies of a 6-value attack that can't be Feinted [1][2].
+- **It's Just Your Imagination**: A 3-value defense that cancels the attacker's effects, effectively giving him 5 Feints [1][2].
+- **Jackalope Horns**: Six damage across three copies [1][2].
+- **Hoax**: A 4-value versatile card that moves up to 5 spaces through enemies [1]. Best on defense [2].
 
 ### Tips
 - When you draw Larger Than Life, use it [2].
-- One player prefers attacking with Momentous Shift and boosting with Regroup, keeping his better cards for defense [4].
-- Keep him alone in zones whenever you can, for the extra draw [2][9].
+- One approach is to attack with Momentous Shift and boost with Regroup, saving better cards for defense [4].
+- Keep opposing fighters out of his zone whenever possible to secure the extra draw [2][9].
 
 ### References
 1. Restoration Games. *Unmatched: Robin Hood vs. Bigfoot*, Bigfoot deck. Card text as recorded in `input/heroes.json`.
@@ -336,34 +336,34 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: bruce_lee -->
 ## Bruce Lee
 
-**In short:** A solo melee hero with 14 health and 3 movement who may move 1 space at the end of each turn [1]. His six Jeet Kune Do attacks each gain him an extra action, so a prepared turn can chain attack after attack and finish almost anyone [2][3]. Sources call him high-risk, high-reward [2] and swingy [3][4].
+**In short:** Bruce Lee is a solo melee hero with 14 health and 3 movement, plus an optional 1-space move at the end of each turn [1]. His six Jeet Kune Do attacks each gain him an extra action, so a prepared turn can chain attack after attack and finish almost anyone [2][3]. His play is high-risk, high-reward [2] and swingy [3][4].
 
 ### Plan A: The combo turn
-**Goal:** Build up a hand, then unload a chain of Jeet Kune Do attacks when the opponent's hand is low [2].
-**How to do it:** Each Jeet Kune Do is a 3-value attack that gains 1 action after combat [1]. Schemes set the turn up: Bring It On pulls an opponent next to him, Nunchaku makes all his attacks +1 for the turn, and "HOO! WHAAAAAA!" returns a Jeet Kune Do to your hand; all three also gain an action [1]. Bring It On followed by Nunchaku, "HOO! WHAAAAAA!" and a flurry of Jeet Kune Do can win the game outright [2]. One player aims for chains of 2 or 3 Jeet Kune Do, ideally finished with Momentous Shift for 5 [5].
-**Watch out for:** A Feint on a Jeet Kune Do breaks the chain and wastes the setup [2], and his schemes tell the opponent a flurry is coming [3]. Saving everything for one huge turn doesn't work if the opponent is saving Feints too; know when to go fast instead [6].
+**Goal:** Build your hand, then chain Jeet Kune Do attacks when the opponent has few cards left [2].
+**How to do it:** Each Jeet Kune Do is a 3-value attack that gains 1 action after combat [1]. Prepare the turn with schemes: Bring It On pulls an opponent next to him, Nunchaku makes all his attacks +1 for the turn, and "HOO! WHAAAAAA!" returns a Jeet Kune Do to your hand; all three also gain an action [1]. Bring It On followed by Nunchaku, "HOO! WHAAAAAA!" and a flurry of Jeet Kune Do can win the game outright [2]. One player aims for chains of 2 or 3 Jeet Kune Do, ideally finished with Momentous Shift for 5 [5].
+**Watch out for:** A Feint that cancels a Jeet Kune Do breaks the chain and wastes your setup [2], and his schemes tell the opponent a flurry is coming [3]. Holding everything for one huge turn fails if the opponent is also saving Feints; recognize when to attack sooner [6].
 
 ### Plan B: Jab, recover, repeat
 **Goal:** Use Jeet Kune Do regularly for steady damage, to draw out cancel cards and to keep the opponent defending [2].
-**How to do it:** Be Like Water (4 copies) is a 3-value defense that returns a Jeet Kune Do from your discard pile [1], so don't be afraid to use one early [2]. Most worth recovering: Downward Side Kick (random discard) [5][7], High Straight Lead (5 if either fighter moved) and Intercepting Fist (cancels the defense's effects, so they can't move away) [2][5]. End each turn with his free step: it creates distance, and melee opponents then have to spend an action to reach him [2][3][8].
-**Watch out for:** His defenses are often just a way to recover Jeet Kune Do cards [3].
+**How to do it:** Be Like Water (4 copies) is a 3-value defense that returns a Jeet Kune Do from your discard pile [1], so don't be afraid to use one early [2]. Prioritize recovering Downward Side Kick for its random discard [5][7], High Straight Lead for its value of 5 if either fighter moved, and Intercepting Fist to cancel defensive effects that would let the opponent move away [2][5]. End each turn with his free step: it creates distance, and melee opponents then have to spend an action to reach him [2][3][8].
+**Watch out for:** His defenses often serve mainly to recover Jeet Kune Do cards [3].
 
 ### How they lose
 - Cancels and after-combat movement break up his combos [8][9][10]; heroes with lots of movement are a primary weakness [2].
-- Low health and no healing, so every bit of chip damage counts [2][8][10].
-- He blocks often but not high; few of his cards fully stop a 4-value attack [4].
-- As a solo fighter he's easy to gang up on [3], and a long combo can leave him exposed or out of cards [3][11].
+- Low health and no healing make every point of chip damage count [2][8][10].
+- He can block often, but few cards fully stop a 4-value attack [4].
+- As a solo fighter, he is vulnerable to being surrounded [3], and a long combo can leave him exposed or out of cards [3][11].
 
 ### Key cards
-- **Jeet Kune Do: Downward Side Kick**: random discard plus an action [1]; the one players most want back [5][7].
-- **Be Like Water**: four ways to recover a Jeet Kune Do [1][2].
-- **One-Inch Punch**: 2 damage to an adjacent fighter, returning to your hand if that defeats them [1]; his sidekick killer [2].
-- **Little Dragon**: worth 6 if your hand is empty, and draws 2 [1]. Keep it to avoid being punished after a long combo [2], though going for the 6 is easy to see coming [5].
-- **Taste of Blood**: draws 3 if Bruce is at 5 health or less [1]; it fuels a final push [2].
+- **Jeet Kune Do: Downward Side Kick**: Forces a random discard and gains an action [1], making it the card players most want to recover [5][7].
+- **Be Like Water**: Four ways to recover a Jeet Kune Do [1][2].
+- **One-Inch Punch**: Deals 2 damage to an adjacent fighter and returns to your hand if it defeats them [1]; his tool for killing sidekicks [2].
+- **Little Dragon**: Worth 6 if your hand is empty, and draws 2 [1]. Keep it to avoid being punished after a long combo [2], though going for the 6 is easy to see coming [5].
+- **Taste of Blood**: Draws 3 if Bruce is at 5 health or less [1], fueling a final push [2].
 
 ### Tips
 - Skirmish (4) is his highest defense and best used on defense, especially against ranged fighters [2].
-- Bait out the Feints, then combo with at least 3 Jeet Kune Do [12].
+- Draw out Feints, then chain at least 3 Jeet Kune Do attacks [12].
 - Ranged fighters are the hardest for him; his movement and Bring It On help close the gap [2].
 
 ### References
@@ -390,35 +390,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: robert_muldoon -->
 ## Robert Muldoon
 
-**In short:** A ranged hero with 14 health and 3 movement, three 1-health ranged InGen Workers, and 8 traps [1]. At the start of each turn he may place a trap, and whenever a trap is returned to the box he draws a card [1]. He's a zoner who controls the map with traps and Workers and picks the opponent off from range [2][3], widely called the best zoner in the game [2].
+**In short:** Robert Muldoon is a ranged hero with 14 health, 3 movement, three 1-health ranged InGen Workers and 8 traps [1]. At the start of each turn he may place a trap, and whenever a trap is returned to the box he draws a card [1]. His traps and Workers control the map while he picks the opponent off from range [2][3], earning him a reputation as the best zoner in the game [2].
 
 ### Plan A: Lay the traps
 **Goal:** Control where the opponent can go [2][3].
-**How to do it:** A trap goes on an empty space in Muldoon's zone; an opposing fighter who enters it stops, takes 1 damage, and the trap goes back to the box, drawing Muldoon a card [1][2]. Block high-traffic areas and choke points [2][4]. Don't place one every turn: keep 3 or 4 on the board at most, so you can still set one in a pinch and the opponent can't use your traps to force you to draw near exhaustion [2]. Never end your turn next to your own traps, so an opponent who springs one still can't reach you [4].
-**Watch out for:** With only eight traps, when and where to place each one always matters [3].
+**How to do it:** A trap goes on an empty space in Muldoon's zone; an opposing fighter who enters it stops, takes 1 damage, and the trap goes back to the box, drawing Muldoon a card [1][2]. Use traps to block busy routes and choke points [2][4]. Keep at most 3 or 4 on the board instead of placing one every turn, leaving traps available in a pinch and limiting the opponent's ability to force draws near exhaustion [2]. Never end your turn next to your own traps, so an opponent who springs one still can't reach you [4].
+**Watch out for:** With only eight traps available, every placement matters [3].
 
 ### Plan B: Hunt from range
 **Goal:** Keep the opponent at a distance and wear their defenses down [2][4].
-**How to do it:** Rending Shot (4 copies, usable by Workers too) moves the opponent up to 3 spaces [1]: into a trap if you need the draw, or away to keep your distance [5]. It's especially punishing to slow melee heroes [2]. They Should All Be Destroyed is a 4-value attack, +1 for each trap next to the target [1], his best attack [2]. Shoot Her! is worth 5 as your first action [1]. Pepper the opponent with smaller attacks until their defenses crumble [4]. The Workers help funnel enemies toward Muldoon [3].
-**Watch out for:** One player calls him a glass cannon: even with a big hand he often has no defense [5].
+**How to do it:** Rending Shot (4 copies, usable by Workers too) moves the opponent up to 3 spaces [1]: into a trap if you need the draw, or away to keep your distance [5]. It's especially punishing to slow melee heroes [2]. They Should All Be Destroyed is a 4-value attack, +1 for each trap next to the target [1], making it his best attack [2]. Shoot Her! is worth 5 as your first action [1]. Keep firing smaller attacks until the opponent's defenses give way [4]. The Workers help funnel enemies toward Muldoon [3].
+**Watch out for:** One player describes him as a glass cannon who often lacks a defense even with a large hand [5].
 
 ### How they lose
-- He runs out of defense: Gridbeast counts five good defense cards, fewer than most, and once they're gone he goes down fast [2][3][5].
-- Damage from schemes [2].
-- Fighters who can attack at range without caring about zones [2].
-- Losing his Workers and running out of traps, which loosens his grip on the map [2][3].
+- He has only five good defense cards, fewer than most fighters, and falls quickly once they run out [2][3][5].
+- Damage dealt by schemes is a weakness [2].
+- Ranged attacks that ignore zones threaten him [2].
+- Losing Workers and running out of traps weakens his control of the map [2][3].
 
 ### Key cards
-- **Call for Backup**: choose two of place up to 3 traps, return all defeated Workers, or draw 2 [1]. Perhaps his most important card; play it when there are Workers to bring back [2]. You can place 0 traps if you'd rather save them [2].
-- **I've Hunted Most Things That Can Hunt You**: his only defense card, a 4 that moves all his fighters up to 5 spaces, even through enemies [1][2].
-- **They Should All Be Destroyed**: pairs with Call for Backup's traps [2].
-- **Leap Away**: a 4-value versatile card; use it only on defense [2].
-- **Remote Detonation**: sets off a trap in a Worker's zone, dealing 1 damage to each opposing fighter next to it [1].
+- **Call for Backup**: Choose two effects: place up to 3 traps, return all defeated Workers, or draw 2 [1]. Perhaps his most important card; save it for when you have Workers to revive [2]. You can place 0 traps if you'd rather save them [2].
+- **I've Hunted Most Things That Can Hunt You**: His only defense card, worth 4, which moves all his fighters up to 5 spaces through enemies [1][2].
+- **They Should All Be Destroyed**: Pairs with the traps placed by Call for Backup [2].
+- **Leap Away**: A 4-value versatile card to reserve for defense [2].
+- **Remote Detonation**: Detonates a trap in a Worker's zone, dealing 1 damage to each opposing fighter adjacent to it [1].
 
 ### Tips
 - Surround Muldoon with Workers and traps [5].
 - Tactical Advance moves your Workers; with 1-health sidekicks it may be more useful on attack than on defense [2].
-- Muldoon is hard for newcomers; practice on different maps [2].
+- Muldoon takes practice, especially for newcomers; try him on different maps [2].
 
 ### References
 1. Restoration Games. *Unmatched: Jurassic Park – InGen vs. Raptors*, Robert Muldoon deck. Card text as recorded in `input/heroes.json`.
@@ -438,31 +438,31 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: raptors -->
 ## Raptors
 
-**In short:** Three melee heroes with 7 health and 3 movement each, and no sidekicks [1]. Every Raptor attack gets +1 for each other Raptor adjacent to the defender [1]. A fast, aggressive glass cannon [2] that gets weaker each time a Raptor falls [2][3][4].
+**In short:** The Raptors are three melee heroes, each with 7 health and 3 movement, with no sidekicks [1]. Every Raptor attack gets +1 for each other Raptor adjacent to the defender [1]. They are fast, aggressive glass cannons [2] who weaken each time a Raptor falls [2][3][4].
 
 ### Plan A: Surround and strike
-**Goal:** Pin the opponent with two or three Raptors and take them down before they can kill a Raptor [2][4].
-**How to do it:** Keep the Raptors together and surround the target so it has no path of escape [2]. With all three adjacent, Pack Hunters can deal up to 9 damage [2]. They Remember (4 copies) and Clever Girl gain extra actions [1], so a turn can string several attacks together [5]; They Remember is weak, but it makes the opponent spend a defense [2]. Coordinated Attack Pattern brings the other two Raptors into one Raptor's zone, and Working Things Out moves all three up to 3 spaces through enemies and gains an action [1]: both set up surprise pins [2]. Don't be afraid to boost movement to get two Raptors on a cornered target [6].
-**Watch out for:** After-combat movement on the opponent's defense cards ruins pins and switches off Pack Hunters and Clever Girl [2]. Don't let those cards' effects get Feinted [2].
+**Goal:** Pin the opponent with two or three Raptors and finish them before losing one [2][4].
+**How to do it:** Keep the pack together and surround the target to cut off its escape [2]. With all three adjacent, Pack Hunters can deal up to 9 damage [2]. They Remember (4 copies) and Clever Girl gain extra actions [1], allowing several attacks in one turn [5]; They Remember has a low value but still makes the opponent spend a defense [2]. Coordinated Attack Pattern brings the other two Raptors into one Raptor's zone, and Working Things Out moves all three up to 3 spaces through enemies and gains an action [1]: both can set up a surprise pin [2]. Boost movement when needed to get two Raptors onto a cornered target [6].
+**Watch out for:** Defenses with after-combat movement break pins and prevent Pack Hunters and Clever Girl from working [2]. Don't let those cards' effects get Feinted [2].
 
 ### Plan B: Hit and run
 **Goal:** Choose when fights happen, and build up a hand between them [7][8].
-**How to do it:** The Raptors have no card draw, so between attacks they hide and double maneuver to rebuild to 6 or 7 cards [8]. Staying three spaces away means a 2-movement opponent must boost to reach you, which gains you cards [7]. Stand at the edge of zones where ranged fighters can't target you without coming close [8]. Strike, then keep your last action to maneuver away [7].
-**Watch out for:** Opponents will focus on one Raptor to take it out first [5]. Keep injured Raptors out of combat and behind the others [5][9].
+**How to do it:** Without card draw, the Raptors need to hide between attacks and double maneuver to rebuild to 6 or 7 cards [8]. Staying three spaces away means a 2-movement opponent must boost to reach you, giving you a card advantage [7]. Stand at the edge of zones where ranged fighters can't target you without coming close [8]. Strike while keeping your last action available to maneuver away [7].
+**Watch out for:** Opponents focus their attacks on one Raptor to secure the first kill [5]. Keep injured Raptors out of combat and behind the others [5][9].
 
 ### How they lose
-- Losing one Raptor puts them on the back foot; games snowball from there [3][4].
-- Few defenses: only 10 cards can defend, so save Eaten Alive and Feint for defense [8], and each Raptor has low health [2].
-- A long game: they are strongest early and weaken as it drags on [2][4][6].
+- The first Raptor loss puts them on the back foot, and the game can snowball from there [3][4].
+- Only 10 cards can defend, so reserve Eaten Alive and Feint for defense [8], and each Raptor has low health [2].
+- They are strongest early and weaken as the game drags on [2][4][6].
 - Heroes who can move through opposing fighters escape their pins [2].
-- A bad opening hand: they can feel feast-or-famine [3].
+- A poor opening hand contributes to their feast-or-famine feel [3].
 
 ### Key cards
-- **Eviscerate**: a 5-value attack with no effect, up to 7 with both Raptors adjacent [1][2]. Nothing to cancel, so it baits out Feints [2].
-- **Pack Hunters**: 1 extra damage per adjacent Raptor if you win [1].
-- **Decoy**: their only defense card, a 3 that places another Raptor next to the attacker, always [1][2]. Great against ranged attackers [2].
-- **Disengage**: a 4-value attack that relocates the attacker within its zone [1]. Use it to pull an injured Raptor out [2].
-- **Ambush**: random discard, adding its boost [1].
+- **Eviscerate**: A 5-value attack with no effect, rising to 7 with both other Raptors adjacent [1][2]. With nothing to cancel, it can draw out Feints [2].
+- **Pack Hunters**: Deals 1 extra damage per adjacent Raptor if you win [1].
+- **Decoy**: Their only defense card, worth 3, which always places another Raptor next to the attacker [1][2]. Great against ranged attackers [2].
+- **Disengage**: A 4-value attack that relocates the attacker within its zone [1]. Use it to withdraw an injured Raptor [2].
+- **Ambush**: Forces a random discard and adds its boost [1].
 
 ### Tips
 - Save your versatile cards for defense [2][8].
@@ -490,35 +490,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: dracula -->
 ## Dracula
 
-**In short:** A melee hero with 13 health and 2 movement, plus three 1-health Sisters [1]. At the start of his turn he may deal 1 damage to an adjacent fighter and draw a card [1]. His plan is to whittle the opponent down over the game, then finish them with one of his two Beastforms [2][3][4].
+**In short:** Dracula is a melee hero with 13 health, 2 movement and three 1-health Sisters [1]. At the start of his turn he may deal 1 damage to an adjacent fighter and draw a card [1]. He aims to wear the opponent down before finishing them with one of his two Beastforms [2][3][4].
 
 ### Plan A: Stalk and whittle
-**Goal:** Chip away at the opponent's health and hand without taking big fights [2][5].
-**How to do it:** Play a patient, mostly unaggressive game [2][5][6]. Ravening Seduction moves any fighter up to 2 spaces, then deals 1 damage for each Sister next to them [1]; use it early, while the Sisters are alive [7]. Prey Upon hits every adjacent opponent and heals Dracula for each [1], and Baptism of Blood heals 2 and revives a Sister [1]. Playing a scheme instead of a combat avoids overdrawing and makes the opponent come to you, which lets his ability fire [8]. Against melee opponents you can sit back; against ranged ones, use Mistform and zone edges to force them closer [9].
-**Watch out for:** Nearly a third of his deck is schemes [1][4][7], so a hand can end up with almost no defense [4][7]. Never leave yourself open to a double attack [6].
+**Goal:** Wear down the opponent's health and hand while avoiding major fights [2][5].
+**How to do it:** Play patiently, keeping aggression to a minimum [2][5][6]. Ravening Seduction moves any fighter up to 2 spaces, then deals 1 damage for each Sister next to them [1]; use it early, while the Sisters are alive [7]. Prey Upon hits every adjacent opponent and heals Dracula for each [1], and Baptism of Blood heals 2 and revives a Sister [1]. Choosing a scheme over combat avoids overdrawing and makes the opponent approach, giving his ability a chance to trigger [8]. Against melee opponents you can sit back; against ranged ones, use Mistform and zone edges to force them closer [9].
+**Watch out for:** Schemes make up nearly a third of his deck [1][4][7], which can leave his hand with almost no defense [4][7]. Never leave yourself open to a double attack [6].
 
 ### Plan B: Unleash the beast
 **Goal:** Land a lethal Beastform [2][4].
-**How to do it:** Beastform is a 6-value attack, +1 for each card you discard from your hand [1]; with a full hand it can reach 13 or 14 [2][7]. First strip the opponent's cancels with bait attacks, Ambush and Do My Bidding [10][11][12]; Mistform then places Dracula anywhere and gains an action, for a surprise double attack [1][2]. Count lethal from your hand size, your ping damage and their best block [13]. Good cards to discard into it: Feeding Frenzy, Thirst for Sustenance and Prey Upon [12].
-**Watch out for:** A Feint still lets a base Beastform deal 4 [4][13], so a first Beastform that gets Feinted is fine [13]. If you can't count on keeping it until late, a plain 6 early is still strong [9].
+**How to do it:** Beastform is a 6-value attack, +1 for each card you discard from your hand [1]; with a full hand it can reach 13 or 14 [2][7]. First draw out or remove the opponent's cancels with bait attacks, Ambush and Do My Bidding [10][11][12]; Mistform then places Dracula anywhere and gains an action, for a surprise double attack [1][2]. Calculate lethal damage from your hand size, direct damage and the opponent's best block [13]. Feeding Frenzy, Thirst for Sustenance and Prey Upon are good cards to discard into it [12].
+**Watch out for:** A Feint still lets a base Beastform deal 4 [4][13], making a Feint on the first Beastform an acceptable outcome [13]. If you can't count on keeping it until late, a plain 6 early is still strong [9].
 
 ### How they lose
-- Low health and few defense cards [2][6].
-- Opponents keep his hand small, so Beastform has little to discard [4].
-- Beastforms lost to discards or stuck at the bottom of the deck leave him treading water [4].
+- Low health and few defense cards leave him vulnerable [2][6].
+- Pressure on his hand leaves Beastform with few cards to discard [4].
+- He struggles to make progress when Beastforms are discarded or buried at the bottom of his deck [4].
 - Ranged opponents rarely let him use his ability [9][7].
 
 ### Key cards
-- **Beastform**: his finisher; two copies, two chances [2].
-- **Do My Bidding**: a 3-value defense that hands back the attacker's card, looks at their hand and picks the attack or versatile card they must play instead [1]. One of the best defense cards in the game [7][14], and a way to drain their Feints before Beastform [4][11].
-- **Mistform**: places him anywhere and gains an action [1]; two copies, so use them wisely [2].
-- **Look Into My Eyes**: a 1-value defense that adds the attacker's boost [1]; risky, since many big cards boost low [2].
-- **Ambush**: a random discard [1]. Attack with it from a Sister; opponents rarely Feint a Sister [5][14].
+- **Beastform**: His finisher, with two copies giving him two chances [2].
+- **Do My Bidding**: A 3-value defense that returns the attack card, lets you inspect the attacker's hand and choose the attack or versatile card they must play instead [1]. It is one of the best defense cards in the game [7][14], and a way to drain their Feints before Beastform [4][11].
+- **Mistform**: Places him anywhere and gains an action [1]; two copies, so use them wisely [2].
+- **Look Into My Eyes**: A 1-value defense that adds the attacker's boost [1], a risk because many high-value cards have low boosts [2].
+- **Ambush**: Forces a random discard [1]. Attack with it from a Sister; opponents rarely Feint a Sister [5][14].
 
 ### Tips
 - Never forget his ability: once you take your first action it's too late [15].
-- He can ping his own Sisters to draw a card [8][14].
-- Watch the deck count late: using his ability near the end can push him into exhaustion damage [8].
+- He can use his ability on his own Sisters to draw a card [8][14].
+- Watch his remaining deck late in the game; using his ability can trigger exhaustion damage [8].
 - Keep a big hand, both for defense and to hide Beastform [6][15].
 
 ### References

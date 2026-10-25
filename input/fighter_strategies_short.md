@@ -9,21 +9,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: king_arthur -->
 ## King Arthur
 
-**In short:** A tough melee hero who boosts his attacks, with the ranged Merlin doing much of the work [1][2]. Often ranked among the weakest fighters [3].
+**In short:** King Arthur is a tough melee hero who boosts attacks, while ranged sidekick Merlin does much of the work [1][2]. He is often ranked among the weakest fighters [3].
 
 ### Plan A: Merlin leads, Arthur shields
-**Goal:** Keep Merlin attacking from range [2] · **How:** Arthur stands between the enemy and Merlin [4]; Momentous Shift after Merlin moves often lands for 5 [5] · **Watch out:** Bewilderment is Merlin's only defense [1].
+**Goal:** Keep Merlin attacking from range [2] · **How:** Use Arthur to shield Merlin from the enemy [4]; Momentous Shift after Merlin moves often lands for 5 [5] · **Watch out:** Bewilderment is Merlin's only defense [1].
 
 ### Plan B: Boost at the right moment
-**Goal:** Land a boosted attack the opponent can't cancel [2] · **How:** count their Feints and boost Excalibur when they're out [2][6] · **Watch out:** a Feint wastes the boost card too [1].
+**Goal:** Land a boosted attack the opponent can't cancel [2] · **How:** Track their Feints, then boost Excalibur once they run out [2][6] · **Watch out:** A Feint also wastes the boost card [1].
 
 ### How they lose
-- Cancels and the visible boost make his big attacks easy to stop [2][3].
-- Boosting empties his hand [5].
+- Cancels stop his big attacks easily because the visible boost gives them away [2][3].
+- Boosting depletes his hand [5].
 
 ### Key cards
-- **Excalibur**: always boost it; even Feinted it deals 4 [2].
-- **The Lady of the Lake**: usually best after Excalibur is used, to get it back [2].
+- **Excalibur**: Always boost it; it still deals 4 through a Feint [2].
+- **The Lady of the Lake**: Usually best saved to retrieve Excalibur after its first use [2].
 
 ### Tips
 - Keep at least 5 cards in hand [2].
@@ -42,21 +42,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: alice -->
 ## Alice
 
-**In short:** A size-changing melee hero, +2 to attacks when BIG and +1 to defense when SMALL, with the hard-hitting Jabberwock [1].
+**In short:** Alice changes size while fighting in melee alongside the hard-hitting Jabberwock, gaining +2 to attacks when BIG and +1 to defense when SMALL [1].
 
 ### Plan A: Hit big, defend small
-**Goal:** Attack BIG, defend SMALL [2][3] · **How:** start BIG and chain her 11 size-change cards so she's in the right form each turn [1][2][3] · **Watch out:** low health punishes over-aggression [3].
+**Goal:** Attack while BIG and defend while SMALL [2][3] · **How:** Start BIG and sequence her 11 size-change cards to keep the right form each turn [1][2][3] · **Watch out:** Her low health punishes over-aggression [3].
 
 ### Plan B: Unleash the Jabberwock
-**Goal:** Pressure heroes with the Jabberwock [2] · **How:** save Claws That Catch for heroes, and sometimes attack with ordinary cards to keep them guessing [2] · **Watch out:** he has only 4 cards of his own [1].
+**Goal:** Pressure heroes with the Jabberwock [2] · **How:** Save Claws That Catch for heroes; mix in ordinary attacks to keep opponents guessing [2] · **Watch out:** Only 4 cards are exclusive to him [1].
 
 ### How they lose
-- Unpredictable draws and low card draw [2].
-- Ranged opponents keep her 2 movement at bay [3].
+- Her draws are unpredictable and she has little card draw [2].
+- With 2 movement, she can struggle to close on ranged opponents [3].
 
 ### Key cards
-- **Snicker-Snack**: her best card; strips a card from the opponent's hand [2].
-- **Looking Glass**: her only defense, and one of the game's best [2][3].
+- **Snicker-Snack**: Her best card, stripping a card from the opponent's hand [2].
+- **Looking Glass**: Her only defense card, and one of the game's best [2][3].
 
 ### Tips
 - Treat BIG as her default state [2].
@@ -72,25 +72,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: medusa -->
 ## Medusa
 
-**In short:** A fast ranged hero with Harpy sidekicks, forced discards and a damaging ability, widely rated one of the strongest fighters [1][2][3].
+**In short:** Medusa is a fast ranged hero with Harpy sidekicks, forced discards and a damaging ability, widely ranked among the strongest fighters [1][2][3].
 
 ### Plan A: Hold the high ground
-**Goal:** Keep enemies at range and chip them down [2] · **How:** stand where several zones meet and block the routes to her with Harpies [2] · **Watch out:** don't throw Harpies away as fodder [4].
+**Goal:** Keep enemies at range while wearing them down [2] · **How:** Stand where several zones meet, with Harpies blocking the routes to her [2] · **Watch out:** Avoid sacrificing Harpies as fodder [4].
 
 ### Plan B: Discard, then turn them to stone
-**Goal:** Empty their hand so Gaze of Stone lands [3] · **How:** discard with Hiss and Slither and Clutching Claws; otherwise boost Second Shot with Gaze for 7 [2][3] · **Watch out:** don't build your plan around Gaze [2].
+**Goal:** Empty their hand to land Gaze of Stone [3] · **How:** Force discards with Hiss and Slither and Clutching Claws; otherwise use Gaze to boost Second Shot to 7 [2][3] · **Watch out:** Avoid relying on Gaze as your main plan [2].
 
 ### How they lose
-- Her Harpies die early, taking her discards with them [5].
+- Early Harpy losses cost her discards [5].
 - Opponents stay out of her zone and make her approach [6].
 
 ### Key cards
-- **Gaze of Stone**: its threat forces opponents to block every attack [6].
-- **Second Shot**: her main damage, often boosted [2][3].
+- **Gaze of Stone**: Its threat forces opponents to block every attack [6].
+- **Second Shot**: Her main source of damage, often boosted [2][3].
 
 ### Tips
 - Don't forget her start-of-turn damage [7].
-- Maneuver often; she's weak with a low hand [7].
+- Maneuver often to avoid a vulnerable small hand [7].
 
 ### References
 1. Restoration Games. *Unmatched: Battle of Legends, Volume 1*, Medusa deck.
@@ -106,24 +106,24 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: sinbad -->
 ## Sinbad
 
-**In short:** A slow starter whose seven Voyages make him faster and stronger as they reach the discard pile [1][2].
+**In short:** Sinbad starts slowly, gaining speed and strength as his seven Voyages reach the discard pile [1][2].
 
 ### Plan A: Survive and set sail
-**Goal:** Get Voyages into the discard pile safely [2][3] · **How:** maneuver away, play Voyages early, and use the Porter to block [2][3] · **Watch out:** early on he moves and hits weakly [2].
+**Goal:** Get Voyages into the discard pile safely [2][3] · **How:** Retreat with maneuvers, play Voyages early and let the Porter block paths [2][3] · **Watch out:** His early movement and attacks are weak [2].
 
 ### Plan B: Bring the Voyages home
-**Goal:** Overwhelm the opponent late [2] · **How:** play Voyage Home as your second- or third-to-last Voyage, with a good hand [2] · **Watch out:** opponents save a Feint to catch it [3].
+**Goal:** Overwhelm the opponent late [2] · **How:** Play Voyage Home with a good hand as your second- or third-to-last Voyage [2] · **Watch out:** Opponents save a Feint for it [3].
 
 ### How they lose
-- Feints saved for his late Voyages [4].
-- Early pressure before his Voyages are out [5].
+- Saved Feints stop his late Voyages [4].
+- Early pressure catches him before his Voyages are out [5].
 
 ### Key cards
-- **Voyage Home**: his best Voyage [2].
-- **Commanding Impact**: a 5-value attack to draw out a Feint [2].
+- **Voyage Home**: His best Voyage [2].
+- **Commanding Impact**: A 5-value attack that draws out Feints [2].
 
 ### Tips
-- Keep discarded Voyages in a separate pile to count them [2].
+- Separate discarded Voyages to make them easy to count [2].
 - Watch for exhaustion; he draws a lot [3].
 
 ### References
@@ -138,21 +138,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: robin_hood -->
 ## Robin Hood
 
-**In short:** A ranged hit-and-run hero who moves after every attack and bluffs with his four Outlaws [1][2][3].
+**In short:** Robin Hood fights at range, moving after every attack and bluffing with his four Outlaws [1][2][3].
 
 ### Plan A: Hit and run
-**Goal:** Pressure from range without being reached [2] · **How:** attack, then move 2 back to safety; A Hunter's Eye can't be Feinted [1][2] · **Watch out:** heavy draw can exhaust him [2].
+**Goal:** Apply ranged pressure while staying out of reach [2] · **How:** Attack, then move 2 spaces back to safety; A Hunter's Eye is safe from Feint [1][2] · **Watch out:** Heavy draw can exhaust him [2].
 
 ### Plan B: The Outlaws' bluff
-**Goal:** Make every Outlaw attack a guess [3] · **How:** Highway Robbery deals 2 unblockable, so attack with Regroup or Wily Fighting when they stop defending [2][4] · **Watch out:** once the Outlaws are gone, so is the bluff [3].
+**Goal:** Keep opponents guessing with every Outlaw attack [3] · **How:** Highway Robbery deals 2 unblockable damage; switch to Regroup or Wily Fighting once opponents stop defending [2][4] · **Watch out:** Losing the Outlaws also ends the bluff [3].
 
 ### How they lose
-- Low health and no defense above 3 [2][4].
-- Losing his Outlaw screen [4].
+- Low health and defenses capped at 3 leave him vulnerable [2][4].
+- Losing Outlaws removes his protective screen [4].
 
 ### Key cards
-- **Highway Robbery**: the heart of his game [2].
-- **Defenders of Sherwood**: only when an Outlaw can come back [2].
+- **Highway Robbery**: The heart of his game [2].
+- **Defenders of Sherwood**: Use it only when you can bring back an Outlaw [2].
 
 ### Tips
 - Keep Outlaws around Robin and jump back among them [4].
@@ -169,21 +169,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: bigfoot -->
 ## Bigfoot
 
-**In short:** A fast, hard-hitting brawler with excellent defenses who draws a card when he ends his turn alone in his zone [1][2].
+**In short:** Bigfoot is a fast, hard-hitting brawler with excellent defenses, drawing a card when he ends his turn alone in his zone [1][2].
 
 ### Plan A: Hit hard, then vanish
-**Goal:** Big attacks, then retreat to draw [2] · **How:** Larger Than Life (6) can't be Feinted; Crash Through the Trees and Hoax get him away [1][2] · **Watch out:** his damage is steady but predictable [3].
+**Goal:** Hit hard, then retreat to draw [2] · **How:** Attack with Larger Than Life (6), which Feint cannot weaken, then escape with Crash Through the Trees or Hoax [1][2] · **Watch out:** His damage is steady but predictable [3].
 
 ### Plan B: Send the Jackalope
-**Goal:** Up to 6 unblockable damage from Jackalope Horns [2] · **How:** pair Horns with Momentous Shift [2] · **Watch out:** opponents try to kill the Jackalope first [3].
+**Goal:** Deal up to 6 unblockable damage with Jackalope Horns [2] · **How:** Pair Horns with Momentous Shift [2] · **Watch out:** Opponents try to kill the Jackalope first [3].
 
 ### How they lose
-- He runs out of good blocks under pressure [3].
-- Opponents stay in his zone to stop his draw [2].
+- Sustained pressure exhausts his good blocks [3].
+- Opponents deny his draw by staying in his zone [2].
 
 ### Key cards
-- **Larger Than Life**: play it when you draw it [2].
-- **It's Just Your Imagination**: a 3-value defense that cancels, effectively a fifth Feint [2].
+- **Larger Than Life**: Play it when you draw it [2].
+- **It's Just Your Imagination**: A 3-value canceling defense, effectively a fifth Feint [2].
 
 ### Tips
 - End your turn with no enemies in his zone [2].
@@ -199,25 +199,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: bruce_lee -->
 ## Bruce Lee
 
-**In short:** A solo combo fighter whose Jeet Kune Do attacks each gain an extra action, able to chain several attacks in one turn [1][2].
+**In short:** Bruce Lee fights solo, chaining several attacks in a turn through the extra action each Jeet Kune Do provides [1][2].
 
 ### Plan A: The combo turn
-**Goal:** Unload a Jeet Kune Do chain when their hand is low [2] · **How:** set up with Bring It On, Nunchaku and "HOO! WHAAAAAA!" [1][2] · **Watch out:** one Feint breaks the chain [2].
+**Goal:** Chain Jeet Kune Do attacks when their hand is low [2] · **How:** Prepare with Bring It On, Nunchaku and "HOO! WHAAAAAA!" [1][2] · **Watch out:** One Feint breaks the chain [2].
 
 ### Plan B: Jab, recover, repeat
-**Goal:** Steady damage that draws out Feints [2] · **How:** use Jeet Kune Do early and recover them with Be Like Water [2] · **Watch out:** his defenses are mostly just a way to recover Jeet Kune Do [3].
+**Goal:** Deal steady damage and draw out Feints [2] · **How:** Play Jeet Kune Do early, then recover them with Be Like Water [2] · **Watch out:** His defenses mainly serve to recover Jeet Kune Do [3].
 
 ### How they lose
 - Cancels and after-combat movement break his combos [4].
-- Low health, no healing [2].
+- Low health and no healing leave little room for damage [2].
 
 ### Key cards
-- **Be Like Water**: four ways to recover a Jeet Kune Do [2].
-- **One-Inch Punch**: his sidekick killer [2].
+- **Be Like Water**: Four ways to recover a Jeet Kune Do [2].
+- **One-Inch Punch**: His tool for killing sidekicks [2].
 
 ### Tips
 - Recover Downward Side Kick first [5].
-- Don't hoard everything for one giant turn [6].
+- Avoid holding everything for one enormous turn [6].
 - End each turn with his free step away [2].
 
 ### References
@@ -233,21 +233,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: robert_muldoon -->
 ## Robert Muldoon
 
-**In short:** A ranged zoner who controls the map with traps and InGen Workers, drawing a card whenever a trap is used up [1][2].
+**In short:** Muldoon controls the map from range with traps and InGen Workers, drawing a card whenever a trap is used up [1][2].
 
 ### Plan A: Lay the traps
-**Goal:** Control where the opponent can go [2] · **How:** trap choke points, keeping 3 or 4 on the board [2] · **Watch out:** don't end your turn next to your own traps [3].
+**Goal:** Control where the opponent can go [2] · **How:** Trap choke points and keep 3 or 4 traps on the board [2] · **Watch out:** Avoid ending your turn beside your own traps [3].
 
 ### Plan B: Hunt from range
-**Goal:** Keep them away and wear down their defenses [2][3] · **How:** Rending Shot moves them into traps or away; They Should All Be Destroyed hits harder near traps [1][2] · **Watch out:** he often holds no defense [4].
+**Goal:** Keep opponents away while wearing down their defenses [2][3] · **How:** Use Rending Shot to push them into traps or away, and They Should All Be Destroyed to hit harder near traps [1][2] · **Watch out:** He often has no defense in hand [4].
 
 ### How they lose
 - He runs out of defense cards [2][4].
-- Scheme damage and attacks that ignore zones [2].
+- Scheme damage and attacks that ignore zones threaten him [2].
 
 ### Key cards
-- **Call for Backup**: traps, Workers back, or cards [1][2].
-- **I've Hunted Most Things That Can Hunt You**: his only defense card [2].
+- **Call for Backup**: Provides traps, revives Workers or draws cards [1][2].
+- **I've Hunted Most Things That Can Hunt You**: His only defense card [2].
 
 ### Tips
 - Use Leap Away only on defense [2].
@@ -264,21 +264,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: raptors -->
 ## Raptors
 
-**In short:** Three fast 7-health hunters whose attacks grow with every other Raptor next to the target; strong early, weaker with each loss [1][2].
+**In short:** The Raptors are three fast 7-health hunters, gaining attack value for each other Raptor beside the target; they are strong early and weaken with each loss [1][2].
 
 ### Plan A: Surround and strike
-**Goal:** Pin the target with two or three Raptors [2] · **How:** chain They Remember and Clever Girl; set up with Working Things Out [1][2] · **Watch out:** after-combat movement breaks pins [2].
+**Goal:** Pin the target with two or three Raptors [2] · **How:** Set up with Working Things Out, then chain They Remember and Clever Girl [1][2] · **Watch out:** After-combat movement breaks pins [2].
 
 ### Plan B: Hit and run
-**Goal:** Pick your fights [3] · **How:** hide and double maneuver to rebuild your hand, then strike [4] · **Watch out:** opponents focus one Raptor down [5].
+**Goal:** Choose when to fight [3] · **How:** Hide and double maneuver to rebuild your hand before striking [4] · **Watch out:** Opponents concentrate damage on one Raptor [5].
 
 ### How they lose
-- One Raptor falls and the rest snowball [2][6].
-- Only 10 defense cards and no card draw [4].
+- Losing one Raptor can start a downward spiral [2][6].
+- They have only 10 cards that can defend and no card draw [4].
 
 ### Key cards
-- **Eviscerate**: up to 7, and nothing to cancel [2].
-- **Decoy**: their only defense card [2].
+- **Eviscerate**: Reaches 7 with no effect to cancel [2].
+- **Decoy**: Their only defense card [2].
 
 ### Tips
 - Save versatile cards for defense [2].
@@ -297,21 +297,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: dracula -->
 ## Dracula
 
-**In short:** A patient vampire who whittles the opponent down with his ability, Sisters and schemes, then finishes them with Beastform [1][2][3].
+**In short:** Dracula is a patient vampire who wears opponents down with his ability, Sisters and schemes before finishing them with Beastform [1][2][3].
 
 ### Plan A: Stalk and whittle
-**Goal:** Chip damage without big fights [2] · **How:** Ravening Seduction, Prey Upon and his start-of-turn ping [1][2] · **Watch out:** a scheme-heavy hand can leave him without defense [3].
+**Goal:** Deal chip damage while avoiding major fights [2] · **How:** Use Ravening Seduction, Prey Upon and his start-of-turn damage [1][2] · **Watch out:** Too many schemes in hand can leave him without a defense [3].
 
 ### Plan B: Unleash the beast
-**Goal:** A lethal Beastform [2] · **How:** strip their Feints with Do My Bidding and bait attacks, then Mistform in and discard your hand into Beastform [2][4] · **Watch out:** Feinted, a base Beastform still deals 4 [3].
+**Goal:** Land a lethal Beastform [2] · **How:** Remove Feints with Do My Bidding and bait attacks, then approach with Mistform and fuel Beastform by discarding your hand [2][4] · **Watch out:** A base Beastform still deals 4 through Feint [3].
 
 ### How they lose
-- Low health and few defenses [2].
-- A small hand leaves Beastform weak [3].
+- Low health and few defenses leave him vulnerable [2].
+- A small hand weakens Beastform [3].
 
 ### Key cards
-- **Beastform**: 6, +1 per card discarded [1].
-- **Do My Bidding**: one of the game's best defenses [5].
+- **Beastform**: Worth 6, plus 1 per card discarded [1].
+- **Do My Bidding**: One of the game's best defenses [5].
 
 ### Tips
 - Use his ability before your first action [6].
