@@ -11,135 +11,168 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: king_arthur -->
 ## King Arthur
 
-**In short:** A slow, sturdy swordsman who lets Merlin do the early work from range, then lands one or two huge boosted hits once the opponent has no Feints left.
+**In short:** A melee hero with 18 health and 2 movement, backed by the ranged sidekick Merlin (7 health) [1]. Arthur may boost his attacks, but the boost card goes face down with the attack and is discarded without effect if the opponent cancels the attack card's effects [1]. Reviewers rank him among the weakest fighters [3][4]; Gridbeast calls him hard to win with but not necessarily bad [2].
 
 ### Plan A: Merlin leads, Arthur shields
-**Goal:** Keep Merlin alive and attacking while Arthur's 18 health absorbs the hits.
-**How to do it:** Put Merlin on a space that touches several zones and keep Arthur between him and the enemy. Attack with Merlin often, using Any cards such as Momentous Shift (worth 5 after he moves). Opponents tend to save their Feints for Arthur, so Merlin's attacks get through. His schemes move the board (Command the Storms), fix your hand (Prophecy) and clear 1-health sidekicks (Restless Spirits).
-**Watch out for:** Once Merlin falls, Arthur loses most of his card draw and tricks. Bewilderment is Merlin's emergency defense.
+**Goal:** Keep Merlin alive and attacking from range while Arthur soaks up damage [2][4][5].
+**How to do it:** Several sources treat Merlin as the main fighter and Arthur as his bodyguard [2][4][5]. Put Merlin on a space that touches several zones [6] and Arthur between the enemy and Merlin [7]. Attack with Merlin using cards any fighter can play, so his one attack, Aid the Chosen One, isn't obvious [2]. Opponents tend to save their Feints for Arthur's boosts, so Momentous Shift after Merlin moves often lands for 5 [8].
+**Watch out for:** Merlin's only defense is Bewilderment, which prevents all damage and moves him anywhere [1]; save it for when an enemy gets past Arthur [2].
 
-### Plan B: The boosted Excalibur
-**Goal:** End the game with a big boosted attack, up to 9 with Excalibur.
-**How to do it:** Count the opponent's Feints. Bait them out with boosts you don't mind losing, or by boosting attacks like Skirmish, which still hits for 4. Once their Feints are gone, boost Excalibur with a 3-value boost.
-**Watch out for:** A Feint discards your boost card for nothing. Only use his ability on attacks worth 4 or more, or you just burn your hand.
+### Plan B: Boost at the right moment
+**Goal:** Land a boosted attack the opponent can't cancel.
+**How to do it:** Keep count of the opponent's Feints [2][9] and boost when they have none left, or when their hand is low [9]. Bait Feints by boosting with cards you don't mind losing, such as Regroup [2][5], or attack with Skirmish, which still does damage if Feinted [2][8].
+**Watch out for:** Players disagree on how often to boost: skip the ability 90% of the time [6]; boost only attacks worth 4 or more [10][11]; or never attack with Arthur unboosted, waiting for a full hand [12]. A reply counters that a boost is only worth its card on an attack reaching 6 or 7 [5].
 
 ### How they lose
-- Feint-heavy opponents cancel his boosts and drain his hand.
-- Merlin dies early, leaving a slow Arthur (move 2) to be kited by ranged fighters.
-- He boosts too often and runs out of cards to defend with.
+- Cancels: a Feint wastes both the boost and the attack's effect [1][5], and heroes with many cancels are his main weakness [2].
+- Predictability: the face-down boost tells the opponent when to Feint [2][3], and once his single Excalibur is played they have little left to fear [3].
+- Weak boosts: 12 of his cards boost for only 1 [1][5], so boosting with a good card like Momentous Shift throws away value [3].
+- An empty hand: boosting costs cards, and forced discards hurt him [8].
+- Losing Merlin early leaves Arthur with many cards he can't use well [4].
 
 ### Key cards
-- **Excalibur**: a 6-value attack. Your finisher; boost it when it is safe.
-- **The Lady of the Lake**: fetches Excalibur. Usually play it only after Excalibur is in your discard pile, so you get a second swing.
-- **Noble Sacrifice**: its boost value is 3, so it often works best as the boost card.
-- **The Holy Grail**: a defense that sets Arthur's health to 8 if he has 4 or less but is not defeated.
+- **Excalibur**: a 6-value attack with no effect [1]. Always boost it, ideally with a 3-boost card: 9 if it lands, and 4 damage even if Feinted [2][5].
+- **The Lady of the Lake**: finds Excalibur in your deck or discard pile [1]. Most advice is to play it only after Excalibur has been used, for a second swing [2][13][11]; WarBand says play it early if the opponent can make you discard [4].
+- **Noble Sacrifice**: 3 copies with boost 3 [1]. Usually best as a boost card [2][14].
+- **The Holy Grail**: sets Arthur to 8 health if he survives at 4 or less [1], a large part of how he lasts [4].
 
 ### Tips
-- Keep 5 or more cards in hand; maneuver twice if you need to rebuild.
-- Mix Any cards into Merlin's attacks so Aid the Chosen One isn't obvious.
-- Arthur's health is a resource: let him take hits while Merlin works.
+- Keep at least 5 cards in hand [2]; one player maneuvers twice to rebuild and won't attack with fewer than 6 or 7 [8].
+- Health is a resource: let Arthur take hits [8][15].
+- He is noticeably stronger in 2v2 [16][17].
 
-### Further reading
-- [Unmatched – King Arthur](https://gridbeast.gg/unmatched-king-arthur/): Gridbeast · written guide
-- [How to win in Unmatched Vol. 1](https://warband.ru/85-kak-pobezhdat-v-unmatched-vol-1.html): WarBand.ru (Russian) · written guide
-- [King Arthur Analysis](https://www.reddit.com/r/Unmatched/comments/1ktnoa2/): Reddit: Character-Housing731 · written analysis
-- [An Unmatched Roster: Humble Beginnings](https://boardgamegeek.com/thread/3090133/an-unmatched-roster-humble-beginnings): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [Tabletop Review 9: Battle of Legends (Volume 1)](https://antlerflaxbooks.wordpress.com/2019/12/31/board-game-review-9-unmatched-battle-of-legends-volume-1/): Antlerflax Books · written review
-- [Some noob advice about Arthur?](https://www.reddit.com/r/Unmatched/comments/nenz66/): Reddit: Piteas_de_Adunte · thread
-- [How do I win with Arthur?](https://www.reddit.com/r/Unmatched/comments/1dxmgn3/): Reddit: tofudelivery300 · thread
-- [King Arthur (Unmatched Strategy Guide 3)](https://www.youtube.com/watch?v=iTjdJQVqke4): Baked Goods · video
-- [Unmatched - KING ARTHUR Overview & Strategy Guide](https://www.youtube.com/watch?v=8Wd_OIFdYXk): Lord of the Board · video
-- [King Arthur - Unmatched Fighter Review](https://www.youtube.com/watch?v=5h2oGrXxW_I): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 1*, King Arthur deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – King Arthur." *Gridbeast*. https://gridbeast.gg/unmatched-king-arthur/
+3. Antlerflax Books. "Tabletop Review 9: Battle of Legends (Volume 1)." 31 December 2019. https://antlerflaxbooks.wordpress.com/2019/12/31/board-game-review-9-unmatched-battle-of-legends-volume-1/
+4. WarBand.ru. "Как побеждать в Unmatched Vol. 1" [How to win in Unmatched Vol. 1] (in Russian). https://warband.ru/85-kak-pobezhdat-v-unmatched-vol-1.html
+5. u/jclayton111. Comment on "How do I win with Arthur?" by u/tofudelivery300. *r/Unmatched*, Reddit, 7 July 2024. https://www.reddit.com/r/Unmatched/comments/1dxmgn3/
+6. u/FamousWerewolf. Comment on "Some noob advice about Arthur?" by u/Piteas_de_Adunte. *r/Unmatched*, Reddit, 17 May 2021. https://www.reddit.com/r/Unmatched/comments/nenz66/
+7. u/TNicTrips. Comment on "Some noob advice about Arthur?" (see [6]).
+8. u/SuperChoob. Comment on "How do I win with Arthur?" (see [5]).
+9. u/Dinnerhero. Comment on "How do I win with Arthur?" (see [5]).
+10. u/CupAlternative. Comment on "King Arthur Analysis" by u/Character-Housing731. *r/Unmatched*, Reddit, 23 May 2025. https://www.reddit.com/r/Unmatched/comments/1ktnoa2/
+11. u/BuckNasty789. Comment on "How do I win with Arthur?" (see [5]).
+12. u/Jimmeu. Comment on "How do I win with Arthur?" (see [5]).
+13. u/fuzzyfoot88. Comment on "Some noob advice about Arthur?" (see [6]).
+14. u/wandering__caretaker. Comment on "Some noob advice about Arthur?" (see [6]).
+15. u/bagilevi. Comment on "How do I win with Arthur?" (see [5]).
+16. u/DoctorBob90. Comment on "How do I win with Arthur?" (see [5]).
+17. u/nick_gadget. Comment on "How do I win with Arthur?" (see [5]).
+
+### Not cited
+- [An Unmatched Roster: Humble Beginnings](https://boardgamegeek.com/thread/3090133/an-unmatched-roster-humble-beginnings): BoardGameGeek: TFJ383 · written analysis (read; uses Arthur only as a power benchmark)
+- [King Arthur (Unmatched Strategy Guide 3)](https://www.youtube.com/watch?v=iTjdJQVqke4): Baked Goods · video (not yet reviewed)
+- [Unmatched - KING ARTHUR Overview & Strategy Guide](https://www.youtube.com/watch?v=8Wd_OIFdYXk): Lord of the Board · video (not yet reviewed)
+- [King Arthur - Unmatched Fighter Review](https://www.youtube.com/watch?v=5h2oGrXxW_I): To The Table Top! · video (not yet reviewed)
 
 ---
 
 <!-- id: alice -->
 ## Alice
 
-**In short:** An aggressive melee fighter who hits hard while BIG, shrinks to defend, and sends the Jabberwock after enemy heroes.
+**In short:** A melee hero with 13 health and 2 movement who is either BIG (+2 to her attack cards) or SMALL (+1 to her defense cards), fighting alongside the Jabberwock (8 health) [1]. Sources call her a jack of all trades who can do a bit of everything [2][4] but nothing better than the specialists [4].
 
-### Plan A: Stay BIG and keep the pressure on
-**Goal:** Attack first and keep attacking, with +2 on every attack.
-**How to do it:** Start BIG and treat BIG as her normal state. Change size at the right moment: The Other Side of the Mushroom hits, moves her 3 spaces and turns her SMALL for the counterattack. I'm Late, I'm Late on defense moves her 5 spaces and changes size, setting up your next attack or closing in on a ranged fighter.
-**Watch out for:** With only 2 movement she can be outrun. Spend a card to boost movement if it means trapping the enemy hero.
+### Plan A: Hit big, defend small
+**Goal:** Attack while BIG and be SMALL when the opponent swings back [3][5].
+**How to do it:** Gridbeast recommends starting BIG, treating it as her default and attacking first [2]. 11 of her cards change size [1], so plan chains that leave her in the right form on your turn and on your opponent's [5]. The Other Side of the Mushroom hits, moves her up to 3 spaces and changes size, so she can strike BIG and end SMALL [1][2]. Her schemes, Drink Me and Eat Me, change size without a combat the opponent can interfere with [1][5]. A Feint cancels a card's size change but not the +2 she already has from being BIG [3].
+**Watch out for:** Her card values are low to compensate for the bonus [5], and with 13 health she has to be careful how aggressively she plays [5].
 
-### Plan B: Let the Jabberwock hunt
-**Goal:** Deal heavy damage to the enemy hero with the Jabberwock.
-**How to do it:** Claws That Catch is worth 5 against a hero, so never waste it on a sidekick. Jaws That Bite also deals 2 damage to an adjacent fighter. Mix in Any cards such as Skirmish or Momentous Shift so the opponent can't tell when a big Jabberwock hit is coming.
-**Watch out for:** There are only 4 Jabberwock cards, so you can't plan around drawing them.
+### Plan B: Unleash the Jabberwock
+**Goal:** Use the Jabberwock as both a heavy hitter and a distraction [3][5].
+**How to do it:** Claws That Catch is worth 5 against a hero [1], so never use it on sidekicks [2]. Jaws That Bite deals 2 damage to a fighter adjacent to the Jabberwock after combat [1], useful pressure or a way to finish a sidekick [2]. Opponents tend to save Feints for Jabberwock attacks on their hero [3], so attack with him using ordinary cards such as Skirmish or Momentous Shift sometimes, both to keep them guessing [2] and to draw out those Feints [3].
+**Watch out for:** He has only 4 cards of his own [1], so they can arrive late or not at all [2].
 
 ### How they lose
-- The Jabberwock is killed early, and Alice alone (13 health) can't keep up the pressure.
-- She draws few cards and gets stuck with a hand that doesn't fit the situation.
-- She can't catch a faster fighter with her 2 movement.
+- Her cards don't come in a predictable order; 15 different cards, 3 of them single copies, make long-term plans hard [2][3].
+- Low card draw [2].
+- With 2 movement she can be kept at distance by ranged opponents [5]; spend cards boosting movement if that's what it takes to pin her target [3].
+- Low health punishes over-aggression [5].
 
 ### Key cards
-- **Snicker-Snack**: if you win the combat, you look at their hand and pick a card for them to discard. Her best card; make it count when you draw it.
-- **Looking Glass**: pick 2 of: draw 2 cards, recover 3 health, or move anywhere. One of the best defenses in the game.
-- **The Other Side of the Mushroom**: hit, move away and change size in one card.
+- **Snicker-Snack**: a 3-value attack that, if you win the combat, lets you look at the opponent's hand and choose a card to discard [1]. Gridbeast calls it her best card; there's only one, so take full advantage when you draw it [2].
+- **Looking Glass**: her only defense card [1][5]. Pick two of draw 2, recover 3 health, or move anywhere [1]. One of the best defense cards in the game [2].
+- **I'm Late, I'm Late**: moves Alice up to 5 spaces and changes size [1]. Played on defense, it sets up your next attack and closes distance on ranged opponents [2].
+- **Manxome Foe**: adds the boost of your top card to its value [1]. WarBand rates it more harmful than helpful, since it can discard her single-copy cards; use it as a Jabberwock attack or for a finishing blow while BIG [3].
 
 ### Tips
-- A Feint cancels card effects but not the +2 from being BIG.
-- Use Manxome Foe carefully: it can throw away one of her single-copy cards.
-- Adapt to the hand you draw; her deck has 15 different cards, so it's hard to plan ahead.
+- Stay BIG unless you have spare size-change cards or a safe position: BIG is the bigger threat [3].
+- Her healing is underrated [4].
+- She has enough draw that exhaustion is rarely a worry [3].
 
-### Further reading
-- [Unmatched – Alice](https://gridbeast.gg/unmatched-alice/): Gridbeast · written guide
-- [How to win in Unmatched Vol. 1](https://warband.ru/85-kak-pobezhdat-v-unmatched-vol-1.html): WarBand.ru (Russian) · written guide
-- [An Unmatched Roster: Humble Beginnings](https://boardgamegeek.com/thread/3090133/an-unmatched-roster-humble-beginnings): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [Tabletop Review 9: Battle of Legends (Volume 1)](https://antlerflaxbooks.wordpress.com/2019/12/31/board-game-review-9-unmatched-battle-of-legends-volume-1/): Antlerflax Books · written review
-- [Alice (Unmatched Strategy Guide 5)](https://www.youtube.com/watch?v=hWJtQbat4r4): Baked Goods · video
-- [Unmatched - ALICE Overview & Strategy Guide](https://www.youtube.com/watch?v=GOVtdPRfBEg): Lord of the Board · video
-- [Alice - Unmatched Fighter Review](https://www.youtube.com/watch?v=H9zbBlbrL6k): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 1*, Alice deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Alice." *Gridbeast*. https://gridbeast.gg/unmatched-alice/
+3. WarBand.ru. "Как побеждать в Unmatched Vol. 1" [How to win in Unmatched Vol. 1] (in Russian). https://warband.ru/85-kak-pobezhdat-v-unmatched-vol-1.html
+4. Antlerflax Books. "Tabletop Review 9: Battle of Legends (Volume 1)." 31 December 2019. https://antlerflaxbooks.wordpress.com/2019/12/31/board-game-review-9-unmatched-battle-of-legends-volume-1/
+5. TFJ383. "An Unmatched Roster: Humble Beginnings." *BoardGameGeek*, 26 May 2023. https://boardgamegeek.com/thread/3090133/an-unmatched-roster-humble-beginnings
+
+### Not cited
+- [Alice (Unmatched Strategy Guide 5)](https://www.youtube.com/watch?v=hWJtQbat4r4): Baked Goods · video (not yet reviewed)
+- [Unmatched - ALICE Overview & Strategy Guide](https://www.youtube.com/watch?v=GOVtdPRfBEg): Lord of the Board · video (not yet reviewed)
+- [Alice - Unmatched Fighter Review](https://www.youtube.com/watch?v=H9zbBlbrL6k): To The Table Top! · video (not yet reviewed)
 
 ---
 
 <!-- id: medusa -->
 ## Medusa
 
-**In short:** A ranged fighter who controls the board from a safe spot, chips away with her ability, strips her opponent's hand and then finishes them with Gaze of Stone.
+**In short:** A ranged hero with 16 health and 3 movement, three 1-health Harpies, and an ability that deals 1 damage to an opposing fighter in her zone at the start of each turn [1]. Widely rated one of the strongest fighters [2][3][4], and one of the easiest to play well [5].
 
-### Plan A: Hold a strong spot and make them come to you
-**Goal:** Deal damage from range while the enemy struggles to reach her.
-**How to do it:** Stand on a space that touches several zones, so she can hit more of the board. Use the Harpies to block the paths to her, so the enemy has to spend attacks on Harpies first. Ideally they end up in her zone, where her ability deals 1 damage at the start of each of your turns.
-**Watch out for:** Area damage can wipe out bunched-up Harpies, so spread them out against those fighters.
+### Plan A: Hold the high ground
+**Goal:** Keep the enemy at a distance, chip them down and drain their hand [2][6].
+**How to do it:** Put Medusa on a space that touches several zones to widen her range and her ability [2][3]. Use the Harpies to block the routes to her, so the opponent spends attacks on Harpies first [2], ideally while standing in Medusa's zone, where her ability hits them next turn [2][3]. Keep a Harpy between Medusa and melee attackers [7]; if the opponent can damage an area, spread the Harpies out instead [3]. Winged Frenzy returns a defeated Harpy, for 5 Harpies in total [1][2].
+**Watch out for:** Rarely send a Harpy out alone to attack [2], and don't waste them as fodder [8]. Never spend a Feint protecting a Harpy [3].
 
-### Plan B: Empty their hand, then Gaze of Stone
-**Goal:** Win a combat with Gaze of Stone for 8 extra damage.
-**How to do it:** Hiss and Slither and Clutching Claws make the opponent discard. Once they have few or no defenses left, play Gaze of Stone. While they can still defend, use Gaze of Stone as the boost for Second Shot instead, for a reliable 7-value attack.
-**Watch out for:** Gaze of Stone is only worth 2, so it rarely wins a combat against a full hand. Don't build your whole game around it.
+### Plan B: Discard, then turn them to stone
+**Goal:** Empty the opponent's hand so Gaze of Stone can land.
+**How to do it:** Hiss and Slither and Clutching Claws make the opponent discard [1]. WarBand aims to play three discard cards before the Harpies are gone [3]. Gaze of Stone is only a 2-value attack, but if it wins the combat it deals 8 more damage [1], so once the opponent may be out of defense cards, attack often and finish with it [3].
+**Watch out for:** Don't build your plan around Gaze of Stone [2]. Against an opponent with plenty of defense, it's usually better used as a 4-boost on Second Shot for a 7-value attack, and you can do that three times [2][3][7]. One player finds that efficient but dull [9].
 
 ### How they lose
-- The Harpies are cleared quickly, taking her board control and most of her discard effects with them.
-- A melee fighter gets in her face: she has 16 health, no healing and only three good defenses.
-- She runs low on cards herself and can't keep up both attack and defense.
+- Her Harpies die quickly, taking her discards and board control with them; many players make that their first goal [10][11][12]. The designer disagrees: play around the Harpies rather than engaging them, except with cards that are very efficient against them [13].
+- The opponent refuses to come to her: they stay outside her zone using hard zone cut-offs, draw up, and make her approach [6][14][15].
+- An opponent who gets in her face: she has only 16 health and three 4-value defense cards [11]. Her attack values are among the lowest in the game, with no attack card above 3 [16].
+- A low hand: she is vulnerable when her own hand runs low, so maneuver often [7].
 
 ### Key cards
-- **Gaze of Stone**: her finisher, and a 4-value boost for Second Shot.
-- **Hiss and Slither**: a 4-value defense that makes them discard. Her best defense.
-- **Winged Frenzy**: moves your fighters and brings back a defeated Harpy. With both copies you get up to 5 Harpies.
-- **Clutching Claws**: a Harpy card that makes them discard. Best used on defense.
+- **Gaze of Stone**: 3 copies [1]. The threat alone forces opponents to block every attack [6][17]. Keep track of how many she has played [18].
+- **Second Shot**: a 3-value attack you may boost [1]. Her main damage dealer [2][3].
+- **Hiss and Slither**: a 4-value defense that makes the opponent discard [1]. Among the better defense cards in the game [9].
+- **Winged Frenzy**: moves each of her fighters up to 3 spaces, through enemies, and revives a Harpy [1].
 
 ### Tips
-- Use her ability at the start of every turn; it's easy to forget.
-- Don't spend a Feint protecting a Harpy.
-- Use Regroup to attack while your hand is big.
-- Maneuver often; she is weak when her hand runs low.
+- Don't forget her ability at the start of each turn [7].
+- Use Clutching Claws and The Hounds of Mighty Zeus on defense, so opponents need higher attacks to beat a Harpy [2].
+- Play Regroup on attack, and with a bigger hand [7].
+- Use the Harpies to push the opponent into the zones you want [7][19].
 
-### Further reading
-- [Unmatched – Medusa](https://gridbeast.gg/unmatched-medusa/): Gridbeast · written guide
-- [How to win in Unmatched Vol. 1](https://warband.ru/85-kak-pobezhdat-v-unmatched-vol-1.html): WarBand.ru (Russian) · written guide
-- [An Unmatched Roster: Humble Beginnings](https://boardgamegeek.com/thread/3090133/an-unmatched-roster-humble-beginnings): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [Tabletop Review 9: Battle of Legends (Volume 1)](https://antlerflaxbooks.wordpress.com/2019/12/31/board-game-review-9-unmatched-battle-of-legends-volume-1/): Antlerflax Books · written review
-- [Sherlock vs Medusa tips?](https://www.reddit.com/r/Unmatched/comments/t2rkyi/): Reddit: dpeacock0424 · thread
-- [Keep losing as Medusa): any tips??](https://www.reddit.com/r/Unmatched/comments/vky34y/): Reddit: Lifeisshortliveit1 · thread
-- [Weekly Discussion: Battling Medusa (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1qvzo4n/): Reddit: LabRat2329 · thread
-- [How to beat Medusa?](https://www.reddit.com/r/Unmatched/comments/1v0jgg7/): Reddit: Immediate-Monitor-79 · thread
-- [Medusa: Noob Cannon, OP, or am I just not very good?](https://boardgamegeek.com/thread/2253704/medusa-noob-cannon-op-or-am-i-just-not-very-good): BoardGameGeek · thread (not checked: BoardGameGeek blocks automated access)
-- [Is Medusa Fun?](https://boardgamegeek.com/thread/2604780/is-medusa-fun): BoardGameGeek · thread (not checked: BoardGameGeek blocks automated access)
-- [Medusa (Unmatched Strategy Guide 6)](https://www.youtube.com/watch?v=tVO2F9Q7E2w): Baked Goods · video
-- [Unmatched - MEDUSA Overview & Strategy Guide](https://www.youtube.com/watch?v=g_zHhLJMGxE): Lord of the Board · video
-- [Medusa - Unmatched Fighter Review](https://www.youtube.com/watch?v=H0U3-QYjwVM): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 1*, Medusa deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Medusa." *Gridbeast*. https://gridbeast.gg/unmatched-medusa/
+3. WarBand.ru. "Как побеждать в Unmatched Vol. 1" [How to win in Unmatched Vol. 1] (in Russian). https://warband.ru/85-kak-pobezhdat-v-unmatched-vol-1.html
+4. Antlerflax Books. "Tabletop Review 9: Battle of Legends (Volume 1)." 31 December 2019. https://antlerflaxbooks.wordpress.com/2019/12/31/board-game-review-9-unmatched-battle-of-legends-volume-1/
+5. Tommywolf. Reply in "Is Medusa Fun?" by Rematched. *BoardGameGeek*, 18 February 2021. https://boardgamegeek.com/thread/2604780/is-medusa-fun
+6. u/Chidwick. Comment on "Sherlock vs Medusa tips?" by u/dpeacock0424. *r/Unmatched*, Reddit, 27 February 2022. https://www.reddit.com/r/Unmatched/comments/t2rkyi/
+7. u/PingPowPizza. Comment on "Keep losing as Medusa): any tips??" by u/Lifeisshortliveit1. *r/Unmatched*, Reddit, 26 June 2022. https://www.reddit.com/r/Unmatched/comments/vky34y/
+8. u/Westonard. Comment on "Keep losing as Medusa): any tips??" (see [7]).
+9. ClumsySpirit, quoted in a reply by Rematched in "Is Medusa Fun?" (see [5]).
+10. u/GambuzinoSaloio. Comment on "Weekly Discussion: Battling Medusa (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 4 February 2026. https://www.reddit.com/r/Unmatched/comments/1qvzo4n/
+11. u/Derf1OO. Comment on "Weekly Discussion: Battling Medusa" (see [10]).
+12. u/Jerry-Red. Comment on "How to beat Medusa?" by u/Immediate-Monitor-79. *r/Unmatched*, Reddit, 19 July 2026. https://www.reddit.com/r/Unmatched/comments/1v0jgg7/
+13. JustinDJacobson (Restoration Games). Reply in "Medusa: Noob Cannon, OP, or am I just not very good?" by Krakajak. *BoardGameGeek*, 9 August 2019. https://boardgamegeek.com/thread/2253704/medusa-noob-cannon-op-or-am-i-just-not-very-good
+14. u/Silly_Shenanigans. Comment on "Weekly Discussion: Battling Medusa" (see [10]).
+15. Krakajak. "Medusa: Noob Cannon, OP, or am I just not very good?" (see [13]).
+16. jayahre. Reply in "Medusa: Noob Cannon, OP, or am I just not very good?" (see [13]).
+17. u/CaptainCrockpot. Comment on "How to beat Medusa?" (see [12]).
+18. u/Biggest_Lemon. Comment on "Weekly Discussion: Battling Medusa" (see [10]).
+19. u/ChernobylBalls. Comment on "Keep losing as Medusa): any tips??" (see [7]).
+
+### Not cited
+- [An Unmatched Roster: Humble Beginnings](https://boardgamegeek.com/thread/3090133/an-unmatched-roster-humble-beginnings): BoardGameGeek: TFJ383 · written analysis (read; mentions Medusa only in passing)
+- [Medusa (Unmatched Strategy Guide 6)](https://www.youtube.com/watch?v=tVO2F9Q7E2w): Baked Goods · video (not yet reviewed)
+- [Unmatched - MEDUSA Overview & Strategy Guide](https://www.youtube.com/watch?v=g_zHhLJMGxE): Lord of the Board · video (not yet reviewed)
+- [Medusa - Unmatched Fighter Review](https://www.youtube.com/watch?v=H0U3-QYjwVM): To The Table Top! · video (not yet reviewed)
 
 ---
 

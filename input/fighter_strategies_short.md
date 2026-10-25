@@ -9,78 +9,97 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: king_arthur -->
 ## King Arthur
 
-**In short:** A slow, tanky swordsman who lets Merlin work from range, then finishes with a boosted Excalibur.
+**In short:** A tough melee hero who boosts his attacks, with the ranged Merlin doing much of the work [1][2]. Often ranked among the weakest fighters [3].
 
 ### Plan A: Merlin leads, Arthur shields
-**Goal:** Keep Merlin alive and attacking · **How:** Merlin attacks from a multi-zone space with Any cards like Momentous Shift while Arthur stands in the way · **Watch out:** without Merlin, Arthur loses his draw and tricks.
+**Goal:** Keep Merlin attacking from range [2] · **How:** Arthur stands between the enemy and Merlin [4]; Momentous Shift after Merlin moves often lands for 5 [5] · **Watch out:** Bewilderment is Merlin's only defense [1].
 
-### Plan B: The boosted Excalibur
-**Goal:** Land a 9-damage Excalibur · **How:** bait out the opponent's Feints first, then boost with a 3-value card · **Watch out:** a Feint wastes the boost, so only boost attacks worth 4+.
+### Plan B: Boost at the right moment
+**Goal:** Land a boosted attack the opponent can't cancel [2] · **How:** count their Feints and boost Excalibur when they're out [2][6] · **Watch out:** a Feint wastes the boost card too [1].
 
 ### How they lose
-- Lots of Feints cancel his boosts.
-- Merlin dies early and Arthur gets kited.
+- Cancels and the visible boost make his big attacks easy to stop [2][3].
+- Boosting empties his hand [5].
 
 ### Key cards
-- **Excalibur**: his finisher.
-- **The Lady of the Lake**: use it after Excalibur is discarded for a second swing.
+- **Excalibur**: always boost it; even Feinted it deals 4 [2].
+- **The Lady of the Lake**: usually best after Excalibur is used, to get it back [2].
 
 ### Tips
-- Keep 5+ cards in hand.
-- Let Arthur's 18 health soak hits while Merlin attacks.
-- Count the opponent's Feints.
+- Keep at least 5 cards in hand [2].
+- Health is a resource; let Arthur take hits [5].
+
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 1*, King Arthur deck.
+2. Gridbeast. "Unmatched – King Arthur." https://gridbeast.gg/unmatched-king-arthur/
+3. Antlerflax Books. "Tabletop Review 9: Battle of Legends (Volume 1)." 2019.
+4. u/TNicTrips. Comment on "Some noob advice about Arthur?" *r/Unmatched*, Reddit, 2021. https://www.reddit.com/r/Unmatched/comments/nenz66/
+5. u/SuperChoob. Comment on "How do I win with Arthur?" *r/Unmatched*, Reddit, 2024. https://www.reddit.com/r/Unmatched/comments/1dxmgn3/
+6. u/Dinnerhero. Comment on "How do I win with Arthur?" (see [5]).
 
 ---
 
 <!-- id: alice -->
 ## Alice
 
-**In short:** An aggressive melee fighter who hits hard while BIG, shrinks to defend, and sends the Jabberwock after heroes.
+**In short:** A size-changing melee hero, +2 to attacks when BIG and +1 to defense when SMALL, with the hard-hitting Jabberwock [1].
 
-### Plan A: Stay BIG and keep the pressure on
-**Goal:** Attack with +2 every turn · **How:** start BIG, and use The Other Side of the Mushroom or I'm Late, I'm Late to change size and position · **Watch out:** 2 movement means she can be outrun.
+### Plan A: Hit big, defend small
+**Goal:** Attack BIG, defend SMALL [2][3] · **How:** start BIG and chain her 11 size-change cards so she's in the right form each turn [1][2][3] · **Watch out:** low health punishes over-aggression [3].
 
-### Plan B: Let the Jabberwock hunt
-**Goal:** Big hits on the enemy hero · **How:** Claws That Catch is worth 5 against heroes; mix in Any cards so it's not predictable · **Watch out:** only 4 Jabberwock cards.
+### Plan B: Unleash the Jabberwock
+**Goal:** Pressure heroes with the Jabberwock [2] · **How:** save Claws That Catch for heroes, and sometimes attack with ordinary cards to keep them guessing [2] · **Watch out:** he has only 4 cards of his own [1].
 
 ### How they lose
-- The Jabberwock dies early and Alice runs out of pressure.
-- Low card draw leaves her with the wrong hand.
+- Unpredictable draws and low card draw [2].
+- Ranged opponents keep her 2 movement at bay [3].
 
 ### Key cards
-- **Snicker-Snack**: makes them discard a card of your choice.
-- **Looking Glass**: draw, heal or reposition; pick two.
+- **Snicker-Snack**: her best card; strips a card from the opponent's hand [2].
+- **Looking Glass**: her only defense, and one of the game's best [2][3].
 
 ### Tips
-- A Feint doesn't cancel the BIG bonus.
-- Be careful with Manxome Foe; it can discard your best cards.
-- Play the hand you have.
+- Treat BIG as her default state [2].
+- Use I'm Late, I'm Late on defense to set up your next attack [2].
+
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 1*, Alice deck.
+2. Gridbeast. "Unmatched – Alice." https://gridbeast.gg/unmatched-alice/
+3. TFJ383. "An Unmatched Roster: Humble Beginnings." *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3090133/
 
 ---
 
 <!-- id: medusa -->
 ## Medusa
 
-**In short:** A ranged fighter who controls the board, strips your hand and finishes you with Gaze of Stone.
+**In short:** A fast ranged hero with Harpy sidekicks, forced discards and a damaging ability, widely rated one of the strongest fighters [1][2][3].
 
-### Plan A: Hold a strong spot
-**Goal:** Hit from range while they can't reach her · **How:** stand on a multi-zone space and block the paths with Harpies · **Watch out:** area damage against bunched-up Harpies.
+### Plan A: Hold the high ground
+**Goal:** Keep enemies at range and chip them down [2] · **How:** stand where several zones meet and block the routes to her with Harpies [2] · **Watch out:** don't throw Harpies away as fodder [4].
 
-### Plan B: Empty their hand, then Gaze of Stone
-**Goal:** Win a combat with Gaze of Stone for 8 extra damage · **How:** use discard effects first; until then, use Gaze as the boost for Second Shot (7 value) · **Watch out:** it's only worth 2 against a full hand.
+### Plan B: Discard, then turn them to stone
+**Goal:** Empty their hand so Gaze of Stone lands [3] · **How:** discard with Hiss and Slither and Clutching Claws; otherwise boost Second Shot with Gaze for 7 [2][3] · **Watch out:** don't build your plan around Gaze [2].
 
 ### How they lose
-- The Harpies die fast and she loses control.
-- A melee fighter reaches her: 16 health, no healing.
+- Her Harpies die early, taking her discards with them [5].
+- Opponents stay out of her zone and make her approach [6].
 
 ### Key cards
-- **Gaze of Stone**: finisher, or a 4-value boost.
-- **Hiss and Slither**: her best defense.
+- **Gaze of Stone**: its threat forces opponents to block every attack [6].
+- **Second Shot**: her main damage, often boosted [2][3].
 
 ### Tips
-- Use her ability every turn.
-- Never Feint to save a Harpy.
-- Keep your hand size up.
+- Don't forget her start-of-turn damage [7].
+- Maneuver often; she's weak with a low hand [7].
+
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 1*, Medusa deck.
+2. Gridbeast. "Unmatched – Medusa." https://gridbeast.gg/unmatched-medusa/
+3. WarBand.ru. "Как побеждать в Unmatched Vol. 1" (in Russian). https://warband.ru/85-kak-pobezhdat-v-unmatched-vol-1.html
+4. u/Westonard. Comment on "Keep losing as Medusa): any tips??" *r/Unmatched*, Reddit, 2022. https://www.reddit.com/r/Unmatched/comments/vky34y/
+5. u/GambuzinoSaloio. Comment on "Weekly Discussion: Battling Medusa." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1qvzo4n/
+6. u/Chidwick. Comment on "Sherlock vs Medusa tips?" *r/Unmatched*, Reddit, 2022. https://www.reddit.com/r/Unmatched/comments/t2rkyi/
+7. u/PingPowPizza. Comment on "Keep losing as Medusa): any tips??" (see [4]).
 
 ---
 
