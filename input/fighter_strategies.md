@@ -2997,120 +2997,137 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 <!-- id: ancient_leshen -->
 ## Ancient Leshen
 
-**In short:** A slow ranged forest spirit with 13 health, move 1, and Wolves (1 health, move 3) it keeps summoning. It wins by making the opponent come to it through its Wolves, then hitting twice in one turn for a big second attack.
+**In short:** A ranged hero with 13 health and only 1 movement, plus two 1-health Wolves that move 3 [1]. The Leshen adds +3 to its attacks if it already attacked this turn [1]. It plays a patient game: make the opponent come to you, hide behind the Wolves, and heal [2][3].
 
 ### Plan A: Make them come to you
-**Goal:** Let the opponent walk into your zone, where the Wolves can block and punish.
-**How to do it:** Don't chase; the Leshen only moves 1. Double maneuver to build a bigger hand than your opponent, which pushes them to act first. Keep Wolves between the Leshen and the enemy, so they must fight through the Wolves to reach it, and save your versatile cards for defense. Primeval guardian (defense 5) discards their top card, adds its boost to their value, and moves each Wolf 3 spaces. Strength of the pack summons a Wolf and heals the Leshen 1 at the start of each turn while a Wolf stays in its zone. Players aim for 5 to 8 healing a game.
-**Watch out for:** The Leshen has few defenses, so positioning matters more than for most fighters.
+**Goal:** Force the opponent to walk into your zone, through your Wolves [2][3].
+**How to do it:** Don't be the one chasing [3]. The best way to draw them in is to leave them holding more cards than you [3]. Double maneuver a lot to build up your own hand, and almost always save your versatile cards for defense [2]. The Wolves are good for pushing this hand plan, and they can do the attacking instead of the Leshen [3]. Vanish into murder deals 1 damage to each opponent in the Leshen's zone, removes it from the board and places it anywhere at the start of your next turn [1]; once the Wolves are gone it works as a double pass [4]. Unlike some vanish effects it doesn't end your turn, so if you play it first with no Wolves out you'll probably maneuver as your second action [5].
+**Watch out for:** One player calls the Leshen unreliable, more a casual pick than a competitive one [2].
 
-### Plan B: The double attack
-**Goal:** Attack twice in a turn for a huge second hit.
-**How to do it:** Heart of the Forest adds +3 to the Leshen's attacks if it already attacked this turn. Wolves set it up: Disturbing howls (1) pushes the enemy 2 spaces, maybe into range, and gains an action. Primeval slam (4) summons a Wolf and moves each Wolf 3 spaces. Flock of birds (5) places the Leshen anywhere after combat. Nature abounds (2) draws a card for each of your fighters next to the target.
-**Watch out for:** The first attack spends a card and an action; make sure the second can land.
+### Plan B: The pack holds the line
+**Goal:** Keep the Wolves between the opponent and the Leshen, and heal [2][3].
+**How to do it:** Position so attackers must hit the Wolves first, and defend with or for them so they can't reach the Leshen [2][3]. Defend and revive them well and they prove surprisingly tanky [3]. Primeval slam and Strength of the pack summon a Wolf in the Leshen's zone [1]. Strength of the pack also heals the Leshen 1 at the start of each turn while a Wolf stays in its zone [1]. Aim for about 5 to 8 healing a game [2][3].
+**Watch out for:** The Leshen has only 9 defense cards of its own [3], so positioning matters [3].
 
 ### How they lose
-- Opponents stay at range and refuse to walk in.
-- Fast fighters kill its Wolves and reach the Leshen.
-- Opponents grind its few defenses down.
+- Bad positioning leaves its few defenses exposed [3].
+- An opponent who doesn't take the bait and has fewer cards [3].
 
 ### Key cards
-- **Primeval guardian**: its best defense, and it repositions the Wolves.
-- **Strength of the pack**: Wolves plus steady healing.
-- **Harrying strike**: a Wolf card worth +2 for each of your fighters next to the target.
-- **Vanish into murder**: 1 damage to everyone in its zone, then it returns anywhere next turn and draws.
+- **Primeval guardian**: a 5-value defense; the attacker adds the boost of the top card of their deck, and each Wolf moves up to 3 spaces [1].
+- **Strength of the pack**: a Wolf plus ongoing healing [1][2].
+- **Vanish into murder**: escape and a pass [1][4].
 
 ### Tips
-- Vanish into murder doesn't end your turn; plan the second action.
-- With one defense in hand you're often safe; nobody wants to attack it twice.
-- Planted feet draws a card if your fighter hasn't moved this turn.
+- It is comfortable holding just one defense, because opponents rarely want to hit it twice [6].
+- It has a decent exhaustion game [3][5].
 
-### Further reading
-- [Strategy Sunday Vol. 22: Ancient Leshen](https://www.reddit.com/r/Unmatched/comments/1m5bis3/): Reddit: Karma_Ger_Eng · video + infographic
-- [Playing as the Leshen](https://www.reddit.com/r/Unmatched/comments/1i25gqr/): Reddit: Life-Rip183 · thread
-- [Ancient Leshen - The Witcher Unmatched Fighter Review](https://www.youtube.com/watch?v=_CzsjNMdhQk): To The Table Top! · video
-- [Strategy Sunday Vol. 22](https://www.youtube.com/watch?v=8SLmr2URk9w): Karma · video
+### References
+1. Restoration Games. *Unmatched: The Witcher: Steel and Silver*, Ancient Leshen deck. Card text as recorded in `input/heroes.json`.
+2. u/Rare-Salamander6122. Comment on "Playing as the Leshen" by u/Life-Rip183. *r/Unmatched*, Reddit, 15 January 2025. https://www.reddit.com/r/Unmatched/comments/1i25gqr/
+3. u/Flat-Employee-4362. Comment on "Playing as the Leshen" (see [2]).
+4. u/Rare-Salamander6122. Reply in "Playing as the Leshen" (see [2]).
+5. u/Ok-Excitement7898. Reply in "Playing as the Leshen" (see [2]).
+6. u/Flat-Employee-4362. Reply in "Playing as the Leshen" (see [2]).
+
+### Not cited
+- [Strategy Sunday Vol. 22: Ancient Leshen](https://www.reddit.com/r/Unmatched/comments/1m5bis3/): Reddit thread (read; only links the video)
+- [Ancient Leshen - The Witcher Unmatched Fighter Review](https://www.youtube.com/watch?v=_CzsjNMdhQk): To The Table Top! · video (not yet reviewed)
+- [Strategy Sunday Vol. 22](https://www.youtube.com/watch?v=8SLmr2URk9w): Karma · video (not yet reviewed)
 
 ---
 
 <!-- id: blackbeard -->
 ## Blackbeard
 
-**In short:** A ranged pirate with 13 health and two 1-health Sea Dogs. Three doubloons move between him and the Treasury: he spends them on extra actions and loses them when hit, and opponents can pay from the Treasury to dodge his card effects, which hands him the coins.
+**In short:** A ranged hero with 13 health and 2 movement, plus two 1-health Sea Dogs [1]. He starts with 2 of the 3 doubloons; he can pay one at the start of his turn for an extra action, and pays one whenever he takes combat damage [1]. Many of his card effects can be ignored if the opponent pays a ransom, which hands those doubloons to Blackbeard [1]. He plays like chess: planning when to hoard coins and when to spend them [2].
 
-### Plan A: Play the doubloon game
-**Goal:** Keep your doubloons, and make every effect cost the opponent a choice.
-**How to do it:** Privateer Turned Pirate starts him with 2 doubloons and 1 in the Treasury. Many effects end in "unless" plus a coin cost: the opponent can pay that many doubloons from the Treasury to ignore the effect, and the coins go to Blackbeard. When the Treasury is empty, they can't pay, and every effect lands. Take the extra action only when you hold all 3 coins, then attack with Give no quarter (3, or 5 with a friendly fighter next to the target; it gains an action unless they pay) or Avast Ye! (5). They'll probably pay once, emptying the Treasury, and your next effects all fire. Plunder moves your fighters 3 spaces through enemies and steals a doubloon from the Treasury; play it on a turn you take the extra action.
-**Watch out for:** Each time he takes combat damage he pays a coin, and they're hard to get back. Without coins he runs out of steam.
+### Plan A: Run them out of resources
+**Goal:** Drain the opponent, then strike when they are vulnerable [3].
+**How to do it:** Force the opponent to take the initiative, for example with Plunder, so they boost cards away; body block with Sea Dogs; and use the chosen-discard effects [1][3]. Plunder moves each of your fighters up to 3 spaces through opponents and steals a doubloon from the treasury [1]. Use the Sea Dogs for the steady game and find the right moments to bring Blackbeard in [2]. Big, corridor-heavy maps suit him, and anti-range maps help against ranged aggressive fighters [3].
+**Watch out for:** Once the Sea Dogs die, he becomes a walking piggy bank for the opponent to punch [4].
 
-### Plan B: Hide behind the crew
-**Goal:** Avoid being attacked while you drain their resources.
-**How to do it:** Place Sea Dogs so enemies must fight through them to reach Blackbeard, and defend the Sea Dogs too. Show a leg! and Scourge of the seven seas summon more. Plunder forces the opponent to act first, so they boost cards away. Fearsome and calculating looks at their hand and picks a discard, unless they pay. Big maps with corridors suit him.
-**Watch out for:** Once the Sea Dogs are gone, he's a walking piggy bank for every attacker.
+### Plan B: Spend for tempo
+**Goal:** Turn a full treasury into an extra-action turn that forces payments [5][6].
+**How to do it:** Take the action gain only when you hold all 3 doubloons, then attack with Give no quarter (3, or 5 with another friendly fighter next to the target, and gains an action unless they pay) or Avast Ye! (a 5 with two ransoms) [1][5]. They'll likely pay for one, and your next attacks fire their nasty effects freely [5]. Either they hand back the coin or you get a fourth action [6]. Taking the extra action on a Plunder turn moves you 3, keeps your doubloons and still leaves 2 actions [7].
+**Watch out for:** Once the opponent holds 2 doubloons, his strongest two-coin effects stop forcing payment, and paying 1 coin starts to feel cheap for them [5].
 
 ### How they lose
-- He gets hit often, bleeds doubloons and loses his engine.
-- His Sea Dogs die early.
-- Aggressive fighters keep him under constant pressure.
+- Losing combats and getting hit: doubloons are hard to win back, and without them he has no gas [5].
+- Losing his Sea Dogs [4][5].
 
 ### Key cards
-- **Queen Anne's revenge**: a 7 that can't be cancelled; it loses 2 for each doubloon they pay.
-- **A brace of primed pistols**: 3 damage to a fighter in his zone unless they pay 2.
-- **Intimidating visage**: a 4 defense that heals 2 when he's adjacent to an enemy.
-- **Parley**: cancels their effects unless they pay 2.
+- **Queen Anne's revenge**: a 7-value versatile, -2 for each doubloon the opponent pays; its effect can't be cancelled [1].
+- **A brace of primed pistols**: 3 damage to an opponent in his zone unless they pay 2 [1].
+- **Fearsome and calculating**: look at their hand and pick a discard, unless they pay [1].
+- **Show a leg!**: summons a Sea Dog in his zone [1].
 
 ### Tips
-- Spend coins on actions only with all 3 in hand.
-- Avoid losing combats; every combat hit costs a coin.
-- Hold Queen Anne's revenge for when the Treasury is empty.
+- Protect the Sea Dogs, and defending them is fine [3][5][6].
+- Position so attackers must go through the Sea Dogs to reach him [5].
+- You can skip the action gain entirely and fire many effects instead [5].
 
-### Further reading
-- [Strategy Sunday Vol. 24: Blackbeard](https://www.reddit.com/r/Unmatched/comments/1r5lb5m/): Reddit: Karma_Ger_Eng · video + infographic
-- [Tips on Volume 3](https://www.reddit.com/r/Unmatched/comments/1mieh3j/): Reddit: PenTernamee · thread
-- [Any tips and strategies on Black Beard?](https://www.reddit.com/r/Unmatched/comments/1n9abh5/): Reddit: Huge-Walk-174 · thread
-- [Blackbeard - Unmatched Fighter Review](https://www.youtube.com/watch?v=q_t1NjQtAog): To The Table Top! · video
-- [Unmatched, Blackbeard quick guide, overview & strategy ](https://www.youtube.com/watch?v=ta8RRGFj0jI): Taytertots · video
-- [Strategy Sunday Vol. 24](https://www.youtube.com/watch?v=nE-zWqU0Kp4): Karma · video
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 3*, Blackbeard deck. Card text as recorded in `input/heroes.json`.
+2. u/Jumpy-Proof8398. Comment on "Any tips and strategies on Black Beard?" by u/Huge-Walk-174. *r/Unmatched*, Reddit, 5 September 2025. https://www.reddit.com/r/Unmatched/comments/1n9abh5/
+3. u/d_Shirt. Comment on "Any tips and strategies on Black Beard?" (see [2]).
+4. u/Huge-Walk-174. "Any tips and strategies on Black Beard?" (see [2]).
+5. u/TheEliteB3aver. Comment on "Tips on Volume 3" by u/PenTernamee. *r/Unmatched*, Reddit, 5 August 2025. https://www.reddit.com/r/Unmatched/comments/1mieh3j/
+6. u/TheEliteB3aver. Comment on "Any tips and strategies on Black Beard?" (see [2]).
+7. u/JustaPoopBag. Comment on "Any tips and strategies on Black Beard?" (see [2]).
+
+### Not cited
+- [Strategy Sunday Vol. 24: Blackbeard](https://www.reddit.com/r/Unmatched/comments/1r5lb5m/): Reddit thread (read; only links the video)
+- [Blackbeard - Unmatched Fighter Review](https://www.youtube.com/watch?v=q_t1NjQtAog): To The Table Top! · video (not yet reviewed)
+- [Unmatched, Blackbeard quick guide, overview & strategy](https://www.youtube.com/watch?v=ta8RRGFj0jI): Taytertots · video (not yet reviewed)
+- [Strategy Sunday Vol. 24](https://www.youtube.com/watch?v=nE-zWqU0Kp4): Karma · video (not yet reviewed)
 
 ---
 
 <!-- id: chupacabra -->
 ## Chupacabra
 
-**In short:** A fast, aggressive melee hunter with 14 health and move 3. He draws a card after each attack and gets stronger at 7 health or below, so he wants to get hurt early, then hang on there with his healing while he keeps attacking.
+**In short:** A melee hero with 14 health, 3 movement and no sidekicks [1]. After he attacks, he may draw a card [1]. Several cards get stronger at 7 health or less, so he wants to sit low and keep attacking [1][2][3].
 
-### Plan A: Hunt at low health
-**Goal:** Get to 7 health or less quickly and stay there.
-**How to do it:** Some players even take a hit or two early on purpose. At 7 or less, Feeding (4) gains an action and heals 1, and Wounded beast becomes a 5. His healing keeps him alive in the 5 to 7 range: Ravenous lunge heals 1, or 2 if you win. Tooth and tail deals 1 to up to 2 adjacent fighters and heals 1 for each. Traveler of the night moves 4 through enemies and gains an action, so opponents can't run. Unsettle makes an opponent with a fighter in his zone discard 1, or 2 if you take 2 damage yourself, which also helps you get low.
-**Watch out for:** Combo fighters can kill him from 7 in one turn, even if his hand is full.
+### Plan A: Hunt them down
+**Goal:** Attack every turn, keep a bigger hand than the opponent, and run them out of good blocks [3].
+**How to do it:** The longer the game goes the worse it gets, so play super aggressive [2]. Constant attacks feed his draw, and his move 3 plus Traveler of the night (move 4 through opponents, gain an action) mean the opponent can rarely run [1][3]. Unsettle makes an opponent in his zone discard 1, or 2 if Chupacabra takes 2 damage, which helps win the hand count [1][3]. Once they are out of good blocks, land one of his huge boosted attacks [3]: Blood in the air may be boosted if you already won a combat this turn [1].
+**Watch out for:** Exhaustion is how he most often loses, because he draws so much [3][4].
 
-### Plan B: Control the draw
-**Goal:** Use The Hunger only when drawing helps you.
-**How to do it:** The Hunger lets him draw a card after each attack, but it's optional. Against aggressive or card-heavy opponents, attack twice and draw twice so they get fewer chances to hit you. In a value game, maneuver and attack each turn without drawing, so the opponent has to move twice and gets closer to running out of cards. Once you're at 7 with a good combo turn, draw freely until they fall. Many players keep their hand around 5 to 6 cards to avoid discarding.
-**Watch out for:** He's not built for a long game. The longer it goes, the more cards he wastes.
+### Plan B: Live on the edge
+**Goal:** Get to 7 health or below early, then stay there with his healing [2].
+**How to do it:** One player even takes a hit or two on purpose to get below 7 [2]. At 7 or less, Feeding gains an action and heals 1, and Wounded beast becomes a 5 [1]. Ravenous lunge and Tooth and tail heal him around the 5–7 range [1][2].
+**Watch out for:** At that health, opponents with one-turn kills or big combos can finish him even through a full hand [5].
 
 ### How they lose
-- The game drags on and he runs out of cards.
-- One-turn-kill fighters finish him while he sits at low health.
-- His attacks and defenses have no movement effects, so he can be kited.
+- Exhaustion from overdrawing [3][4].
+- Long games force him to waste cards [2].
+- None of his combat cards move him, so he is less mobile than his move 3 suggests [5].
 
 ### Key cards
-- **The more they struggle**: a 0 attack worth twice their card's printed value. Brutal against big defenses.
-- **Blood in the air**: a 4 attack you may boost if you already won a combat this turn.
-- **Ambush**: discards a random card and adds its boost.
-- **Natural toughness**: a 3 defense that returns to your hand if you lose.
+- **The more they struggle**: worth twice the printed value of the opponent's card [1].
+- **Traveler of the night**: three copies of move 4 and an action [1][6].
+- **Natural toughness**: a 3-value defense that comes back to your hand if you lose the combat [1].
+- **Unsettle**: card advantage [3].
 
 ### Tips
-- Attack every turn; that's where his draw comes from.
-- Use Traveler of the night to chase runners.
-- Use Unsettle to get ahead on hand size.
+- When to draw is a real choice [7]. Against aggressive or heavy-drawing opponents, double attack and draw twice; otherwise maneuver and attack without drawing so they must double maneuver and edge towards exhaustion, then draw freely for a combo turn once you are at 7 [7].
+- Keep about 5 or 6 cards; 7 lets the opponent double maneuver away and force two maneuvers or a boost from you [6]. At 5 you can still double maneuver next turn without discarding [8].
 
-### Further reading
-- [Tips on Volume 3](https://www.reddit.com/r/Unmatched/comments/1mieh3j/): Reddit: PenTernamee · thread
-- [Tips - Chupacabra](https://www.reddit.com/r/Unmatched/comments/1uzx2ta/): Reddit: QuitSilent4144 · thread
-- [Chupacabra - Unmatched Fighter Review](https://www.youtube.com/watch?v=zVhfEmAmdnE): To The Table Top! · video
-- [Unmatched, Chupacabra quick guide, overview & strategy ](https://www.youtube.com/watch?v=BZaNvq6CxD4): Taytertots · video
-- [Chupacabra Advanced Strategy Guide](https://www.youtube.com/watch?v=iaKRJfKkEKQ): The Gaming Geek Net · video
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 3*, Chupacabra deck. Card text as recorded in `input/heroes.json`.
+2. u/TheEliteB3aver. Comment on "Tips on Volume 3" by u/PenTernamee. *r/Unmatched*, Reddit, 5 August 2025. https://www.reddit.com/r/Unmatched/comments/1mieh3j/
+3. u/Rexmustwreck. Comment on "Tips on Volume 3" (see [2]).
+4. u/PenTernamee. Reply in "Tips on Volume 3" (see [2]).
+5. u/Professional_Cow9660. Comment on "Tips - Chupacabra" by u/QuitSilent4144. *r/Unmatched*, Reddit, 18 July 2026. https://www.reddit.com/r/Unmatched/comments/1uzx2ta/
+6. u/LabRat2329. Comments on "Tips - Chupacabra" (see [5]).
+7. u/TitanasGios. Comment on "Tips - Chupacabra" (see [5]).
+8. u/Jerry-Red. Comment on "Tips - Chupacabra" (see [5]).
+
+### Not cited
+- [Chupacabra - Unmatched Fighter Review](https://www.youtube.com/watch?v=zVhfEmAmdnE): To The Table Top! · video (not yet reviewed)
+- [Unmatched, Chupacabra quick guide, overview & strategy](https://www.youtube.com/watch?v=BZaNvq6CxD4): Taytertots · video (not yet reviewed)
+- [Chupacabra Advanced Strategy Guide](https://www.youtube.com/watch?v=iaKRJfKkEKQ): The Gaming Geek Net · video (not yet reviewed)
 
 ---
 

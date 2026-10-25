@@ -1887,75 +1887,96 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: ancient_leshen -->
 ## Ancient Leshen
 
-**In short:** A slow ranged forest spirit that hides behind Wolves and hits hard with its second attack each turn.
+**In short:** A slow forest spirit that waits behind its Wolves, heals, and makes the opponent come to it [1][2][3].
 
 ### Plan A: Make them come to you
-**Goal:** Fight in your zone · **How:** build hand, screen with Wolves, defend with Primeval guardian · **Watch out:** few defenses.
+**Goal:** Draw them into your zone [2][3] · **How:** leave them holding more cards than you, double maneuver, save versatiles for defense [2][3] · **Watch out:** it is unreliable in competitive play [2].
 
-### Plan B: The double attack
-**Goal:** +3 on the second attack · **How:** Disturbing howls pulls them in and gains an action · **Watch out:** the first attack must set up the second.
+### Plan B: The pack holds the line
+**Goal:** Wolves in front, steady healing [2][3] · **How:** summon Wolves with Primeval slam and Strength of the pack, and defend them [1][3] · **Watch out:** only 9 defenses of its own [3].
 
 ### How they lose
-- Opponents stay at range.
-- Wolves die and the Leshen is reached.
+- Poor positioning [3].
+- Opponents who won't take the bait [3].
 
 ### Key cards
-- **Primeval guardian**: a 5 defense.
-- **Strength of the pack**: Wolves and healing.
+- **Primeval guardian**: a 5-value defense [1].
+- **Vanish into murder**: leaves the board and returns anywhere next turn [1].
 
 ### Tips
-- Don't chase.
-- Keep a Wolf in the Leshen's zone.
+- Aim for 5 to 8 healing a game [2].
+- Opponents rarely want to hit it twice [4].
+
+### References
+1. Restoration Games. *Unmatched: The Witcher: Steel and Silver*, Ancient Leshen deck.
+2. u/Rare-Salamander6122. Comment on "Playing as the Leshen." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1i25gqr/
+3. u/Flat-Employee-4362. Comment on "Playing as the Leshen" (see [2]).
+4. u/Flat-Employee-4362. Reply in "Playing as the Leshen" (see [2]).
 
 ---
 
 <!-- id: blackbeard -->
 ## Blackbeard
 
-**In short:** A ranged pirate whose effects can be ransomed off with doubloons, which then flow back to him.
+**In short:** A pirate who juggles doubloons: spend them for extra actions, or make opponents pay ransoms to dodge his nasty effects [1][2].
 
-### Plan A: Play the doubloon game
-**Goal:** Keep your coins; make effects cost them · **How:** take the extra action only with all 3 coins, then attack with Give no quarter or Avast Ye! · **Watch out:** every combat hit costs a coin.
+### Plan A: Run them out of resources
+**Goal:** Drain them, then strike [3] · **How:** Plunder to force their hand, Sea Dog body blocks, chosen discards [1][3] · **Watch out:** without Sea Dogs he's a piggy bank [4].
 
-### Plan B: Hide behind the crew
-**Goal:** Avoid being attacked · **How:** Sea Dogs body block; Plunder makes them act first · **Watch out:** without Sea Dogs he's exposed.
+### Plan B: Spend for tempo
+**Goal:** An extra-action turn that forces payments [5] · **How:** with all 3 doubloons, take the action and attack with Give no quarter or Avast Ye! [1][5] · **Watch out:** once they hold 2 coins, ransoms stop biting [5].
 
 ### How they lose
-- Bleeds doubloons from being hit.
-- Sea Dogs die early.
+- Lost combats bleed doubloons [5].
+- Dead Sea Dogs [4][5].
 
 ### Key cards
-- **Queen Anne's revenge**: an uncancellable 7.
-- **A brace of primed pistols**: 3 damage unless they pay 2.
+- **Queen Anne's revenge**: 7 value, -2 per doubloon paid [1].
+- **Plunder**: moves everyone 3 and steals a doubloon [1].
 
 ### Tips
-- Protect the Sea Dogs.
-- Pick big maps with corridors.
+- Protect the Sea Dogs [5].
+- Big, corridor-heavy maps suit him [3].
+
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 3*, Blackbeard deck.
+2. u/Jumpy-Proof8398. Comment on "Any tips and strategies on Black Beard?" *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1n9abh5/
+3. u/d_Shirt. Comment on "Any tips and strategies on Black Beard?" (see [2]).
+4. u/Huge-Walk-174. "Any tips and strategies on Black Beard?" (see [2]).
+5. u/TheEliteB3aver. Comment on "Tips on Volume 3." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1mieh3j/
 
 ---
 
 <!-- id: chupacabra -->
 ## Chupacabra
 
-**In short:** A fast, aggressive hunter who draws after attacking and gets stronger at 7 health or below.
+**In short:** A fast, hungry predator who draws after every attack and gets stronger at 7 health or less [1][2][3].
 
-### Plan A: Hunt at low health
-**Goal:** Get to 7 health and stay there · **How:** Feeding and Wounded beast power up; heal with Ravenous lunge and Tooth and tail · **Watch out:** combo fighters can finish him.
+### Plan A: Hunt them down
+**Goal:** Attack every turn and out-draw them [3] · **How:** move 3, Traveler of the night and Unsettle keep them in reach and short of cards [1][3] · **Watch out:** overdrawing into exhaustion [3].
 
-### Plan B: Control the draw
-**Goal:** Draw only when it helps · **How:** double attack and draw against aggro; skip the draw in a value game · **Watch out:** long games hurt him.
+### Plan B: Live on the edge
+**Goal:** Sit at 7 health or below [2] · **How:** Feeding and Wounded beast power up; Ravenous lunge and Tooth and tail keep him alive [1][2] · **Watch out:** combo opponents can finish him [4].
 
 ### How they lose
-- He runs out of cards in a long game.
-- One-turn combos kill him at low health.
+- Exhaustion [3].
+- Long games [2].
 
 ### Key cards
-- **The more they struggle**: twice their printed value.
-- **Feeding**: action gain and heal at 7 or less.
+- **The more they struggle**: twice their card's printed value [1].
+- **Blood in the air**: boostable after a won combat [1].
 
 ### Tips
-- Attack every turn.
-- Keep your hand at 5 to 6 cards.
+- You don't have to draw every time; it depends on the opponent [5].
+- Keep about 5–6 cards [6].
+
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 3*, Chupacabra deck.
+2. u/TheEliteB3aver. Comment on "Tips on Volume 3." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1mieh3j/
+3. u/Rexmustwreck. Comment on "Tips on Volume 3" (see [2]).
+4. u/Professional_Cow9660. Comment on "Tips - Chupacabra." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1uzx2ta/
+5. u/TitanasGios. Comment on "Tips - Chupacabra" (see [4]).
+6. u/LabRat2329. Comment on "Tips - Chupacabra" (see [4]).
 
 ---
 
