@@ -1752,50 +1752,66 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: yennefer_triss -->
 ## Yennefer & Triss
 
-**In short:** Two ranged glass-cannon sorceresses who win the value game with big attacks and discards.
+**In short:** Two fragile ranged sorceresses, one hero and one sidekick, who win the value game with heavy attacks and punishing discards [1][2][3].
 
 ### Plan A: Yennefer leads
-**Goal:** Burst them when their defenses run out · **How:** Incinerate (7) plus her uncancellable boosts · **Watch out:** boost values are low; boost only for real damage.
+**Goal:** Big hits once their defenses are gone [4] · **How:** uncancellable boosts and Incinerate when the opponent is low on cards [1][5] · **Watch out:** boosts are small, so don't boost every attack [6].
 
 ### Plan B: Triss leads
-**Goal:** Punish melee fighters · **How:** each scheme deals 2 to a fighter next to Triss · **Watch out:** she must stand in melee range.
+**Goal:** Scheme damage on adjacent opponents [4] · **How:** play every scheme, and keep Triss back so attackers end beside her [4][6] · **Watch out:** melee range is dangerous [7].
 
 ### How they lose
-- Steady aggression breaks their low health.
-- The sidekick dies early.
+- Low health under steady pressure [3].
+- Few true defense cards [2].
 
 ### Key cards
-- **Merigold's Hailstorm**: discard 2, take 3, or mill 4.
-- **Incinerate**: discard 2 or take 7.
+- **Merigold's Hailstorm**: one of the strongest attacks printed [6].
+- **Incinerate**: a 7 they must discard 2 to ignore [1].
 
 ### Tips
-- Use Incinerate when their hand is small.
-- Pick Triss only against melee fighters.
+- Keep your distance and hoard defenses [3].
+- Make the opponent pay for every boost [8].
+
+### References
+1. Restoration Games. *Unmatched: The Witcher: Realms Fall*, Yennefer & Triss deck.
+2. u/Derf1OO. Comment on "Tactics against Triss/Yennifer." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1oylxqw/
+3. u/GambuzinoSaloio. Comment on "Yennefer and Triss strategies." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1mc93cd/
+4. u/Megabro_SgOwDm. Comment on "Yennefer and Triss strategies" (see [3]).
+5. u/Affectionate_Lead907. Comment on "Yennefer and Triss strategies" (see [3]).
+6. u/RGCarter. Comment on "Yennefer and Triss strategies" (see [3]).
+7. u/tundranocaps. Reply in "In which matchups would Triss be better than Yen?" *r/Unmatched*, Reddit, 2024. https://www.reddit.com/r/Unmatched/comments/1hch4gt/
+8. u/ServantOfTheShepherd. Comment on "Tactics against Triss/Yennifer" (see [2]).
 
 ---
 
 <!-- id: philippa_eilhart -->
 ## Philippa Eilhart
 
-**In short:** A ranged sorceress who refills to 4 cards every turn and drains the opponent's hand.
+**In short:** A ranged sorceress who refills to 4 cards every turn, so she can attack relentlessly or stall with discards and hand control [1][2][3].
 
 ### Plan A: Attack every turn
-**Goal:** Pressure they can't match · **How:** attack with Regicide, Cunning and Owlform, then draw back to 4 · **Watch out:** her deck can run out.
+**Goal:** Constant pressure [2] · **How:** boost and attack freely, since her ability draws you back up; Polymorphy keeps her in their zone [1][2] · **Watch out:** opponents with strong draw [2].
 
-### Plan B: Stall and squeeze
-**Goal:** Grind fighters who burn out · **How:** Redanian plot, Do my bidding and Spymaster's ruse strip their hand · **Watch out:** go aggressive against Ciri or Sinbad.
+### Plan B: Stall and control
+**Goal:** Grind a card advantage [3] · **How:** discards and hand peeks, Spellbreaker as a pass, Dijkstra as a blocker [1][3] · **Watch out:** losing Dijkstra early [3].
 
 ### How they lose
-- Heavy hitters kill her fast.
-- She struggles to find defenses.
+- Opponents who keep hand advantage [2].
+- Few defenses that truly protect her [4].
 
 ### Key cards
-- **Polymorphy**: place anywhere, move 5.
-- **Backup plan**: health to 5, or draw 3.
+- **Do my bidding**: picks the card they must play [1].
+- **Polymorphy**: the best escape card in the game [3].
 
 ### Tips
-- Use Spellbreaker as a pass when ahead.
-- Keep Dijkstra between Philippa and the enemy.
+- Going first with a turn-1 attack is ideal [2].
+- Choose your plan by hand, map and opponent [3].
+
+### References
+1. Restoration Games. *Unmatched: The Witcher: Realms Fall*, Philippa Eilhart deck.
+2. u/Atherious258. Comment on "Philippa strategy." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1n3cksy/
+3. u/Biggest_Lemon. Comment on "Philippa strategy" (see [2]).
+4. u/Traditional_Hat_8120. Reply in "Philippa strategy" (see [2]).
 
 ---
 

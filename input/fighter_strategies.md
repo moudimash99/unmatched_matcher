@@ -2785,78 +2785,105 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 <!-- id: yennefer_triss -->
 ## Yennefer & Triss
 
-**In short:** Two ranged sorceresses: one is the 14-health hero, the other a 6-health sidekick. They're glass cannons that win the value game: big attacks that cost the opponent cards, forced discards and burst damage.
+**In short:** Two ranged sorceresses: at the start of the game one becomes the 14-health hero and the other a 6-health sidekick, both with 2 movement [1]. As hero, Yennefer may boost her attacks, and that boost can't be cancelled; Triss deals 2 damage to an adjacent fighter after she plays a scheme [1]. They are strong at the value game [2], but fragile [3].
 
 ### Plan A: Yennefer leads
-**Goal:** Wait until the opponent runs out of good defenses, then hit hard.
-**How to do it:** Pick Yennefer as the hero in most matchups. Sorceress of Vengerberg lets her boost every attack, and the boost can't be cancelled. Incinerate is a 7 whose effect can't be cancelled: the opponent can only ignore its value by discarding 2 cards. Save it for when their hand is small, then boost it. Advisor to the king heals each of your fighters 1, draws 1 and adds +1 to all your boost values, but it's discarded if you don't attack that turn.
-**Watch out for:** Most of their boost values are only 1 or 2. Boost only when it adds real damage and you can afford the card.
+**Goal:** Wait until the opponent is out of strong defenses, then hit for big damage [4].
+**How to do it:** The best moment is when they are low on cards: one player waited for a 2-card hand, then landed a boosted Incinerate, plus an extra boost after seeing a Feint, for 9 damage [5]. Incinerate is a 7 the defender can only ignore by discarding 2 cards [1]. Don't boost every attack: almost every card has a boost of 1 or 2, so boost only when it adds damage and you can spare the cards [6][7]; Yennefer mostly hits for 5s and 6s [7]. She is probably the better pick most of the time [7], and she is said to do better against ranged opponents [4].
+**Watch out for:** Opponents who draw a lot can afford the discard to ignore Incinerate [9].
 
 ### Plan B: Triss leads
-**Goal:** Punish melee fighters who end their turn next to her.
-**How to do it:** Merigold the Fearless deals 2 damage to a fighter adjacent to Triss each time she plays a scheme. Use her against melee fighters with high defenses or value-locking tricks, like Luke Cage, Bigfoot or Alice. Attack with Yennefer's "Any" cards so they fear Incinerate, and keep Triss away so they must come close to reach her. Then play schemes for free damage.
-**Watch out for:** Triss has to be in melee range, against fighters who hit hard there.
+**Goal:** Pile up scheme damage on adjacent opponents [4].
+**How to do it:** Triss suits melee opponents and high-defense decks, because her damage goes around their blocks [4][10][11]. Play all your schemes for as much automatic damage as you can [4]. Keep Triss away and attack with Yennefer's shared cards so they have to come to Triss and end their turn next to her [6]. She suits a longer game [3].
+**Watch out for:** She has to stand in melee range, which is risky against hard-hitting melee fighters [12][13].
 
 ### How they lose
-- Constant aggression: 14 and 6 health break quickly and they have only a handful of real defense cards.
-- The sidekick is killed first, which removes half their options.
-- Fighters with strong card draw (T. Rex, Alice, Little Red) shrug off the discards.
+- Low health; under enough pressure they must turn defensive [3]. Feints on attack hurt them [3].
+- Only 6 true defense cards, so steady pressure from a fighter who can draw through discards, or block big, wears them down [1][2].
+- Aggression: make every boost and every scheme cost them cards [2][14].
+- Lose the sidekick, and you lose half your options [15].
 
 ### Key cards
-- **Merigold's Hailstorm**: a 4 attack where the opponent picks discard 2, take 3, or lose their top 4 cards. One of the strongest attacks in the game.
-- **Incinerate**: the uncancellable 7.
-- **Magical barrier**: a 4 defense that heals 1.
-- **Paralyzing fetters**: locks their card at its printed value.
+- **Merigold's Hailstorm**: Triss's 4 that makes the opponent choose 2 discards, 3 damage, or 4 cards off their deck [1]; one of the strongest attacks printed [6]. Its boost of 3 is worth using once Triss is dead [6].
+- **Incinerate**: three copies; if Yennefer is the sidekick and dies, they become boost fodder [1][8].
+- **Paralyzing fetters**: locks the attack at its printed value [1].
+- **Advisor to the king**: heals each fighter 1, draws 1 and gives +1 to boosts, but is discarded if you didn't attack [1].
 
 ### Tips
-- If the sidekick dies, the hero can use her cards as boosts.
-- Echoing blast returns to your hand on a win; reuse it.
-- Lodge of sorceresses can backfire; check your hand first.
+- Keep your distance and hold as many defense cards as you can [3].
+- In 2v2 they are very strong [2].
 
-### Further reading
-- [Strategy Sunday Vol. 23: Yennefer & Triss](https://www.reddit.com/r/Unmatched/comments/1n56dad/): Reddit: Karma_Ger_Eng · video + infographic
-- [In which matchups would Triss be better than Yen?](https://www.reddit.com/r/Unmatched/comments/1hch4gt/): Reddit: Lumos_eriksian · thread
-- [Yennefer and Triss strategies](https://www.reddit.com/r/Unmatched/comments/1mc93cd/): Reddit: Life-Rip183 · thread
-- [Tactics against Triss/Yennifer](https://www.reddit.com/r/Unmatched/comments/1oylxqw/): Reddit: Megabro_SgOwDm · thread
-- [Yennefer & Triss - The Witcher Unmatched Fighter Review](https://www.youtube.com/watch?v=wXQtUyryXr0): To The Table Top! · video
-- [Strategy Sunday Vol. 23](https://www.youtube.com/watch?v=3NQE7MBkwcA): Karma · video
+### References
+1. Restoration Games. *Unmatched: The Witcher: Realms Fall*, Yennefer & Triss deck. Card text as recorded in `input/heroes.json`.
+2. u/Derf1OO. Comments on "Tactics against Triss/Yennifer" by u/Megabro_SgOwDm. *r/Unmatched*, Reddit, 16 November 2025. https://www.reddit.com/r/Unmatched/comments/1oylxqw/
+3. u/GambuzinoSaloio. Comment on "Yennefer and Triss strategies" by u/Life-Rip183. *r/Unmatched*, Reddit, 29 July 2025. https://www.reddit.com/r/Unmatched/comments/1mc93cd/
+4. u/Megabro_SgOwDm. Comment on "Yennefer and Triss strategies" (see [3]).
+5. u/Affectionate_Lead907. Comment on "Yennefer and Triss strategies" (see [3]).
+6. u/RGCarter. Comment on "Yennefer and Triss strategies" (see [3]).
+7. u/poindexterg. Replies in "In which matchups would Triss be better than Yen?" by u/Lumos_eriksian. *r/Unmatched*, Reddit, 12 December 2024. https://www.reddit.com/r/Unmatched/comments/1hch4gt/
+8. u/jclayton111. Reply in "In which matchups would Triss be better than Yen?" (see [7]).
+9. u/Available_Hawk_2300. Comment on "In which matchups would Triss be better than Yen?" (see [7]).
+10. u/Altruistic_File3686. Comments on "In which matchups would Triss be better than Yen?" (see [7]).
+11. u/HealthyVehicle7639. Comment on "Yennefer and Triss strategies" (see [3]).
+12. u/tundranocaps. Replies in "In which matchups would Triss be better than Yen?" (see [7]).
+13. u/TivaDi. Comment on "In which matchups would Triss be better than Yen?" (see [7]).
+14. u/ServantOfTheShepherd. Comment on "Tactics against Triss/Yennifer" (see [2]).
+15. u/GambuzinoSaloio. Comment on "Tactics against Triss/Yennifer" (see [2]).
+
+### Not cited
+- [Strategy Sunday Vol. 23: Yennefer & Triss](https://www.reddit.com/r/Unmatched/comments/1n56dad/): Reddit thread (read; only links the video)
+- Other comments in the three threads (read; name specific matchups only)
+- [Yennefer & Triss - The Witcher Unmatched Fighter Review](https://www.youtube.com/watch?v=wXQtUyryXr0): To The Table Top! · video (not yet reviewed)
+- [Strategy Sunday Vol. 23](https://www.youtube.com/watch?v=3NQE7MBkwcA): Karma · video (not yet reviewed)
 
 ---
 
 <!-- id: philippa_eilhart -->
 ## Philippa Eilhart
 
-**In short:** A ranged sorceress with 12 health and a spymaster sidekick, Dijkstra. She refills her hand to 4 at the end of every turn, so she can attack constantly without running dry, and much of her deck makes the opponent discard or lets her see their hand.
+**In short:** A ranged hero with 12 health and 2 movement, plus Dijkstra, a 6-health melee sidekick [1]. At the end of her turn she may draw up to 4 cards [1]. Most players run her aggressively, though a stalling value game also works [2][3][4].
 
 ### Plan A: Attack every turn
-**Goal:** Keep up pressure the opponent can't match.
-**How to do it:** Two Steps Ahead lets her draw up to 4 cards at the end of your turn, so aggression doesn't cost her resources. Attack every turn with cards worth blocking: Regicide is a 6 against heroes, Cunning (4) deals 2 unless they discard a card, and Lightning bolt hits everyone in her zone if she didn't maneuver. Owlform (3) gets +1 for each card you discard from your hand, which is cheap when you refill to 4 anyway. Polymorphy places her anywhere and sets her move to 5 for the turn, but it's discarded if she ends away from an enemy. The opponent either double maneuvers or keeps losing cards.
-**Watch out for:** Her deck can run out. Fighters who draw well keep up with her.
+**Goal:** Attack so steadily that the opponent either double maneuvers or keeps losing cards to block you [2].
+**How to do it:** Her attacks are low quality but hit hard enough that the opponent feels they must block, and her ability means aggression never runs her out of cards [2][4][5]. Boosting to attack is almost always worth it, since you draw back up [2]. Going first with a boosted maneuver and an attack on turn 1 is ideal; without that, start slow and turn up the aggression once they engage [2]. Polymorphy places her anywhere and sets her move to 5, but is discarded if she isn't in a zone with an opponent, so it rewards aggression [1][3]. Owlform, a 3 plus 1 per card discarded from hand, can also drive a hit-and-run game [1][4].
+**Watch out for:** Opponents who can draw and keep hand advantage through the pressure crush this plan; switch to value [2]. Pushing too hard can run her deck out [6].
 
-### Plan B: Stall and squeeze
-**Goal:** Win the slow game against fighters who burn out.
-**How to do it:** Use her discard and hand-peeking effects: Redanian plot ignores their value unless they discard, Do my bidding returns their card and picks which card they play instead, and Dijkstra's Spymaster's ruse makes them reveal 4 cards and discard 2 of your choice. Position Dijkstra so they can't reach Philippa without a double maneuver. Spellbreaker cancels their effects and ends the turn; use it as a pass when you're ahead. This works well against Medusa, Chupacabra and Hamlet.
-**Watch out for:** Against fighters who grow stronger over time, like Ciri or Sinbad, attack instead.
+### Plan B: Stall and control
+**Goal:** Keep your distance, attack about once a turn, and grind out an advantage [7].
+**How to do it:** She and Dijkstra have many discard and look-at-their-hand effects; strip the opponent down to a few good cards, so they must draw heavily, and you will often know when your big attacks can land [1][7]. Spellbreaker cancels effects and ends the turn; played first, it works as a pass when your hand is safe and you are ahead [1][7]. Use Polymorphy to escape, and put Dijkstra where they can't reach Philippa without double maneuvering [7]. Stalling suits opponents who burn out fast; against one who grows stronger the longer the game runs, attack [7].
+**Watch out for:** If Dijkstra dies before using Spymaster's ruse, you may have to switch to aggression [7]. One player finds her damage too low to finish games this way [8].
 
 ### How they lose
-- She's a glass cannon; heavy hitters kill her before her chip damage adds up.
-- Going first or a bad map can leave her behind.
-- Her deck is attack-heavy, so she can struggle to find defenses.
+- A first-turn or map disadvantage [2].
+- Opponents who keep hand advantage [2].
+- Her many attacks can leave her short of defenses, and her defenses set up counter-attacks rather than protect her [9].
+- Low health: a glass cannon [6].
 
 ### Key cards
-- **Polymorphy**: the best escape card in the game, and a 5-move reposition.
-- **Backup plan**: set her health to 5, or draw 3.
-- **Do my bidding**: lets you choose their attack for them.
-- **Blinding dust**: discard a card to deal its boost as damage.
+- **Do my bidding**: returns their attack and picks the card they must play [1]; ideally it pulls out a versatile card for more attacks later [2].
+- **Polymorphy**: called the best escape card in the game [7].
+- **Regicide**: 6 against a hero [1].
+- **Spymaster's ruse**: Dijkstra's scheme; they reveal 4, you discard 2 of them [1].
 
 ### Tips
-- Small maps make engaging easy; big maps reward Polymorphy's movement.
-- Her defenses set up counterattacks more than they protect her.
-- If Dijkstra dies early, switch to the aggressive plan.
+- A small map makes engaging easier; a big one makes the most of 5 movement [8].
+- Pick the plan by your hand, the map and the opponent [4][7].
+- Some rate her the weakest of her sets, but she has several playstyles [9].
 
-### Further reading
-- [Philippa strategy](https://www.reddit.com/r/Unmatched/comments/1n3cksy/): Reddit: DartsAreSick · thread
-- [Philippa - The Witcher Unmatched Fighter Review](https://www.youtube.com/watch?v=f5sD4kGI0Ls): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: The Witcher: Realms Fall*, Philippa Eilhart deck. Card text as recorded in `input/heroes.json`.
+2. u/Atherious258. Comment on "Philippa strategy" by u/DartsAreSick. *r/Unmatched*, Reddit, 29 August 2025. https://www.reddit.com/r/Unmatched/comments/1n3cksy/
+3. u/audiotarot. Comment on "Philippa strategy" (see [2]).
+4. u/Refweree. Comment on "Philippa strategy" (see [2]).
+5. u/ObjectiveAd3018. Reply in "Philippa strategy" (see [2]).
+6. u/GambuzinoSaloio. Comment on "Philippa strategy" (see [2]).
+7. u/Biggest_Lemon. Comments on "Philippa strategy" (see [2]).
+8. u/Atherious258. Replies in "Philippa strategy" (see [2]).
+9. u/Traditional_Hat_8120. Replies in "Philippa strategy" (see [2]).
+
+### Not cited
+- u/Ok_Persimmon9729 and u/lightblade13, comments on "Philippa strategy" (read; no advice)
+- [Philippa - The Witcher Unmatched Fighter Review](https://www.youtube.com/watch?v=f5sD4kGI0Ls): To The Table Top! · video (not yet reviewed)
 
 ---
 
