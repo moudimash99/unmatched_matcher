@@ -1655,87 +1655,107 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: houdini -->
 ## Houdini
 
-**In short:** A slippery magician whose cards do extra things when used as boosts. He pops up anywhere on the map and squeezes as much damage as possible out of every card.
+**In short:** A melee hero with 14 health and 2 movement, plus Bess (5 health) [1]. When he boosts a maneuver he may place himself in any space instead of moving [1]. Many of his cards also have boost effects that trigger when the card is used to boost [2]. Sources call him one of the most creative and explosive fighters [3][4], and players rate him top tier [5].
 
-### Plan A: Turn every card into damage
-**Goal:** Kill the opponent before a long, grinding game wears him down.
-**How to do it:** Many of his cards have a second effect when used as a boost. Misdirection's boost deals 2 damage to any fighter, so three copies are worth 6 damage you don't need to land in combat. The Big Reveal can be boosted twice, then returns one boost card to your hand. Boosting it with A Magician Never Reveals His Secrets (boost 4) and Misdirection makes a 7-value attack plus 2 damage, and Misdirection comes back. Set the Stage's boost lets you see their hand and remove their best defense before you attack. Bait strong defenses out with weaker cards first.
-**Watch out for:** He has few defenses and 14 health, so he can't win a slow game.
+### Plan A: Boost for value
+**Goal:** Turn every card into damage: bait out defenses with weaker cards, deal damage with strong ones [6].
+**How to do it:** Boost a maneuver to appear anywhere [1], picking boost cards with useful effects; don't boost movement with cards worth 3 or 4 boost that should go into attacks [6]. According to Gridbeast, Set the Stage's boost effect lets you look at the opponent's hand and discard a card; And the Beautiful Bess! gains an action on your turn; Misdirection deals 2 damage to any fighter; and All Part of the Show heals 2 [2]. Misdirection's boost means three copies can deal 6 damage, at the cost of not using them as Feints [2][6][7].
+**Watch out for:** One player sums him up as "yes aggressive, no fatigue": he won't win a long, grinding game [6][7].
 
-### Plan B: Now you see him
-**Goal:** Never be where the opponent wants him.
-**How to do it:** When he maneuvers and boosts, his ability places him on any space instead of moving. Grand Escape (a defense you can boost) places him anywhere if you win the combat. Vanishing Act moves a fighter 3 spaces through enemies, and Smoke and Mirrors swaps him with Bess mid-combat. All Part of the Show can't be canceled: if your fighter would be defeated, set their health to 4 and place them anywhere. Its boost heals him 2.
-**Watch out for:** Discard effects strip his key cards, and small maps leave him nowhere to hide.
+### Plan B: The Big Reveal
+**Goal:** Set up one devastating attack [2][3].
+**How to do it:** The Big Reveal is a 2-value attack you may boost twice, returning one of the boost cards to your hand [1]. Boost it with A Magician Never Reveals His Secrets (boost 4) and Misdirection for a 7 plus 2 damage, then take Misdirection back [2]. Sleight of Hand is a favorite boost too: +3, and it comes back to your hand [8]. The feared opening: boost a maneuver with Set the Stage, teleport next to the opponent, strip their best defense, then hit for 8 or 9 [3][6]. Feint-check first with For My Next Trick or Sleight of Hand [8].
+**Watch out for:** Don't launch The Big Reveal into a hand that may hold strong defenses [6].
 
 ### How they lose
-- Fighters who attack every turn run out his few defenses.
-- Discard effects remove The Big Reveal, Misdirection or Set the Stage.
-- He plays too defensively and gets out-valued in a long game.
+- Low health and few defense options [2][4].
+- Forced discards, which can take his key cards [2][9].
+- A long game, as he runs through his cards faster than most [6][10].
+- Opponents who keep a big hand, so he can't catch them without defenses [4][11].
 
 ### Key cards
-- **The Big Reveal**: boost twice and get one card back.
-- **Misdirection**: cancel their effects, or boost it for 2 auto damage.
-- **A Magician Never Reveals His Secrets**: cancels an effect that would look at your hand, or boosts for 4.
-- **Set the Stage** (Bess): draw 3, or boost it to see their hand and pick a discard.
+- **The Big Reveal**: his signature combo attack [2]. Opponents say you aren't safe until both copies are gone [12].
+- **A Magician Never Reveals His Secrets**: draw 2 and gain an action, or reveal it to cancel an effect that would let the opponent look at your hand [1]. Hold it against such effects; otherwise it's a 4 boost [2].
+- **Sleight of Hand**: return it to your hand and play a different card instead [1].
+- **All Part of the Show**: if your fighter is defeated, set their health to 4 and place them anywhere; it can't be cancelled [1]. Gridbeast prefers using it to heal [2].
+- **Smoke and Mirrors**: Houdini and Bess swap, and the other fighter enters the combat [1]; the best reason to keep Bess alive [2].
 
 ### Tips
-- Keep a sizable hand, with cheap cards like And the Beautiful Bess! to throw away to discard effects.
-- Use For My Next Trick to check whether they're holding a Feint.
-- Pick bigger maps where he can disappear.
+- Be content to take an attack now and then, rather than spend Misdirection on defense [7].
+- Bess barely serves as more than a body-blocker; her cards are mostly worth boosting [3].
+- Going first matters a lot for him [11].
 
-### Further reading
-- [Unmatched – Houdini](https://gridbeast.gg/unmatched-houdini/): Gridbeast · written guide
-- [Houdini tips and strategies?](https://www.reddit.com/r/Unmatched/comments/18d2ok3/): Reddit: delicate-jello · thread
-- [Tips for Houdini vs Genie](https://www.reddit.com/r/Unmatched/comments/1c9gp10/): Reddit: Reeebalt · thread
-- [Weekly Discussion: Battling Harry Houdini (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1sssmd3/): Reddit: LabRat2329 · thread
-- [HOUDINI VS THE GENIE - IS UNMATCHED](https://www.youtube.com/watch?v=i47pLhncBlc&t=546s): Lord of the Board · video
-- [Houdini - Unmatched Fighter Review](https://www.youtube.com/watch?v=nexf5onWJeI): To The Table Top! · video
-- [Houdini - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=UAM84ZlFD4A): Baked Goods · video
+### References
+1. Restoration Games. *Unmatched: Houdini vs. The Genie*, Houdini deck. Card text as recorded in `input/heroes.json` (boost effects are not recorded there).
+2. Gridbeast. "Unmatched – Houdini." *Gridbeast*. https://gridbeast.gg/unmatched-houdini/
+3. TFJ383. "An Unmatched Roster: Cast a Spell on Me." *BoardGameGeek*, 17 May 2024. https://boardgamegeek.com/thread/3302508/an-unmatched-roster-cast-a-spell-on-me
+4. u/Agentscarn05. Comment on "Weekly Discussion: Battling Harry Houdini (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 22 April 2026. https://www.reddit.com/r/Unmatched/comments/1sssmd3/
+5. u/LabRat2329. "Weekly Discussion: Battling Harry Houdini" (see [4]).
+6. u/d_Shirt. Comment on "Houdini tips and strategies?" by u/delicate-jello. *r/Unmatched*, Reddit, 7 December 2023. https://www.reddit.com/r/Unmatched/comments/18d2ok3/
+7. u/d_Shirt. Comments on "Tips for Houdini vs Genie" by u/Reeebalt. *r/Unmatched*, Reddit, 21 April 2024. https://www.reddit.com/r/Unmatched/comments/1c9gp10/
+8. u/Grujah. Comment on "Houdini tips and strategies?" (see [6]).
+9. u/delicate-jello. "Houdini tips and strategies?" (see [6]).
+10. u/Player_00000000001. Comment on "Weekly Discussion: Battling Harry Houdini" (see [4]).
+11. u/Jerry-Red. Comment on "Weekly Discussion: Battling Harry Houdini" (see [4]).
+12. u/Agentscarn05 and u/lega1988. Comments on "Weekly Discussion: Battling Harry Houdini" (see [4]).
+
+### Not cited
+- [HOUDINI VS THE GENIE - IS UNMATCHED](https://www.youtube.com/watch?v=i47pLhncBlc&t=546s): Lord of the Board · video (not yet reviewed)
+- [Houdini - Unmatched Fighter Review](https://www.youtube.com/watch?v=nexf5onWJeI): To The Table Top! · video (not yet reviewed)
+- [Houdini - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=UAM84ZlFD4A): Baked Goods · video (not yet reviewed)
 
 ---
 
 <!-- id: the_genie -->
 ## The Genie
 
-**In short:** A fast ranged fighter who treats his cards as fuel: he discards them for extra actions, chips away with small hits, and builds up to one explosive Three Wishes turn.
+**In short:** A solo ranged hero with 16 health and 3 movement who may discard a card at the start of each turn to gain an action [1]. He treats his cards as a resource as much as for their values [2]. His card values are low but his effects are flashy, and Three Wishes is the heart of his deck [2][3]. One analyst calls him one of the toughest fighters to play, but balanced and fair [3].
 
-### Plan A: The wish turn
-**Goal:** One huge turn that empties the opponent's hand and finishes them.
-**How to do it:** Each Three Wishes gains an action and lets you choose one effect: draw 5 cards, make all your cards' values 4 for the rest of the turn, or make each opponent discard 2 cards. Collect two or three of them with a big hand. Start the turn by discarding for an extra action, strip their hand with the discard wish, then attack while they can't defend. Choose "values are 4" when your attacks are weak; it pairs well with I Grant You Death and This is No Parlor Trick.
-**Watch out for:** He burns through his deck fast. Exhaustion is his biggest risk.
+### Plan A: Ping and pressure
+**Goal:** Wear the opponent down with small, steady damage and extra actions [4][5].
+**How to do it:** Most of his attacks deal little damage; he's good at slowly draining health with pings [4]. I Grant You Death deals 1 damage to an adjacent fighter, Imprisoned Wrath can discard 2 cards for 2 damage, and I Am Freed teleports him and damages everyone adjacent [1]. Use his ability when you hold 6 or more cards, and spend extra cards on Imprisoned Wrath or Your Wish is My Command when you'd otherwise discard at the hand limit [2]. I Am Freed lets him follow an opponent who moves away [6].
+**Watch out for:** He runs through his deck fast, so exhaustion is his biggest risk [2][5][7].
 
-### Plan B: Ping and pressure
-**Goal:** Wear the opponent down while you build toward the wish turn.
-**How to do it:** At the start of your turn, discard a card for an extra action. Do it whenever you hold 6 or more cards, so you never waste a discard at the end of your turn. Chip in damage with I Grant You Death (1 damage), I Am Freed (teleport, then 1 damage to everyone adjacent) and Imprisoned Wrath (discard 2 cards for 2 damage). On defense, I've Made Sultans Out of Less looks at their hand and removes their best card.
-**Watch out for:** His attacks are mostly low value. He wins with the combo and the chip damage, not big single hits.
+### Plan B: The wish turn
+**Goal:** Collect Three Wishes, then unleash them together in one explosive turn [2][8].
+**How to do it:** Three Wishes gains an action and either draws 5, makes your card values 4 for the turn, or makes each opponent discard 2 [1]. Gridbeast suggests waiting until you hold all three: use the discards to empty the opponent's hand, then the 4-value effect to attack into no defense [2]. One player saw over 15 damage in a single turn this way [8]. The discard wish is strongest when it can empty their whole hand [4]. Defensive draws such as Wishing For More Wishes and Prisoner's Torment set the turn up [4].
+**Watch out for:** Opponents can see a big-hand turn coming [5]; aware opponents keep 7 cards in hand to survive it [4]. Spending wishes carelessly can doom him [3]; one player uses them as late as possible to keep the threat alive [4].
 
 ### How they lose
-- He runs out of cards before landing the big turn.
-- His defenses are weak: Back In The Lamp is worth 0 and Prisoner's Torment 1.
-- Opponents keep their distance or have lots of cancels and high defenses.
-- The opponent sees the wish turn coming and keeps a big hand.
+- Exhaustion [2][5].
+- Weak defense cards [2].
+- Opponents who safely keep their distance, or have high defense and many cancels [2].
+- A solo fighter: always the target [5].
 
 ### Key cards
-- **Three Wishes**: everything revolves around it.
-- **Wishing For More Wishes**: draw 3 (opponent draws 1). It's a strong defense right before your turn.
-- **I've Made Sultans Out of Less**: see their hand and choose a discard.
-- **Back In The Lamp**: a 0-value defense that heals 4.
+- **Three Wishes**: his premiere card, around which every strategy is built [2].
+- **Back In The Lamp**: a 0-value defense that heals 4 [1], effectively blocking 4 [2].
+- **Wishing For More Wishes**: perhaps his best defense: you draw 3, they draw 1 [1][2].
+- **I've Made Sultans Out of Less**: look at their hand and choose a discard [1]. Strips their best defense before your turn [2][4].
+- **This is No Parlor Trick**: sets the opponent's card value to its boost [1]. Gridbeast always discards it [2]; another player finds it excellent against some opponents, and a guaranteed hit with the 4-value wish [4].
 
 ### Tips
-- This is No Parlor Trick is usually fodder for discards and boosts, except against fighters with high-value, low-boost cards.
-- Fake out the big turn sometimes, or attack with Feint during a "values are 4" wish.
-- Keep one real defense in hand at all times.
+- Keep at least one defense card in hand at all times [2].
+- An offensive Feint can ruin an escape card the opponent was saving [5].
+- Decide early whether this game is aggro, combo or fatigue, and adapt [4].
 
-### Further reading
-- [Unmatched – The Genie](https://gridbeast.gg/unmatched-the-genie/): Gridbeast · written guide
-- [How are you supposed to play The Genie?](https://www.reddit.com/r/Unmatched/comments/zz4w4t/): Reddit: Akiesph · thread
-- [Need Tips for The Genie](https://www.reddit.com/r/Unmatched/comments/1ah1yk6/): Reddit: Current_Scarcity7081 · thread
-- [Tips for Houdini vs Genie](https://www.reddit.com/r/Unmatched/comments/1c9gp10/): Reddit: Reeebalt · thread
-- [Need advice on genie vs sinbad](https://www.reddit.com/r/Unmatched/comments/1w07mo8/): Reddit: Caretaker_27 · thread
-- [HOUDINI VS THE GENIE - IS UNMATCHED](https://www.youtube.com/watch?v=i47pLhncBlc&t=96s): Lord of the Board · video
-- [The Genie - Unmatched Fighter Review](https://www.youtube.com/watch?v=enaUsIlGbjU): To The Table Top! · video
-- [The Genie - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=eA2MfPV0wp0): Baked Goods · video
-- [Strategy Sunday Vol. 20](https://www.youtube.com/watch?v=mq3EwElOakM): Karma · video
+### References
+1. Restoration Games. *Unmatched: Houdini vs. The Genie*, The Genie deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – The Genie." *Gridbeast*. https://gridbeast.gg/unmatched-the-genie/
+3. TFJ383. "An Unmatched Roster: Cast a Spell on Me." *BoardGameGeek*, 17 May 2024. https://boardgamegeek.com/thread/3302508/an-unmatched-roster-cast-a-spell-on-me
+4. u/LucaGardenall. Comments on "Need Tips for The Genie" by u/Current_Scarcity7081. *r/Unmatched*, Reddit, 2 February 2024. https://www.reddit.com/r/Unmatched/comments/1ah1yk6/
+5. u/D6Desperados. Comment on "How are you supposed to play The Genie?" by u/Akiesph. *r/Unmatched*, Reddit, 30 December 2022. https://www.reddit.com/r/Unmatched/comments/zz4w4t/
+6. u/Lucidproph3t. Comment on "Need Tips for The Genie" (see [4]).
+7. u/Delicious-Survey2915. Comment on "How are you supposed to play The Genie?" (see [5]).
+8. u/spartan_son. Comment on "How are you supposed to play The Genie?" (see [5]).
+
+### Not cited
+- [Tips for Houdini vs Genie](https://www.reddit.com/r/Unmatched/comments/1c9gp10/): Reddit: Reeebalt · thread (read; matchup-specific)
+- [Need advice on genie vs sinbad](https://www.reddit.com/r/Unmatched/comments/1w07mo8/): Reddit: Caretaker_27 · thread (read; matchup-specific)
+- [HOUDINI VS THE GENIE - IS UNMATCHED](https://www.youtube.com/watch?v=i47pLhncBlc&t=96s): Lord of the Board · video (not yet reviewed)
+- [The Genie - Unmatched Fighter Review](https://www.youtube.com/watch?v=enaUsIlGbjU): To The Table Top! · video (not yet reviewed)
+- [The Genie - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=eA2MfPV0wp0): Baked Goods · video (not yet reviewed)
+- [Strategy Sunday Vol. 20](https://www.youtube.com/watch?v=mq3EwElOakM): Karma · video (not yet reviewed)
 
 ---
 

@@ -1025,50 +1025,64 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: houdini -->
 ## Houdini
 
-**In short:** A slippery magician whose cards do extra things as boosts. He teleports and squeezes damage out of every card.
+**In short:** An explosive magician whose cards have boost effects, and who teleports anywhere when he boosts a maneuver [1][2][3].
 
-### Plan A: Turn every card into damage
-**Goal:** Kill before the long game · **How:** Misdirection boosts deal 2 each; The Big Reveal boosts twice and gets a card back · **Watch out:** few defenses and 14 health.
+### Plan A: Boost for value
+**Goal:** Turn every card into damage [4] · **How:** teleport with useful boost effects; Misdirection's boost deals 2 [2] · **Watch out:** he won't win a long game [4].
 
-### Plan B: Now you see him
-**Goal:** Never be where they want him · **How:** boosted maneuvers place him anywhere; Grand Escape, Vanishing Act, All Part of the Show · **Watch out:** discards and small maps.
+### Plan B: The Big Reveal
+**Goal:** One huge attack [2] · **How:** boost The Big Reveal twice, for example with Sleight of Hand, and take one card back [1][5] · **Watch out:** not into a hand full of defenses [4].
 
 ### How they lose
-- Constant attacks run out his defenses.
-- Discards strip his key cards.
+- Low health and few defenses [2].
+- Forced discards [2].
 
 ### Key cards
-- **The Big Reveal**: double boost.
-- **Misdirection**: a cancel, or 2 auto damage as a boost.
+- **The Big Reveal**: his signature combo [2].
+- **Sleight of Hand**: a +3 boost that comes back [5].
 
 ### Tips
-- Bait their defenses with weak cards.
-- Play on bigger maps.
+- Strip a defense with Set the Stage's boost before attacking [2][3].
+- Take hits rather than spend Misdirection [6].
+
+### References
+1. Restoration Games. *Unmatched: Houdini vs. The Genie*, Houdini deck.
+2. Gridbeast. "Unmatched – Houdini." https://gridbeast.gg/unmatched-houdini/
+3. TFJ383. "An Unmatched Roster: Cast a Spell on Me." *BoardGameGeek*, 2024. https://boardgamegeek.com/thread/3302508/
+4. u/d_Shirt. Comment on "Houdini tips and strategies?" *r/Unmatched*, Reddit, 2023. https://www.reddit.com/r/Unmatched/comments/18d2ok3/
+5. u/Grujah. Comment on "Houdini tips and strategies?" (see [4]).
+6. u/d_Shirt. Comment on "Tips for Houdini vs Genie." *r/Unmatched*, Reddit, 2024. https://www.reddit.com/r/Unmatched/comments/1c9gp10/
 
 ---
 
 <!-- id: the_genie -->
 ## The Genie
 
-**In short:** Uses cards as fuel for extra actions, chips away, and builds to one explosive Three Wishes turn.
+**In short:** A fast ranged djinn who discards cards for extra actions and builds toward an explosive turn with Three Wishes [1][2][3].
 
-### Plan A: The wish turn
-**Goal:** Empty their hand and finish them · **How:** stack Three Wishes; discard for actions, use the discard wish, then attack · **Watch out:** he burns his deck fast.
+### Plan A: Ping and pressure
+**Goal:** Steady chip damage [4] · **How:** I Grant You Death, Imprisoned Wrath and extra actions from his ability [1][2] · **Watch out:** exhaustion [2].
 
-### Plan B: Ping and pressure
-**Goal:** Chip damage · **How:** discard for actions; I Grant You Death, I Am Freed and Imprisoned Wrath · **Watch out:** his attacks are low value.
+### Plan B: The wish turn
+**Goal:** One explosive turn [2] · **How:** hold all three Three Wishes, empty their hand, then attack at 4 [2] · **Watch out:** opponents keep full hands against it [4].
 
 ### How they lose
-- Out of cards before the big turn.
-- Weak defenses.
+- Exhaustion and weak defenses [2].
+- Opponents who keep their distance [2].
 
 ### Key cards
-- **Three Wishes**: draw 5, set values to 4, or discard 2.
-- **I've Made Sultans Out of Less**: hand peek and discard.
+- **Three Wishes**: his premiere card [2].
+- **Back In The Lamp**: heal 4 on defense [1].
 
 ### Tips
-- Discard for an action whenever you hold 6+ cards.
-- Keep one real defense.
+- Always keep one defense card [2].
+- Use wishes late to keep the threat [4].
+
+### References
+1. Restoration Games. *Unmatched: Houdini vs. The Genie*, The Genie deck.
+2. Gridbeast. "Unmatched – The Genie." https://gridbeast.gg/unmatched-the-genie/
+3. TFJ383. "An Unmatched Roster: Cast a Spell on Me." *BoardGameGeek*, 2024. https://boardgamegeek.com/thread/3302508/
+4. u/LucaGardenall. Comment on "Need Tips for The Genie." *r/Unmatched*, Reddit, 2024. https://www.reddit.com/r/Unmatched/comments/1ah1yk6/
 
 ---
 
