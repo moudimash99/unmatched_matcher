@@ -3242,156 +3242,156 @@ The deck data has most of Pandora's card names in capitals; normal spelling is u
 <!-- id: leonardo -->
 ## Leonardo
 
-**In short:** A melee tactical leader with 16 health and a sturdy sidekick, Splinter (9 health). Every turn he can move any fighter 1 space, friend or foe, so he wins by setting up positions where his team surrounds or out-ranges the opponent.
+**In short:** A melee hero with 16 health and 2 movement, plus Splinter, a 9-health melee sidekick [1]. At the start of his turn he may move any fighter, friend or foe, up to 1 space [1][2]. The designers built him as the tactical leader: positioning, efficient attacks and teamwork, rewarding players who think a step ahead [2].
 
-### Plan A: Set the board
-**Goal:** Use Team Tactics every turn to get the perfect position before you act.
-**How to do it:** At the start of your turn, Team Tactics moves any fighter up to 1 space. Use it to pull an enemy next to Splinter, push them off a choke point, or step your own fighter into reach. Wise beyond his years (2) deals 2 damage if the opposing fighter is in fewer zones than Leonardo, and Splinter's Spatial awareness (3) deals 1 and draws 1 under the same condition, so stand on spaces that touch many zones. Leonardo leads moves every friendly fighter 3 spaces and draws a card.
-**Watch out for:** The effects that count zones depend on the map.
-
-### Plan B: Team up on them
-**Goal:** Hit hard once the opponent is next to both your fighters.
-**How to do it:** Fearless leader (3) gets +2 for each other friendly fighter adjacent to the opposing fighter. Katana is a plain 6 with nothing to cancel. Turtle power! (3) can be boosted. For Sensei (4) moves both fighters 1 space, and you may discard a card to gain an action. Protective father lets Splinter swap places with another friendly fighter, heals both 2 and gains an action, which rescues a hurt Leonardo.
-**Watch out for:** If Splinter dies, Fearless leader and Spatial awareness lose most of their value.
+### Plan A: Set up clean engagements
+**Goal:** Get the positioning right before every fight [2].
+**How to do it:** Use his ability on either side's fighters to set up the next battle [2]. Fearless leader is a 3, +2 for each other friendly fighter next to the opponent [1]. Leonardo leads moves each friendly fighter up to 3 spaces and draws a card [1]. Wise beyond his years deals 2 damage if the opponent is in fewer zones than Leonardo, and Splinter's Spatial awareness deals 1 and draws if they are in fewer zones than him [1]. In team games he is meant to be the group's anchor, shining when he supports allies [2]; Protective father lets Splinter swap with another friendly fighter, healing both 2 and gaining an action [1].
+**Watch out for:** The sources read so far say nothing about his weak points.
 
 ### How they lose
-- Splinter goes down and Leonardo is left without his teammate.
-- Mobile ranged fighters stay out of reach even after his 1-space nudges.
-- Small or open maps blunt his zone-count effects.
+- None of the sources read so far say.
 
 ### Key cards
-- **Katana**: his biggest plain attack.
-- **Heroes in a half shell**: a plain 5 defense.
-- **I have a plan**: discard a card to cancel their effects and ignore their value.
-- **Eat, sleep, and breath ninjutsu**: places each fighter next to yours elsewhere in their zone.
+- **Katana**: a plain 6-value attack [1].
+- **Heroes in a half shell**: a plain 5-value defense [1].
+- **I have a plan**: discard a card to cancel the attack's effects and ignore its value [1].
 
 ### Tips
-- Plan Team Tactics before every turn; it's free.
-- Keep Splinter close to Leonardo.
-- Quick strike (3) draws a card on attack or defense.
+- His ability can move an opposing fighter too [2].
 
-### Further reading
-- [From Leader to Wild Card: The Turtles of Unmatched Adventures](https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/): Restoration Games (official) · official article
-- [Leonardo  - Unmatched TMNT Fighter Review](https://www.youtube.com/watch?v=hR9D-w5OjlA): To The Table Top! · video
-- [Unmatched, Leonardo quick guide, overview and strategy ](https://www.youtube.com/watch?v=2CZ9xjRcsGQ): Taytertots · video
-- [Leonardo Advanced Strategy Guide](https://www.youtube.com/watch?v=lGVIKX-Wvvg): The Gaming Geek Net · video
+### References
+1. Restoration Games. *Unmatched Adventures: Teenage Mutant Ninja Turtles*, Leonardo deck. Card text as recorded in `input/heroes.json`.
+2. Restoration Games. "From Leader to Wild Card: The Turtles of Unmatched Adventures." *Restoration Games*. https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/
+
+### Not cited
+- [Leonardo - Unmatched TMNT Fighter Review](https://www.youtube.com/watch?v=hR9D-w5OjlA): To The Table Top! · video (not yet reviewed)
+- [Unmatched, Leonardo quick guide, overview and strategy](https://www.youtube.com/watch?v=2CZ9xjRcsGQ): Taytertots · video (not yet reviewed)
+- [Leonardo Advanced Strategy Guide](https://www.youtube.com/watch?v=lGVIKX-Wvvg): The Gaming Geek Net · video (not yet reviewed)
 
 ---
 
 <!-- id: donatello -->
 ## Donatello
 
-**In short:** A melee inventor with 14 health and a robot sidekick, Metalhead (7 health). He stacks his own deck, plays three one-off inventions that give permanent bonuses, then cashes in with burst turns and lots of unblockable damage.
+**In short:** A melee hero with 14 health and 2 movement, plus Metalhead, a 7-health melee sidekick [1]. When he maneuvers he may draw 2 instead of 1 and put a card from his hand on the bottom of his deck [1]. His three inventions, once played, give a permanent bonus to attacks, defenses or schemes [1][2]. He is built for careful planning and control [2].
 
-### Plan A: Build up to your inventions
-**Goal:** Get permanent bonuses, especially +1 on attacks, before you commit.
-**How to do it:** Inventive lets him draw 2 instead of 1 when he maneuvers, then put a card from his hand on the bottom of his deck. Each invention gets tucked under his card after use and its bonus lasts all game. Electro grenade gives +1 to all his attacks, Self defense grid +1 to all defenses, and Smoke bomb gains an action whenever he plays a scheme. Until you have the +1 attack, attack little and only with weak cards. Bottom your boostable cards and high-boost cards meanwhile, since Metalhead's Untested enhancements adds the boost of your bottom card. Poke and run, or double maneuver.
-**Watch out for:** He burns through his deck fast because of all the drawing.
+### Plan A: Stack the deck, then strike
+**Goal:** Hold back until Electro grenade gives +1 to your attacks, then go all in [3][4].
+**How to do it:** Play as few attacks as you can before the +1, and only with low, weak cards [3]. Use his ability to put your boostable and high-boost cards on the bottom of the deck until then [3][4]. Remember what you put there: Metalhead's Untested enhancements adds the boost of the bottom card [1][3]. Keep Metalhead out of the action until he can really hit [3]. Poke and run, or double maneuver to force the opponent to boost or discard [4]. Once you have the +1, which usually doesn't take long, pressure hard; Turtle power! can be boosted towards 7 [1][3].
+**Watch out for:** He goes through his deck fast because of all his draw [3].
 
-### Plan B: Unblockable damage and burst turns
-**Goal:** Pile up damage that defenses can't stop.
-**How to do it:** Party wagon! moves a friendly fighter 5 spaces through enemies and deals 2 to one they passed. Bo staff (defense 3) deals 1 to an adjacent enemy and draws. Thinking ahead (3) puts a card from your discard pile on the bottom of your deck if you win; use it to recycle Party wagon! Donatello does machines returns an attack, defense or versatile card from your discard pile to your hand and draws. One player counted up to about 14 unblockable damage in a game. With Smoke bomb's bonus, chain schemes into a 4-action combo turn.
-**Watch out for:** Thinking ahead often fails against high defenses or effect cancels.
+### Plan B: Pile up automatic damage
+**Goal:** Chip the opponent with effects their defenses can't stop [5].
+**How to do it:** Bo staff deals 1 on defense, Party wagon! moves a fighter up to 5 spaces through opponents and deals 2 to one they passed, and Thinking ahead and Donatello does machines can bring those cards back [1][5]. Use Donatello does machines to return Thinking ahead, and Thinking ahead to put Party wagon! back in the deck, for up to about 16 damage in a game [5][6]. Smoke bomb gains an action per scheme removed, then one each time you play a scheme [1]. Late in the game it gives a 4-action turn; played early, it saves Party wagons and Metalhead schemes for a big burst [4]. With good play you can get two 4-action combo turns [4].
+**Watch out for:** Against some opponents Thinking ahead rarely wins its combat, so the boost cards are your main damage [7][8].
 
 ### How they lose
-- He runs out of cards from over-drawing.
-- He attacks before his +1 is online and wastes his best cards.
-- Metalhead is caught early.
+- Opponents who block or cancel his Thinking aheads keep his recursion from working [7].
+- Overdrawing his own deck [3].
 
 ### Key cards
-- **Electro grenade**: +1 to every attack for the rest of the game. Removing attack or versatile cards from your discard pile adds +1 each to this attack.
-- **Smoke bomb**: removes schemes from your discard pile for actions now, then a permanent action per scheme.
-- **Party wagon!**: 2 unblockable damage and 5 movement.
-- **Heroes in a half shell**: a plain 5 defense.
+- **Electro grenade**: the +1 to attacks you are building towards [1][3][4].
+- **Self defense grid**: heals per defense or versatile card removed, then +1 to your defenses [1].
+- **Heroes in a half shell**: a plain 5-value defense [1].
+- **Smoke bomb**: players disagree. One calls it a trap, since Donatello already draws through his deck fast, and just boosts with it [3][7]; another says its timing matters and it sets up his combo turns [4].
 
 ### Tips
-- Remember which cards you've put on the bottom.
-- Keep Metalhead away from fights until he can hit hard.
-- Short circuit cancels after-combat effects; use it against cards that hurt after combat.
+- You will rarely double attack until your combo turns [4].
+- Recurring Turtle power! or Untested enhancements may beat recurring 2 damage [7].
 
-### Further reading
-- [From Leader to Wild Card: The Turtles of Unmatched Adventures](https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/): Restoration Games (official) · official article
-- [1v1 Strategies for Donatello?](https://www.reddit.com/r/Unmatched/comments/1q3wu0t/): Reddit: LabRat2329 · thread
-- [Donatello - Unmatched TMNT Fighter Review](https://www.youtube.com/watch?v=Hg-PGA0_00o): To The Table Top! · video
-- [Unmatched, Donatello quick guide, overview and stratagy](https://www.youtube.com/watch?v=68lXV-XjUPM): Taytertots · video
-- [Donatello Advanced Strategy Guide](https://www.youtube.com/watch?v=6atiqWL0ef0): The Gaming Geek Net · video
+### References
+1. Restoration Games. *Unmatched Adventures: Teenage Mutant Ninja Turtles*, Donatello deck. Card text as recorded in `input/heroes.json`.
+2. Restoration Games. "From Leader to Wild Card: The Turtles of Unmatched Adventures." *Restoration Games*. https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/
+3. u/TheEliteB3aver. Comments on "1v1 Strategies for Donatello?" by u/LabRat2329. *r/Unmatched*, Reddit, 4 January 2026. https://www.reddit.com/r/Unmatched/comments/1q3wu0t/
+4. u/Dear_Huckleberry_394. Comment on "1v1 Strategies for Donatello?" (see [3]).
+5. u/TivaDi. Comment on "1v1 Strategies for Donatello?" (see [3]).
+6. u/roi81. Reply in "1v1 Strategies for Donatello?" (see [3]).
+7. u/LabRat2329. Reply in "1v1 Strategies for Donatello?" (see [3]).
+8. u/TivaDi. Reply in "1v1 Strategies for Donatello?" (see [3]).
+
+### Not cited
+- [Donatello - Unmatched TMNT Fighter Review](https://www.youtube.com/watch?v=Hg-PGA0_00o): To The Table Top! · video (not yet reviewed)
+- [Unmatched, Donatello quick guide, overview and stratagy](https://www.youtube.com/watch?v=68lXV-XjUPM): Taytertots · video (not yet reviewed)
+- [Donatello Advanced Strategy Guide](https://www.youtube.com/watch?v=6atiqWL0ef0): The Gaming Geek Net · video (not yet reviewed)
 
 ---
 
 <!-- id: raphael -->
 ## Raphael
 
-**In short:** An aggressive melee brawler with 17 health and a ranged sidekick, Casey Jones (8 health). The first time he loses a combat each turn he gains an action, and many cards hit harder after a loss, so he keeps charging in and pays the opponent back.
+**In short:** A melee hero with 17 health and 2 movement, plus Casey Jones, an 8-health ranged sidekick [1]. The first time he loses a combat each turn, he gains an action [1]. He is the aggressive brawler: get in close, trade blows and keep up the pressure [2][3].
 
-### Plan A: Run at them
-**Goal:** Keep constant pressure so the opponent never feels safe attacking.
-**How to do it:** Anger Issues gains you an action the first time you lose a combat each turn. Lead with a cheap attack. If it loses, the extra action and Payback time! (2, but 5 if you lost a combat this turn) let you hit again. Let's do this! (1) draws 1, or 2 if you win. Crowd control (2) draws and deals 1 for each adjacent enemy. Use Casey to pin opponents and to burn their defenses from range: Batter up! knocks the target 3 spaces if he wins, and Slapshot is a 6 when he's adjacent. Raphael is cool but rude deals 1 to each enemy next to your fighters and draws.
-**Watch out for:** Don't chase the bonus action every turn. If the opponent holds many cards, use the extra action to step away instead.
+### Plan A: Keep running at them
+**Goal:** Pressure constantly, so the opponent never feels safe attacking back [3].
+**How to do it:** He has plenty of draw and enough strong attacks to keep pushing [3]. Attack with your red cards most of the time and save your versatile and defense cards to discard into Unbridled rage [4], a 3 that gets +2 for each defense or versatile card discarded [1]. Don't be afraid to throw a big attack as your first action: an opponent who reads it as bait can get one-shot by Unbridled rage [3]. Don't chase the extra action every turn either; a strong first attack can catch a poor defense [4]. Use Casey to set up pins [3], and his ranged attacks to burn defenses and set up Raphael's bonus-action attacks [5]. Payback time! becomes a 5 after you lose a combat [1].
+**Watch out for:** Don't overextend: outside Relentless he has no draw on defense and dislikes being pressured [6]. Use the extra action to maneuver away if the opponent holds too many cards [6].
 
-### Plan B: Unbridled rage
-**Goal:** A surprise one-shot.
-**How to do it:** Unbridled rage (3) gets +2 for each defense or versatile card you discard into it. Save spare versatile and defense cards for it, and attack mostly with your red attack cards. Don't be afraid to throw it as your first action: opponents may block lightly, expecting bait.
-**Watch out for:** Don't dump all your defenses into it unless it's lethal.
+### Plan B: Lean on a small defensive core
+**Goal:** Block with only a few cards and treat the rest as attacks [3].
+**How to do it:** Ideally block only with Relentless, Sai and Heroes in a half shell [3]. Taking an undefended hit now and then is fine, to keep cards for Unbridled rage [4]. Relentless shuffles itself back into your deck and draws a card [1]; play it as soon as you get it [3].
+**Watch out for:** Don't dump all your defenses into Unbridled rage unless it is lethal [4].
 
 ### How they lose
-- He overextends and runs out of defenses; he has no defensive draw except Relentless.
-- Aggressive opponents with lots of draw out-pace him.
-- Casey is ignored or avoided, and Raphael fights alone.
+- Double maneuvering every turn while attacking only with weak cards let one aggressive opponent run him out of defenses [7].
+- Getting pressured when he has overextended [6].
 
 ### Key cards
-- **Relentless**: shuffles itself back into your deck and draws. Play it as soon as you get it, usually on defense where it's harder to cancel.
-- **Sai**: a plain 4 versatile, one of his main defenses.
-- **Heroes in a half shell**: a plain 5 defense.
-- **Break something**: cancels their during- and after-combat effects; if there were none, deals 2 to an adjacent enemy.
+- **Unbridled rage**: his finisher [3][4].
+- **Relentless**: one player says use it only on defense, where it is less likely to be cancelled [3]; another uses it on attack too when the opponent can't cancel it [4].
+- **Sai** and **Heroes in a half shell**: plain 4 and 5 values [1], his main blocks [3].
+- **Break something**: cancels during- and after-combat effects; if none were cancelled, 2 damage to an adjacent opponent [1].
 
 ### Tips
-- Block mainly with Relentless, Sai and Heroes in a half shell.
-- Taking an undefended hit to save cards for Unbridled rage is sometimes right.
-- Against Chupacabra, drag him below 7 health fast, then finish.
+- Casey's Slapshot is a 6 when he is next to the opponent [1].
 
-### Further reading
-- [From Leader to Wild Card: The Turtles of Unmatched Adventures](https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/): Restoration Games (official) · official article
-- [Tips for Raphael vs aggro](https://www.reddit.com/r/Unmatched/comments/1rx0oom/): Reddit: HEJscaper · thread
-- [Raphael - Unmatched TMNT Fighter Review](https://www.youtube.com/watch?v=IUsvOVTWMaA): To The Table Top! · video
-- [Unmatched, Raphael quick guide, overview & strategy ](https://www.youtube.com/watch?v=hNLOPvSJAIQ): Taytertots · video
+### References
+1. Restoration Games. *Unmatched Adventures: Teenage Mutant Ninja Turtles*, Raphael deck. Card text as recorded in `input/heroes.json`.
+2. Restoration Games. "From Leader to Wild Card: The Turtles of Unmatched Adventures." *Restoration Games*. https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/
+3. u/CauseImBatman02. Comment on "Tips on playing Raphael Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 8 May 2026. https://www.reddit.com/r/Unmatched/comments/1t7hmf0/
+4. u/Traditional_Hat_8120. Comment on "Tips on playing Raphael Effectively?" (see [3]).
+5. u/RumpusRoomMinis. Comment on "Tips for Raphael vs aggro" by u/HEJscaper. *r/Unmatched*, Reddit, 18 March 2026. https://www.reddit.com/r/Unmatched/comments/1rx0oom/
+6. u/polly2000000000. Comment on "Tips on playing Raphael Effectively?" (see [3]).
+7. u/HEJscaper. "Tips for Raphael vs aggro" (see [5]).
+
+### Not cited
+- u/TheEliteB3aver and u/JezzCrist, comments on "Tips for Raphael vs aggro" (read; about the opponent)
+- [Raphael - Unmatched TMNT Fighter Review](https://www.youtube.com/watch?v=IUsvOVTWMaA): To The Table Top! · video (not yet reviewed)
+- [Unmatched, Raphael quick guide, overview & strategy](https://www.youtube.com/watch?v=hNLOPvSJAIQ): Taytertots · video (not yet reviewed)
 
 ---
 
 <!-- id: michelangelo -->
 ## Michelangelo
 
-**In short:** A fast melee wild card with 14 health, move 3, and a ranged sidekick, April O'neil (6 health). He holds only 3 cards but draws after every attack and scheme, so he cycles quickly and chains actions into one heavy-hitting turn.
+**In short:** A melee hero with 14 health and 3 movement, plus April O'Neil, a 6-health ranged sidekick who also moves 3 [1]. He draws a card after each attack or scheme, but his starting and maximum hand size is 3 [1][2]. The designers call him the agile wild card: speed, flexibility and a bit of chaos [2].
 
-### Plan A: Chain actions
-**Goal:** String several attacks and schemes together in one turn.
-**How to do it:** Pizza Party draws a card after each attack or scheme, and caps his starting and maximum hand at 3. Every action refills your hand, so chain cards that gain actions. Boisterous beatdown (2) gains an action, or 2 if you win. Hi-yaaaaah!! (4) deals 1 to an adjacent enemy and lets you bottom a card from your hand to gain an action. April's Hard-hitting investigation (0) deals 1 damage and gains an action. Finish with Cowabunga!! (3), which gets +1 for each other card you played this turn.
-**Watch out for:** A 3-card hand leaves little for defense after a big turn.
-
-### Plan B: Cycle to the perfect moment
-**Goal:** Dig through your deck for the right cards, then strike.
-**How to do it:** April's Shell insertion picks two of: each opponent discards 1, move a friendly fighter 2, bottom a card to gain an action, or shuffle 2 random cards from your discard pile back into your deck. Guaranteed delivery (3) lets you bottom a card to cancel their effects, and draws 2 if your hand is empty. Back for seconds (defense 2) shuffles 2 random cards from your discard pile back into your deck. Let's go moves a friendly fighter 3 spaces.
-**Watch out for:** All that cycling burns through your deck, and bottomed cards come back late.
+### Plan A: Cycle and burst
+**Goal:** Dart around the board, cycle through cards and set up the perfect moment for a heavy hit [2].
+**How to do it:** His small hand gives him a different approach from the other Turtles [2]. Several cards gain actions: Boisterous beatdown gains 1, or 2 if you won; April's Hard-hitting investigation deals 1 and gains 1; Hi-yaaaaah!! can put a card on the bottom of your deck for an action [1]. Cowabunga!! gets +1 for each other card you played this turn [1]. Let's go moves a friendly fighter up to 3 spaces [1].
+**Watch out for:** The sources read so far say nothing about his weak points.
 
 ### How they lose
-- A small hand runs out of defenses against steady pressure.
-- April (6 health) is picked off, and his action chains shrink.
-- Feints and cancels break a combo turn halfway.
+- None of the sources read so far say.
 
 ### Key cards
-- **Cowabunga!!**: the combo finisher.
-- **Boisterous beatdown**: up to 2 extra actions.
-- **Heroes in a half shell**: a plain 5 defense; worth keeping in your small hand.
-- **Michelangelo is a party dude!!**: heals each friendly fighter 1.
+- **Guaranteed delivery**: bottom a card to cancel the opponent's effects; with an empty hand it draws 2 [1].
+- **Back for seconds**: a 2-value defense that shuffles 2 random cards from your discard pile back into your deck [1].
+- **Heroes in a half shell**: a plain 5-value defense [1].
+- **Shell insertion**: April's scheme with two of four effects, including a discard for each opponent [1].
 
 ### Tips
-- Use his move 3 to dart in and out.
-- Count your actions before starting a combo.
-- Keep one defense in hand at the end of your turn.
+- He is meant for fast, opportunistic strikes [2].
 
-### Further reading
-- [From Leader to Wild Card: The Turtles of Unmatched Adventures](https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/): Restoration Games (official) · official article
-- [Michelangelo - Unmatched TMNT Fighter Review](https://www.youtube.com/watch?v=qz_IjUhDkIs): To The Table Top! · video
-- [Unmatched, Michelangelo quick guide, overview & strategy ](https://www.youtube.com/watch?v=4OvqCLSRhcw): Taytertots · video
+### References
+1. Restoration Games. *Unmatched Adventures: Teenage Mutant Ninja Turtles*, Michelangelo deck. Card text as recorded in `input/heroes.json`.
+2. Restoration Games. "From Leader to Wild Card: The Turtles of Unmatched Adventures." *Restoration Games*. https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/
+
+The text of Nunchaku in `input/heroes.json` names a different fighter, which looks like a data error, so the card isn't described here.
+
+### Not cited
+- [Michelangelo - Unmatched TMNT Fighter Review](https://www.youtube.com/watch?v=qz_IjUhDkIs): To The Table Top! · video (not yet reviewed)
+- [Unmatched, Michelangelo quick guide, overview & strategy](https://www.youtube.com/watch?v=4OvqCLSRhcw): Taytertots · video (not yet reviewed)
 
 ---
 

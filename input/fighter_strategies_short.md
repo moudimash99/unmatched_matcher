@@ -2052,100 +2052,115 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: leonardo -->
 ## Leonardo
 
-**In short:** A melee tactical leader who moves any fighter 1 space every turn to set up his team.
+**In short:** The tactical leader: he nudges any fighter 1 space each turn to set up clean fights alongside Splinter [1][2].
 
-### Plan A: Set the board
-**Goal:** Perfect positioning before you act · **How:** Team Tactics nudges friend or foe; Leonardo leads moves everyone 3 · **Watch out:** zone effects depend on the map.
-
-### Plan B: Team up on them
-**Goal:** Hit with Splinter alongside · **How:** Fearless leader gets +2 per ally next to the target · **Watch out:** losing Splinter weakens him.
+### Plan A: Set up clean engagements
+**Goal:** Win the positioning [2] · **How:** his ability, Fearless leader and Leonardo leads [1][2] · **Watch out:** not yet covered by the sources.
 
 ### How they lose
-- Splinter dies.
-- Mobile ranged fighters stay away.
+- Not yet covered by the sources.
 
 ### Key cards
-- **Katana**: a plain 6.
-- **Heroes in a half shell**: a plain 5 defense.
+- **Katana**: a plain 6 [1].
+- **I have a plan**: cancel and ignore for a discard [1].
 
 ### Tips
-- Use Team Tactics every turn.
-- Keep Splinter close.
+- His ability can move opponents too [2].
+
+### References
+1. Restoration Games. *Unmatched Adventures: Teenage Mutant Ninja Turtles*, Leonardo deck.
+2. Restoration Games. "From Leader to Wild Card: The Turtles of Unmatched Adventures." https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/
 
 ---
 
 <!-- id: donatello -->
 ## Donatello
 
-**In short:** A melee inventor who stacks his deck, unlocks permanent bonuses, then bursts with unblockable damage.
+**In short:** A planner who stacks his deck with his maneuvers, builds permanent inventions, then strikes with boosted attacks and automatic damage [1][2][3].
 
-### Plan A: Build up to your inventions
-**Goal:** Get +1 on attacks first · **How:** draw 2 on maneuvers, bottom your boostable cards, play Electro grenade · **Watch out:** he burns through his deck.
+### Plan A: Stack the deck, then strike
+**Goal:** Wait for Electro grenade's +1, then go all in [3][4] · **How:** bottom your boostables, attack only with weak cards, keep Metalhead back [3] · **Watch out:** he draws through his deck fast [3].
 
-### Plan B: Unblockable damage
-**Goal:** Damage defenses can't stop · **How:** Party wagon!, Bo staff, recycle with Thinking ahead · **Watch out:** Thinking ahead fails against big blocks.
+### Plan B: Pile up automatic damage
+**Goal:** Damage defenses can't stop [5] · **How:** Bo staff and Party wagon!, recurred with Thinking ahead and Donatello does machines; Smoke bomb for big turns [1][4][5] · **Watch out:** Thinking ahead can whiff [6].
 
 ### How they lose
-- Over-drawing runs him out.
-- Attacking before the +1.
+- Blocked or cancelled recursion [6].
+- Overdrawing [3].
 
 ### Key cards
-- **Electro grenade**: +1 to all attacks.
-- **Party wagon!**: 2 unblockable damage.
+- **Electro grenade**: permanent +1 to attacks [1].
+- **Smoke bomb**: actions now, and an action per scheme later [1].
 
 ### Tips
-- Track what you bottomed.
-- Keep Metalhead safe early.
+- Poke and run until your combo turns [4].
+- Remember what's on the bottom of your deck [3].
+
+### References
+1. Restoration Games. *Unmatched Adventures: Teenage Mutant Ninja Turtles*, Donatello deck.
+2. Restoration Games. "From Leader to Wild Card: The Turtles of Unmatched Adventures." https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/
+3. u/TheEliteB3aver. Comment on "1v1 Strategies for Donatello?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1q3wu0t/
+4. u/Dear_Huckleberry_394. Comment on "1v1 Strategies for Donatello?" (see [3]).
+5. u/TivaDi. Comment on "1v1 Strategies for Donatello?" (see [3]).
+6. u/LabRat2329. Reply in "1v1 Strategies for Donatello?" (see [3]).
 
 ---
 
 <!-- id: raphael -->
 ## Raphael
 
-**In short:** An aggressive brawler who gains an action the first time he loses a combat each turn.
+**In short:** A tough brawler who gains an action the first time he loses a combat each turn, and keeps up relentless pressure [1][2][3].
 
-### Plan A: Run at them
-**Goal:** Constant pressure · **How:** lead cheap; a loss gives an action and turns on Payback time!; Casey pins and burns defenses · **Watch out:** don't chase the bonus every turn.
+### Plan A: Keep running at them
+**Goal:** Never let them feel safe [3] · **How:** attack with red cards, save the rest for Unbridled rage; Casey pins and burns defenses [3][4][5] · **Watch out:** don't overextend [6].
 
-### Plan B: Unbridled rage
-**Goal:** A surprise one-shot · **How:** +2 for each defense or versatile discarded · **Watch out:** don't dump all defenses unless it kills.
+### Plan B: Lean on a small defensive core
+**Goal:** Block with few cards [3] · **How:** Relentless, Sai and Heroes in a half shell; take an undefended hit sometimes [3][4] · **Watch out:** don't dump every defense into Unbridled rage [4].
 
 ### How they lose
-- Overextends and runs out of defenses.
-- Out-paced by heavy-draw aggro.
+- Pressure once he overextends [6].
+- Passive play runs him out of defenses [7].
 
 ### Key cards
-- **Relentless**: recycles itself; play on defense.
-- **Unbridled rage**: the finisher.
+- **Unbridled rage**: +2 per defense or versatile discarded [1].
+- **Relentless**: play it as soon as you get it [3].
 
 ### Tips
-- Block with Relentless, Sai and Heroes in a half shell.
-- Use Casey to pin.
+- A big first attack can catch them out [3].
+- Don't chase the extra action every turn [4].
+
+### References
+1. Restoration Games. *Unmatched Adventures: Teenage Mutant Ninja Turtles*, Raphael deck.
+2. Restoration Games. "From Leader to Wild Card: The Turtles of Unmatched Adventures." https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/
+3. u/CauseImBatman02. Comment on "Tips on playing Raphael Effectively?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1t7hmf0/
+4. u/Traditional_Hat_8120. Comment on "Tips on playing Raphael Effectively?" (see [3]).
+5. u/RumpusRoomMinis. Comment on "Tips for Raphael vs aggro." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1rx0oom/
+6. u/polly2000000000. Comment on "Tips on playing Raphael Effectively?" (see [3]).
+7. u/HEJscaper. "Tips for Raphael vs aggro" (see [5]).
 
 ---
 
 <!-- id: michelangelo -->
 ## Michelangelo
 
-**In short:** A fast wild card with a 3-card hand who draws after every attack and scheme and chains actions.
+**In short:** The agile wild card: a 3-card hand he constantly cycles, lots of action gain, and a well-timed heavy hit [1][2].
 
-### Plan A: Chain actions
-**Goal:** Several attacks in one turn · **How:** Boisterous beatdown, Hi-yaaaaah!! and April's attack gain actions; finish with Cowabunga!! · **Watch out:** little left for defense.
-
-### Plan B: Cycle to the perfect moment
-**Goal:** Dig for the right cards · **How:** Shell insertion and Guaranteed delivery bottom cards and refill · **Watch out:** cycling burns your deck.
+### Plan A: Cycle and burst
+**Goal:** Set up the perfect heavy hit [2] · **How:** draw after every attack or scheme; Boisterous beatdown and Hard-hitting investigation gain actions, Cowabunga!! grows with each card played [1] · **Watch out:** not yet covered by the sources.
 
 ### How they lose
-- Small hand, few defenses.
-- April dies and chains shrink.
+- Not yet covered by the sources.
 
 ### Key cards
-- **Cowabunga!!**: +1 per card played this turn.
-- **Boisterous beatdown**: up to 2 actions.
+- **Guaranteed delivery**: cancel, or draw 2 on an empty hand [1].
+- **Heroes in a half shell**: a plain 5 [1].
 
 ### Tips
-- Dart in and out with move 3.
-- Keep one defense in hand.
+- Strike fast and opportunistically [2].
+
+### References
+1. Restoration Games. *Unmatched Adventures: Teenage Mutant Ninja Turtles*, Michelangelo deck.
+2. Restoration Games. "From Leader to Wild Card: The Turtles of Unmatched Adventures." https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/
 
 ---
 
