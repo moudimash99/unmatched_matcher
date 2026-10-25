@@ -1395,38 +1395,38 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: daredevil -->
 ## Daredevil
 
-**In short:** A solo melee fighter with 17 health, 3 movement and a 22-card deck [1] who recycles his own cards so that, played well, he never runs out [2]. Players disagree on his strength: one reviewer calls his core ability a trap [3]; others find him flexible and tanky [4][5].
+**In short:** Daredevil is a solo melee fighter with 17 health, 3 movement and a 22-card deck [1]. Recycling cards lets him avoid exhaustion [2], though players disagree about his strength: TFJ383 calls his ability a trap [3], while mic_al and siryorgan find him resilient and strategically flexible [4][5].
 
 ### Plan A: Keep the recursion going
-**Goal:** Never run out of cards [2].
-**How to do it:** Devil of Hell's Kitchen shuffles itself and the top four cards of your discard pile into your deck [1]. Have Take A Knee, Breather, Through Adversity and Feint in hand or among those four [2]. Breather returns a discarded attack, defense or versatile card to your hand [1], so the two cards bring each other back; with 5 copies between them, you only need a few to land [4].
-**Watch out for:** A Feint cancels the reshuffle. Hold both copies, or one and a Breather, for when your deck runs out [2], or take a cancelled copy back with Breather [4].
+**Goal:** Keep recycling cards so your deck never runs out [2].
+**How to do it:** Devil of Hell's Kitchen shuffles itself and the top four cards of your discard pile into your deck [1]. Aim to have Take A Knee, Breather, Through Adversity and Feint in hand or among those four [2]. Breather retrieves a discarded attack, defense or versatile card [1], allowing the two cards to recover each other [4]. With five copies between them [1], you only need a few successful uses to keep the cycle going [4].
+**Watch out for:** Feint cancels the reshuffle. As your deck runs out, keep both copies available, or one alongside Breather [2]; Breather can retrieve a cancelled copy for another attempt [4].
 
 ### Plan B: Blind boost
-**Goal:** Get damage through with cards worth mostly 2 or 3 [2].
-**How to do it:** With 2 or fewer cards in hand, you may blind boost your attack or defense; Man Without Fear adds a second blind boost [1]. Boost when the combat needs it, not whenever you can [2].
-**Watch out for:** A blind boost can discard Devil of Hell's Kitchen or Breather [2]. One reviewer argues that a hand of 3 or fewer is dangerous to be attacked with, and that blind boosting is often what gets him killed [3].
+**Goal:** Push damage through with attacks mostly worth 2 or 3 [2].
+**How to do it:** With 2 or fewer cards in hand, you may blind boost an attack or defense; Man Without Fear allows an additional blind boost [1]. Use the ability when the combat needs it, rather than whenever it is available [2].
+**Watch out for:** Blind boosting can discard Devil of Hell's Kitchen or Breather [2]. TFJ383 argues that defending with 3 or fewer cards leaves too few options, and that blind boosting often gets Daredevil killed [3].
 
 ### Plan C: Fight up close
-**Goal:** Pressure the opponent instead of playing for exhaustion, as several players prefer [4][6][7].
-**How to do it:** Through Adversity moves him up to 4 spaces through opposing fighters, dealing 1 damage to each [1]: a way past ranged heroes' sidekicks [2] and out of a pin [4].
-**Watch out for:** As a solo fighter he is the only target, easy to gang up on and corner [3].
+**Goal:** Put pressure on the opponent rather than playing for exhaustion, an approach several players prefer [4][6][7].
+**How to do it:** Through Adversity moves Daredevil up to 4 spaces through opposing fighters, dealing 1 damage to each fighter he passes through [1]. Use it to get past ranged fighters' sidekicks [2] or escape a pin [4].
+**Watch out for:** Without sidekicks to share the pressure, Daredevil is vulnerable to being surrounded and cornered [3].
 
 ### How they lose
-- Feints and forced discards break his recursion [2], and so do his own risky blind boosts [8].
-- He is predictable: opponents can read Devil of Hell's Kitchen coming from his discard pile and attack while his hand is small [3][5].
-- His small hand can be all schemes; 6 of his 22 cards are schemes [1][3].
-- Ranged heroes with sidekicks are hard to reach [2].
+- Feints and forced discards can break the recycling loop [2], as can risky blind boosts [8].
+- Opponents can read his discard pile to anticipate Devil of Hell's Kitchen and attack when his hand is small [3][5].
+- Six of his 22 cards are schemes [1], so a small hand can leave him with nothing he can use in combat [3].
+- Ranged fighters with sidekicks can be difficult to reach [2].
 
 ### Key cards
-- **Devil of Hell's Kitchen**: 4 value, or 8 with an empty deck [1]. Saving it for the 8 is predictable, so playing it early to mid game may be better [2]; one player says to play it early and often [4].
-- **Breather** (3 copies) [1]: first use is recovering a discarded Devil of Hell's Kitchen [2].
-- **Take A Knee**: 3-value versatile that heals by the boost of your top card [1], usually 2 [2]; one player recycles it to block again and again [4].
-- **Son Of A Boxer**: 3-value defense [1]; good insurance against melee heroes, weaker against ranged ones [2].
+- **Devil of Hell's Kitchen**: Worth 4, rising to 8 with an empty deck [1]. Waiting for the 8 makes it predictable; playing it earlier can be more valuable [2]. One player recommends using it early and often [4].
+- **Breather**: Its three copies [1] should first recover a discarded Devil of Hell's Kitchen [2].
+- **Take A Knee**: A 3-value versatile card that heals by the top card's boost value [1], usually 2 [2]. Recycling it provides repeated defensive blocks and healing [4].
+- **Son Of A Boxer**: A 3-value defense [1] that offers useful insurance against melee fighters, but is weaker against ranged attackers [2].
 
 ### Tips
-- All his defenses are worth 3 except Feint, so a small hand still defends [2].
-- Heal by defending with Take A Knee rather than attacking with it [2].
+- Every defensive option except Feint has a value of 3 [1], giving even a small hand consistent defenses [2].
+- Use Take A Knee to defend rather than attack [2].
 
 ### References
 1. Restoration Games. *Unmatched: Hell's Kitchen*, Daredevil deck. Card text as recorded in `input/heroes.json`.
@@ -1436,7 +1436,7 @@ The strategy text is written from the guides listed under Further reading for th
 5. siryorgan. Reply to [3]. *BoardGameGeek*, 14 November 2023.
 6. COMaestro. Reply to [3]. *BoardGameGeek*, 15 November 2023.
 7. u/WeakSwitchKick. Comment on "Help daredevil!" by u/Practical-Fig-7209. *r/Unmatched*, Reddit, 27 February 2024. https://www.reddit.com/r/Unmatched/comments/1b11b6o/
-8. u/Cell-division. Comment on "Help daredevil!" (see [7]).
+8. u/Cell-division. Comment on "Help daredevil!" (see [7]). *r/Unmatched*, Reddit, 27 February 2024.
 
 
 ### Not cited

@@ -862,33 +862,33 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: daredevil -->
 ## Daredevil
 
-**In short:** A solo melee fighter with a 22-card deck [1] who recycles his own cards so he never runs out [2].
+**In short:** A solo melee fighter with a 22-card deck [1], Daredevil recycles cards to avoid exhaustion [2].
 
 ### Plan A: Keep the recursion going
-**Goal:** Never run out of cards [2] · **How:** Devil of Hell's Kitchen shuffles itself and your top four discards back in [1]; have Take A Knee and Breather among them [2] · **Watch out:** a Feint cancels it [2], so hold a Breather to take it back [3].
+**Goal:** Avoid exhaustion [2] · **How:** Devil of Hell's Kitchen reshuffles itself and your top four discards [1]; include Take A Knee and Breather [2] · **Watch out:** Feint cancels it [2]; keep Breather to retrieve it [3].
 
 ### Plan B: Blind boost
-**Goal:** Get damage through with 2- and 3-value cards [2] · **How:** with 2 or fewer cards in hand, blind boost [1], but only when the combat needs it [2] · **Watch out:** it can discard your key cards [2][4].
+**Goal:** Push damage through with 2- and 3-value cards [2] · **How:** Blind boost with 2 or fewer cards in hand [1], when needed [2] · **Watch out:** You may discard key cards [2][4].
 
 ### How they lose
-- Feints and forced discards break his recursion [2].
-- Opponents read his discard pile and attack while his hand is small [5].
+- Feints and forced discards disrupt recycling [2].
+- Opponents read his discards and attack his small hand [5].
 
 ### Key cards
-- **Devil of Hell's Kitchen**: his engine. Saving it for the empty-deck 8 is predictable [2].
-- **Breather**: 3 copies [1] to get back a lost Devil of Hell's Kitchen [2].
+- **Devil of Hell's Kitchen**: Drives recycling; waiting for the empty-deck 8 is predictable [1][2].
+- **Breather**: Three copies [1] help recover a lost Devil of Hell's Kitchen [2].
 
 ### Tips
-- His defenses are worth 3, so a small hand still defends [2].
-- Several players prefer to play him aggressively [3][6].
+- Defenses are worth 3 except Feint [1], so a small hand can still defend [2].
+- Several players favor an aggressive approach [3][6].
 
 ### References
 1. Restoration Games. *Unmatched: Hell's Kitchen*, Daredevil deck.
 2. Gridbeast. "Unmatched – Daredevil." https://gridbeast.gg/unmatched-daredevil/
-3. mic_al. Reply to "An Unmatched Roster: What's Cooking in Hell's Kitchen?" *BoardGameGeek*, 2023.
-4. TFJ383. "An Unmatched Roster: What's Cooking in Hell's Kitchen?" *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3188799/
-5. siryorgan. Reply to [4]. *BoardGameGeek*, 2023.
-6. COMaestro. Reply to [4]. *BoardGameGeek*, 2023.
+3. mic_al. Reply to "An Unmatched Roster: What's Cooking in Hell's Kitchen?" (see [4]). *BoardGameGeek*, 11 November 2023.
+4. TFJ383. "An Unmatched Roster: What's Cooking in Hell's Kitchen?" *BoardGameGeek*, 11 November 2023. https://boardgamegeek.com/thread/3188799/
+5. siryorgan. Reply to [4]. *BoardGameGeek*, 14 November 2023.
+6. COMaestro. Reply to [4]. *BoardGameGeek*, 15 November 2023.
 
 ---
 
