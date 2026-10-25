@@ -1152,7 +1152,7 @@ The strategy text is written from the guides listed under Further reading for th
 
 ### Plan A: Keep the recursion going
 **Goal:** Avoid running out of cards despite a 22-card deck [2].
-**How to do it:** Devil of Hell's Kitchen shuffles itself and the top four cards of your discard pile into your deck [1]. Gridbeast advises having Take A Knee, Breather, Through Adversity and Feint either in hand or among those four cards when you play it [2]. Breather returns an attack, defense or versatile card from your discard pile to your hand [1], so Breather and Devil of Hell's Kitchen can bring each other back; with 3 Breathers and 2 Devil of Hell's Kitchen, one player notes you only need to get a few of them through [4].
+**How to do it:** Devil of Hell's Kitchen shuffles itself and the top four cards of your discard pile into your deck [1]. Gridbeast advises having Take A Knee, Breather, Through Adversity and Feint either in hand or among those four cards when you play it [2]. Breather returns an attack, defense or versatile card from your discard pile to your hand [1], so Breather and Devil of Hell's Kitchen can bring each other back; with 3 Breathers and 2 Devil of Hell's Kitchen, one player notes you only need to get a few of them through [4]. Keeping the recursion going is also what keeps his healing coming [9].
 **Watch out for:** A Feint on Devil of Hell's Kitchen cancels the reshuffle [2]. Gridbeast suggests holding both copies, or one copy and a Breather, for when your deck runs out [2]; one player answers a cancelled Devil of Hell's Kitchen by using Breather to take it back [4].
 
 ### Plan B: Blind boost
@@ -1166,10 +1166,10 @@ The strategy text is written from the guides listed under Further reading for th
 **Watch out for:** As a solo fighter he is the only target, so opponents can gang up on him and corner him [3].
 
 ### How they lose
-- Feints and forced discards break his recursion. Gridbeast names Medusa (discards) and Bigfoot and Sherlock Holmes (many Feints) [2]; one player names Elektra's Mesmerize, along with risky blind boosts [8].
+- Feints and forced discards break his recursion [2], and so can his own risky blind boosts [8].
 - He is predictable. He has few abilities to track, so opponents can tell when Devil of Hell's Kitchen is coming [3], read it from his discard pile and plan attacks for when his hand is small [5].
 - His small hand can be all schemes: 6 of his 22 cards are schemes [1], and the reviewer describes him holding a hand he can't use [3].
-- Ranged heroes with sidekicks, such as Medusa or Robin Hood, are hard for him to reach [2].
+- Ranged heroes with sidekicks are hard for him to reach [2].
 
 ### Key cards
 - **Devil of Hell's Kitchen**: a 4-value attack, 8 if your deck is empty [1]. Gridbeast says the 8 tempts you to save it, but that is predictable, and against an opponent who knows his deck playing it in the early to mid game may be better [2]. One player goes further: use it early and often [4].
@@ -1179,9 +1179,6 @@ The strategy text is written from the guides listed under Further reading for th
 
 ### Tips
 - All his defenses are worth 3 except Feint, so a small hand still defends well [2].
-- He is especially effective against heroes with no Feints [2].
-- Against Bullseye, who needs setup, stay aggressive [9], and keep a bigger hand so he can't combo off on undefended hits [7].
-- Against Elektra, one player recommends the slow game, saving your Feints for The Hand's attacks [8].
 
 ### References
 1. Restoration Games. *Unmatched: Hell's Kitchen*, Daredevil deck. Card text as recorded in `input/heroes.json`.

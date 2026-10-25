@@ -28,7 +28,8 @@ Each fighter entry starts with `<!-- id: {site id} -->` (ids from `input/fighter
 ### How they lose   (2–3 bullets)
 ### Key cards       (each: **Card name**: why it matters, when to play or hold it)
 ### Tips            (3–5 short practical tips)
-### Further reading (medium file only: [title](link): source · format)
+### References       (numbered, academic style; short file keeps its own shorter list)
+### Not yet reviewed (medium file only: links not used as sources)
 ```
 
 The short file uses the same headings, with each plan on one line: `**Goal:** … · **How:** … · **Watch out:** …`, plus 2 bullets for How they lose, 2 key cards and 2–3 tips.
@@ -40,7 +41,8 @@ Entries were written one at a time in `entries/{id}.md` and `entries_short/{id}.
 - **In my own words, from sources only.** Nothing invented. If no source said it, it isn't there.
 - **Numbers and card names come from `input/heroes.json`.** When a guide disagreed with the deck data (for example Gridbeast calling Tesla's Death Ray a 4 when the deck says 3), the deck data won.
 - **Card names are spelled as in `heroes.json`**, except Loki's and Pandora's (written in normal capitals, the data has them in all caps) and Loki's "Shapeshifter" (spelled "Shapershifter" in the data).
-- **No matchup tables.** The owner wants how each fighter wins and loses, not who beats whom. "Playing against X" threads were used only for How they lose.
+- **No matchup tips at all.** The owner wants how each fighter wins and loses, not who beats whom. Never name a specific opposing fighter (no "against Bullseye…", no "such as Medusa"). Describe the kind of opponent or the mechanic instead (ranged fighters with sidekicks, heavy Feints, forced discards). "Playing against X" threads can still inform How they lose, written that way.
+- **Cite everything, generalise nothing.** Every claim carries a numbered citation [n] pointing to the entry's References list, academic style. Card values and effects cite the deck ([1], `heroes.json`). Each forum commenter is cited as their own reference, not just the thread. Don't widen one source's point beyond what it says; where sources disagree, cite both sides. Links not used as sources go under "Not yet reviewed".
 - **Written sources preferred**; reviews were not used as strategy sources.
 - **Further reading** lists written guides first, then threads, then videos. Threads with fewer than 3 comments were left out, and so were three junk threads (an empty placeholder, a box-opening question, a rules question).
 
