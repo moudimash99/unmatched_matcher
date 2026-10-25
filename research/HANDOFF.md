@@ -4,7 +4,9 @@ Everything the cloud session that wrote the fighter strategy files knew, so the 
 
 ## 0. Current status (October 2026)
 
-**Research pass complete on branch `claude/strategy-guide-format-n0n1vb`.** Each fighter is being rewritten from their sources, with every claim cited (see sections 2 and 3). The wording is deliberately plain; Codex polishes it afterwards (`research/CODEX-PROMPT.md`).
+**Research pass and wording pass complete on branch `claude/strategy-guide-format-n0n1vb`.** Every fighter was rewritten from their sources, with every claim cited (see sections 2 and 3), then reworded by Codex in batches of ten (`research/CODEX-PROMPT.md`). Each batch was checked against the previous commit: same sources cited per entry, reference lines unchanged except renumbering, no numbers lost. The card corrections in the Codex prompt (Washington's ruse effects and others) are now in the entries.
+
+**On the site:** `strategies.py` renders both files onto each fighter page (`/fighter/<id>`): the short guide, then the full one behind "Read the full guide". Paragraphs after a References list (notes on the deck data) and "Not cited" links marked "(read; …)" are not shown.
 
 **Done (74, all):** daredevil, king_arthur, alice, medusa, sinbad, robin_hood, bigfoot, bruce_lee, robert_muldoon, raptors, dracula, invisible_man, jekyll_hyde, sherlock_holmes, buffy, spike, willow, angel, little_red, beowulf, deadpool, achilles, bloody_mary, sun_wukong, yennenga, luke_cage, ghost_rider, moon_knight, elektra, bullseye, dr_sattler, t_rex, houdini, the_genie, ms_marvel, squirrel_girl, cloak_and_dagger, black_panther, black_widow, winter_soldier, she_hulk, spider_man, doctor_strange, nikola_tesla, annie_christmas, the_golden_bat, dr_jill_trent, oda_nobunaga, tomoe_gozen, william_shakespeare, hamlet, titania, the_wayward_sisters, geralt, ciri, yennefer_triss, philippa_eilhart, eredin, muhammad_ali, ancient_leshen, blackbeard, chupacabra, loki, pandora, leonardo, donatello, raphael, michelangelo, shredder, krang, wyatt_earp, john_henry, george_washington, rosie_the_riveter.
 
