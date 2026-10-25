@@ -2167,50 +2167,56 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: shredder -->
 ## Shredder
 
-**In short:** A melee warlord who deploys a Foot soldier every turn and attacks anyone next to one.
+**In short:** A Foot Clan master who spreads soldiers across the board, attacking through them and building towards one huge multi-action turn [1][2][3].
 
-### Plan A: Camp and combo
-**Goal:** Surround him with soldiers, then explode · **How:** camp on a well-connected space; Obedient Subjects gains an action per adjacent soldier · **Watch out:** losing Bebop & Rocksteady early.
+### Plan A: Build the fortress
+**Goal:** One enormous turn [3][4] · **How:** camp on a well-connected space, ring Shredder with soldiers, then Obedient Subjects into Swarming Strikes [1][4] · **Watch out:** he wins big or gets trampled [4].
 
 ### Plan B: Hit and run
-**Goal:** Attack safely through soldiers · **How:** deploy, maneuver, strike through any soldier next to them · **Watch out:** boosted maneuvers clear soldiers.
+**Goal:** Strike from safety [5] · **How:** deploy, maneuver, attack through a soldier [5] · **Watch out:** another player rates camping higher [4].
 
 ### How they lose
-- High-tempo action gain or discard.
-- His sidekick falls early.
+- High action gain, discard and tempo [4].
+- Losing Bebop & Rocksteady early [5].
 
 ### Key cards
-- **Obedient Subjects**: the action engine.
-- **Swarming Strike**: +1 per adjacent soldier.
+- **Swarming Strike**: 5, +1 per adjacent soldier [1].
+- **Obedient Subjects**: an action per adjacent soldier [1].
 
 ### Tips
-- Pick maps with highly connected spaces.
-- Keep Back to work! for Bebop & Rocksteady.
+- Pick maps with well-connected spaces [3].
+- Plan the whole network, not just Shredder [2].
+
+### References
+1. Restoration Games. *Unmatched Adventures: Teenage Mutant Ninja Turtles*, Shredder hero deck.
+2. Restoration Games. "A Villain or A Hero? Shredder and Krang." https://restorationgames.com/villain-or-hero-shredder-krang-unmatched-tmnt/
+3. u/LabRat2329. Comment on "Tips on effectively playing Shredder?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1rip96w/
+4. u/TheEliteB3aver. Reply in "Tips on effectively playing Shredder?" (see [3]).
+5. u/Megabro_SgOwDm. Reply in "Tips on effectively playing Shredder?" (see [3]).
 
 ---
 
 <!-- id: krang -->
 ## Krang
 
-**In short:** A chaotic melee alien who powers up Doomsday Machines and pushes his luck with a die.
+**In short:** A slow, chaotic brain who powers up Doomsday Machines for speed and strength, and gambles on the Die of Ultimate Destruction [1][2].
 
 ### Plan A: Power up the machines
-**Goal:** More machines, more movement · **How:** Molecular Amplification Unit and IQ of 968 activate them · **Watch out:** few machines means move 1.
-
-### Plan B: Push the dice
-**Goal:** Turn rolls into damage · **How:** Missiles, Chain Flail and Wings scale with the die; reroll by shutting down a machine · **Watch out:** every reroll costs a machine.
+**Goal:** More machines online [2] · **How:** Molecular Amplification Unit, Welcome to the Technodrome! and IQ of 968 [1][2] · **Watch out:** rerolls cost active machines [2].
 
 ### How they lose
-- Bad rolls with no rerolls left.
-- Mobile fighters escape him.
+- Not yet covered by the sources.
 
 ### Key cards
-- **IQ of 968**: activates all machines.
-- **Minimizer**: −4 to their card and ends the turn.
+- **IQ of 968**: activates every machine [1].
+- **Minimizer**: -4 to the attack and ends the turn [1].
 
 ### Tips
-- Decide before rolling what a result is worth.
-- Use Missiles to attack at range.
+- Each active machine adds 1 move [1].
+
+### References
+1. Restoration Games. *Unmatched Adventures: Teenage Mutant Ninja Turtles*, Krang hero deck.
+2. Restoration Games. "A Villain or A Hero? Shredder and Krang." https://restorationgames.com/villain-or-hero-shredder-krang-unmatched-tmnt/
 
 ---
 

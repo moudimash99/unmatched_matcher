@@ -3398,75 +3398,75 @@ The text of Nunchaku in `input/heroes.json` names a different fighter, which loo
 <!-- id: shredder -->
 ## Shredder
 
-**In short:** A melee warlord with 15 health, move 3, and a 7-health sidekick, Bebop & Rocksteady. He deploys a Foot soldier every turn and can attack anyone next to one, so he wins by spreading his soldiers across the board and building to one huge combo turn.
+**In short:** A melee hero with 15 health and 3 movement, plus Bebop & Rocksteady, a 7-health melee sidekick [1]. At the start of each turn he deploys a Foot soldier next to a friendly fighter, and he can attack opponents adjacent to Foot soldiers [1]. An opponent who boosts a maneuver can remove the soldiers their hero moves through [1]. His game is battlefield control: where the soldiers stand decides where he can strike [2].
 
-### Plan A: Camp and combo
-**Goal:** Surround Shredder with Foot soldiers, then explode with action gain.
-**How to do it:** Master of the Clan deploys a Foot soldier on a path next to a friendly fighter at the start of each turn, and Shredder can attack any opponent adjacent to a Foot soldier. Pick maps with spaces that connect to many others, get to one and stay there while soldiers pile up around him. Masterful Defense heals 1 per adjacent soldier, and Swarming Strike (5) gets +1 for each. Once you're ready, Obedient Subjects gains an action for each adjacent soldier. Bebop & Rocksteady's Gruff Escort (4) places 2 soldiers anywhere, including next to the opponent, so Shredder's big attacks reach them. Players describe turns of 10 or more actions.
-**Watch out for:** If Bebop & Rocksteady die early and you lack Back to work!, constant attacks wear Shredder down.
+### Plan A: Build the fortress
+**Goal:** Surround Shredder with Foot soldiers, then unload one enormous turn [3][4].
+**How to do it:** Pick maps with well-connected spaces, get to one and camp there [3]. Let Bebop & Rocksteady body block and pressure the opponent [3]. With 5 or 6 soldiers around him, play the action-gain schemes: Obedient Subjects gains an action per adjacent soldier, for 10 to 12 actions [1][4]. Then Bebop & Rocksteady deploy soldiers next to the opponent, and Shredder swings Swarming Strike, a 5 with +1 per adjacent soldier, for 10 or 11 each [1][4]. Surrounded by soldiers, his defenses get better too [4]: Masterful Defense heals 1 per adjacent soldier [1].
+**Watch out for:** He either destroys the opponent in one turn or gets trampled [4].
 
 ### Plan B: Hit and run
-**Goal:** Attack from a safe distance through your soldiers.
-**How to do it:** Deploy a soldier first, maneuver, then attack through any soldier next to the opponent. As your network grows, you can strike from almost anywhere, and opponents have to boost their maneuvers to clear soldiers in their way. Gang Up is a 6 when the target is next to 2+ soldiers. Master of the Foot deals 1 to each enemy next to a soldier. Think Hard draws a card for each soldier next to the target.
-**Watch out for:** Opponents who boost maneuvers can remove any soldier their hero moves through.
+**Goal:** Use the soldiers to strike from a safe distance [5].
+**How to do it:** Deploy a soldier first, maneuver, then attack from range through it [5]. As the network grows you can attack from almost anywhere, and opponents must boost their maneuvers to clear soldiers from awkward places [5]. A well-placed soldier creates an attack that otherwise wouldn't exist [2]. Long Shot is a 5 when the opponent isn't adjacent to your fighter [1].
+**Watch out for:** One player calls camping the stronger plan [4].
 
 ### How they lose
-- High-tempo fighters with lots of action gain or discard trample him before his combo.
-- Bebop & Rocksteady fall early and nothing body blocks for Shredder.
-- Opponents keep clearing his soldiers.
+- Opponents with high action gain or discard, and high-tempo fighters [4].
+- Bebop & Rocksteady dying early without Back to work! in hand, then constant pressure until he runs out of defenses [5].
 
 ### Key cards
-- **Obedient Subjects**: the action engine.
-- **Swarming Strike**: 5 plus 1 per adjacent soldier.
-- **Back to work!**: heals Bebop & Rocksteady 3, even if defeated, and brings them back.
-- **All According to Plan**: a 3 defense; the opponent gains an action but discards 2 unless they play a scheme that turn.
+- **Obedient Subjects**: the scheme that powers the big turn [1][4].
+- **Back to work!**: heals Bebop & Rocksteady 3, even if defeated, and returns them near Shredder [1].
+- **Gruff Escort**: deploys 2 soldiers anywhere and moves Shredder 2 [1].
+- **Perplexing Tactics**: cancels effects; with 10 or more soldiers out, it also ignores the attack's value [1].
+- **All According to Plan**: a 3-value defense; the attacker gains an action but discards 2 at end of turn unless they play a scheme [1].
 
 ### Tips
-- Use Bebop & Rocksteady to body block and pressure.
-- Perplexing Tactics cancels their effects, and with 10+ soldiers deployed also ignores their value.
-- Disrupting Strike locks their card at its printed value.
+- Think about where his whole network stands, not just Shredder [2].
+- Gang Up is a 6 when the opponent is next to 2 or more soldiers [1].
 
-### Further reading
-- [A Villain or A Hero? Shredder and Krang](https://restorationgames.com/villain-or-hero-shredder-krang-unmatched-tmnt/): Restoration Games (official) · official article
-- [Tips on effectively playing Shredder?](https://www.reddit.com/r/Unmatched/comments/1rip96w/): Reddit: ronchman · thread
-- [Shredder - Unmatched TMNT Fighter Review](https://www.youtube.com/watch?v=EcKAE5XoihY): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched Adventures: Teenage Mutant Ninja Turtles*, Shredder hero deck. Card text as recorded in `input/heroes.json`.
+2. Restoration Games. "A Villain or A Hero? Shredder and Krang." *Restoration Games*. https://restorationgames.com/villain-or-hero-shredder-krang-unmatched-tmnt/
+3. u/LabRat2329. Comment on "Tips on effectively playing Shredder?" by u/ronchman. *r/Unmatched*, Reddit, 2 March 2026. https://www.reddit.com/r/Unmatched/comments/1rip96w/
+4. u/TheEliteB3aver. Replies in "Tips on effectively playing Shredder?" (see [3]).
+5. u/Megabro_SgOwDm. Replies in "Tips on effectively playing Shredder?" (see [3]).
+
+### Not cited
+- [Shredder - Unmatched TMNT Fighter Review](https://www.youtube.com/watch?v=EcKAE5XoihY): To The Table Top! · video (not yet reviewed)
 
 ---
 
 <!-- id: krang -->
 ## Krang
 
-**In short:** A chaotic melee alien with 16 health, a starting move of 1, and three Doomsday Machines. Many of his cards roll the Die of Ultimate Destruction (shown as "?" on the cards), so he powers up his machines and decides how much luck to push.
+**In short:** A melee hero with 16 health, 1 movement and no sidekicks [1]. He has three Doomsday Machines and starts with one active; he gets +1 move for each active machine [1]. Many of his cards roll the Die of Ultimate Destruction, and after a roll he can switch off an active machine to reroll [1][2]. The designers built him around chaos and push-your-luck choices [2].
 
 ### Plan A: Power up the machines
-**Goal:** Get more machines running, so Krang moves faster and has rerolls to spend.
-**How to do it:** DOOOOOM! starts him with one of three machines active and gives +1 move for each active machine. Molecular Amplification Unit (2) activates a machine and adds the die roll to its value. Welcome to the Technodrome! either cancels their effects or activates a machine. IQ of 968 activates all machines, then draws cards and heals by the die roll; the official article calls it a major surge of power. Android arms: Wings moves him by the die roll through enemies, dealing 1 to each, and gains an action.
-**Watch out for:** With few machines active, Krang is very slow.
-
-### Plan B: Push the dice
-**Goal:** Turn die rolls into damage and disruption.
-**How to do it:** After any roll, you can deactivate an active machine to reroll. That's the push and pull: power for Krang, or control over the dice. Android arms: Missiles (1) adds the roll to its value and can be played face up as a ranged attack. Android arms: Chain Flail (2) makes them discard 2 if their card's printed value is lower than the roll, or if they didn't block. Android arms: Powerbomb (3) can be boosted and knocks them back by the damage dealt. Pan-dimensional Portal places a fighter, pins them, and makes both players cycle cards from their hands by the roll.
-**Watch out for:** Every reroll costs a machine, and with it movement.
+**Goal:** Bring more machines online to grow stronger and more mobile [2].
+**How to do it:** Molecular Amplification Unit activates a machine and adds a die roll to its value, a chance to push your luck for more power [1][2]. Welcome to the Technodrome! either cancels the opponent's effects or activates a machine [1]. IQ of 968 activates all of his machines at once, a major surge of power [1][2]. With more machines running he moves further, and Android arms: Wings moves him through opponents, damaging each one he passes, and gains an action [1].
+**Watch out for:** Every reroll costs an active machine, so there is a constant pull between powering up and keeping control of the die [2].
 
 ### How they lose
-- Bad rolls with no machines left to reroll.
-- Ranged and mobile fighters escape while his machines are off.
-- He spends machines on rerolls and gets stuck at move 1.
+- None of the sources read so far say.
 
 ### Key cards
-- **IQ of 968**: activates every machine at once.
-- **Minimizer**: a 0 defense that lowers their card by 4 and ends the turn.
-- **Warlord of Dimension X**: reveals both top cards and draws yours if its name is longer.
-- **Molecular Amplification Unit**: four copies of machine activation.
+- **Minimizer**: a 0-value defense that lowers the attack by 4 and ends the turn [1].
+- **Android arms: Chain Flail**: the opponent discards 2 if their card's printed value is below the roll, or they didn't play one [1].
+- **Android arms: Missiles**: grows with the roll and can be played face up as a ranged attack [1].
+- **Pan-dimensional Portal**: places a fighter in the combat anywhere and locks them there [1].
 
 ### Tips
-- Decide before rolling whether a result is worth a machine.
-- Use Minimizer to stop multi-attack turns.
-- Missiles lets him attack from range despite being melee.
+- You decide how much chaos to unleash [2].
 
-### Further reading
-- [A Villain or A Hero? Shredder and Krang](https://restorationgames.com/villain-or-hero-shredder-krang-unmatched-tmnt/): Restoration Games (official) · official article
-- [Krang - Unmatched TMNT Fighter Review](https://www.youtube.com/watch?v=74Bwr_GsPg0): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched Adventures: Teenage Mutant Ninja Turtles*, Krang hero deck. Card text as recorded in `input/heroes.json`.
+2. Restoration Games. "A Villain or A Hero? Shredder and Krang." *Restoration Games*. https://restorationgames.com/villain-or-hero-shredder-krang-unmatched-tmnt/
+
+In `input/heroes.json` the die results on Krang's cards appear as "?".
+
+### Not cited
+- [Krang - Unmatched TMNT Fighter Review](https://www.youtube.com/watch?v=74Bwr_GsPg0): To The Table Top! · video (not yet reviewed)
 
 ---
 
