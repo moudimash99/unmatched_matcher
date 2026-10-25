@@ -1914,123 +1914,145 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: black_panther -->
 ## Black Panther
 
-**In short:** A melee king who steals cards off the top of the opponent's deck into his Vibranium Suit, draws a card every time he boosts, and turns stolen cards into extra power.
+**In short:** A melee hero with 14 health and 2 movement, plus the ranged Shuri (6 health) [1]. Whenever he boosts, he draws a card; cards stolen from the opponent's deck go into his Vibranium Suit and can only be used to boost [1]. He is built around boosting [2], and one analyst calls him an evolution of the boosting idea behind older heroes [3].
 
-### Plan A: Steal their deck
-**Goal:** Shrink the opponent's deck faster than yours and take their key cards out of the game.
-**How to do it:** Analyze and Adjust and Ancestral Insight (if you win the combat) take the top card of the opponent's deck into your Suit. Shuri's Tactical Remote Scanning takes two. That's up to 10 stolen cards, which are in neither their deck nor their discard pile. Against fighters who recycle cards (Elektra, Daredevil, Achilles), keep their best cards locked in the Suit. Protect Shuri until you've played both of her schemes; they're among your best cards.
-**Watch out for:** Shuri has only 6 health and few defenses, so opponents may rush her early.
+### Plan A: Rob their deck
+**Goal:** Take cards off the top of the opponent's deck into the Vibranium Suit [2][4].
+**How to do it:** Analyze and Adjust (either fighter) and Ancestral Insight (if he wins) each steal the top card, and Shuri's Tactical Remote Scanning steals two [1]: up to ten cards in all [2][4]. Stolen cards are in neither their deck nor their discard pile, so the opponent can't use them [2]. Hold key cards in the Suit against opponents who recover cards from their discard pile [2][4]. Shuri's schemes are your most powerful cards: mulligan for them and keep her alive until you've used them [4][5][6].
+**Watch out for:** What you steal is random: whether he can rip the boosts he needs off their deck decides many games, and it can feel bad for both players [3]. Opponents may focus Shuri down early [2].
 
 ### Plan B: Boost everything
-**Goal:** Hit hard and move far using boosts, mostly fueled by stolen cards.
-**How to do it:** Every time you boost, you draw a card. Cards in the Suit can only be used for boosting, and if they have boost effects (like Houdini's), you get those too. Wakanda Forever! can be boosted twice, drawing 2. Anti-Metal Claws adds the boost value of the opponent's card, then can be boosted. Microweave Mesh lets you boost on defense after seeing their card. Boost your maneuver to reach far-away opponents.
-**Watch out for:** All that drawing runs him toward exhaustion. Try to boost with stolen cards and get a deck advantage before going all in.
+**Goal:** Use stolen and own cards to power up attacks and movement, drawing a card each time [2].
+**How to do it:** Wakanda Forever! can be boosted twice, drawing two cards [1], and is better as an attack [2]. Anti-Metal Claws adds the opponent's boost, then can be boosted [1]; save it for attacking [2]. Microweave Mesh (2) can be boosted on defense, after you've seen their card [1][2]. If the opponent's cards have boost effects, he uses those effects when he boosts with them [2].
+**Watch out for:** Sources disagree on how much to boost. Gridbeast boosts at nearly every opportunity and warns that a slow game loses to exhaustion [2]. Others avoid boosting until they have a deck advantage [4][5], or boost mainly with the opponent's stolen cards [6].
 
 ### How they lose
-- He's slow early, before he has stolen any cards.
-- He boosts too freely and runs out of cards.
-- Shuri dies before her schemes are played.
+- Exhaustion from the extra draws [2][5].
+- A slow early game before the Suit fills [2].
+- Random steals that miss the boosts he needs [3].
+- A stray cancel can ruin his big boosted attack [3].
+- Losing Shuri before her schemes [2][4].
 
 ### Key cards
-- **Tactical Remote Scanning** (Shuri): steals 2 cards.
-- **Ancestral Insight**: a 4-value card that steals on a win. Strong on defense.
-- **Wakanda Forever!**: boost twice, draw twice.
-- **Stalking Panther**: moves both fighters 3 spaces through enemies and gains an action.
+- **Tactical Remote Scanning**: the best thing Shuri brings [2].
+- **Wakanda Forever!**: his big boosted hit [2][3].
+- **Ancestral Insight**: a 4 that steals a card when you win [1]. Gridbeast plays it on defense, where the effect can't be cancelled [2]; against low defenses one player attacks with it [4].
+- **Nanotriage Processor**: heals Shuri 1, and Black Panther 1 if he's in her zone [1]. Attack with it; opponents rarely cancel effects on Shuri [2].
+- **Cat-Like Reflexes**: moves either fighter up to 3 if you win [1].
 
 ### Tips
-- Consider a mulligan to find Shuri's schemes.
-- Use Nanotriage Processor to attack with Shuri; it heals her, and Panther too if he's in her zone.
-- He's especially strong against fighters with small decks or high boost values.
+- Stealing is strongest against opponents with small decks or high boost values [6].
+- One player only won by storing as many cards as possible and using few of them [7].
 
-### Further reading
-- [Unmatched – Black Panther](https://gridbeast.gg/unmatched-black-panther/): Gridbeast · written guide
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [Tips on playing Black Panther Effectively?](https://www.reddit.com/r/Unmatched/comments/1ssooyg/): Reddit: ronchman · thread
-- [Black Panther - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=CP3_EH6tWu8): To The Table Top! · video
-- [Black Panther - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=3cIPViTdsnQ): Baked Goods · video
-- [Strategy Sunday Vol. 19](https://www.youtube.com/watch?v=Y3MA0XRug58): Karma · video
+### References
+1. Restoration Games. *Unmatched: Marvel – For King and Country*, Black Panther deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Black Panther." *Gridbeast*. https://gridbeast.gg/unmatched-black-panther/
+3. TFJ383. "An Unmatched Roster: Messy Politics." *BoardGameGeek*, 6 January 2024. https://boardgamegeek.com/thread/3221658/an-unmatched-roster-messy-politics
+4. u/LabRat2329. Comment on "Tips on playing Black Panther Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 22 April 2026. https://www.reddit.com/r/Unmatched/comments/1ssooyg/
+5. u/FrequentExcitement55. Comment on "Tips on playing Black Panther Effectively?" (see [4]).
+6. u/Chidwick. Comment on "Tips on playing Black Panther Effectively?" (see [4]).
+7. u/Timely_Elephant4660. Comment on "Tips on playing Black Panther Effectively?" (see [4]).
+
+### Not cited
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; only a matchup comment)
+- [Black Panther - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=CP3_EH6tWu8): To The Table Top! · video (not yet reviewed)
+- [Black Panther - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=3cIPViTdsnQ): Baked Goods · video (not yet reviewed)
+- [Strategy Sunday Vol. 19](https://www.youtube.com/watch?v=Y3MA0XRug58): Karma · video (not yet reviewed)
 
 ---
 
 <!-- id: black_widow -->
 ## Black Widow
 
-**In short:** A ranged spy who completes secret missions for big payoffs (auto damage, discards, extra cards) while using tricks and Maria Hill to stay one step ahead.
+**In short:** A ranged hero with 13 health and 2 movement, plus the ranged Maria Hill (6 health) [1]. She starts with an extra card, The Moscow Protocol, her first mission [1]. Missions are powerful schemes she can only play when their condition is met; each one completed fetches the next [1][2]. One analyst calls her the best Marvel design, a spy game of baiting and dodging [3].
 
 ### Plan A: Run the missions
-**Goal:** Complete one mission after another; each one fetches the next from your deck.
-**How to do it:** You start with The Moscow Protocol (after any enemy takes damage this turn: draw 1, gain an action). Missions are schemes you can only play when their condition is met. The Firenze Agenda: when adjacent to an enemy hero, deal 2 to every enemy in her zone. The Kinshasa Directive: from your own starting space, they discard 2. The Madripoor Sanction: from their starting space, deal 2 to each of their fighters. The Budapest Gambit: with 2 or fewer other cards in hand, draw 5 and they discard a random card. Use Widow's Line (move the enemy 2) and your own movement to set up the conditions.
-**Watch out for:** Opponents see which mission you fetched and will try to block it. Use that: work toward a mission they don't know you hold.
+**Goal:** Complete missions, which deal damage the opponent can't block or strip cards from their hand [2][3].
+**How to do it:** The Moscow Protocol needs an opponent to have taken damage this turn, and draws a card and gains an action [1]. The Firenze Agenda needs her adjacent to an opposing hero, then deals 2 damage to every opponent in her zone [1]; it's a good start to a turn after a melee attacker ends next to her [2]. The Kinshasa Directive needs her on your starting space and makes the opponent discard 2; The Madripoor Sanction needs her on the opponent's starting space and deals 2 damage to each of their fighters [1]. The Budapest Gambit needs 2 or fewer other cards in hand, then draws 5 and makes them discard at random [1]; it is her most situational, and gets you closer to exhaustion [2]. Plan your positioning ahead so you're ready when each mission arrives [2].
+**Watch out for:** Missions are telegraphed: the opponent sees each new one when you reveal cards to find it, and can play to stop it [2][3].
 
-### Plan B: Maria Hill keeps the engine running
-**Goal:** Keep Maria Hill alive so your missions keep coming back.
-**How to do it:** Acting Director of S.H.I.E.L.D. is a 4-value versatile that moves both fighters 3 spaces through enemies and shuffles a scheme from your discard pile back into your deck, letting you redo your best mission. Use it on defense. Double Identity swaps Widow and Hill on defense. Life Model Decoy brings Hill back at 3 health next to Widow if she's defeated.
-**Watch out for:** Both have low health (13 and 6), and your defense values are low.
+### Plan B: Spy games
+**Goal:** Deceive the opponent about what you hold and what you're planning [2][3].
+**How to do it:** If you drew a mission normally, the opponent doesn't know about it; work on that one while they guard against the one they saw [2]. Fake Out (1) draws a card and gains an action if it loses [1]; use it as the first attack of a turn, since opponents save strong defenses for the second [2]. One analyst compares it to the Outlaws' bluff card [3]. Caught in a Web cancels after-combat effects, and Widow's Kiss stops the opponent leaving their space this turn [1]. Maria Hill's Acting Director of S.H.I.E.L.D. moves both fighters 3 spaces and shuffles a scheme from your discard pile back into your deck [1], letting you reuse your best missions [2][3].
+**Watch out for:** Keep Maria alive; she is central to the deck [2].
 
 ### How they lose
-- Opponents read and block her missions.
-- Maria Hill dies, so missions stop coming back.
-- Fast aggression overwhelms her low health and weak defenses.
+- Low health on Black Widow and Maria Hill [2].
+- Low-value defense options [2].
+- Opponents who know part of her deck and hand [2].
+- Telegraphed missions [3].
 
 ### Key cards
-- **Acting Director of S.H.I.E.L.D.**: repositioning plus mission recursion. Arguably her best card.
-- **Widow's Kiss**: the enemy can't leave their space this turn. Pins them for a double attack.
-- **Caught in a Web**: cancels after-combat effects. A surprise when they think your Feints are gone.
-- **Fake Out**: if you lose the combat, draw 1 and gain an action. It baits out their defenses.
+- **Acting Director of S.H.I.E.L.D.**: arguably the most important card in the deck [2]. Gridbeast always uses it on defense, with a mission in your discard pile to recover [2].
+- **The Madripoor Sanction**: deadly against heroes with several sidekicks [2].
+- **Life Model Decoy**: if Maria Hill is defeated, place her next to Black Widow at 3 health [1]. Only play it when she will certainly be defeated [2].
+- **Double Identity**: a 3-value defense that swaps the two fighters, making the other the defender [1]; usually to save Maria [2].
+- **Widow's Sting**: a 5-value attack that moves her up to 3 after combat [1].
 
 ### Tips
-- Only play Life Model Decoy when Maria is sure to be defeated.
-- The Madripoor Sanction wrecks fighters with many sidekicks.
-- She shines in 3+ player free-for-alls.
+- Keep Maria out of danger once she's hurt, until you hold Life Model Decoy [2].
+- Restoration Games' owner says her missions can add a very surprising twist to the game [4].
 
-### Further reading
-- [Unmatched – Black Widow](https://gridbeast.gg/unmatched-black-widow/): Gridbeast · written guide
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [Black Widow - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=-XFE0Kg7hpI): To The Table Top! · video
-- [Black Widow - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=4YvCpuvREaU): Baked Goods · video
-- [Strategy Sunday Vol. 7](https://www.youtube.com/watch?v=vxTNU0p0S10): Karma · video
+### References
+1. Restoration Games. *Unmatched: Marvel – For King and Country*, Black Widow deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Black Widow." *Gridbeast*. https://gridbeast.gg/unmatched-black-widow/
+3. TFJ383. "An Unmatched Roster: Messy Politics." *BoardGameGeek*, 6 January 2024. https://boardgamegeek.com/thread/3221658/an-unmatched-roster-messy-politics
+4. Justin D. Jacobson (Restoration Games), interviewed in "Unmatched: Marvel — Who to Play, How to Win." *The Pop Insider*. https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/
+
+### Not cited
+- [Black Widow - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=-XFE0Kg7hpI): To The Table Top! · video (not yet reviewed)
+- [Black Widow - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=4YvCpuvREaU): Baked Goods · video (not yet reviewed)
+- [Strategy Sunday Vol. 7](https://www.youtube.com/watch?v=vxTNU0p0S10): Karma · video (not yet reviewed)
 
 ---
 
 <!-- id: winter_soldier -->
 ## Winter Soldier
 
-**In short:** A ranged assassin whose card effects can't be canceled. He has strong attacks and defenses held back by "Red Room" drawbacks, and he can recycle his deck so he almost never runs out of cards.
+**In short:** A solo ranged hero with 15 health and 2 movement whose card effects can't be cancelled [1]. Several of his strongest cards carry RED ROOM drawbacks that help the opponent or hurt him [1][2]. Reprogram lets him recycle his discard pile, so in theory he never runs out of cards [2][3].
 
-### Plan A: Never run out, out-value them
-**Goal:** Win the long game by recycling your best cards.
-**How to do it:** Reprogram shuffles 3 cards from your discard pile back into your deck, and since his effects can't be canceled, it always works. Always shuffle back at least one other Reprogram, plus the best cards for the matchup, like Complete the Mission or a strong attack. Complete the Mission is a 3-value defense you can boost that also deals back the combat damage you took; it's one of the best defenses in the game. Born in the Barracks heals 2 if you win the combat, so use it on defense.
-**Watch out for:** Fighters who force discards can strip all your Reprograms.
+### Plan A: Recycle the best cards
+**Goal:** Cycle your best cards back into your deck again and again, and outlast the opponent [2][4].
+**How to do it:** Reprogram (3 copies) shuffles 3 cards of your choice from your discard pile into your deck [1]; build your game around it, and always return a Reprogram among the three [2]. Good picks are Complete the Mission, Wily Fighting and, on maps where it reaches 4 or 5, Marksman (+1 per space to the target) [1][2]. One player boosts maneuvers with his bad cards to make the opponent chase him; once they're gone, he boosts with good cards and recovers them forever [4]. The same player attacks only with 6 or 7 cards in hand [4].
+**Watch out for:** One analyst warns that in practice he won't survive long enough to recycle forever [3]. Forced discards that take his Reprograms break the loop [2].
 
-### Plan B: Bucky turns
-**Goal:** Fire off his strong cards without their downsides.
-**How to do it:** Cards marked Red Room have a drawback. Bionic Arm lets the opponent move all their fighters 5 spaces. Programmed to Kill costs him 2 health if he wins. Reflex Memories discards 2 random cards. A Boy Named Bucky ignores every Red Room effect for the rest of your turn and gains an action. That's the time to use Bionic Arm (6 when adjacent), Programmed to Kill and Reflex Memories (5). Without Remorse (6) is fine anytime; its drawback only lets the opponent draw 1.
-**Watch out for:** Avoid Programmed to Kill and Reflex Memories without Bucky.
+### Plan B: Brainwashed, then freed
+**Goal:** Play his strong RED ROOM cards when their drawbacks don't matter [2].
+**How to do it:** A Boy Named Bucky ignores RED ROOM effects for the rest of the turn and gains an action [1]. Use it with Bionic Arm (6 when adjacent, but otherwise lets the opponent move every fighter 5 spaces) or Programmed to Kill (4, but 2 damage to him if he wins) [1][2]. Without Remorse is a 6 whose drawback only lets the opponent draw a card [1], and Gridbeast doesn't worry about it [2]. Reflex Memories is a versatile 5 that discards 2 random cards and draws 2 [1].
+**Watch out for:** Sources disagree on Reflex Memories. Gridbeast says never play it without Bucky [2]; another player plays it when only 0 or 1 bad cards are left in hand, to draw two new ones [4]; one analyst notes the discard only hurts if you have cards to lose [3].
 
 ### How they lose
-- Relentless early aggression: he has little card draw and slow tempo, so he gets stuck with clunky cards.
-- He has 15 health and low movement for a ranged fighter.
-- Discard effects take his Reprograms.
+- Early pressure: half his deck is strong, but playing the strong half hurts him, and he needs time to curate his deck [5][6].
+- Low health [6].
+- Low movement and no way to relocate, so he gets pinned in corners [2][3].
+- Forced discards [2].
+- Little card draw [7].
 
 ### Key cards
-- **Reprogram**: recycles 3 cards. His engine.
-- **Complete the Mission**: a defense you can boost that hits back.
-- **A Boy Named Bucky**: ignore Red Room drawbacks and gain an action.
-- **Without Remorse**: a 6-value attack.
+- **Reprogram**: the card to build around [2].
+- **Complete the Mission**: a boostable 3-value defense that deals back the combat damage you take [1]; arguably one of the best defense cards in the game [2].
+- **A Boy Named Bucky**: switches off his drawbacks for a turn [1][2].
+- **Without Remorse**: 3 copies of a 6 with a mild drawback [1][2].
+- **Born in the Barracks**: heal 2 if you win [1]; mainly a defense [2].
 
 ### Tips
-- Use his "bad" cards to boost movement early, then keep recycling the good ones.
-- Marksman gets +1 per space between you and the target, so it's strong on big maps.
-- He likes big maps.
+- He likes big maps, and maps with items [4].
+- Programmed to Kill should only be played with Bucky [2].
 
-### Further reading
-- [Unmatched – Winter Soldier](https://gridbeast.gg/unmatched-winter-soldier/): Gridbeast · written guide
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [How to beat Winter Soldier?](https://www.reddit.com/r/Unmatched/comments/1ceg4f9/): Reddit: TeaComprehensive3641 · thread
-- [Advice on playing Winter Soldier into Achilles?](https://www.reddit.com/r/Unmatched/comments/1uxkvf2/): Reddit: GreenBanditOfTruth · thread
-- [Winter Soldier - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=3mpB5W2Df38): To The Table Top! · video
-- [Winter Soldier - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=DrluaIQtAvc): Baked Goods · video
-- [Strategy Sunday Vol. 4](https://www.youtube.com/watch?v=GrNarUkqq9E): Karma · video
+### References
+1. Restoration Games. *Unmatched: Marvel – For King and Country*, Winter Soldier deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Winter Soldier." *Gridbeast*. https://gridbeast.gg/unmatched-winter-soldier/
+3. TFJ383. "An Unmatched Roster: Messy Politics." *BoardGameGeek*, 6 January 2024. https://boardgamegeek.com/thread/3221658/an-unmatched-roster-messy-politics
+4. u/TitanasGios. Comment on "Advice on playing Winter Soldier into Achilles?" by u/GreenBanditOfTruth. *r/Unmatched*, Reddit, 15 July 2026. https://www.reddit.com/r/Unmatched/comments/1uxkvf2/
+5. u/Cell-division. Comment on "How to beat Winter Soldier?" by u/TeaComprehensive3641. *r/Unmatched*, Reddit, 27 April 2024. https://www.reddit.com/r/Unmatched/comments/1ceg4f9/
+6. u/NagasakiPork1945. Comment on "How to beat Winter Soldier?" (see [5]).
+7. u/d_Shirt. Comment on "How to beat Winter Soldier?" (see [5]).
+
+### Not cited
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; nothing on Winter Soldier)
+- [Winter Soldier - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=3mpB5W2Df38): To The Table Top! · video (not yet reviewed)
+- [Winter Soldier - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=DrluaIQtAvc): Baked Goods · video (not yet reviewed)
+- [Strategy Sunday Vol. 4](https://www.youtube.com/watch?v=GrNarUkqq9E): Karma · video (not yet reviewed)
 
 ---
 

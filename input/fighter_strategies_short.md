@@ -1187,75 +1187,93 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: black_panther -->
 ## Black Panther
 
-**In short:** Steals cards from the opponent's deck into his Vibranium Suit and draws a card whenever he boosts.
+**In short:** A king who steals cards from the top of the opponent's deck into his Vibranium Suit, and draws a card every time he boosts [1][2].
 
-### Plan A: Steal their deck
-**Goal:** Shrink their deck and lock away key cards · **How:** Analyze and Adjust, Ancestral Insight and Shuri's Tactical Remote Scanning · **Watch out:** Shuri dies fast.
+### Plan A: Rob their deck
+**Goal:** Steal up to ten cards [2] · **How:** Analyze and Adjust, Ancestral Insight and Shuri's Tactical Remote Scanning [1][2] · **Watch out:** the steals are random [3].
 
 ### Plan B: Boost everything
-**Goal:** Big hits and long moves · **How:** boost (draw a card) with stolen cards; Wakanda Forever! boosts twice · **Watch out:** heavy drawing leads to exhaustion.
+**Goal:** Big boosted attacks that refill your hand [2] · **How:** Wakanda Forever! twice-boosted, Anti-Metal Claws [1][2] · **Watch out:** too much boosting means exhaustion [2][4].
 
 ### How they lose
-- A slow start.
-- Too much boosting, so he runs out of cards.
+- Exhaustion [2].
+- Losing Shuri early [2].
 
 ### Key cards
-- **Tactical Remote Scanning**: steals 2.
-- **Wakanda Forever!**: double boost.
+- **Tactical Remote Scanning**: steal two [1].
+- **Wakanda Forever!**: his big hit [2].
 
 ### Tips
-- Protect Shuri until her schemes are played.
-- Keep stolen recursion targets in the Suit.
+- Mulligan for Shuri's schemes [4].
+- Keep key stolen cards in the Suit [2][4].
+
+### References
+1. Restoration Games. *Unmatched: Marvel – For King and Country*, Black Panther deck.
+2. Gridbeast. "Unmatched – Black Panther." https://gridbeast.gg/unmatched-black-panther/
+3. TFJ383. "An Unmatched Roster: Messy Politics." *BoardGameGeek*, 2024. https://boardgamegeek.com/thread/3221658/
+4. u/LabRat2329. Comment on "Tips on playing Black Panther Effectively?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1ssooyg/
 
 ---
 
 <!-- id: black_widow -->
 ## Black Widow
 
-**In short:** A ranged spy who completes secret missions for big payoffs while Maria Hill keeps them coming.
+**In short:** A ranged spy who completes missions, powerful schemes with conditions, backed by Maria Hill [1][2][3].
 
 ### Plan A: Run the missions
-**Goal:** Chain mission payoffs · **How:** meet each mission's condition (adjacent, starting spaces, low hand) for damage, discards or cards · **Watch out:** they can see and block your next mission.
+**Goal:** Complete missions for unblockable damage and discards [2][3] · **How:** plan positions for each mission's condition; recover missions with Acting Director of S.H.I.E.L.D. [1][2] · **Watch out:** opponents see new missions coming [2][3].
 
-### Plan B: Maria Hill keeps the engine running
-**Goal:** Reuse missions · **How:** Acting Director of S.H.I.E.L.D. moves both fighters and shuffles a mission back · **Watch out:** low health on both.
+### Plan B: Spy games
+**Goal:** Keep the opponent guessing [2] · **How:** work on a mission they haven't seen; bait with Fake Out [2] · **Watch out:** keep Maria alive [2].
 
 ### How they lose
-- Missions get blocked.
-- Maria Hill dies.
+- Low health and low defenses [2].
+- Telegraphed missions [3].
 
 ### Key cards
-- **Acting Director of S.H.I.E.L.D.**: movement plus mission recursion.
-- **Widow's Kiss**: pins the enemy in place.
+- **Acting Director of S.H.I.E.L.D.**: her most important card [2].
+- **The Madripoor Sanction**: punishes many sidekicks [2].
 
 ### Tips
-- Work on a mission they don't know about.
-- Strong in free-for-alls.
+- Use Life Model Decoy only when Maria will surely fall [2].
+- Fake Out works best as your first attack [2].
+
+### References
+1. Restoration Games. *Unmatched: Marvel – For King and Country*, Black Widow deck.
+2. Gridbeast. "Unmatched – Black Widow." https://gridbeast.gg/unmatched-black-widow/
+3. TFJ383. "An Unmatched Roster: Messy Politics." *BoardGameGeek*, 2024. https://boardgamegeek.com/thread/3221658/
 
 ---
 
 <!-- id: winter_soldier -->
 ## Winter Soldier
 
-**In short:** A ranged assassin whose effects can't be canceled, who recycles his deck to outlast you.
+**In short:** A solo marksman whose effects can't be cancelled, who recycles his best cards with Reprogram but must manage RED ROOM drawbacks [1][2].
 
-### Plan A: Never run out
-**Goal:** Win the long game · **How:** Reprogram shuffles 3 cards back (include a Reprogram); Complete the Mission hits back on defense · **Watch out:** discard effects.
+### Plan A: Recycle the best cards
+**Goal:** Outlast them by looping good cards [2] · **How:** Reprogram back Complete the Mission, Wily Fighting and another Reprogram [2] · **Watch out:** he may not survive long enough [3].
 
-### Plan B: Bucky turns
-**Goal:** Strong cards without drawbacks · **How:** A Boy Named Bucky ignores Red Room effects, so play Bionic Arm, Programmed to Kill and Reflex Memories then · **Watch out:** those cards hurt without Bucky.
+### Plan B: Brainwashed, then freed
+**Goal:** Use strong RED ROOM cards safely [2] · **How:** play A Boy Named Bucky, then Bionic Arm or Programmed to Kill [1][2] · **Watch out:** Reflex Memories discards at random [1].
 
 ### How they lose
-- Early aggression; he has slow tempo.
-- His Reprograms get stripped.
+- Early pressure before he curates his deck [4].
+- Low movement; pinned in corners [3].
 
 ### Key cards
-- **Reprogram**: his engine.
-- **Complete the Mission**: a top-tier defense.
+- **Reprogram**: his engine [2].
+- **Complete the Mission**: one of the game's best defenses [2].
 
 ### Tips
-- Boost movement with bad cards early.
-- Big maps suit him.
+- Only play Programmed to Kill with Bucky [2].
+- Boost maneuvers with your bad cards [5].
+
+### References
+1. Restoration Games. *Unmatched: Marvel – For King and Country*, Winter Soldier deck.
+2. Gridbeast. "Unmatched – Winter Soldier." https://gridbeast.gg/unmatched-winter-soldier/
+3. TFJ383. "An Unmatched Roster: Messy Politics." *BoardGameGeek*, 2024. https://boardgamegeek.com/thread/3221658/
+4. u/Cell-division. Comment on "How to beat Winter Soldier?" *r/Unmatched*, Reddit, 2024. https://www.reddit.com/r/Unmatched/comments/1ceg4f9/
+5. u/TitanasGios. Comment on "Advice on playing Winter Soldier into Achilles?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1uxkvf2/
 
 ---
 
