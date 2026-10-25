@@ -1983,50 +1983,69 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: loki -->
 ## Loki
 
-**In short:** A melee trickster who stuffs the opponent's hand with Tricks that backfire, then punishes big hands.
+**In short:** A trickster who hands his Trick cards to the opponent, then punishes a full hand with Underhanded, Shapeshifter and Ragnarök [1][2][3].
 
-### Plan A: Fill their hand
-**Goal:** Make a full hand a liability · **How:** play Tricks into their hand; Ragnarök gets +3 per Trick, Shapeshifter +1 per card · **Watch out:** small hands shrink your damage.
+### Plan A: Force the initiative
+**Goal:** Make them act and fill their hand [2][3] · **How:** walk away so they must boost or maneuver; attack with Underhanded and Shapeshifter for value [1][3] · **Watch out:** opponents who play his Tricks without fear [4].
 
-### Plan B: Force their hand
-**Goal:** Make them act first and waste cards · **How:** Svadilfari's Lure pulls them in; Looking for trouble picks their card · **Watch out:** no easy fatigue plan.
+### Plan B: Set up Ragnarök
+**Goal:** +3 per Trick in their hand [1] · **How:** defense Trick, versatile Trick, then scheme Trick into Ragnarök [5] · **Watch out:** expect a 6 at best [3].
 
 ### How they lose
-- Low printed values and value-changing cards.
-- He can't find damage against a small hand.
+- Low printed values and small hands [6].
+- Sidekick body blocks [7].
 
 ### Key cards
-- **Ragnarök**: uncancellable, +3 per Trick.
-- **Looking for trouble**: you choose their card.
+- **Looking for trouble**: picks the card they must play [1].
+- **Laevateinn**: defense, or a way to take back Tricks [6].
 
 ### Tips
-- Don't boost your movement.
-- He prefers small maps.
+- Don't boost your movement [2].
+- Put discarded Tricks on top of your deck [2].
+
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 3*, Loki deck.
+2. u/d_Shirt. Comment on "Tips on playing Loki Effectively?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1rpofab/
+3. u/Jerry-Red. Comment on "I made a vow to play Loki until I win with him…" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1ss8964/
+4. u/lega1988. Comment on "I made a vow to play Loki…" (see [3]).
+5. u/zehuman52. Comment on "I made a vow to play Loki…" (see [3]).
+6. u/Moon_Cheese_3. Comment on "I made a vow to play Loki…" (see [3]).
+7. u/jclayton111. Comment on "Tips on playing Loki Effectively?" (see [2]).
 
 ---
 
 <!-- id: pandora -->
 ## Pandora
 
-**In short:** A push-your-luck melee fighter whose cards grow with each Misery she reveals from her box.
+**In short:** A push-your-luck fighter who opens her box of Miseries each turn, trading self-damage for cards that scale with what she reveals [1][2].
 
-### Plan A: Flip conservatively
-**Goal:** Value without self-damage · **How:** flip one card most turns; heal with Aphrodite's Beauty · **Watch out:** 3 feathers forces a stop and damages her.
+### Plan A: Flip small, play big
+**Goal:** Aggressive cards, cautious flips [3] · **How:** flip once unless you need more; stop after Misfortune [4][5] · **Watch out:** no big box turn with a hand of defenses [4].
 
-### Plan B: The big turn
-**Goal:** Flip deep when ready · **How:** Hera's Curiosity and Zeus's Mischief scale with Miseries · **Watch out:** bait out Feints first.
+### Plan B: Wait for the big turn
+**Goal:** One crazy turn, healing in between [6] · **How:** bait Feints, then Hera's Curiosity with many Miseries out; Hindsight recurs it [1][4][5] · **Watch out:** Feinted heals [2].
 
 ### How they lose
-- Bad box luck.
-- Feints cancel her healing and scaling.
+- Terrible defenses [3].
+- Low health shuts off her ability [7].
 
 ### Key cards
-- **Hera's Curiosity**: +1 per Misery.
-- **Aphrodite's Beauty**: cancels effects, heals per Misery.
+- **Aphrodite's Beauty**: cancels and heals per Misery [1].
+- **Hera's Curiosity**: +1 per revealed Misery [1].
 
 ### Tips
-- Stop after Misfortune.
-- Don't push your luck with a hand of defenses.
+- Play safe with few Miseries, big with many [8].
+- Learn when to risk it and when not to [4].
+
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 3*, Pandora deck.
+2. u/Franjeims. "Tips on playing Pandora." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1n431fe/
+3. u/OuroborosArchipelago. Comment on "Tips on playing Pandora" (see [2]).
+4. u/CauseImBatman02. Comment on "Tips on playing Pandora" (see [2]).
+5. u/Ok-Boysenberry9678. Comment on "Strategy for Pandora?" *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1oqwc2r/
+6. u/TheEliteB3aver. Comment on "Strategy for Pandora?" (see [5]).
+7. u/TheEliteB3aver. Comment on "Tips on Volume 3." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1mieh3j/
+8. u/GambuzinoSaloio. Comment on "Strategy for Pandora?" (see [5]).
 
 ---
 

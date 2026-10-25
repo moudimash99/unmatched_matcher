@@ -3134,80 +3134,108 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 <!-- id: loki -->
 ## Loki
 
-**In short:** A melee trickster with 16 health. His Trick cards go into the opponent's hand after he plays them, and they backfire on anyone but Loki. He wins by stuffing the opponent's hand with Tricks and big hands, then punishing them for it.
+**In short:** A melee hero with 16 health, 2 movement and no sidekicks [1]. After he plays a Trick, it goes into the opponent's hand; Tricks do one thing when Loki plays them and something good for Loki when the opponent does [1]. If the opponent discards a Trick, it comes back to Loki's hand or the top of his deck, and he gets +1 move for each Trick in their hand [1]. He is a weird, puzzle-like fighter who punishes mistakes, yours included [2][3][4].
 
-### Plan A: Fill their hand
-**Goal:** Make a full hand a liability for the opponent.
-**How to do it:** Mischief-Monger puts each Trick you play into your opponent's hand. If they discard one, it comes back to your hand or the top of your deck. Loki gets +1 move for each Trick they hold. When they play a Trick, the "Not Loki" side hurts them or helps you: Baldr's Downfall deals 2 to their hero, Freyja's Rescue heals Loki 3, Sindri's Bet returns your top discard to your hand. Then punish the big hand. Ragnarök gets +3 for each Trick in their hand and can't be cancelled; a 6 to 9 is good enough to throw. Shapeshifter (0) gets +1 per card in their hand. Underhanded is a 6 when they hold more cards than you.
-**Watch out for:** Opponents who dump Tricks fast or play with a small hand shrink your damage.
+### Plan A: Force the initiative
+**Goal:** Make the opponent uncomfortable: force them to act, waste cards and fill their hand [2][5].
+**How to do it:** Don't be afraid to walk away: they must then boost, which feeds you value, or maneuver, which grows their hand and your attacks [5]. Underhanded is a 6 when they hold more cards than you, and Shapeshifter can add +1 per card in their hand, so both are attacks [1][2][5]. Take Shapeshifter's value rather than its action unless you have a plan for it [2][5]; another player happily takes the action [6]. Looking for trouble returns their card, looks at their hand and picks what they play instead [1]. Avoid boosting your own movement; you need the cards [2].
+**Watch out for:** Once opponents stop fearing his Tricks and simply play them, he can do little [7][8]. Against an opponent keeping a small hand, fill it with Tricks or keep running [4].
 
-### Plan B: Force their hand
-**Goal:** Make them act first and waste cards.
-**How to do it:** Svadilfari's Lure places an opposing fighter next to Loki; if they play it, Loki reveals a card in their hand and they discard it. Looking for trouble (4) returns their played card to their hand and lets you choose what they play instead. Laevateinn reveals a card in their hand, adds its boost, and takes back a Trick. Avoid boosting your movement; you need every card. Some players win by exhaustion, making the opponent keep playing your healing Trick.
-**Watch out for:** He has no easy fatigue plan, and mistakes are punished hard.
+### Plan B: Set up Ragnarök
+**Goal:** Load their hand with Tricks, then hit with Ragnarök, +3 per Trick they hold [1].
+**How to do it:** One sequence: defend with the defense Trick, then the versatile Trick, then on your turn play the scheme Trick and Ragnarök; even if they block with a Trick it is a 6 [9]. It works best against aggressive opponents who attack twice [9]. Bluff with God of Mischief, which ignores a Trick's value [1][3].
+**Watch out for:** Opponents play Tricks quickly, so expect a 6 at best [3][5]; one player says even a potential 9 is worth throwing [2].
 
 ### How they lose
-- Opponents with low printed values, or cards that change their value, beat his value tricks.
-- He can't find damage when the opponent keeps a small hand.
-- Big maps make him slow; he likes small maps.
+- Low printed values, value-changing cards and small hands make damage hard to find [3].
+- He relies on drawing his attack Tricks on time and needs a small map [3].
+- Sidekicks used as body blocks; his scheme Trick matters there [4].
+- He hands the opponent a lot of cards [10].
 
 ### Key cards
-- **Ragnarök**: +3 per Trick in their hand; uncancellable.
-- **Looking for trouble**: picks their card for them. Strong against Little Red.
-- **God of Mischief**: ignores a Trick's value, or cancels their effects.
-- **Trick: Freyja's Rescue**: swaps the two card values; if they play it, Loki heals 3. Hold it until mid-game as bait.
+- **Laevateinn**: adds a revealed card's boost and takes back a Trick [1]; a strong defense or a value engine [3].
+- **Trick: Freyja's Rescue**: swaps the two cards' values; save it for mid-game against big hitters [1][6].
+- **Trick: Svadilfari's Lure**: pulls an opponent next to him; many players won't play it, which gives Loki movement and hand advantage [1][4].
+- **Ragnarök**: its effects can't be cancelled [1].
 
 ### Tips
-- Use Underhanded offensively.
-- Shapeshifter's action gain is usually the weaker option.
-- Discarded Tricks usually go on top of your deck.
+- Discarded Tricks usually go on top of your deck [2][3].
+- Opinions split on exhaustion: some say it is his win condition, thanks to recurring the healing Trick [11][6]; others say he has no fatigue game and should attack [3][10][5].
 
-### Further reading
-- [Tips on Volume 3](https://www.reddit.com/r/Unmatched/comments/1mieh3j/): Reddit: PenTernamee · thread
-- [Tips on playing Loki Effectively?](https://www.reddit.com/r/Unmatched/comments/1rpofab/): Reddit: ronchman · thread
-- [I made a vow to play Loki until I win with him, but I keep losing. Help me get better.](https://www.reddit.com/r/Unmatched/comments/1ss8964/): Reddit: Brean__ · thread
-- [Loki  - Unmatched Fighter Review](https://www.youtube.com/watch?v=Dau1USHCAr4): To The Table Top! · video
-- [Unmatched, Loki quick guide, overview & strategy ](https://www.youtube.com/watch?v=nVwG9oZvqSo): Taytertots · video
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 3*, Loki deck. Card text as recorded in `input/heroes.json`.
+2. u/d_Shirt. Comment on "Tips on playing Loki Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 10 March 2026. https://www.reddit.com/r/Unmatched/comments/1rpofab/
+3. u/Moon_Cheese_3. Comment on "I made a vow to play Loki until I win with him, but I keep losing. Help me get better." by u/Brean__. *r/Unmatched*, Reddit, 22 April 2026. https://www.reddit.com/r/Unmatched/comments/1ss8964/
+4. u/jclayton111. Comment on "Tips on playing Loki Effectively?" (see [2]).
+5. u/Jerry-Red. Comments on "I made a vow to play Loki…" (see [3]) and "Tips on playing Loki Effectively?" (see [2]).
+6. u/Jhinsilog. Comment on "Tips on playing Loki Effectively?" (see [2]).
+7. u/lega1988. Comment on "I made a vow to play Loki…" (see [3]).
+8. u/Brean__. Reply in "I made a vow to play Loki…" (see [3]).
+9. u/zehuman52. Comment on "I made a vow to play Loki…" (see [3]).
+10. u/Independent_Act_6367. Comment on "I made a vow to play Loki…" (see [3]).
+11. u/CupAlternative. Comment on "I made a vow to play Loki…" (see [3]).
+
+The deck data spells Shapeshifter "Shapershifter" and has most of Loki's card names in capitals; normal spelling is used here.
+
+### Not cited
+- u/Moon_Cheese_3's matchup list in "I made a vow to play Loki…" (read; matchups only)
+- u/TheEliteB3aver, comment on "Tips on Volume 3" (read; repeats Ragnarök points)
+- [Loki - Unmatched Fighter Review](https://www.youtube.com/watch?v=Dau1USHCAr4): To The Table Top! · video (not yet reviewed)
+- [Unmatched, Loki quick guide, overview & strategy](https://www.youtube.com/watch?v=nVwG9oZvqSo): Taytertots · video (not yet reviewed)
 
 ---
 
 <!-- id: pandora -->
 ## Pandora
 
-**In short:** A push-your-luck melee fighter with 14 health. At the start of every turn she opens a box of seven Miseries; the more she reveals, the stronger her cards get, but too many feathers hurt her. She wins by playing it safe most turns and going big at the right moment.
+**In short:** A melee hero with 14 health and 2 movement, plus two 1-health Kakodaemons that start off the board [1]. At the start of each turn she opens Pandora's Box, a seven-card deck of Miseries: she reveals them one at a time, resolving each, until she stops or the revealed cards show three feathers; then she takes 1 damage per revealed Misery [1]. Several of her cards scale with revealed Miseries, so she is a push-your-luck fighter [1][2].
 
-### Plan A: Flip conservatively
-**Goal:** Get value from the box without hurting yourself.
-**How to do it:** Pandora's Box makes you reveal Miseries one at a time and resolve each one, stopping whenever you like. If the revealed cards show 3 or more feathers in total, you must stop, and Pandora takes 1 damage per revealed Misery. Flipping just one card is fine, even with no feathers. If you've already revealed the Misery called Misfortune, stop almost every time. Her defenses are poor, so most of her staying power comes from healing: Aphrodite's Beauty (0) cancels their effects and heals 1 per revealed Misery, and Guided by the Fates heals 2 if you win.
-**Watch out for:** Don't push the box for a big turn when your hand is all defenses or schemes.
+### Plan A: Flip small, play big
+**Goal:** Position and attack aggressively, but flip the box conservatively [3].
+**How to do it:** Every flip, ask whether anything you could reveal is worth the damage [4]. It's fine to flip just once, even with no feathers, unless you need something specific that turn [5]. Don't push your luck unless you need a big hit or have high health with Aphrodite's Beauty in hand [6]. Once Misfortune is revealed, stop almost every time [6]. Play safe with few Miseries out and go big with many [7]. Don't plan around what the box might give you next [3].
+**Watch out for:** Don't go for a big box turn when your hand is only defenses [5].
 
-### Plan B: The big turn
-**Goal:** Flip deep when the payoff is ready.
-**How to do it:** Push your luck only for a big hit, or when you have high health and Aphrodite's Beauty in hand. Hera's Curiosity (3) gets +1 per revealed Misery and lets you look at their hand. Zeus's Mischief draws a card per revealed Misery, moves an enemy 1 space and gains an action. Forged by Hephaestus places your fighter anywhere and gains an action. Bait out Feints with other attacks first.
-**Watch out for:** A Feint on Hera's Curiosity or your healing ruins the turn.
+### Plan B: Wait for the big turn
+**Goal:** Seize the right moment for a crazy turn, and heal through the misfortunes in between [8][4].
+**How to do it:** Hera's Curiosity is a 3, +1 for each revealed Misery, and looks at their hand [1]. Bait out Feints first with other attacks or the 0-value Aphrodite's Beauty [5][6][7]. Three Hindsights can return a card from your discard pile to the top of your deck after a win, to bring back a Hera's Curiosity or Aphrodite's Beauty [1][5][6]. Play Hindsight when the +1-to-attacks Misery is revealed and they are unlikely to hold a Feint [6]. Zeus's Mischief draws a card per revealed Misery and gains an action [1].
+**Watch out for:** Her heals can be Feinted [2].
 
 ### How they lose
-- Bad luck with the box: Misfortune early, or feathers piling up.
-- Feint-heavy opponents cancel her healing and scaling.
-- Big-defense fighters like Bigfoot or Tomoe absorb her attacks.
+- Terrible defenses: her hands are often full of attacks, so she lives on healing [3].
+- At 4 health or less she can barely use her ability, and must lean on healing that doesn't need Miseries [4].
+- Bad luck with the box [2][9].
+- Opponents with big defenses who don't fear Hera's Curiosity [10][11].
 
 ### Key cards
-- **Hera's Curiosity**: her scaling attack. With 3 copies plus Hindsight to recycle them, they won't all get feinted.
-- **Hindsight**: if you win, returns a card from your discard pile to the top of your deck; bring back Hera's Curiosity or Aphrodite's Beauty.
-- **Celestial Raiments**: a 0 defense that ignores their card's value.
-- **Divine Intervention**: moves her 5 spaces.
+- **Aphrodite's Beauty**: a 0-value attack that cancels the defense's effects and heals 1 per revealed Misery [1]; her big heal [4].
+- **Celestial Raiments**: a 0-value defense that ignores the attack's value [1].
+- **Guided by the Fates**: adds the top card's boost and heals 2 on a win [1].
+- **Forged by Hephaestus**: places your fighter anywhere and gains an action [1].
 
 ### Tips
-- Play aggressively with your cards, carefully with the box.
-- Never plan around what the box might give next.
-- Good Pandora players stay alive at 1 health by chaining small heals.
+- She is a set-up fighter with many ways to bait Feints [5].
+- A good player can climb back from 1 health with her small heals [8].
+- Don't let a few early misfortunes put you off the box [9].
 
-### Further reading
-- [Tips on Volume 3](https://www.reddit.com/r/Unmatched/comments/1mieh3j/): Reddit: PenTernamee · thread
-- [Tips on playing Pandora](https://www.reddit.com/r/Unmatched/comments/1n431fe/): Reddit: Franjeims · thread
-- [Strategy for Pandora?](https://www.reddit.com/r/Unmatched/comments/1oqwc2r/): Reddit: sylveonce · thread
-- [Pandora - Unmatched Fighter Review](https://www.youtube.com/watch?v=Si9wSXOe0mw): To The Table Top! · video
-- [Unmatched, Pandora quick guide, overview & strategy ](https://www.youtube.com/watch?v=AHfkFbLxFhQ): Taytertots · video
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 3*, Pandora deck. Card text as recorded in `input/heroes.json`.
+2. u/Franjeims. "Tips on playing Pandora." *r/Unmatched*, Reddit, 30 August 2025. https://www.reddit.com/r/Unmatched/comments/1n431fe/
+3. u/OuroborosArchipelago. Comment on "Tips on playing Pandora" (see [2]).
+4. u/TheEliteB3aver. Comment on "Tips on Volume 3" by u/PenTernamee. *r/Unmatched*, Reddit, 5 August 2025. https://www.reddit.com/r/Unmatched/comments/1mieh3j/
+5. u/CauseImBatman02. Comment on "Tips on playing Pandora" (see [2]).
+6. u/Ok-Boysenberry9678. Comment on "Strategy for Pandora?" by u/sylveonce. *r/Unmatched*, Reddit, 7 November 2025. https://www.reddit.com/r/Unmatched/comments/1oqwc2r/
+7. u/GambuzinoSaloio. Comment on "Strategy for Pandora?" (see [6]).
+8. u/TheEliteB3aver. Comment on "Strategy for Pandora?" (see [6]).
+9. u/AbrocomaRight9782. Comment on "Strategy for Pandora?" (see [6]).
+10. u/Franjeims. Reply in "Tips on playing Pandora" (see [2]).
+11. u/CauseImBatman02. Reply in "Tips on playing Pandora" (see [2]).
+
+The deck data has most of Pandora's card names in capitals; normal spelling is used here. The Misery cards are not in `input/heroes.json`.
+
+### Not cited
+- u/SethCremmul, u/FireLadcouk and u/datalore64 (read; no advice)
+- [Pandora - Unmatched Fighter Review](https://www.youtube.com/watch?v=Si9wSXOe0mw): To The Table Top! · video (not yet reviewed)
+- [Unmatched, Pandora quick guide, overview & strategy](https://www.youtube.com/watch?v=AHfkFbLxFhQ): Taytertots · video (not yet reviewed)
 
 ---
 
