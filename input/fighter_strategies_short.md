@@ -106,101 +106,127 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: sinbad -->
 ## Sinbad
 
-**In short:** Starts weak, plays his Voyage cards to build up, then becomes fast and hits very hard.
+**In short:** A slow starter whose seven Voyages make him faster and stronger as they reach the discard pile [1][2].
 
-### Plan A: Survive and build up
-**Goal:** Get Voyages into your discard pile · **How:** keep away early and attack with Voyages whose effects you don't need; let the Porter block · **Watch out:** he can draw himself out of cards.
+### Plan A: Survive and set sail
+**Goal:** Get Voyages into the discard pile safely [2][3] · **How:** maneuver away, play Voyages early, and use the Porter to block [2][3] · **Watch out:** early on he moves and hits weakly [2].
 
-### Plan B: The late-game rush
-**Goal:** Fast, big Voyage attacks · **How:** with 3–4 Voyages discarded he moves 5+ and hits 5+; bait Feints first · **Watch out:** a Feint cancels any Voyage.
+### Plan B: Bring the Voyages home
+**Goal:** Overwhelm the opponent late [2] · **How:** play Voyage Home as your second- or third-to-last Voyage, with a good hand [2] · **Watch out:** opponents save a Feint to catch it [3].
 
 ### How they lose
-- Rushed early before his Voyages are ready.
-- Feints saved for his big Voyages and Voyage Home.
+- Feints saved for his late Voyages [4].
+- Early pressure before his Voyages are out [5].
 
 ### Key cards
-- **Voyage Home**: returns all your Voyages. Don't save it for last.
-- **Leap Away**: defend, then jump 4 spaces away.
+- **Voyage Home**: his best Voyage [2].
+- **Commanding Impact**: a 5-value attack to draw out a Feint [2].
 
 ### Tips
-- Keep Voyages in their own discard pile.
-- Don't overuse Riches Beyond Compare.
-- Opponents rarely Feint the Porter's draw attack.
+- Keep discarded Voyages in a separate pile to count them [2].
+- Watch for exhaustion; he draws a lot [3].
+
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 1*, Sinbad deck.
+2. Gridbeast. "Unmatched – Sinbad." https://gridbeast.gg/unmatched-sinbad/
+3. WarBand.ru. "Как побеждать в Unmatched Vol. 1" (in Russian). https://warband.ru/85-kak-pobezhdat-v-unmatched-vol-1.html
+4. u/TivaDi. Comment on "Weekly Discussion: Battling Sinbad." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1r25uuq/
+5. u/GambuzinoSaloio. Comment on "Weekly Discussion: Battling Sinbad" (see [4]).
 
 ---
 
 <!-- id: robin_hood -->
 ## Robin Hood
 
-**In short:** A fragile archer who shoots, hops back behind his Outlaws and wears you down from range.
+**In short:** A ranged hit-and-run hero who moves after every attack and bluffs with his four Outlaws [1][2][3].
 
-### Plan A: Hit and hop back
-**Goal:** Attack without getting hit back · **How:** shoot, then use his ability to move 2 spaces back behind the Outlaws; A Hunter's Eye can't be Feinted · **Watch out:** he draws a lot and can run out of cards.
+### Plan A: Hit and run
+**Goal:** Pressure from range without being reached [2] · **How:** attack, then move 2 back to safety; A Hunter's Eye can't be Feinted [1][2] · **Watch out:** heavy draw can exhaust him [2].
 
-### Plan B: Highway Robbery pressure
-**Goal:** Damage they can't block · **How:** Highway Robbery ignores defense; once they fear it, attack with other Outlaw cards · **Watch out:** a Feint still cancels it.
+### Plan B: The Outlaws' bluff
+**Goal:** Make every Outlaw attack a guess [3] · **How:** Highway Robbery deals 2 unblockable, so attack with Regroup or Wily Fighting when they stop defending [2][4] · **Watch out:** once the Outlaws are gone, so is the bluff [3].
 
 ### How they lose
-- Enemies break through the Outlaws; he has 13 health.
-- He runs out of cards.
+- Low health and no defense above 3 [2][4].
+- Losing his Outlaw screen [4].
 
 ### Key cards
-- **A Hunter's Eye**: a 5-value attack with nothing to Feint.
-- **Highway Robbery**: unblockable 2 damage.
+- **Highway Robbery**: the heart of his game [2].
+- **Defenders of Sherwood**: only when an Outlaw can come back [2].
 
 ### Tips
-- Use the 2-space hop after every attack.
-- Let some Outlaws die instead of defending them.
+- Keep Outlaws around Robin and jump back among them [4].
+- Sometimes let attacks on Outlaws go undefended [2].
+
+### References
+1. Restoration Games. *Unmatched: Robin Hood vs. Bigfoot*, Robin Hood deck.
+2. Gridbeast. "Unmatched – Robin Hood." https://gridbeast.gg/unmatched-robin-hood/
+3. TFJ383. "An Unmatched Roster: Humble Beginnings." *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3090133/
+4. u/nick_gadget. Comment on "Robin Hood tips." *r/Unmatched*, Reddit, 2024. https://www.reddit.com/r/Unmatched/comments/1bdr0x1/
 
 ---
 
 <!-- id: bigfoot -->
 ## Bigfoot
 
-**In short:** Simple and powerful: big attacks, lots of movement and extra Feints.
+**In short:** A fast, hard-hitting brawler with excellent defenses who draws a card when he ends his turn alone in his zone [1][2].
 
-### Plan A: Hit hard and slip away
-**Goal:** Big hits, then escape · **How:** Larger Than Life (6, can't be Feinted) and Savagery, then move 5 with Crash Through the Trees or Hoax · **Watch out:** small maps limit his escapes.
+### Plan A: Hit hard, then vanish
+**Goal:** Big attacks, then retreat to draw [2] · **How:** Larger Than Life (6) can't be Feinted; Crash Through the Trees and Hoax get him away [1][2] · **Watch out:** his damage is steady but predictable [3].
 
-### Plan B: Draw and wear them down
-**Goal:** Always have one more big card · **How:** end your turn alone in his zone to draw; Jackalope Horns adds 2 damage three times · **Watch out:** busy free-for-alls.
+### Plan B: Send the Jackalope
+**Goal:** Up to 6 unblockable damage from Jackalope Horns [2] · **How:** pair Horns with Momentous Shift [2] · **Watch out:** opponents try to kill the Jackalope first [3].
 
 ### How they lose
-- The Jackalope dies early.
-- Constant pressure runs him out of good defenses.
+- He runs out of good blocks under pressure [3].
+- Opponents stay in his zone to stop his draw [2].
 
 ### Key cards
-- **Larger Than Life**: 6 value, no effect to cancel.
-- **It's Just Your Imagination**: a defense that doubles as a Feint.
+- **Larger Than Life**: play it when you draw it [2].
+- **It's Just Your Imagination**: a 3-value defense that cancels, effectively a fifth Feint [2].
 
 ### Tips
-- End your turn alone whenever you can.
-- Use Hoax on defense to reach ranged fighters.
+- End your turn with no enemies in his zone [2].
+- Hoax is best on defense [2].
+
+### References
+1. Restoration Games. *Unmatched: Robin Hood vs. Bigfoot*, Bigfoot deck.
+2. Gridbeast. "Unmatched – Bigfoot." https://gridbeast.gg/unmatched-bigfoot/
+3. u/Cell-division. Comment on "Weekly Discussion: Battling Bigfoot." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1r85rfa/
 
 ---
 
 <!-- id: bruce_lee -->
 ## Bruce Lee
 
-**In short:** A solo fighter who chains Jeet Kune Do attacks for extra actions and can win in one big turn.
+**In short:** A solo combo fighter whose Jeet Kune Do attacks each gain an extra action, able to chain several attacks in one turn [1][2].
 
 ### Plan A: The combo turn
-**Goal:** Knock them out in one turn · **How:** each Jeet Kune Do attack gains an action; set up with Bring It On and Nunchaku, then strike when their hand is low · **Watch out:** a Feint breaks the chain.
+**Goal:** Unload a Jeet Kune Do chain when their hand is low [2] · **How:** set up with Bring It On, Nunchaku and "HOO! WHAAAAAA!" [1][2] · **Watch out:** one Feint breaks the chain [2].
 
-### Plan B: Keep the pressure on
-**Goal:** Steady damage · **How:** use Jeet Kune Do cards often; Be Like Water brings them back · **Watch out:** ranged fighters can stay out of reach.
+### Plan B: Jab, recover, repeat
+**Goal:** Steady damage that draws out Feints [2] · **How:** use Jeet Kune Do early and recover them with Be Like Water [2] · **Watch out:** his defenses are mostly just a way to recover Jeet Kune Do [3].
 
 ### How they lose
-- Feints and cancel effects break his combos.
-- 14 health and no healing.
+- Cancels and after-combat movement break his combos [4].
+- Low health, no healing [2].
 
 ### Key cards
-- **Jeet Kune Do cards**: 3-value attacks that each gain an action.
-- **Little Dragon**: worth 6 with an empty hand.
+- **Be Like Water**: four ways to recover a Jeet Kune Do [2].
+- **One-Inch Punch**: his sidekick killer [2].
 
 ### Tips
-- Use his end-of-turn move to step away from melee fighters.
-- Go all in when their hand is low.
+- Recover Downward Side Kick first [5].
+- Don't hoard everything for one giant turn [6].
+- End each turn with his free step away [2].
+
+### References
+1. Restoration Games. *Unmatched: Bruce Lee*, Bruce Lee deck.
+2. Gridbeast. "Unmatched – Bruce Lee." https://gridbeast.gg/unmatched-bruce-lee/
+3. TFJ383. "An Unmatched Roster: Humble Beginnings." *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3090133/
+4. u/poindexterg. Comment on "How to counter Bruce lee?" *r/Unmatched*, Reddit, 2021. https://www.reddit.com/r/Unmatched/comments/ob3suh/
+5. u/Life-Rip183. Comment on "Tips on playing Bruce Lee Effectively?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1rn99wv/
+6. u/Biggest_Lemon. Comment on "Tips on playing Bruce Lee Effectively?" (see [5]).
 
 ---
 
