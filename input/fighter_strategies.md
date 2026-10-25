@@ -1148,42 +1148,47 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: daredevil -->
 ## Daredevil
 
-**In short:** A tough melee fighter with a tiny 22-card deck who wins the long game by healing and recycling his best cards.
+**In short:** A tough solo brawler with 17 health and a tiny 22-card deck who recycles his best cards so he never runs out, and who can either outlast you or stay in your face.
 
-### Plan A: Outlast them
+### Plan A: Keep the engine running
 **Goal:** Never run out of cards while your opponent does.
-**How to do it:** Devil of Hell's Kitchen shuffles itself and your last four discards back into your deck. Make sure those four include Take A Knee, Breather, Through Adversity or Feint, so your healing and recovery keep coming back.
-**Watch out for:** A Feint on Devil of Hell's Kitchen cancels the reshuffle. Keep a backup copy or a Breather in hand.
+**How to do it:** Devil of Hell's Kitchen shuffles itself and the top four cards of your discard pile back into your deck. Before playing it, make sure those four include Take A Knee, Breather, Through Adversity or Feint. Breather (3 copies) returns a discarded attack, defense or versatile card to your hand, so Breather and Devil of Hell's Kitchen bring each other back: that's 5 recursion cards, and you only need a few to get through. Play Devil of Hell's Kitchen early and often; the sooner it recycles, the bigger your deck effectively is.
+**Watch out for:** A Feint on Devil of Hell's Kitchen cancels the reshuffle. Keep a Breather or the second copy in hand before you commit, so a cancelled one can come straight back.
 
 ### Plan B: Play without fear
 **Goal:** Get damage through with cards that are mostly worth 2 or 3.
-**How to do it:** With 2 or fewer cards in hand you can blind boost. Man Without Fear can be boosted twice, and Devil of Hell's Kitchen hits for 8 once your deck is empty.
-**Watch out for:** Blind boosting can throw away your key cards.
+**How to do it:** With 2 or fewer cards in hand, his ability lets you blind boost your attack or defense. Man Without Fear has its own blind boost on top, so it can be boosted twice. With most of his deck at 3 copies, you can count what's left and judge when a blind boost is safe.
+**Watch out for:** Blind boosting can throw away Devil of Hell's Kitchen or Breather. Boost when the combat needs it, not just because you can.
 
 ### Plan C: Get in their face
-**Goal:** Reach ranged fighters and fighters who need setup time.
-**How to do it:** Through Adversity moves 4 spaces through enemies, dealing 1 damage to each one. Keep attacking so they can't set up.
-**Watch out for:** Ranged fighters with sidekicks can keep hitting him while he chases.
+**Goal:** Pressure fighters who need time to set up, instead of waiting for exhaustion.
+**How to do it:** Move 3, Grappling Hook and Through Adversity (up to 4 spaces through enemies, 1 damage to each) let him dive in and slip out. Keep attacking so the opponent spends turns drawing defenses instead of building a combo. Take A Knee heals on defense, and Son Of A Boxer hits back when a melee attacker beats you.
+**Watch out for:** As a solo fighter he's the only target, so he can be ganged up on and cornered. Ranged fighters with sidekicks can keep hitting him while he chases.
 
 ### How they lose
-- His recycling is shut down by lots of Feints or by effects that make him discard.
-- He is kept at range by fighters like Medusa or Robin Hood.
-- He blind boosts carelessly and discards his own key cards.
+- His recycling is shut down: heavy Feints or discard effects cancel Devil of Hell's Kitchen and strip his Breathers, and a 22-card deck runs out fast without them.
+- He's predictable. Opponents read his discard pile to see Devil of Hell's Kitchen coming, and attack while his hand is small.
+- He's stuck with a hand he can't use. Six of his cards are schemes, so a low hand can be all schemes when he's attacked.
+- He's kept at range by fighters who hit from afar and screen with sidekicks.
 
 ### Key cards
-- **Devil of Hell's Kitchen**: stops him from ever running out of cards. Usually save it for when your deck is empty.
-- **Breather**: returns a discarded card to your hand. Use it first on Devil of Hell's Kitchen.
-- **Take A Knee**: a 3-value versatile card that heals. Best on defense.
+- **Devil of Hell's Kitchen**: his engine. Don't hold it for the 8-value hit on an empty deck; that's what opponents expect. A 4-value attack that recycles five cards is usually worth more.
+- **Breather**: gets back a lost or cancelled Devil of Hell's Kitchen. Its 3 copies are your insurance.
+- **Take A Knee**: a 3-value versatile card that heals equal to the boost of the card it discards, usually 2. Best on defense.
+- **Son Of A Boxer**: a 3-value defense that deals 2 damage to an adjacent fighter if you lose the combat. Good insurance against melee.
+- **Through Adversity**: breaks out of a pin and pings everyone he passes through.
 
 ### Tips
-- A small hand turns on his blind boost, so don't fear it.
-- Plan which four cards Devil of Hell's Kitchen will shuffle back.
-- Against combo fighters, keep a bigger hand so you're never caught without a defense.
+- A hand of 2 or fewer turns on his blind boost, but against combo fighters keep a bigger hand so you're never caught without a defense.
+- Almost all his defenses are worth 3, so even a small hand defends reliably.
+- Plan the four cards that Devil of Hell's Kitchen will shuffle back.
+- Against opponents with few Feints he can recycle almost forever; save your own Feints for the attacks that matter.
+- Use his move and Through Adversity to step out of combat and redraw, then come back in.
 
 ### Further reading
 - [Unmatched – Daredevil](https://gridbeast.gg/unmatched-daredevil/): Gridbeast · written guide
 - [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [An Unmatched Roster: What's Cooking in Hell's Kitchen?](https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
+- [An Unmatched Roster: What's Cooking in Hell's Kitchen?](https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen): BoardGameGeek: Luke M. (@TFJ383) · written analysis
 - [Help daredevil!](https://www.reddit.com/r/Unmatched/comments/1b11b6o/): Reddit: Practical-Fig-7209 · thread
 - [Daredevil - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=w_diciqXDqQ): To The Table Top! · video
 - [Daredevil - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=7b4lHIAATAU): Baked Goods · video

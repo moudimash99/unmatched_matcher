@@ -688,26 +688,29 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: daredevil -->
 ## Daredevil
 
-**In short:** A tough melee fighter who wins by outlasting you, healing and recycling his best cards.
+**In short:** A tough solo brawler who recycles his best cards so he never runs out, then outlasts you or stays in your face.
 
-### Plan A: Outlast them
-**Goal:** Never run out of cards · **How:** Devil of Hell's Kitchen shuffles itself and your last four discards back into the deck, so line up Take A Knee and Breather in those four · **Watch out:** a Feint cancels the reshuffle, so keep a backup.
+### Plan A: Keep the engine running
+**Goal:** Never run out of cards · **How:** play Devil of Hell's Kitchen early and often to shuffle it and your last four discards back in, with Take A Knee and Breather among them · **Watch out:** a Feint cancels the reshuffle, so hold a Breather to get it back.
 
 ### Plan B: Play without fear
-**Goal:** Get damage through with cards worth 2 or 3 · **How:** with 2 or fewer cards in hand, blind boost; Devil of Hell's Kitchen hits for 8 once your deck is empty · **Watch out:** blind boosts can discard your key cards.
+**Goal:** Get damage through with cards worth 2 or 3 · **How:** with 2 or fewer cards in hand, blind boost; Man Without Fear can be boosted twice · **Watch out:** blind boosts can discard your key cards.
+
+### Plan C: Get in their face
+**Goal:** Pressure fighters who need setup · **How:** Grappling Hook and Through Adversity get him in and out while he heals with Take A Knee · **Watch out:** as a solo fighter he's easy to corner.
 
 ### How they lose
 - Lots of Feints or discard effects break his recycling.
-- Ranged fighters keep him at a distance.
+- Opponents read his discard pile and attack while his hand is small.
 
 ### Key cards
-- **Devil of Hell's Kitchen**: his engine. Usually save it for an empty deck.
-- **Breather**: gets back a lost Devil of Hell's Kitchen.
+- **Devil of Hell's Kitchen**: his engine. Don't save it for the empty-deck 8; it's predictable.
+- **Breather**: 3 copies to get back a lost Devil of Hell's Kitchen.
 
 ### Tips
-- A small hand is a strength, not a problem.
 - Plan the four cards that will be shuffled back.
 - Keep a bigger hand against combo fighters.
+- Step out with Through Adversity to redraw, then come back in.
 
 ---
 
