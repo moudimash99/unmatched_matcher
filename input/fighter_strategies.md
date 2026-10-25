@@ -1034,36 +1034,36 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: achilles -->
 ## Achilles
 
-**In short:** A melee hero with 18 health and 2 movement, plus Patroclus (6 health) [1]. When Patroclus is defeated, Achilles discards 2 random cards; from then on his attacks are +2 and he draws a card whenever he wins a combat [1]. Choosing when Patroclus dies is the heart of playing him [2][3][4].
+**In short:** Achilles is a melee hero with 18 health and 2 movement, accompanied by Patroclus, who has 6 health [1]. When Patroclus is defeated, Achilles discards 2 random cards; from then on his attacks are +2 and he draws a card whenever he wins a combat [1]. Playing Achilles revolves around choosing when Patroclus dies [2][3][4].
 
 ### Plan A: Patroclus fights first
-**Goal:** Get value from Patroclus, then let him fall at a moment that suits you [2][3][4].
-**How to do it:** Brothers In Arms (4) gains an action while Patroclus lives [1], arguably the best card in the deck [2]; play it before he dies [4]. Battle Frenzy deals 2 damage to both fighters in its combat, and The Day of Your Doom becomes a 5 if Patroclus takes 2 damage [1]: both trim his health while hurting the opponent [2]. Under Achilles' Helm swaps Achilles with Patroclus so Patroclus becomes the defender [1]. Opponents will avoid hitting Patroclus, so these cards let you choose when he goes [2].
-**Watch out for:** Never let him die when your hand is small: the 2 random discards can wreck your plan or leave you defenseless [2][5][6]. Opponents may kill him exactly then, to swing the hand advantage [6]. Players disagree on timing: some send Patroclus in early [7][8], others keep him alive longer against hard-to-reach or long-game opponents [4], and one analysis calls the timing make-or-break [9].
+**Goal:** Make the most of Patroclus before letting him fall at a moment that suits you [2][3][4].
+**How to do it:** Brothers In Arms is worth 4 and gains an action while Patroclus lives [1]. It is arguably the deck's best card [2], so use it before he dies [4]. Battle Frenzy deals 2 damage to both fighters in its combat, and The Day of Your Doom becomes a 5 if Patroclus takes 2 damage [1]; both let Patroclus hurt the opponent while bringing himself closer to defeat [2]. Under Achilles' Helm swaps Achilles with Patroclus so Patroclus becomes the defender [1]. Opponents will avoid hitting Patroclus, so use these cards to control when he falls [2].
+**Watch out for:** Avoid letting him die while your hand is small: the 2 random discards can wreck your plan or leave you defenseless [2][5][6]. Opponents may kill him at that moment to gain the advantage in cards [6]. Players disagree on timing: some send Patroclus in early [7][8], others keep him alive longer against hard-to-reach or long-game opponents [4], and another analysis treats that decision as decisive [9].
 
 ### Plan B: The rage of Achilles
-**Goal:** Once Patroclus is gone, attack, attack, attack, and end the game fast [2][4].
-**How to do it:** With +2, Skirmish attacks for 6, Wily Fighting for 5 and even Feint for 4 [2]. Test For Weakness is a 1-value attack with a second 3-value attack attached [1], and is often the best card to recover [4]. Battle Hardened returns any card from your discard pile; recovering Battle Hardened itself keeps your hand size up [1][10][11]. Spear Throw deals 2 damage to an opponent in his zone [1].
-**Watch out for:** The extra draw burns through his deck, so he can lose to exhaustion [2][7]. Opponents will try to run away until he runs out [9][11].
+**Goal:** Once Patroclus is gone, attack relentlessly and end the game quickly [2][4].
+**How to do it:** The +2 bonus makes Skirmish a 6-value attack, Wily Fighting a 5 and even Feint a 4 [2]. Test For Weakness is a 1-value attack followed by a second attack worth 3 [1], and is often the best card to recover [4]. Battle Hardened returns any card from your discard pile; using it to recover another Battle Hardened maintains your hand size [1][10][11]. Spear Throw deals 2 damage to an opponent in his zone [1].
+**Watch out for:** The extra draws quickly consume his deck and leave him vulnerable to exhaustion [2][7]. Opponents will try to stay away until his cards run out [9][11].
 
 ### How they lose
 - Patroclus dies at a bad moment [3][6].
-- Exhaustion after his rage begins [2][7][9].
-- Big maps and opponents who kite him, with only 2 movement [2][12][9].
-- Ranged opponents and heroes with many sidekicks [2].
-- No card draw before Patroclus dies, so he can't go all-out two turns in a row [13].
+- Once his rage begins, he can lose to exhaustion [2][7][9].
+- With only 2 movement, he struggles on big maps against opponents who keep retreating [2][12][9].
+- Ranged opponents and heroes with many sidekicks give him trouble [2].
+- Before Patroclus dies, he has no card draw to sustain an all-out attack for two turns in a row [13].
 
 ### Key cards
-- **Brothers In Arms**: an extra action while Patroclus lives [1][2].
-- **Battle Hardened**: his most important card after the rage [2].
-- **Achilles' Heel**: a 4-value defense, but if you lose, the opponent gains an action [1]. Use it carefully [2][4].
-- **Under Achilles' Helm**: protects Achilles early; after Patroclus dies, its boost of 4 helps him reach a fleeing opponent [4][11].
-- **Test For Weakness**: two attacks in one, and players try not to lose it to the discards when Patroclus dies [5][4].
+- **Brothers In Arms**: Gains an extra action while Patroclus lives [1][2].
+- **Battle Hardened**: His most important card once his rage begins [2].
+- **Achilles' Heel**: A 4-value defense, but if you lose, the opponent gains an action [1]. Use it carefully [2][4].
+- **Under Achilles' Helm**: Protects Achilles early, then offers a boost of 4 to help him catch fleeing opponents after Patroclus dies [4][11].
+- **Test For Weakness**: Provides two attacks in one card; players try to avoid losing it to the discards when Patroclus dies [5][4].
 
 ### Tips
-- Make sure you hold at least two expendable cards when Patroclus dies, ideally his own cards [2].
-- Before the rage, don't spend your versatile cards on Patroclus [12][4].
-- Tight maps suit him; on big maps, find a central spot [2].
+- Keep at least two expendable cards in hand when Patroclus dies, ideally his own cards [2].
+- Save your versatile cards rather than spending them on Patroclus before the rage [12][4].
+- Favor tight maps, and take a central position on larger ones [2].
 
 ### References
 1. Restoration Games. *Unmatched: Battle of Legends, Volume 2*, Achilles deck. Card text as recorded in `input/heroes.json`.
@@ -1093,35 +1093,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: bloody_mary -->
 ## Bloody Mary
 
-**In short:** A solo melee hero with 16 health and 3 movement who gains an action at the start of her turn if she has exactly 3 cards in hand [1]. Many of her card effects only trigger on a third action [1][2]. Players disagree on how much to build around that: some chase the 3-card turn, others mostly ignore it and play aggressively [3][4][5].
+**In short:** Bloody Mary is a solo melee hero with 16 health and 3 movement who gains an action at the start of her turn if she has exactly 3 cards in hand [1]. Many of her card effects only trigger on a third action [1][2]. Players disagree about how much to build around her ability: some pursue the 3-card turn, while others largely ignore it and focus on aggression [3][4][5].
 
 ### Plan A: Speak her name three times
-**Goal:** Set up turns where you start with exactly 3 cards, then strike hardest on your third action [2].
-**How to do it:** Try to end your turn out of the opponent's reach, or with no more than 4 cards, so you still hold a defense [2]; one player ends at 4 cards to tempt a single attack [6]. Evade and Broken Glass draw a card on defense, which can leave you at 3 [1][2]. On the turn itself, Gridbeast maneuvers first, attacks second, and saves the big hit for third [2]. Speak Three Times is worth 7 on a third action [1]. Closer Than She Appears moves 1, draws 1 and gains an action [1], a third action even with a big hand [2][7]. Another approach builds a big hand first and works down to a chosen 3 cards [5][8].
-**Watch out for:** Opponents can see the third action coming and hold a Feint for it [2][9]. Attack with expendable cards on some third actions to waste their Feints [5][10]; don't play Bloody Requiem as a third action [7].
+**Goal:** Start turns with exactly 3 cards and save your strongest hit for the third action [2].
+**How to do it:** Aim to end your turn out of reach, or with no more than 4 cards while keeping a defense available [2]; ending with 4 cards can tempt the opponent into attacking once [6]. Evade and Broken Glass draw a card on defense, which can leave you at 3 [1][2]. On the turn itself, maneuver first, attack second and save the big hit for your third action [2]. Speak Three Times is worth 7 on a third action [1]. Closer Than She Appears moves 1, draws 1 and gains an action [1], giving you a third action even with a large hand [2][7]. Another approach is to build a large hand, then work down to the 3 cards you want [5][8].
+**Watch out for:** Opponents can see the third action coming and hold a Feint for it [2][9]. Sometimes use an expendable attack as your third action to draw out a Feint [5][10]; don't play Bloody Requiem as a third action [7].
 
 ### Plan B: Go aggressive
-**Goal:** Pressure the opponent constantly, using her 3 movement, discards and double attack [3][5].
-**How to do it:** You don't need three actions every turn [4]. Keep attacking; ending turns at 3 or 4 cards also makes opponents reluctant to attack you [3]. Aim to leave both players short of cards, because her cards get better the fewer you both hold [11]. Jump Scare is worth 6 if Mary ends up sharing no zone with where she started [1], so use it early and often [7]. Bloody Requiem adds a second attack worth the printed value of the defense played against the first [1].
-**Watch out for:** Running too low on cards against an aggressive opponent can leave her in a near-unwinnable spot [9]. One player says not to fear cancels: playing around them wastes your windows [11].
+**Goal:** Maintain pressure with her 3 movement, forced discards and double attack [3][5].
+**How to do it:** You don't need three actions every turn [4]. Keep attacking; ending turns at 3 or 4 cards also makes opponents reluctant to attack you [3]. Try to leave both players short of cards: hers improve as both hands shrink [11]. Jump Scare is worth 6 if Mary's final space shares no zone with her starting space [1], so use it early and often [7]. Bloody Requiem adds a second attack whose value equals the printed value of the defense against the first [1].
+**Watch out for:** An aggressive opponent can leave her with almost no way back if her hand gets too small [9]. Another view is to stop worrying about cancels, because playing around them wastes opportunities [11].
 
 ### How they lose
-- Cancels: her payoffs are easy to predict, so she's heavily punished by them [9].
-- Few 3-action turns in a game, and her third-action cards are weak otherwise [9].
-- Being bullied when low on cards [9].
-- As a solo fighter she has less presence on the board and is easier to read [2].
+- Her strongest effects are predictable, making cancels especially punishing [9].
+- She gets few 3-action turns, and the cards that reward them are weak at other times [9].
+- Opponents can overwhelm her when her hand is small [9].
+- Fighting alone limits her board presence and makes her easier to read [2].
 
 ### Key cards
-- **Speak Three Times**: her strongest attack, 7 on a third action; save it for when the opponent can't cancel it [2][10].
-- **Stolen Memories**: look at their hand and choose a card; they discard it or take its boost as damage [1]. Crucial for damage: target high-boost cards they need [11].
-- **Broken Glass**: change its value by 1; if it matches the opponent's card, draw 1 and deal 2 damage [1]. Often best on defense [5].
-- **Mirror Image**: a 0-value defense equal to the attacker's printed value [1], excellent against big attacks [2].
-- **Infinity Mirror**: a 4-value versatile card that moves either fighter up to 4 [1]; excellent on defense [2].
+- **Speak Three Times**: Her strongest attack reaches 7 on a third action; save it for when the opponent cannot cancel it [2][10].
+- **Stolen Memories**: Lets you inspect the opponent's hand and choose a card for them to discard or take its boost as damage [1]. An essential source of damage; target high-boost cards they need to keep [11].
+- **Broken Glass**: Changes its value by 1, then draws 1 and deals 2 damage if it matches the opponent's card [1]. Often best on defense [5].
+- **Mirror Image**: A 0-value defense that matches the attacker's printed value [1], excellent against big attacks [2].
+- **Infinity Mirror**: A 4-value versatile card that moves either fighter up to 4 [1]; excellent on defense [2].
 
 ### Tips
-- Track how many cancels the opponent has left [2].
-- If you need the healing, play Ghostly Touch on sidekicks; opponents rarely spend a Feint there [2].
-- She can also play the exhaustion game, with little draw and many discards [10].
+- Keep track of the opponent's remaining cancels [2].
+- When you need healing, attack sidekicks with Ghostly Touch; opponents rarely spend a Feint on them [2].
+- Her limited draw and many forced discards also let her play for exhaustion [10].
 
 ### References
 1. Restoration Games. *Unmatched: Battle of Legends, Volume 2*, Bloody Mary deck. Card text as recorded in `input/heroes.json`.
@@ -1146,35 +1146,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: sun_wukong -->
 ## Sun Wukong
 
-**In short:** A melee hero with 17 health and 2 movement [1]. At the start of his turn he may take 1 damage to summon a 1-health Clone next to him, up to 3 [1]. Every card in his deck can be played by Wukong or any Clone [1][2], which makes him a master of bluffing [3][4]. Several sources find him frustrating to face [4][5].
+**In short:** Sun Wukong is a melee hero with 17 health and 2 movement [1]. At the start of his turn he may take 1 damage to summon a 1-health Clone next to him, up to 3 [1]. Wukong and his Clones can each play every card in his deck [1][2], making bluffing central to his play [3][4]. Several sources find him frustrating to face [4][5].
 
 ### Plan A: Hide behind the Clones
 **Goal:** Keep the real Wukong safe while Clones do the fighting [2][6].
-**How to do it:** Treat Clones as Wukong himself while keeping his body out of danger [2]. A wall of Clones can keep melee fighters without area damage from ever reaching him [4], and since each Clone costs only 1 health, he loses little per combat [4]. Sly Monkey (4 copies) leaves a Clone in his space and places Wukong elsewhere in his zone [1], a free Clone and an escape [2]. Phoenix Form heals 1 for each Clone on the board [1]; summon all you can while you hold it, and play it before it's discarded [2].
-**Watch out for:** Gridbeast disagrees with the full wall: summoning too many Clones costs too much health and invites area attacks and schemes, so it summons them mainly as distractions [2].
+**How to do it:** Fight with the Clones as though they were Wukong, keeping the real hero out of danger [2]. A wall of Clones can keep melee fighters without area damage from ever reaching him [4], and each Clone costs only 1 health, keeping his losses per combat small [4]. The 4 copies of Sly Monkey each leave a Clone in Wukong's space and place him elsewhere in his zone [1], providing a free Clone and an escape [2]. Phoenix Form heals 1 for each Clone on the board [1]; summon as many as possible while holding it, then play it before a discard effect takes it [2].
+**Watch out for:** Gridbeast favors using Clones mainly as distractions rather than building a full wall: too many drain his health and invite area attacks and schemes [2].
 
 ### Plan B: The trickster's guessing game
-**Goal:** Make every block a guess [3][4].
-**How to do it:** Ruyi Jingo Bang attacks for 0, but a defense card against it triggers a second, 4-value attack [1]. Taunting Laughter makes the opponent discard a card or lose their defense value [1]. Ox Form attacks for 7 and can't be cancelled, though a defender who played a card may boost it [1]. Opponents learn not to block the first two, then take 7 from Ox Form [3]; making them expect Ruyi Jingo Bang is a good time for Ox Form [2]. 72 Transformations returns a Form card from your discard pile [1], so Ox Form can be played up to five times [3]. Attack from a distance with a Clone so Wukong risks nothing [3].
-**Watch out for:** Predicted, his cards are easy to answer: low attacks bait his big defenses, and not defending blunts Ruyi Jingo Bang and Taunting Laughter [2]. Keep 72 Transformations from being Feinted [2].
+**Goal:** Keep the opponent guessing whenever they defend [3][4].
+**How to do it:** Ruyi Jingo Bang attacks for 0, but triggers a second attack worth 4 if the opponent defends with a card [1]. Taunting Laughter makes the opponent discard a card or lose their defense value [1]. Ox Form attacks for 7 and can't be cancelled, though a defender who played a card may boost it [1]. Once opponents learn to leave the first two undefended, Ox Form can catch them for 7 [3]; play Ox Form when they expect Ruyi Jingo Bang [2]. 72 Transformations returns a Form card from your discard pile [1], so Ox Form can be played up to five times [3]. Attack with a Clone while Wukong stays safely at a distance [3].
+**Watch out for:** His cards are easy to answer when the opponent predicts them: low attacks bait his big defenses, and not defending blunts Ruyi Jingo Bang and Taunting Laughter [2]. Avoid letting 72 Transformations be Feinted [2].
 
 ### How they lose
 - He has no cancel cards, so effects and scheme damage always land [7][8].
 - Area damage and effects that hit several fighters clear his Clones [7][8][9].
-- Low card draw [7][9].
-- Hand knowledge and discards [5].
+- Limited card draw holds him back [7][9].
+- Hand knowledge and forced discards undermine him [5].
 - Each new Clone drains his health [5][2].
 
 ### Key cards
-- **Ox Form**: his most fearsome attack [2].
-- **Golden Chain Mail**: a 4-value defense that sends the combat damage you would take to the attacker instead [1].
-- **Bewilderment**: a 0-value defense that prevents all damage and moves your fighter anywhere [1]. Save it for the real Wukong [2].
-- **Tortoise Form**: a 5-value defense that lets the attacker boost [1].
-- **Infinite Strikes**: a 2-value attack, +1 per other friendly fighter adjacent to the target, and gains an action [1]; up to 5 with all three Clones [2].
+- **Ox Form**: His most threatening attack [2].
+- **Golden Chain Mail**: A 4-value defense that redirects the combat damage you would take to the attacker [1].
+- **Bewilderment**: A 0-value defense that prevents all damage and places your fighter anywhere [1]. Save it for the real Wukong [2].
+- **Tortoise Form**: A 5-value defense that lets the attacker boost [1].
+- **Infinite Strikes**: A 2-value attack that gains an action and adds +1 for each other friendly fighter adjacent to the target [1]; up to 5 with all three Clones [2].
 
 ### Tips
-- Spread the Clones, always look for a pin, and stay one maneuver from an attack [10].
-- One player recovers Ox Form rather than Phoenix Form when playing aggressively [10].
+- Spread out the Clones, look for opportunities to pin the opponent, and stay within one maneuver of attacking [10].
+- When playing aggressively, one approach is to recover Ox Form rather than Phoenix Form [10].
 - Fiery Eyes That See can bury a card the opponent needs at the bottom of their deck [2].
 
 ### References
@@ -1199,35 +1199,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: yennenga -->
 ## Yennenga
 
-**In short:** A ranged hero with 15 health and 2 movement, plus two Archers with 2 health each [1]. When Yennenga would take damage, you may assign any of it to Archers in her zone instead [1]. Sources rate her strong and versatile [2][3], with high card quality and few bad cards [3][4]; one analyst calls her the most engaging of the top-tier fighters, playing an honest game with clear weaknesses [5].
+**In short:** Yennenga is a ranged hero with 15 health and 2 movement, supported by two Archers with 2 health each [1]. When Yennenga would take damage, you may assign any of it to Archers in her zone instead [1]. She is considered strong and versatile [2][3], with high card quality and few bad cards [3][4]; one assessment calls her the most engaging top-tier fighter, with an honest playstyle and clear weaknesses [5].
 
 ### Plan A: Lead from the front
-**Goal:** Stand close enough that she and her Archers can all attack, but far enough that the opponent must maneuver to reach her [2].
-**How to do it:** Rain of Arrows is a 3-value attack with a second 3-value attack after it [1], forcing two defense cards for one of your cards [2]. Jaws of the Beast gains +1 for each zone the target is in [1], punishing ranged opponents on multi-zone spaces [2]. Master of the Hunt gains 2 actions [1]: three actions in one turn can win the game, so don't waste it [2]. She has enough extra actions to blow through an opponent's hand in one turn [6]. Mix Skirmish and Momentous Shift into the Archers' attacks so you're not predictable [2].
-**Watch out for:** Surprise Volley can revive an Archer in the opponent's zone as the attacker, or else gain an action [1]. Only take the action if it lets you finish the opponent, and don't let it be Feinted [2].
+**Goal:** Position all three fighters to attack while making the opponent maneuver to reach Yennenga [2].
+**How to do it:** Rain of Arrows is a 3-value attack followed by another attack worth 3 [1], forcing the opponent to spend two defense cards against one of yours [2]. Jaws of the Beast gains +1 for each zone the target is in [1], punishing ranged opponents on multi-zone spaces [2]. Master of the Hunt gains 2 actions [1]: use those three actions carefully, because they can win the game [2]. She has enough extra actions to drain an opponent's hand in one turn [6]. Mix Skirmish and Momentous Shift into the Archers' attacks to keep the opponent guessing [2].
+**Watch out for:** Surprise Volley can revive an Archer in the opponent's zone as the attacker, or gain an action instead [1]. Only take the action if it lets you finish the opponent, and don't let it be Feinted [2].
 
 ### Plan B: The Archers soak the damage
 **Goal:** Use the Archers as extra health [2][6].
-**How to do it:** Keep the Archers in her zone, behind her against melee fighters [2]. Gridbeast spreads damage so each Archer survives on 1 health, then uses them as a wall [2]. One With the Land moves all your fighters 2, heals each by 1 and draws a card [1], best when both Archers are at 1 health [2]. Shield Formation is a 3-value defense: the opponent discards a card or you revive an Archer [1]. Stallion Charge (3) moves her up to 5 through enemies, dealing 1 damage to each [1], and is ideal on defense [2].
-**Watch out for:** Don't throw Archers away carelessly [2]. If opponents separate her from her Archers, she loses that protection [6].
+**How to do it:** Keep the Archers in her zone, behind her against melee fighters [2]. Spread damage so that each Archer survives on 1 health, then use them as a wall [2]. One With the Land moves all your fighters 2, heals each by 1 and draws a card [1]; it is most effective when both Archers are at 1 health [2]. Shield Formation is a 3-value defense: the opponent discards a card or you revive an Archer [1]. Stallion Charge is worth 3 and moves her up to 5 spaces through enemies, dealing 1 damage to each [1]. It is ideal on defense [2].
+**Watch out for:** Avoid sacrificing Archers carelessly [2]. If opponents separate her from her Archers, she loses that protection [6].
 
 ### How they lose
 - She has no cancel cards [2][7][8].
-- Attacks that hit every fighter in a zone [2], and efficient area damage on her Archers [8].
+- Attacks that hit every fighter in a zone threaten her [2], as does efficient area damage against her Archers [8].
 - Opponents who avoid multi-zone spaces blunt Jaws of the Beast [7].
-- Steady pressure until her hand is low [6].
+- Steady pressure can wear down her hand [6].
 
 ### Key cards
-- **Rain of Arrows**: two attacks for one card [1][2].
-- **Master of the Hunt**: three actions in one turn [1][2].
-- **Stallion Charge**: her best defensive repositioning [2].
-- **Pin the Prey**: an Archer card that moves the opponent up to 4 and makes them discard [1]. Disruptive, and a Feint spent on it is one fewer for your big attacks [2].
-- **Point Blank**: 2 damage to an adjacent opponent [1]. Risky on defense unless you're ahead [2].
+- **Rain of Arrows**: Provides two attacks for one card [1][2].
+- **Master of the Hunt**: Enables three actions in one turn [1][2].
+- **Stallion Charge**: Her best way to reposition on defense [2].
+- **Pin the Prey**: An Archer card that moves the opponent up to 4 and forces a discard [1]. It disrupts the opponent, and any Feint spent on it leaves one fewer for your big attacks [2].
+- **Point Blank**: Deals 2 damage to an adjacent opponent [1]. Risky on defense unless you're ahead [2].
 
 ### Tips
-- Keep your hand size high; her card quality does the rest [4].
+- Maintain a large hand and let her card quality do the work [4].
 - Divide and Conquer is worth 4 when the Archer is outside Yennenga's zone, a good defense for a separated Archer [1][2].
-- She has many versatile cards, so she always has a defense, though usually only a 3 [9].
+- Her many versatile cards keep a defense available, though it is usually only a 3 [9].
 
 ### References
 1. Restoration Games. *Unmatched: Battle of Legends, Volume 2*, Yennenga deck. Card text as recorded in `input/heroes.json`.
@@ -1251,33 +1251,33 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: luke_cage -->
 ## Luke Cage
 
-**In short:** A melee hero with 13 health and 2 movement, plus the ranged Misty Knight (6 health) [1]. Luke takes 2 less combat damage from attacks [1]. Simple, tanky and powerful: he takes hits and hits back harder [2]. One analyst calls him oppressive for many opponents, but beaten by damage from card effects [3].
+**In short:** Luke Cage is a melee hero with 13 health and 2 movement, accompanied by the ranged Misty Knight, who has 6 health [1]. Luke takes 2 less combat damage from attacks [1]. He is straightforward, durable and powerful, taking hits and striking back harder [2]. One assessment finds him oppressive for many opponents, but beaten by damage from card effects [3].
 
 ### Plan A: Unbreakable
 **Goal:** Let his ability turn ordinary defense cards into strong blocks [2].
-**How to do it:** His defense cards are all worth 2 or less, but with the reduction he effectively defends at 3 or 4 [2]. Gridbeast adds that when defending he wins the combat if he takes no damage, even without playing a card [2]. Trash Talk cancels the attacker's effects and, if you win, ends their turn [1], which is deadly against fighters who flee after attacking or chain extra actions [2][3]. Skin Like Titanium (0) deals damage back equal to the combat damage Luke takes [1]; after opponents have learned to attack him big, it punishes them [2].
+**How to do it:** Although his defense cards are worth 2 or less, his damage reduction lets him effectively block at 3 or 4 [2]. Gridbeast also states that he wins defensive combats whenever he takes no damage, even if he plays no card [2]. Trash Talk cancels the attacker's effects and, if you win, ends their turn [1], making it deadly against fighters who retreat after attacking or chain extra actions [2][3]. Skin Like Titanium is worth 0 and returns damage equal to the combat damage Luke takes [1]. Use it to punish opponents who have learned to attack him with high values [2].
 **Watch out for:** Damage from abilities and schemes ignores his reduction, and his 13 health is low [2][3].
 
 ### Plan B: Heroes for Hire
-**Goal:** Hit like a truck, using Misty to create openings [2].
-**How to do it:** Sweet Christmas! is a 6-value attack with no effect, which punishes Feints [1][2]. Get Paid (4) draws 2 if you win, and Hero For Hire (3) can be boosted, ideally with Pushback or Regroup [1][2]. Where's My Money? places Luke next to the nearest opponent and gains an action [1]. Misty's Got My Back? swaps her with Luke so he becomes the defender [1], setting him up for a double attack next turn [2]. Daughter of the Dragon is worth 6 when Misty is adjacent to the opponent [1], excellent on defense [2]; Misty can also shoot for big damage at range [3].
-**Watch out for:** Keep Misty alive as long as possible; she provides the mix-ups Luke can't [2].
+**Goal:** Land heavy hits with openings created by Misty [2].
+**How to do it:** Sweet Christmas! is a 6-value attack with no effect, which punishes Feints [1][2]. Get Paid is worth 4 and draws 2 if you win, while Hero For Hire is worth 3 and can be boosted, ideally with Pushback or Regroup [1][2]. Where's My Money? places Luke next to the nearest opponent and gains an action [1]. Got My Back? swaps Misty with Luke, making him the defender [1], setting him up for a double attack next turn [2]. Daughter of the Dragon is worth 6 when Misty is adjacent to the opponent [1], making it excellent on defense [2]. Misty can also deal heavy damage from range [3].
+**Watch out for:** Keep Misty alive as long as possible; she creates opportunities to vary your play that Luke cannot create alone [2].
 
 ### How they lose
-- Effect and scheme damage, which his ability doesn't reduce [2][3].
-- Low health [2].
-- Low mobility: opponents run to the far side of the board and wait him out [2][3].
+- His ability offers no protection from effect and scheme damage [2][3].
+- His health is low [2].
+- His limited mobility lets opponents retreat to the far side of the board and wait him out [2][3].
 
 ### Key cards
 - **Trash Talk**: 3 copies of a cancel that can end the opponent's turn [1][2][3].
-- **Sweet Christmas!**: a plain 6 [1][2].
-- **Skin Like Titanium**: punishes big attacks [2].
-- **Still Standing**: a 4-value attack that shuffles 2 cards from your discard pile into your deck if you win [1]. Recover Trash Talk, or the other Still Standing to make a loop; don't let it be cancelled [2].
-- **Power Man**: a 2-value defense that moves the attacker up to 3 spaces, damaging them and everyone they pass through [1].
+- **Sweet Christmas!**: A straightforward 6-value attack [1][2].
+- **Skin Like Titanium**: Punishes high-value attacks [2].
+- **Still Standing**: A 4-value attack that shuffles 2 discarded cards into your deck if you win [1]. Recover Trash Talk or the other Still Standing to create a loop, and avoid letting it be cancelled [2].
+- **Power Man**: A 2-value defense that moves the attacker up to 3 spaces and damages them and every opponent they pass through [1].
 
 ### Tips
-- When Misty attacks while adjacent, mix in Commanding Impact so Daughter of the Dragon isn't obvious [2].
-- He's a good hero for newcomers [2].
+- Mix Commanding Impact into Misty's adjacent attacks to disguise Daughter of the Dragon [2].
+- His straightforward play makes him a good choice for newcomers [2].
 
 ### References
 1. Restoration Games. *Unmatched: Marvel – Redemption Row*, Luke Cage deck. Card text as recorded in `input/heroes.json`.
@@ -1295,35 +1295,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: ghost_rider -->
 ## Ghost Rider
 
-**In short:** A solo melee hero with 17 health and 2 movement who starts with 5 Hellfire [1]. When he maneuvers he may spend 1 Hellfire to move 4, through opposing fighters, dealing 1 damage to each one he passes [1]. Almost everything he does runs on Hellfire, so managing it is the whole game [2][3]. Sources agree he crushes some opponents and struggles badly against others [3][4].
+**In short:** Ghost Rider is a solo melee hero with 17 health and 2 movement who starts with 5 Hellfire [1]. When maneuvering, he may spend 1 Hellfire to move 4 spaces through opposing fighters, dealing 1 damage to each one he passes through [1]. Almost everything he does depends on Hellfire, making its management central to his play [2][3]. His strength varies sharply with the opponent: he overwhelms some and struggles badly against others [3][4].
 
 ### Plan A: Run them over
 **Goal:** Wear the opponent down with damage from his maneuvers, then finish them [5][6].
-**How to do it:** Maneuver through the opponent each turn for unblockable chip damage, attacking only when you have the card advantage, need to reload Hellfire, or can finish them [5]. One player treats him as a "run away" fighter who wears opponents down this way while keeping the right defenses and Hellfire ready [6]. Fighters with 1-health sidekicks suffer most from it [2][4]. Once the opponent is at 5 health or less, Blaze of Glory deals 1 damage per Hellfire spent to every fighter in his zone, Ghost Rider included [1]; as the attacker, he wins if both die [2][6].
-**Watch out for:** One analyst calls spamming maneuvers a trap: it leaves no Hellfire for his cards and makes for a dull game [3]. Opponents who know the Blaze of Glory finish will hold a Feint for it [6].
+**How to do it:** Maneuver through the opponent each turn for unblockable chip damage, attacking only when you have the card advantage, need to replenish Hellfire, or can finish them [5]. This retreating approach wears opponents down while keeping the necessary defenses and Hellfire ready [6]. Fighters with 1-health sidekicks are hit hardest by this approach [2][4]. Once the opponent is at 5 health or less, Blaze of Glory deals 1 damage per Hellfire spent to every fighter in his zone, Ghost Rider included [1]; as the attacker, he wins if both die [2][6].
+**Watch out for:** Another assessment calls repeated maneuvers a trap that leaves no Hellfire for his cards and makes the game dull [3]. Opponents who know the Blaze of Glory finish will hold a Feint for it [6].
 
 ### Plan B: The Hellfire chain
-**Goal:** Pressure the opponent with a chain of actions that costs little Hellfire, or even gains some [2].
-**How to do it:** Hell Rides With Me moves him and an adjacent fighter 4 each, gains 2 Hellfire and an action [1]. I Brought The Devil With Me (3) gains an action for 2 Hellfire [1]. Gridbeast chains them into four actions without losing Hellfire, ending with The Wicked Will Burn (gain 2 Hellfire if he moved this turn) or I Finally Escaped Hell to get away [1][2]. Spirit Of Vengeance is a 5-value attack that can spend 1 Hellfire to draw 2 [1].
-**Watch out for:** One player says spending 2 Hellfire on I Brought The Devil With Me is almost never worth it unless it wins the game, because all his best cards scale with the Hellfire you have left [7].
+**Goal:** Chain actions to pressure the opponent while spending little Hellfire or even gaining some [2].
+**How to do it:** Hell Rides With Me moves him and an adjacent fighter 4 each, gains 2 Hellfire and an action [1]. I Brought The Devil With Me is worth 3 and gains an action for 2 Hellfire [1]. Chain them into four actions without losing Hellfire, then finish with The Wicked Will Burn to gain 2 Hellfire if he moved this turn, or I Finally Escaped Hell to retreat [1][2]. Spirit Of Vengeance is a 5-value attack that can spend 1 Hellfire to draw 2 [1].
+**Watch out for:** A competing view is that spending 2 Hellfire on I Brought The Devil With Me is almost never worthwhile unless it wins the game, because his best cards depend on how much Hellfire remains [7].
 
 ### How they lose
-- Running out of Hellfire with no way to get more [3][8].
-- A hand full of cards that only gain Hellfire, or only spend it [3].
-- Weak defense without Hellfire [2][4].
-- Opponents who are mobile, very tough, or can block his path [9].
-- A solo fighter, and no healing [3][4].
+- He runs out of Hellfire with no way to replenish it [3][8].
+- His hand contains only cards that gain Hellfire, or only cards that spend it [3].
+- Without Hellfire, his defenses are weak [2][4].
+- Mobile or very durable opponents, and those who block his path, give him trouble [9].
+- He fights alone and has no healing [3][4].
 
 ### Key cards
-- **Control The Demon**: +1 per Hellfire you have, without spending it [1]. Keep it for defense [2][8].
-- **Deal With The Devil**: a 2-value defense, +1 per Hellfire spent [1]. Sometimes it's better to take a point or two and keep the Hellfire [2].
-- **Penance Stare**: adds the opponent's boost, twice for 2 Hellfire [1]. Brutal but situational [2][3]; save it for an opponent's big attack if they have one [8].
-- **Chains of Hellfire**: resets you to 5 Hellfire [1]. After spending it all on defense, reset and strike [2].
-- **Stoke The Flames**: regain Hellfire equal to the damage you take [1].
+- **Control The Demon**: Gains +1 for each Hellfire you hold, without spending it [1]. Keep it for defense [2][8].
+- **Deal With The Devil**: A 2-value defense that gains +1 per Hellfire spent [1]. Sometimes taking a point or two of damage is worth conserving Hellfire [2].
+- **Penance Stare**: Adds the opponent's boost, and can add it twice for 2 Hellfire [1]. Powerful, but situational [2][3]; save it for an opponent's big attack if they have one [8].
+- **Chains of Hellfire**: Resets your Hellfire to 5 [1]. After spending all your Hellfire on defense, replenish it and strike back [2].
+- **Stoke The Flames**: Regains Hellfire equal to the damage you take [1].
 
 ### Tips
 - Try not to drop below 2 Hellfire unless you can refill quickly [8].
-- Keep Hell Rides With Me for setting up Blaze of Glory [6].
+- Save Hell Rides With Me to help set up Blaze of Glory [6].
 
 ### References
 1. Restoration Games. *Unmatched: Marvel – Redemption Row*, Ghost Rider deck. Card text as recorded in `input/heroes.json`.
@@ -1347,35 +1347,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: moon_knight -->
 ## Moon Knight
 
-**In short:** A solo melee hero with 16 health and 3 movement who rotates through three identities, changing at the end of each turn: Moon Knight (moves up to 2 at the start of your turn), Khonshu (+2 to attacks, and no damage except combat damage) and Mr. Knight (+1 to defense) [1]. Restoration Games' owner calls mastering the identities "a fun test" [2]; one analyst calls him a complex puzzle with a high skill ceiling [3].
+**In short:** Moon Knight is a solo melee hero with 16 health and 3 movement, cycling through three identities, changing at the end of each turn: Moon Knight (moves up to 2 at the start of your turn), Khonshu (+2 to attacks, and no damage except combat damage) and Mr. Knight (+1 to defense) [1]. Mastering the identities is an enjoyable challenge [2]; he is also considered a complex puzzle with a high skill ceiling [3].
 
 ### Plan A: Ride the cycle
-**Goal:** Plan every turn around the identity you'll be in, and the one you'll end in [3][4].
-**How to do it:** Moon Knight is the setup: his free 2-space move before acting effectively lets him maneuver 5 in one action [4]. Khonshu is the attack: +2 on every attack card, and he ignores damage from schemes, after-combat effects and abilities [1][4]. Mr. Knight is the defense: +1 on every defense, so ending a Khonshu turn doesn't leave you exposed [1][4]. As Khonshu, A Totally Sane Thing To Do deals 2 damage to both fighters without hurting you, and Good Enough For Us draws 2 without the 2 damage [1][4].
-**Watch out for:** The identity change is forced [4], so opponents know when he will attack and when he is vulnerable [5]. They avoid ending their turn next to Khonshu and attack him when he's Moon Knight [5].
+**Goal:** Plan around both your identity for the turn and the one you will end in [3][4].
+**How to do it:** Use Moon Knight to set up: his free 2-space move before acting effectively lets him maneuver 5 in one action [4]. Use Khonshu to attack: he adds +2 to every attack card and ignores damage from schemes, after-combat effects and abilities [1][4]. Mr. Knight then adds +1 to every defense, protecting you after a Khonshu turn [1][4]. As Khonshu, A Totally Sane Thing To Do deals 2 damage to both fighters without hurting you, and Good Enough For Us draws 2 without the 2 damage [1][4].
+**Watch out for:** You must change identity [4], so opponents know when he will attack and when he is vulnerable [5]. They avoid ending their turn next to Khonshu and attack him when he's Moon Knight [5].
 
 ### Plan B: The Perfect Knight
-**Goal:** Go through all three identities in one turn [4].
-**How to do it:** Start as Moon Knight, reach the opponent with his free move or with Travelers of the Night (move 4 through enemies and gain an action) [1][4]. Attack with I'm Not Real, which lets you change to your next identity [1]. As Khonshu, attack with Good Enough For Us or A Totally Sane Thing To Do [4]. You end the turn as Mr. Knight, ideally holding Fist of Khonshu to defend and push the attacker up to 4 spaces away [1][4].
-**Watch out for:** If I'm Not Real is cancelled, you don't change identity and the combo stalls [4].
+**Goal:** Use all three identities in a single turn [4].
+**How to do it:** Start as Moon Knight and reach the opponent with his free move or Travelers of the Night, which moves him 4 through enemies and gains an action [1][4]. Attack with I'm Not Real, which lets you change to your next identity [1]. As Khonshu, attack with Good Enough For Us or A Totally Sane Thing To Do [4]. End the turn as Mr. Knight, ideally with Fist of Khonshu ready to defend and push the attacker up to 4 spaces away [1][4].
+**Watch out for:** A cancel on I'm Not Real prevents the identity change and stalls the combo [4].
 
 ### How they lose
-- The forced identity change, and predictability [4][5].
-- Low defense values outside Mr. Knight [4].
-- A solo fighter [3].
-- Opponents who run from Khonshu so he has to boost to reach them [5].
+- His compulsory identity changes make him predictable [4][5].
+- His defense values are low outside Mr. Knight [4].
+- He has to fight alone [3].
+- Opponents retreat from Khonshu, forcing him to boost to reach them [5].
 
 ### Key cards
-- **I'm Not Real**: a 4-value attack that skips to your next identity [1]; the start of the Perfect Knight [4].
-- **Past and Present Intermingle**: a 2-value versatile card plus the boost of the top card of your discard pile [1]. Gridbeast calls it his best defense card [4].
-- **That's The Part I Like**: look at the top 3 cards of the opponent's deck and discard one if you win [1]; best as Khonshu [4].
-- **We're All In This Together**: his only defense card, drawing a card if you win [1][4].
-- **Madness Will Keep You Alive**: heal 2, and gain an action if you started your turn in a different space [1].
+- **I'm Not Real**: A 4-value attack that advances to your next identity [1]; starts the Perfect Knight sequence [4].
+- **Past and Present Intermingle**: A 2-value versatile card that adds the boost of your top discard [1]. His best defense card [4].
+- **That's The Part I Like**: Lets you inspect the opponent's top 3 cards and discard one if you win [1]; best as Khonshu [4].
+- **We're All In This Together**: His only defense card; draws a card if you win [1][4].
+- **Madness Will Keep You Alive**: Heals 2 and gains an action if you started the turn in a different space [1].
 
 ### Tips
 - Use That's Why I Always Win as Moon Knight, boosting with Let Your Insanity Guide You [4].
 - Only Khonshu should play A Totally Sane Thing To Do [4].
-- Khonshu shrugs off damage from abilities and schemes; time his turns for opponents who rely on them [4].
+- Time Khonshu's turns to exploit his immunity to damage from abilities and schemes against opponents who rely on them [4].
 
 ### References
 1. Restoration Games. *Unmatched: Marvel – Redemption Row*, Moon Knight deck. Card text as recorded in `input/heroes.json`.
@@ -1450,33 +1450,33 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: elektra -->
 ## Elektra
 
-**In short:** A melee hero with 7 health and 2 movement, four 1-health Hand ninjas, and a 20-card deck [1][2]. The first time she would be defeated she leaves the board instead; next turn she resurrects, flips her health dial (9 health), shuffles her discard pile back into her deck, and her cards' RESURRECTED effects switch on [1][2]. Players widely rate her among the strongest fighters [3][4].
+**In short:** Elektra is a melee hero with 7 health, 2 movement, four 1-health Hand ninjas and a 20-card deck [1][2]. The first time she would be defeated, she leaves the board; next turn she resurrects with her health dial flipped to 9 health, shuffles her discard pile into her deck and activates her cards' RESURRECTED effects [1][2]. Players widely rate her among the strongest fighters [3][4].
 
 ### Plan A: Survive the first life
-**Goal:** Last as long as you can in her first life and go through as much of the deck as possible, so it all comes back when she resurrects [2][5][6].
-**How to do it:** Keep the Hand between Elektra and the opponent [2][5]. Snakeroot Clan swaps her with a Hand ninja, who becomes the defender, and Hands of Red brings back a defeated Hand [1][2]. Use Sai (4) and Ninjitsu (place your fighter anywhere) on defense [1][2]. Don't use The Fist's sacrifice effect until her second life [7]. One analyst describes the first life as running around behind the ninjas while the opponent exhausts their deck [8].
-**Watch out for:** Mystic Assassin deals 3 damage to Elektra in her first life; only play it then if you expect a Feint [1][2]. Dying early leaves her at a big disadvantage [2].
+**Goal:** Prolong her first life and play through as much of her deck as possible, ready to recover it on resurrection [2][5][6].
+**How to do it:** Keep the Hand between Elektra and the opponent [2][5]. Snakeroot Clan swaps her with a Hand ninja, who becomes the defender, and Hands of Red brings back a defeated Hand [1][2]. Defend with Sai, worth 4, and Ninjitsu, which places your fighter anywhere [1][2]. Don't use The Fist's sacrifice effect until her second life [7]. Spend the first life moving behind the ninjas while the opponent runs through their deck [8].
+**Watch out for:** Mystic Assassin deals 3 damage to Elektra in her first life; use it then only if you expect a Feint [1][2]. An early death puts her at a serious disadvantage [2].
 
 ### Plan B: Return and strike
 **Goal:** Resurrect with the right hand and overwhelm the opponent [2][7].
-**How to do it:** Her hand is kept through death, so plan what you'll hold [2][3]. Gridbeast's ideal hand is two Mesmerize, two Mystic Assassin, Sai and Intercept [2]. On resurrection, place Elektra next to the opponent [2]. Each Mesmerize looks at their hand, gains an action and, once resurrected, makes them discard a card you choose: take their best defenses [1][2]. Then attack with Mystic Assassin, a 6 that no longer hurts her [1][2]. Surround the opponent with the Hand and repeat The Fist, which can return to your hand for 1 damage to the attacking ninja and gain an action [1][7]. Once resurrected, Intercept becomes a 5 if you reveal a Sai [1][2].
-**Watch out for:** Resurrecting with a full hand of 7 leaves only 13 cards to draw before exhaustion [9][10]. Players disagree whether to then press the attack or simply out-last the opponent with her card advantage [6].
+**How to do it:** She keeps her hand through death, so plan which cards to retain [2][3]. An ideal hand holds two Mesmerize, two Mystic Assassin, Sai and Intercept [2]. On resurrection, place Elektra next to the opponent [2]. Mesmerize reveals their hand and gains an action; after resurrection, it also forces a discard of your choice, letting you take their best defenses [1][2]. Follow with Mystic Assassin, now a 6 that no longer hurts her [1][2]. Surround the opponent with the Hand and repeat The Fist, which can return to your hand for 1 damage to the attacking ninja and gain an action [1][7]. Once resurrected, Intercept becomes a 5 if you reveal a Sai [1][2].
+**Watch out for:** Resurrecting with a full hand of 7 leaves only 13 cards to draw before exhaustion [9][10]. Players disagree about whether to press the attack afterward or use her card advantage to outlast the opponent [6].
 
 ### How they lose
-- A short first life: dying before about 10 cards are in her discard pile leaves her behind [11][2].
-- Damage she can't defend against, or effects that ignore her defense values [12].
+- Dying in her first life before roughly 10 cards reach her discard pile leaves her behind [11][2].
+- Damage she cannot defend against and effects that ignore defense values bypass her protection [12].
 - Area damage and fighters who run through the Hand clear her ninjas [4][13].
-- Low health in both lives [2].
-- Dying with no cards in hand [3].
+- Both lives leave her with little health [2].
+- Dying with an empty hand leaves her vulnerable [3].
 
 ### Key cards
-- **Mesmerize**: hand knowledge and an action; once resurrected, a chosen discard too [1][2]. Hold it for the second life [14].
-- **Mystic Assassin**: a 6 that's free to play after resurrection [1][2].
-- **The Fist**: the Hand's repeating attack for the second life [1][7].
-- **Cloaked In Shadow**: her Feint; resurrected, it also moves her up to 3 [1][2].
+- **Mesmerize**: Reveals the opponent's hand and gains an action, adding a chosen discard after resurrection [1][2]. Hold it for the second life [14].
+- **Mystic Assassin**: A 6 that costs her no health after resurrection [1][2].
+- **The Fist**: The Hand's repeatable attack for her second life [1][7].
+- **Cloaked In Shadow**: Her Feint, which also moves her up to 3 after resurrection [1][2].
 
 ### Tips
-- Use the Hand as shields, without throwing them away [2][5].
+- Shield Elektra with the Hand while avoiding needless sacrifices [2][5].
 - In the second life, attack as many times as you can in one turn [14].
 
 ### References
@@ -1506,35 +1506,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: bullseye -->
 ## Bullseye
 
-**In short:** A solo ranged hero with 14 health and 2 movement who can attack from up to 5 spaces away, ignoring zones [1]. Many of his cards get stronger if he has already won a combat that turn, so he wants turns with two attacks [2][3]. Low health and weak defenses balance his reach [2]; one analyst rates him low on power but a joy to play [3].
+**In short:** Bullseye is a solo ranged hero with 14 health and 2 movement who can attack from up to 5 spaces away, ignoring zones [1]. Many cards improve after he wins a combat that turn, encouraging turns with two attacks [2][3]. Low health and weak defenses balance his reach [2]; one assessment rates him as weak but a joy to play [3].
 
 ### Plan A: Win once, then win bigger
 **Goal:** Attack twice in a turn: win the first combat to power up the second [2][3][4].
-**How to do it:** Open with a card likely to win: Arrogant But Effective counts as winning the combat whatever the values, and I Planned To Be Here is worth 5 if you haven't moved this turn [1][2][5]. Then follow with World's Greatest Assassin (ignores the opponent's card value), I'm Better And I'll Prove It (becomes a 6) or Right Between The Eyes (a discard) [1][2][5]. Study The Target draws 2, or 3 plus an action if you've won a combat this turn, so play it after a win [1][2][4][6]. For My Next Trick moves 1, draws 1 and gains an action [1][2].
-**Watch out for:** He badly dislikes Feints [7]. Several players feel his early hand decides a lot, especially whether it holds Study The Target [7][8].
+**How to do it:** Lead with a likely win: Arrogant But Effective counts as a combat win regardless of the values, and I Planned To Be Here is worth 5 if you haven't moved this turn [1][2][5]. Follow that win with World's Greatest Assassin to ignore the opponent's card value, I'm Better And I'll Prove It for a 6, or Right Between The Eyes to force a discard [1][2][5]. Save Study The Target until after a win: it normally draws 2, but draws 3 and gains an action if you have won a combat that turn [1][2][4][6]. For My Next Trick moves 1, draws 1 and gains an action [1][2].
+**Watch out for:** Feints are especially punishing [7]. Several players find his opening hand especially influential, particularly whether it includes Study The Target [7][8].
 
 ### Plan B: Stay just out of reach
-**Goal:** Attack from a spot the opponent can't easily reach, so they struggle to strike back [2][3].
-**How to do it:** One trick is to end exactly 5 spaces from the opponent, just out of their reach, so they have to come to you [3]. A space sharing the most zones with the opponent also lets them answer with schemes or ranged attacks, so choose carefully [3]. When attacked, escape: Tactical Retreat places him in a space sharing no zones with his current one, and Master Strategist moves him exactly 4 spaces, through enemies [1][2]. Plan where those 4 spaces can take him before you play it [3].
-**Watch out for:** Fighters who can close the distance quickly [2].
+**Goal:** Attack from positions that make it difficult for the opponent to reach you and retaliate [2][3].
+**How to do it:** End exactly 5 spaces away, beyond the opponent's reach, to make them come to you [3]. Choose carefully when a space shares the most zones with the opponent, because it also lets them respond with schemes or ranged attacks [3]. Use defensive movement to escape: Tactical Retreat places him in a space sharing no zones with his current one, and Master Strategist moves him exactly 4 spaces, through enemies [1][2]. Plan where those 4 spaces can take him before you play it [3].
+**Watch out for:** Fast opponents can close the distance quickly [2].
 
 ### How they lose
-- Low health, and no defense above 3 [2].
-- Getting pinned and attacked often [2][9].
-- Feints [7].
-- A slow start without card draw [7][8].
+- His health is low, and no defense exceeds 3 [2].
+- Being pinned exposes him to repeated attacks [2][9].
+- Feints disrupt his plans [7].
+- A lack of card draw can make his opening too slow [7][8].
 
 ### Key cards
-- **Study The Target**: one of his most important cards [6].
-- **Arrogant But Effective**: guarantees a "won combat" for his follow-ups, then moves him up to 2 [1][2].
-- **I Never Miss**: 4 copies; boost it, or draw a card if you don't [1]. Don't be afraid to take the draw: he wins by overwhelming with many attacks, and that needs cards [10].
-- **Ricochet**: if the opponent survives, deal 1 damage to another fighter in their zone [1]. Good against 1-health sidekicks [2].
-- **Tactical Retreat**: his only defense card [2].
+- **Study The Target**: One of his most important cards [6].
+- **Arrogant But Effective**: Guarantees a combat win to enable his follow-ups, then moves him up to 2 [1][2].
+- **I Never Miss**: 4 copies, each letting you boost or draw a card if you decline [1]. Take the draw when needed; overwhelming the opponent with repeated attacks requires cards [10].
+- **Ricochet**: Deals 1 damage to another fighter in the opponent's zone if the opponent survives [1]. Good against 1-health sidekicks [2].
+- **Tactical Retreat**: His only defense card [2].
 
 ### Tips
-- He usually either maneuvers twice or attacks twice, "like reloading a gun and shooting it" [11].
-- He always wants to go first [6].
-- A risky trick: bait a double attack, defend the first with Arrogant But Effective and the second with Right Between The Eyes, costing the opponent three cards [2][12].
+- Usually spend a turn maneuvering twice or attacking twice, like reloading and shooting [11].
+- Choose to go first whenever possible [6].
+- A risky option is to bait a double attack, blocking first with Arrogant But Effective and then Right Between The Eyes to cost the opponent three cards [2][12].
 
 ### References
 1. Restoration Games. *Unmatched: Marvel – Hell's Kitchen*, Bullseye deck. Card text as recorded in `input/heroes.json`.
@@ -1561,34 +1561,34 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: dr_sattler -->
 ## Dr. Sattler
 
-**In short:** A melee hero with 13 health and 2 movement, plus Dr. Malcolm (7 health) [1]. Whenever either of them moves to a new space, you place one of your 5 insight tokens there; the tokens do nothing alone, but many of her cards use them [1]. She heals a lot and outlasts opponents [2][3], but she rewards knowing her deck and planning ahead [2].
+**In short:** Dr. Sattler is a melee hero with 13 health and 2 movement, accompanied by Dr. Malcolm, who has 7 health [1]. Whenever either of them moves to a new space, you place one of your 5 insight tokens there; the tokens have no effect on their own, but power many of her cards [1]. Her substantial healing lets her outlast opponents [2][3], and she rewards familiarity with her deck and careful planning [2].
 
 ### Plan A: Spread the insight
-**Goal:** Get insight tokens where your cards can use them [2][3].
-**How to do it:** Plan every maneuver around where its tokens will land, even for cards you haven't drawn yet [2]. Tokens can share a space with other tokens [1][2]. Must Go Faster places both fighters anywhere if you win, and Chaotician places a token anywhere [1]; both seed insight, and set up traps [2]. The Future Ex-Mrs. Malcolm draws 2, places a token and gains an action [1]. Malcolm's movement matters: keep him alive long enough to support her [2][3].
-**Watch out for:** Moving is how she places insight, so she tends to maneuver around and avoid fights until the tokens are out [3].
+**Goal:** Place insight tokens where your cards can make use of them [2][3].
+**How to do it:** Plan where each maneuver will leave insight, accounting for cards you have yet to draw [2]. Tokens can share a space with other tokens [1][2]. Must Go Faster places both fighters anywhere if you win, and Chaotician places a token anywhere [1]; use both to spread insight and prepare traps [2]. The Future Ex-Mrs. Malcolm draws 2, places a token and gains an action [1]. Keep Malcolm alive long enough to support her through his movement [2][3].
+**Watch out for:** Because movement places insight, she tends to maneuver and avoid fights until her tokens are on the board [3].
 
 ### Plan B: Cash in the insight
-**Goal:** Turn tokens into damage, healing or escape [2].
-**How to do it:** You Never Had Control, That's the Illusion is a 2-value attack, +1 per token on the board, up to 7, and then removes them all [1][2]. Violently, If Necessary deals 2 damage to each opponent on or next to a token [1]; follow Chaotician or Must Go Faster with it to spring a trap [2]. The Concept of Attraction (3 copies) places your defender on any token [1], a way to escape pressure [2]. Life Finds a Way discards the opponent's top card and heals both your fighters by its boost [1].
-**Watch out for:** Sources disagree about Woman Inherits the Earth, which heals Sattler 1 per token and removes them [1]. One analyst calls it her most powerful tool, worth up to 15 health over a game [3]; Gridbeast treats it more as a way to reset the board than a reliable heal, and plays it on defense so it can't be Feinted [2].
+**Goal:** Use insight to deal damage, heal or escape [2].
+**How to do it:** You Never Had Control, That's the Illusion is a 2-value attack that adds +1 per token on the board, reaching up to 7 before removing them all [1][2]. Violently, If Necessary deals 2 damage to each opponent on or next to a token [1]; play it after Chaotician or Must Go Faster to spring a trap [2]. The 3 copies of The Concept of Attraction each place your defender on any token [1], helping you escape pressure [2]. Life Finds a Way discards the opponent's top card and heals both your fighters by its boost [1].
+**Watch out for:** Sources disagree about Woman Inherits the Earth, which heals Sattler 1 per token and removes them [1]. One analysis calls it her most powerful tool, providing up to 15 health over a game [3]; Gridbeast sees it primarily as a board reset rather than reliable healing, and recommends defending with it to avoid Feint [2].
 
 ### How they lose
-- Low mobility [2].
-- Her effects depend on conditions being met [2].
-- Only one scheme in her deck, so her engine is easy to shut down: opponents save Feints for when all five tokens are out [3].
+- Her limited mobility holds her back [2].
+- Her card effects depend on meeting their conditions [2].
+- With only one scheme, her engine is easy to disrupt; opponents save Feints for when all five tokens are out [3].
 - Losing Malcolm early limits how many tokens she can place [3].
 
 ### Key cards
-- **You Never Had Control, That's the Illusion**: up to a 7 [2].
-- **Violently, If Necessary**: area damage around your tokens [1][2].
-- **I Think We're Back In Business**: worth the number of cards in your hand [1]; keep your hand big [2].
-- **The Concept of Attraction**: defensive teleport [2].
-- **Sexism in Survival Situations**: worth 4 against heroes, and moves her 1 [1].
+- **You Never Had Control, That's the Illusion**: Reaches up to 7 [2].
+- **Violently, If Necessary**: Deals area damage around your tokens [1][2].
+- **I Think We're Back In Business**: Its value equals your hand size [1]; keep your hand big [2].
+- **The Concept of Attraction**: Lets you teleport on defense [2].
+- **Sexism in Survival Situations**: Worth 4 against heroes and moves her 1 [1].
 
 ### Tips
-- Know her whole deck before planning moves [2].
-- Use Hey! Hey! Hey! on defense to reposition your other fighter and place more insight [1][2].
+- Learn her whole deck so you can plan your movement [2].
+- Defend with Hey! Hey! Hey! to reposition your other fighter and leave more insight [1][2].
 
 ### References
 1. Restoration Games. *Unmatched: Jurassic Park – Dr. Sattler vs. T. Rex*, Dr. Sattler deck. Card text as recorded in `input/heroes.json`.

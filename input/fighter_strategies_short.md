@@ -637,24 +637,24 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: achilles -->
 ## Achilles
 
-**In short:** A tough warrior who fights beside Patroclus, then turns into a +2, card-drawing rampage once Patroclus dies [1][2].
+**In short:** Achilles is a tough warrior who fights beside Patroclus until his death unleashes a rampage, adding +2 to attacks and drawing cards [1][2].
 
 ### Plan A: Patroclus fights first
-**Goal:** Use Patroclus, then let him die on your terms [2][3] · **How:** Brothers In Arms, Battle Frenzy and The Day of Your Doom [1][2] · **Watch out:** don't let him die with a small hand [2][4].
+**Goal:** Make use of Patroclus, then let him fall on your terms [2][3] · **How:** use Brothers In Arms, Battle Frenzy and The Day of Your Doom [1][2] · **Watch out:** avoid losing him while your hand is small [2][4].
 
 ### Plan B: The rage of Achilles
-**Goal:** End the game fast [2] · **How:** attack with everything; recover cards with Battle Hardened [2][5] · **Watch out:** exhaustion [2].
+**Goal:** End the game fast [2] · **How:** keep attacking and recover cards with Battle Hardened [2][5] · **Watch out:** exhaustion can end the rampage [2].
 
 ### How they lose
 - Patroclus dies at a bad moment [4].
-- Kited on big maps until he runs out of cards [2][6].
+- Opponents retreat across big maps until his cards run out [2][6].
 
 ### Key cards
-- **Brothers In Arms**: arguably his best card [2].
-- **Battle Hardened**: his key card in the rage [2].
+- **Brothers In Arms**: Arguably his best card [2].
+- **Battle Hardened**: His key card once the rage begins [2].
 
 ### Tips
-- Keep two expendable cards in hand for when Patroclus dies [2].
+- Hold two expendable cards for Patroclus' death [2].
 - Use Achilles' Heel carefully [2].
 
 ### References
@@ -670,25 +670,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: bloody_mary -->
 ## Bloody Mary
 
-**In short:** A fast solo haunter who gains a third action when she starts her turn with exactly 3 cards, with effects that trigger on that action [1][2].
+**In short:** Bloody Mary is a fast solo fighter who gains a third action by starting a turn with exactly 3 cards, with effects that trigger on that action [1][2].
 
 ### Plan A: Speak her name three times
-**Goal:** Set up 3-card turns and strike on the third action [2] · **How:** draw to 3 with Evade or Broken Glass; finish with Speak Three Times [1][2] · **Watch out:** opponents save a Feint for your third action [3].
+**Goal:** Start with 3 cards and strike on your third action [2] · **How:** use Evade or Broken Glass to draw to 3, then finish with Speak Three Times [1][2] · **Watch out:** opponents hold Feint for that third action [3].
 
 ### Plan B: Go aggressive
-**Goal:** Constant pressure [4][5] · **How:** keep attacking with Jump Scare and Bloody Requiem; don't force three actions [5][6] · **Watch out:** don't run out of cards [3].
+**Goal:** Keep up constant pressure [4][5] · **How:** attack with Jump Scare and Bloody Requiem without forcing three actions [5][6] · **Watch out:** avoid running out of cards [3].
 
 ### How they lose
-- Cancels on her predictable payoffs [3].
-- A low hand against an aggressive opponent [3].
+- Cancels punish her predictable payoffs [3].
+- Aggressive opponents overwhelm her small hand [3].
 
 ### Key cards
-- **Speak Three Times**: 7 on a third action [1].
-- **Stolen Memories**: damage or a key discard [7].
+- **Speak Three Times**: Worth 7 on a third action [1].
+- **Stolen Memories**: Secures damage or an important discard [7].
 
 ### Tips
-- Use some third actions on expendable cards to waste Feints [8].
-- Count the opponent's cancels [2].
+- Sometimes play expendable cards third to draw out Feints [8].
+- Track the opponent's remaining cancels [2].
 
 ### References
 1. Restoration Games. *Unmatched: Battle of Legends, Volume 2*, Bloody Mary deck.
@@ -705,25 +705,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: sun_wukong -->
 ## Sun Wukong
 
-**In short:** A trickster who spends health on Clones that can play any of his cards, forcing opponents to guess at every block [1][2][3].
+**In short:** Sun Wukong is a trickster who spends health on Clones that share all his cards, forcing opponents to guess whenever they defend [1][2][3].
 
 ### Plan A: Hide behind the Clones
-**Goal:** Let Clones fight while Wukong stays safe [2] · **How:** summon Clones as walls or distractions; Sly Monkey swaps him out [2][4] · **Watch out:** too many Clones cost too much health [2].
+**Goal:** Keep Wukong safe while Clones fight [2] · **How:** use Clones as walls or distractions and escape with Sly Monkey [2][4] · **Watch out:** excessive summoning drains his health [2].
 
 ### Plan B: The trickster's guessing game
-**Goal:** Make every block a guess [3] · **How:** mix Ruyi Jingo Bang, Taunting Laughter and Ox Form, recovering Ox with 72 Transformations [1][3] · **Watch out:** predicted, his cards are easy to answer [2].
+**Goal:** Keep the opponent guessing on defense [3] · **How:** vary Ruyi Jingo Bang, Taunting Laughter and Ox Form; recover Ox Form with 72 Transformations [1][3] · **Watch out:** predictable cards are easily answered [2].
 
 ### How they lose
-- No cancels; effects always land [5].
-- Area damage clears his Clones [5].
+- Without cancels, he cannot stop effects [5].
+- Area damage wipes out his Clones [5].
 
 ### Key cards
-- **Ox Form**: an uncancellable 7 [1].
-- **Golden Chain Mail**: turns your damage back on the attacker [1].
+- **Ox Form**: An uncancellable 7 [1].
+- **Golden Chain Mail**: Redirects your damage to the attacker [1].
 
 ### Tips
 - Save Bewilderment for the real Wukong [2].
-- Use Phoenix Form before it's discarded [2].
+- Play Phoenix Form before a discard effect takes it [2].
 
 ### References
 1. Restoration Games. *Unmatched: Battle of Legends, Volume 2*, Sun Wukong deck.
@@ -737,25 +737,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: yennenga -->
 ## Yennenga
 
-**In short:** A versatile ranged leader who shunts damage onto her two Archers and rarely holds a bad card [1][2][3].
+**In short:** Yennenga is a versatile ranged leader who redirects damage to her two Archers and rarely holds a bad card [1][2][3].
 
 ### Plan A: Lead from the front
-**Goal:** Attack with all three fighters while staying out of reach [2] · **How:** Rain of Arrows, Jaws of the Beast and Master of the Hunt [1][2] · **Watch out:** don't let Surprise Volley be Feinted [2].
+**Goal:** Attack with all three fighters while staying out of reach [2] · **How:** use Rain of Arrows, Jaws of the Beast and Master of the Hunt [1][2] · **Watch out:** avoid letting Surprise Volley be Feinted [2].
 
 ### Plan B: The Archers soak the damage
-**Goal:** Use the Archers as extra health [2] · **How:** keep them in her zone and heal them with One With the Land [2] · **Watch out:** don't sacrifice them carelessly [2].
+**Goal:** Use the Archers as extra health [2] · **How:** keep them in her zone; heal them with One With the Land [2] · **Watch out:** avoid careless sacrifices [2].
 
 ### How they lose
-- No cancels [2][4].
-- Area attacks on her and her Archers [2].
+- She has no cancels [2][4].
+- Area attacks threaten her and the Archers together [2].
 
 ### Key cards
-- **Rain of Arrows**: two attacks in one [2].
-- **Stallion Charge**: move 5 on defense [2].
+- **Rain of Arrows**: Provides two attacks in one [2].
+- **Stallion Charge**: Moves her 5 on defense [2].
 
 ### Tips
-- Keep your hand size high [3].
-- Mix up which cards the Archers attack with [2].
+- Maintain a large hand [3].
+- Vary the cards you use for Archer attacks [2].
 
 ### References
 1. Restoration Games. *Unmatched: Battle of Legends, Volume 2*, Yennenga deck.
@@ -768,25 +768,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: luke_cage -->
 ## Luke Cage
 
-**In short:** A bulletproof brawler who takes 2 less combat damage and hits back hard, with Misty Knight at range [1][2].
+**In short:** Luke Cage is a bulletproof brawler who takes 2 less combat damage and hits back hard, supported at range by Misty Knight [1][2].
 
 ### Plan A: Unbreakable
-**Goal:** Turn weak defense cards into strong blocks [2] · **How:** his reduction makes 2s into 4s; Trash Talk can end their turn [1][2] · **Watch out:** effect damage ignores his reduction [2][3].
+**Goal:** Make weak defense cards into strong blocks [2] · **How:** damage reduction turns 2s into 4s, and Trash Talk can end their turn [1][2] · **Watch out:** effect damage bypasses his reduction [2][3].
 
 ### Plan B: Heroes for Hire
-**Goal:** Hit hard with Misty's help [2] · **How:** Sweet Christmas! and Get Paid; Got My Back? sets up Luke [2] · **Watch out:** keep Misty alive [2].
+**Goal:** Hit hard with Misty's help [2] · **How:** use Sweet Christmas! and Get Paid, setting Luke up with Got My Back? [2] · **Watch out:** keep Misty alive [2].
 
 ### How they lose
-- Effect and scheme damage [2][3].
-- Low mobility; opponents wait him out [3].
+- Effect and scheme damage bypass his protection [2][3].
+- Limited mobility lets opponents wait him out [3].
 
 ### Key cards
-- **Trash Talk**: cancel and end their turn [1].
-- **Skin Like Titanium**: punishes big attacks [2].
+- **Trash Talk**: Cancels effects and can end their turn [1].
+- **Skin Like Titanium**: Punishes heavy attacks [2].
 
 ### Tips
-- Recycle Trash Talk with Still Standing [2].
-- Good for new players [2].
+- Recover Trash Talk through Still Standing [2].
+- A good choice for new players [2].
 
 ### References
 1. Restoration Games. *Unmatched: Marvel – Redemption Row*, Luke Cage deck.
@@ -798,25 +798,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: ghost_rider -->
 ## Ghost Rider
 
-**In short:** A solo rider who spends Hellfire to run over opponents and power his cards; Hellfire management is everything [1][2][3].
+**In short:** Ghost Rider is a solo rider, spending Hellfire to run through opponents and power his cards; managing it is essential [1][2][3].
 
 ### Plan A: Run them over
-**Goal:** Chip damage from maneuvers, then a finisher [4] · **How:** maneuver through them each turn; finish with Blaze of Glory at 5 health or less [1][5] · **Watch out:** spamming maneuvers leaves no Hellfire for your cards [3].
+**Goal:** Wear them down with maneuvers, then finish them [4] · **How:** maneuver through them each turn, then use Blaze of Glory when they have 5 health or less [1][5] · **Watch out:** repeated maneuvers leave no Hellfire for cards [3].
 
 ### Plan B: The Hellfire chain
-**Goal:** Several actions without losing Hellfire [2] · **How:** chain Hell Rides With Me, I Brought The Devil With Me and The Wicked Will Burn [2] · **Watch out:** spending 2 Hellfire for an action is rarely worth it [6].
+**Goal:** Chain actions without losing Hellfire [2] · **How:** chain Hell Rides With Me, I Brought The Devil With Me and The Wicked Will Burn [2] · **Watch out:** an extra action rarely justifies spending 2 Hellfire [6].
 
 ### How they lose
-- Running out of Hellfire [3].
-- Weak defense without Hellfire [2].
+- His Hellfire runs out [3].
+- Without Hellfire, his defenses are weak [2].
 
 ### Key cards
-- **Control The Demon**: a defense that scales with Hellfire [2].
-- **Chains of Hellfire**: back to 5 [1].
+- **Control The Demon**: Defends more strongly with more Hellfire [2].
+- **Chains of Hellfire**: Resets Hellfire to 5 [1].
 
 ### Tips
-- Keep at least 2 Hellfire [7].
-- Save Penance Stare for an opponent's big attack [7].
+- Hold at least 2 Hellfire [7].
+- Hold Penance Stare for the opponent's big attack [7].
 
 ### References
 1. Restoration Games. *Unmatched: Marvel – Redemption Row*, Ghost Rider deck.
@@ -832,25 +832,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: moon_knight -->
 ## Moon Knight
 
-**In short:** A solo fighter who rotates each turn between Moon Knight (movement), Khonshu (attack) and Mr. Knight (defense) [1][2].
+**In short:** Moon Knight fights alone, cycling each turn through Moon Knight for movement, Khonshu for attack and Mr. Knight for defense [1][2].
 
 ### Plan A: Ride the cycle
-**Goal:** Plan each turn around your identity [2] · **How:** move as Moon Knight, hit as Khonshu, defend as Mr. Knight [1][2] · **Watch out:** opponents can predict the cycle [3].
+**Goal:** Build each turn around your identity [2] · **How:** move as Moon Knight, hit as Khonshu, defend as Mr. Knight [1][2] · **Watch out:** the cycle is predictable [3].
 
 ### Plan B: The Perfect Knight
-**Goal:** All three identities in one turn [2] · **How:** I'm Not Real as Moon Knight, a big hit as Khonshu, then defend as Mr. Knight with Fist of Khonshu [2] · **Watch out:** a cancelled I'm Not Real stalls the combo [2].
+**Goal:** Use all three identities in one turn [2] · **How:** play I'm Not Real as Moon Knight, hit hard as Khonshu, then defend with Fist of Khonshu as Mr. Knight [2] · **Watch out:** cancelling I'm Not Real stalls the sequence [2].
 
 ### How they lose
-- Forced, predictable identity changes [2][3].
-- Low defense outside Mr. Knight [2].
+- Compulsory identity changes make him predictable [2][3].
+- His defense is weak outside Mr. Knight [2].
 
 ### Key cards
-- **I'm Not Real**: skip to the next identity [1].
-- **Past and Present Intermingle**: his best defense card [2].
+- **I'm Not Real**: Advances to the next identity [1].
+- **Past and Present Intermingle**: His best defense card [2].
 
 ### Tips
 - Only Khonshu should play A Totally Sane Thing To Do [2].
-- Khonshu ignores damage that isn't from combat [1].
+- Khonshu ignores all damage except combat damage [1].
 
 ### References
 1. Restoration Games. *Unmatched: Marvel – Redemption Row*, Moon Knight deck.
@@ -895,25 +895,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: elektra -->
 ## Elektra
 
-**In short:** A two-life assassin: survive the first life behind the Hand, then resurrect with her deck reshuffled and her cards stronger [1][2].
+**In short:** Elektra is a two-life assassin who survives her first life behind the Hand, then resurrects with a reshuffled deck and stronger cards [1][2].
 
 ### Plan A: Survive the first life
-**Goal:** Go through as much of the deck as you can before dying [2][3] · **How:** shield her with the Hand; defend with Sai, Ninjitsu and Snakeroot Clan [2] · **Watch out:** an early death leaves her behind [2].
+**Goal:** Play through as much of the deck as possible before dying [2][3] · **How:** use the Hand as shields and defend with Sai, Ninjitsu and Snakeroot Clan [2] · **Watch out:** dying early puts her behind [2].
 
 ### Plan B: Return and strike
-**Goal:** Resurrect with a killer hand [2] · **How:** Mesmerize twice to strip defenses, then Mystic Assassin and The Fist [2][4] · **Watch out:** a full hand on revival means only 13 cards left to draw [5].
+**Goal:** Return with a decisive hand [2] · **How:** strip defenses with two Mesmerize, then attack with Mystic Assassin and The Fist [2][4] · **Watch out:** reviving with a full hand leaves only 13 cards to draw [5].
 
 ### How they lose
-- A short first life [6].
-- Damage she can't defend against [7].
+- Her first life ends too soon [6].
+- Damage bypasses her defenses [7].
 
 ### Key cards
-- **Mesmerize**: save it for her second life [8].
-- **Mystic Assassin**: a free 6 once resurrected [2].
+- **Mesmerize**: Hold it for her second life [8].
+- **Mystic Assassin**: A 6 with no health cost after resurrection [2].
 
 ### Tips
-- Don't die with an empty hand [3].
-- Attack many times on her return turn [8].
+- Keep cards in hand through death [3].
+- Attack repeatedly on the turn she returns [8].
 
 ### References
 1. Restoration Games. *Unmatched: Marvel – Hell's Kitchen*, Elektra deck.
@@ -930,25 +930,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: bullseye -->
 ## Bullseye
 
-**In short:** A long-range assassin who attacks from 5 spaces away and hits harder once he has won a combat that turn [1][2].
+**In short:** Bullseye is a long-range assassin who attacks from 5 spaces away, then hits harder after winning a combat that turn [1][2].
 
 ### Plan A: Win once, then win bigger
-**Goal:** Two attacks a turn [2][3] · **How:** win with Arrogant But Effective, then World's Greatest Assassin or I'm Better And I'll Prove It; Study The Target after a win [1][2] · **Watch out:** Feints hurt him badly [4].
+**Goal:** Attack twice in a turn [2][3] · **How:** win with Arrogant But Effective, follow with World's Greatest Assassin or I'm Better And I'll Prove It, and play Study The Target after a win [1][2] · **Watch out:** Feints are especially punishing [4].
 
 ### Plan B: Stay just out of reach
-**Goal:** Attack where they can't hit back [2] · **How:** end 5 spaces away; escape with Tactical Retreat and Master Strategist [2][3] · **Watch out:** fast opponents close the gap [2].
+**Goal:** Attack from beyond their reach [2] · **How:** stay 5 spaces away and escape with Tactical Retreat and Master Strategist [2][3] · **Watch out:** fast opponents can catch him [2].
 
 ### How they lose
-- Low health and weak defenses [2].
-- Being pinned [2].
+- Low health and weak defenses leave him vulnerable [2].
+- He struggles when pinned [2].
 
 ### Key cards
-- **Study The Target**: draw and an action after a win [1].
-- **Arrogant But Effective**: a guaranteed win [2].
+- **Study The Target**: Provides card draw and an action after a win [1].
+- **Arrogant But Effective**: Guarantees a combat win [2].
 
 ### Tips
-- Maneuver twice or attack twice: reload, then shoot [5].
-- Go first when you can [6].
+- Usually maneuver twice or attack twice: reload, then shoot [5].
+- Choose to go first when possible [6].
 
 ### References
 1. Restoration Games. *Unmatched: Marvel – Hell's Kitchen*, Bullseye deck.
@@ -963,25 +963,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: dr_sattler -->
 ## Dr. Sattler
 
-**In short:** A planner who leaves insight tokens wherever she and Dr. Malcolm move, then spends them on damage, healing and escapes [1][2].
+**In short:** Dr. Sattler is a planner who places insight tokens wherever she and Dr. Malcolm move, then spends them on damage, healing and escape [1][2].
 
 ### Plan A: Spread the insight
-**Goal:** Tokens where your cards need them [2] · **How:** plan each move; Chaotician and Must Go Faster place more [2] · **Watch out:** keep Malcolm alive [2][3].
+**Goal:** Place tokens where your cards need them [2] · **How:** plan your movement and add insight with Chaotician and Must Go Faster [2] · **Watch out:** keep Malcolm alive [2][3].
 
 ### Plan B: Cash in the insight
-**Goal:** Damage and healing from tokens [2] · **How:** You Never Had Control (up to 7), Violently, If Necessary, Woman Inherits the Earth [1][2][3] · **Watch out:** opponents save Feints for when all tokens are out [3].
+**Goal:** Turn tokens into damage and healing [2] · **How:** use You Never Had Control, That's the Illusion for up to 7, plus Violently, If Necessary and Woman Inherits the Earth [1][2][3] · **Watch out:** opponents hold Feints until all tokens are out [3].
 
 ### How they lose
-- Low mobility [2].
-- One scheme, so her engine is easy to stop [3].
+- Limited mobility holds her back [2].
+- Having only one scheme makes her engine easy to stop [3].
 
 ### Key cards
-- **Violently, If Necessary**: area damage at your tokens [1].
-- **The Concept of Attraction**: teleport on defense [2].
+- **Violently, If Necessary**: Deals area damage around your tokens [1].
+- **The Concept of Attraction**: Lets you teleport on defense [2].
 
 ### Tips
-- Learn her deck before you play [2].
-- Keep a big hand for I Think We're Back In Business [2].
+- Learn the deck before playing her [2].
+- Maintain a large hand for I Think We're Back In Business [2].
 
 ### References
 1. Restoration Games. *Unmatched: Jurassic Park – Dr. Sattler vs. T. Rex*, Dr. Sattler deck.
