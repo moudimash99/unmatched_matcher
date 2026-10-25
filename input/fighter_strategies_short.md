@@ -1818,50 +1818,69 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: eredin -->
 ## Eredin Bréacc Glas
 
-**In short:** A melee king who gets +1 on all cards and more movement once his four Red Riders are dead.
+**In short:** A Wild Hunt king who grows stronger once his four Red Riders are gone; most players lose the Riders fast, then hit hard [1][2][3].
 
-### Plan A: Lose the Riders, then rage
-**Goal:** Get Enraged fast · **How:** spend Riders with Foul purpose and Icy guile; then attack with Implacable and Backhand · **Watch out:** Portal defense is dead without Riders until he's Enraged.
+### Plan A: Enrage fast
+**Goal:** All Riders defeated, then overpower them [2][3] · **How:** sacrifice Riders with Foul purpose and Icy guile, then attack with Backhand, Implacable and Wild hunt [1][4] · **Watch out:** Portal defense is dead without Riders [5].
 
 ### Plan B: Use the Riders first
-**Goal:** Drain their defenses first · **How:** pin them with Riders; revive with Unyielding hordes · **Watch out:** rage with cards in hand.
+**Goal:** Grind down their defenses early [6] · **How:** loop Foul purpose and Unyielding hordes, then save a final push [1][6] · **Watch out:** an enraged but empty hand does little [6].
 
 ### How they lose
-- Kited on open maps by ranged fighters.
-- Opponents won't kill his Riders.
+- Ranged opponents on open maps [7].
+- No attacks left once enraged [6].
 
 ### Key cards
-- **Wild hunt**: 2 damage to each adjacent enemy when Enraged.
-- **Implacable**: becomes an attack when Enraged.
+- **Foul purpose**: enraged, hits anywhere [1].
+- **Wild hunt**: 2 damage to each adjacent opponent when enraged [1].
 
 ### Tips
-- Most matchups: kill your Riders ASAP.
-- Keep one Rider near Eredin for Portal defense.
+- Revives are usually not worth it [3].
+- Rush or keep the Riders depending on the opponent [6].
+
+### References
+1. Restoration Games. *Unmatched: The Witcher: Realms Fall*, Eredin Bréacc Glas deck.
+2. u/Karma_Ger_Eng. Comment on "How to play as Eredin." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1jbbdha/
+3. u/d_Shirt. Comment on "Tips on playing Eredin Effectively?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1rryuh7/
+4. u/Jerry-Red. Reply in "Tips on playing Eredin Effectively?" (see [3]).
+5. u/GryllstheBear. Comment on "How to play as Eredin" (see [2]).
+6. u/Independent_Act_6367. Comment on "Tips on playing Eredin Effectively?" (see [3]).
+7. u/GambuzinoSaloio. Comment on "Tips on playing Eredin Effectively?" (see [3]).
 
 ---
 
 <!-- id: muhammad_ali -->
 ## Muhammad Ali
 
-**In short:** A mobile out-boxer who reads the opponent in one stance and lands combos in the other.
+**In short:** A mobile boxer who switches between a ranged, tricky Butterfly stance and a +2 Bee stance; patient until he sees the opening [1][2][3].
 
-### Plan A: Float and read them
-**Goal:** Stay safe while learning their hand · **How:** Butterfly attacks from 2 spaces; look at their hand with Stronger than the skill · **Watch out:** he isn't a pure attacker.
+### Plan A: Float and wear them down
+**Goal:** Make them come to you [2][3] · **How:** stay out of reach, peek at their hand, bait Feints, threaten Fancy footwork [1][4][5] · **Watch out:** too little damage just tickles [6].
 
-### Plan B: Sting
-**Goal:** A knockout flurry · **How:** in Bee (+2), chain The greatest, Momentous Shift and Answer the bell · **Watch out:** weak defense in Bee.
+### Plan B: The flurry
+**Goal:** A multi-attack turn once their defenses are gone [2][3] · **How:** Close and clinch, Answer the bell, then The greatest or Momentous Shift in Bee [1][5] · **Watch out:** don't over-commit [5].
 
 ### How they lose
-- Stances telegraph his plans.
-- Strong defenses keep him in Butterfly.
+- His defenses are weak in Bee [2][7].
+- The stance telegraphs his plan [8].
 
 ### Key cards
-- **The greatest**: 2 extra actions at 6+ damage.
-- **Close and clinch**: pins them in place.
+- **Champion of the world**: 4 value, his best defense too [4].
+- **Answer the bell**: move, heal and an action [1].
 
 ### Tips
-- End your turn in Butterfly.
-- Draw out their defenses first.
+- End turns in Butterfly when you can [5].
+- Don't build the plan around The greatest [7].
+
+### References
+1. Restoration Games. *Unmatched: Muhammad Ali vs. Bruce Lee*, Muhammad Ali deck.
+2. Restoration Games. "Design Diary: Bruce Lee vs Muhammad Ali." https://restorationgames.com/design-diary-lee-vs-ali/
+3. u/ServantOfTheShepherd. Comment on "Ali Fighter Tips." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1pigxgq/
+4. u/ServantOfTheShepherd. Comment on "Tips for playing as Muhammad Ali." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1q13k61/
+5. u/Traditional_Hat_8120. Comment on "Ali Fighter Tips" (see [3]).
+6. u/richard-savana. Comment on "Ali Fighter Tips" (see [3]).
+7. u/Jerry-Red. Comment on "Tips on effectively playing Ali?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1r3if9o/
+8. u/Personal-Hunt-1434. Comment on "Ali Fighter Tips" (see [3]).
 
 ---
 

@@ -2890,81 +2890,107 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 <!-- id: eredin -->
 ## Eredin Bréacc Glas
 
-**In short:** A melee king with 14 health and four 1-health Red Riders. Once all his Riders are gone he becomes Enraged: +1 on every combat card, move 3, and stronger card effects. In most matchups he wants that to happen fast.
+**In short:** A melee hero with 14 health and 2 movement, plus four 1-health Red Riders [1]. Once all the Riders are defeated, Eredin is ENRAGED: +1 to his combat cards, move 3, and many of his cards gain extra effects [1]. Most players get the Riders killed as fast as possible and then hit hard [2][3][4], but some say it depends on the game [5][6].
 
-### Plan A: Lose the Riders, then rage
-**Goal:** Get Enraged quickly, then hit with big values.
-**How to do it:** King of the Wild Hunt makes Eredin Enraged while all Red Riders are defeated. Get them killed fast: let the opponent hit them, or spend them yourself. Foul purpose (3) can defeat a Rider to return to your hand, and Icy guile can defeat one to ignore their card's value. Once Enraged, his cards turn into weapons: Implacable (3) can be played as an attack and boosted, Foul purpose can target a fighter in any space, Backhand (4) discards a random card, and Icy guile cancels their effects. Wild hunt (3) deals 2 damage to every enemy adjacent to your fighters, even on defense. Experienced players say this is the plan in almost every matchup.
-**Watch out for:** Without Riders, Portal defense is a dead card unless he's Enraged, and some players have lost games holding only that.
+### Plan A: Enrage fast
+**Goal:** Get every Red Rider defeated quickly, then overpower the opponent [2][3][4].
+**How to do it:** The Riders are weak; the value is in losing them [3]. Getting the opponent to kill them is the hard part [7]. You can also defeat them yourself: Foul purpose defeats a Rider to come back to your hand, and Icy guile defeats one to ignore the attacker's value [1]. Pin the opponent with Riders, keeping one nearby for Portal defense [8]. Once enraged he can attack anywhere with a face-up Foul purpose, hit for 5 with a Backhand that discards a random card, or turn Implacable into an attack [1][9][4]. On defense, Wild hunt deals 2 to every adjacent opponent and Skirmish is a 5 [1][9]. Used on attack, his Feints are free damage [4].
+**Watch out for:** Some cards are dead without Riders; one player lost a game holding only Portal defense [10]. Boost to cycle past them [11].
 
 ### Plan B: Use the Riders first
-**Goal:** Get value from the Riders before they go, in the right matchups.
-**How to do it:** Pin your opponent with Riders and keep one beside Eredin so Portal defense can swap them. Unyielding hordes, a Rider attack, returns a defeated Rider and gets +1 for each other friendly fighter next to the target. Close for the kill draws 2 and moves all your fighters 3 spaces through enemies. Use the Riders to drain their defenses, so your late Enraged attacks land harder.
-**Watch out for:** Getting Enraged with nothing left to attack with. He needs cards in hand when the rage starts.
+**Goal:** Spend the first half grinding down the opponent's defenses, so the late push lands [6].
+**How to do it:** Attack with Foul purpose, defeat a Rider to get it back, then bring Riders back with Unyielding hordes and keep stripping their defenses [1][6]. For the final push, hold Backhand, Foul purpose and both Might of the Aen Elle, ideally with Portal defense too [6]. Whether to rush the Riders or keep them is the key read, and it depends on the opponent [5][6].
+**Watch out for:** Enraged with nothing to attack with, his values are only a little higher [6]. Spending his few cancels early leaves him none later [6].
 
 ### How they lose
-- Ranged fighters on open maps keep away from him.
-- Opponents refuse to kill his Riders, so he stays calm and weak.
-- He runs out of attacks right when he gets Enraged.
+- Ranged opponents on very open maps [8].
+- An empty, enraged hand: lots of flair, no damage [6].
 
 ### Key cards
-- **Wild hunt**: area damage on attack or defense, 2 each when Enraged.
-- **Implacable**: a boostable defense that becomes an attack when Enraged.
-- **Might of the Aen Elle**: draw 1, gain an action, and he only takes combat or exhaustion damage that turn.
-- **Brutal strike**: its effects can't be cancelled and it ignores the value of cards with an IMMEDIATELY effect.
+- **Icy guile**: its cancel needs Eredin already enraged, so it can't cancel and ignore on the same play; with one Rider left, it's a surprise 3-value ignore [12]. Another player says killing the last Rider with it does both [6].
+- **Portal defense**: swaps Eredin with an adjacent friendly fighter, who becomes the defender; enraged, draws 2 [1]. A 0 defense without an adjacent Rider [6]; once enraged and far ahead, the draw is worth the hit [13].
+- **Foul purpose**: enraged, it targets a fighter in any space [1][6].
+- **Might of the Aen Elle**: draws 1, gains an action, and only combat and exhaustion damage hurt him while it stays [1].
 
 ### Tips
-- Skirmish (4, 5 when Enraged) is a solid defense.
-- Icy guile with one Rider left is a surprise value-ignore.
-- Keep a Rider near Eredin until you're ready to rage.
+- The revives are usually not worth it [4].
+- Learn which approach suits each opponent by playing him a lot [5].
 
-### Further reading
-- [How to play as Eredin](https://www.reddit.com/r/Unmatched/comments/1jbbdha/): Reddit: Life-Rip183 · thread
-- [Tips on playing Eredin Effectively?](https://www.reddit.com/r/Unmatched/comments/1rryuh7/): Reddit: ronchman · thread
-- [Eredin - The Witcher Unmatched Fighter Review](https://www.youtube.com/watch?v=3is-DUhamNg): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: The Witcher: Realms Fall*, Eredin Bréacc Glas deck. Card text as recorded in `input/heroes.json`.
+2. u/Karma_Ger_Eng. Comment on "How to play as Eredin" by u/Life-Rip183. *r/Unmatched*, Reddit, 14 March 2025. https://www.reddit.com/r/Unmatched/comments/1jbbdha/
+3. u/LegendLynx7081. Comment on "How to play as Eredin" (see [2]).
+4. u/d_Shirt. Comment on "Tips on playing Eredin Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 12 March 2026. https://www.reddit.com/r/Unmatched/comments/1rryuh7/
+5. u/Dense_Yam7250. Comment on "Tips on playing Eredin Effectively?" (see [4]).
+6. u/Independent_Act_6367. Comment on "Tips on playing Eredin Effectively?" (see [4]).
+7. u/TheEliteB3aver. Reply in "How to play as Eredin" (see [2]).
+8. u/GambuzinoSaloio. Comment on "Tips on playing Eredin Effectively?" (see [4]).
+9. u/Jerry-Red. Reply in "Tips on playing Eredin Effectively?" (see [4]).
+10. u/GryllstheBear. Comment on "How to play as Eredin" (see [2]).
+11. u/Numerous_Past_726. Reply in "How to play as Eredin" (see [2]).
+12. u/Darkblade113. Reply in "Tips on playing Eredin Effectively?" (see [4]).
+13. u/Derf1OO. Reply in "How to play as Eredin" (see [2]).
+
+### Not cited
+- [Eredin - The Witcher Unmatched Fighter Review](https://www.youtube.com/watch?v=3is-DUhamNg): To The Table Top! · video (not yet reviewed)
 
 ---
 
 <!-- id: muhammad_ali -->
 ## Muhammad Ali
 
-**In short:** A mobile melee boxer with 16 health who switches between two stances. He wins like a real out-boxer: stay light on his feet, read the opponent's hand, wear them down, then land a flurry when they have nothing left.
+**In short:** A melee hero with 16 health, 3 movement and no sidekicks [1]. He starts in Float Like a Butterfly (attack from 2 spaces away, plus the butterfly effects on his cards) and switches stance each time he wins a combat as attacker; Sting Like a Bee adds +2 to his attacks [1]. He plays like a boxer: patient, mobile, waiting for the opening [2][3][4].
 
-### Plan A: Float and read them
-**Goal:** Stay safe in Butterfly while you learn what your opponent holds.
-**How to do it:** He starts in Float Like a Butterfly, which lets him attack from 2 spaces away and turns on the [Butterfly] effects on his cards. Winning a combat as the attacker switches his stance. Stronger than the skill and Hard to be humble let you look at their hand: count their defenses and the attacks that would trigger Rope-a-dope, which heals 3 if you lose. Jab (1) draws a card and gains an action. Hard to be humble, Champion of the World and Fancy footwork all move or push someone while you defend. Stand where Fancy footwork can ignore their value.
-**Watch out for:** He's not a pure attacker. The designers say he gets more out of a long game, picking his moments.
+### Plan A: Float and wear them down
+**Goal:** Play the longer game, keep your guard up, and make the opponent come to you [2][3].
+**How to do it:** Stay light on your feet and just out of reach, and stand where you could trigger Fancy footwork even if you don't hold it [3][5]. Fancy footwork ignores the attack's value if Ali shares no zone with the attacker [1]. Look at their hand often with Stronger than the skill and Hard to be humble, counting their defenses and the attacks that would trigger Rope-a-dope [5][6]. Bait out Feints with low attacks [7], and switch stance by forcing poor defenses [6]. With move 3 and reach 2 he can kite many fighters [8], and his recursion can win on card count [8]. His healing lets him take hits to build an advantage [9].
+**Watch out for:** Without enough damage, you only tickle until exhaustion [10].
 
-### Plan B: Sting
-**Goal:** Turn a window into a knockout combo.
-**How to do it:** Sting Like a Bee adds +2 to his attacks. Switch into it by forcing a weak defense or with Ali Shuffle. Save your big attacks for Bee: The greatest (4, so 6 in Bee) gains 2 actions if you dealt 6+ combat damage this turn, and Momentous Shift can reach 7. Close and clinch places him next to the opponent and stops both from leaving, setting up next turn. Answer the bell moves 3, heals 2 and gains an action. Play Louisville lip after a winning attack: draw 2, heal 1, and they discard a random card.
-**Watch out for:** His defense is much weaker in Bee. Have defenses ready, or win an attack to switch back.
+### Plan B: The flurry
+**Goal:** Once their defenses are spent, unload a multi-attack turn [2][3][5].
+**How to do it:** Close and clinch on defense sets up the counter [3][6]. In Bee, play the big cards: The greatest, Champion of the world and Momentous Shift [6], a 7 in Bee [5]. The greatest gains 2 actions if you dealt 6 or more combat damage this turn, counting earlier attacks [1][5]. Answer the bell moves 3, heals 2 and gains an action, to reach them or set up a double attack [1][5][6]. Attack in Bee, switch back to Butterfly, then play Louisville lip for a random discard [5].
+**Watch out for:** Don't over-commit: strike, retreat, repeat [6]. Several players call The greatest a trap to build a plan around [11][8], though it can fire on an undefended sidekick [5].
 
 ### How they lose
-- The stances telegraph his plans, so opponents feint or block accordingly.
-- Strong defenses keep him stuck in Butterfly without damage.
-- Too many attacks and schemes leave him with no defenses.
+- In Bee most of his defense effects are off, so opponents strike then [2][8]. He can get stuck there [10].
+- Strong defenses can lock him in Butterfly, and the stance tells the opponent what is coming [12].
+- Many attacks and schemes can leave him without defenses [12].
+- Hardest against fighters who are not slow melee fighters with sidekicks [10].
 
 ### Key cards
-- **The greatest**: the knockout. Don't build your game around it; land it once their defenses are gone.
-- **Close and clinch**: pins the opponent for your next turn.
-- **Stick and move**: locks their card at its printed value and deals 1 damage.
-- **Champion of the world**: a 4 that moves a fighter 2 spaces.
+- **Champion of the world**: his precious 4-value versatiles, also his best defense [5].
+- **Stronger than the skill**: shows their hand and, on a win, shuffles a card back into their deck [1].
+- **Ali Shuffle**: boostable in Butterfly, and a good way to switch to Bee [1][6].
+- **Momentous Shift**: 5 if he moved this turn; using it well is vital [1][10].
 
 ### Tips
-- Try to end your turn in Butterfly.
-- 4 damage is often the number that gets through.
-- Bait their Feints with weak attacks before your big ones.
+- Try to end your turn in Butterfly [6].
+- Jab, Champion of the world and Close and clinch can set up a Momentous Shift or Fancy footwork [6].
+- Players disagree on his strength: some find him strong but very hard [13][5], others weak [14][12].
 
-### Further reading
-- [Design Diary: Bruce Lee vs Muhammad Ali](https://restorationgames.com/design-diary-lee-vs-ali/): Restoration Games (official) · official article
-- [Ali Fighter Tips](https://www.reddit.com/r/Unmatched/comments/1pigxgq/): Reddit: Poohmessedupthemoose · thread
-- [Tips for playing as Muhammad Ali](https://www.reddit.com/r/Unmatched/comments/1q13k61/): Reddit: Life-Rip183 · thread
-- [Tips on effectively playing Ali?](https://www.reddit.com/r/Unmatched/comments/1r3if9o/): Reddit: ronchman · thread
-- [Notable Fighters | Muhammad Ali (Originally created by the owner of Restoration Games) | Unmatched](https://www.youtube.com/watch?v=-CgEKhM_Hlc): Unmatched Playtesting Guild · video
-- [Muhammad Ali - Unmatched Fighter Review](https://www.youtube.com/watch?v=ouQlosnRceI): To The Table Top! · video
-- [Muhammad Ali Advanced Strategy Guide](https://www.youtube.com/watch?v=kTDlqoPUGwY): The Gaming Geek Net · video
-- [Unmatched Muhammad Ali Combo Guide](https://www.youtube.com/watch?v=-OxzK31iaGw): PrinceOfAsphodelUnmatched · video
+### References
+1. Restoration Games. *Unmatched: Muhammad Ali vs. Bruce Lee*, Muhammad Ali deck. Card text as recorded in `input/heroes.json`.
+2. Restoration Games. "Design Diary: Bruce Lee vs Muhammad Ali." *Restoration Games*. https://restorationgames.com/design-diary-lee-vs-ali/
+3. u/ServantOfTheShepherd. Comment on "Ali Fighter Tips" by u/Poohmessedupthemoose. *r/Unmatched*, Reddit, 9 December 2025. https://www.reddit.com/r/Unmatched/comments/1pigxgq/
+4. u/AbrocomaRight9782. Reply in "Ali Fighter Tips" (see [3]).
+5. u/ServantOfTheShepherd. Comments on "Tips for playing as Muhammad Ali" by u/Life-Rip183. *r/Unmatched*, Reddit, 1 January 2026. https://www.reddit.com/r/Unmatched/comments/1q13k61/
+6. u/Traditional_Hat_8120. Comment on "Ali Fighter Tips" (see [3]).
+7. u/fuzzyfoot88. Comment on "Ali Fighter Tips" (see [3]).
+8. u/Jerry-Red. Comment on "Tips on effectively playing Ali?" by u/ronchman. *r/Unmatched*, Reddit, 13 February 2026. https://www.reddit.com/r/Unmatched/comments/1r3if9o/
+9. u/SethCremmul. Comment on "Tips on effectively playing Ali?" (see [8]).
+10. u/richard-savana. Comments on "Ali Fighter Tips" (see [3]).
+11. u/CD_North. Comment on "Ali Fighter Tips" (see [3]).
+12. u/Personal-Hunt-1434. Comment on "Ali Fighter Tips" (see [3]).
+13. u/TheEliteB3aver. Replies in "Tips for playing as Muhammad Ali" (see [5]).
+14. u/Numerous_Past_726. Comments on "Tips on effectively playing Ali?" (see [8]) and "Tips for playing as Muhammad Ali" (see [5]).
+
+### Not cited
+- The design diary's advice for the in-box matchup (read; about one opponent)
+- u/SmokeHoagies, u/CupAlternative and others (read; about one matchup, or no advice)
+- [Notable Fighters | Muhammad Ali](https://www.youtube.com/watch?v=-CgEKhM_Hlc): Unmatched Playtesting Guild · video (not yet reviewed)
+- [Muhammad Ali - Unmatched Fighter Review](https://www.youtube.com/watch?v=ouQlosnRceI): To The Table Top! · video (not yet reviewed)
+- [Muhammad Ali Advanced Strategy Guide](https://www.youtube.com/watch?v=kTDlqoPUGwY): The Gaming Geek Net · video (not yet reviewed)
+- [Unmatched Muhammad Ali Combo Guide](https://www.youtube.com/watch?v=-OxzK31iaGw): PrinceOfAsphodelUnmatched · video (not yet reviewed)
 
 ---
 
