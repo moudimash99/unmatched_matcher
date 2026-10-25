@@ -688,29 +688,33 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: daredevil -->
 ## Daredevil
 
-**In short:** A tough solo brawler who recycles his best cards so he never runs out, then outlasts you or stays in your face.
+**In short:** A solo melee fighter with a 22-card deck [1] who recycles his own cards so he never runs out [2].
 
-### Plan A: Keep the engine running
-**Goal:** Never run out of cards · **How:** play Devil of Hell's Kitchen early and often to shuffle it and your last four discards back in, with Take A Knee and Breather among them · **Watch out:** a Feint cancels the reshuffle, so hold a Breather to get it back.
+### Plan A: Keep the recursion going
+**Goal:** Never run out of cards [2] · **How:** Devil of Hell's Kitchen shuffles itself and your top four discards back in [1]; have Take A Knee and Breather among them [2] · **Watch out:** a Feint cancels it [2], so hold a Breather to take it back [3].
 
-### Plan B: Play without fear
-**Goal:** Get damage through with cards worth 2 or 3 · **How:** with 2 or fewer cards in hand, blind boost; Man Without Fear can be boosted twice · **Watch out:** blind boosts can discard your key cards.
-
-### Plan C: Get in their face
-**Goal:** Pressure fighters who need setup · **How:** Grappling Hook and Through Adversity get him in and out while he heals with Take A Knee · **Watch out:** as a solo fighter he's easy to corner.
+### Plan B: Blind boost
+**Goal:** Get damage through with 2- and 3-value cards [2] · **How:** with 2 or fewer cards in hand, blind boost [1], but only when the combat needs it [2] · **Watch out:** it can discard your key cards [2][4].
 
 ### How they lose
-- Lots of Feints or discard effects break his recycling.
-- Opponents read his discard pile and attack while his hand is small.
+- Feints and forced discards break his recursion [2].
+- Opponents read his discard pile and attack while his hand is small [5].
 
 ### Key cards
-- **Devil of Hell's Kitchen**: his engine. Don't save it for the empty-deck 8; it's predictable.
-- **Breather**: 3 copies to get back a lost Devil of Hell's Kitchen.
+- **Devil of Hell's Kitchen**: his engine. Saving it for the empty-deck 8 is predictable [2].
+- **Breather**: 3 copies [1] to get back a lost Devil of Hell's Kitchen [2].
 
 ### Tips
-- Plan the four cards that will be shuffled back.
-- Keep a bigger hand against combo fighters.
-- Step out with Through Adversity to redraw, then come back in.
+- His defenses are worth 3, so a small hand still defends [2].
+- Several players prefer to play him aggressively [3][6].
+
+### References
+1. Restoration Games. *Unmatched: Hell's Kitchen*, Daredevil deck.
+2. Gridbeast. "Unmatched – Daredevil." https://gridbeast.gg/unmatched-daredevil/
+3. mic_al. Reply to "An Unmatched Roster: What's Cooking in Hell's Kitchen?" *BoardGameGeek*, 2023.
+4. TFJ383. "An Unmatched Roster: What's Cooking in Hell's Kitchen?" *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3188799/
+5. siryorgan. Reply to [4]. *BoardGameGeek*, 2023.
+6. COMaestro. Reply to [4]. *BoardGameGeek*, 2023.
 
 ---
 
