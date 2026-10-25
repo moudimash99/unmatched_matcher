@@ -1251,127 +1251,144 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: luke_cage -->
 ## Luke Cage
 
-**In short:** A bulletproof brawler who shrugs off 2 combat damage from every attack and hits back like a truck, with Misty Knight setting up openings from range.
+**In short:** A melee hero with 13 health and 2 movement, plus the ranged Misty Knight (6 health) [1]. Luke takes 2 less combat damage from attacks [1]. Simple, tanky and powerful: he takes hits and hits back harder [2]. One analyst calls him oppressive for many opponents, but beaten by damage from card effects [3].
 
-### Plan A: Tank and punish
-**Goal:** Make attacking him a bad deal for the opponent.
-**How to do it:** He takes 2 less combat damage from every attack, so even a 2-value defense blocks like a 4. Trash Talk cancels their card's effects and, if you win the combat, ends their turn, which is deadly against fighters who flee after attacking or chain extra actions. Skin Like Titanium, after opponents get used to big blocks, takes the hit and deals the same combat damage back to them.
-**Watch out for:** His ability only stops combat damage. Effect damage from schemes and abilities hits him fully, and he has just 13 health.
+### Plan A: Unbreakable
+**Goal:** Let his ability turn ordinary defense cards into strong blocks [2].
+**How to do it:** His defense cards are all worth 2 or less, but with the reduction he effectively defends at 3 or 4 [2]. Gridbeast adds that when defending he wins the combat if he takes no damage, even without playing a card [2]. Trash Talk cancels the attacker's effects and, if you win, ends their turn [1], which is deadly against fighters who flee after attacking or chain extra actions [2][3]. Skin Like Titanium (0) deals damage back equal to the combat damage Luke takes [1]; after opponents have learned to attack him big, it punishes them [2].
+**Watch out for:** Damage from abilities and schemes ignores his reduction, and his 13 health is low [2][3].
 
-### Plan B: Hit like a truck
-**Goal:** Land his big attacks before he falls.
-**How to do it:** Sweet Christmas! is a 6-value attack with no effect, so a Feint is wasted on it. Get Paid draws 2 if you win. Hero For Hire can be boosted; Pushback or Regroup are good boost cards. Where's My Money? places him next to the nearest enemy and gains an action, solving his low movement.
-**Watch out for:** With 2 movement, he relies on Misty and his scheme to get into position.
+### Plan B: Heroes for Hire
+**Goal:** Hit like a truck, using Misty to create openings [2].
+**How to do it:** Sweet Christmas! is a 6-value attack with no effect, which punishes Feints [1][2]. Get Paid (4) draws 2 if you win, and Hero For Hire (3) can be boosted, ideally with Pushback or Regroup [1][2]. Where's My Money? places Luke next to the nearest opponent and gains an action [1]. Misty's Got My Back? swaps her with Luke so he becomes the defender [1], setting him up for a double attack next turn [2]. Daughter of the Dragon is worth 6 when Misty is adjacent to the opponent [1], excellent on defense [2]; Misty can also shoot for big damage at range [3].
+**Watch out for:** Keep Misty alive as long as possible; she provides the mix-ups Luke can't [2].
 
 ### How they lose
-- Effect and scheme damage chips through his 13 health, since his ability doesn't stop it.
-- Misty Knight is killed early, taking away his mix-ups and repositioning.
-- He's kited by fast or ranged fighters he can't catch.
+- Effect and scheme damage, which his ability doesn't reduce [2][3].
+- Low health [2].
+- Low mobility: opponents run to the far side of the board and wait him out [2][3].
 
 ### Key cards
-- **Sweet Christmas!**: a 6-value attack with no effect.
-- **Trash Talk**: a built-in Feint that also ends their turn if you win.
-- **Skin Like Titanium**: reflects the combat damage he takes.
-- **Still Standing**: if you win, shuffle 2 cards from your discard pile into your deck, such as Trash Talk or another Still Standing.
+- **Trash Talk**: 3 copies of a cancel that can end the opponent's turn [1][2][3].
+- **Sweet Christmas!**: a plain 6 [1][2].
+- **Skin Like Titanium**: punishes big attacks [2].
+- **Still Standing**: a 4-value attack that shuffles 2 cards from your discard pile into your deck if you win [1]. Recover Trash Talk, or the other Still Standing to make a loop; don't let it be cancelled [2].
+- **Power Man**: a 2-value defense that moves the attacker up to 3 spaces, damaging them and everyone they pass through [1].
 
 ### Tips
-- Keep Misty Knight alive: Got My Back? swaps her and Luke on defense to set up a double attack next turn.
-- Daughter of the Dragon is worth 6 when Misty is next to the enemy. It's great on defense.
-- Mix in Commanding Impact so Misty's melee attacks aren't predictable.
+- When Misty attacks while adjacent, mix in Commanding Impact so Daughter of the Dragon isn't obvious [2].
+- He's a good hero for newcomers [2].
 
-### Further reading
-- [Unmatched – Luke Cage](https://gridbeast.gg/unmatched-luke-cage/): Gridbeast · written guide
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [An Unmatched Roster: The Opposite of Redemption](https://boardgamegeek.com/thread/3182025/an-unmatched-roster-the-opposite-of-redemption): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [Luke Cage - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=_ZgWf_PRMrg): To The Table Top! · video
-- [Luke Cage - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=GVdtYMAT7lA): Baked Goods · video
-- [Strategy Sunday Vol. 18](https://www.youtube.com/watch?v=zSsvURmCCcE): Karma · video
+### References
+1. Restoration Games. *Unmatched: Marvel – Redemption Row*, Luke Cage deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Luke Cage." *Gridbeast*. https://gridbeast.gg/unmatched-luke-cage/
+3. TFJ383. "An Unmatched Roster: The Opposite of Redemption." *BoardGameGeek*, 31 October 2023. https://boardgamegeek.com/thread/3182025/an-unmatched-roster-the-opposite-of-redemption
+
+### Not cited
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; nothing on Luke Cage)
+- [Luke Cage - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=_ZgWf_PRMrg): To The Table Top! · video (not yet reviewed)
+- [Luke Cage - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=GVdtYMAT7lA): Baked Goods · video (not yet reviewed)
+- [Strategy Sunday Vol. 18](https://www.youtube.com/watch?v=zSsvURmCCcE): Karma · video (not yet reviewed)
 
 ---
 
 <!-- id: ghost_rider -->
 ## Ghost Rider
 
-**In short:** A melee fighter who spends Hellfire on movement, attacks and defense. Most often he wins by running over opponents again and again for damage they can't block.
+**In short:** A solo melee hero with 17 health and 2 movement who starts with 5 Hellfire [1]. When he maneuvers he may spend 1 Hellfire to move 4, through opposing fighters, dealing 1 damage to each one he passes [1]. Almost everything he does runs on Hellfire, so managing it is the whole game [2][3]. Sources agree he crushes some opponents and struggles badly against others [3][4].
 
 ### Plan A: Run them over
-**Goal:** Wear the opponent down with damage they can't defend against.
-**How to do it:** When you maneuver, spend 1 Hellfire to move 4 spaces through enemy fighters, dealing 1 damage to each one you pass. Do it every turn to chip away while you keep cards in hand for defense. This is brutal against fighters who rely on 1-health sidekicks. Refill Hellfire with The Wicked Will Burn (+2 if he moved this turn), Hell Rides With Me (+2 and an action) or Chains of Hellfire (back to 5).
-**Watch out for:** Running out of Hellfire leaves his defenses weak. Try not to drop below 2 unless you can refill quickly.
+**Goal:** Wear the opponent down with damage from his maneuvers, then finish them [5][6].
+**How to do it:** Maneuver through the opponent each turn for unblockable chip damage, attacking only when you have the card advantage, need to reload Hellfire, or can finish them [5]. One player treats him as a "run away" fighter who wears opponents down this way while keeping the right defenses and Hellfire ready [6]. Fighters with 1-health sidekicks suffer most from it [2][4]. Once the opponent is at 5 health or less, Blaze of Glory deals 1 damage per Hellfire spent to every fighter in his zone, Ghost Rider included [1]; as the attacker, he wins if both die [2][6].
+**Watch out for:** One analyst calls spamming maneuvers a trap: it leaves no Hellfire for his cards and makes for a dull game [3]. Opponents who know the Blaze of Glory finish will hold a Feint for it [6].
 
-### Plan B: Spirit Of Vengeance finish
-**Goal:** Close out a weakened opponent with a big burst.
-**How to do it:** Blaze of Glory deals 1 damage per Hellfire spent to every fighter in his zone, Ghost Rider included. If both heroes fall, the attacker wins. Penance Stare adds the boost value of the opponent's card, and for 2 Hellfire adds it again, so it can reach 11 against a big boost. Spirit Of Vengeance is a 5-value attack that can draw 2 for 1 Hellfire. Play Chains of Hellfire first, then strike.
-**Watch out for:** Spending 2 Hellfire on I Brought The Devil With Me's extra action is rarely worth it unless it wins the game.
+### Plan B: The Hellfire chain
+**Goal:** Pressure the opponent with a chain of actions that costs little Hellfire, or even gains some [2].
+**How to do it:** Hell Rides With Me moves him and an adjacent fighter 4 each, gains 2 Hellfire and an action [1]. I Brought The Devil With Me (3) gains an action for 2 Hellfire [1]. Gridbeast chains them into four actions without losing Hellfire, ending with The Wicked Will Burn (gain 2 Hellfire if he moved this turn) or I Finally Escaped Hell to get away [1][2]. Spirit Of Vengeance is a 5-value attack that can spend 1 Hellfire to draw 2 [1].
+**Watch out for:** One player says spending 2 Hellfire on I Brought The Devil With Me is almost never worth it unless it wins the game, because all his best cards scale with the Hellfire you have left [7].
 
 ### How they lose
-- He wastes Hellfire and is left with weak defenses: most of his blocks are only worth 2 without Hellfire.
-- Mobile, tanky fighters or fighters who block his path blunt his run-over damage.
-- He runs out of steam without enough damage to finish the job.
+- Running out of Hellfire with no way to get more [3][8].
+- A hand full of cards that only gain Hellfire, or only spend it [3].
+- Weak defense without Hellfire [2][4].
+- Opponents who are mobile, very tough, or can block his path [9].
+- A solo fighter, and no healing [3][4].
 
 ### Key cards
-- **Control The Demon**: worth +1 for each Hellfire you have, without spending any. Save it for defense.
-- **Deal With The Devil**: a 2-value defense, +1 per Hellfire spent.
-- **Blaze of Glory**: zone-wide damage for the finish.
-- **Chains of Hellfire**: resets Hellfire to 5.
+- **Control The Demon**: +1 per Hellfire you have, without spending it [1]. Keep it for defense [2][8].
+- **Deal With The Devil**: a 2-value defense, +1 per Hellfire spent [1]. Sometimes it's better to take a point or two and keep the Hellfire [2].
+- **Penance Stare**: adds the opponent's boost, twice for 2 Hellfire [1]. Brutal but situational [2][3]; save it for an opponent's big attack if they have one [8].
+- **Chains of Hellfire**: resets you to 5 Hellfire [1]. After spending it all on defense, reset and strike [2].
+- **Stoke The Flames**: regain Hellfire equal to the damage you take [1].
 
 ### Tips
-- Think of him as a run-away fighter: maneuver over enemies and keep your hand ready to defend.
-- Stoke The Flames gains Hellfire equal to the damage you took, which is worth it if you can afford the health.
-- Once they're at 5 health or less, look for a Blaze of Glory kill.
+- Try not to drop below 2 Hellfire unless you can refill quickly [8].
+- Keep Hell Rides With Me for setting up Blaze of Glory [6].
 
-### Further reading
-- [Unmatched – Ghost Rider](https://gridbeast.gg/unmatched-ghost-rider/): Gridbeast · written guide
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [An Unmatched Roster: The Opposite of Redemption](https://boardgamegeek.com/thread/3182025/an-unmatched-roster-the-opposite-of-redemption): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [Tips for playing Ghost Rider? Wouldn't want this beautiful figure go to waste](https://www.reddit.com/r/Unmatched/comments/1plly3g/): Reddit: Prudent-Paint2537 · thread
-- [Ghost Rider Tips?](https://www.reddit.com/r/Unmatched/comments/1t0p69f/): Reddit: Such_Will_8536 · thread
-- [Ghost Rider - Unmatched Marvel Fighter Review - Updated](https://www.youtube.com/watch?v=LC0t8eQMkI4): To The Table Top! · video
-- [Ghost Rider - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=VdCuD5Bw7-M): Baked Goods · video
-- [Unmatched Ghost Rider Guide](https://www.youtube.com/watch?v=laLqE6bF8SY): HELPivFALLN · video
+### References
+1. Restoration Games. *Unmatched: Marvel – Redemption Row*, Ghost Rider deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Ghost Rider." *Gridbeast*. https://gridbeast.gg/unmatched-ghost-rider/
+3. TFJ383. "An Unmatched Roster: The Opposite of Redemption." *BoardGameGeek*, 31 October 2023. https://boardgamegeek.com/thread/3182025/an-unmatched-roster-the-opposite-of-redemption
+4. u/Muddshoe. Comment on "Ghost Rider Tips?" by u/Such_Will_8536. *r/Unmatched*, Reddit, 1 May 2026. https://www.reddit.com/r/Unmatched/comments/1t0p69f/
+5. u/Hopeful-Row-3648. Comment on "Ghost Rider Tips?" (see [4]).
+6. u/AbrocomaRight9782. Comment on "Tips for playing Ghost Rider?" by u/Prudent-Paint2537. *r/Unmatched*, Reddit, 13 December 2025. https://www.reddit.com/r/Unmatched/comments/1plly3g/
+7. u/CupAlternative. Comment on "Tips for playing Ghost Rider?" (see [6]).
+8. u/Possible_Fig4168. Comment on "Ghost Rider Tips?" (see [4]).
+9. u/Chidwick. Comment on "Tips for playing Ghost Rider?" (see [6]).
+
+### Not cited
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; nothing on Ghost Rider)
+- [Ghost Rider - Unmatched Marvel Fighter Review - Updated](https://www.youtube.com/watch?v=LC0t8eQMkI4): To The Table Top! · video (not yet reviewed)
+- [Ghost Rider - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=VdCuD5Bw7-M): Baked Goods · video (not yet reviewed)
+- [Unmatched Ghost Rider Guide](https://www.youtube.com/watch?v=laLqE6bF8SY): HELPivFALLN · video (not yet reviewed)
 
 ---
 
 <!-- id: moon_knight -->
 ## Moon Knight
 
-**In short:** A melee fighter whose identity rotates every turn, Moon Knight (movement), then Khonshu (attack), then Mr. Knight (defense). He wins by planning each turn around who he'll be.
+**In short:** A solo melee hero with 16 health and 3 movement who rotates through three identities, changing at the end of each turn: Moon Knight (moves up to 2 at the start of your turn), Khonshu (+2 to attacks, and no damage except combat damage) and Mr. Knight (+1 to defense) [1]. Restoration Games' owner calls mastering the identities "a fun test" [2]; one analyst calls him a complex puzzle with a high skill ceiling [3].
 
-### Plan A: Ride the rotation
-**Goal:** Do the right thing with each identity.
-**How to do it:** As Moon Knight, move 2 free spaces at the start of your turn to close in or retreat. As Khonshu, every attack gets +2, and he takes no damage except combat damage, so schemes, abilities and after-combat effects can't hurt him. As Mr. Knight, every defense gets +1. You switch to the next identity at the end of each turn, so Khonshu's attack turn always ends with Mr. Knight on defense.
-**Watch out for:** The rotation is forced and opponents can see it coming. They'll hit you as Moon Knight and run from Khonshu.
+### Plan A: Ride the cycle
+**Goal:** Plan every turn around the identity you'll be in, and the one you'll end in [3][4].
+**How to do it:** Moon Knight is the setup: his free 2-space move before acting effectively lets him maneuver 5 in one action [4]. Khonshu is the attack: +2 on every attack card, and he ignores damage from schemes, after-combat effects and abilities [1][4]. Mr. Knight is the defense: +1 on every defense, so ending a Khonshu turn doesn't leave you exposed [1][4]. As Khonshu, A Totally Sane Thing To Do deals 2 damage to both fighters without hurting you, and Good Enough For Us draws 2 without the 2 damage [1][4].
+**Watch out for:** The identity change is forced [4], so opponents know when he will attack and when he is vulnerable [5]. They avoid ending their turn next to Khonshu and attack him when he's Moon Knight [5].
 
-### Plan B: The "Perfect Knight" turn
-**Goal:** Pass through all three identities in one turn.
-**How to do it:** Start as Moon Knight and reach the enemy, with Travelers of The Night if needed (move 4 through enemies and gain an action). Attack with I'm Not Real, which lets you switch to Khonshu after combat. Then attack again as Khonshu with A Totally Sane Thing To Do (2 damage to both fighters, but Khonshu ignores his share) or Good Enough For Us (draw 2 without the 2 damage). You end the turn as Mr. Knight, ready to defend with Fist of Khonshu.
-**Watch out for:** A Feint on I'm Not Real breaks the chain.
+### Plan B: The Perfect Knight
+**Goal:** Go through all three identities in one turn [4].
+**How to do it:** Start as Moon Knight, reach the opponent with his free move or with Travelers of the Night (move 4 through enemies and gain an action) [1][4]. Attack with I'm Not Real, which lets you change to your next identity [1]. As Khonshu, attack with Good Enough For Us or A Totally Sane Thing To Do [4]. You end the turn as Mr. Knight, ideally holding Fist of Khonshu to defend and push the attacker up to 4 spaces away [1][4].
+**Watch out for:** If I'm Not Real is cancelled, you don't change identity and the combo stalls [4].
 
 ### How they lose
-- Opponents time their attacks for when he's Moon Knight and stay away from Khonshu.
-- He has weak defenses outside Mr. Knight.
-- The forced rotation leaves him as the wrong identity at the wrong moment.
+- The forced identity change, and predictability [4][5].
+- Low defense values outside Mr. Knight [4].
+- A solo fighter [3].
+- Opponents who run from Khonshu so he has to boost to reach them [5].
 
 ### Key cards
-- **I'm Not Real**: a 4-value attack that switches identity early.
-- **A Totally Sane Thing To Do**: only play it as Khonshu, who ignores the self-damage.
-- **Past and Present Intermingle**: adds the boost of the top card of your discard pile. Strong on defense.
-- **Madness Will Keep You Alive**: heals 2 and gains an action if he moved.
+- **I'm Not Real**: a 4-value attack that skips to your next identity [1]; the start of the Perfect Knight [4].
+- **Past and Present Intermingle**: a 2-value versatile card plus the boost of the top card of your discard pile [1]. Gridbeast calls it his best defense card [4].
+- **That's The Part I Like**: look at the top 3 cards of the opponent's deck and discard one if you win [1]; best as Khonshu [4].
+- **We're All In This Together**: his only defense card, drawing a card if you win [1][4].
+- **Madness Will Keep You Alive**: heal 2, and gain an action if you started your turn in a different space [1].
 
 ### Tips
-- As Moon Knight, don't fear ending next to Dracula or in Medusa's zone; you'll be Khonshu next turn and immune to their effects.
-- Good Enough For Us is a free 2-card draw as Khonshu.
-- Plan two turns ahead; know which identity you'll be when the opponent acts.
+- Use That's Why I Always Win as Moon Knight, boosting with Let Your Insanity Guide You [4].
+- Only Khonshu should play A Totally Sane Thing To Do [4].
+- Khonshu shrugs off damage from abilities and schemes; time his turns for opponents who rely on them [4].
 
-### Further reading
-- [Unmatched – Moon Knight](https://gridbeast.gg/unmatched-moon-knight/): Gridbeast · written guide
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [An Unmatched Roster: The Opposite of Redemption](https://boardgamegeek.com/thread/3182025/an-unmatched-roster-the-opposite-of-redemption): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [Tips/Strategies how to defeat the Moon Knight?](https://www.reddit.com/r/Unmatched/comments/uef0wg/): Reddit: Alex-Drobyshev · thread
-- [Moon Knight - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=bVbjc44uzwU): To The Table Top! · video
-- [Moon Knight - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=yIotoLiC-QU): Baked Goods · video
-- [Strategy Sunday Vol. 11](https://www.youtube.com/watch?v=1rEiFhIqnic): Karma · video
-- [Unmatched Moon Knight Bronze Guide](https://www.youtube.com/watch?v=o9Do4HqSdLM): HELPivFALLN · video
+### References
+1. Restoration Games. *Unmatched: Marvel – Redemption Row*, Moon Knight deck. Card text as recorded in `input/heroes.json`.
+2. Justin D. Jacobson (Restoration Games), interviewed in "Unmatched: Marvel — Who to Play, How to Win." *The Pop Insider*. https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/
+3. TFJ383. "An Unmatched Roster: The Opposite of Redemption." *BoardGameGeek*, 31 October 2023. https://boardgamegeek.com/thread/3182025/an-unmatched-roster-the-opposite-of-redemption
+4. Gridbeast. "Unmatched – Moon Knight." *Gridbeast*. https://gridbeast.gg/unmatched-moon-knight/
+5. u/The_Scipio. Comment on "Tips/Strategies how to defeat the Moon Knight?" by u/Alex-Drobyshev. *r/Unmatched*, Reddit, 29 April 2022. https://www.reddit.com/r/Unmatched/comments/uef0wg/
+
+### Not cited
+- [Moon Knight - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=bVbjc44uzwU): To The Table Top! · video (not yet reviewed)
+- [Moon Knight - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=yIotoLiC-QU): Baked Goods · video (not yet reviewed)
+- [Strategy Sunday Vol. 11](https://www.youtube.com/watch?v=1rEiFhIqnic): Karma · video (not yet reviewed)
+- [Unmatched Moon Knight Bronze Guide](https://www.youtube.com/watch?v=o9Do4HqSdLM): HELPivFALLN · video (not yet reviewed)
 
 ---
 

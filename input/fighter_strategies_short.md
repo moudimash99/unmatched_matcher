@@ -768,75 +768,94 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: luke_cage -->
 ## Luke Cage
 
-**In short:** A bulletproof brawler who takes 2 less combat damage and hits back hard, with Misty Knight's support.
+**In short:** A bulletproof brawler who takes 2 less combat damage and hits back hard, with Misty Knight at range [1][2].
 
-### Plan A: Tank and punish
-**Goal:** Make attacking him a bad deal · **How:** -2 combat damage; Trash Talk ends their turn; Skin Like Titanium reflects damage · **Watch out:** effect damage still hurts, and he has 13 health.
+### Plan A: Unbreakable
+**Goal:** Turn weak defense cards into strong blocks [2] · **How:** his reduction makes 2s into 4s; Trash Talk can end their turn [1][2] · **Watch out:** effect damage ignores his reduction [2][3].
 
-### Plan B: Hit like a truck
-**Goal:** Land big hits · **How:** Sweet Christmas! (6, no effect), Get Paid, and Where's My Money? to close in · **Watch out:** 2 movement.
+### Plan B: Heroes for Hire
+**Goal:** Hit hard with Misty's help [2] · **How:** Sweet Christmas! and Get Paid; Got My Back? sets up Luke [2] · **Watch out:** keep Misty alive [2].
 
 ### How they lose
-- Scheme and effect damage.
-- Misty dies early and he gets kited.
+- Effect and scheme damage [2][3].
+- Low mobility; opponents wait him out [3].
 
 ### Key cards
-- **Trash Talk**: a Feint that can end their turn.
-- **Sweet Christmas!**: 6 value, no effect.
+- **Trash Talk**: cancel and end their turn [1].
+- **Skin Like Titanium**: punishes big attacks [2].
 
 ### Tips
-- Keep Misty alive.
-- Recycle Trash Talk with Still Standing.
+- Recycle Trash Talk with Still Standing [2].
+- Good for new players [2].
+
+### References
+1. Restoration Games. *Unmatched: Marvel – Redemption Row*, Luke Cage deck.
+2. Gridbeast. "Unmatched – Luke Cage." https://gridbeast.gg/unmatched-luke-cage/
+3. TFJ383. "An Unmatched Roster: The Opposite of Redemption." *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3182025/
 
 ---
 
 <!-- id: ghost_rider -->
 ## Ghost Rider
 
-**In short:** Spends Hellfire to run over opponents for damage they can't block, then finishes with a big burst.
+**In short:** A solo rider who spends Hellfire to run over opponents and power his cards; Hellfire management is everything [1][2][3].
 
 ### Plan A: Run them over
-**Goal:** Chip damage they can't block · **How:** spend 1 Hellfire to move 4 through enemies, dealing 1 to each; refill with schemes · **Watch out:** keep at least 2 Hellfire.
+**Goal:** Chip damage from maneuvers, then a finisher [4] · **How:** maneuver through them each turn; finish with Blaze of Glory at 5 health or less [1][5] · **Watch out:** spamming maneuvers leaves no Hellfire for your cards [3].
 
-### Plan B: Spirit Of Vengeance finish
-**Goal:** Burst a weakened foe · **How:** Blaze of Glory (zone damage) or Penance Stare (adds their boost) · **Watch out:** don't waste Hellfire on extra actions.
+### Plan B: The Hellfire chain
+**Goal:** Several actions without losing Hellfire [2] · **How:** chain Hell Rides With Me, I Brought The Devil With Me and The Wicked Will Burn [2] · **Watch out:** spending 2 Hellfire for an action is rarely worth it [6].
 
 ### How they lose
-- Out of Hellfire with weak defenses.
-- Mobile, tanky fighters blunt the run-overs.
+- Running out of Hellfire [3].
+- Weak defense without Hellfire [2].
 
 ### Key cards
-- **Control The Demon**: +1 per Hellfire, for defense.
-- **Chains of Hellfire**: back to 5 Hellfire.
+- **Control The Demon**: a defense that scales with Hellfire [2].
+- **Chains of Hellfire**: back to 5 [1].
 
 ### Tips
-- Maneuver over enemies every turn.
-- Finish with Blaze of Glory at 5 health or less.
+- Keep at least 2 Hellfire [7].
+- Save Penance Stare for an opponent's big attack [7].
+
+### References
+1. Restoration Games. *Unmatched: Marvel – Redemption Row*, Ghost Rider deck.
+2. Gridbeast. "Unmatched – Ghost Rider." https://gridbeast.gg/unmatched-ghost-rider/
+3. TFJ383. "An Unmatched Roster: The Opposite of Redemption." *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3182025/
+4. u/Hopeful-Row-3648. Comment on "Ghost Rider Tips?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1t0p69f/
+5. u/AbrocomaRight9782. Comment on "Tips for playing Ghost Rider?" *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1plly3g/
+6. u/CupAlternative. Comment on "Tips for playing Ghost Rider?" (see [5]).
+7. u/Possible_Fig4168. Comment on "Ghost Rider Tips?" (see [4]).
 
 ---
 
 <!-- id: moon_knight -->
 ## Moon Knight
 
-**In short:** Rotates every turn between Moon Knight (movement), Khonshu (+2 attack) and Mr. Knight (+1 defense).
+**In short:** A solo fighter who rotates each turn between Moon Knight (movement), Khonshu (attack) and Mr. Knight (defense) [1][2].
 
-### Plan A: Ride the rotation
-**Goal:** Use each identity well · **How:** move as Moon Knight, hit as Khonshu (immune to non-combat damage), defend as Mr. Knight · **Watch out:** opponents see the rotation coming.
+### Plan A: Ride the cycle
+**Goal:** Plan each turn around your identity [2] · **How:** move as Moon Knight, hit as Khonshu, defend as Mr. Knight [1][2] · **Watch out:** opponents can predict the cycle [3].
 
-### Plan B: The "Perfect Knight" turn
-**Goal:** All three identities in one turn · **How:** I'm Not Real to switch early, a second attack as Khonshu, end as Mr. Knight · **Watch out:** a Feint breaks it.
+### Plan B: The Perfect Knight
+**Goal:** All three identities in one turn [2] · **How:** I'm Not Real as Moon Knight, a big hit as Khonshu, then defend as Mr. Knight with Fist of Khonshu [2] · **Watch out:** a cancelled I'm Not Real stalls the combo [2].
 
 ### How they lose
-- Hit as Moon Knight, avoided as Khonshu.
-- Weak defenses outside Mr. Knight.
+- Forced, predictable identity changes [2][3].
+- Low defense outside Mr. Knight [2].
 
 ### Key cards
-- **I'm Not Real**: switch identity mid-turn.
-- **A Totally Sane Thing To Do**: Khonshu only.
+- **I'm Not Real**: skip to the next identity [1].
+- **Past and Present Intermingle**: his best defense card [2].
 
 ### Tips
-- Plan two turns ahead.
-- Khonshu ignores scheme and effect damage.
+- Only Khonshu should play A Totally Sane Thing To Do [2].
+- Khonshu ignores damage that isn't from combat [1].
+
+### References
+1. Restoration Games. *Unmatched: Marvel – Redemption Row*, Moon Knight deck.
+2. Gridbeast. "Unmatched – Moon Knight." https://gridbeast.gg/unmatched-moon-knight/
+3. u/The_Scipio. Comment on "Tips/Strategies how to defeat the Moon Knight?" *r/Unmatched*, Reddit, 2022. https://www.reddit.com/r/Unmatched/comments/uef0wg/
 
 ---
 
