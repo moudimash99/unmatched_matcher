@@ -993,125 +993,153 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: deadpool -->
 ## Deadpool
 
-**In short:** A joke fighter whose deck of one-off, rule-bending cards makes him unpredictable. He heals every time he attacks, so he can take risks other fighters can't.
+**In short:** A solo melee hero with 10 health and 2 movement who recovers 1 health after every attack he makes [1]. His deck is a joke deck: every card is a single copy, many are parodies of other heroes' cards, and some depend on things outside the game [1][2]. Gridbeast lists "he is a joke hero" and "he is unpredictable" as both his strengths and his weaknesses [2].
 
-### Plan A: Attack, heal, repeat
-**Goal:** Keep swinging, since every attack heals him.
-**How to do it:** After every attack Deadpool recovers 1 health, and many cards heal him more: Gimme Gimme Chimichanga, Non-Retinal Scan Access to Danger Room, Faint, and They Have An Amazing Buffet on defense. That makes trading blows worth it even with only 10 health. Strong attacks include Underrated Super Heroes (6, no effect) and Klunkin' Heads, which deals 3 damage to every other enemy next to the target if you win.
-**Watch out for:** He has very few defense cards, so being too aggressive can get him killed quickly.
+### Plan A: Harass and heal
+**Goal:** Keep attacking so his ability and healing cards keep him alive, and wear the opponent down [2].
+**How to do it:** He heals 1 after each attack [1], and cards such as Gimme Gimme Chimichanga, Non-Retinal Scan Access to Danger Room, They Have An Amazing Buffet, Faint and Dumpster Divin' Deadpool restore more [1]. That healing lets him take risks other fighters can't [2]. Save your high-value versatile cards for defense [2].
+**Watch out for:** His defense is his main weakness: he has very few defense cards, and once they're gone he goes down fast, so don't over-commit [2].
 
-### Plan B: Be the wild card
-**Goal:** Keep the opponent guessing.
-**How to do it:** Almost every card is a single copy with a different value and effect, so opponents can't predict him. Several cards get stronger from things outside the game: put food on the table for Chimichanga Break!, leave I'm Not Wearing Pants unsleeved, and make a noise for Exploding Card!. Super Feint cancels their effects, draws a card, and can't be canceled itself.
-**Watch out for:** His card draw is unreliable, so he struggles in competitive games.
+### Plan B: Embrace the chaos
+**Goal:** Be the wild card, especially in 3- and 4-player games, which are chaotic anyway [2].
+**How to do it:** Read every card in your hand carefully: many get bigger under outside conditions [2]. Chimichanga Break! is worth 5 if there is food on the table, and I'm Not Wearing Pants is worth 5 if the card isn't sleeved [1]; Gridbeast suggests putting snacks out before the game [2]. His unpredictability is what makes him dangerous; have fun and don't overthink it [2].
+**Watch out for:** His cards vary wildly in value and effect, so a serious long-term plan is hard to build [2].
 
 ### How they lose
-- He runs out of defense cards and gets burst down from 10 health.
-- Unreliable card draw leaves him with weak, random hands.
-- Steady pressure that out-damages his healing.
+- Few defense cards [2].
+- Unreliable card draw, which keeps him from excelling in competitive play [2].
+- Only 10 health [1].
 
 ### Key cards
-- **Super Feint**: a 4-value card that can't be canceled. It cancels their effects and draws a card.
-- **Underrated Super Heroes**: a 6-value attack with no effect.
-- **Passwords**: a 5-value defense, but the opponent picks a card from your hand for you to discard.
-- **Dumpster Divin' Deadpool**: shuffles 5 cards from your discard pile back into your deck and heals 1.
+- **Super Feint**: a 4-value cancel that also draws a card and can't itself be cancelled [1].
+- **Underrated Super Heroes**: his biggest plain attack, a 6 [1].
+- **Gaze of Stone**: his single copy deals 8 more damage if it wins the combat [1].
+- **Time out time out time out!**: search your deck for a card to play instead [1].
 
 ### Tips
-- Save your high-value versatile cards for defense.
-- Read your hand carefully; many cards have unusual requirements.
-- He shines in chaotic 3–4 player games.
+- Put food on the table before the game [2].
+- Save high-value versatile cards for defense [2].
 
-### Further reading
-- [Unmatched – Deadpool](https://gridbeast.gg/unmatched-deadpool/): Gridbeast · written guide
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [Deadpool (Unmatched Strategy Guide 16)](https://www.youtube.com/watch?v=U-1Ot_x4E7Q): Baked Goods · video
-- [Deadpool - Unmatched Fighter Review](https://www.youtube.com/watch?v=NvZ6sxee6_o): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Deadpool*, Deadpool deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Deadpool." *Gridbeast*. https://gridbeast.gg/unmatched-deadpool/
+
+### Not cited
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; nothing on Deadpool)
+- [Deadpool (Unmatched Strategy Guide 16)](https://www.youtube.com/watch?v=U-1Ot_x4E7Q): Baked Goods · video (not yet reviewed)
+- [Deadpool - Unmatched Fighter Review](https://www.youtube.com/watch?v=NvZ6sxee6_o): To The Table Top! · video (not yet reviewed)
 
 ---
 
 <!-- id: achilles -->
 ## Achilles
 
-**In short:** A tough melee fighter (18 health) who fights alongside Patroclus, then turns into a +2 attack, card-drawing monster once Patroclus falls, ideally at a moment you choose.
+**In short:** A melee hero with 18 health and 2 movement, plus Patroclus (6 health) [1]. When Patroclus is defeated, Achilles discards 2 random cards; from then on his attacks are +2 and he draws a card whenever he wins a combat [1]. Choosing when Patroclus dies is the heart of playing him [2][3][4].
 
-### Plan A: The brothers fight together
-**Goal:** Get value from Patroclus while he's alive and protect Achilles.
-**How to do it:** Brothers In Arms is a 4-value attack that gains an action while Patroclus is alive, so you can set up double attacks. Under Achilles' Helm swaps Achilles with Patroclus on defense, so Patroclus takes the hit. Let Patroclus do a lot of the fighting; he's solid in combat himself.
-**Watch out for:** Achilles has almost no card draw in his deck before Patroclus falls, so don't go all out two turns in a row.
+### Plan A: Patroclus fights first
+**Goal:** Get value from Patroclus, then let him fall at a moment that suits you [2][3][4].
+**How to do it:** Brothers In Arms (4) gains an action while Patroclus lives [1], arguably the best card in the deck [2]; play it before he dies [4]. Battle Frenzy deals 2 damage to both fighters in its combat, and The Day of Your Doom becomes a 5 if Patroclus takes 2 damage [1]: both trim his health while hurting the opponent [2]. Under Achilles' Helm swaps Achilles with Patroclus so Patroclus becomes the defender [1]. Opponents will avoid hitting Patroclus, so these cards let you choose when he goes [2].
+**Watch out for:** Never let him die when your hand is small: the 2 random discards can wreck your plan or leave you defenseless [2][5][6]. Opponents may kill him exactly then, to swing the hand advantage [6]. Players disagree on timing: some send Patroclus in early [7][8], others keep him alive longer against hard-to-reach or long-game opponents [4], and one analysis calls the timing make-or-break [9].
 
 ### Plan B: The rage of Achilles
-**Goal:** Kill Patroclus when it suits you, then hit hard and draw cards.
-**How to do it:** Battle Frenzy and The Day of Your Doom let Patroclus damage himself while hurting the enemy. When he dies you discard 2 random cards, so make sure your hand has cards you can spare, ideally Patroclus-only ones. After that, every Achilles attack gets +2 and he draws a card whenever he wins a combat. Skirmish becomes a 6 and even Feint a 4. Battle Hardened returns a card from your discard pile, including another Battle Hardened.
-**Watch out for:** He burns through his deck fast in this phase, so end the game quickly.
+**Goal:** Once Patroclus is gone, attack, attack, attack, and end the game fast [2][4].
+**How to do it:** With +2, Skirmish attacks for 6, Wily Fighting for 5 and even Feint for 4 [2]. Test For Weakness is a 1-value attack with a second 3-value attack attached [1], and is often the best card to recover [4]. Battle Hardened returns any card from your discard pile; recovering Battle Hardened itself keeps your hand size up [1][10][11]. Spear Throw deals 2 damage to an opponent in his zone [1].
+**Watch out for:** The extra draw burns through his deck, so he can lose to exhaustion [2][7]. Opponents will try to run away until he runs out [9][11].
 
 ### How they lose
-- Patroclus is killed when Achilles' hand is weak, and the 2 random discards wreck his plan.
-- Ranged fighters, sidekick-heavy fighters and big open maps let opponents kite him (move 2) until he runs out of cards.
-- He gets too aggressive in rage mode and is left without defenses.
+- Patroclus dies at a bad moment [3][6].
+- Exhaustion after his rage begins [2][7][9].
+- Big maps and opponents who kite him, with only 2 movement [2][12][9].
+- Ranged opponents and heroes with many sidekicks [2].
+- No card draw before Patroclus dies, so he can't go all-out two turns in a row [13].
 
 ### Key cards
-- **Brothers In Arms**: attack 4 that gains an action while Patroclus lives. Arguably his best card.
-- **Under Achilles' Helm**: swaps Patroclus in as the defender.
-- **Battle Hardened**: brings back a key card, often Feint or another Battle Hardened.
-- **Achilles' Heel**: a 4-value defense, but if you lose the combat the opponent gains an action.
+- **Brothers In Arms**: an extra action while Patroclus lives [1][2].
+- **Battle Hardened**: his most important card after the rage [2].
+- **Achilles' Heel**: a 4-value defense, but if you lose, the opponent gains an action [1]. Use it carefully [2][4].
+- **Under Achilles' Helm**: protects Achilles early; after Patroclus dies, its boost of 4 helps him reach a fleeing opponent [4][11].
+- **Test For Weakness**: two attacks in one, and players try not to lose it to the discards when Patroclus dies [5][4].
 
 ### Tips
-- Patroclus must die on your terms.
-- Don't lose Test For Weakness or Skirmish to the random discards; save them for rage mode.
-- Pick tight maps and central positions; open maps help opponents run.
-- Spear Throw deals 2 damage to an enemy in his zone, which can finish off a target you can't reach.
+- Make sure you hold at least two expendable cards when Patroclus dies, ideally his own cards [2].
+- Before the rage, don't spend your versatile cards on Patroclus [12][4].
+- Tight maps suit him; on big maps, find a central spot [2].
 
-### Further reading
-- [Unmatched – Achilles](https://gridbeast.gg/unmatched-achilles/): Gridbeast · written guide
-- [Any tips w Gozen playing against Achillies?](https://www.reddit.com/r/Unmatched/comments/1e10p51/): Reddit: Tooooon · thread
-- [Am I playing Achilles wrong?](https://www.reddit.com/r/Unmatched/comments/1n30hpy/): Reddit: One_Fix9278 · thread
-- [Got my first unmatched set! Any tips for Achilles?](https://www.reddit.com/r/Unmatched/comments/1puv37x/): Reddit: dzelaaaaa · thread
-- [Weekly Discussion: Battling Achilles (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1rko49a/): Reddit: LabRat2329 · thread
-- [Advice on playing Winter Soldier into Achilles?](https://www.reddit.com/r/Unmatched/comments/1uxkvf2/): Reddit: GreenBanditOfTruth · thread
-- [Yennenga against vs Achilles](https://boardgamegeek.com/thread/3260485/yennenga-against-vs-achilles): BoardGameGeek · thread (not checked: BoardGameGeek blocks automated access)
-- [Achilles (Unmatched Strategy Guide 24)](https://www.youtube.com/watch?v=QLeuule53S8): Baked Goods · video
-- [Achilles - Unmatched Fighter Review](https://www.youtube.com/watch?v=WuJrxr3LlAI): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 2*, Achilles deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Achilles." *Gridbeast*. https://gridbeast.gg/unmatched-achilles/
+3. u/SlowlygettingtoFIRE. Comment on "Am I playing Achilles wrong?" by u/One_Fix9278. *r/Unmatched*, Reddit, 29 August 2025. https://www.reddit.com/r/Unmatched/comments/1n30hpy/
+4. u/-Asdepique-. Comments on "Got my first unmatched set! Any tips for Achilles?" by u/dzelaaaaa. *r/Unmatched*, Reddit, 24 December 2025. https://www.reddit.com/r/Unmatched/comments/1puv37x/
+5. u/TivaDi. Comment on "Am I playing Achilles wrong?" (see [3]).
+6. u/Life-Rip183. Comment on "Am I playing Achilles wrong?" (see [3]).
+7. u/SapTheSapient. Comment on "Got my first unmatched set!…" (see [4]).
+8. u/StuBram2. Comment on "Got my first unmatched set!…" (see [4]).
+9. TFJ383. "An Unmatched Roster: Twice the Pride, Double the Fall." *BoardGameGeek*, 18 April 2024. https://boardgamegeek.com/thread/3286237/an-unmatched-roster-twice-the-pride-double-the-fal
+10. u/OneJubsub. Comment on "Got my first unmatched set!…" (see [4]).
+11. u/rabiiins. Comment on "Got my first unmatched set!…" (see [4]).
+12. u/d_Shirt. Comment on "Am I playing Achilles wrong?" (see [3]).
+13. u/DartsAreSick. Comment on "Am I playing Achilles wrong?" (see [3]).
+
+### Not cited
+- [Weekly Discussion: Battling Achilles (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1rko49a/): Reddit: LabRat2329 · thread (read; mostly matchup advice)
+- [Any tips w Gozen playing against Achillies?](https://www.reddit.com/r/Unmatched/comments/1e10p51/): Reddit: Tooooon · thread (read; matchup-specific)
+- [Advice on playing Winter Soldier into Achilles?](https://www.reddit.com/r/Unmatched/comments/1uxkvf2/): Reddit: GreenBanditOfTruth · thread (read; matchup-specific)
+- [Yennenga against vs Achilles](https://boardgamegeek.com/thread/3260485/yennenga-against-vs-achilles): BoardGameGeek · thread (read; matchup-specific)
+- [Achilles (Unmatched Strategy Guide 24)](https://www.youtube.com/watch?v=QLeuule53S8): Baked Goods · video (not yet reviewed)
+- [Achilles - Unmatched Fighter Review](https://www.youtube.com/watch?v=WuJrxr3LlAI): To The Table Top! · video (not yet reviewed)
 
 ---
 
 <!-- id: bloody_mary -->
 ## Bloody Mary
 
-**In short:** An aggressive melee ghost who wants to start her turn with exactly 3 cards in hand, gaining a third action and unlocking her deadliest card effects.
+**In short:** A solo melee hero with 16 health and 3 movement who gains an action at the start of her turn if she has exactly 3 cards in hand [1]. Many of her card effects only trigger on a third action [1][2]. Players disagree on how much to build around that: some chase the 3-card turn, others mostly ignore it and play aggressively [3][4][5].
 
-### Plan A: The three-action turn
-**Goal:** Start your turn with exactly 3 cards, take three actions and hit hard on the third.
-**How to do it:** Use your first action to maneuver: draw a card and get next to the enemy. On the second, attack with Bloody Requiem, which forces a second free attack worth whatever defense they played, or with Jump Scare (worth 6 if she left her starting zones). Save the third for Speak Three Times (worth 7 as a third action). Closer Than She Appears moves 1, draws 1 and gains an action, giving you a third action even with a full hand.
-**Watch out for:** Opponents save Feints for your third action. Bait them out with Ghostly Touch or Out Of The Mirror, and don't use Bloody Requiem on the third action.
+### Plan A: Speak her name three times
+**Goal:** Set up turns where you start with exactly 3 cards, then strike hardest on your third action [2].
+**How to do it:** Try to end your turn out of the opponent's reach, or with no more than 4 cards, so you still hold a defense [2]; one player ends at 4 cards to tempt a single attack [6]. Evade and Broken Glass draw a card on defense, which can leave you at 3 [1][2]. On the turn itself, Gridbeast maneuvers first, attacks second, and saves the big hit for third [2]. Speak Three Times is worth 7 on a third action [1]. Closer Than She Appears moves 1, draws 1 and gains an action [1], a third action even with a big hand [2][7]. Another approach builds a big hand first and works down to a chosen 3 cards [5][8].
+**Watch out for:** Opponents can see the third action coming and hold a Feint for it [2][9]. Attack with expendable cards on some third actions to waste their Feints [5][10]; don't play Bloody Requiem as a third action [7].
 
-### Plan B: Relentless pressure
-**Goal:** Keep both players low on cards, where her cards are at their best.
-**How to do it:** With 3 movement she can attack again and again. End turns with 3 or 4 cards so the opponent is afraid to attack and set off her ability. Out Of The Mirror discards a random card from their hand. Stolen Memories shows you their hand: they either discard the card you pick or take damage equal to its boost. Against fighters who punish a small hand, play with a bigger hand instead and work down to 3.
-**Watch out for:** She has no sidekick, so she's predictable once her ability is active.
+### Plan B: Go aggressive
+**Goal:** Pressure the opponent constantly, using her 3 movement, discards and double attack [3][5].
+**How to do it:** You don't need three actions every turn [4]. Keep attacking; ending turns at 3 or 4 cards also makes opponents reluctant to attack you [3]. Aim to leave both players short of cards, because her cards get better the fewer you both hold [11]. Jump Scare is worth 6 if Mary ends up sharing no zone with where she started [1], so use it early and often [7]. Bloody Requiem adds a second attack worth the printed value of the defense played against the first [1].
+**Watch out for:** Running too low on cards against an aggressive opponent can leave her in a near-unwinnable spot [9]. One player says not to fear cancels: playing around them wastes your windows [11].
 
 ### How they lose
-- She's left defenseless after attacking with everything, especially on her third action.
-- Opponents read her third action and cancel Speak Three Times.
-- Fighters who punish small hands, or who run away, waste her turns.
+- Cancels: her payoffs are easy to predict, so she's heavily punished by them [9].
+- Few 3-action turns in a game, and her third-action cards are weak otherwise [9].
+- Being bullied when low on cards [9].
+- As a solo fighter she has less presence on the board and is easier to read [2].
 
 ### Key cards
-- **Speak Three Times**: attack 3, or 7 on your third action. Her finisher.
-- **Bloody Requiem**: drags out two defense cards with one attack.
-- **Mirror Image**: a defense worth the printed value of the attacker's card, which is great against big hitters.
-- **Broken Glass**: adjust its value by 1; if it matches theirs, draw a card and deal 2 damage.
+- **Speak Three Times**: her strongest attack, 7 on a third action; save it for when the opponent can't cancel it [2][10].
+- **Stolen Memories**: look at their hand and choose a card; they discard it or take its boost as damage [1]. Crucial for damage: target high-boost cards they need [11].
+- **Broken Glass**: change its value by 1; if it matches the opponent's card, draw 1 and deal 2 damage [1]. Often best on defense [5].
+- **Mirror Image**: a 0-value defense equal to the attacker's printed value [1], excellent against big attacks [2].
+- **Infinity Mirror**: a 4-value versatile card that moves either fighter up to 4 [1]; excellent on defense [2].
 
 ### Tips
-- Use Evade or Broken Glass on defense to end the opponent's turn with exactly 3 cards.
-- Use Jump Scare early and often, ending turns where she can easily leave her zone.
-- Keep track of how many cancels the opponent has left.
+- Track how many cancels the opponent has left [2].
+- If you need the healing, play Ghostly Touch on sidekicks; opponents rarely spend a Feint there [2].
+- She can also play the exhaustion game, with little draw and many discards [10].
 
-### Further reading
-- [Unmatched – Bloody Mary](https://gridbeast.gg/unmatched-bloody-mary/): Gridbeast · written guide
-- [Tips for Bloody Mary vs Titania?](https://www.reddit.com/r/Unmatched/comments/1km9dy9/): Reddit: Entire_Cucumber_7539 · thread
-- [Tips for Bloody Mary?](https://www.reddit.com/r/Unmatched/comments/1s18nto/): Reddit: SeriousMolasses9346 · thread
-- [How do you effectively use Bloody Mary?](https://www.reddit.com/r/Unmatched/comments/1sp2e0n/): Reddit: BeneficialMethod3866 · thread
-- [Bloody Mary (Unmatched Strategy Guide 22)](https://www.youtube.com/watch?v=0avhxkitc7A): Baked Goods · video
-- [Bloody Mary - Unmatched Fighter Review](https://www.youtube.com/watch?v=pEL31AareYM): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 2*, Bloody Mary deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Bloody Mary." *Gridbeast*. https://gridbeast.gg/unmatched-bloody-mary/
+3. u/GreenDuston_. Comment on "Tips for Bloody Mary?" by u/SeriousMolasses9346. *r/Unmatched*, Reddit, 23 March 2026. https://www.reddit.com/r/Unmatched/comments/1s18nto/
+4. u/FrequentExcitement55. Comment on "How do you effectively use Bloody Mary?" by u/BeneficialMethod3866. *r/Unmatched*, Reddit, 18 April 2026. https://www.reddit.com/r/Unmatched/comments/1sp2e0n/
+5. u/TheEliteB3aver. Comment on "How do you effectively use Bloody Mary?" (see [4]).
+6. u/Sphyrth1989. Comment on "How do you effectively use Bloody Mary?" (see [4]).
+7. u/NintendoOlav. Comment on "Tips for Bloody Mary?" (see [3]).
+8. u/TheEliteB3aver. Comment on "Tips for Bloody Mary?" (see [3]).
+9. TFJ383. "An Unmatched Roster: Twice the Pride, Double the Fall." *BoardGameGeek*, 18 April 2024. https://boardgamegeek.com/thread/3286237/an-unmatched-roster-twice-the-pride-double-the-fal
+10. u/Independent_Act_6367. Comment on "Tips for Bloody Mary?" (see [3]).
+11. u/RelissDeRaken. Comment on "How do you effectively use Bloody Mary?" (see [4]).
+
+### Not cited
+- [Tips for Bloody Mary vs Titania?](https://www.reddit.com/r/Unmatched/comments/1km9dy9/): Reddit: Entire_Cucumber_7539 · thread (read; matchup-specific)
+- [Bloody Mary (Unmatched Strategy Guide 22)](https://www.youtube.com/watch?v=0avhxkitc7A): Baked Goods · video (not yet reviewed)
+- [Bloody Mary - Unmatched Fighter Review](https://www.youtube.com/watch?v=pEL31AareYM): To The Table Top! · video (not yet reviewed)
 
 ---
 

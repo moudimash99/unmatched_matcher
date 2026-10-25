@@ -608,75 +608,97 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: deadpool -->
 ## Deadpool
 
-**In short:** An unpredictable joke fighter who heals every time he attacks.
+**In short:** A joke-deck wild card who heals after every attack; his single-copy cards vary wildly and some depend on things outside the game [1][2].
 
-### Plan A: Attack, heal, repeat
-**Goal:** Keep swinging · **How:** +1 health after every attack, plus lots of healing cards · **Watch out:** very few defenses.
+### Plan A: Harass and heal
+**Goal:** Attack often and heal through damage [2] · **How:** he recovers 1 after each attack, and many cards heal more [1] · **Watch out:** few defense cards [2].
 
-### Plan B: Be the wild card
-**Goal:** Keep them guessing · **How:** single-copy cards with odd bonuses (food on the table, unsleeved cards) · **Watch out:** unreliable card draw.
+### Plan B: Embrace the chaos
+**Goal:** Be the unpredictable wild card [2] · **How:** read every card; some grow under outside conditions [2] · **Watch out:** hard to plan around [2].
 
 ### How they lose
-- Burst down from 10 health once his defenses run out.
-- Random, weak hands.
+- Running out of defense cards [2].
+- Unreliable card draw [2].
 
 ### Key cards
-- **Super Feint**: a cancel that can't be canceled.
-- **Underrated Super Heroes**: 6 value, no effect.
+- **Super Feint**: an uncancellable cancel that draws [1].
+- **Underrated Super Heroes**: a plain 6 [1].
 
 ### Tips
-- Save versatile cards for defense.
-- Best in chaotic multiplayer games.
+- Put snacks on the table [2].
+- Save high-value versatile cards for defense [2].
+
+### References
+1. Restoration Games. *Unmatched: Deadpool*, Deadpool deck.
+2. Gridbeast. "Unmatched – Deadpool." https://gridbeast.gg/unmatched-deadpool/
 
 ---
 
 <!-- id: achilles -->
 ## Achilles
 
-**In short:** Fights alongside Patroclus, then becomes a +2, card-drawing monster once Patroclus falls.
+**In short:** A tough warrior who fights beside Patroclus, then turns into a +2, card-drawing rampage once Patroclus dies [1][2].
 
-### Plan A: The brothers fight together
-**Goal:** Value from Patroclus · **How:** Brothers In Arms for extra actions, Under Achilles' Helm to swap him in on defense · **Watch out:** little card draw early.
+### Plan A: Patroclus fights first
+**Goal:** Use Patroclus, then let him die on your terms [2][3] · **How:** Brothers In Arms, Battle Frenzy and The Day of Your Doom [1][2] · **Watch out:** don't let him die with a small hand [2][4].
 
 ### Plan B: The rage of Achilles
-**Goal:** Kill Patroclus when it suits you · **How:** Battle Frenzy and The Day of Your Doom; then +2 attacks and draw on wins · **Watch out:** 2 random discards when he dies.
+**Goal:** End the game fast [2] · **How:** attack with everything; recover cards with Battle Hardened [2][5] · **Watch out:** exhaustion [2].
 
 ### How they lose
-- Patroclus dies at the wrong moment.
-- Kited on open maps until he runs out of cards.
+- Patroclus dies at a bad moment [4].
+- Kited on big maps until he runs out of cards [2][6].
 
 ### Key cards
-- **Brothers In Arms**: an attack that gains an action.
-- **Battle Hardened**: recycles key cards.
+- **Brothers In Arms**: arguably his best card [2].
+- **Battle Hardened**: his key card in the rage [2].
 
 ### Tips
-- Keep spare cards in hand before Patroclus falls.
-- End the game fast once enraged.
+- Keep two expendable cards in hand for when Patroclus dies [2].
+- Use Achilles' Heel carefully [2].
+
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 2*, Achilles deck.
+2. Gridbeast. "Unmatched – Achilles." https://gridbeast.gg/unmatched-achilles/
+3. u/SlowlygettingtoFIRE. Comment on "Am I playing Achilles wrong?" *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1n30hpy/
+4. u/Life-Rip183. Comment on "Am I playing Achilles wrong?" (see [3]).
+5. u/OneJubsub. Comment on "Got my first unmatched set! Any tips for Achilles?" *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1puv37x/
+6. TFJ383. "An Unmatched Roster: Twice the Pride, Double the Fall." *BoardGameGeek*, 2024. https://boardgamegeek.com/thread/3286237/
 
 ---
 
 <!-- id: bloody_mary -->
 ## Bloody Mary
 
-**In short:** An aggressive ghost who wants exactly 3 cards in hand to gain a third action and unleash her best effects.
+**In short:** A fast solo haunter who gains a third action when she starts her turn with exactly 3 cards, with effects that trigger on that action [1][2].
 
-### Plan A: The three-action turn
-**Goal:** Hit hard on the third action · **How:** maneuver first, attack with Bloody Requiem or Jump Scare, then finish with Speak Three Times (7) · **Watch out:** they save Feints for your third action.
+### Plan A: Speak her name three times
+**Goal:** Set up 3-card turns and strike on the third action [2] · **How:** draw to 3 with Evade or Broken Glass; finish with Speak Three Times [1][2] · **Watch out:** opponents save a Feint for your third action [3].
 
-### Plan B: Relentless pressure
-**Goal:** Keep both players low on cards · **How:** 3 movement, constant attacks and discard effects · **Watch out:** no sidekick, so she's predictable.
+### Plan B: Go aggressive
+**Goal:** Constant pressure [4][5] · **How:** keep attacking with Jump Scare and Bloody Requiem; don't force three actions [5][6] · **Watch out:** don't run out of cards [3].
 
 ### How they lose
-- Left defenseless after an all-in turn.
-- Her third action gets read and canceled.
+- Cancels on her predictable payoffs [3].
+- A low hand against an aggressive opponent [3].
 
 ### Key cards
-- **Speak Three Times**: 7 on the third action.
-- **Mirror Image**: copies their printed value on defense.
+- **Speak Three Times**: 7 on a third action [1].
+- **Stolen Memories**: damage or a key discard [7].
 
 ### Tips
-- End turns with 3–4 cards.
-- Use Closer Than She Appears for a third action with a big hand.
+- Use some third actions on expendable cards to waste Feints [8].
+- Count the opponent's cancels [2].
+
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 2*, Bloody Mary deck.
+2. Gridbeast. "Unmatched – Bloody Mary." https://gridbeast.gg/unmatched-bloody-mary/
+3. TFJ383. "An Unmatched Roster: Twice the Pride, Double the Fall." *BoardGameGeek*, 2024. https://boardgamegeek.com/thread/3286237/
+4. u/GreenDuston_. Comment on "Tips for Bloody Mary?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1s18nto/
+5. u/TheEliteB3aver. Comment on "How do you effectively use Bloody Mary?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1sp2e0n/
+6. u/FrequentExcitement55. Comment on "How do you effectively use Bloody Mary?" (see [5]).
+7. u/RelissDeRaken. Comment on "How do you effectively use Bloody Mary?" (see [5]).
+8. u/Independent_Act_6367. Comment on "Tips for Bloody Mary?" (see [4]).
 
 ---
 
