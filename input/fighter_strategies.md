@@ -2685,77 +2685,100 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 <!-- id: geralt -->
 ## Geralt of Rivia
 
-**In short:** A versatile melee witcher with 16 health and a fragile ranged sidekick, Dandelion. Before the game he picks one sword, one armor and one potion to suit the matchup, then plays solid cards until he out-values the opponent or bursts them down.
+**In short:** A melee hero with 16 health and 2 movement, plus Dandelion, a 5-health ranged sidekick [1]. Before the game he picks one potion, one armor and one sword, and shuffles two copies of each into his deck [1]. He can play fast or slow, and choosing which, along with his gear, is most of his strategy [2][3][4].
 
-### Plan A: Gear for the matchup
-**Goal:** Win before the game starts by picking the right gear.
-**How to do it:** Always Prepared shuffles 2 copies each of the sword, armor and potion you choose into your deck. Sword of steel (4) gains an action, or 2 if the target has 8+ health. Sword of silver (4) ignores their card's value if its printed value is 4 or more, which suits a mind-game plan. Wolf Medallion (defense 3) cancels their effects and ignores their value if the attacker isn't adjacent. Armor of the Forgotten Wolf gets +1 per adjacent fighter and ends the turn, which stops action gain and hit-and-run. Tawny Owl draws 2 and gains an action. Blizzard draws 1, moves him 3 and stops opponents gaining actions. Both potions are discarded if you don't attack that turn. Witcher Senses fetches a gear card from your deck or discard pile.
-**Watch out for:** Most players take Sword of steel, Wolf Medallion and Tawny Owl. Change only with a reason.
+### Plan A: Burst them down
+**Goal:** Keep a full hand, then unload a big turn [5][6].
+**How to do it:** With the right gear he can almost end the game in one turn [6]. Sword of steel is a 4-value attack that gains an action, or two if the opponent has 8 or more health [1]; it is the more flexible sword, and can double as a maneuver [5]. Both potions are discarded at the end of your turn if you didn't attack, so play them at the right moment and keep attacking [1][7]. Tawny Owl draws 2 and gains an action [1]; one player calls Blizzard strictly worse unless you want its stop on action gain, since a maneuver boosted by Tawny Owl does much the same [8]. Movement wins games against ranged heroes [6].
+**Watch out for:** Rushing risks running out of cards [6].
 
-### Plan B: Out-value or burst
-**Goal:** Decide early whether you're rushing them or wearing them down.
-**How to do it:** Rushing: chain Sword of steel's extra actions with Damn, you're ugly (5) and Rend (3, may boost). Wearing down: Dandelion's Plot twist looks at their hand, discards their best card and draws 1. Disciplined Duelist (4) draws, deals 1 or forces a discard depending on their card's printed value.
-**Watch out for:** If you rush, you can run out of cards before they fall.
+### Plan B: Wear them down
+**Goal:** Play the long game and finish the opponent once they run out of cards [6].
+**How to do it:** Keep Dandelion alive to strip as many cards as possible [7]. His Plot twist shows you their hand and makes them discard a card you choose, then draws you one [1]. Sword of silver ignores the value of a card printed at 4 or more [1]; with it, play the mind game: hit their big defenses with the sword and Igni, and use the 5 and the boostable 3 when they defend low [5]. Plot twist and Witcher Senses help you read and bait them [5].
+**Watch out for:** Dandelion has only 5 health and dies quickly [9].
 
 ### How they lose
-- Pressure forces him to block with his big versatile cards, so he blocks or hits but not both.
-- His card draw and movement are limited for a fast game.
-- Dandelion (5 health) dies early and the discard plan goes with him.
+- Everything he commits to defense is gone for attack, and vice versa; pressure him so he must block with his big versatiles [10].
+- No healing, and his low movement bleeds cards when he has to boost in [10].
+- Players disagree on his strength: one calls him top tier at every playstyle [11], another says he is mid-pack and often fails to finish [10].
 
 ### Key cards
-- **Gear: Sword of steel**: action gain that keeps his attacks coming.
-- **Gear: Wolf Medallion**: his best defense, especially against ranged fighters.
-- **Plot twist**: picks their best card to discard.
-- **Igni**: a 0 attack that deals 2 damage to them and 1 to everyone else next to him.
+- **Gear: Wolf Medallion**: a 3-value defense that cancels all effects, and ignores the attack's value if the attacker isn't adjacent [1]. With Sword of steel and Tawny Owl, the gear players pick most [9].
+- **Gear: Armor of the Forgotten Wolf**: +1 per adjacent fighter and ends the turn [1]. Worth it against several opponents [6][9], and the end of turn stops action gain, non-combat effects and hit-and-run play [12].
+- **Rend**: a 3 you may boost [1]; the timing of that boost, and of the 5-value Damn, you're ugly, matters [1][2].
+- **Disciplined Duelist**: its effect depends on the printed value of the other card [1], so timing it matters [7].
+- **Witcher Senses**: fetches a gear card [1].
 
 ### Tips
-- Against ranged heroes, movement wins; consider Blizzard.
-- Keep Dandelion behind Geralt.
-- Use Annoying tune on defense to throw them 4 spaces away.
+- Your gear pick can decide the match before it starts; choose with care [7].
+- Choose the plan based on the opponent [6].
+- Use his versatile cards wisely: each one is a choice between attack and defense [3].
 
-### Further reading
-- [Geralt strategy](https://www.reddit.com/r/Unmatched/comments/1is88el/): Reddit: Life-Rip183 · thread
-- [Unmatched guide #2 Geralt of Rivia](https://www.reddit.com/r/Unmatched/comments/1l6duj3/): Reddit: PenTernamee · thread
-- [Geralt of Rivia - The Witcher Unmatched Fighter Review](https://www.youtube.com/watch?v=WVVyPrw-XeE): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: The Witcher: Steel and Silver*, Geralt of Rivia deck. Card text as recorded in `input/heroes.json`.
+2. u/DartsAreSick. Comment on "Geralt strategy" by u/Life-Rip183. *r/Unmatched*, Reddit, 18 February 2025. https://www.reddit.com/r/Unmatched/comments/1is88el/
+3. u/Sneikss. Comment on "Geralt strategy" (see [2]).
+4. u/PenTernamee. "Unmatched guide #2 Geralt of Rivia." *r/Unmatched*, Reddit, 8 June 2025. https://www.reddit.com/r/Unmatched/comments/1l6duj3/
+5. u/VolpeLorem. Comment on "Geralt strategy" (see [2]).
+6. u/Effective_Jury4363. Comments on "Unmatched guide #2 Geralt of Rivia" (see [4]).
+7. u/erickt1998. Comments on "Geralt strategy" (see [2]).
+8. u/Sneikss. Reply in "Unmatched guide #2 Geralt of Rivia" (see [4]).
+9. u/PenTernamee. Replies in "Unmatched guide #2 Geralt of Rivia" (see [4]).
+10. u/Cell-division. Replies in "Geralt strategy" (see [2]).
+11. u/Numerous_Past_726. Replies in "Geralt strategy" (see [2]).
+12. u/VolpeLorem. Comment on "Unmatched guide #2 Geralt of Rivia" (see [4]).
+
+### Not cited
+- u/Salty_Shift_1224, u/st_mercurial and others (read; no advice)
+- [Geralt of Rivia - The Witcher Unmatched Fighter Review](https://www.youtube.com/watch?v=WVVyPrw-XeE): To The Table Top! · video (not yet reviewed)
 
 ---
 
 <!-- id: ciri -->
 ## Ciri
 
-**In short:** A melee fighter with 15 health and a unicorn sidekick, Ihuarraquax, who starts weak and grows strong. Many of her cards carry a Source symbol (🔵), and her effects unlock as Source cards pile up in her discard pile, so she survives the early game and takes over late.
+**In short:** A melee hero with 15 health and 2 movement, plus Ihuarraquax, a 7-health unicorn sidekick [1]. Many of her cards get stronger as more source (🔵) cards pile up in her discard pile, and at 7 her card effects can no longer be cancelled [1][2]. She is weak early and strongest late, and flexible enough to win in several ways [3][4][5].
 
-### Plan A: Hold out, then take over
-**Goal:** Fill your discard pile with Source cards, then unleash your unlocked effects.
-**How to do it:** Each card shows thresholds like "🔵 x5", counted from the Source cards in your discard pile. Boost and maneuver often early to stock the pile. Keep the unicorn in front to protect Ciri while she's weak. At 7 Source, Uncontainable Power stops her card effects being cancelled. Lion cub of Cintra (2) becomes 4 at 1 Source and 7 at 5. Zireael (2) becomes 4 at 3 Source, and at 5 also discards a random card. Channel the source (2) gets +2 for each Source card you discard from your hand, enough to one-shot some fighters.
-**Watch out for:** Good players rush her early. Don't charge in from the first turn.
+### Plan A: Survive, then take over
+**Goal:** Hold out until the late game [3].
+**How to do it:** Stay somewhere safe and fill your discard pile with source cards; good players will rush you early [2]. In 1v1, boost and maneuver often to stock the pile [3]. Ihuarraquax shields Ciri early, while she is weaker; once her effects unlock she can go in herself [5]. Early on, Pushed to the brink (1 damage at 2 sources) is the best card to play, and a 4-value Lion cub of Cintra is fine once [2]. At 5 sources Zireael makes the opponent discard a random card, 3 to 5 times a game [2]. Lion cub of Cintra becomes 7 at 5 sources: her main attack, so save one or two and watch for Feints until you reach 7 [2]. Child of the Elder Blood at 9 deals 3 to each other fighter in her zone, a strong finisher [1][2].
+**Watch out for:** She can struggle late against exhaustion [6].
 
-### Plan B: Choose your win
-**Goal:** Pick the strongest of her many plans for this matchup.
-**How to do it:** She can play the long game by cycling The lady of space and time: at 3 Source it returns a card from your discard pile to the top of your deck, at 8 to your hand with a draw. She can out-value with 7-value attacks and random discards, or deal area damage with Child of the Elder Blood (3 to everyone in her zone at 9 Source). Unicorn ally heals 2 and draws a card after each combat, but it's discarded at the end of your turn if you hold 5+ cards. Play it with 5+ cards to use it as a quick pass.
-**Watch out for:** You can't use every effect. Decide which Source cards to keep for later.
+### Plan B: Pick a win condition
+**Goal:** Choose the route that fits the game [4][7].
+**How to do it:** A big Channel the source (+2 for each source card discarded from hand) can one-shot some opponents [1][4]. She can out-value with 7-value attacks and repeated random discards, or keep Unicorn ally up for a low-hand aggressive game [4]. You can't use every strong effect, so decide which source cards to hold for later and which to spend now [7].
+**Watch out for:** Opponents who watch her discard pile and save their cancels for the late game [3].
 
 ### How they lose
-- She's killed early, before her Source pile builds.
-- She runs out of cards in a long game.
-- Opponents track her Source count and time their cancels before 7.
+- Rushed early, before her effects come online [2][3].
+- Exhaustion, if she draws too freely [6][8].
 
 ### Key cards
-- **Lion cub of Cintra**: her main attack, a 7 late. Save 1 or 2 for later.
-- **The lady of space and time**: recursion for the long game; use the 3-Source version.
-- **Parry**: a 3 defense that cancels their effects; the unicorn can play it too.
-- **Bane of the Aen Elle**: the unicorn's 4 attack that deals 1 damage as he moves through.
+- **The lady of space and time**: at 3 sources returns a discard to the top of the deck; at 8 to your hand [1]. One player says use it only at 3 [9]; another cycles it before 8 to recur the same card [8]; a third avoids cycling it, since it can be cancelled on attack and is a weak defense [2].
+- **Unicorn ally**: heals 2 and draws after each combat, but is discarded at the end of your turn if you hold 5 or more [1]. Play it with 5 or more cards to dodge the draw [8], keep it up longer against aggressive opponents, or use it for a short burst [7].
+- **Searching strike**: Ihuarraquax's versatile, which fetches a source card on a win [1]. Attacking with it is often fine; if you lose you don't thin the deck [9].
+- **Parry**: a 3-value cancel any fighter can use [1].
 
 ### Tips
-- Attack with the unicorn's Searching strike to fetch a Source card if you win.
-- Play Unicorn ally with 5+ cards in hand to avoid drawing too much.
-- In 2v2, stay in the back early.
+- Opinions differ on Ihuarraquax: one player treats his cards as boost fodder because he dies early [2]; another calls him sturdy, since he can use cancels and isn't easily farmed [10].
+- Her best plan depends on the opponent [4].
 
-### Further reading
-- [Unmatched guide #1](https://www.reddit.com/r/Unmatched/comments/1l5jpgv/): Reddit: PenTernamee · thread
-- [Ciri tips and tricks](https://www.reddit.com/r/Unmatched/comments/1ouwj01/): Reddit: Cultural_Purple_2861 · thread
-- [Ciri - The Witcher Unmatched Fighter Review](https://www.youtube.com/watch?v=_0qphBhbAeI): To The Table Top! · video
-- [Strategy Sunday Vol. 21](https://www.youtube.com/watch?v=hWXYF-FodDQ): Karma · video
+### References
+1. Restoration Games. *Unmatched: The Witcher: Steel and Silver*, Ciri deck. Card text as recorded in `input/heroes.json`.
+2. u/No_Manner_3414. Comment on "Ciri tips and tricks" by u/Cultural_Purple_2861. *r/Unmatched*, Reddit, 12 November 2025. https://www.reddit.com/r/Unmatched/comments/1ouwj01/
+3. u/wafflecopter2. Comment on "Unmatched guide #1" by u/PenTernamee. *r/Unmatched*, Reddit, 7 June 2025. https://www.reddit.com/r/Unmatched/comments/1l5jpgv/
+4. u/CauseImBatman02. Comment on "Unmatched guide #1" (see [3]).
+5. u/VolpeLorem. Reply in "Unmatched guide #1" (see [3]).
+6. u/Cultural_Purple_2861. "Ciri tips and tricks" (see [2]).
+7. u/Traditional_Hat_8120. Comment on "Ciri tips and tricks" (see [2]).
+8. u/Affectionate_Lead907. Comment on "Ciri tips and tricks" (see [2]).
+9. u/TitanasGios. Comment on "Ciri tips and tricks" (see [2]).
+10. u/CauseImBatman02. Reply in "Unmatched guide #1" (see [3]).
+
+### Not cited
+- u/Boomstick_Samurai, u/Mack_Lope, u/DartsAreSick and others in "Unmatched guide #1" (read; general or links only)
+- [Ciri - The Witcher Unmatched Fighter Review](https://www.youtube.com/watch?v=_0qphBhbAeI): To The Table Top! · video (not yet reviewed)
+- [Strategy Sunday Vol. 21](https://www.youtube.com/watch?v=hWXYF-FodDQ): Karma · video (not yet reviewed)
 
 ---
 

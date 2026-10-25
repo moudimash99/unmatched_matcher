@@ -1685,50 +1685,67 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: geralt -->
 ## Geralt of Rivia
 
-**In short:** A versatile melee witcher who picks his sword, armor and potion before the game to fit the matchup.
+**In short:** A tough, flexible witcher who picks his gear before the game and chooses between a big-burst and a long, grinding plan [1][2][3].
 
-### Plan A: Gear for the matchup
-**Goal:** Pick the right gear · **How:** usually Sword of steel, Wolf Medallion and Tawny Owl · **Watch out:** potions are discarded if you don't attack.
+### Plan A: Burst them down
+**Goal:** A full hand, then one huge turn [3][4] · **How:** Sword of steel and Tawny Owl for extra actions and cards [1][5] · **Watch out:** potions are lost if you don't attack [1].
 
-### Plan B: Out-value or burst
-**Goal:** Choose a pace early · **How:** rush with extra actions, or grind with Dandelion's Plot twist · **Watch out:** rushing can run you out of cards.
+### Plan B: Wear them down
+**Goal:** Out-last the opponent [3] · **How:** keep Dandelion alive for Plot twist discards; Sword of silver for mind games [1][4] · **Watch out:** Dandelion dies fast [6].
 
 ### How they lose
-- Pressure makes him block with his best attacks.
-- Dandelion dies early.
+- Cards spent on defense can't attack [7].
+- No healing and slow movement [7].
 
 ### Key cards
-- **Gear: Sword of steel**: action gain.
-- **Gear: Wolf Medallion**: cancels and ignores ranged attacks.
+- **Gear: Wolf Medallion**: cancels effects, and ignores the value of a non-adjacent attacker [1].
+- **Plot twist**: picks a card for them to discard [1].
 
 ### Tips
-- Keep Dandelion behind Geralt.
-- Choose movement gear against ranged fighters.
+- Gear choice can decide the game [2].
+- Choose your plan by the opponent [3].
+
+### References
+1. Restoration Games. *Unmatched: The Witcher: Steel and Silver*, Geralt of Rivia deck.
+2. u/erickt1998. Comment on "Geralt strategy." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1is88el/
+3. u/Effective_Jury4363. Comment on "Unmatched guide #2 Geralt of Rivia." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1l6duj3/
+4. u/VolpeLorem. Comment on "Geralt strategy" (see [2]).
+5. u/Sneikss. Reply in "Unmatched guide #2 Geralt of Rivia" (see [3]).
+6. u/PenTernamee. Reply in "Unmatched guide #2 Geralt of Rivia" (see [3]).
+7. u/Cell-division. Reply in "Geralt strategy" (see [2]).
 
 ---
 
 <!-- id: ciri -->
 ## Ciri
 
-**In short:** A melee fighter who starts weak and gets strong as Source cards pile up in her discard pile.
+**In short:** A late-game powerhouse whose cards grow with the source cards in her discard pile; weak early, flexible and very strong once they pile up [1][2][3].
 
-### Plan A: Hold out, then take over
-**Goal:** Stock Source, then unleash · **How:** boost and maneuver early; Lion cub of Cintra and Zireael grow with Source · **Watch out:** she gets rushed early.
+### Plan A: Survive, then take over
+**Goal:** Reach the late game [3] · **How:** stay safe, boost and maneuver to stock source cards, and let Ihuarraquax shield her [2][3][4] · **Watch out:** opponents rush her early [2].
 
-### Plan B: Choose your win
-**Goal:** Pick the right plan · **How:** cycle The lady of space and time, out-value with 7s, or burn with Child of the Elder Blood · **Watch out:** you can't use every effect.
+### Plan B: Pick a win condition
+**Goal:** The route that fits the game [5] · **How:** a big Channel the source, 7-value Lion cub of Cintra with Zireael discards, or Unicorn ally aggression [1][5] · **Watch out:** saved cancels in the late game [3].
 
 ### How they lose
-- Killed before the Source pile builds.
-- Runs out of cards.
+- Rushed early [2][3].
+- Exhaustion from overdrawing [6].
 
 ### Key cards
-- **Lion cub of Cintra**: 7 at 5 Source.
-- **Channel the source**: +2 per Source discarded.
+- **Lion cub of Cintra**: 7 at 5 sources, her main attack [1][2].
+- **Unicorn ally**: play it at 5+ cards to skip the draw [6].
 
 ### Tips
-- Protect Ciri with the unicorn early.
-- Play Unicorn ally with 5+ cards in hand.
+- Save a Lion cub of Cintra or two for later [2].
+- Choose your plan by the opponent [5].
+
+### References
+1. Restoration Games. *Unmatched: The Witcher: Steel and Silver*, Ciri deck.
+2. u/No_Manner_3414. Comment on "Ciri tips and tricks." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1ouwj01/
+3. u/wafflecopter2. Comment on "Unmatched guide #1." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1l5jpgv/
+4. u/VolpeLorem. Reply in "Unmatched guide #1" (see [3]).
+5. u/CauseImBatman02. Comment on "Unmatched guide #1" (see [3]).
+6. u/Affectionate_Lead907. Comment on "Ciri tips and tricks" (see [2]).
 
 ---
 
