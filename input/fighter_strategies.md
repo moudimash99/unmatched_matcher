@@ -2059,132 +2059,151 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: she_hulk -->
 ## She-Hulk
 
-**In short:** A 20-health powerhouse who hits extremely hard. She throws unblockable damage at anyone in her zone and wrecks the opponent's hand when her attacks land.
+**In short:** A solo melee hero with 20 health and 2 movement [1]. At the start of her turn she may discard a card to deal damage equal to its boost to a fighter in her zone, without using an action [1][2]. She hits very hard and forces opponents to defend every turn [2][3]; players rate her highly [4].
 
-### Plan A: Savage hits
-**Goal:** Land her biggest attacks, The Savage She-Hulk and Omega-Level Threat.
-**How to do it:** The Savage She-Hulk is worth 3, or 9 if you spend an extra action, so it works best when the enemy ends their turn next to her. Leap Toward moves her 4 spaces through enemies and gains an action if she ends up adjacent. Jennifer Walters, Esq. places her on any starting space, draws a card and gains an action. Omega-Level Threat is a 5-value attack that makes them discard 2 random cards if it deals 2 or more damage. Nerve Cluster Strike stops an adjacent enemy from leaving their space. Sensational (attack 4) shuffles a card from your discard pile back into your deck on a win; bring back Omega-Level Threat, The Savage She-Hulk or Leap Toward.
-**Watch out for:** Setting up The Savage She-Hulk is predictable. Lower their hand or bait their Feint first.
+### Plan A: Smash
+**Goal:** Land her big attacks and shred the opponent's health and hand [2][3].
+**How to do it:** Omega-Level Threat (5) makes the opponent discard 2 random cards if it deals 2 or more damage [1], so it is strong in any situation [2]. The Savage She-Hulk is a 3 you can make a 9 by spending your other action [1]: her strongest card, best when the opponent ended their turn next to her [2][3]. Leap Toward moves her up to 4 through enemies and gains an action if she ends adjacent, and Jennifer Walters, Esq. places her in a starting space, draws a card and gains an action [1]; both set up Savage [2][4]. Use Omega-Level Threat the turn before to shrink their hand first [2]. Cease and Desist is a 4 on attack that cancels the defender's effects [1], a surprise against defensive tricks [2].
+**Watch out for:** Leap Toward into Savage is predictable [2]. Spending her versatile cards on offense leaves few defenses [2][5].
 
-### Plan B: Throw something
-**Goal:** Chip at opponents who keep running.
-**How to do it:** At the start of each turn, she can discard a card to deal damage equal to its boost value to a fighter in her zone. Use it to finish a weakened enemy, or to turn a bloated hand into damage while chasing a ranged fighter.
-**Watch out for:** Most of her cards are worth more in combat than as throws.
+### Plan B: Pin and grind
+**Goal:** Trap opponents in her reach and recover her best attacks [2][3].
+**How to do it:** Nerve Cluster Strike stops an adjacent opponent leaving their space this turn [1]. Against ranged fighters, end next to them so they attack you and can't escape your zone [2]. Sensational (4) shuffles a card from your discard pile back into your deck if you win [1]; recover Omega-Level Threat, The Savage She-Hulk or Leap Toward [2]. Her ability chips away at opponents who keep their distance, and finishes them off [2]; once their health is low, it can leave them in an unwinnable position [3].
+**Watch out for:** Her printed defense values are low [2].
 
 ### How they lose
-- She's kited by ranged fighters with lots of movement.
-- Her defenses are low value. Opponents hit back every turn, then run away.
-- Opponents keep blocking with 4-value cards to stop her Sensational loops.
+- Low-value defense cards [2].
+- Mobile ranged opponents who stay out of her zone [2][4].
+- Opponents who block at 4 at the right times, stopping Sensational loops and Omega-Level Threat [6].
+- Opponents who keep hitting back every turn, then run [5].
 
 ### Key cards
-- **The Savage She-Hulk**: 9 value for an extra action.
-- **Omega-Level Threat**: a 5-value attack that discards 2 random cards.
-- **Lady Justice**: a 0-value defense that discards their top card and adds twice its boost value. It's usually worth about 4.
-- **Cease and Desist**: cancels their effects, and is worth 4 when attacking. A good surprise.
+- **The Savage She-Hulk**: the most powerful card in her deck [2].
+- **Omega-Level Threat**: two random discards [1][3].
+- **Lady Justice**: a defense worth twice the boost of the opponent's top card, which it discards [1]; usually about 4 [2].
+- **Green Energy**: a 4-value versatile card that damages everyone adjacent if you win [1]; a solid defense [2].
+- **The Defense Rests**: draws a card for each damage you take [1].
 
 ### Tips
-- Use Green Energy (4) on defense; it pings everything next to her on a win.
-- The Defense Rests draws a card for each point of combat damage you took.
-- Double Jeopardy heals 2 and draws 2.
+- Use her ability for finishing blows, or on opponents who keep running, rather than throwing away good cards [2].
+- Keep a high-value card for defense after an attacking turn [2].
 
-### Further reading
-- [Unmatched – She-Hulk](https://gridbeast.gg/unmatched-she-hulk/): Gridbeast · written guide
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [Weekly Discussion: Battling She-Hulk (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1tim6y0/): Reddit: LabRat2329 · thread
-- [She-Hulk - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=muCiR09GZgQ): To The Table Top! · video
-- [She-Hulk - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=4Nw6pdTepN4): Baked Goods · video
-- [Strategy Sunday Vol. 6](https://www.youtube.com/watch?v=4kmq5rqbwx8): Karma · video
-- [Brains and Brawn Unboxing, Strategy & Overview Pt. 1: She-Hulk](https://www.youtube.com/watch?v=iCcUIauWt5I): CaptainCrockpot · video
+### References
+1. Restoration Games. *Unmatched: Marvel – Brains and Brawn*, She-Hulk deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – She-Hulk." *Gridbeast*. https://gridbeast.gg/unmatched-she-hulk/
+3. TFJ383. "An Unmatched Roster: Anything But Marvelous." *BoardGameGeek*, 18 February 2024. https://boardgamegeek.com/thread/3250019/an-unmatched-roster-anything-but-marvelous
+4. u/LabRat2329. "Weekly Discussion: Battling She-Hulk (Tips and Strategies)." *r/Unmatched*, Reddit, 20 May 2026. https://www.reddit.com/r/Unmatched/comments/1tim6y0/
+5. u/AbrocomaRight9782. Comment on "Weekly Discussion: Battling She-Hulk" (see [4]).
+6. u/Silly_Shenanigans. Comment on "Weekly Discussion: Battling She-Hulk" (see [4]).
+
+### Not cited
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; no She-Hulk strategy)
+- [She-Hulk - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=muCiR09GZgQ): To The Table Top! · video (not yet reviewed)
+- [She-Hulk - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=4Nw6pdTepN4): Baked Goods · video (not yet reviewed)
+- [Strategy Sunday Vol. 6](https://www.youtube.com/watch?v=4kmq5rqbwx8): Karma · video (not yet reviewed)
+- [Brains and Brawn Unboxing, Strategy & Overview Pt. 1: She-Hulk](https://www.youtube.com/watch?v=iCcUIauWt5I): CaptainCrockpot · video (not yet reviewed)
 
 ---
 
 <!-- id: spider_man -->
 ## Spider-Man
 
-**In short:** A nimble melee fighter with 15 health who always knows how hard he's about to be hit. He wins by blocking exactly what's needed and punishing big attacks, then swinging away before the opponent can answer.
+**In short:** A solo melee hero with 15 health and 3 movement [1]. When an opponent attacks him, they must tell him the printed value of their card before he chooses a defense [1]. Gridbeast praises his mobility and adaptability [2]; one analyst ranks him near the bottom, with cards that only pay off when he loses combats and low damage output [3].
 
 ### Plan A: Read the attack
-**Goal:** Turn your opponent's attacks into card draw and damage for you.
-**How to do it:** Spidey-Sense makes the attacker tell you their card's printed value before you defend. Against a 4 or higher, Counter-Attack (3) deals 2 damage back and Spider-Sense Tingling! (2) draws 2 cards. Against a small attack, block with Snark (3) and draw a card if you're adjacent. Web Shooters caps the damage at 2, so save it for their biggest hit.
-**Watch out for:** Printed values lie. Many cards get stronger from their own effect, from an adjacent sidekick or from a boost, and an attacker can even boost to fool you. Learn which cards in your opponent's deck do this.
+**Goal:** Use Spidey-Sense to pick the best defense for every attack [2].
+**How to do it:** If the attack is 4 or higher, Spider-Sense Tingling! draws 2 and Counter-Attack deals 2 damage back [1][2]. Web Shooters caps the combat damage he takes at 2 [1], strong against game-ending attacks [2]. Right in the Face! (4) stops the opponent drawing cards this turn [1], and Snark draws a card against an adjacent attacker [1][2]. Keep enough defense cards in hand to always have the right one [4].
+**Watch out for:** He only learns the printed value: many cards change their value with effects, so you need to know the opponent's deck [2][5][6]. He has no cancel cards [2][3].
 
-### Plan B: Hit and swing away
-**Goal:** Attack in a wave, then get out of reach to recover.
-**How to do it:** Thwip! (4) places Spider-Man anywhere in his zone if he wins. Swinging Kick (6) pushes the opponent as many spaces as the combat damage it dealt. Wall Crawler and Friendly Neighborhood Spider-Man also place him anywhere in his zone; the scheme heals 3 as well. Momentous Shift is worth 5 if he started the turn in another space. With Great Power adds +1 to all his attacks this turn, draws a card and gives an action; pair it with Disarming Shot, which draws a card for each point of damage dealt.
-**Watch out for:** Don't stay aggressive for too long. You need a hand full of defenses for Plan A to work.
+### Plan B: Swing in, swing out
+**Goal:** Use his movement to attack and get away [2].
+**How to do it:** Swinging Kick (6) moves the defender as many spaces as the damage dealt [1]. Thwip! (4) places him anywhere in his zone if he wins, and Wall Crawler does the same unconditionally [1]. Momentous Shift becomes a 5 after any of those moves [2]. With Great Power gives all his attacks +1 this turn, draws a card and gains an action [1], which pairs with Disarming Shot (draw a card per damage dealt) [1][2]. Friendly Neighborhood Spider-Man heals 3 and moves him within his zone [1].
+**Watch out for:** Don't be too aggressive: attack in a wave, then recover [4].
 
 ### How they lose
-- Their opponent's attack is stronger than its printed value, and he blocks too low.
-- He has no cancel effects, so card effects always land.
-- He attacks too much and runs out of good defenses.
+- Cards that change their attack value after he's been told it [2][5].
+- No cancels [2][3].
+- Low damage output; he struggles to close out games [3].
+- Overextending without enough defenses in hand [4][5].
 
 ### Key cards
-- **Web Shooters**: caps damage at 2. Hold it for game-ending attacks.
-- **Counter-Attack**: punishes any 4+ attack.
-- **Thwip!**: a strong attack that moves him to safety.
-- **Right in the Face!**: worth 4 and stops your opponent drawing this turn. A solid defense.
+- **Web Shooters**: caps the damage at 2 [1][2].
+- **Counter-Attack**: punishes big attacks [1][2].
+- **Swinging Kick**: his biggest attack [1][2].
+- **Thwip!**: attack and reposition [2].
+- **With Great Power**: +1 attacks, a card and an action [1].
 
 ### Tips
-- Keep 2 or 3 defenses in hand at all times.
-- Study your opponent's deck before you play him.
-- Spider-Sense Tingling! can also attack, to bait a big defense out of them.
-- Use your place effects to end your turn where they can't reach you.
+- Study which fighters' attacks change value [5].
+- Sources disagree on whether he suits new players: the designer aimed him at new and casual players [3]; Gridbeast says his potential shows only in experienced hands [2]; another player notes you still need to know the opponent's deck [6].
 
-### Further reading
-- [Unmatched – Spider-Man](https://gridbeast.gg/unmatched-spider-man/): Gridbeast · written guide
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [Tips to play Spider-Man](https://www.reddit.com/r/Unmatched/comments/14niiyy/): Reddit: Witty_Ad_1486 · thread
-- [Spider-Man - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=gEgLSIm-vdg): To The Table Top! · video
-- [Spider-Man - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=U4bP5UtCw00): Baked Goods · video
-- [Brains and Brawn Unboxing, Tips & Overview Pt. 3: Spider-Man](https://www.youtube.com/watch?v=io-tEfPZJvY): CaptainCrockpot · video
+### References
+1. Restoration Games. *Unmatched: Marvel – Brains and Brawn*, Spider-Man deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Spider-Man." *Gridbeast*. https://gridbeast.gg/unmatched-spider-man/
+3. TFJ383. "An Unmatched Roster: Anything But Marvelous." *BoardGameGeek*, 18 February 2024, quoting Justin D. Jacobson of Restoration Games. https://boardgamegeek.com/thread/3250019/an-unmatched-roster-anything-but-marvelous
+4. u/Witty_Ad_1486. "Tips to play Spider-Man." *r/Unmatched*, Reddit, 1 July 2023. https://www.reddit.com/r/Unmatched/comments/14niiyy/
+5. u/NagasakiPork1945. Comment on "Tips to play Spider-Man" (see [4]).
+6. u/nick_gadget. Comment on "Tips to play Spider-Man" (see [4]).
+
+### Not cited
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; only a matchup comment)
+- [Spider-Man - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=gEgLSIm-vdg): To The Table Top! · video (not yet reviewed)
+- [Spider-Man - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=U4bP5UtCw00): Baked Goods · video (not yet reviewed)
+- [Brains and Brawn Unboxing, Tips & Overview Pt. 3: Spider-Man](https://www.youtube.com/watch?v=io-tEfPZJvY): CaptainCrockpot · video (not yet reviewed)
 
 ---
 
 <!-- id: doctor_strange -->
 ## Doctor Strange
 
-**In short:** A ranged control fighter with 14 health who pays health to recycle his best cards. He wins a long game by keeping a hand built for the matchup and healing back what he spends.
+**In short:** A ranged hero with 14 health and 2 movement, plus Wong (6 health, ranged) [1]. After each combat in which he played a card, he may take 1 damage to put that card on the bottom of his deck and draw a card [1]. He seems to have the right tool for every job [2], healing back what his ability costs [3]; players count him among the strongest fighters [4].
 
-### Plan A: Curate your deck
-**Goal:** Keep cycling the cards that beat this opponent.
-**How to do it:** After each combat where he played a card, Dark Pact lets him take 1 damage to put that card on the bottom of his deck and draw 1. Players who main him almost always recycle The Rings of Raggadorr and, in melee matchups, Cloak of Levitation; Feint is another common pick. The Winds of Watoomb (attack 4) shuffles every deck, which brings recycled cards closer to the top. Eye of Agamotto shuffles your hand into your deck, draws 5 and gains an action.
-**Watch out for:** Each use costs health. Ask "do I really need this card back?" and skip it for cards that don't help you win.
+### Plan A: Recycle the right spells
+**Goal:** Use Dark Pact to keep your best cards in the deck while drawing cards [1][5].
+**How to do it:** Gridbeast's usual picks to recycle are Cloak of Levitation, Bolts of Balthakk, The Mists of Munnopor, The Rings of Raggadorr and Seven Suns of Cinnibus [5]. Players who play him a lot always recycle Rings, and Cloak in melee matchups [6][4]. Bring recycled cards back up with The Winds of Watoomb, which reshuffles every deck, or Eye of Agamotto, which shuffles your hand away and draws 5 [1][5]. Ask yourself each time whether you really need the card back [6].
+**Watch out for:** Sources disagree on how freely to use the ability. One player uses it constantly to cycle to a curated hand [7]; others warn the damage adds up [6][8], and opponents pressure him precisely to force it [8][9].
 
-### Plan B: Heal through the fight
-**Goal:** Outlast the opponent's pressure.
-**How to do it:** The Rings of Raggadorr (attack 4) heals Strange and each adjacent friendly fighter, Wong included, for the damage dealt if you win. No Really, I'm a Doctor heals by the boost value of a card from your hand and puts that card on top of your deck. Keep Wong next to Strange: Master of Kamar-Taj is worth 4 when they're adjacent, and Wong blocks paths to Strange in corridors.
-**Watch out for:** If Wong dies, Master of Kamar-Taj drops to 2 and Steadfast Disciple is dead.
-
-### Plan C: Big blind boosts
-**Goal:** Burst damage to finish a fight.
-**How to do it:** Bolts of Balthakk (2) can blind boost and gains an action if you win. Seven Suns of Cinnibus (3) can blind boost twice, but its value is ignored above 7.
-**Watch out for:** Blind boosts can throw away key cards. Many Strange players keep Bolts for the kill, and boost Seven Suns only once.
+### Plan B: Heal through the war
+**Goal:** Win a long game of attrition while healing back what you spend [3][4].
+**How to do it:** The Rings of Raggadorr (4) heals your fighter and every adjacent friendly fighter by the damage dealt if you win [1]; one analyst says it can steal games [3]. No Really, I'm a Doctor heals by the boost of a card you put on top of your deck [1]. Keep Wong next to Strange: Master of Kamar-Taj becomes a 4, his best defense besides blind boosting [1][4], and Wong shares in the Rings healing [4]. One player keeps distance, blocks with Wong, attacks from range and lets the opponent burn cards boosting to reach him [4].
+**Watch out for:** Without Wong, Master of Kamar-Taj is just a 2, and cards Wong plays can't be recycled [4][10].
 
 ### How they lose
-- Constant attacks force him to spend health on Dark Pact to find defenses.
-- His defenses are mostly printed 2s, so damage gets through.
-- Wong dies early and his best defense is gone.
+- Constant pressure, forcing him to spend health on his ability [4][8][9].
+- Forced discards [5].
+- Mostly 2-value defenses, so he's easy to damage [4][8].
+- Losing Wong, or being separated from him [10][11].
+- Blind boosts that throw away key cards [5][6].
 
 ### Key cards
-- **Cloak of Levitation**: ignores the value of the opponent's card when adjacent. Your answer to melee.
-- **The Rings of Raggadorr**: the only healing card Dark Pact can recycle.
-- **The Mists of Munnopor**: discards their attack, but the replacement can be worse for you. A gamble.
+- **Cloak of Levitation**: ignores the opponent's card value if Strange is adjacent [1]; it bullies melee fighters [3].
+- **The Rings of Raggadorr**: the heal you can recycle [5].
+- **The Mists of Munnopor**: discards their card and they play the next attack or versatile card from their deck instead [1]. A gamble that can backfire; some players never recycle it [4][8].
+- **Seven Suns of Cinnibus**: blind boost up to twice, but a value above 7 is ignored [1]. Boosting once is fairly safe [5].
+- **Bolts of Balthakk**: blind boost, and gain an action if you win [1]; one player saves it for the kill [4].
 
 ### Tips
-- Play defensively: keep range, let Wong body block, and make them burn cards to reach you.
-- Don't try to out-exhaust him if you're playing against him; pressure him instead.
-- Wong plays Steadfast Disciple when an enemy ends next to him.
+- Keep Wong and Strange close together [5].
+- Exhaustion rarely beats him: his ability, two passes and two Eye of Agamotto keep him going [9].
 
-### Further reading
-- [Unmatched – Doctor Strange](https://gridbeast.gg/unmatched-doctor-strange/): Gridbeast · written guide
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [How To Get Better With Doctor Strange](https://www.reddit.com/r/Unmatched/comments/1pqfi0p/): Reddit: Reasonable_Air_5307 · thread
-- [Weekly Discussion: Battling Doctor Strange (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1t5ejf8/): Reddit: LabRat2329 · thread
-- [Dealing with Sidekicks: Wong](https://www.reddit.com/r/Unmatched/comments/1wxhkqw/): Reddit: LabRat2329 · thread
-- [Doctor Strange - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=0gmfVRPKRic): To The Table Top! · video
-- [Doctor Strange - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=FxczZKOimG8): Baked Goods · video
-- [Strategy Sunday Vol. 12](https://www.youtube.com/watch?v=GzUXGdCFmmw): Karma · video
-- [Brains and Brawn Unboxing, Strategy & Overview Pt. 2: Doctor Strange](https://www.youtube.com/watch?v=DjQ-XlZm-Lk): CaptainCrockpot · video
+### References
+1. Restoration Games. *Unmatched: Marvel – Brains and Brawn*, Doctor Strange deck. Card text as recorded in `input/heroes.json`.
+2. Justin D. Jacobson (Restoration Games), interviewed in "Unmatched: Marvel — Who to Play, How to Win." *The Pop Insider*. https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/
+3. TFJ383. "An Unmatched Roster: Anything But Marvelous." *BoardGameGeek*, 18 February 2024. https://boardgamegeek.com/thread/3250019/an-unmatched-roster-anything-but-marvelous
+4. u/LabRat2329. Posts in "How To Get Better With Doctor Strange" by u/Reasonable_Air_5307 (*r/Unmatched*, Reddit, 19 December 2025, https://www.reddit.com/r/Unmatched/comments/1pqfi0p/), "Weekly Discussion: Battling Doctor Strange" (6 May 2026, https://www.reddit.com/r/Unmatched/comments/1t5ejf8/) and "Dealing with Sidekicks: Wong" (4 October 2026, https://www.reddit.com/r/Unmatched/comments/1wxhkqw/).
+5. Gridbeast. "Unmatched – Doctor Strange." *Gridbeast*. https://gridbeast.gg/unmatched-doctor-strange/
+6. u/Silly_Shenanigans. Comment on "How To Get Better With Doctor Strange" (see [4]).
+7. u/richard-savana. Comment on "Weekly Discussion: Battling Doctor Strange" (see [4]).
+8. u/MalikVega. Comment on "Weekly Discussion: Battling Doctor Strange" (see [4]).
+9. u/LabRat2329. "Weekly Discussion: Battling Doctor Strange" (see [4]).
+10. u/Upforchat1998. Comment on "Dealing with Sidekicks: Wong" (see [4]).
+11. u/GambuzinoSaloio. Comment on "Weekly Discussion: Battling Doctor Strange" (see [4]).
+
+### Not cited
+- [Doctor Strange - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=0gmfVRPKRic): To The Table Top! · video (not yet reviewed)
+- [Doctor Strange - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=FxczZKOimG8): Baked Goods · video (not yet reviewed)
+- [Strategy Sunday Vol. 12](https://www.youtube.com/watch?v=GzUXGdCFmmw): Karma · video (not yet reviewed)
+- [Brains and Brawn Unboxing, Strategy & Overview Pt. 2: Doctor Strange](https://www.youtube.com/watch?v=DjQ-XlZm-Lk): CaptainCrockpot · video (not yet reviewed)
 
 ---
 

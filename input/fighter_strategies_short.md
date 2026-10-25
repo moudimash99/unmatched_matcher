@@ -1280,75 +1280,97 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: she_hulk -->
 ## She-Hulk
 
-**In short:** A 20-health powerhouse who hits hard, throws unblockable damage and wrecks your hand.
+**In short:** A 20-health powerhouse who throws cards for free damage and hits hard enough that opponents must always defend [1][2][3].
 
-### Plan A: Savage hits
-**Goal:** Land The Savage She-Hulk (9) and Omega-Level Threat · **How:** close in with Leap Toward; recycle key attacks with Sensational · **Watch out:** the setup is predictable.
+### Plan A: Smash
+**Goal:** Land her big attacks [2] · **How:** Omega-Level Threat, then The Savage She-Hulk set up by Leap Toward [1][2] · **Watch out:** the setup is predictable [2].
 
-### Plan B: Throw something
-**Goal:** Chip at runners · **How:** discard a card at the start of your turn to deal its boost value as damage · **Watch out:** most cards are better in combat.
+### Plan B: Pin and grind
+**Goal:** Trap them and recycle her best attacks [2] · **How:** Nerve Cluster Strike; Sensational shuffles attacks back [1][2] · **Watch out:** low defense values [2].
 
 ### How they lose
-- Kited by mobile ranged fighters.
-- Low-value defenses.
+- Mobile ranged opponents [2].
+- Well-timed 4-value blocks [4].
 
 ### Key cards
-- **The Savage She-Hulk**: 9 for an extra action.
-- **Omega-Level Threat**: discards 2 random cards.
+- **The Savage She-Hulk**: a 9 for two actions [1].
+- **Omega-Level Threat**: two random discards [1].
 
 ### Tips
-- Recycle your best attacks with Sensational.
-- Use Nerve Cluster Strike to pin enemies.
+- Save her ability for finishing blows [2].
+- Recover Savage or Omega with Sensational [2].
+
+### References
+1. Restoration Games. *Unmatched: Marvel – Brains and Brawn*, She-Hulk deck.
+2. Gridbeast. "Unmatched – She-Hulk." https://gridbeast.gg/unmatched-she-hulk/
+3. TFJ383. "An Unmatched Roster: Anything But Marvelous." *BoardGameGeek*, 2024. https://boardgamegeek.com/thread/3250019/
+4. u/Silly_Shenanigans. Comment on "Weekly Discussion: Battling She-Hulk." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1tim6y0/
 
 ---
 
 <!-- id: spider_man -->
 ## Spider-Man
 
-**In short:** A nimble melee fighter who always knows how hard he's about to be hit.
+**In short:** An agile hero who is told the printed value of every attack against him, then picks the perfect defense [1][2].
 
 ### Plan A: Read the attack
-**Goal:** Turn their attacks into draws and damage · **How:** they tell you the printed value first; answer 4+ with Counter-Attack or Spider-Sense Tingling! · **Watch out:** many cards get stronger than their printed value.
+**Goal:** The right defense every time [2] · **How:** Counter-Attack and Spider-Sense Tingling! punish 4+ attacks; Web Shooters caps damage at 2 [1][2] · **Watch out:** effects can change the value after he's told [2].
 
-### Plan B: Hit and swing away
-**Goal:** Attack, then get out of reach · **How:** Thwip!, Wall Crawler and Swinging Kick move him or them after combat · **Watch out:** keep enough defenses in hand.
+### Plan B: Swing in, swing out
+**Goal:** Attack and reposition [2] · **How:** Swinging Kick, Thwip! and Wall Crawler, then Momentous Shift [1][2] · **Watch out:** attack in waves, then recover [3].
 
 ### How they lose
-- Their attack grows past its printed value.
-- No cancels in his deck.
+- Value-changing attacks [2].
+- No cancels and low damage output [2][4].
 
 ### Key cards
-- **Web Shooters**: caps damage at 2.
-- **Counter-Attack**: 2 damage back against a 4+.
+- **Web Shooters**: caps damage at 2 [1].
+- **Swinging Kick**: a 6 that pushes them [1].
 
 ### Tips
-- Keep 2 or 3 defenses in hand.
-- Learn your opponent's deck first.
+- Learn the opponent's deck [2][5].
+- Keep defenses in hand [3].
+
+### References
+1. Restoration Games. *Unmatched: Marvel – Brains and Brawn*, Spider-Man deck.
+2. Gridbeast. "Unmatched – Spider-Man." https://gridbeast.gg/unmatched-spider-man/
+3. u/Witty_Ad_1486. "Tips to play Spider-Man." *r/Unmatched*, Reddit, 2023. https://www.reddit.com/r/Unmatched/comments/14niiyy/
+4. TFJ383. "An Unmatched Roster: Anything But Marvelous." *BoardGameGeek*, 2024. https://boardgamegeek.com/thread/3250019/
+5. u/NagasakiPork1945. Comment on "Tips to play Spider-Man" (see [3]).
 
 ---
 
 <!-- id: doctor_strange -->
 ## Doctor Strange
 
-**In short:** A ranged control fighter who pays health to recycle his best cards and heals it back.
+**In short:** A ranged sorcerer who pays 1 health to recycle the cards he plays and draw, then heals it back [1][2].
 
-### Plan A: Curate your deck
-**Goal:** Keep cycling the cards that beat this opponent · **How:** Dark Pact recycles The Rings of Raggadorr, Cloak of Levitation and Feint · **Watch out:** every recycle costs 1 health.
+### Plan A: Recycle the right spells
+**Goal:** Keep your best cards cycling [3] · **How:** recycle Rings, and Cloak against melee; reshuffle with Winds or Eye of Agamotto [3][4] · **Watch out:** the health cost adds up under pressure [5].
 
-### Plan B: Heal through the fight
-**Goal:** Outlast pressure · **How:** The Rings of Raggadorr heals him and Wong; keep Wong adjacent for Master of Kamar-Taj at 4 · **Watch out:** losing Wong weakens his defense.
+### Plan B: Heal through the war
+**Goal:** Win the long game [4] · **How:** Rings of Raggadorr heals Strange and an adjacent Wong; keep Wong close for Master of Kamar-Taj [1][4] · **Watch out:** losing Wong [6].
 
 ### How they lose
-- Constant pressure drains his health.
-- Mostly 2-value defenses.
+- Constant pressure [4][5].
+- Low printed defenses [4].
 
 ### Key cards
-- **Cloak of Levitation**: ignores their value when adjacent.
-- **The Rings of Raggadorr**: recyclable healing.
+- **Cloak of Levitation**: ignores an adjacent attacker's value [1].
+- **The Rings of Raggadorr**: recyclable healing [3].
 
 ### Tips
-- Keep range and let Wong body block.
-- Blind boost Seven Suns of Cinnibus only once.
+- Ask whether you really need each card back [7].
+- Mists is a gamble [5].
+
+### References
+1. Restoration Games. *Unmatched: Marvel – Brains and Brawn*, Doctor Strange deck.
+2. TFJ383. "An Unmatched Roster: Anything But Marvelous." *BoardGameGeek*, 2024. https://boardgamegeek.com/thread/3250019/
+3. Gridbeast. "Unmatched – Doctor Strange." https://gridbeast.gg/unmatched-doctor-strange/
+4. u/LabRat2329. Comment on "How To Get Better With Doctor Strange." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1pqfi0p/
+5. u/MalikVega. Comment on "Weekly Discussion: Battling Doctor Strange." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1t5ejf8/
+6. u/Upforchat1998. Comment on "Dealing with Sidekicks: Wong." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1wxhkqw/
+7. u/Silly_Shenanigans. Comment on "How To Get Better With Doctor Strange" (see [4]).
 
 ---
 
