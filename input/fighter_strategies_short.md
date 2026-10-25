@@ -2223,97 +2223,116 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: wyatt_earp -->
 ## Wyatt Earp
 
-**In short:** An aggressive ranged gunslinger who gets a bonus every time he wins a combat as the attacker.
+**In short:** An aggressive gunslinger who chains won combats into card draw, movement and free attacks, backed by Doc Holliday [1][2][3].
 
-### Plan A: Chain the Showdown
-**Goal:** Keep the turn going · **How:** each win gives a draw, a free attack or a step; open with a plain 5 · **Watch out:** he burns his deck fast.
+### Plan A: Guns blazing
+**Goal:** Heavy ranged pressure [2][3] · **How:** three plain 5s and Doc's 4s keep the ability firing [1][4] · **Watch out:** he burns through his deck [5].
 
-### Plan B: Squeeze them
-**Goal:** Wear down poor drawers · **How:** A Marshal And An Outlaw discards; O.K. Corral picks off sidekicks · **Watch out:** aggro out-lasts him.
+### Plan B: Chain the showdown
+**Goal:** An explosive multi-attack turn [2] · **How:** free attacks from the ability, You Die First and In Vino Veritas [1][4] · **Watch out:** stopped shots leave him exposed [2].
 
 ### How they lose
-- Weak defenses, no healing.
-- Doc Holliday dies.
+- Weak defenses and no healing [4].
+- Doc Holliday falls [3].
 
 ### Key cards
-- **You Just Gonna Stand There And Bleed?**: a plain 5.
-- **In Vino Veritas**: draw to 4 and a free attack.
+- **You Just Gonna Stand There And Bleed?**: a plain 5 [1].
+- **You Die First**: a free attack; boost it into Second Shot [4].
 
 ### Tips
-- Protect Doc.
-- Manage your deck size.
+- Strongest against opponents with little draw and few sidekicks [3].
+- If he can't win quickly, he struggles [6].
+
+### References
+1. Restoration Games. *Unmatched: Stars and Stripes*, Wyatt Earp deck.
+2. Restoration Games. "From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes." https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/
+3. u/Potatopancakeman. Comment on "Wyatt Earp." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1t7jmvr/
+4. u/Such_Will_8536. Comment on "Wyatt Earp" (see [3]).
+5. u/audiotarot. Comment on "Wyatt Earp" (see [3]).
+6. u/FangAndBoard. Comment on "Wyatt Earp" (see [3]).
 
 ---
 
 <!-- id: john_henry -->
 ## John Henry
 
-**In short:** A tough hammer-swinger who lays track every turn and rides it to deliver heavy blows.
+**In short:** A steel-driving man who lays track to race across the map, then hits like a freight train with his Hammers [1][2].
 
-### Plan A: Build the railroad
-**Goal:** Reach any fight · **How:** track spaces don't count toward his move; add one every turn · **Watch out:** he's slow early.
-
-### Plan B: Full steam ahead
-**Goal:** Hammer after using 4+ paths · **How:** Eighteen-pound Hammer cancels effects; Nine-pound Hammer hits his whole zone · **Watch out:** plan routes to count paths.
+### Plan A: Lay track, then swing the hammer
+**Goal:** Track everywhere, heavy hits anywhere [2] · **How:** use 4 different paths in a turn to power up the Hammer cards; Striking Fire for reach [1][2] · **Watch out:** not yet covered by the sources.
 
 ### How they lose
-- Too little track to catch fast foes.
-- Opponents avoid his network.
+- Not yet covered by the sources.
 
 ### Key cards
-- **Larger Than Life**: a plain 6.
-- **Cool Drink Of Water**: heal 3 and draw.
+- **Eighteen-pound Hammer**: a 6 that cancels effects after 4 paths [1].
+- **Cool Drink Of Water**: heals 3 and draws [1].
 
 ### Tips
-- Lay track every turn.
-- Save Bring Down The Mountain for late.
+- Track spaces don't count when he moves [1].
+
+### References
+1. Restoration Games. *Unmatched: Stars and Stripes*, John Henry deck.
+2. Restoration Games. "From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes." https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/
 
 ---
 
 <!-- id: george_washington -->
 ## George Washington
 
-**In short:** A defensive spymaster who bluffs with ruse tokens and uses his spies to raid the opponent's hand.
+**In short:** A spymaster who bluffs with ruse tokens on his attacks and works through a ring of three fragile spies [1][2].
 
-### Plan A: Bluff with ruses
-**Goal:** Make every attack a guess · **How:** place a ruse; they discard a random card or face it · **Watch out:** don't waste every token.
+### Plan A: Play the bluff
+**Goal:** Keep them guessing [2][3] · **How:** fake ruses against Feint-heavy decks; a ruse on Lead Astray as a last action is a good bait [1][3][4] · **Watch out:** without the right exchanges he lacks damage [5].
 
 ### Plan B: Run the spy ring
-**Goal:** Information and discards · **How:** Sympathetic Stain looks at their hand; Gather Information draws 3 · **Watch out:** only two cards revive spies.
+**Goal:** Value from the spies [3][6] · **How:** spread them out, use Sympathetic Stain, hold Undercover Agent early [1][3][6] · **Watch out:** only two cards revive them [3].
 
 ### How they lose
-- Too little damage when tricks fail.
-- Fatigue fighters out-last him.
+- A weak exhaustion game; he must chase [5].
+- Too little damage [5].
 
 ### Key cards
-- **Agent 711**: 7 extra damage on a win.
-- **Sabotage**: 2 random discards on a win.
+- **Agent 711**: 7 damage on a win [1].
+- **Misinformation**: regains a ruse token [1].
 
 ### Tips
-- Spread spies across zones.
-- Bluff some ruses against cancel-heavy decks.
+- Keep at least one spy alive [3].
+- Save some ruses for their real effects [4].
+
+### References
+1. Restoration Games. *Unmatched: Stars and Stripes*, George Washington deck.
+2. Restoration Games. "From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes." https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/
+3. u/Lulu_pa_sodo. Comment on "Tips on playing George Washington Effectively?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1ta506r/
+4. u/Silly_Shenanigans. Reply in "Tips on playing George Washington Effectively?" (see [3]).
+5. u/Muddshoe. Reply in "Tips on playing George Washington effectively?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1tko47e/
+6. u/Silly_Shenanigans. Comment on "Tips on playing George Washington effectively?" (see [5]).
 
 ---
 
 <!-- id: rosie_the_riveter -->
 ## Rosie the Riveter
 
-**In short:** A melee mech pilot whose suit adds an upgrade each turn and resets once all four are on.
+**In short:** A mech-suited worker who switches on an upgrade every turn, growing stronger as the game goes on; choosing their order is the key decision [1][2][3].
 
-### Plan A: Order your upgrades
-**Goal:** Keep the right upgrades on · **How:** switching one off sends it to the back; Hasty Repairs heals and reorders · **Watch out:** all four on resets the suit.
+### Plan A: Order the upgrades
+**Goal:** Your best upgrade first [3][4] · **How:** card draw first is popular; +1 damage or ranged can be better for long games [3][4] · **Watch out:** draw first speeds up exhaustion [4].
 
-### Plan B: The big swing
-**Goal:** One explosive turn · **How:** D-Day switches everything on and gains a free attack; Full Metal scales · **Watch out:** the suit resets after.
+### Plan B: Save the big swing
+**Goal:** A big late turn [3] · **How:** D-Day turns everything on and gives a free attack [1][3] · **Watch out:** all 4 active at turn end switch off [1].
 
 ### How they lose
-- Badly ordered upgrades.
-- Wendy dies early.
+- Not yet covered by the sources beyond exhaustion.
 
 ### Key cards
-- **D-Day**: all upgrades plus a free attack.
-- **Hasty Repairs**: heal 3 and reorder.
+- **Full Metal**: +1 per active upgrade [1].
+- **Hasty Repairs**: heals 3 and reorders the line [1][4].
 
 ### Tips
-- Put draw or +1 attack first, depending on the matchup.
-- Save D-Day for late.
+- Order depends on the opponent [4].
+
+### References
+1. Restoration Games. *Unmatched: Stars and Stripes*, Rosie the Riveter deck.
+2. Restoration Games. "From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes." https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/
+3. u/Ramen3. Comment on "Finally got my hands on Stars and Stripes…" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1tbidqb/
+4. u/ValhallAwaits_. Comment on "Finally got my hands on Stars and Stripes…" (see [3]).

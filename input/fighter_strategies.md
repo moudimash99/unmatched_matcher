@@ -3473,146 +3473,160 @@ In `input/heroes.json` the die results on Krang's cards appear as "?".
 <!-- id: wyatt_earp -->
 ## Wyatt Earp
 
-**In short:** An aggressive ranged gunslinger with 15 health and a fragile but valuable partner, Doc Holliday (8 health). Every combat he wins as the attacker gives him a bonus (a card, a free attack or a step), so he chains shots into explosive turns.
+**In short:** A ranged hero with 15 health and 2 movement, plus Doc Holliday, an 8-health ranged sidekick [1]. After he attacks and wins a combat, he picks one of: draw a card, a free attack action, or move his fighter 1 space, never the same one twice in a turn [1]. A fast, aggressive gunslinger whose offense is stronger than his defense [2][3].
 
-### Plan A: Chain the Showdown
-**Goal:** Win combat after combat and keep the turn going.
-**How to do it:** Showdown lets you choose one effect each time you attack and win combat: draw 1, gain a free action to attack, or move your fighter 1 space. You can't choose the same effect twice in a turn. You Just Gonna Stand There And Bleed? is a plain 5 that wins most combats, and Doc's I Have Two Guns, One For Each Of You (4) also deals damage equal to their card's printed value to another enemy in Doc's zone. You Die First moves an enemy 1 space and gains a free attack on them. Doc's In Vino Veritas draws up to 4 cards and gains a free attack. Second Shot (2) can be boosted; You Die First's 3 boost is a good thing to throw into it.
-**Watch out for:** He runs through his deck fast. Deck management matters.
+### Plan A: Guns blazing
+**Goal:** Apply heavy ranged pressure from the start [2][3].
+**How to do it:** His ability and high-value attacks give him a lot of pressure [3]. Three plain 5s, You Just Gonna Stand There And Bleed?, almost guarantee the ability fires [1][4]. Doc's I Have Two Guns, One For Each Of You is a 4 from range, and if the opponent played a card it also deals that card's printed value to a different opponent in Doc's zone [1][4][5]. He is strongest against opponents with little draw and few sidekicks [3].
+**Watch out for:** He can exhaust himself quickly, so manage your deck [6]. If he can't knock the opponent out quickly, he's doomed, and aggressive opponents can out-pace him [7].
 
-### Plan B: Squeeze them
-**Goal:** Wear down opponents who draw poorly or have sidekicks.
-**How to do it:** A Marshal And An Outlaw (3) forces a discard on attack and draws on defense. I'm Your Huckleberry deals 1 to an enemy in your zone if you win. Gunfight At The O.K. Corral trades 1 damage back and forth twice; aim yours at 1-health sidekicks. Better Swear Me In cancels their effects and can send their top card to the bottom.
-**Watch out for:** If he can't knock the opponent out quickly, aggressive fighters out-last him.
+### Plan B: Chain the showdown
+**Goal:** String wins and free actions together into an explosive turn [2].
+**How to do it:** Each won combat can give a free attack, so attacks can chain [1][2]. You Die First moves an opponent 1 space and gives a free attack on them; its boost of 3 makes it a good card to throw into Second Shot [1][4]. In Vino Veritas draws up to 4 cards and gives a free attack [1]. He has consistent combo potential and adapts to many situations [4].
+**Watch out for:** If his quick shots are stopped, he can be in trouble [2].
 
 ### How they lose
-- His defenses are weak (nothing above a printed 3) and he has no healing.
-- Doc Holliday is killed, and Wyatt loses his best cards.
-- Aggressive opponents out-trade him.
+- Weak defenses: none print higher than 3, and he has no healing, so he plays like a glass cannon [4][3].
+- Doc Holliday is fragile and holds a lot of value; protect him [3].
+- Aggressive opponents [7].
 
 ### Key cards
-- **You Just Gonna Stand There And Bleed?**: a reliable 5 to trigger Showdown.
-- **I Have Two Guns, One For Each Of You**: damage to a second target.
-- **You're A Daisy If You Do**: Doc's 4 that draws 2.
-- **Bring 'Em To Justice**: a 0 defense plus twice the boost of their top card.
+- **Bring 'Em To Justice**: a 0-value defense that adds twice the boost of the top card of the opponent's deck [1].
+- **A Marshal And An Outlaw**: draws a card on defense, forces a discard on attack [1].
+- **Better Swear Me In**: cancels effects and can bottom the opponent's top card [1].
+- **You're A Daisy If You Do**: Doc's 4-value versatile that draws 2 [1].
 
 ### Tips
-- Protect Doc Holliday.
-- Strongest against fighters with little draw and with sidekicks.
-- Fan The Hammer returns to your hand when it finishes off a fighter.
+- His ability rewards lots of attacks [5].
+- One player rates him fairly average overall [4].
 
-### Further reading
-- [From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes](https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/): Restoration Games (official) · official article
-- [Wyatt Earp](https://www.reddit.com/r/Unmatched/comments/1t7jmvr/): Reddit: Life-Rip183 · thread
-- [Wyatt Earp Advanced Strategy Guide](https://www.youtube.com/watch?v=j-3lXW3PfD4): The Gaming Geek Net · video
+### References
+1. Restoration Games. *Unmatched: Stars and Stripes*, Wyatt Earp deck. Card text as recorded in `input/heroes.json`.
+2. Restoration Games. "From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes." *Restoration Games*. https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/
+3. u/Potatopancakeman. Comment on "Wyatt Earp" by u/Life-Rip183. *r/Unmatched*, Reddit, 8 May 2026. https://www.reddit.com/r/Unmatched/comments/1t7jmvr/
+4. u/Such_Will_8536. Comments on "Wyatt Earp" (see [3]).
+5. u/Life-Rip183. Reply in "Wyatt Earp" (see [3]).
+6. u/audiotarot. Comment on "Wyatt Earp" (see [3]).
+7. u/FangAndBoard. Comment on "Wyatt Earp" (see [3]).
+
+### Not cited
+- u/BeneficialMethod3866, u/Mack_Lope and u/StinkUrchin, comments on "Wyatt Earp" (read; no advice)
+- [Wyatt Earp Advanced Strategy Guide](https://www.youtube.com/watch?v=j-3lXW3PfD4): The Gaming Geek Net · video (not yet reviewed)
 
 ---
 
 <!-- id: john_henry -->
 ## John Henry
 
-**In short:** A tough melee hammer-swinger with 17 health. He lays railroad track every turn and moves along it for free, building momentum across the map before he crashes in with heavy hammer blows.
+**In short:** A melee hero with 17 health, 2 movement and no sidekicks [1]. He has 10 track tokens; at the start of his turn he places one in a space in his zone, and spaces with tracks don't count when he moves [1][2]. The designers describe him building up a head of steam and hitting like a freight train [2].
 
-### Plan A: Build the railroad
-**Goal:** Cover the board in track so John Henry can reach any fight.
-**How to do it:** Steel-Driving Man gives him 10 track tokens. At the start of each turn, place one in a space in his zone. Spaces with track don't count toward his movement, so the more track you lay, the farther he travels for the same move. Plan your track toward the routes the opponent uses. Striking Fire moves him 4 and gains an action. Power Through (3) moves a fighter in the combat 2 spaces, also not counting track.
-**Watch out for:** Early on, with little track, he's a slow move-2 fighter.
-
-### Plan B: Full steam ahead
-**Goal:** Use at least 4 different paths in a turn, then hammer.
-**How to do it:** His hammer attacks get stronger if he used 4 or more different paths this turn. Eighteen-pound Hammer (6) cancels their effects. Twelve-pound Hammer (4) can place a fighter in the combat on any track space. Nine-pound Hammer (3) deals 2 damage to each enemy in his zone. Momentous Shift is a 5 after moving. Bring Down The Mountain gets +1 for each hammer card in your discard pile. Hear That Cold Steel Ring (2) draws, moves him 1 and gains a free attack.
-**Watch out for:** Counting paths takes planning; lay track so a long loop is always available.
+### Plan A: Lay track, then swing the hammer
+**Goal:** Spread track across the board so he can cross it fast and bring heavy attacks wherever the fight is [2].
+**How to do it:** The more track is laid, the further he can move [2]. Build momentum by zipping around on the tracks, then bring down a heavy hit with his Hammer cards [2]. Each Hammer gets an extra effect if he used at least 4 different paths this turn: Eighteen-pound Hammer (6) cancels the defense's effects, Twelve-pound Hammer (4) can place a fighter in the combat in any space with track, and Nine-pound Hammer (3) deals 2 to each opponent in his zone [1]. Striking Fire moves him up to 4 spaces and gains an action [1], and Momentous Shift is a 5 if he started the turn in a different space [1].
+**Watch out for:** The sources read so far say nothing about his weak points.
 
 ### How they lose
-- He hasn't laid enough track to catch a fast or ranged opponent.
-- Opponents stay off his railroad network.
-- Hammer effects are cancelled or blocked before he builds momentum.
+- None of the sources read so far say.
 
 ### Key cards
-- **Larger Than Life**: a plain 6 with nothing to cancel.
-- **Cool Drink Of Water**: a 0 defense that heals 3 and draws 1.
-- **Deeds Of Valor**: he takes at most 2 combat damage.
-- **Knock Them Silly**: a 4 that cancels their after-combat effects if he wins.
+- **Larger Than Life**: a plain 6-value attack [1].
+- **Bring Down The Mountain**: a 3, +1 for each Hammer card in your discard pile [1].
+- **Cool Drink Of Water**: a 0-value defense that heals 3 and draws a card [1].
+- **Deeds Of Valor**: he can't take more than 2 combat damage that combat [1].
+- **Hear That Cold Steel Ring**: draws, moves him 1 and gives a free attack [1].
 
 ### Tips
-- Place track every turn; it's free movement for the rest of the game.
-- Heal with Cool Drink Of Water when the hit is small anyway.
-- Save Bring Down The Mountain until a few hammers are in your discard pile.
+- Power Through also ignores track spaces when it moves a fighter [1].
 
-### Further reading
-- [From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes](https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/): Restoration Games (official) · official article
+### References
+1. Restoration Games. *Unmatched: Stars and Stripes*, John Henry deck. Card text as recorded in `input/heroes.json`.
+2. Restoration Games. "From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes." *Restoration Games*. https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/
+
+### Not cited
+- None.
 
 ---
 
 <!-- id: george_washington -->
 ## George Washington
 
-**In short:** A defensive melee spymaster with 14 health and three 1-health Culper spies. He bluffs with ruse tokens on his attacks, so every attack forces the opponent to guess, and his spies dig into the opponent's hand.
+**In short:** A melee hero with 14 health and 2 movement, plus three 1-health Culper spies [1]. He starts with 4 ruse tokens; when he attacks he may place one beside his card, and the defender may discard a random card to remove it before deciding whether to defend [1]. Some of his cards trigger extra effects if a ruse was used, so every token might be real or a bluff [2].
 
-### Plan A: Bluff with ruses
-**Goal:** Make every attack a hard guess for the opponent.
-**How to do it:** Espionage gives you 4 ruse tokens. When you attack, you may place one next to your card. Some of his cards have extra effects that trigger only with a ruse; others don't, so a ruse may be a bluff. Before choosing whether to defend, the opponent may discard a random card to remove the ruse. Either they lose cards or face the unknown. Players suggest a ruse on Lead Astray (5) as your last action: if they don't stop it, its movement lets you disengage. Against cancel-heavy decks, spend a few ruses on cards without ruse effects, so they keep discarding or wasting Feints. Misinformation (4) and Sympathetic Stain win ruses back.
-**Watch out for:** The best ruse effects are strong. Don't bluff away every token.
+### Plan A: Play the bluff
+**Goal:** Keep the opponent guessing, so they keep discarding or burning their Feints [2][3].
+**How to do it:** Against fighters with many Feints or cancels, put ruse tokens on cards with no ruse effect now and then, so the opponent stays in a "can't take the chance" mindset [3]. One player prefers to save the tokens for real ruse effects, because they are very strong [4]. A good bait: a ruse on Lead Astray, his 5, as your last action. If they Feint, they still take 3; if they discard or don't cancel, its movement lets you disengage [1][4]. Misinformation and Sympathetic Stain can win tokens back [1], so wasting one or two on fake-outs is affordable [3].
+**Watch out for:** He needs the right exchanges to land, Circumvent into high blocks and 5s into Feints, or he lacks damage [5].
 
 ### Plan B: Run the spy ring
-**Goal:** Keep the spies alive and use them for information and pressure.
-**How to do it:** Sympathetic Stain, a spy scheme, lets you look at their hand; if a spy is adjacent to one of their fighters, pick a card for them to discard and regain a ruse. Gather Information draws 3 and moves all your fighters 3 through enemies. Network Of Spies gets +1 for each other friendly fighter in Washington's zone. Spread spies across zones so area damage can't hit them all. Recruit To The Ring brings one back.
-**Watch out for:** Only two cards revive spies. Early on, it may be worth skipping Undercover Agent (which makes a spy take the hit).
+**Goal:** Keep the spies alive and get value from them [3][6].
+**How to do it:** Keep at least one spy alive, spread across different zones to dodge area damage, since only two cards bring them back [3]. Sympathetic Stain looks at the opponent's hand; if a spy is next to one of their fighters, you pick a discard and regain a ruse token [1]. Network Of Spies adds +1 for each other friendly fighter in his zone [1]. Until the spies have paid off, it may be worth holding back the swap defense, Undercover Agent [6].
+**Watch out for:** Losing the spies early [3][6].
 
 ### How they lose
-- He doesn't have enough damage when his tricks don't land (Circumvent into a big block, a 5 into a Feint).
-- Fatigue-strong fighters he has to chase out-last him; he has only two pass-like cards.
-- His spies die before their schemes pay off.
+- He is a defensive fighter with effectively only two passes, so his exhaustion game is only fair; against stronger exhaustion fighters he has to chase them [5].
+- Not enough damage when his interactions don't land [5].
 
 ### Key cards
-- **Agent 711**: a 4 attack that deals 7 more damage if it wins.
-- **Sabotage**: if it wins, they discard 2 random cards.
-- **Circumvent**: ignores their card's value.
-- **Allies Everywhere**: heals 3 and gains a free attack.
+- **Agent 711**: a 4-value attack that deals 7 damage if you win [1].
+- **Sabotage**: on a win, they discard 2 random cards [1].
+- **Allies Everywhere**: heals 3 and gives a free attack [1].
+- **Gather Information**: draws 3 and moves each of your fighters 3 [1].
 
 ### Tips
-- Keep spies spread out across zones.
-- Make A Stand is a 5 if your fighter hasn't moved this turn.
-- Use Feint (3 copies) to protect Agent 711's follow-up.
+- Fit the plan to the opponent and to the kind of game you like [3].
+- Players disagree on his strength: one worries he is very strong [7], others find him manageable [8][5].
 
-### Further reading
-- [From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes](https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/): Restoration Games (official) · official article
-- [Tips on playing George Washington Effectively?](https://www.reddit.com/r/Unmatched/comments/1ta506r/): Reddit: ronchman · thread
-- [Tips on playing George Washington effectively?](https://www.reddit.com/r/Unmatched/comments/1tko47e/): Reddit: ronchman · thread
+### References
+1. Restoration Games. *Unmatched: Stars and Stripes*, George Washington deck. Card text as recorded in `input/heroes.json`.
+2. Restoration Games. "From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes." *Restoration Games*. https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/
+3. u/Lulu_pa_sodo. Comments on "Tips on playing George Washington Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 11 May 2026. https://www.reddit.com/r/Unmatched/comments/1ta506r/
+4. u/Silly_Shenanigans. Reply in "Tips on playing George Washington Effectively?" (see [3]).
+5. u/Muddshoe. Reply in "Tips on playing George Washington effectively?" by u/ronchman. *r/Unmatched*, Reddit, 22 May 2026. https://www.reddit.com/r/Unmatched/comments/1tko47e/
+6. u/Silly_Shenanigans. Comment on "Tips on playing George Washington effectively?" (see [5]).
+7. u/TheEliteB3aver. Comment on "Tips on playing George Washington effectively?" (see [5]).
+8. u/PrinceOfAsphodel. Reply in "Tips on playing George Washington effectively?" (see [5]).
+
+### Not cited
+- None.
 
 ---
 
 <!-- id: rosie_the_riveter -->
 ## Rosie the Riveter
 
-**In short:** A melee mech pilot with 15 health and a sidekick, Wendy The Welder (7 health). Her mech suit switches on one upgrade per turn and gets steadily stronger, but resets once all four are on, so she wins by managing which upgrades are active and timing a big turn.
+**In short:** A melee hero with 15 health and 2 movement, plus Wendy The Welder, a 7-health sidekick [1]. Her mech suit has 4 upgrades, all inactive at the start; she activates one at the start of each turn, and if all 4 are active at the end of her turn, they all switch off [1]. Each upgrade adds an ability and interacts with some of her cards, so she keeps getting stronger, tougher and more versatile [2].
 
-### Plan A: Order your upgrades
-**Goal:** Keep the upgrades that matter for this matchup switched on as long as possible.
-**How to do it:** Freedom XK-II Mech Suit starts with all 4 upgrades off. At the start of each turn, activate one. At the end of your turn, if all 4 are active, they all switch off. Upgrades come on in a line, and switching one off sends it to the back, so you can reorder them. Players often put the upgrade that draws on attack first. Others prefer +1 attack or ranged attacks first, in matchups where you don't want to draw toward fatigue or where you want melee opponents to come to you. Hasty Repairs (defense 1) switches off an upgrade and heals 3, which also reorders the line. "E" Award and Rapid Development, Wendy's schemes, can switch an upgrade on or off.
-**Watch out for:** Letting all four come on by accident resets the suit at end of turn.
+### Plan A: Order the upgrades
+**Goal:** Line up the upgrades so the one you want most comes on first [3][4].
+**How to do it:** The upgrades stack, and switching one off sends it to the back of the line, so you choose which comes on earliest [4]. Many players put the card-draw-on-attack upgrade first and keep it at the front as long as possible; she is at her best with it on [3][4]. If the game looks long, +1 damage or ranged attacks may be better at the front, for pressure, or to force melee opponents to come to you [4]. One player switches off two upgrades as early as possible so +1 attack and ranged attacks lead [5]. Which order is best depends on the opponent [4][5]. When all 4 switch off at once, their order stays the same [6]. Rapid Development and "E" Award can each switch an upgrade on or off [1].
+**Watch out for:** Leading with draw in a long game can run you towards exhaustion faster [4].
 
-### Plan B: The big swing
-**Goal:** One explosive turn with everything active.
-**How to do it:** D-Day (3) gains a free attack and switches on all upgrades; if they were already on, it also deals 1 and heals 1. Players save it for a big late-game swing. Full Metal gets +1 for each active upgrade. Technological Superiority cancels their effects with 3+ upgrades active. Overrun moves her 3 through enemies, dealing 1 to each.
-**Watch out for:** After the big turn, the suit resets and she starts over.
+### Plan B: Save the big swing
+**Goal:** Hold D-Day for a big late-game turn [3].
+**How to do it:** D-Day gains a free attack and activates all your upgrades; if they were already active, it deals 1 damage and heals Rosie 1 [1]. Full Metal adds +1 per active upgrade, and Technological Superiority cancels the opponent's effects with 3 or more active [1].
+**Watch out for:** With all 4 active at the end of your turn, they all switch off [1].
 
 ### How they lose
-- Upgrades are badly ordered, and the useful ones are never on when needed.
-- The suit resets at the wrong moment and she's left weak.
-- Wendy dies, and she loses her schemes and Arc Welding.
+- None of the sources read so far say beyond the exhaustion risk above.
 
 ### Key cards
-- **D-Day**: switches on all upgrades plus a free attack.
-- **Hasty Repairs**: healing and upgrade reordering in one.
-- **Rapid Development**: draws 2, toggles an upgrade and gains a free attack.
-- **We Can Do It!**: a 4 attack that switches on an upgrade.
+- **Hasty Repairs**: a 1-value defense that switches off an upgrade to heal Rosie 3 [1]; also a way to reorder the line [1][4].
+- **Overrun**: moves Rosie 3 through opponents, damaging each she passes [1].
+- **Loose Lips Sink Ships!**: lowers the attack by the boost of the top card of their deck [1].
+- **Arc Welding**: Wendy's card; activate an upgrade or hit each adjacent opponent [1].
 
 ### Tips
-- Decide your upgrade order before the game, based on the matchup.
-- Loose Lips Sink Ships! lowers their card by the boost of their top card.
-- Arc Welding can switch on an upgrade or deal 1 to each adjacent enemy.
+- Fit the upgrade order to the opponent [4][5].
 
-### Further reading
-- [From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes](https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/): Restoration Games (official) · official article
-- [Finally got my hands on Stars and Stripes and wanted to ask how to use Rosie better.](https://www.reddit.com/r/Unmatched/comments/1tbidqb/): Reddit: BeneficialMethod3866 · thread
+### References
+1. Restoration Games. *Unmatched: Stars and Stripes*, Rosie the Riveter deck. Card text as recorded in `input/heroes.json`.
+2. Restoration Games. "From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes." *Restoration Games*. https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/
+3. u/Ramen3. Comment on "Finally got my hands on Stars and Stripes and wanted to ask how to use Rosie better." by u/BeneficialMethod3866. *r/Unmatched*, Reddit, 12 May 2026. https://www.reddit.com/r/Unmatched/comments/1tbidqb/
+4. u/ValhallAwaits_. Comments on "Finally got my hands on Stars and Stripes…" (see [3]).
+5. u/Naive-Health414. Comment on "Finally got my hands on Stars and Stripes…" (see [3]).
+6. u/Traditional_Hat_8120. Reply in "Finally got my hands on Stars and Stripes…" (see [3]).
+
+u/Ramen3 calls the card that activates every upgrade and gains an action a scheme; in the deck it is D-Day, an attack. The upgrades themselves are not in `input/heroes.json`.
+
+### Not cited
+- u/Rubix89, u/Ok-Excitement7898 and u/Voidmire (read; rules questions)
