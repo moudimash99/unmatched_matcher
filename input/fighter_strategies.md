@@ -3518,22 +3518,22 @@ In `input/heroes.json` the die results on Krang's cards appear as "?".
 <!-- id: john_henry -->
 ## John Henry
 
-**In short:** A melee hero with 17 health, 2 movement and no sidekicks [1]. He has 10 track tokens; at the start of his turn he places one in a space in his zone, and spaces with tracks don't count when he moves [1][2]. The designers describe him building up a head of steam and hitting like a freight train [2].
+**In short:** John Henry is a melee hero with 17 health, 2 movement and no sidekicks [1]. He has 10 track tokens; at the start of his turn he places one in a space in his zone, and spaces with tracks don't count when he moves [1][2]. He builds up a head of steam before hitting like a freight train [2].
 
 ### Plan A: Lay track, then swing the hammer
-**Goal:** Spread track across the board so he can cross it fast and bring heavy attacks wherever the fight is [2].
-**How to do it:** The more track is laid, the further he can move [2]. Build momentum by zipping around on the tracks, then bring down a heavy hit with his Hammer cards [2]. Each Hammer gets an extra effect if he used at least 4 different paths this turn: Eighteen-pound Hammer (6) cancels the defense's effects, Twelve-pound Hammer (4) can place a fighter in the combat in any space with track, and Nine-pound Hammer (3) deals 2 to each opponent in his zone [1]. Striking Fire moves him up to 4 spaces and gains an action [1], and Momentous Shift is a 5 if he started the turn in a different space [1].
-**Watch out for:** The sources read so far say nothing about his weak points.
+**Goal:** Lay track across the board to move quickly and bring heavy attacks wherever the fight is [2].
+**How to do it:** Each stretch of track extends his reach [2]. Use the tracks to build momentum as he moves around the board, then deliver a heavy hit with his Hammer cards [2]. Using at least 4 different paths in a turn unlocks an extra effect on each Hammer: Eighteen-pound Hammer (6) cancels the defense's effects, Twelve-pound Hammer (4) can place a fighter in the combat in any space with track, and Nine-pound Hammer (3) deals 2 damage to each opposing fighter in his zone [1]. Striking Fire moves him up to 4 spaces and gains an action [1], and Momentous Shift is a 5 if he started the turn in a different space [1].
+**Watch out for:** The sources reviewed so far do not cover his weaknesses.
 
 ### How they lose
-- None of the sources read so far say.
+- The sources reviewed so far do not explain how he loses.
 
 ### Key cards
-- **Larger Than Life**: a plain 6-value attack [1].
-- **Bring Down The Mountain**: a 3, +1 for each Hammer card in your discard pile [1].
-- **Cool Drink Of Water**: a 0-value defense that heals 3 and draws a card [1].
-- **Deeds Of Valor**: he can't take more than 2 combat damage that combat [1].
-- **Hear That Cold Steel Ring**: draws, moves him 1 and gives a free attack [1].
+- **Larger Than Life**: A straightforward 6-value attack [1].
+- **Bring Down The Mountain**: Worth 3, plus 1 for each Hammer card in your discard pile [1].
+- **Cool Drink Of Water**: A 0-value defense that heals 3 and draws a card [1].
+- **Deeds Of Valor**: Limits the combat damage he takes in that combat to 2 [1].
+- **Hear That Cold Steel Ring**: Draws a card, moves him 1 space and grants a free attack [1].
 
 ### Tips
 - Power Through also ignores track spaces when it moves a fighter [1].
@@ -3550,31 +3550,31 @@ In `input/heroes.json` the die results on Krang's cards appear as "?".
 <!-- id: george_washington -->
 ## George Washington
 
-**In short:** A melee hero with 14 health and 2 movement, plus three 1-health Culper spies [1]. He starts with 4 ruse tokens; when he attacks he may place one beside his card, and the defender may discard a random card to remove it before deciding whether to defend [1]. Some of his cards trigger extra effects if a ruse was used, so every token might be real or a bluff [2].
+**In short:** Washington is a melee hero with 14 health and 2 movement, accompanied by three 1-health Culper spies [1]. He starts with 4 ruse tokens; when he attacks he may place one beside his card, and the defender may discard a random card to remove it before deciding whether to defend [1]. Some of his cards trigger extra effects if a ruse was used, so every token might be real or a bluff [2].
 
 ### Plan A: Play the bluff
-**Goal:** Keep the opponent guessing, so they keep discarding or burning their Feints [2][3].
-**How to do it:** Against fighters with many Feints or cancels, put ruse tokens on cards with no ruse effect now and then, so the opponent stays in a "can't take the chance" mindset [3]. One player prefers to save the tokens for real ruse effects, because they are very strong [4]. A good bait: a ruse on Lead Astray, his 5, as your last action. If they Feint, they still take 3; if they discard or don't cancel, its movement lets you disengage [1][4]. Misinformation and Sympathetic Stain can win tokens back [1], so wasting one or two on fake-outs is affordable [3].
-**Watch out for:** He needs the right exchanges to land, Circumvent into high blocks and 5s into Feints, or he lacks damage [5].
+**Goal:** Keep the opponent guessing and make them spend cards on discards or Feints [2][3].
+**How to do it:** Against fighters with many Feints or cancels, occasionally put ruse tokens on cards without ruse effects, so the opponent feels they cannot risk letting one through [3]. Another player favors saving tokens for their powerful ruse effects [4]. For bait, play a ruse on the 5-value Lead Astray as your last action. If they Feint, they still take 3; if they discard or don't cancel, its movement lets you disengage [1][4]. Misinformation and Sympathetic Stain can win tokens back [1], so wasting one or two on fake-outs is affordable [3].
+**Watch out for:** He needs favorable exchanges: Circumvent into high blocks and 5-value attacks into Feints, or his damage falls short [5]. Circumvent only ignores the opposing card's value if a ruse token was used [1].
 
 ### Plan B: Run the spy ring
-**Goal:** Keep the spies alive and get value from them [3][6].
-**How to do it:** Keep at least one spy alive, spread across different zones to dodge area damage, since only two cards bring them back [3]. Sympathetic Stain looks at the opponent's hand; if a spy is next to one of their fighters, you pick a discard and regain a ruse token [1]. Network Of Spies adds +1 for each other friendly fighter in his zone [1]. Until the spies have paid off, it may be worth holding back the swap defense, Undercover Agent [6].
-**Watch out for:** Losing the spies early [3][6].
+**Goal:** Keep the spies alive long enough to get value from them [3][6].
+**How to do it:** Preserve at least one spy and spread the spies across different zones to avoid area damage; only two cards can bring them back [3]. Sympathetic Stain looks at the opponent's hand; if a spy is next to one of their fighters, you pick a discard and regain a ruse token [1]. Network Of Spies adds +1 for each other friendly fighter in his zone [1]. Consider holding back Undercover Agent, his swap defense, until the spies have earned their keep [6].
+**Watch out for:** The spies can be lost before they have contributed [3][6].
 
 ### How they lose
-- He is a defensive fighter with effectively only two passes, so his exhaustion game is only fair; against stronger exhaustion fighters he has to chase them [5].
-- Not enough damage when his interactions don't land [5].
+- As a defensive fighter with effectively only two passes, his exhaustion game is fair; opponents with stronger exhaustion games force him to give chase [5].
+- His damage falls short when he cannot get the exchanges he needs [5].
 
 ### Key cards
-- **Agent 711**: a 4-value attack that deals 7 damage if you win [1].
-- **Sabotage**: on a win, they discard 2 random cards [1].
-- **Allies Everywhere**: heals 3 and gives a free attack [1].
-- **Gather Information**: draws 3 and moves each of your fighters 3 [1].
+- **Agent 711**: A 4-value attack that deals 7 damage after a win, provided a ruse token was used [1].
+- **Sabotage**: After a win, the opponent discards 2 random cards if a ruse token was used [1].
+- **Allies Everywhere**: Grants a free attack; Washington also heals 3 if a ruse token was used [1].
+- **Gather Information**: Draws 3 cards and moves each of your fighters 3 spaces [1].
 
 ### Tips
-- Fit the plan to the opponent and to the kind of game you like [3].
-- Players disagree on his strength: one worries he is very strong [7], others find him manageable [8][5].
+- Adapt the plan to the opponent and the kind of game you enjoy [3].
+- Players disagree on his strength: one worries that he is very strong [7], others find him manageable [8][5].
 
 ### References
 1. Restoration Games. *Unmatched: Stars and Stripes*, George Washington deck. Card text as recorded in `input/heroes.json`.
@@ -3594,29 +3594,29 @@ In `input/heroes.json` the die results on Krang's cards appear as "?".
 <!-- id: rosie_the_riveter -->
 ## Rosie the Riveter
 
-**In short:** A melee hero with 15 health and 2 movement, plus Wendy The Welder, a 7-health sidekick [1]. Her mech suit has 4 upgrades, all inactive at the start; she activates one at the start of each turn, and if all 4 are active at the end of her turn, they all switch off [1]. Each upgrade adds an ability and interacts with some of her cards, so she keeps getting stronger, tougher and more versatile [2].
+**In short:** Rosie is a melee hero with 15 health and 2 movement, accompanied by her 7-health sidekick, Wendy The Welder [1]. Her mech suit has 4 upgrades, all inactive at the start; she activates one at the start of each turn, and if all 4 are active at the end of her turn, they all switch off [1]. Each upgrade adds an ability and interacts with some of her cards, so she keeps getting stronger, tougher and more versatile [2].
 
 ### Plan A: Order the upgrades
-**Goal:** Line up the upgrades so the one you want most comes on first [3][4].
-**How to do it:** The upgrades stack, and switching one off sends it to the back of the line, so you choose which comes on earliest [4]. Many players put the card-draw-on-attack upgrade first and keep it at the front as long as possible; she is at her best with it on [3][4]. If the game looks long, +1 damage or ranged attacks may be better at the front, for pressure, or to force melee opponents to come to you [4]. One player switches off two upgrades as early as possible so +1 attack and ranged attacks lead [5]. Which order is best depends on the opponent [4][5]. When all 4 switch off at once, their order stays the same [6]. Rapid Development and "E" Award can each switch an upgrade on or off [1].
-**Watch out for:** Leading with draw in a long game can run you towards exhaustion faster [4].
+**Goal:** Arrange the upgrades so the one you need most activates first [3][4].
+**How to do it:** Active upgrades stack their effects; switching one off sends it to the back of the line, letting you control which activates earliest [4]. Many players put the card-draw-on-attack upgrade first and keep it at the front as long as possible; she is at her best with it on [3][4]. For a longer game, consider leading with +1 damage for pressure, or ranged attacks to make melee opponents come to you [4]. One player favors switching off two upgrades as early as possible to put +1 attack and ranged attacks first [5]. The best order depends on the opponent [4][5]. When all 4 switch off at once, their order stays the same [6]. Rapid Development and "E" Award can each switch an upgrade on or off [1].
+**Watch out for:** Leading with card draw can bring exhaustion sooner in a long game [4].
 
 ### Plan B: Save the big swing
-**Goal:** Hold D-Day for a big late-game turn [3].
-**How to do it:** D-Day gains a free attack and activates all your upgrades; if they were already active, it deals 1 damage and heals Rosie 1 [1]. Full Metal adds +1 per active upgrade, and Technological Superiority cancels the opponent's effects with 3 or more active [1].
+**Goal:** Save D-Day for a powerful turn late in the game [3].
+**How to do it:** D-Day grants a free attack and activates all your upgrades; if they were already active, it deals 1 damage and heals Rosie 1 [1]. Full Metal adds +1 per active upgrade, and Technological Superiority cancels the opponent's effects with 3 or more active [1].
 **Watch out for:** With all 4 active at the end of your turn, they all switch off [1].
 
 ### How they lose
-- None of the sources read so far say beyond the exhaustion risk above.
+- The sources reviewed so far do not explain how she loses beyond the exhaustion risk described above.
 
 ### Key cards
-- **Hasty Repairs**: a 1-value defense that switches off an upgrade to heal Rosie 3 [1]; also a way to reorder the line [1][4].
-- **Overrun**: moves Rosie 3 through opponents, damaging each she passes [1].
-- **Loose Lips Sink Ships!**: lowers the attack by the boost of the top card of their deck [1].
-- **Arc Welding**: Wendy's card; activate an upgrade or hit each adjacent opponent [1].
+- **Hasty Repairs**: A 1-value defense that switches off an upgrade to heal Rosie 3 [1]; switching it off also lets you reorder the line [1][4].
+- **Overrun**: Moves Rosie 3 spaces through opposing fighters, damaging each one she passes through [1].
+- **Loose Lips Sink Ships!**: Reduces the attack by the boost value of the top card of the opponent's deck [1].
+- **Arc Welding**: Wendy's card offers a choice: activate an upgrade or damage each adjacent opposing fighter [1].
 
 ### Tips
-- Fit the upgrade order to the opponent [4][5].
+- Adapt the upgrade order to the opponent [4][5].
 
 ### References
 1. Restoration Games. *Unmatched: Stars and Stripes*, Rosie the Riveter deck. Card text as recorded in `input/heroes.json`.

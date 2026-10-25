@@ -2256,17 +2256,17 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: john_henry -->
 ## John Henry
 
-**In short:** A steel-driving man who lays track to race across the map, then hits like a freight train with his Hammers [1][2].
+**In short:** John Henry is a steel-driving man who lays track to race across the map, then hits like a freight train with his Hammers [1][2].
 
 ### Plan A: Lay track, then swing the hammer
-**Goal:** Track everywhere, heavy hits anywhere [2] · **How:** use 4 different paths in a turn to power up the Hammer cards; Striking Fire for reach [1][2] · **Watch out:** not yet covered by the sources.
+**Goal:** Lay track to bring heavy hits anywhere on the board [2] · **How:** Use 4 different paths in a turn to power up his Hammer cards, with Striking Fire providing reach [1][2] · **Watch out:** The sources do not yet cover his weaknesses.
 
 ### How they lose
-- Not yet covered by the sources.
+- The sources do not yet explain how he loses.
 
 ### Key cards
-- **Eighteen-pound Hammer**: a 6 that cancels effects after 4 paths [1].
-- **Cool Drink Of Water**: heals 3 and draws [1].
+- **Eighteen-pound Hammer**: Worth 6; cancels effects after he uses 4 different paths [1].
+- **Cool Drink Of Water**: Heals 3 and draws a card [1].
 
 ### Tips
 - Track spaces don't count when he moves [1].
@@ -2280,21 +2280,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: george_washington -->
 ## George Washington
 
-**In short:** A spymaster who bluffs with ruse tokens on his attacks and works through a ring of three fragile spies [1][2].
+**In short:** Washington is a spymaster who bluffs with ruse tokens on his attacks and works through a ring of three fragile spies [1][2].
 
 ### Plan A: Play the bluff
-**Goal:** Keep them guessing [2][3] · **How:** fake ruses against Feint-heavy decks; a ruse on Lead Astray as a last action is a good bait [1][3][4] · **Watch out:** without the right exchanges he lacks damage [5].
+**Goal:** Keep the opponent guessing [2][3] · **How:** Bluff with ruses against decks with many Feints; a ruse on Lead Astray makes good bait as your last action [1][3][4] · **Watch out:** His damage falls short without the right exchanges [5].
 
 ### Plan B: Run the spy ring
-**Goal:** Value from the spies [3][6] · **How:** spread them out, use Sympathetic Stain, hold Undercover Agent early [1][3][6] · **Watch out:** only two cards revive them [3].
+**Goal:** Get value from the spies [3][6] · **How:** Spread them out, use Sympathetic Stain and hold back Undercover Agent early [1][3][6] · **Watch out:** Only two cards revive them [3].
 
 ### How they lose
-- A weak exhaustion game; he must chase [5].
-- Too little damage [5].
+- His weak exhaustion game forces him to chase [5].
+- He can struggle to deal enough damage [5].
 
 ### Key cards
-- **Agent 711**: 7 damage on a win [1].
-- **Misinformation**: regains a ruse token [1].
+- **Agent 711**: Deals 7 damage after a win if a ruse token was used [1].
+- **Misinformation**: Regains a ruse token [1].
 
 ### Tips
 - Keep at least one spy alive [3].
@@ -2313,23 +2313,23 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: rosie_the_riveter -->
 ## Rosie the Riveter
 
-**In short:** A mech-suited worker who switches on an upgrade every turn, growing stronger as the game goes on; choosing their order is the key decision [1][2][3].
+**In short:** Rosie is a worker in a mech suit who switches on an upgrade every turn, growing stronger as the game goes on; choosing their order is her key decision [1][2][3].
 
 ### Plan A: Order the upgrades
-**Goal:** Your best upgrade first [3][4] · **How:** card draw first is popular; +1 damage or ranged can be better for long games [3][4] · **Watch out:** draw first speeds up exhaustion [4].
+**Goal:** Activate your best upgrade first [3][4] · **How:** Leading with card draw is popular; +1 damage or ranged attacks can be better for long games [3][4] · **Watch out:** Leading with card draw brings exhaustion sooner [4].
 
 ### Plan B: Save the big swing
-**Goal:** A big late turn [3] · **How:** D-Day turns everything on and gives a free attack [1][3] · **Watch out:** all 4 active at turn end switch off [1].
+**Goal:** Set up a powerful turn late in the game [3] · **How:** D-Day activates every upgrade and grants a free attack [1][3] · **Watch out:** If all 4 are active at turn end, they all switch off [1].
 
 ### How they lose
-- Not yet covered by the sources beyond exhaustion.
+- The sources do not yet explain how she loses beyond exhaustion.
 
 ### Key cards
-- **Full Metal**: +1 per active upgrade [1].
-- **Hasty Repairs**: heals 3 and reorders the line [1][4].
+- **Full Metal**: Adds +1 per active upgrade [1].
+- **Hasty Repairs**: Heals 3 and lets you reorder the upgrades [1][4].
 
 ### Tips
-- Order depends on the opponent [4].
+- Choose the order to suit the opponent [4].
 
 ### References
 1. Restoration Games. *Unmatched: Stars and Stripes*, Rosie the Riveter deck.
