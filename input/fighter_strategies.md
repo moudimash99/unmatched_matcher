@@ -2532,117 +2532,153 @@ Gridbeast lists Spring the Trap as versatile and Lightning and Thunder's cancel 
 <!-- id: hamlet -->
 ## Hamlet
 
-**In short:** A melee hit-and-run fighter with 15 health and a 6-health sidekick, Rosencrantz & Guildenstern. Each turn he picks TO BE (draw more) or NOT TO BE (take 2 damage, hit harder), so he alternates calm build-up turns with all-in attack turns.
+**In short:** A melee hero with 15 health and 2 movement, plus Rosencrantz & Guildenstern, one 6-health sidekick [1]. Each turn he chooses TO BE (draw an extra card when maneuvering) or NOT TO BE (2 damage to one of his fighters, +2 to Hamlet's attacks) [1]. Players split on how to play him: a fast blitz, or a slower game of card and deck advantage [2][3][4][5].
 
-### Plan A: Build up, then go all in
-**Goal:** Turn a big hand into one burst of damage.
-**How to do it:** At the start of each turn, The Question makes you choose. TO BE draws 1 extra card on each maneuver: use it to fill your hand and get into position. NOT TO BE deals 2 damage to one of your fighters and gives Hamlet's attacks +2. Go NOT TO BE when you can boost Cruel To Be Kind (2) for a big number, when you're in position to attack twice, or when your hand already has 6 or more cards. Then back off and rebuild. The self-damage can go on Rosencrantz & Guildenstern instead of Hamlet.
-**Watch out for:** Taking 2 damage with no attack to follow is pure loss. Only pick NOT TO BE when your hand is ready.
+### Plan A: Hit and run
+**Goal:** Build up on TO BE turns, then go all in on NOT TO BE turns [2].
+**How to do it:** Use TO BE turns to fill your hand and get into position, then spend NOT TO BE turns dumping cards into movement and boosts for a big chunk of damage before backing off to recover [2]. Good times for NOT TO BE: you can boost Cruel To Be Kind high, you can double attack, your hand is already 6 or more, or a TO BE turn would drain your deck too fast [2]. Take the NOT TO BE damage on Rosencrantz & Guildenstern: no cards need them, so they are mostly fuel or a blocker [2][6][7]. Boosted 7s and 8s, value-ignoring attacks and after-combat damage are hard to stop all at once [8]. Several players call him a blitz fighter who must go fast [6][9][10].
+**Watch out for:** This burns through the deck, so make the big turns count [2].
 
-### Plan B: Stall with Method In The Madness
-**Goal:** Stop his own draw from burning through his deck.
-**How to do it:** TO BE plus two maneuvers draws a lot, which can mean discarding cards at end of turn and running out of deck. Method In The Madness puts any number of cards from your hand on the bottom of your deck, then lets you draw up to that many and gains an action. You don't have to draw any: maneuver, play the scheme to bottom a few cards, then maneuver again. Players who like Hamlet call it his best card.
-**Watch out for:** Make sure you also get your healing cards played.
+### Plan B: Out-last them
+**Goal:** Win on deck advantage instead of damage [3][4].
+**How to do it:** Method In The Madness puts any number of cards from your hand on the bottom of your deck, then draws up to that many, and gains an action [1]. On a TO BE turn, maneuver, play it without drawing, then maneuver again: your hand stays small and your deck stays big [3]. You can end a turn with more cards in your deck than you started with [4]. The Ghost can also stand in for a turn [4]. Against an opponent who hangs back with no way to skip turns, sit back and let exhaustion win [4].
+**Watch out for:** Without the schemes in hand it feels like fighting yourself [4].
 
 ### How they lose
-- Big printed attacks (Bigfoot, Luke Cage, Tomoe) overwhelm his low defenses.
-- He spends health on NOT TO BE turns that do nothing.
-- He draws through his deck too fast.
+- NOT TO BE without the right hand is 2 wasted self-damage; TO BE without one overdraws and thins the deck [3].
+- Fighters with big printed attacks can overwhelm him [5].
+- Some rate him weaker than most of the roster [8][11]; one says he wins in the first few turns or not at all [10].
 
 ### Key cards
-- **Cruel To Be Kind**: a 2 attack you may boost; huge on a NOT TO BE turn.
-- **The Play's The Thing**: forces a random discard and heals by its boost if you win. Usually better as an attack.
-- **Uncertain Doom** and **Nothing Either Good Or Bad**: punish versatile cards, so he's good against decks full of them (Sinbad, Medusa, Tesla).
-- **The Ghost**: heal 2, or reposition and gain an action.
+- **Method In The Madness**: called his best card [3]; three copies in a 30-card deck, so you usually see one [1][3].
+- **The Play's The Thing**: a forced random discard, and heals by its boost value if you win [1]. Usually better as an attack (5 on NOT TO BE) [12]. Don't defend with it against Feint-heavy decks [3].
+- **The Rest Is Silence**: a defense that ends the turn [1]; timed well, it stops an opponent's plans [2].
+- **Maddening Insight**: worth the cards in your hand [1], which TO BE turns keep high [2].
+- **The Readiness Is All**: on defense, it places a fighter anywhere [1], to catch an opponent keeping their distance and set up a double attack [13].
 
 ### Tips
-- He's best against other melee fighters.
-- Play him aggressively; steady pressure wins with him.
-- Maddening Insight's value equals your hand size; defend with it after a TO BE turn.
+- Uncertain Doom and Nothing Either Good Or Bad punish decks with many versatile cards and few defenses [1][14][15].
+- Read the opponent's plan and play against it [4].
+- Opponents often don't know his deck [8].
 
-### Further reading
-- [Tips on playing Shakespeare and Hamlet](https://www.reddit.com/r/Unmatched/comments/1dwnu9r/): Reddit: Franjeims · thread
-- [Hamlet strategy and matchups](https://www.reddit.com/r/Unmatched/comments/1fe4nyh/): Reddit: Life-Rip183 · thread
-- [Hamlet tips please](https://www.reddit.com/r/Unmatched/comments/1ozkzi3/): Reddit: TickleMeTimbre · thread
-- [Hamlet - Unmatched Fighter Review](https://www.youtube.com/watch?v=1Igd5MYvkAU): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Slings and Arrows*, Hamlet deck. Card text as recorded in `input/heroes.json`.
+2. u/Horse0Course. Comment on "Hamlet strategy and matchups" by u/Life-Rip183. *r/Unmatched*, Reddit, 11 September 2024. https://www.reddit.com/r/Unmatched/comments/1fe4nyh/
+3. u/TheEliteB3aver. Comments on "Hamlet tips please" by u/TickleMeTimbre. *r/Unmatched*, Reddit, 17 November 2025. https://www.reddit.com/r/Unmatched/comments/1ozkzi3/
+4. u/Round-Walrus3175. Comments on "Hamlet tips please" (see [3]).
+5. u/Franjeims. "Tips on playing Shakespeare and Hamlet." *r/Unmatched*, Reddit, 6 July 2024. https://www.reddit.com/r/Unmatched/comments/1dwnu9r/
+6. u/lightblade13. Comment on "Tips on playing Shakespeare and Hamlet" (see [5]).
+7. u/AbrocomaRight9782. Comments on "Hamlet tips please" (see [3]).
+8. u/TivaDi. Comments on "Hamlet tips please" (see [3]).
+9. u/Graham_the_cracka. Reply in "Tips on playing Shakespeare and Hamlet" (see [5]).
+10. u/Biggest_Lemon. Comment on "Hamlet tips please" (see [3]).
+11. u/HoudiniMain. Comment on "Tips on playing Shakespeare and Hamlet" (see [5]).
+12. u/Horse0Course. Reply in "Hamlet strategy and matchups" (see [2]).
+13. u/HealthyVehicle7639. Comments on "Hamlet tips please" (see [3]).
+14. u/TitanasGios. Comment on "Hamlet strategy and matchups" (see [2]).
+15. u/Temporary_Novel9399. Reply in "Hamlet strategy and matchups" (see [2]).
+
+### Not cited
+- u/MagazineOver4694, u/Mack_Lope, u/TickleMeTimbre and others in the two threads (read; repeated points or no advice)
+- [Hamlet - Unmatched Fighter Review](https://www.youtube.com/watch?v=1Igd5MYvkAU): To The Table Top! · video (not yet reviewed)
 
 ---
 
 <!-- id: titania -->
 ## Titania
 
-**In short:** A ranged fairy queen with 12 health and a hard-hitting sidekick, Oberon. A separate deck of six glamours gives her one ongoing power at a time, and she wins by spending glamours to power up her cards, then chaining free schemes into a big turn.
+**In short:** A ranged hero with 12 health and 2 movement, plus Oberon, a 6-health melee sidekick [1]. If she has no face-up glamour at the start of her turn, she flips the next card of her six-card glamour deck, and its effect stays on while face-up [1][2]. Her cards have low printed values but strong effects, and many get better as she burns through glamours [2].
 
-### Plan A: Spend your glamours
-**Goal:** Use each glamour while it helps, then discard it to fuel your cards.
-**How to do it:** Fairy Magic flips a new glamour at the start of your turn if none is face up. The six glamours: Love moves an enemy 1 space when you maneuver. Greed draws a card at end of turn. Sleep blocks all non-combat damage, fatigue included. Jealousy swaps Titania and Oberon when one is attacked. Invisibility lets your fighters move through enemies. Rhyme gains an action after each scheme. Many cards get stronger if you discard the glamour: Fairy Song becomes 5, Whisked Away places your fighter anywhere, Protection Of The Fairy Woods cancels their effects. Queen Of The Fairies gets +1 for each glamour in your discard pile. The Moon Looks Down returns a discarded glamour of your choice to the bottom of the glamour deck.
-**Watch out for:** Without a face-up glamour, her cancels don't work. Discarded glamours don't come back on their own.
+### Plan A: Cycle the glamours
+**Goal:** Find the glamour that suits the game, and keep discarding glamours to power up your cards [2].
+**How to do it:** Balance drawing through the glamour deck against keeping a useful glamour up long enough to use it [2]. Glamours only leave through your own card effects, and a used-up glamour deck is not reshuffled [2]. Discarding one makes Fairy Song a 5, lets Whisked Away place your fighter anywhere, makes As Wise As Beautiful draw 2, or lets Protection Of The Fairy Woods cancel the attacker's effects [1]. The Moon Looks Down puts a discarded glamour of your choice on the bottom of the glamour deck [1][2]. Among the glamours: Love moves an opponent 1 space when you maneuver; Greed draws a card at the end of your turn; Sleep stops all non-combat damage, even exhaustion; Jealousy swaps Titania and Oberon when one is attacked; Invisibility lets your fighters move through opponents [2].
+**Watch out for:** Which glamour comes up is luck [2].
 
-### Plan B: The Rhyme combo
-**Goal:** A huge turn with Glamour of Rhyme active.
-**How to do it:** Every scheme gains an action back, so schemes are free. Gift Of The Fair Folk moves two fighters 2 spaces and draws 2. What Fools These Mortals Be, Oberon's scheme, makes them shuffle their best defense from their hand into their deck. A Momentary Glance deals 2 to any fighter in her zone. Then attack with Met By Moonlight (Oberon, 5) or a late Queen Of The Fairies, which can deal around 8.
-**Watch out for:** Getting Rhyme is luck. Don't wait for it.
+### Plan B: The scheme chain
+**Goal:** With Glamour of Rhyme up (gain an action after each scheme), chain free schemes into a big attack [2].
+**How to do it:** Gift Of The Fair Folk to move two fighters into range and draw 2, then What Fools These Mortals Be to shuffle their best defense back into their deck, then any more schemes you hold, all free [1][2]. Finish with Met By Moonlight (5) from Oberon or Queen Of The Fairies [1][2]. Queen Of The Fairies is 2, +1 per discarded glamour [1]: play it with 4 or 5 glamours gone, ideally after removing a Feint, for up to 8 damage [2]. Fairy Song first adds another discarded glamour [2].
+**Watch out for:** Queen Of The Fairies is weak early [2].
 
 ### How they lose
-- Her printed values are low, and cancel-heavy decks blank her effects.
-- Fighters with many sidekicks swarm her.
-- Oberon dies early and her damage dries up.
+- Low printed values [2].
+- Opponents with many sidekicks, or many ways to cancel her effects [2].
+- Without a face-up glamour she can't use her cancelling defense, so that turn is a good time to attack her [1][3].
+- Oberon can be focused down early [3][4].
 
 ### Key cards
-- **But A Dream**: cancels their effects, ignores their value, returns their card to their hand and draws 1.
-- **Met By Moonlight**: Oberon's 5 attack that places him next to Titania.
-- **Queen Of The Fairies**: the late-game finisher.
-- **What Fools These Mortals Be**: removes their key card before you attack.
+- **Met By Moonlight**: Oberon's 5-value attack that places him next to Titania [1]. Bringing both into one zone baits the opponent in for A Momentary Glance, 2 damage to any fighter in her zone [1][2].
+- **But A Dream**: a 0-value defense that cancels the attack's effects, ignores its value and returns it to the attacker's hand [1]; a real pain to face [4].
+- **What Fools These Mortals Be**: removes a card from the opponent's hand [1]; clear the way for a big attack [2].
+- **Whisked Away**: 4 value, and a glamour discard places your fighter anywhere [1]; gets either fighter out of trouble or brings them together [2].
 
 ### Tips
-- Use Queen Of The Fairies only with 4 or 5 glamours discarded.
-- Keep Titania and Oberon close; many plays need both.
-- If you play against her, attack when she has no glamour face up.
+- Titania and Oberon are one of the best hero-and-sidekick pairs in the game [2].
+- With Glamour of Jealousy, swap to protect Titania or to save a focused Oberon [2].
+- Glamour of Greed lets her push back hard [4].
 
-### Further reading
-- [Unmatched – Titania](https://gridbeast.gg/unmatched-titania/): Gridbeast · written guide
-- [Tips for Bloody Mary vs Titania?](https://www.reddit.com/r/Unmatched/comments/1km9dy9/): Reddit: Entire_Cucumber_7539 · thread
-- [Titania - Unmatched Fighter Review](https://www.youtube.com/watch?v=adALr5SJjLc): To The Table Top! · video
-- [Strategy Sunday Vol. 16](https://www.youtube.com/watch?v=B6nC0b400-g): Karma · video
+### References
+1. Restoration Games. *Unmatched: Slings and Arrows*, Titania deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Titania." *Gridbeast*. https://gridbeast.gg/unmatched-titania/
+3. u/sersacu19. Comment on "Tips for Bloody Mary vs Titania?" by u/Entire_Cucumber_7539. *r/Unmatched*, Reddit, 14 May 2025. https://www.reddit.com/r/Unmatched/comments/1km9dy9/
+4. u/DavidChargos. Comment on "Tips for Bloody Mary vs Titania?" (see [3]).
+
+The glamour cards are not in `input/heroes.json`; their effects are as Gridbeast describes them.
+
+### Not cited
+- u/InterestingHouse5270, comment on "Tips for Bloody Mary vs Titania?" (read; about the other fighter)
+- [Titania - Unmatched Fighter Review](https://www.youtube.com/watch?v=adALr5SJjLc): To The Table Top! · video (not yet reviewed)
+- [Strategy Sunday Vol. 16](https://www.youtube.com/watch?v=B6nC0b400-g): Karma · video (not yet reviewed)
 
 ---
 
 <!-- id: the_wayward_sisters -->
 ## The Wayward Sisters
 
-**In short:** Three melee witches with 6 health each. Their played cards go into a cauldron, and mixing the right ingredient symbols lets them cast spells that heal, move fighters, deal unblockable damage or gain actions.
+**In short:** Three melee heroes with 6 health each and 2 movement, no sidekicks [1][2]. Their cards go into a cauldron instead of the discard pile; after attacking they may cast one spell whose ingredients are in the cauldron, then discard the whole cauldron [1]. Very versatile, but fragile [2].
 
-### Plan A: Brew spells
-**Goal:** Cast a useful spell after most attacks without wasting ingredients.
-**How to do it:** Bubbling Brew puts played cards into the cauldron instead of the discard pile. After you attack, you can cast one spell you have the ingredients for, which discards the whole cauldron. Each card shows an ingredient symbol. Snake + Bat: draw 1 and heal 1. Snake + Lizard Leg: move any fighter 3 spaces. Lizard Leg + Bat: 1 damage to a fighter sharing a zone with one of the Sisters. All three: gain an action. Keep the cauldron small; extra cards are lost when you cast. All-Seeing Familiar (4) returns a card from your discard pile to the cauldron, so it can complete almost any spell. Curious Familiar returns a cauldron card to your hand. Something Wicked This Way Comes casts any two different spells without ingredients and without emptying the cauldron.
-**Watch out for:** Which ingredients you get depends on your draw.
+### Plan A: Brew the right spell
+**Goal:** Cast the spell the moment needs, without wasting ingredients [2].
+**How to do it:** Every card shows one of three ingredient symbols [2]. Snake and bat: draw 1 and heal 1. Snake and lizard leg: move any fighter up to 3 spaces. Lizard leg and bat: 1 damage to a fighter sharing a zone with one of yours. All three: gain an action [2]. Which to aim for depends on the game and your hand: play the cards that line up with a spell [2]. Don't overfill the cauldron, since extra cards just cut how many spells you cast per game [2]. All-Seeing Familiar returns a card from your discard pile to the cauldron, and the attack card itself counts, so it can set up a spell from an empty cauldron [1][2]. Curious Familiar returns a cauldron card to your hand, to reuse it or avoid wasting an ingredient [1][2]. Something Wicked This Way Comes casts any two different spells with no ingredients and no discard; you only have two [1][2].
+**Watch out for:** Which ingredients you get is luck, though they are spread evenly enough that a spell is rarely out of reach [2].
 
-### Plan B: Spread out and defend
-**Goal:** Keep all three Sisters alive as long as possible.
-**How to do it:** If an effect hits "your hero", you choose which Sister it affects. The Stars Align is worth the number of different zones your fighters are in, up to 6 on some maps. Ward is your best defense: it places the attacker anywhere in your fighter's zone. Unnatural Remedy discards up to 3 cauldron cards to heal 1 each, so park a hurt Sister far away and heal her while defending with another. Pricking Of My Thumbs deals back the combat damage you took.
-**Watch out for:** Each lost Sister cuts your options. The Stars Align, especially, gets weaker.
+### Plan B: Spread out and survive
+**Goal:** Keep all three Sisters alive with good positioning and defense [2].
+**How to do it:** When an effect hits "your hero", you choose which Sister takes it [2][3]. The Stars Align is worth the number of zones your fighters are in, up to 6 on a big map; use it before anyone falls [1][2]. Unnatural Remedy turns spare cauldron cards into healing: keep the most hurt Sister away from combat and defend another with it to heal her [1][2].
+**Watch out for:** Each Sister has very little health [2].
 
 ### How they lose
-- Steady aggression picks off a Sister at a time; with each one gone, they get weaker.
-- Area damage (Little Red, Tomoe) hits several Sisters at once.
-- Attacks on their cauldron timing waste their ingredients.
+- Losing even one Sister badly hurts their damage and their kit [2][4][5]. One player disagrees: only a few cards care how many Sisters are left [6].
+- Steady pressure: they need luck every time, the opponent only once or twice [4]. Some found them easy to rush down [7].
+- Opponents who disrupt the cauldron, or stand at zone edges to dodge spell damage [6].
+- Multi-target and area damage [8][9].
 
 ### Key cards
-- **Something Wicked This Way Comes**: two free spells.
-- **All-Seeing Familiar**: flexible cauldron fixing.
-- **Ward**: their best defense; always use it to defend.
-- **Pricking Of My Thumbs**: punishes the finishing blow.
+- **Ward**: their best defense, despite being versatile [2]. It places the attacker anywhere in your fighter's zone [1], to reach ranged fighters or push melee ones away [2].
+- **Pricking Of My Thumbs**: a 2-value defense that deals back the combat damage you took [1]; good when they try to finish a weak Sister [2].
+- **All-Seeing Familiar**: lets you cast almost any spell you want [2].
+- **Double, Double** and **Toil And Trouble**: +1 for each different ingredient in the cauldron [1].
 
 ### Tips
-- Play The Stars Align early, before a Sister falls.
-- Count ingredients before attacking.
-- If you play against them, stand at the edge of zones to dodge their damage spell.
+- Unnatural Remedy can heal any fighter, including an ally in team games [1][2].
+- Plan positioning and spell timing carefully [2].
 
-### Further reading
-- [Unmatched – The Wayward Sisters](https://gridbeast.gg/unmatched-the-wayward-sisters/): Gridbeast · written guide
-- [How would you beat/counter the wayward sisters?](https://www.reddit.com/r/Unmatched/comments/1dxp4jn/): Reddit: Complex_Manner_7280 · thread
-- [The Wayward Sisters - Unmatched Fighter Review](https://www.youtube.com/watch?v=D2R-suPXFL4): To The Table Top! · video
-- [Strategy Sunday Vol. 15](https://www.youtube.com/watch?v=LVh50o5bbsc): Karma · video
+### References
+1. Restoration Games. *Unmatched: Slings and Arrows*, The Wayward Sisters deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – The Wayward Sisters." *Gridbeast*. https://gridbeast.gg/unmatched-the-wayward-sisters/
+3. u/TivaDi. Reply in "How would you beat/counter the wayward sisters?" by u/Complex_Manner_7280. *r/Unmatched*, Reddit, 7 July 2024. https://www.reddit.com/r/Unmatched/comments/1dxp4jn/
+4. u/OuroborosArchipelago. Comment on "How would you beat/counter the wayward sisters?" (see [3]). Repeated word for word by u/BlackCaligo.
+5. u/mateayat98. Comment on "How would you beat/counter the wayward sisters?" (see [3]).
+6. u/BrandoBombchu900. Comment on "How would you beat/counter the wayward sisters?" (see [3]).
+7. u/svvaynee. Comment on "How would you beat/counter the wayward sisters?" (see [3]).
+8. u/Ben__Harlan. Comment on "How would you beat/counter the wayward sisters?" (see [3]).
+9. u/Round-Walrus3175. Reply in "How would you beat/counter the wayward sisters?" (see [3]).
+
+The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
+
+### Not cited
+- Other comments on "How would you beat/counter the wayward sisters?" (read; name specific fighters, or no advice)
+- [The Wayward Sisters - Unmatched Fighter Review](https://www.youtube.com/watch?v=D2R-suPXFL4): To The Table Top! · video (not yet reviewed)
+- [Strategy Sunday Vol. 15](https://www.youtube.com/watch?v=LVh50o5bbsc): Karma · video (not yet reviewed)
 
 ---
 

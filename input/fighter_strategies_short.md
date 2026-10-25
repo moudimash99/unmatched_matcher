@@ -1591,75 +1591,94 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: hamlet -->
 ## Hamlet
 
-**In short:** A melee hit-and-run fighter who alternates draw turns (TO BE) with all-in attack turns (NOT TO BE).
+**In short:** A moody brawler who picks TO BE (more cards) or NOT TO BE (self-damage for +2 attacks) each turn; players split between blitzing and out-lasting [1][2][3].
 
-### Plan A: Build up, then go all in
-**Goal:** Turn a big hand into burst · **How:** TO BE to draw and position; NOT TO BE for +2 when your hand is ready · **Watch out:** the 2 self-damage with no attack is wasted.
+### Plan A: Hit and run
+**Goal:** Build on TO BE, burst on NOT TO BE [2] · **How:** fill your hand, then boost Cruel To Be Kind and double attack, taking the 2 damage on Rosencrantz & Guildenstern [1][2] · **Watch out:** it burns the deck fast [2].
 
-### Plan B: Stall
-**Goal:** Don't burn your deck · **How:** Method In The Madness to bottom cards without drawing · **Watch out:** play your healing cards too.
+### Plan B: Out-last them
+**Goal:** Win on deck advantage [3][4] · **How:** Method In The Madness puts cards back without drawing, keeping the deck big [1][3] · **Watch out:** without the schemes he fights himself [4].
 
 ### How they lose
-- Big printed attacks overwhelm him.
-- He draws through his deck too fast.
+- The wrong hand makes either choice a waste [3].
+- Big printed attacks overwhelm him [5].
 
 ### Key cards
-- **Method In The Madness**: his best card.
-- **Cruel To Be Kind**: boost it on NOT TO BE turns.
+- **Method In The Madness**: his best card [3].
+- **The Play's The Thing**: random discard and a heal; better as an attack [1][6].
 
 ### Tips
-- Put the NOT TO BE damage on Rosencrantz & Guildenstern.
-- Best against melee fighters.
+- Don't defend with the heal against Feint-heavy decks [3].
+- Read the opponent's plan and play against it [4].
+
+### References
+1. Restoration Games. *Unmatched: Slings and Arrows*, Hamlet deck.
+2. u/Horse0Course. Comment on "Hamlet strategy and matchups." *r/Unmatched*, Reddit, 2024. https://www.reddit.com/r/Unmatched/comments/1fe4nyh/
+3. u/TheEliteB3aver. Comment on "Hamlet tips please." *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1ozkzi3/
+4. u/Round-Walrus3175. Comment on "Hamlet tips please" (see [3]).
+5. u/Franjeims. "Tips on playing Shakespeare and Hamlet." *r/Unmatched*, Reddit, 2024. https://www.reddit.com/r/Unmatched/comments/1dwnu9r/
+6. u/Horse0Course. Reply in "Hamlet strategy and matchups" (see [2]).
 
 ---
 
 <!-- id: titania -->
 ## Titania
 
-**In short:** A ranged fairy queen who uses one glamour power at a time and discards them to power up her cards.
+**In short:** A fairy queen whose ongoing glamours shape the game; she burns through them to power up low-value cards, with Oberon hitting hard beside her [1][2].
 
-### Plan A: Spend your glamours
-**Goal:** Use each glamour, then fuel cards with it · **How:** Fairy Song becomes 5, Whisked Away places anywhere · **Watch out:** no glamour means no cancels.
+### Plan A: Cycle the glamours
+**Goal:** The right glamour up, and steady discards [2] · **How:** discard for Fairy Song, Whisked Away and the cancel on Protection Of The Fairy Woods; The Moon Looks Down recovers one [1][2] · **Watch out:** the order is luck [2].
 
-### Plan B: The Rhyme combo
-**Goal:** One huge turn · **How:** with Glamour of Rhyme, schemes are free; finish with Met By Moonlight or Queen Of The Fairies · **Watch out:** finding Rhyme is luck.
+### Plan B: The scheme chain
+**Goal:** Free schemes under Glamour of Rhyme [2] · **How:** Gift Of The Fair Folk, What Fools These Mortals Be, then Queen Of The Fairies or Met By Moonlight [1][2] · **Watch out:** Queen is weak until 4–5 glamours are gone [2].
 
 ### How they lose
-- Low printed values; cancels blank her.
-- Oberon dies early.
+- Many sidekicks or cancels against her [2].
+- No glamour up means no cancel on defense [3].
 
 ### Key cards
-- **But A Dream**: returns their card to their hand.
-- **Queen Of The Fairies**: +1 per discarded glamour.
+- **Met By Moonlight**: Oberon's 5, placing him beside her [1].
+- **But A Dream**: cancels, ignores and returns the attack [1].
 
 ### Tips
-- Keep Titania and Oberon close.
-- Save Queen Of The Fairies for late.
+- Use Glamour of Jealousy to protect Titania or save Oberon [2].
+- Bait opponents into her zone for A Momentary Glance [2].
+
+### References
+1. Restoration Games. *Unmatched: Slings and Arrows*, Titania deck.
+2. Gridbeast. "Unmatched – Titania." https://gridbeast.gg/unmatched-titania/
+3. u/sersacu19. Comment on "Tips for Bloody Mary vs Titania?" *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1km9dy9/
 
 ---
 
 <!-- id: the_wayward_sisters -->
 ## The Wayward Sisters
 
-**In short:** Three fragile witches who brew spells from the ingredient symbols on their played cards.
+**In short:** Three fragile witches who brew ingredients in a cauldron to cast spells after attacking: healing, movement, damage or an extra action [1][2].
 
-### Plan A: Brew spells
-**Goal:** Cast a spell after most attacks · **How:** match two or three ingredients; All-Seeing Familiar fixes the mix · **Watch out:** extra cauldron cards are lost when you cast.
+### Plan A: Brew the right spell
+**Goal:** Cast what the moment needs [2] · **How:** play cards that match a spell; All-Seeing Familiar and Curious Familiar fix the cauldron [1][2] · **Watch out:** don't overfill the cauldron [2].
 
-### Plan B: Spread out and defend
-**Goal:** Keep all three alive · **How:** The Stars Align counts your zones; Ward and Unnatural Remedy on defense · **Watch out:** each lost Sister weakens them.
+### Plan B: Spread out and survive
+**Goal:** Keep all three alive [2] · **How:** The Stars Align across zones, Unnatural Remedy for healing, Ward on defense [1][2] · **Watch out:** 6 health each [2].
 
 ### How they lose
-- Focused aggression kills one Sister after another.
-- Area damage hits several at once.
+- Losing one Sister hurts badly [2][3].
+- Steady pressure and area damage [3][4].
 
 ### Key cards
-- **Something Wicked This Way Comes**: two free spells.
-- **Ward**: their best defense.
+- **Ward**: their best defense [2].
+- **Something Wicked This Way Comes**: two free spells [1].
 
 ### Tips
-- Keep the cauldron small.
-- Hide a hurt Sister and heal her.
+- You choose which Sister an effect on "your hero" hits [2].
+- Use The Stars Align before anyone falls [2].
+
+### References
+1. Restoration Games. *Unmatched: Slings and Arrows*, The Wayward Sisters deck.
+2. Gridbeast. "Unmatched – The Wayward Sisters." https://gridbeast.gg/unmatched-the-wayward-sisters/
+3. u/OuroborosArchipelago. Comment on "How would you beat/counter the wayward sisters?" *r/Unmatched*, Reddit, 2024. https://www.reddit.com/r/Unmatched/comments/1dxp4jn/
+4. u/Ben__Harlan. Comment on "How would you beat/counter the wayward sisters?" (see [3]).
 
 ---
 
