@@ -705,50 +705,63 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: sun_wukong -->
 ## Sun Wukong
 
-**In short:** A trickster whose Clones play his whole deck while he wins the guessing game with big attacks and defenses.
+**In short:** A trickster who spends health on Clones that can play any of his cards, forcing opponents to guess at every block [1][2][3].
 
-### Plan A: Fight through the Clones
-**Goal:** Clones fight, the real Wukong stays safe · **How:** summon Clones for 1 health; Sly Monkey and Infinite Strikes · **Watch out:** every Clone costs health.
+### Plan A: Hide behind the Clones
+**Goal:** Let Clones fight while Wukong stays safe [2] · **How:** summon Clones as walls or distractions; Sly Monkey swaps him out [2][4] · **Watch out:** too many Clones cost too much health [2].
 
-### Plan B: The trickster's mind game
-**Goal:** Make them guess wrong · **How:** Ox Form (7, can't be canceled) versus Ruyi Jingo Bang (0, but a 4-value bonus attack if they defend) · **Watch out:** predictable plays get countered.
+### Plan B: The trickster's guessing game
+**Goal:** Make every block a guess [3] · **How:** mix Ruyi Jingo Bang, Taunting Laughter and Ox Form, recovering Ox with 72 Transformations [1][3] · **Watch out:** predicted, his cards are easy to answer [2].
 
 ### How they lose
-- Area damage wipes the Clones.
-- No cancels and low card draw.
+- No cancels; effects always land [5].
+- Area damage clears his Clones [5].
 
 ### Key cards
-- **Ox Form**: 7 value; recur it with 72 Transformations.
-- **Golden Chain Mail**: reflects combat damage.
+- **Ox Form**: an uncancellable 7 [1].
+- **Golden Chain Mail**: turns your damage back on the attacker [1].
 
 ### Tips
-- Summon Clones with a purpose.
-- Save Bewilderment for the real Wukong.
+- Save Bewilderment for the real Wukong [2].
+- Use Phoenix Form before it's discarded [2].
+
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 2*, Sun Wukong deck.
+2. Gridbeast. "Unmatched – Sun Wukong." https://gridbeast.gg/unmatched-sun-wukong/
+3. TFJ383. "An Unmatched Roster: Humble Beginnings." *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3090133/
+4. TFJ383. "An Unmatched Roster: Twice the Pride, Double the Fall." *BoardGameGeek*, 2024. https://boardgamegeek.com/thread/3286237/
+5. u/Silly_Shenanigans. Comment on "Weekly Discussion: Battling Sun Wukong." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1rr1gva/
 
 ---
 
 <!-- id: yennenga -->
 ## Yennenga
 
-**In short:** A tanky ranged leader who passes damage to her Archers and grinds out value.
+**In short:** A versatile ranged leader who shunts damage onto her two Archers and rarely holds a bad card [1][2][3].
 
-### Plan A: Shield with Archers
-**Goal:** Trade efficiently · **How:** redirect damage to Archers in her zone; One With The Land heals all three · **Watch out:** zone-wide area damage.
+### Plan A: Lead from the front
+**Goal:** Attack with all three fighters while staying out of reach [2] · **How:** Rain of Arrows, Jaws of the Beast and Master of the Hunt [1][2] · **Watch out:** don't let Surprise Volley be Feinted [2].
 
-### Plan B: Chain actions
-**Goal:** Burst through their hand · **How:** Rain of Arrows (two attacks) and Master of the Hunt (2 extra actions) · **Watch out:** she has no Feints.
+### Plan B: The Archers soak the damage
+**Goal:** Use the Archers as extra health [2] · **How:** keep them in her zone and heal them with One With the Land [2] · **Watch out:** don't sacrifice them carelessly [2].
 
 ### How they lose
-- No cancels, so tricks go through.
-- Area damage strips her Archers.
+- No cancels [2][4].
+- Area attacks on her and her Archers [2].
 
 ### Key cards
-- **Stallion Charge**: a big repositioning move, best on defense.
-- **Jaws of the Beast**: +1 per zone the enemy is in.
+- **Rain of Arrows**: two attacks in one [2].
+- **Stallion Charge**: move 5 on defense [2].
 
 ### Tips
-- Keep the Archers at 1 health as a wall.
-- Keep your hand big.
+- Keep your hand size high [3].
+- Mix up which cards the Archers attack with [2].
+
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 2*, Yennenga deck.
+2. Gridbeast. "Unmatched – Yennenga." https://gridbeast.gg/unmatched-yennenga/
+3. u/PrinceOfAsphodel. Comment on "Mulligan Mondays: Yennenga." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1tgso92/
+4. u/LabRat2329. "Weekly Discussion: Battling Yennenga." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1s3hv2c/
 
 ---
 

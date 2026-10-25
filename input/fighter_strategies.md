@@ -1146,82 +1146,105 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: sun_wukong -->
 ## Sun Wukong
 
-**In short:** A trickster who summons 1-health Clones that can play every card in his deck, keeps the real monkey safe, and wins the guessing game with huge attacks and defenses.
+**In short:** A melee hero with 17 health and 2 movement [1]. At the start of his turn he may take 1 damage to summon a 1-health Clone next to him, up to 3 [1]. Every card in his deck can be played by Wukong or any Clone [1][2], which makes him a master of bluffing [3][4]. Several sources find him frustrating to face [4][5].
 
-### Plan A: Fight through the Clones
-**Goal:** Let the Clones do the dirty work while the real Wukong stays out of reach.
-**How to do it:** At the start of your turn, take 1 damage to summon a Clone next to him. Clones can use every card in his deck, so treat them as extra Wukongs. Sly Monkey summons a Clone in his space and moves the real Wukong elsewhere in his zone. Infinite Strikes gets +1 for each other friendly fighter next to the target and gains an action. Phoenix Form heals 1 for each Clone on the board.
-**Watch out for:** Every Clone costs 1 health. Don't summon so many that you bleed yourself out, and keep them spread against area damage.
+### Plan A: Hide behind the Clones
+**Goal:** Keep the real Wukong safe while Clones do the fighting [2][6].
+**How to do it:** Treat Clones as Wukong himself while keeping his body out of danger [2]. A wall of Clones can keep melee fighters without area damage from ever reaching him [4], and since each Clone costs only 1 health, he loses little per combat [4]. Sly Monkey (4 copies) leaves a Clone in his space and places Wukong elsewhere in his zone [1], a free Clone and an escape [2]. Phoenix Form heals 1 for each Clone on the board [1]; summon all you can while you hold it, and play it before it's discarded [2].
+**Watch out for:** Gridbeast disagrees with the full wall: summoning too many Clones costs too much health and invites area attacks and schemes, so it summons them mainly as distractions [2].
 
-### Plan B: The trickster's mind game
-**Goal:** Make the opponent guess wrong every combat.
-**How to do it:** Ox Form is a 7-value attack whose effect can't be canceled. Ruyi Jingo Bang is worth 0, but if they defend it triggers a second attack worth 4. Opponents never know whether a 7 or a 0 is coming. Taunting Laughter makes them discard a card or have their card's value ignored. 72 Transformations brings a Form card back from your discard pile, so you can play Ox Form many times.
-**Watch out for:** Predictable plays get countered. Opponents just don't defend against Ruyi Jingo Bang, or bait his strong defenses with low attacks.
+### Plan B: The trickster's guessing game
+**Goal:** Make every block a guess [3][4].
+**How to do it:** Ruyi Jingo Bang attacks for 0, but a defense card against it triggers a second, 4-value attack [1]. Taunting Laughter makes the opponent discard a card or lose their defense value [1]. Ox Form attacks for 7 and can't be cancelled, though a defender who played a card may boost it [1]. Opponents learn not to block the first two, then take 7 from Ox Form [3]; making them expect Ruyi Jingo Bang is a good time for Ox Form [2]. 72 Transformations returns a Form card from your discard pile [1], so Ox Form can be played up to five times [3]. Attack from a distance with a Clone so Wukong risks nothing [3].
+**Watch out for:** Predicted, his cards are easy to answer: low attacks bait his big defenses, and not defending blunts Ruyi Jingo Bang and Taunting Laughter [2]. Keep 72 Transformations from being Feinted [2].
 
 ### How they lose
-- Area and auto damage wipe out the Clones and cost him health to replace them.
-- He has no cancel cards and little card draw, so discard effects, hand-reading and exhaustion wear him down.
-- The opponent reads his attacks and shuts down the guessing game.
+- He has no cancel cards, so effects and scheme damage always land [7][8].
+- Area damage and effects that hit several fighters clear his Clones [7][8][9].
+- Low card draw [7][9].
+- Hand knowledge and discards [5].
+- Each new Clone drains his health [5][2].
 
 ### Key cards
-- **Ox Form**: a 7-value attack that can't be canceled; bring it back with 72 Transformations.
-- **Golden Chain Mail**: a 4-value defense that sends the combat damage you would take to the attacker instead.
-- **Tortoise Form**: a 5-value defense; the opponent may boost their attack.
-- **Bewilderment**: prevents all damage and moves the real Wukong anywhere. Save it for him.
+- **Ox Form**: his most fearsome attack [2].
+- **Golden Chain Mail**: a 4-value defense that sends the combat damage you would take to the attacker instead [1].
+- **Bewilderment**: a 0-value defense that prevents all damage and moves your fighter anywhere [1]. Save it for the real Wukong [2].
+- **Tortoise Form**: a 5-value defense that lets the attacker boost [1].
+- **Infinite Strikes**: a 2-value attack, +1 per other friendly fighter adjacent to the target, and gains an action [1]; up to 5 with all three Clones [2].
 
 ### Tips
-- Don't open by summoning every Clone; summon them when they serve a purpose.
-- Play Phoenix Form early, before a discard effect takes it.
-- Look for pins with spread-out Clones; he's even stronger in team games.
+- Spread the Clones, always look for a pin, and stay one maneuver from an attack [10].
+- One player recovers Ox Form rather than Phoenix Form when playing aggressively [10].
+- Fiery Eyes That See can bury a card the opponent needs at the bottom of their deck [2].
 
-### Further reading
-- [Unmatched – Sun Wukong](https://gridbeast.gg/unmatched-sun-wukong/): Gridbeast · written guide
-- [Wukong tips vs Sherlock](https://www.reddit.com/r/Unmatched/comments/1mirepy/): Reddit: tonigami_ · thread
-- [Weekly Discussion: Battling Sun Wukong (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1rr1gva/): Reddit: LabRat2329 · thread
-- [Advice on playing Wukong into Yennenga?](https://www.reddit.com/r/Unmatched/comments/1rzaalc/): Reddit: GreenBanditOfTruth · thread
-- [Sun Wukong - Unmatched Fighter Review](https://www.youtube.com/watch?v=JUVKcHjIVa8): To The Table Top! · video
-- [Sun Wukong (Unmatched Strategy Guide 25)](https://www.youtube.com/watch?v=DpTCxwW3w_E): Baked Goods · video
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 2*, Sun Wukong deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Sun Wukong." *Gridbeast*. https://gridbeast.gg/unmatched-sun-wukong/
+3. TFJ383. "An Unmatched Roster: Humble Beginnings." *BoardGameGeek*, 26 May 2023. https://boardgamegeek.com/thread/3090133/an-unmatched-roster-humble-beginnings
+4. TFJ383. "An Unmatched Roster: Twice the Pride, Double the Fall." *BoardGameGeek*, 18 April 2024. https://boardgamegeek.com/thread/3286237/an-unmatched-roster-twice-the-pride-double-the-fal
+5. u/Encatar. Comment on "Weekly Discussion: Battling Sun Wukong (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 11 March 2026. https://www.reddit.com/r/Unmatched/comments/1rr1gva/
+6. u/Chidwick. Comment on "Wukong tips vs Sherlock" by u/tonigami_. *r/Unmatched*, Reddit, 6 August 2025. https://www.reddit.com/r/Unmatched/comments/1mirepy/
+7. u/Silly_Shenanigans. Comment on "Weekly Discussion: Battling Sun Wukong" (see [5]).
+8. u/GambuzinoSaloio. Comment on "Weekly Discussion: Battling Sun Wukong" (see [5]).
+9. u/Independent_Act_6367. Comment on "Weekly Discussion: Battling Sun Wukong" (see [5]).
+10. u/Muddshoe. Comment on "Wukong tips vs Sherlock" (see [6]).
+
+### Not cited
+- [Advice on playing Wukong into Yennenga?](https://www.reddit.com/r/Unmatched/comments/1rzaalc/): Reddit: GreenBanditOfTruth · thread (read; matchup-specific)
+- [Sun Wukong - Unmatched Fighter Review](https://www.youtube.com/watch?v=JUVKcHjIVa8): To The Table Top! · video (not yet reviewed)
+- [Sun Wukong (Unmatched Strategy Guide 25)](https://www.youtube.com/watch?v=DpTCxwW3w_E): Baked Goods · video (not yet reviewed)
 
 ---
 
 <!-- id: yennenga -->
 ## Yennenga
 
-**In short:** A tanky ranged leader who passes damage to her Archers, fights from the front line, and grinds out value with a deck that has almost no bad cards.
+**In short:** A ranged hero with 15 health and 2 movement, plus two Archers with 2 health each [1]. When Yennenga would take damage, you may assign any of it to Archers in her zone instead [1]. Sources rate her strong and versatile [2][3], with high card quality and few bad cards [3][4]; one analyst calls her the most engaging of the top-tier fighters, playing an honest game with clear weaknesses [5].
 
-### Plan A: Lead from the front, shield with Archers
-**Goal:** Trade efficiently, because her Archers soak the damage meant for her.
-**How to do it:** Whenever Yennenga would take damage, you can move any of it onto Archers in her zone. They have 2 health each, so keep them alive at 1 health as a wall rather than throwing them away. One With The Land moves your fighters 2 spaces, heals each by 1 and draws a card, which is effectively 3 healing. Bring fallen Archers back with Surprise Volley or Shield Formation. Stay close enough to attack, but where the enemy has to maneuver to reach you.
-**Watch out for:** Attacks that hit everything in a zone damage her and her Archers at once.
+### Plan A: Lead from the front
+**Goal:** Stand close enough that she and her Archers can all attack, but far enough that the opponent must maneuver to reach her [2].
+**How to do it:** Rain of Arrows is a 3-value attack with a second 3-value attack after it [1], forcing two defense cards for one of your cards [2]. Jaws of the Beast gains +1 for each zone the target is in [1], punishing ranged opponents on multi-zone spaces [2]. Master of the Hunt gains 2 actions [1]: three actions in one turn can win the game, so don't waste it [2]. She has enough extra actions to blow through an opponent's hand in one turn [6]. Mix Skirmish and Momentous Shift into the Archers' attacks so you're not predictable [2].
+**Watch out for:** Surprise Volley can revive an Archer in the opponent's zone as the attacker, or else gain an action [1]. Only take the action if it lets you finish the opponent, and don't let it be Feinted [2].
 
-### Plan B: Chain actions and overwhelm
-**Goal:** Burst through the opponent's hand in one big turn.
-**How to do it:** Rain of Arrows triggers a second 3-value attack, so one action costs them two defenses. Surprise Volley gains an action if you don't bring back an Archer. Master of the Hunt gains 2 actions, so you can attack three times. Jaws of the Beast gets +1 for each zone the enemy is in, which punishes ranged fighters on multi-zone spaces.
-**Watch out for:** She has no Feints. Don't let a Feint cancel Surprise Volley.
+### Plan B: The Archers soak the damage
+**Goal:** Use the Archers as extra health [2][6].
+**How to do it:** Keep the Archers in her zone, behind her against melee fighters [2]. Gridbeast spreads damage so each Archer survives on 1 health, then uses them as a wall [2]. One With the Land moves all your fighters 2, heals each by 1 and draws a card [1], best when both Archers are at 1 health [2]. Shield Formation is a 3-value defense: the opponent discards a card or you revive an Archer [1]. Stallion Charge (3) moves her up to 5 through enemies, dealing 1 damage to each [1], and is ideal on defense [2].
+**Watch out for:** Don't throw Archers away carelessly [2]. If opponents separate her from her Archers, she loses that protection [6].
 
 ### How they lose
-- She has no cancel effects, so opponents' tricks always go through.
-- Area damage and hit-everything effects strip her Archers.
-- Steady pressure until her hand is low, then an all-out attack.
+- She has no cancel cards [2][7][8].
+- Attacks that hit every fighter in a zone [2], and efficient area damage on her Archers [8].
+- Opponents who avoid multi-zone spaces blunt Jaws of the Beast [7].
+- Steady pressure until her hand is low [6].
 
 ### Key cards
-- **Stallion Charge**: a 3-value versatile that moves her 5 spaces through enemies, dealing 1 damage to each. Great on defense.
-- **Rain of Arrows**: two attacks for one action.
-- **Pin the Prey** (Archers): moves the enemy 4 spaces and makes them discard a card.
-- **Master of the Hunt**: gain 2 actions.
+- **Rain of Arrows**: two attacks for one card [1][2].
+- **Master of the Hunt**: three actions in one turn [1][2].
+- **Stallion Charge**: her best defensive repositioning [2].
+- **Pin the Prey**: an Archer card that moves the opponent up to 4 and makes them discard [1]. Disruptive, and a Feint spent on it is one fewer for your big attacks [2].
+- **Point Blank**: 2 damage to an adjacent opponent [1]. Risky on defense unless you're ahead [2].
 
 ### Tips
-- Use Point Blank (2 damage to an adjacent enemy) on defense only when you're ahead.
-- Divide and Conquer is worth 4 when the Archer is outside her zone.
-- Keep your hand big; her card quality carries the game.
+- Keep your hand size high; her card quality does the rest [4].
+- Divide and Conquer is worth 4 when the Archer is outside Yennenga's zone, a good defense for a separated Archer [1][2].
+- She has many versatile cards, so she always has a defense, though usually only a 3 [9].
 
-### Further reading
-- [Unmatched – Yennenga](https://gridbeast.gg/unmatched-yennenga/): Gridbeast · written guide
-- [Advice on playing Wukong into Yennenga?](https://www.reddit.com/r/Unmatched/comments/1rzaalc/): Reddit: GreenBanditOfTruth · thread
-- [Weekly Discussion: Battling Yennenga (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1s3hv2c/): Reddit: LabRat2329 · thread
-- [Yennenga against vs Achilles](https://boardgamegeek.com/thread/3260485/yennenga-against-vs-achilles): BoardGameGeek · thread (not checked: BoardGameGeek blocks automated access)
-- [Yennenga (Unmatched Strategy Guide 23)](https://www.youtube.com/watch?v=1y_oc8YJdOQ): Baked Goods · video
-- [Yennenga - Unmatched Fighter Review](https://www.youtube.com/watch?v=LCGjjjleRBs): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Battle of Legends, Volume 2*, Yennenga deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Yennenga." *Gridbeast*. https://gridbeast.gg/unmatched-yennenga/
+3. u/d_Shirt. Comment on "Weekly Discussion: Battling Yennenga (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 25 March 2026. https://www.reddit.com/r/Unmatched/comments/1s3hv2c/
+4. u/PrinceOfAsphodel. Comment on "Mulligan Mondays: Yennenga (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 18 May 2026. https://www.reddit.com/r/Unmatched/comments/1tgso92/
+5. TFJ383. "An Unmatched Roster: Twice the Pride, Double the Fall." *BoardGameGeek*, 18 April 2024. https://boardgamegeek.com/thread/3286237/an-unmatched-roster-twice-the-pride-double-the-fal
+6. u/NommyboB. Comment on "Weekly Discussion: Battling Yennenga" (see [3]).
+7. u/LabRat2329. "Weekly Discussion: Battling Yennenga" (see [3]).
+8. u/d_Shirt. Comment on "Weekly Discussion: Battling Yennenga" (see [3]).
+9. u/nick_gadget. Comment on "Got my first unmatched set! Any tips for Achilles?" by u/dzelaaaaa. *r/Unmatched*, Reddit, 24 December 2025. https://www.reddit.com/r/Unmatched/comments/1puv37x/
+
+### Not cited
+- [Advice on playing Wukong into Yennenga?](https://www.reddit.com/r/Unmatched/comments/1rzaalc/): Reddit: GreenBanditOfTruth · thread (read; matchup-specific)
+- [Yennenga against vs Achilles](https://boardgamegeek.com/thread/3260485/yennenga-against-vs-achilles): BoardGameGeek · thread (read; matchup-specific)
+- [Yennenga (Unmatched Strategy Guide 23)](https://www.youtube.com/watch?v=1y_oc8YJdOQ): Baked Goods · video (not yet reviewed)
+- [Yennenga - Unmatched Fighter Review](https://www.youtube.com/watch?v=LCGjjjleRBs): To The Table Top! · video (not yet reviewed)
 
 ---
 
