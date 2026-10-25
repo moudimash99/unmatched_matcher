@@ -1950,21 +1950,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: chupacabra -->
 ## Chupacabra
 
-**In short:** A fast, hungry predator who draws after every attack and gets stronger at 7 health or less [1][2][3].
+**In short:** Chupacabra is a fast, hungry predator who can draw after every attack and grows stronger at 7 health or less [1][2][3].
 
 ### Plan A: Hunt them down
-**Goal:** Attack every turn and out-draw them [3] · **How:** move 3, Traveler of the night and Unsettle keep them in reach and short of cards [1][3] · **Watch out:** overdrawing into exhaustion [3].
+**Goal:** Attack every turn and out-draw them [3] · **How:** Use move 3 and Traveler of the night to stay in reach, and Unsettle to cut their hand [1][3] · **Watch out:** Drawing too much brings exhaustion [3].
 
 ### Plan B: Live on the edge
-**Goal:** Sit at 7 health or below [2] · **How:** Feeding and Wounded beast power up; Ravenous lunge and Tooth and tail keep him alive [1][2] · **Watch out:** combo opponents can finish him [4].
+**Goal:** Stay at 7 health or below [2] · **How:** Feeding and Wounded beast become stronger, while Ravenous lunge and Tooth and tail keep him alive [1][2] · **Watch out:** Combo opponents can finish him [4].
 
 ### How they lose
-- Exhaustion [3].
-- Long games [2].
+- Excessive draw leads to exhaustion [3].
+- He fares worse in long games [2].
 
 ### Key cards
-- **The more they struggle**: twice their card's printed value [1].
-- **Blood in the air**: boostable after a won combat [1].
+- **The more they struggle**: Worth twice the printed value of their card [1].
+- **Blood in the air**: Can be boosted after a won combat [1].
 
 ### Tips
 - You don't have to draw every time; it depends on the opponent [5].
@@ -1983,21 +1983,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: loki -->
 ## Loki
 
-**In short:** A trickster who hands his Trick cards to the opponent, then punishes a full hand with Underhanded, Shapeshifter and Ragnarök [1][2][3].
+**In short:** Loki is a trickster who passes his Trick cards to the opponent, then punishes their full hand with Underhanded, Shapeshifter and Ragnarök [1][2][3].
 
 ### Plan A: Force the initiative
-**Goal:** Make them act and fill their hand [2][3] · **How:** walk away so they must boost or maneuver; attack with Underhanded and Shapeshifter for value [1][3] · **Watch out:** opponents who play his Tricks without fear [4].
+**Goal:** Force them to act and fill their hand [2][3] · **How:** Walk away to force boosts or maneuvers, then use Underhanded and Shapeshifter as strong attacks [1][3] · **Watch out:** Opponents can play his Tricks without fear [4].
 
 ### Plan B: Set up Ragnarök
-**Goal:** +3 per Trick in their hand [1] · **How:** defense Trick, versatile Trick, then scheme Trick into Ragnarök [5] · **Watch out:** expect a 6 at best [3].
+**Goal:** Gain +3 per Trick in their hand [1] · **How:** Play the defense Trick, then the versatile Trick, followed by the scheme Trick and Ragnarök [5] · **Watch out:** Expect a 6 at best [3].
 
 ### How they lose
-- Low printed values and small hands [6].
-- Sidekick body blocks [7].
+- Low printed values and small hands limit his damage [6].
+- Sidekicks can block his path [7].
 
 ### Key cards
-- **Looking for trouble**: picks the card they must play [1].
-- **Laevateinn**: defense, or a way to take back Tricks [6].
+- **Looking for trouble**: Chooses the card they must play [1].
+- **Laevateinn**: Serves as a defense or retrieves Tricks [6].
 
 ### Tips
 - Don't boost your movement [2].
@@ -2017,25 +2017,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: pandora -->
 ## Pandora
 
-**In short:** A push-your-luck fighter who opens her box of Miseries each turn, trading self-damage for cards that scale with what she reveals [1][2].
+**In short:** Pandora opens her box of Miseries each turn, pushing her luck as she trades self-damage for cards that grow stronger with each revealed Misery [1][2].
 
 ### Plan A: Flip small, play big
-**Goal:** Aggressive cards, cautious flips [3] · **How:** flip once unless you need more; stop after Misfortune [4][5] · **Watch out:** no big box turn with a hand of defenses [4].
+**Goal:** Play cards aggressively and flip cautiously [3] · **How:** Flip once unless you need more, and stop after Misfortune [4][5] · **Watch out:** Avoid a big box turn with only defenses in hand [4].
 
 ### Plan B: Wait for the big turn
-**Goal:** One crazy turn, healing in between [6] · **How:** bait Feints, then Hera's Curiosity with many Miseries out; Hindsight recurs it [1][4][5] · **Watch out:** Feinted heals [2].
+**Goal:** Find one explosive turn, healing in between [6] · **How:** Bait Feints before playing Hera's Curiosity with many Miseries revealed; use Hindsight to recover it [1][4][5] · **Watch out:** Feints can cancel healing [2].
 
 ### How they lose
-- Terrible defenses [3].
+- Her defenses are poor [3].
 - Low health shuts off her ability [7].
 
 ### Key cards
-- **Aphrodite's Beauty**: cancels and heals per Misery [1].
-- **Hera's Curiosity**: +1 per revealed Misery [1].
+- **Aphrodite's Beauty**: Cancels effects and heals per Misery [1].
+- **Hera's Curiosity**: Gains +1 per revealed Misery [1].
 
 ### Tips
-- Play safe with few Miseries, big with many [8].
-- Learn when to risk it and when not to [4].
+- Play cautiously with few Miseries and commit to bigger plays with many [8].
+- Learn when a risk is worth taking [4].
 
 ### References
 1. Restoration Games. *Unmatched: Battle of Legends, Volume 3*, Pandora deck.
@@ -2052,17 +2052,17 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: leonardo -->
 ## Leonardo
 
-**In short:** The tactical leader: he nudges any fighter 1 space each turn to set up clean fights alongside Splinter [1][2].
+**In short:** Leonardo is a tactical leader who nudges any fighter 1 space each turn to set up clean fights alongside Splinter [1][2].
 
 ### Plan A: Set up clean engagements
-**Goal:** Win the positioning [2] · **How:** his ability, Fearless leader and Leonardo leads [1][2] · **Watch out:** not yet covered by the sources.
+**Goal:** Secure favorable positioning [2] · **How:** Use his ability, Fearless leader and Leonardo leads [1][2] · **Watch out:** The sources do not yet cover his weaknesses.
 
 ### How they lose
-- Not yet covered by the sources.
+- The sources do not yet explain how he loses.
 
 ### Key cards
-- **Katana**: a plain 6 [1].
-- **I have a plan**: cancel and ignore for a discard [1].
+- **Katana**: A straightforward value of 6 [1].
+- **I have a plan**: Discard a card to cancel effects and ignore the opposing card's value [1].
 
 ### Tips
 - His ability can move opponents too [2].
@@ -2076,21 +2076,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: donatello -->
 ## Donatello
 
-**In short:** A planner who stacks his deck with his maneuvers, builds permanent inventions, then strikes with boosted attacks and automatic damage [1][2][3].
+**In short:** Donatello uses maneuvers to arrange his deck and builds permanent inventions before striking with boosted attacks and automatic damage [1][2][3].
 
 ### Plan A: Stack the deck, then strike
-**Goal:** Wait for Electro grenade's +1, then go all in [3][4] · **How:** bottom your boostables, attack only with weak cards, keep Metalhead back [3] · **Watch out:** he draws through his deck fast [3].
+**Goal:** Wait for Electro grenade's +1, then go all in [3][4] · **How:** Put boostable cards on the bottom of your deck, attack only with weak cards and keep Metalhead back [3] · **Watch out:** His draw takes him through the deck quickly [3].
 
 ### Plan B: Pile up automatic damage
-**Goal:** Damage defenses can't stop [5] · **How:** Bo staff and Party wagon!, recurred with Thinking ahead and Donatello does machines; Smoke bomb for big turns [1][4][5] · **Watch out:** Thinking ahead can whiff [6].
+**Goal:** Deal damage defenses cannot stop [5] · **How:** Recover Bo staff and Party wagon! with Thinking ahead and Donatello does machines; use Smoke bomb for big turns [1][4][5] · **Watch out:** Thinking ahead can fail to win [6].
 
 ### How they lose
-- Blocked or cancelled recursion [6].
-- Overdrawing [3].
+- Blocks and cancels can prevent him from recovering cards [6].
+- Excessive draw runs down his deck [3].
 
 ### Key cards
-- **Electro grenade**: permanent +1 to attacks [1].
-- **Smoke bomb**: actions now, and an action per scheme later [1].
+- **Electro grenade**: Grants a permanent +1 to attacks [1].
+- **Smoke bomb**: Grants actions immediately and an action per scheme later [1].
 
 ### Tips
 - Poke and run until your combo turns [4].
@@ -2109,21 +2109,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: raphael -->
 ## Raphael
 
-**In short:** A tough brawler who gains an action the first time he loses a combat each turn, and keeps up relentless pressure [1][2][3].
+**In short:** Raphael sustains relentless pressure as a tough brawler, gaining an action the first time he loses a combat on each of his turns [1][2][3].
 
 ### Plan A: Keep running at them
-**Goal:** Never let them feel safe [3] · **How:** attack with red cards, save the rest for Unbridled rage; Casey pins and burns defenses [3][4][5] · **Watch out:** don't overextend [6].
+**Goal:** Never let them feel safe [3] · **How:** Attack with red cards and save the rest for Unbridled rage, while Casey pins opponents and draws out defenses [3][4][5] · **Watch out:** Don't overextend [6].
 
 ### Plan B: Lean on a small defensive core
-**Goal:** Block with few cards [3] · **How:** Relentless, Sai and Heroes in a half shell; take an undefended hit sometimes [3][4] · **Watch out:** don't dump every defense into Unbridled rage [4].
+**Goal:** Rely on a small set of blocks [3] · **How:** Block with Relentless, Sai and Heroes in a half shell, occasionally taking an undefended hit [3][4] · **Watch out:** Don't dump every defense into Unbridled rage [4].
 
 ### How they lose
-- Pressure once he overextends [6].
-- Passive play runs him out of defenses [7].
+- Pressure punishes overextension [6].
+- Passive play leaves him short of defenses [7].
 
 ### Key cards
-- **Unbridled rage**: +2 per defense or versatile discarded [1].
-- **Relentless**: play it as soon as you get it [3].
+- **Unbridled rage**: Gains +2 per defense or versatile card discarded [1].
+- **Relentless**: Play it as soon as you get it [3].
 
 ### Tips
 - A big first attack can catch them out [3].
@@ -2143,17 +2143,17 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: michelangelo -->
 ## Michelangelo
 
-**In short:** The agile wild card: a 3-card hand he constantly cycles, lots of action gain, and a well-timed heavy hit [1][2].
+**In short:** Michelangelo is the agile wild card, cycling a 3-card hand and gaining plenty of actions as he prepares a well-timed heavy hit [1][2].
 
 ### Plan A: Cycle and burst
-**Goal:** Set up the perfect heavy hit [2] · **How:** draw after every attack or scheme; Boisterous beatdown and Hard-hitting investigation gain actions, Cowabunga!! grows with each card played [1] · **Watch out:** not yet covered by the sources.
+**Goal:** Set up the perfect heavy hit [2] · **How:** Draw after each attack or scheme, gain actions with Boisterous beatdown and Hard-hitting investigation, and build Cowabunga!! with each card played [1] · **Watch out:** The sources do not yet cover his weaknesses.
 
 ### How they lose
-- Not yet covered by the sources.
+- The sources do not yet explain how he loses.
 
 ### Key cards
-- **Guaranteed delivery**: cancel, or draw 2 on an empty hand [1].
-- **Heroes in a half shell**: a plain 5 [1].
+- **Guaranteed delivery**: Cancels effects, or draws 2 with an empty hand [1].
+- **Heroes in a half shell**: A straightforward value of 5 [1].
 
 ### Tips
 - Strike fast and opportunistically [2].
@@ -2167,21 +2167,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: shredder -->
 ## Shredder
 
-**In short:** A Foot Clan master who spreads soldiers across the board, attacking through them and building towards one huge multi-action turn [1][2][3].
+**In short:** Shredder is a Foot Clan master who spreads soldiers across the board to attack through them and prepare one huge turn with multiple actions [1][2][3].
 
 ### Plan A: Build the fortress
-**Goal:** One enormous turn [3][4] · **How:** camp on a well-connected space, ring Shredder with soldiers, then Obedient Subjects into Swarming Strikes [1][4] · **Watch out:** he wins big or gets trampled [4].
+**Goal:** Prepare one enormous turn [3][4] · **How:** Hold a well-connected space, surround Shredder with soldiers, then play Obedient Subjects followed by Swarming Strikes [1][4] · **Watch out:** He wins big or gets trampled [4].
 
 ### Plan B: Hit and run
-**Goal:** Strike from safety [5] · **How:** deploy, maneuver, attack through a soldier [5] · **Watch out:** another player rates camping higher [4].
+**Goal:** Strike from safety [5] · **How:** Deploy a soldier, maneuver, then attack through it [5] · **Watch out:** Another player considers camping stronger [4].
 
 ### How they lose
-- High action gain, discard and tempo [4].
-- Losing Bebop & Rocksteady early [5].
+- High action gain, discard and tempo put him under pressure [4].
+- Losing Bebop & Rocksteady early leaves him vulnerable [5].
 
 ### Key cards
-- **Swarming Strike**: 5, +1 per adjacent soldier [1].
-- **Obedient Subjects**: an action per adjacent soldier [1].
+- **Swarming Strike**: Worth 5, plus 1 per adjacent soldier [1].
+- **Obedient Subjects**: Grants an action per adjacent soldier [1].
 
 ### Tips
 - Pick maps with well-connected spaces [3].
@@ -2199,17 +2199,17 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: krang -->
 ## Krang
 
-**In short:** A slow, chaotic brain who powers up Doomsday Machines for speed and strength, and gambles on the Die of Ultimate Destruction [1][2].
+**In short:** Krang is slow and chaotic, powering up Doomsday Machines for speed and strength while gambling on the Die of Ultimate Destruction [1][2].
 
 ### Plan A: Power up the machines
-**Goal:** More machines online [2] · **How:** Molecular Amplification Unit, Welcome to the Technodrome! and IQ of 968 [1][2] · **Watch out:** rerolls cost active machines [2].
+**Goal:** Activate more machines [2] · **How:** Use Molecular Amplification Unit, Welcome to the Technodrome! and IQ of 968 [1][2] · **Watch out:** Rerolls cost active machines [2].
 
 ### How they lose
-- Not yet covered by the sources.
+- The sources do not yet explain how he loses.
 
 ### Key cards
-- **IQ of 968**: activates every machine [1].
-- **Minimizer**: -4 to the attack and ends the turn [1].
+- **IQ of 968**: Activates every machine [1].
+- **Minimizer**: Reduces the attack by 4 and ends the turn [1].
 
 ### Tips
 - Each active machine adds 1 move [1].
@@ -2223,21 +2223,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: wyatt_earp -->
 ## Wyatt Earp
 
-**In short:** An aggressive gunslinger who chains won combats into card draw, movement and free attacks, backed by Doc Holliday [1][2][3].
+**In short:** Backed by Doc Holliday, Wyatt Earp plays aggressively, turning combat wins into card draw, movement and free attacks [1][2][3].
 
 ### Plan A: Guns blazing
-**Goal:** Heavy ranged pressure [2][3] · **How:** three plain 5s and Doc's 4s keep the ability firing [1][4] · **Watch out:** he burns through his deck [5].
+**Goal:** Apply heavy ranged pressure [2][3] · **How:** Use three plain 5s and Doc's 4s to keep his ability triggering [1][4] · **Watch out:** He burns through his deck [5].
 
 ### Plan B: Chain the showdown
-**Goal:** An explosive multi-attack turn [2] · **How:** free attacks from the ability, You Die First and In Vino Veritas [1][4] · **Watch out:** stopped shots leave him exposed [2].
+**Goal:** Chain attacks into an explosive turn [2] · **How:** Gain free attacks from his ability, You Die First and In Vino Veritas [1][4] · **Watch out:** Stopped shots leave him exposed [2].
 
 ### How they lose
-- Weak defenses and no healing [4].
-- Doc Holliday falls [3].
+- Weak defenses and no healing leave him vulnerable [4].
+- Losing Doc Holliday costs him valuable support [3].
 
 ### Key cards
-- **You Just Gonna Stand There And Bleed?**: a plain 5 [1].
-- **You Die First**: a free attack; boost it into Second Shot [4].
+- **You Just Gonna Stand There And Bleed?**: A straightforward value of 5 [1].
+- **You Die First**: Grants a free attack, or provides a boost for Second Shot [4].
 
 ### Tips
 - Strongest against opponents with little draw and few sidekicks [3].

@@ -90,6 +90,8 @@ def render(entry, ref_prefix):
             out.append(f"<li>{_inline(text, ref_prefix)}</li>")
             continue
         close()
+        if section == "References":
+            continue  # research notes on the deck data, not part of the guide
         out.append(f"<p>{_inline(line, ref_prefix)}</p>")
     close()
     return Markup("\n".join(out))

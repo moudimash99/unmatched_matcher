@@ -32,13 +32,14 @@ def test_guides_render_cleanly(kind, prefix):
 def test_render_escapes_html_and_links_sources():
     html = strategies.render(
         "<!-- id: x -->\n## X\n\n**In short:** a <b> test [1].\n\n### References\n"
-        "1. Someone. *Site*, 2024. https://example.com/a_b/\n\n### Not cited\n"
+        "1. Someone. *Site*, 2024. https://example.com/a_b/\n\nA note on `input/heroes.json`.\n\n### Not cited\n"
         "- [Video](https://youtu.be/x): Channel · video (not yet reviewed)\n"
         "- [Thread](https://example.com/t): Reddit · thread (read; no strategy)\n---", "f")
     assert "&lt;b&gt;" in html and "<b>" not in html
     assert '<a href="#f-ref-1">[1]</a>' in html and 'id="f-ref-1"' in html
     assert '<a href="https://example.com/a_b/"' in html and "<em>Site</em>" in html
     assert "Channel · video</li>" in html and "Thread" not in html
+    assert "A note on" not in html  # research notes under References stay off the site
 
 
 def test_fighter_page_shows_the_guide(client):

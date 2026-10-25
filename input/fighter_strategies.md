@@ -3087,16 +3087,16 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 <!-- id: chupacabra -->
 ## Chupacabra
 
-**In short:** A melee hero with 14 health, 3 movement and no sidekicks [1]. After he attacks, he may draw a card [1]. Several cards get stronger at 7 health or less, so he wants to sit low and keep attacking [1][2][3].
+**In short:** Chupacabra is a melee hero with 14 health, 3 movement and no sidekicks [1]. After he attacks, he may draw a card [1]. Several cards get stronger at 7 health or less, so he aims to keep attacking while his health stays low [1][2][3].
 
 ### Plan A: Hunt them down
 **Goal:** Attack every turn, keep a bigger hand than the opponent, and run them out of good blocks [3].
-**How to do it:** The longer the game goes the worse it gets, so play super aggressive [2]. Constant attacks feed his draw, and his move 3 plus Traveler of the night (move 4 through opponents, gain an action) mean the opponent can rarely run [1][3]. Unsettle makes an opponent in his zone discard 1, or 2 if Chupacabra takes 2 damage, which helps win the hand count [1][3]. Once they are out of good blocks, land one of his huge boosted attacks [3]: Blood in the air may be boosted if you already won a combat this turn [1].
-**Watch out for:** Exhaustion is how he most often loses, because he draws so much [3][4].
+**How to do it:** Play aggressively: his position worsens as the game goes on [2]. Constant attacks keep cards coming into his hand [1][3]. With move 3 and Traveler of the night, which moves him up to 4 spaces through opponents and gains an action, he rarely lets the opponent escape [1][3]. Unsettle makes an opponent in his zone discard 1, or 2 if Chupacabra takes 2 damage, helping him maintain the larger hand [1][3]. Once they are out of good blocks, land a heavily boosted attack [3]: Blood in the air may be boosted if you already won a combat this turn [1].
+**Watch out for:** Drawing so many cards makes exhaustion his most common loss [3][4].
 
 ### Plan B: Live on the edge
 **Goal:** Get to 7 health or below early, then stay there with his healing [2].
-**How to do it:** One player even takes a hit or two on purpose to get below 7 [2]. At 7 or less, Feeding gains an action and heals 1, and Wounded beast becomes a 5 [1]. Ravenous lunge and Tooth and tail heal him around the 5–7 range [1][2].
+**How to do it:** Taking a hit or two deliberately is one way to get below 7 [2]. At 7 or less, Feeding gains an action and heals 1, and Wounded beast becomes a 5 [1]. Ravenous lunge and Tooth and tail help keep him alive around 5–7 health [1][2].
 **Watch out for:** At that health, opponents with one-turn kills or big combos can finish him even through a full hand [5].
 
 ### How they lose
@@ -3105,13 +3105,13 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 - None of his combat cards move him, so he is less mobile than his move 3 suggests [5].
 
 ### Key cards
-- **The more they struggle**: worth twice the printed value of the opponent's card [1].
-- **Traveler of the night**: three copies of move 4 and an action [1][6].
-- **Natural toughness**: a 3-value defense that comes back to your hand if you lose the combat [1].
-- **Unsettle**: card advantage [3].
+- **The more they struggle**: Worth twice the printed value of the opponent's card [1].
+- **Traveler of the night**: Three copies each offer movement of up to 4 spaces and an action [1][6].
+- **Natural toughness**: A 3-value defense that returns to your hand if you lose the combat [1].
+- **Unsettle**: Helps build card advantage [3].
 
 ### Tips
-- When to draw is a real choice [7]. Against aggressive or heavy-drawing opponents, double attack and draw twice; otherwise maneuver and attack without drawing so they must double maneuver and edge towards exhaustion, then draw freely for a combo turn once you are at 7 [7].
+- Choose when to draw carefully [7]. Against aggressive or heavy-drawing opponents, double attack and draw twice; otherwise, maneuver and attack without drawing to force two maneuvers from them and bring them closer to exhaustion [7]. Once you are at 7, draw freely for a combo turn [7].
 - Keep about 5 or 6 cards; 7 lets the opponent double maneuver away and force two maneuvers or a boost from you [6]. At 5 you can still double maneuver next turn without discarding [8].
 
 ### References
@@ -3134,33 +3134,33 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 <!-- id: loki -->
 ## Loki
 
-**In short:** A melee hero with 16 health, 2 movement and no sidekicks [1]. After he plays a Trick, it goes into the opponent's hand; Tricks do one thing when Loki plays them and something good for Loki when the opponent does [1]. If the opponent discards a Trick, it comes back to Loki's hand or the top of his deck, and he gets +1 move for each Trick in their hand [1]. He is a weird, puzzle-like fighter who punishes mistakes, yours included [2][3][4].
+**In short:** Loki is a melee hero with 16 health, 2 movement and no sidekicks [1]. After he plays a Trick, it goes into the opponent's hand; each Trick has one effect when he plays it and another that benefits him when the opponent plays it [1]. If the opponent discards a Trick, it comes back to Loki's hand or the top of his deck, and he gets +1 move for each Trick in their hand [1]. Playing this unusual fighter is a puzzle that punishes mistakes on either side [2][3][4].
 
 ### Plan A: Force the initiative
-**Goal:** Make the opponent uncomfortable: force them to act, waste cards and fill their hand [2][5].
-**How to do it:** Don't be afraid to walk away: they must then boost, which feeds you value, or maneuver, which grows their hand and your attacks [5]. Underhanded is a 6 when they hold more cards than you, and Shapeshifter can add +1 per card in their hand, so both are attacks [1][2][5]. Take Shapeshifter's value rather than its action unless you have a plan for it [2][5]; another player happily takes the action [6]. Looking for trouble returns their card, looks at their hand and picks what they play instead [1]. Avoid boosting your own movement; you need the cards [2].
-**Watch out for:** Once opponents stop fearing his Tricks and simply play them, he can do little [7][8]. Against an opponent keeping a small hand, fill it with Tricks or keep running [4].
+**Goal:** Force the opponent to act, waste cards and fill their hand, leaving them uncomfortable [2][5].
+**How to do it:** Be willing to walk away [5]. Chasing requires them to boost, giving you more value, or maneuver, enlarging their hand and strengthening your attacks [5]. Underhanded is a 6 when they hold more cards than you, and Shapeshifter can add +1 per card in their hand, making both useful attacks [1][2][5]. Favor Shapeshifter's value unless you have a plan for the extra action [2][5]; another player readily takes the action [6]. Looking for trouble returns their card, looks at their hand and picks what they play instead [1]. Avoid boosting your own movement; you need the cards [2].
+**Watch out for:** Once opponents stop fearing his Tricks and simply play them, his ability to punish them is limited [7][8]. Against an opponent keeping a small hand, fill it with Tricks or keep running [4].
 
 ### Plan B: Set up Ragnarök
 **Goal:** Load their hand with Tricks, then hit with Ragnarök, +3 per Trick they hold [1].
-**How to do it:** One sequence: defend with the defense Trick, then the versatile Trick, then on your turn play the scheme Trick and Ragnarök; even if they block with a Trick it is a 6 [9]. It works best against aggressive opponents who attack twice [9]. Bluff with God of Mischief, which ignores a Trick's value [1][3].
-**Watch out for:** Opponents play Tricks quickly, so expect a 6 at best [3][5]; one player says even a potential 9 is worth throwing [2].
+**How to do it:** Defend with the defense Trick, then the versatile Trick; on your turn, follow with the scheme Trick and Ragnarök [9]. Even if they block with a Trick, it is a 6 [9]. It works best against aggressive opponents who attack twice [9]. Bluff with God of Mischief, which ignores a Trick's value [1][3].
+**Watch out for:** Opponents play Tricks quickly, so expect a 6 at best [3][5]; another considers a potential 9 worth playing [2].
 
 ### How they lose
 - Low printed values, value-changing cards and small hands make damage hard to find [3].
 - He relies on drawing his attack Tricks on time and needs a small map [3].
-- Sidekicks used as body blocks; his scheme Trick matters there [4].
+- Sidekicks can block his path, making his scheme Trick important [4].
 - He hands the opponent a lot of cards [10].
 
 ### Key cards
-- **Laevateinn**: adds a revealed card's boost and takes back a Trick [1]; a strong defense or a value engine [3].
-- **Trick: Freyja's Rescue**: swaps the two cards' values; save it for mid-game against big hitters [1][6].
-- **Trick: Svadilfari's Lure**: pulls an opponent next to him; many players won't play it, which gives Loki movement and hand advantage [1][4].
-- **Ragnarök**: its effects can't be cancelled [1].
+- **Laevateinn**: Adds a revealed card's boost and takes back a Trick [1], making it a strong defense or a way to generate value [3].
+- **Trick: Freyja's Rescue**: Swaps the two cards' values; save it for mid-game against big hitters [1][6].
+- **Trick: Svadilfari's Lure**: Pulls an opponent next to him; many players won't play it, which gives Loki movement and hand advantage [1][4].
+- **Ragnarök**: Its effects can't be cancelled [1].
 
 ### Tips
 - Discarded Tricks usually go on top of your deck [2][3].
-- Opinions split on exhaustion: some say it is his win condition, thanks to recurring the healing Trick [11][6]; others say he has no fatigue game and should attack [3][10][5].
+- Players disagree about exhaustion: some say it is his win condition, thanks to recurring the healing Trick [11][6]; others say he has no fatigue game and should attack [3][10][5].
 
 ### References
 1. Restoration Games. *Unmatched: Battle of Legends, Volume 3*, Loki deck. Card text as recorded in `input/heroes.json`.
@@ -3188,32 +3188,32 @@ The deck data spells Shapeshifter "Shapershifter" and has most of Loki's card na
 <!-- id: pandora -->
 ## Pandora
 
-**In short:** A melee hero with 14 health and 2 movement, plus two 1-health Kakodaemons that start off the board [1]. At the start of each turn she opens Pandora's Box, a seven-card deck of Miseries: she reveals them one at a time, resolving each, until she stops or the revealed cards show three feathers; then she takes 1 damage per revealed Misery [1]. Several of her cards scale with revealed Miseries, so she is a push-your-luck fighter [1][2].
+**In short:** Pandora is a melee hero with 14 health and 2 movement, plus two 1-health Kakodaemons that start off the board [1]. At the start of each turn she opens Pandora's Box, a seven-card deck of Miseries: she reveals them one at a time, resolving each, until she stops or the revealed cards show three feathers; then she takes 1 damage per revealed Misery [1]. Several of her cards scale with revealed Miseries, so she is a push-your-luck fighter [1][2].
 
 ### Plan A: Flip small, play big
 **Goal:** Position and attack aggressively, but flip the box conservatively [3].
-**How to do it:** Every flip, ask whether anything you could reveal is worth the damage [4]. It's fine to flip just once, even with no feathers, unless you need something specific that turn [5]. Don't push your luck unless you need a big hit or have high health with Aphrodite's Beauty in hand [6]. Once Misfortune is revealed, stop almost every time [6]. Play safe with few Miseries out and go big with many [7]. Don't plan around what the box might give you next [3].
+**How to do it:** Before each flip, weigh what you could reveal against the damage it will cost [4]. Unless you need something specific that turn, stopping after one flip is fine, even with no feathers [5]. Don't push your luck unless you need a big hit or have high health with Aphrodite's Beauty in hand [6]. Once Misfortune is revealed, stop almost every time [6]. Play cautiously with few Miseries revealed, and commit to bigger plays with many [7]. Don't plan around what the box might give you next [3].
 **Watch out for:** Don't go for a big box turn when your hand is only defenses [5].
 
 ### Plan B: Wait for the big turn
-**Goal:** Seize the right moment for a crazy turn, and heal through the misfortunes in between [8][4].
-**How to do it:** Hera's Curiosity is a 3, +1 for each revealed Misery, and looks at their hand [1]. Bait out Feints first with other attacks or the 0-value Aphrodite's Beauty [5][6][7]. Three Hindsights can return a card from your discard pile to the top of your deck after a win, to bring back a Hera's Curiosity or Aphrodite's Beauty [1][5][6]. Play Hindsight when the +1-to-attacks Misery is revealed and they are unlikely to hold a Feint [6]. Zeus's Mischief draws a card per revealed Misery and gains an action [1].
+**Goal:** Wait for the chance to take an explosive turn, using healing to weather the misfortunes in between [8][4].
+**How to do it:** Hera's Curiosity starts at 3, gains +1 for each revealed Misery and lets you look at their hand [1]. Bait out Feints first with other attacks or the 0-value Aphrodite's Beauty [5][6][7]. The three copies of Hindsight can return a discarded card to the top of your deck after a win, recovering Hera's Curiosity or Aphrodite's Beauty [1][5][6]. Play Hindsight when the +1-to-attacks Misery is revealed and they are unlikely to hold a Feint [6]. Zeus's Mischief draws a card per revealed Misery and gains an action [1].
 **Watch out for:** Her heals can be Feinted [2].
 
 ### How they lose
-- Terrible defenses: her hands are often full of attacks, so she lives on healing [3].
-- At 4 health or less she can barely use her ability, and must lean on healing that doesn't need Miseries [4].
+- Poor defenses leave her relying on healing, with hands often full of attacks [3].
+- At 4 health or less she has little room to use her ability and must rely on healing that does not need Miseries [4].
 - Bad luck with the box [2][9].
 - Opponents with big defenses who don't fear Hera's Curiosity [10][11].
 
 ### Key cards
-- **Aphrodite's Beauty**: a 0-value attack that cancels the defense's effects and heals 1 per revealed Misery [1]; her big heal [4].
-- **Celestial Raiments**: a 0-value defense that ignores the attack's value [1].
-- **Guided by the Fates**: adds the top card's boost and heals 2 on a win [1].
-- **Forged by Hephaestus**: places your fighter anywhere and gains an action [1].
+- **Aphrodite's Beauty**: A 0-value attack that cancels the defense's effects and heals 1 per revealed Misery [1]; her big healing card [4].
+- **Celestial Raiments**: A 0-value defense that ignores the attack's value [1].
+- **Guided by the Fates**: Adds the top card's boost and heals 2 on a win [1].
+- **Forged by Hephaestus**: Places your fighter anywhere and gains an action [1].
 
 ### Tips
-- She is a set-up fighter with many ways to bait Feints [5].
+- Her game takes preparation, with several ways to draw out Feints [5].
 - A good player can climb back from 1 health with her small heals [8].
 - Don't let a few early misfortunes put you off the box [9].
 
@@ -3242,20 +3242,20 @@ The deck data has most of Pandora's card names in capitals; normal spelling is u
 <!-- id: leonardo -->
 ## Leonardo
 
-**In short:** A melee hero with 16 health and 2 movement, plus Splinter, a 9-health melee sidekick [1]. At the start of his turn he may move any fighter, friend or foe, up to 1 space [1][2]. The designers built him as the tactical leader: positioning, efficient attacks and teamwork, rewarding players who think a step ahead [2].
+**In short:** Leonardo is a melee hero with 16 health and 2 movement, plus Splinter, a 9-health melee sidekick [1]. At the start of his turn he may move any fighter, friend or foe, up to 1 space [1][2]. He rewards thinking a step ahead, combining positioning, efficient attacks and teamwork in the role of tactical leader [2].
 
 ### Plan A: Set up clean engagements
 **Goal:** Get the positioning right before every fight [2].
-**How to do it:** Use his ability on either side's fighters to set up the next battle [2]. Fearless leader is a 3, +2 for each other friendly fighter next to the opponent [1]. Leonardo leads moves each friendly fighter up to 3 spaces and draws a card [1]. Wise beyond his years deals 2 damage if the opponent is in fewer zones than Leonardo, and Splinter's Spatial awareness deals 1 and draws if they are in fewer zones than him [1]. In team games he is meant to be the group's anchor, shining when he supports allies [2]; Protective father lets Splinter swap with another friendly fighter, healing both 2 and gaining an action [1].
-**Watch out for:** The sources read so far say nothing about his weak points.
+**How to do it:** Use his ability to reposition friendly or opposing fighters before the next battle [2]. Fearless leader starts at 3 and gains +2 for each other friendly fighter next to the opponent [1]. Leonardo leads moves each friendly fighter up to 3 spaces and draws a card [1]. Wise beyond his years deals 2 damage if the opponent is in fewer zones than Leonardo, and Splinter's Spatial awareness deals 1 damage and draws a card if the opponent is in fewer zones than him [1]. In team games, he anchors the group and excels at supporting allies [2]; Protective father lets Splinter swap with another friendly fighter, healing both 2 and gaining an action [1].
+**Watch out for:** The sources read so far do not identify his weak points.
 
 ### How they lose
-- None of the sources read so far say.
+- The sources read so far do not explain how he loses.
 
 ### Key cards
-- **Katana**: a plain 6-value attack [1].
-- **Heroes in a half shell**: a plain 5-value defense [1].
-- **I have a plan**: discard a card to cancel the attack's effects and ignore its value [1].
+- **Katana**: A straightforward 6-value attack [1].
+- **Heroes in a half shell**: A straightforward 5-value defense [1].
+- **I have a plan**: Discard a card to cancel the attack's effects and ignore its value [1].
 
 ### Tips
 - His ability can move an opposing fighter too [2].
@@ -3274,31 +3274,31 @@ The deck data has most of Pandora's card names in capitals; normal spelling is u
 <!-- id: donatello -->
 ## Donatello
 
-**In short:** A melee hero with 14 health and 2 movement, plus Metalhead, a 7-health melee sidekick [1]. When he maneuvers he may draw 2 instead of 1 and put a card from his hand on the bottom of his deck [1]. His three inventions, once played, give a permanent bonus to attacks, defenses or schemes [1][2]. He is built for careful planning and control [2].
+**In short:** Donatello is a melee hero with 14 health and 2 movement, plus Metalhead, a 7-health melee sidekick [1]. When he maneuvers, he may draw 2 cards instead of 1, then put a card from his hand on the bottom of his deck [1]. His three inventions, once played, give a permanent bonus to attacks, defenses or schemes [1][2]. He is built for careful planning and control [2].
 
 ### Plan A: Stack the deck, then strike
 **Goal:** Hold back until Electro grenade gives +1 to your attacks, then go all in [3][4].
-**How to do it:** Play as few attacks as you can before the +1, and only with low, weak cards [3]. Use his ability to put your boostable and high-boost cards on the bottom of the deck until then [3][4]. Remember what you put there: Metalhead's Untested enhancements adds the boost of the bottom card [1][3]. Keep Metalhead out of the action until he can really hit [3]. Poke and run, or double maneuver to force the opponent to boost or discard [4]. Once you have the +1, which usually doesn't take long, pressure hard; Turtle power! can be boosted towards 7 [1][3].
-**Watch out for:** He goes through his deck fast because of all his draw [3].
+**How to do it:** Until the +1 is active, attack as little as possible and use only weak, low-value cards [3]. Use his ability to put your boostable and high-boost cards on the bottom of the deck until then [3][4]. Keep track of those cards: Metalhead's Untested enhancements adds the boost of the bottom card [1][3]. Keep Metalhead back until he can deliver a strong hit [3]. Poke and run, or double maneuver to force the opponent to boost or discard [4]. Once the +1 is active, which usually happens quickly, apply heavy pressure; Turtle power! can be boosted towards 7 [1][3].
+**Watch out for:** His considerable draw takes him through the deck quickly [3].
 
 ### Plan B: Pile up automatic damage
-**Goal:** Chip the opponent with effects their defenses can't stop [5].
-**How to do it:** Bo staff deals 1 on defense, Party wagon! moves a fighter up to 5 spaces through opponents and deals 2 to one they passed, and Thinking ahead and Donatello does machines can bring those cards back [1][5]. Use Donatello does machines to return Thinking ahead, and Thinking ahead to put Party wagon! back in the deck, for up to about 16 damage in a game [5][6]. Smoke bomb gains an action per scheme removed, then one each time you play a scheme [1]. Late in the game it gives a 4-action turn; played early, it saves Party wagons and Metalhead schemes for a big burst [4]. With good play you can get two 4-action combo turns [4].
-**Watch out for:** Against some opponents Thinking ahead rarely wins its combat, so the boost cards are your main damage [7][8].
+**Goal:** Wear the opponent down with damage their defenses cannot stop [5].
+**How to do it:** Bo staff deals 1 damage on defense, while Party wagon! moves a fighter up to 5 spaces through opponents and deals 2 damage to one they passed [1][5]. Thinking ahead and Donatello does machines can recover those cards [1][5]. Use Donatello does machines to return Thinking ahead, and Thinking ahead to put Party wagon! back in the deck, for up to about 16 damage in a game [5][6]. Smoke bomb gains an action per scheme removed, then one each time you play a scheme [1]. Late in the game it gives a 4-action turn; playing it early lets you save Party wagons and Metalhead schemes for a burst [4]. With good play you can get two 4-action combo turns [4].
+**Watch out for:** Thinking ahead rarely wins combat against some opponents, leaving boostable cards as your main source of damage [7][8].
 
 ### How they lose
-- Opponents who block or cancel his Thinking aheads keep his recursion from working [7].
-- Overdrawing his own deck [3].
+- Blocking or cancelling Thinking ahead prevents him from recovering cards [7].
+- Drawing too quickly depletes his deck [3].
 
 ### Key cards
-- **Electro grenade**: the +1 to attacks you are building towards [1][3][4].
-- **Self defense grid**: heals per defense or versatile card removed, then +1 to your defenses [1].
-- **Heroes in a half shell**: a plain 5-value defense [1].
-- **Smoke bomb**: players disagree. One calls it a trap, since Donatello already draws through his deck fast, and just boosts with it [3][7]; another says its timing matters and it sets up his combo turns [4].
+- **Electro grenade**: Provides the +1 to attacks that you are building towards [1][3][4].
+- **Self defense grid**: Heals for each defense or versatile card removed, then grants +1 to your defenses [1].
+- **Heroes in a half shell**: A straightforward 5-value defense [1].
+- **Smoke bomb**: Players disagree about its use: one calls it a trap because Donatello already draws through his deck quickly, and uses it only to boost [3][7]; another argues that careful timing lets it set up combo turns [4].
 
 ### Tips
 - You will rarely double attack until your combo turns [4].
-- Recurring Turtle power! or Untested enhancements may beat recurring 2 damage [7].
+- Recovering Turtle power! or Untested enhancements may be better than repeating 2 damage [7].
 
 ### References
 1. Restoration Games. *Unmatched Adventures: Teenage Mutant Ninja Turtles*, Donatello deck. Card text as recorded in `input/heroes.json`.
@@ -3320,27 +3320,27 @@ The deck data has most of Pandora's card names in capitals; normal spelling is u
 <!-- id: raphael -->
 ## Raphael
 
-**In short:** A melee hero with 17 health and 2 movement, plus Casey Jones, an 8-health ranged sidekick [1]. The first time he loses a combat each turn, he gains an action [1]. He is the aggressive brawler: get in close, trade blows and keep up the pressure [2][3].
+**In short:** Raphael is a melee hero with 17 health and 2 movement, plus Casey Jones, an 8-health ranged sidekick [1]. The first time he loses a combat on each of his turns, he gains an action [1]. He is the aggressive brawler: get in close, trade blows and keep up the pressure [2][3].
 
 ### Plan A: Keep running at them
-**Goal:** Pressure constantly, so the opponent never feels safe attacking back [3].
-**How to do it:** He has plenty of draw and enough strong attacks to keep pushing [3]. Attack with your red cards most of the time and save your versatile and defense cards to discard into Unbridled rage [4], a 3 that gets +2 for each defense or versatile card discarded [1]. Don't be afraid to throw a big attack as your first action: an opponent who reads it as bait can get one-shot by Unbridled rage [3]. Don't chase the extra action every turn either; a strong first attack can catch a poor defense [4]. Use Casey to set up pins [3], and his ranged attacks to burn defenses and set up Raphael's bonus-action attacks [5]. Payback time! becomes a 5 after you lose a combat [1].
-**Watch out for:** Don't overextend: outside Relentless he has no draw on defense and dislikes being pressured [6]. Use the extra action to maneuver away if the opponent holds too many cards [6].
+**Goal:** Keep the pressure high enough that the opponent never feels safe attacking back [3].
+**How to do it:** His plentiful draw and strong attacks let him sustain the pressure [3]. Attack with your red cards most of the time and save your versatile and defense cards to discard into Unbridled rage [4], a 3 that gets +2 for each defense or versatile card discarded [1]. Be willing to open with a big attack: an opponent who mistakes it for bait can lose to a single Unbridled rage [3]. You do not need to pursue the extra action every turn; a strong opening attack can catch a weak defense [4]. Use Casey to set up pins [3], and his ranged attacks to burn defenses and set up Raphael's bonus-action attacks [5]. Payback time! becomes a 5 after you lose a combat [1].
+**Watch out for:** Don't overextend: apart from Relentless, he has no defensive draw and struggles under pressure [6]. Use the extra action to maneuver away if the opponent holds too many cards [6].
 
 ### Plan B: Lean on a small defensive core
 **Goal:** Block with only a few cards and treat the rest as attacks [3].
-**How to do it:** Ideally block only with Relentless, Sai and Heroes in a half shell [3]. Taking an undefended hit now and then is fine, to keep cards for Unbridled rage [4]. Relentless shuffles itself back into your deck and draws a card [1]; play it as soon as you get it [3].
+**How to do it:** Ideally block only with Relentless, Sai and Heroes in a half shell [3]. Occasionally taking an undefended hit lets you keep cards for Unbridled rage [4]. Relentless shuffles itself back into your deck and draws a card [1]; play it as soon as you get it [3].
 **Watch out for:** Don't dump all your defenses into Unbridled rage unless it is lethal [4].
 
 ### How they lose
-- Double maneuvering every turn while attacking only with weak cards let one aggressive opponent run him out of defenses [7].
-- Getting pressured when he has overextended [6].
+- Double maneuvering every turn and attacking only with weak cards allowed an aggressive opponent to exhaust his defenses [7].
+- Pressure punishes him when he overextends [6].
 
 ### Key cards
-- **Unbridled rage**: his finisher [3][4].
-- **Relentless**: one player says use it only on defense, where it is less likely to be cancelled [3]; another uses it on attack too when the opponent can't cancel it [4].
-- **Sai** and **Heroes in a half shell**: plain 4 and 5 values [1], his main blocks [3].
-- **Break something**: cancels during- and after-combat effects; if none were cancelled, 2 damage to an adjacent opponent [1].
+- **Unbridled rage**: His finishing attack [3][4].
+- **Relentless**: One player reserves it for defense, where cancellation is less likely [3]; another also attacks with it when the opponent cannot cancel it [4].
+- **Sai** and **Heroes in a half shell**: Straightforward values of 4 and 5 [1], his main blocks [3].
+- **Break something**: Cancels during- and after-combat effects; if no effects were cancelled, it deals 2 damage to an adjacent opponent [1].
 
 ### Tips
 - Casey's Slapshot is a 6 when he is next to the opponent [1].
@@ -3364,21 +3364,21 @@ The deck data has most of Pandora's card names in capitals; normal spelling is u
 <!-- id: michelangelo -->
 ## Michelangelo
 
-**In short:** A melee hero with 14 health and 3 movement, plus April O'Neil, a 6-health ranged sidekick who also moves 3 [1]. He draws a card after each attack or scheme, but his starting and maximum hand size is 3 [1][2]. The designers call him the agile wild card: speed, flexibility and a bit of chaos [2].
+**In short:** Michelangelo is a melee hero with 14 health and 3 movement, plus April O'Neil, a 6-health ranged sidekick who also moves 3 [1]. He draws a card after each attack or scheme, but his starting and maximum hand size is 3 [1][2]. He combines speed, flexibility and a little chaos as the agile wild card [2].
 
 ### Plan A: Cycle and burst
 **Goal:** Dart around the board, cycle through cards and set up the perfect moment for a heavy hit [2].
-**How to do it:** His small hand gives him a different approach from the other Turtles [2]. Several cards gain actions: Boisterous beatdown gains 1, or 2 if you won; April's Hard-hitting investigation deals 1 and gains 1; Hi-yaaaaah!! can put a card on the bottom of your deck for an action [1]. Cowabunga!! gets +1 for each other card you played this turn [1]. Let's go moves a friendly fighter up to 3 spaces [1].
-**Watch out for:** The sources read so far say nothing about his weak points.
+**How to do it:** His small hand gives him a different approach from the other Turtles [2]. Several cards keep his turn going: Boisterous beatdown gains 1 action, or 2 after a win; April's Hard-hitting investigation deals 1 damage and gains 1 action; Hi-yaaaaah!! lets you put a card on the bottom of your deck to gain an action [1]. Cowabunga!! gets +1 for each other card you played this turn [1]. Let's go moves a friendly fighter up to 3 spaces [1].
+**Watch out for:** The sources read so far do not identify his weak points.
 
 ### How they lose
-- None of the sources read so far say.
+- The sources read so far do not explain how he loses.
 
 ### Key cards
-- **Guaranteed delivery**: bottom a card to cancel the opponent's effects; with an empty hand it draws 2 [1].
-- **Back for seconds**: a 2-value defense that shuffles 2 random cards from your discard pile back into your deck [1].
-- **Heroes in a half shell**: a plain 5-value defense [1].
-- **Shell insertion**: April's scheme with two of four effects, including a discard for each opponent [1].
+- **Guaranteed delivery**: Put a card on the bottom of your deck to cancel the opponent's effects; with an empty hand, draw 2 [1].
+- **Back for seconds**: A 2-value defense that shuffles 2 random cards from your discard pile back into your deck [1].
+- **Heroes in a half shell**: A straightforward 5-value defense [1].
+- **Shell insertion**: April's scheme lets her choose two of four effects, including making each opponent discard a card [1].
 
 ### Tips
 - He is meant for fast, opportunistic strikes [2].
@@ -3387,7 +3387,7 @@ The deck data has most of Pandora's card names in capitals; normal spelling is u
 1. Restoration Games. *Unmatched Adventures: Teenage Mutant Ninja Turtles*, Michelangelo deck. Card text as recorded in `input/heroes.json`.
 2. Restoration Games. "From Leader to Wild Card: The Turtles of Unmatched Adventures." *Restoration Games*. https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/
 
-The text of Nunchaku in `input/heroes.json` names a different fighter, which looks like a data error, so the card isn't described here.
+The text of Nunchaku in `input/heroes.json` is Bruce Lee's card by mistake. The printed card reads "Add +1 to the value of Michelangelo's attacks this turn. Gain 1 action."
 
 ### Not cited
 - [Michelangelo - Unmatched TMNT Fighter Review](https://www.youtube.com/watch?v=qz_IjUhDkIs): To The Table Top! · video (not yet reviewed)
@@ -3398,28 +3398,28 @@ The text of Nunchaku in `input/heroes.json` names a different fighter, which loo
 <!-- id: shredder -->
 ## Shredder
 
-**In short:** A melee hero with 15 health and 3 movement, plus Bebop & Rocksteady, a 7-health melee sidekick [1]. At the start of each turn he deploys a Foot soldier next to a friendly fighter, and he can attack opponents adjacent to Foot soldiers [1]. An opponent who boosts a maneuver can remove the soldiers their hero moves through [1]. His game is battlefield control: where the soldiers stand decides where he can strike [2].
+**In short:** Shredder is a melee hero with 15 health and 3 movement, plus Bebop & Rocksteady, a 7-health melee sidekick [1]. At the start of each turn he deploys a Foot soldier next to a friendly fighter, and he can attack opponents adjacent to Foot soldiers [1]. An opponent who boosts a maneuver can remove the soldiers their hero moves through [1]. He controls the battlefield through his soldiers, whose positions determine where he can strike [2].
 
 ### Plan A: Build the fortress
-**Goal:** Surround Shredder with Foot soldiers, then unload one enormous turn [3][4].
-**How to do it:** Pick maps with well-connected spaces, get to one and camp there [3]. Let Bebop & Rocksteady body block and pressure the opponent [3]. With 5 or 6 soldiers around him, play the action-gain schemes: Obedient Subjects gains an action per adjacent soldier, for 10 to 12 actions [1][4]. Then Bebop & Rocksteady deploy soldiers next to the opponent, and Shredder swings Swarming Strike, a 5 with +1 per adjacent soldier, for 10 or 11 each [1][4]. Surrounded by soldiers, his defenses get better too [4]: Masterful Defense heals 1 per adjacent soldier [1].
+**Goal:** Surround Shredder with Foot soldiers, then unleash one enormous turn [3][4].
+**How to do it:** Choose maps with well-connected spaces, then reach one and hold it [3]. Use Bebop & Rocksteady to block the opponent's path and apply pressure [3]. With 5 or 6 soldiers around him, play the action-gain schemes: Obedient Subjects gains an action per adjacent soldier, for 10 to 12 actions [1][4]. Then Bebop & Rocksteady deploy soldiers next to the opponent, and Shredder swings Swarming Strike, a 5 with +1 per adjacent soldier, for 10 or 11 each [1][4]. Surrounding him with soldiers also strengthens his defenses [4]: Masterful Defense heals 1 per adjacent soldier [1].
 **Watch out for:** He either destroys the opponent in one turn or gets trampled [4].
 
 ### Plan B: Hit and run
 **Goal:** Use the soldiers to strike from a safe distance [5].
-**How to do it:** Deploy a soldier first, maneuver, then attack from range through it [5]. As the network grows you can attack from almost anywhere, and opponents must boost their maneuvers to clear soldiers from awkward places [5]. A well-placed soldier creates an attack that otherwise wouldn't exist [2]. Long Shot is a 5 when the opponent isn't adjacent to your fighter [1].
-**Watch out for:** One player calls camping the stronger plan [4].
+**How to do it:** Deploy a soldier first, maneuver, then attack from range through it [5]. As the network grows, he can attack from almost anywhere [5]. Opponents must boost their maneuvers to clear soldiers from troublesome positions [5]. A well-placed soldier creates an attack that otherwise wouldn't exist [2]. Long Shot is a 5 when the opponent isn't adjacent to your fighter [1].
+**Watch out for:** Another player considers camping the stronger plan [4].
 
 ### How they lose
-- Opponents with high action gain or discard, and high-tempo fighters [4].
-- Bebop & Rocksteady dying early without Back to work! in hand, then constant pressure until he runs out of defenses [5].
+- Opponents with substantial action gain or discard, and fighters who maintain a high tempo [4].
+- Losing Bebop & Rocksteady early without Back to work! in hand leaves him vulnerable to sustained pressure that exhausts his defenses [5].
 
 ### Key cards
-- **Obedient Subjects**: the scheme that powers the big turn [1][4].
-- **Back to work!**: heals Bebop & Rocksteady 3, even if defeated, and returns them near Shredder [1].
-- **Gruff Escort**: deploys 2 soldiers anywhere and moves Shredder 2 [1].
-- **Perplexing Tactics**: cancels effects; with 10 or more soldiers out, it also ignores the attack's value [1].
-- **All According to Plan**: a 3-value defense; the attacker gains an action but discards 2 at end of turn unless they play a scheme [1].
+- **Obedient Subjects**: Powers his big turn [1][4].
+- **Back to work!**: Heals Bebop & Rocksteady 3, even if defeated, and returns them near Shredder [1].
+- **Gruff Escort**: Deploys 2 soldiers anywhere and moves Shredder 2 [1].
+- **Perplexing Tactics**: Cancels effects; with 10 or more soldiers out, it also ignores the attack's value [1].
+- **All According to Plan**: A 3-value defense; the attacker gains an action but discards 2 at end of turn unless they play a scheme [1].
 
 ### Tips
 - Think about where his whole network stands, not just Shredder [2].
@@ -3440,21 +3440,21 @@ The text of Nunchaku in `input/heroes.json` names a different fighter, which loo
 <!-- id: krang -->
 ## Krang
 
-**In short:** A melee hero with 16 health, 1 movement and no sidekicks [1]. He has three Doomsday Machines and starts with one active; he gets +1 move for each active machine [1]. Many of his cards roll the Die of Ultimate Destruction, and after a roll he can switch off an active machine to reroll [1][2]. The designers built him around chaos and push-your-luck choices [2].
+**In short:** Krang is a melee hero with 16 health, 1 movement and no sidekicks [1]. He has three Doomsday Machines and starts with one active; he gets +1 move for each active machine [1]. Many of his cards roll the Die of Ultimate Destruction, and after a roll he can switch off an active machine to reroll [1][2]. His game revolves around chaos and choosing how far to push his luck [2].
 
 ### Plan A: Power up the machines
-**Goal:** Bring more machines online to grow stronger and more mobile [2].
-**How to do it:** Molecular Amplification Unit activates a machine and adds a die roll to its value, a chance to push your luck for more power [1][2]. Welcome to the Technodrome! either cancels the opponent's effects or activates a machine [1]. IQ of 968 activates all of his machines at once, a major surge of power [1][2]. With more machines running he moves further, and Android arms: Wings moves him through opponents, damaging each one he passes, and gains an action [1].
-**Watch out for:** Every reroll costs an active machine, so there is a constant pull between powering up and keeping control of the die [2].
+**Goal:** Activate more machines to gain power and mobility [2].
+**How to do it:** Molecular Amplification Unit activates a machine and adds a die roll to its value, letting him push his luck for more power [1][2]. Welcome to the Technodrome! either cancels the opponent's effects or activates a machine [1]. IQ of 968 activates all of his machines at once for a major surge of power [1][2]. With more machines running he moves further, and Android arms: Wings moves him through opponents, damaging each one he passes, and gains an action [1].
+**Watch out for:** Each reroll costs an active machine, forcing a choice between keeping Krang powered up and controlling the die [2].
 
 ### How they lose
-- None of the sources read so far say.
+- The sources read so far do not explain how he loses.
 
 ### Key cards
-- **Minimizer**: a 0-value defense that lowers the attack by 4 and ends the turn [1].
-- **Android arms: Chain Flail**: the opponent discards 2 if their card's printed value is below the roll, or they didn't play one [1].
-- **Android arms: Missiles**: grows with the roll and can be played face up as a ranged attack [1].
-- **Pan-dimensional Portal**: places a fighter in the combat anywhere and locks them there [1].
+- **Minimizer**: A 0-value defense that lowers the attack by 4 and ends the turn [1].
+- **Android arms: Chain Flail**: Makes the opponent discard 2 if their card's printed value is below the roll, or if they played no card [1].
+- **Android arms: Missiles**: Grows with the roll and can be played face up as a ranged attack [1].
+- **Pan-dimensional Portal**: Places a fighter in the combat anywhere and keeps them there for the turn [1].
 
 ### Tips
 - You decide how much chaos to unleash [2].
@@ -3473,28 +3473,28 @@ In `input/heroes.json` the die results on Krang's cards appear as "?".
 <!-- id: wyatt_earp -->
 ## Wyatt Earp
 
-**In short:** A ranged hero with 15 health and 2 movement, plus Doc Holliday, an 8-health ranged sidekick [1]. After he attacks and wins a combat, he picks one of: draw a card, a free attack action, or move his fighter 1 space, never the same one twice in a turn [1]. A fast, aggressive gunslinger whose offense is stronger than his defense [2][3].
+**In short:** Wyatt Earp is a ranged hero with 15 health and 2 movement, plus Doc Holliday, an 8-health ranged sidekick [1]. After he attacks and wins a combat, he chooses to draw a card, gain a free attack action or move his fighter 1 space, choosing each option at most once per turn [1]. He is a fast, aggressive gunslinger with a stronger offense than defense [2][3].
 
 ### Plan A: Guns blazing
 **Goal:** Apply heavy ranged pressure from the start [2][3].
-**How to do it:** His ability and high-value attacks give him a lot of pressure [3]. Three plain 5s, You Just Gonna Stand There And Bleed?, almost guarantee the ability fires [1][4]. Doc's I Have Two Guns, One For Each Of You is a 4 from range, and if the opponent played a card it also deals that card's printed value to a different opponent in Doc's zone [1][4][5]. He is strongest against opponents with little draw and few sidekicks [3].
-**Watch out for:** He can exhaust himself quickly, so manage your deck [6]. If he can't knock the opponent out quickly, he's doomed, and aggressive opponents can out-pace him [7].
+**How to do it:** His ability and high-value attacks let him sustain heavy pressure [3]. Three plain 5s, You Just Gonna Stand There And Bleed?, nearly guarantee that his ability triggers [1][4]. Doc's I Have Two Guns, One For Each Of You is a 4 from range, and if the opponent played a card it also deals that card's printed value to a different opponent in Doc's zone [1][4][5]. He is strongest against opponents with little draw and few sidekicks [3].
+**Watch out for:** He can exhaust himself quickly, so manage your deck [6]. Failing to finish the opponent quickly can doom him, and aggressive opponents can outpace him [7].
 
 ### Plan B: Chain the showdown
-**Goal:** String wins and free actions together into an explosive turn [2].
-**How to do it:** Each won combat can give a free attack, so attacks can chain [1][2]. You Die First moves an opponent 1 space and gives a free attack on them; its boost of 3 makes it a good card to throw into Second Shot [1][4]. In Vino Veritas draws up to 4 cards and gives a free attack [1]. He has consistent combo potential and adapts to many situations [4].
+**Goal:** Combine combat wins and free actions into an explosive turn [2].
+**How to do it:** Winning combats lets him gain a free attack and chain attacks together [1][2]. You Die First moves an opponent 1 space and gives a free attack on them; its boost of 3 also makes it a good choice for boosting Second Shot [1][4]. In Vino Veritas draws until you have 4 cards in hand and gives a free attack [1]. He has consistent combo potential and adapts to many situations [4].
 **Watch out for:** If his quick shots are stopped, he can be in trouble [2].
 
 ### How they lose
-- Weak defenses: none print higher than 3, and he has no healing, so he plays like a glass cannon [4][3].
-- Doc Holliday is fragile and holds a lot of value; protect him [3].
-- Aggressive opponents [7].
+- His defenses have printed values no higher than 3, and he has no healing, leaving him fragile despite his strong offense [4][3].
+- Doc Holliday is fragile but contributes substantial value, making him important to protect [3].
+- Aggressive opponents can outpace him [7].
 
 ### Key cards
-- **Bring 'Em To Justice**: a 0-value defense that adds twice the boost of the top card of the opponent's deck [1].
-- **A Marshal And An Outlaw**: draws a card on defense, forces a discard on attack [1].
-- **Better Swear Me In**: cancels effects and can bottom the opponent's top card [1].
-- **You're A Daisy If You Do**: Doc's 4-value versatile that draws 2 [1].
+- **Bring 'Em To Justice**: A 0-value defense that adds twice the boost of the top card of the opponent's deck [1].
+- **A Marshal And An Outlaw**: Draws a card on defense and forces a discard on attack [1].
+- **Better Swear Me In**: Cancels effects and can put the opponent's top card on the bottom of their deck [1].
+- **You're A Daisy If You Do**: A 4-value versatile card for Doc that draws 2 cards [1].
 
 ### Tips
 - His ability rewards lots of attacks [5].
