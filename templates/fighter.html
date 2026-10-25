@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ fighter.name }} – Unmatched Stats, Deck and Best Matchups{% endblock %}
-{% block description %}{{ fighter.name }} ({{ fighter.sets | join(', ') }}): {% if fighter.overall_win_rate is not none %}{{ fighter.overall_win_rate }}% overall win rate over {{ "{:,}".format(fighter.total_games) }} games, {% endif %}special ability, full deck list, and best and worst Unmatched matchups.{% endblock %}
+{% block description %}{{ fighter.name }} ({{ fighter.sets | join(', ') }}): {% if fighter.overall_win_rate is not none %}{{ fighter.overall_win_rate }}% overall win rate over {{ "{:,}".format(fighter.total_games) }} games, {% endif %}special ability, full deck list, how to play them, and best and worst Unmatched matchups.{% endblock %}
 {% block heading %}{{ fighter.name }}{% endblock %}
 {% block subheading %}<p>{{ fighter.sets | join(' · ') }}</p>{% endblock %}
 
@@ -50,6 +50,20 @@
         </div>
     </div>
 </section>
+
+{% if guide and (guide.short or guide.full) %}
+<section class="panel guide" id="strategy">
+    <h2>How to play {{ fighter.name }}</h2>
+    <p class="muted">Written from player guides, reviews and forum discussions. Numbers in brackets link to the sources.</p>
+    {% if guide.short %}<div class="guide-body">{{ guide.short }}</div>{% endif %}
+    {% if guide.full %}
+    <details class="guide-full"{% if not guide.short %} open{% endif %}>
+        <summary>Read the full guide</summary>
+        <div class="guide-body">{{ guide.full }}</div>
+    </details>
+    {% endif %}
+</section>
+{% endif %}
 
 <section class="two-col">
     <div class="panel">

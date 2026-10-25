@@ -102,6 +102,19 @@
 .tool-page .card-type { text-transform: capitalize; }
 .tool-page .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 
+/* Strategy guide: short version, then the full one in a <details> */
+.tool-page .guide-body { line-height: 1.55; max-width: 52rem; overflow-wrap: anywhere; }
+.tool-page .guide-body p { margin: 0.35rem 0; }
+.tool-page .guide-body ul { margin: 0.3rem 0 0.3rem 1.2rem; }
+.tool-page .guide-body li { margin: 0.2rem 0; }
+.tool-page .guide-body sup.cite { font-size: 0.7em; line-height: 0; }
+.tool-page .guide-body sup.cite a { text-decoration: none; }
+.tool-page .guide-body h3.guide-references, .tool-page .guide-body h3.guide-not-cited { font-size: 0.9rem; color: var(--text-secondary); }
+.tool-page .guide-body ol.guide-refs { margin: 0.3rem 0 0.3rem 1.6rem; font-size: 0.82rem; color: var(--text-secondary); }
+.tool-page .guide-body ol.guide-refs li:target { background: #fff8e6; }
+.tool-page .guide-full { margin-top: 1rem; border-top: 1px solid #e3e7ee; padding-top: 0.75rem; }
+.tool-page .guide-full summary { cursor: pointer; font-weight: 600; color: var(--accent-primary); }
+
 /* Heatmap */
 .tool-page .heatmap { border-collapse: collapse; font-size: 0.72rem; }
 .tool-page .heatmap th, .tool-page .heatmap td { border: 1px solid #fff; padding: 0; text-align: center; }

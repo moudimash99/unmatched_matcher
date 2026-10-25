@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, send_from_directory, send_fil
 from matchup_engine import MatchupEngine, FULL_CONFIDENCE_GAMES
 from map_stats import MapStats, MAP_FULL_CONFIDENCE_GAMES, rounded
 import insights
+import strategies
 import tournaments_web
 import random
 import hashlib
@@ -65,6 +66,7 @@ WIN_MATRIX = load_json_data("input/merged_win_pct.json", {})
 GAMES_MATRIX = load_json_data("input/merged_games.json", {})
 STATS_META = load_json_data("input/stats_meta.json", {})
 HEROES = load_json_data("input/heroes.json", {})
+STRATEGY_GUIDES = strategies.load_guides("input/fighter_strategies_short.md", "input/fighter_strategies.md")
 _PRICES_RAW = load_json_data("input/prices.json", {})
 PRICES = {k: v for k, v in _PRICES_RAW.items() if not k.startswith("_")}
 PRICES_META = _PRICES_RAW.get("_meta", {})
@@ -528,6 +530,7 @@ def fighter_page(fighter_id):
         collection=collection,
         fighter=fighter,
         hero=hero,
+        guide=STRATEGY_GUIDES.get(fighter_id),
         deck=insights.deck_summary(hero["deck"]) if hero else None,
         rows=rows,
         best=best,
