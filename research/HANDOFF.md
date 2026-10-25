@@ -85,6 +85,7 @@ Entries were written one at a time in `entries/{id}.md` and `entries_short/{id}.
 **The owner's open request:** "write more info and strategy, maybe correct some stuff". In progress; see section 0. The natural next step: re-read each fighter's sources (now including BGG and, once you have them, the transcripts) and revise the two strategy files.
 
 **Data errors in `input/heroes.json`:**
+- **Checked against card scans in October 2026; the full verified list is under "Card data corrections" in `research/CODEX-PROMPT.md`.** Two of the guide disagreements below turned out to be the guide being right: What Big Eyes You Have is a 3.
 - Michelangelo's Nunchaku says "All of Bruce Lee's attacks this turn are +1 value". That looks copied from Bruce Lee, so the card was left out of his entry.
 - Loki: "Shapershifter" should be "Shapeshifter"; Icy guile (Eredin) says "Red Riper".
 - Rosie the Riveter: Loose Lips Sink Ships! says "BOOS value".
