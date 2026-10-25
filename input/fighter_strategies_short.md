@@ -330,25 +330,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: invisible_man -->
 ## The Invisible Man
 
-**In short:** An elusive solo fighter who teleports between fog tokens, defends better on them, and wins with scheme damage and exhaustion [1][2].
+**In short:** Invisible Man is an elusive solo fighter who teleports between fog tokens, gains defense on them, and wins through scheme damage and exhaustion [1][2].
 
 ### Plan A: Haunt the fog
-**Goal:** Make the opponent chase you until they run out of cards [2][3] · **How:** spread the fog early, always end on a token, and Vanish when they hold 7 cards [2][3] · **Watch out:** he draws a lot himself [4].
+**Goal:** Exhaust the opponent by making them chase [2][3] · **How:** Spread fog early, end on a token, and use Vanish when they hold 7 cards [2][3] · **Watch out:** His own card draw is high [4].
 
 ### Plan B: Strike from the mist
-**Goal:** Deal damage with schemes [2] · **How:** Reign of Terror and Step Lightly from a fog token, set up with Rolling Fog [1][2] · **Watch out:** they need precise positioning [4].
+**Goal:** Deal damage with schemes [2] · **How:** Set up Reign of Terror and Step Lightly from fog with Rolling Fog [1][2] · **Watch out:** These schemes demand precise positioning [4].
 
 ### How they lose
-- No cancels against effect and scheme damage [5].
-- Tight maps and opponents with lots of health [5].
+- He lacks cancels against effect and scheme damage [5].
+- Tight maps and high-health opponents cause trouble [5].
 
 ### Key cards
-- **Vanish**: his most important card [2].
-- **Impossible to See**: zeroes a big attack [2].
+- **Vanish**: His most important card [2].
+- **Impossible to See**: Reduces a big attack to zero [2].
 
 ### Tips
 - Never end a turn off a fog token [3].
-- Play Coded Notes early, not late [3].
+- Use Coded Notes early rather than late [3].
 
 ### References
 1. Restoration Games. *Unmatched: Cobble & Fog*, Invisible Man deck.
@@ -362,25 +362,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: jekyll_hyde -->
 ## Jekyll & Hyde
 
-**In short:** One hero, two forms: Jekyll defends and sets up, Hyde attacks but takes damage when he maneuvers [1][2].
+**In short:** One hero has two forms: Jekyll defends and prepares attacks, while Hyde delivers them but takes damage when maneuvering [1][2].
 
 ### Plan A: Jekyll holds the line
-**Goal:** Stay Jekyll most of the game [2] · **How:** defend with With Haste! to set up Hyde, and draw with Scientific Method [2] · **Watch out:** early aggression burns the Jekyll cards Forever Hyde needs [2].
+**Goal:** Remain Jekyll for most of the game [2] · **How:** Defend with With Haste! to prepare Hyde, drawing with Scientific Method [2] · **Watch out:** Early pressure consumes Jekyll cards needed for Forever Hyde [2].
 
 ### Plan B: Hyde breaks loose
-**Goal:** One huge hit, then back to Jekyll [2] · **How:** discard Jekyll cards into Forever Hyde; Pure Evil moves him and baits cancels [2] · **Watch out:** a cancelled Forever Hyde leaves you exposed [3].
+**Goal:** Land a huge hit, then return to Jekyll [2] · **How:** Fuel Forever Hyde with Jekyll cards; use Pure Evil for movement and to bait cancels [2] · **Watch out:** A cancelled Forever Hyde leaves him exposed [3].
 
 ### How they lose
-- Predictable turns and few Hyde defenses [3].
-- A hand that forces the wrong form [3].
+- Predictable turns and scarce Hyde defenses leave him vulnerable [3].
+- His hand can force an awkward form [3].
 
 ### Key cards
-- **Forever Hyde**: +2 per Jekyll card discarded [1].
-- **Madness Relents**: Hyde's only block of his own [2].
+- **Forever Hyde**: Gains +2 per discarded Jekyll card [1].
+- **Madness Relents**: Hyde's only dedicated block [2].
 
 ### Tips
-- Feed Succumb to Compulsion and Distracted Triage into Forever Hyde [2].
-- Keep a Skirmish for Hyde [2].
+- Use Succumb to Compulsion and Distracted Triage to fuel Forever Hyde [2].
+- Hold Skirmish for Hyde [2].
 
 ### References
 1. Restoration Games. *Unmatched: Cobble & Fog*, Jekyll & Hyde deck.
@@ -392,25 +392,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: sherlock_holmes -->
 ## Sherlock Holmes
 
-**In short:** A methodical detective who reads the opponent's hand and turns that knowledge into uncancellable damage; one of the strongest fighters [1][2][3].
+**In short:** Sherlock studies the opponent's hand to deal uncancellable damage, making this methodical detective one of the strongest fighters [1][2][3].
 
 ### Plan A: Observe from a distance
-**Goal:** Draw your schemes and learn their hand [2] · **How:** double maneuver behind Watson; look with Study Methods and Eliminate the Impossible [2] · **Watch out:** you need to know the opponent's deck [4].
+**Goal:** Find schemes and learn their hand [2] · **How:** Double maneuver behind Watson; inspect their hand with Study Methods and Eliminate the Impossible [2] · **Watch out:** You need to know their deck [4].
 
 ### Plan B: Confirm your suspicions
-**Goal:** Unblockable damage from hand knowledge [2] · **How:** see their hand, then name a value with Confirm Suspicion [2][5] · **Watch out:** Elementary needs the printed value [6].
+**Goal:** Turn hand knowledge into unblockable damage [2] · **How:** Inspect their hand, then name a value with Confirm Suspicion [2][5] · **Watch out:** Elementary requires the printed value [6].
 
 ### How they lose
-- Early, relentless aggression [3][7].
-- Little card draw; he runs out of defenses [7].
+- Relentless early aggression puts him under pressure [3][7].
+- Limited card draw can leave him without defenses [7].
 
 ### Key cards
-- **Eliminate the Impossible**: look and discard [2].
-- **Elementary**: a full block when you guess right [2].
+- **Eliminate the Impossible**: Inspect their hand and choose a discard [2].
+- **Elementary**: Fully blocks a correctly predicted attack [2].
 
 ### Tips
 - Keep Watson alive [8].
-- Track their discard pile and hand size [8].
+- Watch their discard pile and hand size [8].
 
 ### References
 1. Restoration Games. *Unmatched: Cobble & Fog*, Sherlock Holmes deck.
@@ -427,25 +427,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: buffy -->
 ## Buffy
 
-**In short:** A mobile slayer who moves through enemies, fighting alongside either Giles or Xander [1][2].
+**In short:** Buffy is a mobile slayer who moves through enemies, with either Giles or Xander fighting beside her [1][2].
 
 ### Plan A: Cartwheel, stake, slip away
-**Goal:** Fight on your terms, never ending next to the enemy [2] · **How:** defend with Cartwheel Kick, then hit with Mr. Pointy and push them off with Slayer's Strength [2] · **Watch out:** a Feint on Slayer's Strength leaves you exposed [2].
+**Goal:** Choose your fights and avoid ending beside the enemy [2] · **How:** Block with Cartwheel Kick, attack with Mr. Pointy, then push them away with Slayer's Strength [2] · **Watch out:** A Feint on Slayer's Strength leaves her exposed [2].
 
 ### Plan B: Choose your Watcher
-**Goal:** Cards with Giles or damage with Xander [2] · **How:** use Giles's Insight and Training; keep Xander next to Buffy for Right-hand Man [2] · **Watch out:** you only get one [2].
+**Goal:** Gain cards with Giles or damage with Xander [2] · **How:** Use Giles's Insight and Training, or keep Xander beside Buffy for Right-hand Man [2] · **Watch out:** You can choose only one sidekick [2].
 
 ### How they lose
-- Low health all round [2].
-- Opponents who cancel her after-combat effects [2].
+- Buffy and her sidekicks have low health [2].
+- Cancels disrupt her after-combat effects [2].
 
 ### Key cards
-- **Mr. Pointy**: a 5 that wastes Feints [2].
-- **Cartwheel Kick**: defend, move and damage [2].
+- **Mr. Pointy**: A 5-value attack that wastes Feints [2].
+- **Cartwheel Kick**: Combines defense, movement and damage [2].
 
 ### Tips
-- End your turn within 3 spaces, inviting an attack you can punish [2].
-- Insight is one of the game's best cards [3].
+- Stay within 3 spaces at turn end to invite an attack you can punish [2].
+- Insight ranks among the game's best cards [3].
 
 ### References
 1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Buffy deck.
@@ -457,25 +457,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: spike -->
 ## Spike
 
-**In short:** A vampire who covers the map in shadow tokens and fights hardest on them, with Drusilla at his side [1][2].
+**In short:** Spike is a vampire who covers the map in shadow tokens with Drusilla beside him, fighting hardest on those tokens [1][2].
 
 ### Plan A: Spread the shadows
-**Goal:** Shadow everywhere, early [2] · **How:** play each Seek the Shadows where it places the most tokens [2] · **Watch out:** some maps limit placement [2].
+**Goal:** Spread shadow widely and early [2] · **How:** Position each Seek the Shadows to place the most tokens [2] · **Watch out:** Some maps restrict placement [2].
 
 ### Plan B: Fight in the dark
-**Goal:** Fight on your tokens [2] · **How:** The Rush, Let's Dance and Bloody Hell! all improve on shadow [1] · **Watch out:** opponents arrive ready to Feint [2].
+**Goal:** Keep fights on your tokens [2] · **How:** Use shadow to strengthen The Rush, Let's Dance and Bloody Hell! [1] · **Watch out:** Opponents approach ready to Feint [2].
 
 ### How they lose
-- A slow start [2].
-- Opponents who avoid the shadows [2].
+- His setup is slow [2].
+- Opponents can avoid the shadows [2].
 
 ### Key cards
-- **Seek the Shadows**: four copies of his engine [2].
-- **Bloody Hell!**: grows with nearby shadows [1].
+- **Seek the Shadows**: Four copies drive his setup [2].
+- **Bloody Hell!**: Gains damage from nearby shadows [1].
 
 ### Tips
-- Bait their Feint with Regroup [2].
-- Use Leap Away to shove them into shadow [2].
+- Draw out Feint with Regroup [2].
+- Push opponents into shadow with Leap Away [2].
 
 ### References
 1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Spike deck.
@@ -486,25 +486,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: willow -->
 ## Willow
 
-**In short:** A ranged witch who turns into the stronger but self-harming Dark Willow when she or Tara is hurt [1][2].
+**In short:** Willow is a ranged witch who becomes the stronger but self-harming Dark Willow when she or Tara takes damage [1][2].
 
 ### Plan A: Stay in control
-**Goal:** Minimise time as Dark Willow [2] · **How:** keep Tara adjacent, and defend with Meditation [1][2] · **Watch out:** never play Love and Loss while Dark [2].
+**Goal:** Minimize time as Dark Willow [2] · **How:** Keep Tara adjacent and use Meditation to defend [1][2] · **Watch out:** Avoid Love and Loss while Dark [2].
 
 ### Plan B: Tara in front, both at range
-**Goal:** Poke from range behind Tara [2] · **How:** Tara leads; Resurrect brings her back twice [2] · **Watch out:** low movement [2].
+**Goal:** Attack from range behind Tara [2] · **How:** Let Tara lead; Resurrect can revive her twice [2] · **Watch out:** Movement is limited [2].
 
 ### How they lose
-- Careless Dark Willow turns [2].
-- Low movement [2].
+- Careless Dark Willow turns can hurt her [2].
+- Limited movement causes trouble [2].
 
 ### Key cards
-- **Meditation**: a 5-value defense that ends Dark Willow [1].
-- **Revoke**: Tara's 3-value cancel [2].
+- **Meditation**: Blocks for 5 and ends Dark Willow [1].
+- **Revoke**: Gives Tara a 3-value cancel [2].
 
 ### Tips
-- End turns with Swift Strike to keep your distance [2].
-- Stronger in team games [2].
+- Finish with Swift Strike to maintain distance [2].
+- She performs better in team games [2].
 
 ### References
 1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Willow deck.
@@ -515,25 +515,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: angel -->
 ## Angel
 
-**In short:** A hard-hitting vampire who draws a card whenever he or Faith loses an attack, with few defenses [1][2].
+**In short:** Angel is a vampire with strong attacks but few defenses, drawing a card whenever he or Faith loses combat while attacking [1][2].
 
 ### Plan A: Hit hard, stay out of reach
-**Goal:** Strong attacks, then distance [2] · **How:** Angelus and Five by Five hit for 5; Disengage repositions [1][2] · **Watch out:** plan your defense first [2].
+**Goal:** Hit hard, then create distance [2] · **How:** Attack for 5 with Angelus or Five by Five; reposition with Disengage [1][2] · **Watch out:** Plan your defense first [2].
 
 ### Plan B: Plan to lose
-**Goal:** Lose cheap combats to draw [2] · **How:** attack with Regroup and Wisdom of Ages once they defend hard [2] · **Watch out:** his ability doesn't work on defense [2].
+**Goal:** Draw cards by losing cheap attacks [2] · **How:** Use Regroup and Wisdom of Ages once opponents start defending heavily [2] · **Watch out:** His ability never triggers on defense [2].
 
 ### How they lose
-- Few defenses [2].
-- Ranged and high-value attackers [2].
+- His defenses are scarce [2].
+- Ranged and high-value attacks give him trouble [2].
 
 ### Key cards
-- **Angelus, Scourge of Europe**: a 5 to punish Feints [2].
-- **Killer of the Dead**: Faith's best card [2].
+- **Angelus, Scourge of Europe**: A 5-value attack that punishes Feints [2].
+- **Killer of the Dead**: The best card for Faith [2].
 
 ### Tips
-- Save versatile cards for defense [2].
-- Good for teaching new players [2].
+- Reserve versatile cards for defense [2].
+- He works well for teaching new players [2].
 
 ### References
 1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Angel deck.
@@ -544,25 +544,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: little_red -->
 ## Little Red Riding Hood
 
-**In short:** A tricky fighter whose cards gain effects when their symbol matches the top of her discard pile, her basket [1][2].
+**In short:** Little Red is a tricky fighter whose cards gain effects when their symbols match the top of her discard pile, her basket [1][2].
 
 ### Plan A: Chain the basket
-**Goal:** Trigger an effect on most cards [2] · **How:** plan your card order; What's That In My Basket? resets the symbol [2][3] · **Watch out:** forced discards scramble the basket [4].
+**Goal:** Activate effects on most cards [2] · **How:** Plan the order of your cards; reset the symbol with What's That In My Basket? [2][3] · **Watch out:** Forced discards disrupt the basket [4].
 
 ### Plan B: Bite back
-**Goal:** Deal damage on defense too [2] · **How:** What a Terrible Big Mouth You Have returns the attacker's printed value as damage [1][2] · **Watch out:** you take the hit as well [2].
+**Goal:** Make defenses deal damage too [2] · **How:** Use What a Terrible Big Mouth You Have to deal the attack's printed value back as damage [1][2] · **Watch out:** You still take the hit [2].
 
 ### How they lose
-- Opponents with many cancels [2].
-- The wrong symbol on top for her hand [2].
+- Frequent cancels disrupt her effects [2].
+- Her hand can clash with the basket's top symbol [2].
 
 ### Key cards
-- **Never Leave the Path**: her most important card [2].
-- **A Grimm Tale**: heals 2, or 4 with the wolf [1].
+- **Never Leave the Path**: Her most important card [2].
+- **A Grimm Tale**: Restores 2 health, or 4 with wolf [1].
 
 ### Tips
-- Keep the Huntsman close to her but away from the enemy [2].
-- Use What Big Eyes You Have on defense [2].
+- Keep the Huntsman near Little Red and clear of the enemy [2].
+- Save What Big Eyes You Have for defense [2].
 
 ### References
 1. Restoration Games. *Unmatched: Little Red Riding Hood vs. Beowulf*, Little Red Riding Hood deck.
@@ -575,25 +575,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: beowulf -->
 ## Beowulf
 
-**In short:** A tough warrior who gains Rage when hurt and spends it on big attacks and punishing defenses [1][2].
+**In short:** Beowulf is a tough warrior who turns damage into Rage, fueling heavy attacks and punishing defenses [1][2].
 
 ### Plan A: Feed the rage
-**Goal:** Keep Rage flowing [2] · **How:** take 1 or 2 damage when defending; refill with Vigor and Courage [2][3] · **Watch out:** don't end a turn with under 2 Rage [2].
+**Goal:** Maintain your Rage supply [2] · **How:** Take 1 or 2 damage on defense; replenish Rage with Vigor and Courage [2][3] · **Watch out:** Avoid ending a turn below 2 Rage [2].
 
 ### Plan B: Make them come to you
-**Goal:** Win the long game [4] · **How:** pass with schemes that don't draw, and let them approach [4][5] · **Watch out:** few good combat cards, so avoid needless fights [5].
+**Goal:** Play for the long game [4] · **How:** Pass with schemes that avoid drawing and let the opponent approach [4][5] · **Watch out:** Good combat cards are scarce; avoid needless fights [5].
 
 ### How they lose
-- Low mobility and few defenses [2].
-- He must take damage to gain Rage [2].
+- Limited mobility and defenses leave him vulnerable [2].
+- Gaining Rage means taking damage [2].
 
 ### Key cards
-- **The Equal of Grendel**: his most feared defense [3].
-- **The Ancient Heirloom**: can't be cancelled; boost it for 1 Rage [1][4].
+- **The Equal of Grendel**: His most feared defense [3].
+- **The Ancient Heirloom**: Cannot be cancelled and can be boosted for 1 Rage [1][4].
 
 ### Tips
-- Save versatile cards for defense [2].
-- Use Wiglaf as a body-blocker [6].
+- Reserve versatile cards for defense [2].
+- Use Wiglaf to block the opponent's path [6].
 
 ### References
 1. Restoration Games. *Unmatched: Little Red Riding Hood vs. Beowulf*, Beowulf deck.
@@ -608,25 +608,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: deadpool -->
 ## Deadpool
 
-**In short:** A joke-deck wild card who heals after every attack; his single-copy cards vary wildly and some depend on things outside the game [1][2].
+**In short:** Deadpool is a wild card who heals after every attack, with a joke deck of wildly varied single-copy cards, some depending on conditions outside the game [1][2].
 
 ### Plan A: Harass and heal
-**Goal:** Attack often and heal through damage [2] · **How:** he recovers 1 after each attack, and many cards heal more [1] · **Watch out:** few defense cards [2].
+**Goal:** Attack repeatedly and heal through damage [2] · **How:** Recover 1 after each attack, with more healing from many cards [1] · **Watch out:** Defense cards are scarce [2].
 
 ### Plan B: Embrace the chaos
-**Goal:** Be the unpredictable wild card [2] · **How:** read every card; some grow under outside conditions [2] · **Watch out:** hard to plan around [2].
+**Goal:** Be an unpredictable wild card [2] · **How:** Read each card; some improve under conditions outside the game [2] · **Watch out:** His cards are hard to plan around [2].
 
 ### How they lose
-- Running out of defense cards [2].
-- Unreliable card draw [2].
+- His defense cards can run out [2].
+- His card draw is unreliable [2].
 
 ### Key cards
-- **Super Feint**: an uncancellable cancel that draws [1].
-- **Underrated Super Heroes**: a plain 6 [1].
+- **Super Feint**: Cancels and draws without being cancellable itself [1].
+- **Underrated Super Heroes**: A straightforward 6 [1].
 
 ### Tips
-- Put snacks on the table [2].
-- Save high-value versatile cards for defense [2].
+- Set out snacks before playing [2].
+- Keep high-value versatile cards for defense [2].
 
 ### References
 1. Restoration Games. *Unmatched: Deadpool*, Deadpool deck.

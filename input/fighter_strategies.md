@@ -548,37 +548,37 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: invisible_man -->
 ## The Invisible Man
 
-**In short:** A solo melee hero with 15 health and 2 movement who starts with 3 fog tokens in his zone [1]. On a fog token his defense cards get +1, and he can move between fog tokens as if they were adjacent [1]. His offense is weak, so most sources play him to chip the opponent with schemes and then outlast them [2][3][4].
+**In short:** Invisible Man is a solo melee hero with 15 health, 2 movement and 3 starting fog tokens in his zone [1]. Standing on fog gives his defense cards +1, and he can move between fog tokens as though their spaces were adjacent [1]. His weak offense favors wearing the opponent down with schemes, then outlasting them [2][3][4].
 
 ### Plan A: Haunt the fog
-**Goal:** Stay out of reach, make the opponent come to you, and keep them maneuvering until they run out of cards [2][3][5].
-**How to do it:** Spread the fog tokens out early, so the opponent has to cover a lot of ground to reach you [2][4][6]. Stay on fog tokens and never end a turn off one [2][4]. Stand just beyond the opponent's maneuver range, so they have to boost or use movement cards to reach you [6]. Vanish recovers 1 health and removes him from the board until your next turn [1]: play it as your first action when the opponent already has 7 cards, so they have to double maneuver and discard [4][6].
-**Watch out for:** One analyst disagrees with the pure exhaustion plan: he draws a lot, so he needs to close the game sooner rather than just outlast [7]. One player argues against drawing at all, calling Covert Preparation and Coded Notes noob traps [8].
+**Goal:** Stay out of reach and make the opponent chase you until maneuvering empties their deck [2][3][5].
+**How to do it:** Spread your fog tokens early to make the opponent cover more ground [2][4][6]. Keep to the fog, always ending your turn on a token [2][4]. Stay just beyond their maneuver range, forcing them to boost or spend movement cards to reach you [6]. Vanish heals 1 and removes Invisible Man from the board until your next turn [1]: use it as your first action when the opponent already holds 7 cards, forcing a double maneuver and discards [4][6].
+**Watch out for:** TFJ383 disputes the pure exhaustion plan, arguing that Invisible Man draws too much to simply outlast the opponent and needs to finish sooner [7]. By contrast, u/super_huesos_ advises avoiding card draw altogether, calling Covert Preparation and Coded Notes traps for beginners [8].
 
 ### Plan B: Strike from the mist
-**Goal:** Deal the damage his attacks can't, with schemes [2][9].
-**How to do it:** Reign of Terror (2 damage to any opposing fighter) and Step Lightly (3 to an adjacent fighter) both need him to be on fog [1]: 10 damage from schemes in all [9]. Rolling Fog moves a fog token and gains an action, so it can set up Step Lightly [1][2][4]. Surprise Attack (5, cancels the defense's effects) and Emerge From Mist (5 if he started on fog) are his big attacks [1][6].
-**Watch out for:** The damage schemes need precise positioning [7], so make each one count [4][6].
+**Goal:** Use schemes to make up for his limited attack damage [2][9].
+**How to do it:** From fog, Reign of Terror deals 2 damage to any opposing fighter and Step Lightly deals 3 to an adjacent fighter [1]: together, his damage schemes offer 10 damage in all [9]. Rolling Fog moves a fog token and gains an action, setting up Step Lightly [1][2][4]. His big attacks are Surprise Attack, a 5 that cancels the defense's effects, and Emerge From Mist, worth 5 if he started on fog [1][6].
+**Watch out for:** His damage schemes demand precise positioning [7], so make each one count [4][6].
 
 ### How they lose
-- He has no cancel cards to stop effect and scheme damage [10].
-- Opponents with big health, healing or a good exhaustion game outlast him [10].
-- Tight maps leave him nowhere to run [10][11].
-- Opponents who bait his best defenses with weak attacks [12], or who move his fog tokens together whenever they get to move one [12].
-- Heroes with strong sidekicks [2].
+- He lacks cancels to stop damage from card effects and schemes [10].
+- High health, healing or a strong exhaustion game can let opponents outlast him [10].
+- Tight maps give him nowhere to run [10][11].
+- Weak attacks can draw out his best defenses [12], while opponents can cluster his fog tokens whenever an effect lets them move one [12].
+- Strong sidekicks give him trouble [2].
 
 ### Key cards
-- **Vanish**: his most important card [2]. With two, you can vanish, reappear next to the opponent, Surprise Attack, and vanish again [2].
-- **Impossible to See**: sets the opponent's card value to 0 [1]. Invaluable against big attacks [2]; one player treats it as 2 free damage when it can't be Feinted [4][6].
-- **Into Thin Air**: a 4-value defense, 5 on fog; moves him 1 space but lets the opponent move a fog token up to 3 [1]. Worth the trade [2].
-- **Coded Notes**: draw 3, put 2 back on top [1]. Good for protecting cards and planning [2]; use it early, because late it pushes you toward exhaustion [4].
-- **Dreaming of Revenge**: 1 damage to every opponent on fog when he's on fog [1]; it clears 1-health sidekicks blocking your tokens [4].
+- **Vanish**: His most important card [2]. With two copies, vanish, reappear beside the opponent, play Surprise Attack, then vanish again [2].
+- **Impossible to See**: Sets the opponent's card value to 0 [1]. It is invaluable against big attacks [2], but can also provide 2 free damage when it cannot be Feinted [4][6].
+- **Into Thin Air**: A 4-value defense, rising to 5 on fog, that moves him 1 space while letting the opponent move a fog token up to 3 [1]. The trade is worthwhile [2].
+- **Coded Notes**: Draw 3 cards and put 2 back on top [1]. This protects cards and helps you plan [2], but use it early; late in the game, it brings exhaustion closer [4].
+- **Dreaming of Revenge**: Deals 1 damage to every opposing fighter on fog while Invisible Man is on fog [1], clearing 1-health sidekicks that block your tokens [4].
 
 ### Tips
-- With Covert Preparation, "move" the token you're standing on zero spaces, so the opponent can't move that one [4].
-- Use your versatile cards on defense [4].
+- With Covert Preparation, move the token you're standing on zero spaces to prevent the opponent from choosing it [4].
+- Reserve your versatile cards for defense [4].
 - Don't play Surprise Attack from a fog token as your second action [8].
-- One player suggests going second, unless you could be pinned on turn one [13].
+- Consider going second unless you risk being pinned on turn one [13].
 
 ### References
 1. Restoration Games. *Unmatched: Cobble & Fog*, Invisible Man deck. Card text as recorded in `input/heroes.json`.
@@ -605,36 +605,36 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: jekyll_hyde -->
 ## Jekyll & Hyde
 
-**In short:** A solo melee hero with 16 health and 2 movement who starts as Dr. Jekyll and may transform into Jekyll or Mr. Hyde at the start of each turn; Hyde takes 1 damage after every maneuver [1]. Jekyll's cards defend, Hyde's cards attack [2][3]. Most sources rate him below average and hard to play well [3][4][5].
+**In short:** Jekyll & Hyde is a solo melee hero with 16 health and 2 movement [1]. He starts as Dr. Jekyll and may change to either form at the start of each turn; as Mr. Hyde, he takes 1 damage after every maneuver [1]. Jekyll's cards support defense, while Hyde's support attacks [2][3]. He is generally rated below average and difficult to play well [3][4][5].
 
 ### Plan A: Jekyll holds the line
-**Goal:** Stay as Jekyll for most of the game, defending and setting Hyde up to attack [2].
-**How to do it:** With Haste! is a 4-value defense that moves Jekyll up to 4 spaces [1]: it blocks well and sets up Hyde's attack next turn [2], or closes the gap so Hyde can attack twice [6]. Scientific Method draws a card for each damage you take [1], building a hand for Forever Hyde, even past your hand limit [2][6]. Calming Research heals 2 and digs for a card [1]; Gridbeast suggests drawing just one, so good cards don't go to the bottom of your deck [2]. Duality of Man is worth 6 when Jekyll defends with it [1].
-**Watch out for:** Early aggression forces you to spend Jekyll's defense cards that Forever Hyde would have used [2].
+**Goal:** Spend most of the game as Jekyll, defending while preparing Hyde's attacks [2].
+**How to do it:** With Haste! blocks for 4 and moves Jekyll up to 4 spaces [1], providing a strong defense that prepares Hyde's next attack [2] or closes the gap for two attacks [6]. Scientific Method draws a card for each point of damage taken [1], building your hand for Forever Hyde even beyond the hand limit [2][6]. Calming Research heals 2 and helps you find a card [1]. Draw just one to avoid sending good cards to the bottom of your deck [2]. Duality of Man gives Jekyll a 6-value defense [1].
+**Watch out for:** Early pressure forces you to spend Jekyll defenses that could otherwise fuel Forever Hyde [2].
 
 ### Plan B: Hyde breaks loose
-**Goal:** Transform, hit as hard as possible, then get back to Jekyll before the opponent strikes back [2].
-**How to do it:** Forever Hyde is a 5-value attack, +2 for each Jekyll card you discard [1], in theory up to 17 [3]. Feed it Succumb to Compulsion and Distracted Triage, whose effects are unreliable anyway [2][6]. Pure Evil places Hyde anywhere in his zone and deals 2 damage to everyone adjacent [1]: a way to move without taking damage and to bait out cancels [2][6]. When the opponent expects Forever Hyde, attack with something plain like Skirmish instead [2]. Recoiling Blow (5) and Madness Relents both turn him back into Jekyll [1].
-**Watch out for:** If Forever Hyde is cancelled, you're left with a hand you can't use well and are set up to take big damage [3].
+**Goal:** Transform, land the hardest hit you can, then return to Jekyll before the opponent retaliates [2].
+**How to do it:** Forever Hyde starts at 5 and gains +2 per discarded Jekyll card [1], theoretically reaching 17 [3]. Fuel it with Succumb to Compulsion and Distracted Triage, whose effects are unreliable [2][6]. Pure Evil places Hyde anywhere in his zone and deals 2 damage to every adjacent fighter [1], letting him move without taking damage and setting up a bluff to draw out cancels [2][6]. If the opponent expects Forever Hyde, try a plain attack such as Skirmish instead [2]. Recoiling Blow, worth 5, and Madness Relents both return him to Jekyll [1].
+**Watch out for:** A cancelled Forever Hyde leaves an awkward hand and exposes you to heavy damage [3].
 
 ### How they lose
-- Predictability: Jekyll attacks for 2 or 3 and Hyde has few defenses, so the opponent always knows how to respond [3].
-- His hand dictates his form: a hand of Jekyll cards can't attack, a hand of Hyde cards can't defend [3].
-- Hyde takes damage every time he maneuvers [1][2].
-- Opponents target Hyde, so Skirmish and Feint should stay in hand for him [6].
-- A solo fighter, with no sidekick to share the damage [3].
+- Predictable turns make responses easy: Jekyll attacks for 2 or 3, while Hyde has few defenses [3].
+- His hand can force his form: Jekyll cards leave him unable to attack, while Hyde cards leave him unable to defend [3].
+- Every maneuver damages Hyde [1][2].
+- Opponents focus attacks on Hyde; keep Skirmish and Feint available for him [6].
+- He has no sidekick to share the damage [3].
 
 ### Key cards
-- **Forever Hyde**: the deadliest card in the deck and the ultimate high-risk, high-reward attack [2].
-- **With Haste!**: Jekyll's best defense, and his setup for Hyde [2][6].
-- **Madness Relents**: a 4-value versatile card, Hyde's only block of his own [1][2], turning him back into Jekyll to avoid a double attack [2].
-- **Pure Evil**: 3 copies of a 2-damage burst that moves Hyde for free [1][2].
-- **Duality of Man**: worth 6 for Jekyll on defense and for Hyde on attack [1].
+- **Forever Hyde**: The deck's deadliest attack offers an enormous payoff at enormous risk [2].
+- **With Haste!**: Jekyll's best defense also prepares Hyde's attacks [2][6].
+- **Madness Relents**: A 4-value versatile card and Hyde's only dedicated block [1][2]. Returning to Jekyll helps avoid a double attack [2].
+- **Pure Evil**: Three copies provide a 2-damage burst and free movement for Hyde [1][2].
+- **Duality of Man**: Worth 6 when Jekyll defends or Hyde attacks [1].
 
 ### Tips
-- Keep a couple of Skirmish and Madness Relents for Hyde's emergencies [2].
-- Don't discard Jekyll's cards into Forever Hyde too early; they keep you alive [2].
-- He takes a lot of foresight to play well [4].
+- Hold a couple of Skirmish and Madness Relents cards for emergencies as Hyde [2].
+- Keep Jekyll's cards until you can afford to discard them into Forever Hyde; they are what keep you alive [2].
+- Playing him well demands considerable foresight [4].
 
 ### References
 1. Restoration Games. *Unmatched: Cobble & Fog*, Jekyll & Hyde deck. Card text as recorded in `input/heroes.json`.
@@ -654,38 +654,38 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: sherlock_holmes -->
 ## Sherlock Holmes
 
-**In short:** A melee hero with 16 health and 2 movement, plus Dr. Watson (8 health, ranged) [1]. Effects on Holmes and Watson cards can't be cancelled by the opponent [1]. He learns what's in the opponent's hand and uses it against them [2], and is widely rated one of the strongest fighters in the game [3][4][5].
+**In short:** Sherlock Holmes is a melee hero with 16 health and 2 movement, accompanied by the ranged Dr. Watson with 8 health [1]. The opponent cannot cancel effects on Holmes and Watson cards [1]. He turns knowledge of the opponent's hand against them [2] and is widely considered one of the game's strongest fighters [3][4][5].
 
 ### Plan A: Observe from a distance
-**Goal:** Keep away from the opponent while you draw your schemes and learn their hand [2].
-**How to do it:** Double maneuver on many turns, letting the opponent chase you while Watson shields Holmes [2]. Keep defense and versatile cards in hand while you wait [2]. Study Methods (look at their hand if you win) is best played on defense, and Eliminate the Impossible lets you look at their hand and pick a card for them to discard [1][2]; play it when they hold many cards [6]. Attack when the opponent ends their turn next to you: The Game is Afoot is a 5-value attack that then moves Holmes 3 spaces [1][2].
-**Watch out for:** He gets better the more he knows about the opponent's deck; his strength depends on knowing the other fighters' cards [2][7][8].
+**Goal:** Keep your distance while drawing schemes and learning the opponent's hand [2].
+**How to do it:** Often, double maneuver and let the opponent chase while Watson shields Holmes [2]. Hold defense and versatile cards while waiting for your schemes [2]. Study Methods reveals their hand if you win and works best on defense; Eliminate the Impossible lets you inspect their hand and choose a discard [1][2]; use it while their hand is large [6]. When the opponent ends a turn beside you, attack with The Game is Afoot, a 5 that then moves Holmes 3 spaces [1][2].
+**Watch out for:** His strength depends on familiarity with the opponent's deck; knowing their cards makes him more effective [2][7][8].
 
 ### Plan B: Confirm your suspicions
-**Goal:** Turn hand knowledge into damage the opponent can't block [2][9].
-**How to do it:** Confirm Suspicion makes the opponent discard a card of the value you name and take damage equal to its boost [1]. Look at their hand with Eliminate the Impossible first, remembering values and boosts, then name a value to hit their highest boost [9]; or use Eliminate to remove one of two matching cards and guarantee the damage [2]. If you name a value they don't have, they must reveal their hand [1]. Elementary is a face-up 3 defense: name the attacking card's printed value and you cancel its effects and ignore its attack value [1][2].
-**Watch out for:** Elementary depends on the printed value, not the final one [10]. Opponents with many cards of the same value make your guesses harder [11].
+**Goal:** Turn knowledge of their hand into unblockable damage [2][9].
+**How to do it:** Confirm Suspicion forces a discard matching the value you name, dealing damage equal to that card's boost [1]. First inspect their hand with Eliminate the Impossible, remembering values and boosts so you can name a value that catches their highest boost [9]; or remove one of two cards with matching values to guarantee the damage [2]. Naming a value they lack forces them to reveal their hand instead [1]. Elementary is a 3-value defense played face up: correctly name the attack's printed value to cancel its effects and ignore its attack value [1][2].
+**Watch out for:** Elementary requires the printed value rather than the final combat value [10]. Many opposing cards sharing a value can make guessing harder [11].
 
 ### How they lose
-- Early, relentless aggression: the longer the game goes, the stronger he gets [4][12][13].
-- Little card draw: he can run out of defense cards [11][14][15], and about half his deck can't block [11].
+- Relentless early aggression puts him under pressure before he grows stronger as the game progresses [4][12][13].
+- Limited card draw can leave him without defenses [11][14][15]; about half his deck cannot block [11].
 - His highest printed defense is 3 [14].
-- Losing Watson costs him his ranged attack and his healing [3][12].
-- Fighters who attack many times a turn [7][11].
-- Ranged attackers avoid his Counterpunch [3][16].
+- Watson's death removes his ranged attack and healing [3][12].
+- Repeated attacks in a single turn strain his defenses [7][11].
+- Ranged attackers can stay clear of Counterpunch [3][16].
 
 ### Key cards
-- **Eliminate the Impossible**: hand knowledge plus a chosen discard [1]; the key to his game [2].
-- **Confirm Suspicion**: 3 copies of unblockable damage [1].
-- **Elementary**: his defense that turns hand knowledge into a full block [2].
-- **Counterpunch**: a 3-value versatile card that deals 2 damage if Holmes is adjacent to the opponent [1].
-- **Master of Disguise**: Holmes swaps spaces with the opposing hero and deals 1 damage [1]; with Administer Aid, it escapes pins and keeps Holmes and Watson together [2].
+- **Eliminate the Impossible**: Reveals the opponent's hand and lets you choose a discard [1], making it central to his strategy [2].
+- **Confirm Suspicion**: Three copies provide unblockable damage [1].
+- **Elementary**: Converts knowledge of their hand into a full block [2].
+- **Counterpunch**: A 3-value versatile card that deals 2 damage when Holmes is adjacent to the opposing fighter [1].
+- **Master of Disguise**: Swaps Holmes with the opposing hero and deals 1 damage [1]. Paired with Administer Aid, it helps escape pins and keep Holmes and Watson together [2].
 
 ### Tips
-- Keep Watson alive; letting him die while defending Holmes is an easy mistake [6].
-- Track their hand size, deck and discard pile to work out what they're holding [6].
-- Service Revolver is Watson's plain 5-value attack [1][2].
-- His ability protects only a few card effects; it's his schemes that win [2].
+- Protect Watson; it is easy to lose him while using him to shield Holmes [6].
+- Track the opponent's hand size, deck and discards to infer what they hold [6].
+- Watson's Service Revolver is a straightforward 5-value attack [1][2].
+- His ability protects just a few effects; his schemes do the work of winning [2].
 
 ### References
 1. Restoration Games. *Unmatched: Cobble & Fog*, Sherlock Holmes deck. Card text as recorded in `input/heroes.json`.
@@ -717,35 +717,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: buffy -->
 ## Buffy
 
-**In short:** A melee hero with 14 health and 3 movement who can move through spaces with opposing fighters, even when moved by effects [1]. Before the game you choose one sidekick, Giles or Xander, each with 6 health [1]. Gridbeast calls her movement one of the most flexible in the game and her play style built on strong fundamentals [2].
+**In short:** Buffy is a melee hero with 14 health and 3 movement who can pass through opposing fighters, including when card effects move her [1]. Before play, choose Giles or Xander as her sidekick; either has 6 health [1]. Her movement is among the game's most flexible, and she rewards strong fundamentals [2].
 
 ### Plan A: Cartwheel, stake, slip away
-**Goal:** Choose when to fight, and never end your turn next to the opponent [2].
-**How to do it:** Gridbeast's combo starts on defense. End your turn no more than 3 spaces from the opponent, so they attack you with their second action [2]. Defend with Cartwheel Kick: it moves Buffy up to 3 spaces and then deals 1 damage to each opposing fighter adjacent to her [1][2]. On your turn, attack with Mr. Pointy, a 5-value attack with no effect, so a Feint is wasted on it [1][2]. Then use Slayer's Strength, which moves every fighter adjacent to Buffy elsewhere in their zone and deals them 1 damage each [1], so the opponent can't attack you twice next turn [2].
-**Watch out for:** If Slayer's Strength is Feinted, you're left next to the opponent [2]. Heroes who cancel after-combat effects often are a weakness [2].
+**Goal:** Control when fights happen and avoid ending your turn beside the opponent [2].
+**How to do it:** Set up the combo on defense: end your turn within 3 spaces of the opponent, inviting an attack on their second action [2]. Block with Cartwheel Kick, moving Buffy up to 3 spaces before dealing 1 damage to each adjacent opposing fighter [1][2]. Open your turn with Mr. Pointy, a 5-value attack with no effect for Feint to cancel [1][2]. Follow with Slayer's Strength to move every adjacent fighter elsewhere in their zone and deal each 1 damage [1], preventing a double attack next turn [2].
+**Watch out for:** A Feint on Slayer's Strength leaves you beside the opponent [2]. Frequent cancels of after-combat effects give her trouble [2].
 
 ### Plan B: Choose your Watcher
-**Goal:** Pick the sidekick that suits the game: card advantage with Giles, or damage with Xander [2].
-**How to do it:** Giles brings Buffy's only schemes: Insight (look at their hand and choose a card for them to discard) and Training (draw 3) [1]. Keep him alive until you've used them [2]; one player calls Insight one of the best cards in the game [3]. Xander brings Military Knowledge (a 4-value attack that draws 1) and Right-hand Man, worth 6 when Xander is adjacent to Buffy [1]. That's the highest attack in her deck, so keep the two close and use it on attack early [2].
-**Watch out for:** Choosing means giving up either Giles's card draw or Xander's damage [2].
+**Goal:** Choose the support you need: Giles for card advantage or Xander for damage [2].
+**How to do it:** Giles supplies Buffy's only schemes: Insight reveals the opponent's hand and lets you choose a discard, while Training draws 3 cards [1]. Protect him until you have used all his schemes [2]. Insight is rated among the game's best cards [3]. Xander offers Military Knowledge, a 4-value attack that draws 1 card, and Right-hand Man, worth 6 while he is adjacent to Buffy [1]. As her deck's highest attack, Right-hand Man rewards keeping them close and attacking with it early [2].
+**Watch out for:** Taking one sidekick means giving up the other's card draw or damage [2].
 
 ### How they lose
-- Low health on Buffy and her sidekicks [2].
-- Opponents who cancel her after-combat movement [2].
-- Low card draw, especially without Giles [2].
-- Sources rate the whole Buffy box as weak in one-on-one games [4], and better in 2v2 [5].
+- Buffy and both sidekicks have low health [2].
+- Cancels can stop her after-combat movement [2].
+- Her card draw is limited, especially without Giles [2].
+- The set as a whole is rated weak in one-on-one play [4] and stronger in 2v2 [5].
 
 ### Key cards
-- **Mr. Pointy**: a 5-value attack with no effect [1]; it wastes Feints [2].
-- **Cartwheel Kick**: a 2-value defense that moves Buffy 3 and damages everyone adjacent [1]. Can take out several sidekicks [2].
-- **Slayer's Strength**: a 4-value versatile card that pushes adjacent fighters away and damages them [1][2].
-- **Insight** (Giles): hand knowledge plus a chosen discard [1][2][3].
-- **Right-hand Man** (Xander): 6 when Xander is next to Buffy [1][2].
+- **Mr. Pointy**: A plain 5-value attack [1] that wastes opposing Feints [2].
+- **Cartwheel Kick**: A 2-value defense that moves Buffy 3 spaces and damages adjacent opposing fighters [1], potentially removing several sidekicks [2].
+- **Slayer's Strength**: A 4-value versatile card that pushes adjacent fighters away while damaging them [1][2].
+- **Insight** (Giles): Reveals the opponent's hand and lets you choose their discard [1][2][3].
+- **Right-hand Man** (Xander): Worth 6 beside Buffy [1][2].
 
 ### Tips
-- She is good against fighters who rely on pinning their opponent [2].
-- If you only hold one good attack, play Slayer's Strength first, then maneuver away [2].
-- Buffy works on any map [2].
+- Her movement serves her well against fighters that rely on pins [2].
+- With only one good attack in hand, use Slayer's Strength first and maneuver away afterward [2].
+- She can perform well on any map [2].
 
 ### References
 1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Buffy deck. Card text as recorded in `input/heroes.json`.
@@ -764,35 +764,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: spike -->
 ## Spike
 
-**In short:** A melee hero with 15 health and 2 movement, plus Drusilla (7 health) [1]. At the start of each turn he may place a shadow token next to Spike or Drusilla [1], and his best cards get stronger when he or his target stands on shadow [1][2]. He starts slow and grows stronger as the shadows spread [2].
+**In short:** Spike is a melee hero with 15 health and 2 movement, accompanied by Drusilla with 7 health [1]. At the start of each turn, he may place a shadow token beside either fighter [1]. His best cards grow stronger when he or his target occupies shadow [1][2]. His slow start gives way to greater strength as shadows spread [2].
 
 ### Plan A: Spread the shadows
-**Goal:** Cover as much of the map with shadow tokens as you can, as early as you can [2].
-**How to do it:** Seek the Shadows (4 copies) draws 2 cards and places shadow in Spike's space and every adjacent space [1]. Each time you draw one, move to where it places the most tokens [2]. Spread them widely: opponents will try to avoid them [2]. Only maneuver away from the shadows to play another Seek the Shadows [2]. If you would have to discard at the hand limit, spend the cards boosting your maneuvers instead, to reach further [2].
-**Watch out for:** His tokens are limited, and his ability alone spreads them slowly [2]. He is map dependent: on some maps adjacency limits how many tokens you can place [2].
+**Goal:** Cover as much ground as possible with shadow tokens early [2].
+**How to do it:** Each of the 4 copies of Seek the Shadows draws 2 cards and places shadow in Spike's space and every adjacent space [1]. Whenever you draw one, position Spike to place as many tokens as possible [2]. Spread the tokens widely, since opponents will try to avoid them [2]. Leave the shadows only when maneuvering to play another Seek the Shadows [2]. Spend cards on movement boosts rather than discarding them to the hand limit, extending your reach [2].
+**Watch out for:** He has a limited supply of tokens, and his ability spreads them slowly on its own [2]. Map layout matters: fewer adjacent spaces can limit token placement [2].
 
 ### Plan B: Fight in the dark
-**Goal:** Make the opponent come to you and fight on your shadow tokens [2].
-**How to do it:** Stay among your shadows and double maneuver often if the opponent is ranged [2]. On shadow, The Rush becomes a 5, Let's Dance can be boosted, and Bloody Hell! deals 1 damage plus 1 for each shadow space next to the target [1]. Drusilla's Empathy draws 3 if the opponent is on shadow, Always Surprising doubles its blind boost on shadow, and The Sight makes them discard 2 chosen cards if any of their fighters is on shadow [1]. Note which cards need you on shadow and which need the opponent on it [2].
-**Watch out for:** When opponents finally step into your shadows they'll be cautious, ready to Feint your attack [2].
+**Goal:** Draw the opponent into a fight on your shadow tokens [2].
+**How to do it:** Remain among the shadows, often double maneuvering against ranged opponents [2]. Shadow makes The Rush a 5 and allows Let's Dance to be boosted; Bloody Hell! deals 1 damage plus 1 per shadow space adjacent to the target [1]. For Drusilla, Empathy draws 3 when the opponent is on shadow, while Always Surprising doubles its blind boost on shadow; The Sight lets you choose 2 discards if any opposing fighter is on shadow [1]. Check whether each card needs your fighter or the opponent to occupy shadow [2].
+**Watch out for:** Opponents entering shadow will be cautious and ready to Feint your attack [2].
 
 ### How they lose
-- A slow early game, before the shadows are out [2].
-- Opponents who avoid the shadow tokens [2].
-- Ranged opponents who won't come to him [2].
-- Maps that limit where shadows can go [2].
+- He is slow to get going before the shadows spread [2].
+- Opponents can avoid his shadow tokens [2].
+- Ranged opponents may refuse to approach [2].
+- Some maps restrict shadow placement [2].
 
 ### Key cards
-- **Seek the Shadows**: his engine, 4 copies [1][2].
-- **Bloody Hell!**: damage that grows with the shadows around the target [1][2].
-- **The Sight**: look at their hand and choose one or two cards for them to discard [1].
-- **Leap Away**: a 4 on defense that can move the attacker into your shadows, or Spike behind them [1][2].
-- **Arrogance**: a 4-value attack, 6 if you discard your hand [1].
+- **Seek the Shadows**: Its 4 copies drive his setup [1][2].
+- **Bloody Hell!**: Deals more damage as shadows surround the target [1][2].
+- **The Sight**: Reveals their hand and lets you choose one or two discards [1].
+- **Leap Away**: Blocks for 4 and can move the attacker into shadow or Spike behind the shadows [1][2].
+- **Arrogance**: A 4-value attack that becomes 6 if you discard your hand [1].
 
 ### Tips
-- When the opponent first steps onto shadow, attack with Regroup to bait their Feint [2].
-- Defend with Leap Away and Skirmish to shove opponents into shadow [2].
-- One player calls Spike excellent in 2v2 [3].
+- Use Regroup to draw out a Feint when the opponent first enters shadow [2].
+- Use Leap Away and Skirmish on defense to push opponents into shadow [2].
+- He is rated excellent in 2v2 [3].
 
 ### References
 1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Spike deck. Card text as recorded in `input/heroes.json`.
@@ -808,32 +808,32 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: willow -->
 ## Willow
 
-**In short:** A ranged hero with 14 health and 2 movement, plus Tara (6 health, ranged) [1]. Whenever Willow or Tara takes damage, Willow becomes Dark Willow; she turns back at the end of your turn if she is adjacent to Tara [1]. Dark Willow is stronger but has costly card effects [2].
+**In short:** Willow is a ranged hero with 14 health and 2 movement, joined by the ranged Tara with 6 health [1]. Damage to either fighter transforms Willow into Dark Willow; she reverts at the end of your turn if adjacent to Tara [1]. Dark Willow gains power at the cost of harmful card effects [2].
 
 ### Plan A: Stay in control
-**Goal:** Spend as little time as Dark Willow as you can, and be ready when it happens [2].
-**How to do it:** Keep Tara close so Willow reverts at the end of your turn [1][2]. Meditation is a 5-value defense that turns Dark Willow back into Willow [1], a great block and a way back even without Tara [2]. While Dark, Flayed Alive (4) and Black Magic (3) let you blind boost [1]: use that power while you have it [2].
-**Watch out for:** As Dark Willow, When Good Magic Fails discards your top card, and Love and Loss discards 2 and deals 3 damage to a sidekick in your zone, even Tara [1]. Gridbeast says never play Love and Loss while Dark [2].
+**Goal:** Minimize time as Dark Willow and prepare for the transformation [2].
+**How to do it:** Keep Tara nearby to let Willow revert at the end of your turn [1][2]. Meditation blocks for 5 and restores Willow's normal form [1], providing a strong defense and a way back even without Tara [2]. As Dark Willow, Flayed Alive (4) and Black Magic (3) allow blind boosts [1]. Make use of that power while it lasts [2].
+**Watch out for:** While Dark, When Good Magic Fails discards your top card; Love and Loss discards 2 and deals 3 damage to a sidekick in your zone, potentially Tara [1]. Avoid playing Love and Loss in this form [2].
 
 ### Plan B: Tara in front, both at range
-**Goal:** Poke from a distance with both fighters while Tara stands between Willow and the opponent [2].
-**How to do it:** Play Tara as the primary fighter in front [2]. Revoke is her 3-value cancel, giving the deck five cancel cards [1][2]. Knowledge of the Craft returns any card from your discard pile, which is insurance against forced discards [1][2]. Resurrect brings back a defeated fighter at 3 health, so Tara effectively has 12 health over a game [1][2]. Swift Strike moves your attacker 4 spaces after combat, and Rending Shot moves the opponent 3, keeping you out of reach [1][2].
-**Watch out for:** Low movement makes it hard to keep the distance a ranged fighter wants [2].
+**Goal:** Attack from range with both fighters, keeping Tara between Willow and the opponent [2].
+**How to do it:** Let Tara take the lead as your primary fighter [2]. Her 3-value Revoke brings the deck to five cancel cards [1][2]. Knowledge of the Craft retrieves any discarded card if you win the combat, providing insurance against forced discards [1][2]. Resurrect returns a defeated fighter at 3 health, effectively giving Tara 12 health across a game [1][2]. Swift Strike moves your attacker 4 spaces after combat, while Rending Shot moves the opponent 3; both help keep you out of reach [1][2].
+**Watch out for:** Low movement makes maintaining range difficult [2].
 
 ### How they lose
-- Dark Willow's self-harming effects, used carelessly [2].
-- Low movement [2].
-- Tara's 6 health; she can't survive many attacks [2].
+- Careless use of Dark Willow's effects can hurt her own side [2].
+- Limited movement makes positioning difficult [2].
+- With only 6 health, Tara cannot survive many attacks [2].
 
 ### Key cards
-- **Meditation**: a 5 that ends Dark Willow [1][2].
-- **Resurrect**: two chances to bring Tara back [1][2]; it can revive teammates in team games [2].
-- **Revoke**: a 3-value cancel for Tara [1][2].
-- **Flayed Alive**: her strongest attack, with a blind boost as Dark Willow [1][2].
+- **Meditation**: Blocks for 5 and ends the Dark Willow transformation [1][2].
+- **Resurrect**: Offers two chances to revive Tara [1][2], or can bring back teammates in team games [2].
+- **Revoke**: Gives Tara a 3-value cancel [1][2].
+- **Flayed Alive**: Her strongest attack gains a blind boost as Dark Willow [1][2].
 
 ### Tips
-- Swift Strike at the end of your turn forces the opponent to double maneuver or boost to reach you [2].
-- She is stronger in team games [2][3].
+- End your turn with Swift Strike to force a double maneuver or movement boost from the opponent [2].
+- Team games suit her better [2][3].
 
 ### References
 1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Willow deck. Card text as recorded in `input/heroes.json`.
@@ -849,34 +849,34 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: angel -->
 ## Angel
 
-**In short:** A melee hero with 16 health and 2 movement, plus Faith (8 health) [1]. After Angel or Faith attacks, if you lost the combat, you draw a card [1]. Strong attacks, few defenses, and many effects that only work when he loses [2]. Gridbeast places him near the bottom of most tier lists [2]; one player calls him a fighter who looks threatening but is actually weak [3].
+**In short:** Angel is a melee hero with 16 health and 2 movement, fighting alongside Faith with 8 health [1]. Losing combat after an attack by Angel or Faith draws you a card [1]. He has strong attacks but few defenses, and many effects depend on losing combat [2]. He sits near the bottom of most tier lists [2] and is weak despite looking threatening [3].
 
 ### Plan A: Hit hard, stay out of reach
-**Goal:** Attack with his strong cards, then end where the opponent needs an action, or a boost, to reach you [2].
-**How to do it:** Angelus, Scourge of Europe is a 5-value attack with no effect [1], good for punishing a Feint [2]. Five by Five is Faith's 5-value attack that then moves her up to 5 spaces through enemies [1], to escape or to box the opponent in [2]. Disengage places the attacker anywhere in its zone [1]. Killer of the Dead deals 2 damage to an opponent next to Faith [1]; if they end their turn beside her, open with it and follow with Five by Five [2].
-**Watch out for:** Plan your defense before each fight, and don't over-commit [2].
+**Goal:** Land strong attacks, then make the opponent spend an action or a movement boost to reach you [2].
+**How to do it:** Angelus, Scourge of Europe is a plain 5-value attack [1] that punishes Feint [2]. Faith's Five by Five attacks for 5 before moving her up to 5 spaces through enemies [1], helping her escape or box the opponent in [2]. Disengage repositions the attacker anywhere in its zone [1]. Killer of the Dead deals 2 damage to an opposing fighter beside Faith [1]. If they end a turn there, open with it, then attack with Five by Five [2].
+**Watch out for:** Plan your defense before engaging and avoid committing too much to an attack [2].
 
 ### Plan B: Plan to lose
-**Goal:** Lose combats on purpose with cheap attacks, drawing cards and draining the opponent's best defenses [2].
-**How to do it:** After a few strong attacks, opponents defend hard, so attack with Regroup: losing combat still draws 2 cards with his ability [1][2]. Wisdom of Ages draws a card either way, Brooding deals 1 damage when you lose, and Cursed with a Soul heals 1 when you lose [1][2].
-**Watch out for:** Haunted by the Faces, his only defense card, only works if you lose, and his ability doesn't trigger on defense [2].
+**Goal:** Use cheap attacks to lose combat deliberately, drawing cards while draining strong defenses [2].
+**How to do it:** Once strong attacks have encouraged the opponent to defend heavily, try Regroup; even a loss draws 2 cards with his ability [1][2]. Wisdom of Ages draws a card regardless of the result; on a loss, Brooding deals 1 damage and Cursed with a Soul heals 1 [1][2].
+**Watch out for:** His only defense card, Haunted by the Faces, needs a loss for its effect, while his ability never triggers on defense [2].
 
 ### How they lose
-- Few defense cards [2].
-- Opponents with high-value attacks [2].
-- Ranged opponents [2].
-- Few card effects, so he relies on fundamentals [2].
+- His defensive options are scarce [2].
+- High-value attacks put him under pressure [2].
+- Ranged opponents give him trouble [2].
+- With few card effects to help, he relies on sound fundamentals [2].
 
 ### Key cards
-- **Angelus, Scourge of Europe**: 3 copies of a 5 with nothing to cancel [1][2].
-- **Five by Five**: Faith hits for 5 and moves 5 [1][2].
-- **Killer of the Dead**: Faith's best card [2].
-- **The Rogue Slayer**: a 3-value versatile card that deals 1 to everyone adjacent to Faith [1]. Save it for defense [2].
+- **Angelus, Scourge of Europe**: Three copies attack for 5 with nothing to cancel [1][2].
+- **Five by Five**: Faith attacks for 5, then moves 5 spaces [1][2].
+- **Killer of the Dead**: The strongest card in Faith's toolkit [2].
+- **The Rogue Slayer**: A 3-value versatile card dealing 1 damage to each adjacent opposing fighter [1]. Keep it for defense [2].
 
 ### Tips
-- Save your versatile cards for defense; his attacks are strong enough [2].
-- Feint is his most valuable defense [2].
-- He's a good fighter for teaching the game [2][3].
+- Reserve versatile cards for defense; his dedicated attacks are strong enough [2].
+- Feint is his most valuable defensive option [2].
+- He works well for teaching the game [2][3].
 
 ### References
 1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Angel deck. Card text as recorded in `input/heroes.json`.
@@ -892,35 +892,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: little_red -->
 ## Little Red Riding Hood
 
-**In short:** A melee hero with 14 health and 2 movement, plus the ranged Huntsman (9 health) [1]. Most of her card effects only resolve if their symbol (wolf, knives or rose) matches the top card of her discard pile, her "basket" [1][2]. Sources call her one of the best-designed and most carefully crafted heroes in the game [3][4], and a complicated one [2].
+**In short:** Little Red is a melee hero with 14 health and 2 movement, supported by the ranged Huntsman with 9 health [1]. Most of her effects require their symbol, wolf, knives or rose, to match the top of her discard pile, known as her "basket" [1][2]. She is considered one of the game's best-designed and most carefully crafted heroes [3][4], though also one of its more complicated fighters [2].
 
 ### Plan A: Chain the basket
-**Goal:** Trigger the bonus effect on almost every card you play [2][3].
-**How to do it:** Each card you play sets the symbol for the next, so plan ahead and chain them [2][3]. What's That In My Basket? (4 copies) is a 4-value versatile card whose star counts as any symbol, making it a wild card to reset the basket [1][2][3]. Into the Woods moves her 3 spaces and gains an action, which gets her into combat range [1][4]. Never Leave the Path can place her anywhere and gain an action (wolf), deal 2 damage to every opponent in her zone (knives), or draw 3 (rose) [1]; Gridbeast calls the wolf effect the most reliable and suggests avoiding the rose one unless you badly need cards [2].
-**Watch out for:** Forced discards cut her options and change which symbol ends up on top of her basket [4].
+**Goal:** Activate a bonus effect on almost every card [2][3].
+**How to do it:** Plan several cards ahead: each play sets the symbol for the next [2][3]. The 4 copies of What's That In My Basket? are 4-value versatile cards whose star counts as any symbol, letting you reset the basket with a wild card [1][2][3]. Into the Woods moves Little Red 3 spaces and gains an action to bring her into combat range [1][4]. Never Leave the Path can place her anywhere and gain an action with wolf, deal 2 damage to every opposing fighter in her zone with knives, or draw 3 with rose [1]. Wolf is the most reliable option; avoid rose unless you badly need cards [2].
+**Watch out for:** Forced discards reduce your options while changing the symbol on top of the basket [4].
 
 ### Plan B: Bite back
-**Goal:** Deal damage on both attack and defense [2].
-**How to do it:** With the wolf, What a Terrible Big Mouth You Have deals damage equal to the printed value of the attacker's card [1]; it's devastating against big attacks, though you take a big hit too [2]. What Big Eyes You Have cancels the attacker's effects and, with the rose, ignores their attack value [1]; Gridbeast uses it only on defense [2]. With the knives, Once Upon a Time deals 3 damage after combat and Stones in the Belly makes the opponent discard a random card and adds its boost [1]; only play Stones when you can trigger it [2]. A Grimm Tale heals her 2, or 4 with the wolf [1].
-**Watch out for:** She often has to take damage to deal it [2].
+**Goal:** Make both attacks and defenses deal damage [2].
+**How to do it:** With wolf, What a Terrible Big Mouth You Have deals damage equal to the attack's printed value [1]. This punishes big attacks, though Little Red takes a heavy hit too [2]. What Big Eyes You Have cancels the attack's effects and, with rose, ignores its value [1]. Save it for defense [2]. With knives, Once Upon a Time deals 3 damage after combat, while Stones in the Belly forces a random discard and adds its boost [1]. Play Stones only when you can activate that effect [2]. A Grimm Tale restores 2 health, rising to 4 with wolf [1].
+**Watch out for:** Dealing damage often means taking some herself [2].
 
 ### How they lose
-- Opponents with many ways to cancel card effects [2]; a well-timed Feint can ruin a combo she worked to set up [4].
-- The basket shows the wrong symbol for the cards in her hand [2].
-- Forced discards [4].
-- All her card values are 4 or less, so she depends on her effects [3].
+- Frequent cancels undermine her effects [2], and a well-timed Feint can undo a carefully prepared combo [4].
+- The wrong basket symbol can leave her hand without the effects it needs [2].
+- Forced discards disrupt her plans [4].
+- Printed values of 4 or less leave her dependent on card effects [3].
 
 ### Key cards
-- **What's That In My Basket?**: perhaps her best card [2].
-- **Never Leave the Path**: her most important card [2].
-- **What Large Hands You Have**: a 2-value attack that returns to your hand, to keep forcing defenses [1][2]. With the rose, it returns the top card of your discard pile instead [1]. One reviewer found it predictable [4].
-- **A Grimm Tale**: the Huntsman's most important card; keep him alive until you've used it [2].
-- **Long Have I Sought You**: the Huntsman's 4-value attack, worth 6 if he's adjacent to the opponent [1].
+- **What's That In My Basket?**: A contender for her best card [2].
+- **Never Leave the Path**: The most important card in her deck [2].
+- **What Large Hands You Have**: A 2-value attack that returns to your hand, letting you repeatedly force defenses [1][2]. With rose, retrieve the top discard instead [1]. Antlerflax found this pattern predictable [4].
+- **A Grimm Tale**: The Huntsman's most important card makes protecting him worthwhile until you have played it [2].
+- **Long Have I Sought You**: The Huntsman attacks for 4, or 6 beside the opposing fighter [1].
 
 ### Tips
-- Keep the Huntsman close to Little Red but away from the enemy [2]. He can't trigger her basket, but his cards' symbols can reset it [3].
-- Sometimes leave attacks on the Huntsman undefended, to save versatile cards for Little Red [2].
-- Use the Huntsman's attacks early rather than holding them [2].
+- Keep the Huntsman near Little Red and away from enemies [2]. Although he cannot trigger her basket, his card symbols can reset it [3].
+- Sometimes taking an undefended hit with the Huntsman preserves versatile cards for Little Red [2].
+- Play the Huntsman's attacks early instead of saving them [2].
 
 ### References
 1. Restoration Games. *Unmatched: Little Red Riding Hood vs. Beowulf*, Little Red Riding Hood deck. Card text as recorded in `input/heroes.json`.
@@ -938,35 +938,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: beowulf -->
 ## Beowulf
 
-**In short:** A melee hero with 17 health and 2 movement, plus Wiglaf (9 health) [1]. Beowulf starts with 1 Rage and gains 1 each time he is dealt damage, up to 3 [1]; his cards spend Rage for big effects. One analyst praises the design: he decides whether to spend Rage after the cards are revealed, so opponents can't always see it coming [2].
+**In short:** Beowulf is a melee hero with 17 health and 2 movement, accompanied by Wiglaf with 9 health [1]. He starts with 1 Rage and gains 1 whenever he takes damage, to a maximum of 3 [1], then spends it on powerful card effects [1]. The design rewards deciding whether to spend Rage after cards are revealed, making his intentions harder to read [2].
 
 ### Plan A: Feed the rage
-**Goal:** Keep Rage coming in and spend it at the right moment [3].
-**How to do it:** Take a little damage when you defend: if you're not at full Rage, about 1 or 2 damage per defense is better than blocking everything [2][4][5]. Try to hold at least 2 Rage at all times, and don't end your turn exposed with less [3][5]. Epic Poem gains 1 Rage and is +1 for each Rage you have [1]. Vigor and Courage makes the opponent discard a random card and gives you Rage equal to its boost [1], a way to win back Rage you've spent [3][5].
-**Watch out for:** Spending Rage recklessly; plan how you'll use it before each fight [3].
+**Goal:** Maintain a supply of Rage and choose the right moments to spend it [3].
+**How to do it:** Below full Rage, aim to take about 1 or 2 damage when defending rather than blocking everything [2][4][5]. Keep at least 2 Rage whenever possible, especially before ending a turn exposed [3][5]. Epic Poem grants 1 Rage and gains +1 for each Rage you hold [1]. Vigor and Courage forces a random discard and grants Rage equal to its boost [1], replenishing what you have spent [3][5].
+**Watch out for:** Plan your Rage spending before each fight rather than using it recklessly [3].
 
 ### Plan B: Make them come to you
-**Goal:** Play the long game and let the opponent approach his slow but heavy-hitting fighters [6][7][8].
-**How to do it:** His schemes don't draw cards, so they let him pass a turn without fighting or overdrawing; one player counts 7 of them [8][9]. Golden Drinking Horn gives one effect per Rage spent: draw 2, move 4 or heal 2 [1]; one player rarely uses it to draw, and mostly heals and passes [6]. Wiglaf's Remnant of Valor deals 1 damage to each adjacent fighter, and gains an action if it hit Beowulf [1]: a cheap Rage and a pass [3][6]. Don't boost your movement to chase [8]. Gridbeast suggests separating Wiglaf and Beowulf to give opponents a false sense of security [3].
-**Watch out for:** He has few combat cards worth playing [9], so avoid unnecessary combats [9]. Some players prefer to simply attack until the opponent drops; his plan is flexible [10].
+**Goal:** Let the opponent approach your slow, heavy-hitting fighters and play for the long game [6][7][8].
+**How to do it:** Schemes that avoid drawing let him pass turns without fighting or overdrawing; one player counts 7 such passes [8][9]. Golden Drinking Horn offers one effect per Rage spent: draw 2, move 4 or heal 2 [1]. Use it mostly to heal and pass, rarely to draw [6]. Wiglaf's Remnant of Valor deals 1 damage to every adjacent fighter and gains an action if it hits Beowulf [1], providing cheap Rage and a pass [3][6]. Avoid spending movement boosts to chase the opponent [8]. Separating Wiglaf from Beowulf can give the opponent a false sense of security [3].
+**Watch out for:** Few of his combat cards are worth spending [9], so limit unnecessary fights [9]. His plan remains flexible, though, and some players prefer attacking until the opponent falls [10].
 
 ### How they lose
-- Low mobility [3].
-- Few defense cards [3][11].
-- He mostly has to take damage to gain Rage [3].
-- His Ancient Heirlooms get discarded [11].
-- Wiglaf dies too easily [8].
+- Limited mobility makes approaching difficult [3].
+- He has few defense cards [3][11].
+- Gaining Rage usually requires taking damage [3].
+- Discards can cost him his Ancient Heirlooms [11].
+- Wiglaf can die too easily [8].
 
 ### Key cards
-- **The Equal of Grendel**: his only defense card [3]. Spend 2 Rage to deal damage equal to the attacker's printed value [1]. One of his scariest cards, so keep 2 Rage ready to keep the threat alive [5][12]. Don't let a low attack bait it out [3].
-- **The Ancient Heirloom**: its effects can't be cancelled [1]. Spend 2 Rage to make it a 5, 1 Rage to boost it, or both [1]. Several players prefer spending 1 Rage to boost it rather than 2 for the 5 [5][8], and Gridbeast agrees when you have under 3 [3].
-- **The War-King**: a 1-value versatile card, +2 per Rage spent, up to 7 [1][3]. A flexible block in a pinch [3][5].
-- **No Contest Expecteth**: spend 3 Rage to defeat a sidekick you beat in combat [1]. Gridbeast doubts it's worth the Rage [3]; one analyst values taking down a threatening sidekick in one blow [2].
+- **The Equal of Grendel**: His only dedicated defense [3] spends 2 Rage to deal damage equal to the attack's printed value [1]. Keeping 2 Rage available preserves the threat of one of his scariest cards [5][12]. Avoid wasting it on a low attack [3].
+- **The Ancient Heirloom**: Its effects cannot be cancelled [1]. Spend 2 Rage for a value of 5, 1 to boost, or both [1]. Several players favor the 1-Rage boost over spending 2 for the 5 [5][8]; Gridbeast agrees when you hold under 3 Rage [3].
+- **The War-King**: A 1-value versatile card that gains +2 per Rage spent, reaching 7 [1][3]. It makes a flexible emergency block [3][5].
+- **No Contest Expecteth**: Spend 3 Rage to defeat a sidekick after beating it in combat [1]. Gridbeast questions the cost [3], while TFJ383 values removing a threatening sidekick in one blow [2].
 
 ### Tips
-- Save Skirmish and your other versatile cards for defense [3][6].
-- Use Wiglaf to body-block for him [11].
-- He has a good exhaustion game, and exhaustion damage gives him Rage too [11].
+- Reserve Skirmish and other versatile cards for defense [3][6].
+- Let Wiglaf block the opponent's path to Beowulf [11].
+- He plays well into exhaustion, and exhaustion damage also grants Rage [11].
 
 ### References
 1. Restoration Games. *Unmatched: Little Red Riding Hood vs. Beowulf*, Beowulf deck. Card text as recorded in `input/heroes.json`.
@@ -993,32 +993,32 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: deadpool -->
 ## Deadpool
 
-**In short:** A solo melee hero with 10 health and 2 movement who recovers 1 health after every attack he makes [1]. His deck is a joke deck: every card is a single copy, many are parodies of other heroes' cards, and some depend on things outside the game [1][2]. Gridbeast lists "he is a joke hero" and "he is unpredictable" as both his strengths and his weaknesses [2].
+**In short:** Deadpool is a solo melee hero with 10 health and 2 movement who heals 1 after each attack he makes [1]. His joke deck contains one copy of each card, many parodying other heroes' cards and some depending on conditions outside the game [1][2]. His humor and unpredictability are both strengths and weaknesses [2].
 
 ### Plan A: Harass and heal
-**Goal:** Keep attacking so his ability and healing cards keep him alive, and wear the opponent down [2].
-**How to do it:** He heals 1 after each attack [1], and cards such as Gimme Gimme Chimichanga, Non-Retinal Scan Access to Danger Room, They Have An Amazing Buffet, Faint and Dumpster Divin' Deadpool restore more [1]. That healing lets him take risks other fighters can't [2]. Save your high-value versatile cards for defense [2].
-**Watch out for:** His defense is his main weakness: he has very few defense cards, and once they're gone he goes down fast, so don't over-commit [2].
+**Goal:** Wear the opponent down through repeated attacks, relying on his ability and healing cards to stay alive [2].
+**How to do it:** Each attack heals 1 [1], with more healing available from Gimme Gimme Chimichanga, Non-Retinal Scan Access to Danger Room, They Have An Amazing Buffet, Faint and Dumpster Divin' Deadpool [1]. This healing lets him take risks other fighters cannot afford [2]. Reserve high-value versatile cards for defense [2].
+**Watch out for:** Scarce defenses are his main weakness; once they run out, he falls quickly, so avoid committing too heavily to an attack [2].
 
 ### Plan B: Embrace the chaos
-**Goal:** Be the wild card, especially in 3- and 4-player games, which are chaotic anyway [2].
-**How to do it:** Read every card in your hand carefully: many get bigger under outside conditions [2]. Chimichanga Break! is worth 5 if there is food on the table, and I'm Not Wearing Pants is worth 5 if the card isn't sleeved [1]; Gridbeast suggests putting snacks out before the game [2]. His unpredictability is what makes him dangerous; have fun and don't overthink it [2].
-**Watch out for:** His cards vary wildly in value and effect, so a serious long-term plan is hard to build [2].
+**Goal:** Use his unpredictability as a wild card, especially in the chaos of 3- and 4-player games [2].
+**How to do it:** Read your hand carefully; many cards gain value when conditions outside the game are met [2]. Chimichanga Break! becomes a 5 with food on the table, while I'm Not Wearing Pants becomes a 5 without a sleeve [1]. Put snacks out before playing [2]. His unpredictability makes him dangerous, so enjoy the chaos without overthinking it [2].
+**Watch out for:** Widely varying card values and effects make a firm long-term plan difficult [2].
 
 ### How they lose
-- Few defense cards [2].
-- Unreliable card draw, which keeps him from excelling in competitive play [2].
-- Only 10 health [1].
+- He can run short of defense cards [2].
+- Unreliable card draw limits his competitive performance [2].
+- He has only 10 health [1].
 
 ### Key cards
-- **Super Feint**: a 4-value cancel that also draws a card and can't itself be cancelled [1].
-- **Underrated Super Heroes**: his biggest plain attack, a 6 [1].
-- **Gaze of Stone**: his single copy deals 8 more damage if it wins the combat [1].
-- **Time out time out time out!**: search your deck for a card to play instead [1].
+- **Super Feint**: A 4-value cancel that draws a card and cannot itself be cancelled [1].
+- **Underrated Super Heroes**: His strongest plain attack is worth 6 [1].
+- **Gaze of Stone**: His single copy deals an extra 8 damage after winning combat [1].
+- **Time out time out time out!**: Searches your deck for a card to play in its place [1].
 
 ### Tips
-- Put food on the table before the game [2].
-- Save high-value versatile cards for defense [2].
+- Set out food before the game [2].
+- Keep high-value versatile cards for defense [2].
 
 ### References
 1. Restoration Games. *Unmatched: Deadpool*, Deadpool deck. Card text as recorded in `input/heroes.json`.
