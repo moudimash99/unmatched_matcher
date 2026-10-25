@@ -1502,75 +1502,89 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: oda_nobunaga -->
 ## Oda Nobunaga
 
-**In short:** A melee warlord who surrounds enemies with his two Honor Guard and buffs them in his zone.
+**In short:** A general who wins by flanking with his two Honor Guard, kept in his zone so they get +1 to their cards [1][2].
 
-### Plan A: Flank and strike
-**Goal:** Hit a flanked enemy · **How:** Fire and Flames becomes 5, Demon King of the Sixth Heaven deals 2 · **Watch out:** Oda doesn't get his own +1.
+### Plan A: Set up the flank
+**Goal:** Two of your fighters next to the opponent [2] · **How:** spread the guards out and use Battle Maneuvers to move everyone into place [1][2] · **Watch out:** ranged fighters are hard to pin down; don't rush [2].
 
-### Plan B: Patience
-**Goal:** Set up flanks safely · **How:** defend with Battle Maneuvers to reposition everyone · **Watch out:** ranged fighters are hard to flank.
+### Plan B: Bait, then strike
+**Goal:** Drain their big defenses, then hit hard [2] · **How:** bait with Patience and Strategy, then Fire and Flames and Student of War on a flank [1][2] · **Watch out:** Lightning and Thunder's cancel comes after their immediate effects [2].
 
 ### How they lose
-- The Honor Guard die early.
-- Opponents never get flanked.
+- The Honor Guard fall quickly, and flanking stops [2].
+- His ability does nothing for himself [2].
 
 ### Key cards
-- **Student of War**: a 5 that draws.
-- **Battle Maneuvers**: moves all your fighters.
+- **Student of War**: 5 value, draws per damage dealt [1].
+- **Demon King of the Sixth Heaven**: 2 damage to each flanked opponent [1].
 
 ### Tips
-- Keep the guards in Oda's zone.
-- Push runners toward dead ends.
+- Keep the guards in Oda's zone [2].
+- Allied fighters in team games don't count for flanks [2].
+
+### References
+1. Restoration Games. *Unmatched: Sun's Origin*, Oda Nobunaga deck.
+2. Gridbeast. "Unmatched – Oda Nobunaga." https://gridbeast.gg/unmatched-oda-nobunaga/
 
 ---
 
 <!-- id: tomoe_gozen -->
 ## Tomoe Gozen
 
-**In short:** A ranged samurai who punishes anyone leaving her zone and hits hardest up close.
+**In short:** A ranged samurai who fights best up close; her ability punishes heroes for leaving her zone [1][2].
 
-### Plan A: Own the zone
-**Goal:** Make escaping costly · **How:** heroes take 1 damage leaving her zone; A Warrior's Way moves them and places her next to them · **Watch out:** doesn't affect sidekicks.
+### Plan A: Control the battlefield
+**Goal:** Dictate where the opponent can move [2] · **How:** attack from range and let her ability pin them; Lord Kiso's Final Stand gets her out of sidekick pins [1][2] · **Watch out:** opponents with lots of health may ignore the ability [3].
 
-### Plan B: Adjacent burst
-**Goal:** Big hits up close · **How:** Witness My Last Battle is a 7; A Worthy Opponent is 5 against heroes · **Watch out:** cancel effects weaken her.
+### Plan B: Fight up close
+**Goal:** Land her big adjacent attacks [2] · **How:** A Warrior's Way drags a ranged hero and drops her beside them, then Five Against Thousands and Witness My Last Battle [1][2] · **Watch out:** adjacency is hard against ranged fighters [2].
 
 ### How they lose
-- Their cards cancel her effects.
-- Multi-hero teams without sidekicks.
+- Cancel effects and high defense values [2].
+- Teams of heroes with no sidekicks [2].
 
 ### Key cards
-- **Deeds of Valor**: takes at most 2.
-- **Witness My Last Battle**: a 7 finisher.
+- **Deeds of Valor**: she takes at most 2 combat damage [1].
+- **Witness My Last Battle**: 7 value, adjacent only, ends the turn [1].
 
 ### Tips
-- Let them come to you.
-- Use Lord Kiso's Final Stand to escape pins.
+- The ability fires however the hero leaves her zone [2].
+- Most of her defenses rely on effects [2].
+
+### References
+1. Restoration Games. *Unmatched: Sun's Origin*, Tomoe Gozen deck.
+2. Gridbeast. "Unmatched – Tomoe Gozen." https://gridbeast.gg/unmatched-tomoe-gozen/
+3. u/Former_Fisherman3566. Comment on "Any tips w Gozen playing against Achillies?" *r/Unmatched*, Reddit, 2024. https://www.reddit.com/r/Unmatched/comments/1e10p51/
 
 ---
 
 <!-- id: william_shakespeare -->
 ## William Shakespeare
 
-**In short:** A tricky melee fighter who builds 10-syllable lines of cards to fire powerful completion effects.
+**In short:** A planner who strings attacks and defenses into 10-syllable lines to fire powerful completion effects, shielded by three Actors [1][2].
 
-### Plan A: Complete your lines
-**Goal:** Hit exactly 10 syllables · **How:** All Are Punished then My Kingdom For a Horse gains 2 actions · **Watch out:** defending adds to your line too.
+### Plan A: Write the perfect line
+**Goal:** Lines of exactly 10 syllables [2] · **How:** plan from your hand, counting defenses too; All Are Punished into My Kingdom For a Horse gains 2 actions [1][2] · **Watch out:** over 10 wastes the line [2].
 
-### Plan B: Horror
-**Goal:** Unblockable burst · **How:** chain Horrors; a completing Horror deals up to 5 · **Watch out:** predictable.
+### Plan B: Hide behind the cast
+**Goal:** Actors soak hits [2] · **How:** defend with Such Sweet Sorrow and Once More Unto The Breach to bring Actors back [1][2] · **Watch out:** big printed attacks overwhelm him [3].
 
 ### How they lose
-- Big hitters overwhelm him early.
-- His Actors die and he's exposed.
+- Forced discards and low card draw [2].
+- His best effects need completed lines [2].
 
 ### Key cards
-- **My Kingdom For a Horse**: completion gains 2 actions.
-- **Once More Unto The Breach**: revives Actors.
+- **Horror**: grows with each Horror in the line; completion deals up to 5 [1][2].
+- **My Kingdom For a Horse**: completion gains 2 actions [1].
 
 ### Tips
-- Plan lines from your hand, not your hopes.
-- Defend with Such Sweet Sorrow.
+- Completions can't be cancelled and fire even on the opponent's turn [2].
+- Again fixes a line by pulling its first card back [1][2].
+
+### References
+1. Restoration Games. *Unmatched: Slings and Arrows*, William Shakespeare deck.
+2. Gridbeast. "Unmatched – Shakespeare." https://gridbeast.gg/unmatched-shakespeare/
+3. u/Franjeims. "Tips on playing Shakespeare and Hamlet." *r/Unmatched*, Reddit, 2024. https://www.reddit.com/r/Unmatched/comments/1dwnu9r/
 
 ---
 

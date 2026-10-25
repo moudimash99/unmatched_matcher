@@ -2398,116 +2398,134 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: oda_nobunaga -->
 ## Oda Nobunaga
 
-**In short:** A melee warlord with 13 health and two 6-health Honor Guard. He wins by surrounding (flanking) opponents with his fighters and keeping the guards in his zone, where they get +1 on every card.
+**In short:** A melee hero with 13 health and 2 movement, plus two 6-health Honor Guard [1]. Other friendly fighters in his zone add +1 to their combat cards, though he doesn't [1]. His whole game is flanking: getting two of his fighters next to the opponent, with the Honor Guard kept in his zone [2].
 
-### Plan A: Flank and strike
-**Goal:** Get an enemy adjacent to two or more of your fighters, then hit hard.
-**How to do it:** Five of his cards get better against a flanked enemy. Fire and Flames (3) becomes 5. Sun and Moon (2), an Honor Guard attack, ignores their card's value. Lightning and Thunder (4), also for the guards, cancels their effects and moves your fighter 2 spaces. Demon King of the Sixth Heaven deals 2 damage to each flanked enemy. Student of War (5) is Oda's best attack: it draws a card for each point of combat damage. Master Strategist gives the Honor Guard +1 on attack and defense while they're in Oda's zone.
-**Watch out for:** Oda himself never gets the +1. Don't spend every strong attack the moment you get a flank.
+### Plan A: Set up the flank
+**Goal:** Get the opponent adjacent to two or more of your fighters as often as you can [2].
+**How to do it:** Spread the Honor Guard around the board to create as many chances to flank as possible [2]. Five of his eleven card types depend on a flank, so plan a turn ahead [2]. Battle Maneuvers, a 2-value versatile card, draws a card and moves each of your fighters up to 2 spaces [1]; played on defense it can set up a flank, or a flank at the start of your next turn [2]. Keep the guards in Oda's zone: the +1 makes their attacks hit harder and their defenses last longer, so the flank holds [2].
+**Watch out for:** Flanks take setting up, and ranged fighters can be hard to pin down [2]. Don't rush into a bad spot; use the map to push them towards areas with fewer exits, then boost a maneuver to catch them [2].
 
-### Plan B: Patience
-**Goal:** Set up flanks without walking into a bad trade.
-**How to do it:** Battle Maneuvers (2) draws 1 and moves all your fighters up to 2 spaces after combat. Played on defense, it lets you flank them by surprise or line up a flank for next turn. Patience and Strategy (1) heals 2 against a flanked enemy and baits out their big defenses. Spring the Trap (defense 2) swaps two of your fighters, makes the other one the defender and deals 1 damage. Use it to pull Oda out of danger. Push ranged fighters toward parts of the map with few exits.
-**Watch out for:** Ranged fighters are hard to flank. Rushing in leaves your guards exposed.
+### Plan B: Bait, then strike
+**Goal:** Drain the opponent's big defenses with cheap cards, then land the heavy flanked attacks [2].
+**How to do it:** Don't throw every strong attack the moment you flank [2]. Patience and Strategy is only a 1-value card but heals 2 if the opponent is flanked [1]; if they block it with a big defense, you've weakened their hand and healed in one turn [2]. Then hit with Fire and Flames (3, or 5 if flanked), Lightning and Thunder (4; if flanked, cancels all effects on their card and moves your fighter) and Student of War [1][2].
+**Watch out for:** Lightning and Thunder's cancel comes after any immediate effect on the opponent's card, so it is best against defenses that rely on during-combat effects [2].
 
 ### How they lose
-- The Honor Guard die quickly, and Oda alone can't finish a healthy opponent.
-- Opponents never let a flank happen.
-- Guards stray out of Oda's zone and lose their +1.
+- The Honor Guard die quickly, and without them flanking stops [2].
+- Once the guards are gone, Oda struggles to beat an opponent who still has plenty of health [2].
+- His ability does nothing for him [2].
 
 ### Key cards
-- **Student of War**: a plain 5 with card draw.
-- **Battle Maneuvers**: sets up flanks; four copies.
-- **Reinforce**: choose two of heal everyone 1, draw 2, or gain an action.
-- **Pragmatism**: Oda's 3 defense that cancels their effects.
+- **Student of War**: a 5-value Oda attack that draws a card for each point of combat damage dealt [1]; his best attack, since most defenses are only 2 or 3 [2].
+- **Fire and Flames**: 3, or 5 when flanked [1]; a safe attack, because little is lost if its effect is cancelled [2].
+- **Spring the Trap**: a 2-value defense that can swap your fighter with an adjacent friendly fighter, making them the defender, then deals 1 damage [1]. With well-placed fighters it can save Oda and set up the next flank [2].
+- **Demon King of the Sixth Heaven**: an Oda scheme dealing 2 damage to each opposing flanked fighter [1]; easy, reliable damage [2].
 
 ### Tips
-- Keep both guards in Oda's zone at all times.
-- Spread your fighters across the board to create flanking chances.
-- Fire and Flames is a safe attack: little is lost if it's cancelled.
+- Allied heroes and sidekicks in team games don't count towards a flank [2].
+- Kept in Oda's zone, the Honor Guard become very hard to kill [2].
+- He is harder than most heroes for new players [2].
 
-### Further reading
-- [Unmatched – Oda Nobunaga](https://gridbeast.gg/unmatched-oda-nobunaga/): Gridbeast · written guide
-- [Oda Nobunaga - Unmatched Fighter Review](https://www.youtube.com/watch?v=MssOtIW4THA): To The Table Top! · video
-- [Strategy Sunday Vol. 9](https://www.youtube.com/watch?v=TyjF2vJEJs4): Karma · video
+### References
+1. Restoration Games. *Unmatched: Sun's Origin*, Oda Nobunaga deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Oda Nobunaga." *Gridbeast*. https://gridbeast.gg/unmatched-oda-nobunaga/
+
+Gridbeast lists Spring the Trap as versatile and Lightning and Thunder's cancel as unconditional; the deck has Spring the Trap as a defense card and the cancel only when the opponent is flanked, and the deck is followed here.
+
+### Not cited
+- [Oda Nobunaga - Unmatched Fighter Review](https://www.youtube.com/watch?v=MssOtIW4THA): To The Table Top! · video (not yet reviewed)
+- [Strategy Sunday Vol. 9](https://www.youtube.com/watch?v=TyjF2vJEJs4): Karma · video (not yet reviewed)
 
 ---
 
 <!-- id: tomoe_gozen -->
 ## Tomoe Gozen
 
-**In short:** A ranged samurai with 14 health who fights best up close. Any hero who leaves her zone takes 1 damage, so she pins opponents near her and then hits them with huge adjacent attacks.
+**In short:** A ranged hero with 14 health, 2 movement and no sidekicks [1]. When an opposing hero leaves her zone, they take 1 damage [1]. She plays almost like a melee fighter with range: her ability pins opponents in her zone, and her strongest cards want her adjacent to them [2].
 
-### Plan A: Own the zone
-**Goal:** Make escaping her zone costly, so they stay where she can reach them.
-**How to do it:** Attack of Opportunity deals 1 damage to an opposing hero whenever they leave her zone, by any means. Use her range to poke from a distance until they come adjacent, or until you can reach them in one action. Lord Kiso's Final Stand, her only scheme, moves her 3 spaces through sidekicks, then heals 2 or gains an action. Use it to escape pins. A Warrior's Way (2) moves the enemy hero up to 3 spaces, triggering the 1 damage if they leave her zone, then places Tomoe next to them. It's the way to reach ranged fighters hiding behind sidekicks.
-**Watch out for:** Her ability doesn't work on sidekicks, and heroes with lots of health simply ignore it.
+### Plan A: Control the battlefield
+**Goal:** Use her range and her ability to decide where the opponent can go [2].
+**How to do it:** Her ability fires whenever an opposing hero leaves her zone for any reason: a maneuver, a scheme, an after-combat effect, even being removed from the board [2]. It only hits heroes, not sidekicks [1][2]. Keep attacking from a distance and try to create an opening where they attack you from an adjacent space, or you can reach one in a single action [2]. Lord Kiso's Final Stand, her only scheme, moves her up to 3 spaces through sidekicks, then heals 2 or gains an action [1]; it gets her out of pins set by sidekick-heavy heroes, though not through enemy heroes [2].
+**Watch out for:** Opponents with enough health may just ignore the ability [3]. A cheap card-draw attack like Piercing Shot helps keep the pressure on [4].
 
-### Plan B: Adjacent burst
-**Goal:** Land huge hits once she's next to the enemy hero.
-**How to do it:** Witness My Last Battle is a 7 played face up that ends your turn, and needs an adjacent target. With no effect to cancel, they must block with their best card. Five Against Thousands (4) returns to your hand if you discard a card while adjacent. A Worthy Opponent is worth 5 against a hero. Flash of Steel cancels a hero's effects and deals 1 damage when adjacent.
-**Watch out for:** Effects that cancel or ignore her cards blunt her best defenses.
+### Plan B: Fight up close
+**Goal:** Get adjacent and land her big attacks [2].
+**How to do it:** When the opponent stays at range, A Warrior's Way (2 value) moves them up to 3 spaces and, if they are a hero, places Tomoe next to them [1]: move them out of her zone for 1 damage, then land beside them [2]. Once adjacent, Five Against Thousands (4) can come back to your hand by discarding a card, for back-to-back attacks [1][2]. Witness My Last Battle is a 7-value attack played face up that only targets an adjacent fighter and ends the turn [1]; with nothing worth cancelling, the opponent must throw their best defense at it [2].
+**Watch out for:** Many of her best effects need adjacency, which is harder to get against ranged fighters [2].
 
 ### How they lose
-- Effects that cancel her card effects take away her defenses.
-- Teams of several heroes without sidekicks, like the Raptors, get around her.
-- High-health heroes run through her zone anyway.
+- Effects that cancel her cards, and high defense values [2].
+- Teams of several heroes with no sidekicks [2].
+- Her cancel, Flash of Steel, only works on heroes, so sidekick card effects always go off [1][4].
 
 ### Key cards
-- **Deeds of Valor**: she takes no more than 2 combat damage. A cheap block that sets up your counterattack.
-- **Refuse to Retreat**: she can't be moved this turn, and an adjacent attacker discards 1.
-- **Witness My Last Battle**: her big finisher.
-- **Piercing Shot**: a 2 attack that draws 2 cards.
+- **Deeds of Valor**: a 2-value defense; she can't take more than 2 combat damage that combat [1]. Hugely valuable: little risk, and the attacker is set up for your next turn [2]. It lets her survive heavy hitters [3].
+- **Refuse to Retreat**: a 3-value defense; she can't leave her space this turn, and if the attacker is adjacent they discard a card [1]. It stops opponents pushing her out of attack range [2].
+- **Witness My Last Battle**: her hardest-hitting card [2]; two copies [1].
+- **A Warrior's Way**: her answer to ranged heroes hiding behind sidekicks [2].
 
 ### Tips
-- Let them come to you, then punish.
-- Confront Any Demon or God draws 1, and if you lose, lets you see their hand and pick a discard.
-- Lord Kiso's Final Stand gets you out of sidekick pins.
+- Most of her defense depends on card effects, so cancelling opponents hurt [2].
+- Make the opponent spend cards and turns to reach you; the more they waste, the better [5].
+- Save Witness My Last Battle until the opponent is out of their key defense card [6].
 
-### Further reading
-- [Unmatched – Tomoe Gozen](https://gridbeast.gg/unmatched-tomoe-gozen/): Gridbeast · written guide
-- [Any tips w Gozen playing against Achillies?](https://www.reddit.com/r/Unmatched/comments/1e10p51/): Reddit: Tooooon · thread
-- [Tomoe Gozen - Unmatched Fighter Review](https://www.youtube.com/watch?v=C0FJXyHQ2yE): To The Table Top! · video
-- [Strategy Sunday Vol. 3](https://www.youtube.com/watch?v=6kjV3zcPuPk): Karma · video
+### References
+1. Restoration Games. *Unmatched: Sun's Origin*, Tomoe Gozen deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Tomoe Gozen." *Gridbeast*. https://gridbeast.gg/unmatched-tomoe-gozen/
+3. u/Former_Fisherman3566. Comment on "Any tips w Gozen playing against Achillies?" by u/Tooooon. *r/Unmatched*, Reddit, 11 July 2024. https://www.reddit.com/r/Unmatched/comments/1e10p51/
+4. u/Flat-Employee-4362. Comment on "Any tips w Gozen playing against Achillies?" (see [3]).
+5. u/sad_royalty. Comment on "Any tips w Gozen playing against Achillies?" (see [3]).
+6. u/Dense_Yam7250. Comment on "Any tips w Gozen playing against Achillies?" (see [3]).
+
+### Not cited
+- u/d_Shirt and u/Ramenvex, comments on "Any tips w Gozen playing against Achillies?" (read; about one matchup only)
+- [Tomoe Gozen - Unmatched Fighter Review](https://www.youtube.com/watch?v=C0FJXyHQ2yE): To The Table Top! · video (not yet reviewed)
+- [Strategy Sunday Vol. 3](https://www.youtube.com/watch?v=6kjV3zcPuPk): Karma · video (not yet reviewed)
 
 ---
 
 <!-- id: william_shakespeare -->
 ## William Shakespeare
 
-**In short:** A tricky melee fighter with 13 health and three 1-health Actors. Every card he plays in combat goes into a "line", and a line of exactly 10 syllables fires a powerful completion effect, so he wins by planning sequences of cards.
+**In short:** A melee hero with 13 health and 2 movement, plus three 1-health Actors [1]. Each card he attacks or defends with goes into his line; a line of exactly 10 syllables fires the completion effect on its last card, and a line over 10 is discarded with nothing [1][2]. He is one of the most complicated heroes: you win by planning sequences of cards [2].
 
-### Plan A: Complete your lines
-**Goal:** Hit exactly 10 syllables as often as possible.
-**How to do it:** Iambic Pentameter adds each card he attacks or defends with to his line. Every card shows its syllable count. At 10 or more the line is discarded; at exactly 10, the last card's completion effect fires, and it can't be cancelled. Plan lines from the cards in your hand, not the ones you hope to draw. A classic: attack with All Are Punished (4 syllables), then My Kingdom For a Horse (6). Completing the line gains 2 actions, almost a second turn. Again, an Actor card, returns the first card of your line to your hand, which helps you fix a line that won't add up.
-**Watch out for:** Defending also adds to your line, so your opponent's attacks can push you past 10 and waste it.
+### Plan A: Write the perfect line
+**Goal:** Finish lines at exactly 10 syllables with a strong last card [2].
+**How to do it:** Each card shows its syllable count [2]. Since defending also adds to the line, plan around when the opponent will attack you as much as your own turns, and build lines from what is in your hand, not what you hope to draw [2]. A completion fires straight away, even on the opponent's turn, and can't be cancelled because it happens after combat [2]. Two good lines: All Are Punished (4 syllables) then My Kingdom For a Horse (6), two strong attacks that gain 2 actions, almost two turns in a row [1][2]; or several Horrors, ending on The Ides Of March to bait a big defense and deal 2 unblockable damage [1][2].
+**Watch out for:** Going over 10 wastes the whole line [2]. All Are Punished also hits your own Actors in the zone [1][2].
 
-### Plan B: Horror
-**Goal:** Burst damage that can't be blocked.
-**How to do it:** Each Horror (4) gets +1 for each Horror in your line. A Horror that completes a line deals 1 damage per other card in the line, up to 5 unblockable. Or play a few Horrors, then end the line with The Ides Of March for 2 unblockable damage.
-**Watch out for:** A run of Horrors is predictable. They'll save big defenses for it.
+### Plan B: Hide behind the cast
+**Goal:** Let the Actors soak hits while Shakespeare builds his lines [2].
+**How to do it:** He doesn't have much health and can't survive without his Actors [2]. Once More Unto The Breach returns a defeated Actor, or all of them on completion [1]; defend with it so its effect is sure to fire, perhaps after attacking with a 4-syllable card to leave yourself open on purpose [2]. Such Sweet Sorrow (4 value, Actor only) is best used on defense, and makes the opponent spend big attacks on Actors [1][2].
+**Watch out for:** Big printed attacks can overwhelm him [3].
 
 ### How they lose
-- Big hitters like Bigfoot, Luke Cage and Tomoe overwhelm him before his lines come together.
-- His Actors die and nothing shields his 13 health.
-- He has little card draw, and forced discards ruin his planned lines.
+- Forced discards break up planned lines [2].
+- Low card draw [2].
+- His best effects all depend on completing lines [2].
 
 ### Key cards
-- **My Kingdom For a Horse**: a plain 5, and its completion gains 2 actions.
-- **Once More Unto The Breach**: brings back a defeated Actor; its completion brings back all of them. Best on defense.
-- **Such Sweet Sorrow**: the Actors' 4-value card. Defend with it.
-- **Deceive**: cancels their effects, and its completion returns it to your hand.
+- **Horror**: five 4-value attacks, +1 for each Horror in your line [1]. Predictable, but they grow anyway, and the completion deals 1 damage per other card in the line, up to 5 unblockable [2].
+- **My Kingdom For a Horse**: 5 value with no effect, so nothing to cancel; completion gains 2 actions [1][2].
+- **Again**: an Actor card that returns the first card of your line to your hand [1]; saves a good defense, fixes a line, or moves a better completion card to the end [2].
+- **Et Tu, Brute?**: +1 for each of your fighters next to the opponent, up to 7 depending on the map; better on defense [1][2]. Its completion places your fighters anywhere [1].
+- **Places, Places!**: its completion places him in a zone with no Actors, which is almost anywhere [1][2].
 
 ### Tips
-- Count syllables before every attack and every defense.
-- Et Tu, Brute? gets +1 for each of your fighters next to the opponent; its completion lets you place all your fighters anywhere.
-- Watch your own Actors when you play All Are Punished; it hits everyone in your zone.
+- Every card has at least a useful completion, but prioritise Horror, My Kingdom For a Horse and Once More Unto The Breach [2].
+- One player suggests he does best in 2v2 alongside a good support fighter [4].
+- Reading the line aloud is optional, and encouraged [2].
 
-### Further reading
-- [Unmatched – Shakespeare](https://gridbeast.gg/unmatched-shakespeare/): Gridbeast · written guide
-- [Tips on playing Shakespeare and Hamlet](https://www.reddit.com/r/Unmatched/comments/1dwnu9r/): Reddit: Franjeims · thread
-- [Shakespeare - Unmatched Fighter Review](https://www.youtube.com/watch?v=QosmjsUDPnA): To The Table Top! · video
-- [Strategy Sunday Vol. 13](https://www.youtube.com/watch?v=Ief6ueYVL20): Karma · video
+### References
+1. Restoration Games. *Unmatched: Slings and Arrows*, William Shakespeare deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Shakespeare." *Gridbeast*. https://gridbeast.gg/unmatched-shakespeare/
+3. u/Franjeims. "Tips on playing Shakespeare and Hamlet." *r/Unmatched*, Reddit, 6 July 2024. https://www.reddit.com/r/Unmatched/comments/1dwnu9r/
+4. u/HoudiniMain. Comment on "Tips on playing Shakespeare and Hamlet" (see [3]).
+
+### Not cited
+- Other comments on "Tips on playing Shakespeare and Hamlet" (read; about Hamlet, or no advice)
+- [Shakespeare - Unmatched Fighter Review](https://www.youtube.com/watch?v=QosmjsUDPnA): To The Table Top! · video (not yet reviewed)
+- [Strategy Sunday Vol. 13](https://www.youtube.com/watch?v=Ief6ueYVL20): Karma · video (not yet reviewed)
 
 ---
 
