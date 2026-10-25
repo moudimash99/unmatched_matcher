@@ -1311,21 +1311,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: spider_man -->
 ## Spider-Man
 
-**In short:** An agile hero who is told the printed value of every attack against him, then picks the perfect defense [1][2].
+**In short:** Spider-Man is an agile hero who learns the printed value of every attack against him, then chooses the best defense [1][2].
 
 ### Plan A: Read the attack
-**Goal:** The right defense every time [2] · **How:** Counter-Attack and Spider-Sense Tingling! punish 4+ attacks; Web Shooters caps damage at 2 [1][2] · **Watch out:** effects can change the value after he's told [2].
+**Goal:** Choose the right defense each time [2] · **How:** Counter-Attack and Spider-Sense Tingling! punish 4+ attacks; Web Shooters caps damage at 2 [1][2] · **Watch out:** Effects can change the value after it is revealed [2].
 
 ### Plan B: Swing in, swing out
-**Goal:** Attack and reposition [2] · **How:** Swinging Kick, Thwip! and Wall Crawler, then Momentous Shift [1][2] · **Watch out:** attack in waves, then recover [3].
+**Goal:** Attack and reposition [2] · **How:** Reposition with Swinging Kick, Thwip! and Wall Crawler, then play Momentous Shift [1][2] · **Watch out:** Attack in waves, then recover [3].
 
 ### How they lose
 - Value-changing attacks [2].
 - No cancels and low damage output [2][4].
 
 ### Key cards
-- **Web Shooters**: caps damage at 2 [1].
-- **Swinging Kick**: a 6 that pushes them [1].
+- **Web Shooters**: Caps damage at 2 [1].
+- **Swinging Kick**: A 6-value attack that pushes the opponent [1].
 
 ### Tips
 - Learn the opponent's deck [2][5].
@@ -1343,25 +1343,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: doctor_strange -->
 ## Doctor Strange
 
-**In short:** A ranged sorcerer who pays 1 health to recycle the cards he plays and draw, then heals it back [1][2].
+**In short:** Doctor Strange is a ranged sorcerer who pays 1 health to recycle played cards and draw, then heals it back [1][2].
 
 ### Plan A: Recycle the right spells
-**Goal:** Keep your best cards cycling [3] · **How:** recycle Rings, and Cloak against melee; reshuffle with Winds or Eye of Agamotto [3][4] · **Watch out:** the health cost adds up under pressure [5].
+**Goal:** Keep your best cards cycling [3] · **How:** Recycle Rings, and Cloak against melee opponents; reshuffle with Winds or Eye of Agamotto [3][4] · **Watch out:** The health cost adds up under pressure [5].
 
 ### Plan B: Heal through the war
-**Goal:** Win the long game [4] · **How:** Rings of Raggadorr heals Strange and an adjacent Wong; keep Wong close for Master of Kamar-Taj [1][4] · **Watch out:** losing Wong [6].
+**Goal:** Win the long game [4] · **How:** Rings of Raggadorr heals Strange and an adjacent Wong; keep Wong close for Master of Kamar-Taj [1][4] · **Watch out:** Losing Wong weakens this plan [6].
 
 ### How they lose
 - Constant pressure [4][5].
 - Low printed defenses [4].
 
 ### Key cards
-- **Cloak of Levitation**: ignores an adjacent attacker's value [1].
-- **The Rings of Raggadorr**: recyclable healing [3].
+- **Cloak of Levitation**: Ignores an adjacent attacker's value [1].
+- **The Rings of Raggadorr**: Provides recyclable healing [3].
 
 ### Tips
 - Ask whether you really need each card back [7].
-- Mists is a gamble [5].
+- Playing Mists is a gamble [5].
 
 ### References
 1. Restoration Games. *Unmatched: Marvel – Brains and Brawn*, Doctor Strange deck.
@@ -1377,21 +1377,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: nikola_tesla -->
 ## Nikola Tesla
 
-**In short:** A ranged inventor who charges two coils and discharges them to power up almost every card [1][2].
+**In short:** Nikola Tesla is a ranged inventor who charges two coils, then discharges them to strengthen almost every card [1][2].
 
 ### Plan A: Control the field from range
-**Goal:** Keep away and funnel the opponent [2] · **How:** punish attackers with Lightning Storm and Repulsion Blast; hit campers with Death Ray [1][2] · **Watch out:** average defenses [2].
+**Goal:** Keep away and funnel the opponent [2] · **How:** Punish attackers with Lightning Storm and Repulsion Blast, and opponents who stay put with Death Ray [1][2] · **Watch out:** His defenses are average [2].
 
 ### Plan B: Overload
-**Goal:** Big swings with full coils [2] · **How:** X-Ray Radiation and 7 Hertz; refill with Fully Charged [1][2] · **Watch out:** cancels waste your coils [2].
+**Goal:** Make powerful attacks with full coils [2] · **How:** Play X-Ray Radiation and 7 Hertz, then refill with Fully Charged [1][2] · **Watch out:** Cancels waste your coils [2].
 
 ### How they lose
 - Relentless aggression [3].
 - Cancels and discards [2][4].
 
 ### Key cards
-- **X-Ray Radiation**: his deadliest card [2].
-- **Death Ray**: up to a 7 [1].
+- **X-Ray Radiation**: His deadliest card [2].
+- **Death Ray**: Can reach 7 [1].
 
 ### Tips
 - Attack with X-Ray Radiation whenever you can [2].
@@ -1409,21 +1409,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: annie_christmas -->
 ## Annie Christmas
 
-**In short:** A riverboat brawler whose attacks get +2 while she has less health than the defender, with the tricky Charlie at her side [1][2].
+**In short:** Annie Christmas is a riverboat brawler whose attacks get +2 while she has less health than the defender, with the tricky Charlie at her side [1][2].
 
 ### Plan A: Play the health gap
-**Goal:** Stay close to the opponent's health [2] · **How:** Lagniappe can lower her health to switch on the bonus [1][2] · **Watch out:** staying low too long gets her killed [2].
+**Goal:** Stay close to the opponent's health [2] · **How:** Lagniappe can lower her health to switch on the bonus [1][2] · **Watch out:** Staying low too long gets her killed [2].
 
 ### Plan B: Charlie's sleight of hand
-**Goal:** Use Charlie to set Annie up [2] · **How:** swap them with Slick Talker [1][2] · **Watch out:** plan their positions ahead [2].
+**Goal:** Use Charlie to set Annie up [2] · **How:** Swap them with Slick Talker [1][2] · **Watch out:** Plan their positions ahead [2].
 
 ### How they lose
 - Low movement [2].
 - Weak attacks without the bonus [2].
 
 ### Key cards
-- **Lagniappe**: her strongest attack [2].
-- **Mississippi Queen**: a last stand [2].
+- **Lagniappe**: Her strongest attack [2].
+- **Mississippi Queen**: Gives her a last stand [2].
 
 ### Tips
 - Defense matters most [2].
@@ -1438,21 +1438,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: the_golden_bat -->
 ## The Golden Bat
 
-**In short:** A simple, powerful solo hero whose attacks get +2 on turns he doesn't maneuver [1][2].
+**In short:** The Golden Bat is a simple, powerful solo hero whose attacks get +2 on turns he doesn't maneuver [1][2].
 
 ### Plan A: Strike without maneuvering
-**Goal:** Reach them with cards, not maneuvers [2] · **How:** Alpine Fortress or Arrive Just in Time, then Super Strength for 7 [1][2] · **Watch out:** opponents avoid ending next to him [2].
+**Goal:** Reach the opponent through card effects to avoid maneuvering [2] · **How:** Play Alpine Fortress or Arrive Just in Time, then Super Strength for 7 [1][2] · **Watch out:** Opponents avoid ending next to him [2].
 
 ### Plan B: Stay unpredictable
-**Goal:** Surprise them and keep good cards coming [2] · **How:** Sight Beyond Sight; recover cards with Alpine Fortress and Insight of the Ancients [1][3] · **Watch out:** predictable patterns [2].
+**Goal:** Surprise them and keep good cards coming [2] · **How:** Use Sight Beyond Sight and recover cards with Alpine Fortress and Insight of the Ancients [1][3] · **Watch out:** Predictable patterns give him away [2].
 
 ### How they lose
 - Constant pressure [4].
 - Poor draw and no healing [3].
 
 ### Key cards
-- **Super Strength**: a plain 5, or 7 [2].
-- **Terrifying Roar**: traps the attacker [2].
+- **Super Strength**: A plain 5 that can become 7 [2].
+- **Terrifying Roar**: Traps the attacker [2].
 
 ### Tips
 - Use Terrifying Roar on defense [2].
@@ -1469,21 +1469,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: dr_jill_trent -->
 ## Dr. Jill Trent
 
-**In short:** A versatile scientist who picks a gadget each turn and wins on value, with the hard-hitting Daisy beside her [1][2][3].
+**In short:** Dr. Jill Trent is a versatile scientist who chooses a gadget each turn and wins on value, with the hard-hitting Daisy beside her [1][2][3].
 
 ### Plan A: Win the value game
-**Goal:** Value from every card [3] · **How:** keep Daisy alive to use Helpful Assistant [2][4] · **Watch out:** don't overextend Daisy [4].
+**Goal:** Get value from every card [3] · **How:** Keep Daisy alive to use Helpful Assistant [2][4] · **Watch out:** Don't overextend Daisy [4].
 
 ### Plan B: Rig the deck
-**Goal:** Control their top card [2][5] · **How:** Insightful Deduction, then Battle of Wits with the Hypnoray Blaster [1][5] · **Watch out:** Hypnotist only cancels with the Blaster active [4].
+**Goal:** Control their top card [2][5] · **How:** Play Insightful Deduction, then Battle of Wits with the Hypnoray Blaster [1][5] · **Watch out:** Hypnotist only cancels with the Blaster active [4].
 
 ### How they lose
 - Losing Daisy early [4].
 - Aggressive high-value attackers [2].
 
 ### Key cards
-- **Helpful Assistant**: her best card [2][4].
-- **Insightful Deduction**: her key setup [2].
+- **Helpful Assistant**: Her best card [2][4].
+- **Insightful Deduction**: Her key setup card [2].
 
 ### Tips
 - Default to the Hypnoray Blaster [6].
@@ -1502,21 +1502,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: oda_nobunaga -->
 ## Oda Nobunaga
 
-**In short:** A general who wins by flanking with his two Honor Guard, kept in his zone so they get +1 to their cards [1][2].
+**In short:** Oda Nobunaga is a general who wins by flanking with his two Honor Guard, keeping them in his zone for +1 to their cards [1][2].
 
 ### Plan A: Set up the flank
-**Goal:** Two of your fighters next to the opponent [2] · **How:** spread the guards out and use Battle Maneuvers to move everyone into place [1][2] · **Watch out:** ranged fighters are hard to pin down; don't rush [2].
+**Goal:** Place two of your fighters next to the opponent [2] · **How:** Spread the guards out, then use Battle Maneuvers to move everyone into place [1][2] · **Watch out:** Ranged fighters are hard to pin down; don't rush [2].
 
 ### Plan B: Bait, then strike
-**Goal:** Drain their big defenses, then hit hard [2] · **How:** bait with Patience and Strategy, then Fire and Flames and Student of War on a flank [1][2] · **Watch out:** Lightning and Thunder's cancel comes after their immediate effects [2].
+**Goal:** Drain their big defenses, then hit hard [2] · **How:** Bait with Patience and Strategy, then attack a flanked opponent with Fire and Flames and Student of War [1][2] · **Watch out:** Lightning and Thunder's cancel comes after their immediate effects [2].
 
 ### How they lose
 - The Honor Guard fall quickly, and flanking stops [2].
 - His ability does nothing for himself [2].
 
 ### Key cards
-- **Student of War**: 5 value, draws per damage dealt [1].
-- **Demon King of the Sixth Heaven**: 2 damage to each flanked opponent [1].
+- **Student of War**: A 5-value attack that draws per damage dealt [1].
+- **Demon King of the Sixth Heaven**: Deals 2 damage to each flanked opponent [1].
 
 ### Tips
 - Keep the guards in Oda's zone [2].
@@ -1531,24 +1531,24 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: tomoe_gozen -->
 ## Tomoe Gozen
 
-**In short:** A ranged samurai who fights best up close; her ability punishes heroes for leaving her zone [1][2].
+**In short:** Tomoe Gozen is a ranged samurai who fights best up close and punishes heroes for leaving her zone [1][2].
 
 ### Plan A: Control the battlefield
-**Goal:** Dictate where the opponent can move [2] · **How:** attack from range and let her ability pin them; Lord Kiso's Final Stand gets her out of sidekick pins [1][2] · **Watch out:** opponents with lots of health may ignore the ability [3].
+**Goal:** Dictate where the opponent can move [2] · **How:** Attack from range and let her ability pin them; use Lord Kiso's Final Stand to escape sidekick pins [1][2] · **Watch out:** Opponents with lots of health may ignore the ability [3].
 
 ### Plan B: Fight up close
-**Goal:** Land her big adjacent attacks [2] · **How:** A Warrior's Way drags a ranged hero and drops her beside them, then Five Against Thousands and Witness My Last Battle [1][2] · **Watch out:** adjacency is hard against ranged fighters [2].
+**Goal:** Land her big adjacent attacks [2] · **How:** Use A Warrior's Way to move a ranged hero and land beside them, then play Five Against Thousands and Witness My Last Battle [1][2] · **Watch out:** Ranged fighters make adjacency hard to achieve [2].
 
 ### How they lose
 - Cancel effects and high defense values [2].
 - Teams of heroes with no sidekicks [2].
 
 ### Key cards
-- **Deeds of Valor**: she takes at most 2 combat damage [1].
-- **Witness My Last Battle**: 7 value, adjacent only, ends the turn [1].
+- **Deeds of Valor**: Limits her combat damage to 2 [1].
+- **Witness My Last Battle**: A 7-value attack that requires adjacency and ends the turn [1].
 
 ### Tips
-- The ability fires however the hero leaves her zone [2].
+- Her ability triggers however the hero leaves her zone [2].
 - Most of her defenses rely on effects [2].
 
 ### References
@@ -1561,24 +1561,24 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: william_shakespeare -->
 ## William Shakespeare
 
-**In short:** A planner who strings attacks and defenses into 10-syllable lines to fire powerful completion effects, shielded by three Actors [1][2].
+**In short:** William Shakespeare sequences attacks and defenses into 10-syllable lines for powerful completion effects, protected by three Actors [1][2].
 
 ### Plan A: Write the perfect line
-**Goal:** Lines of exactly 10 syllables [2] · **How:** plan from your hand, counting defenses too; All Are Punished into My Kingdom For a Horse gains 2 actions [1][2] · **Watch out:** over 10 wastes the line [2].
+**Goal:** Complete lines of exactly 10 syllables [2] · **How:** Plan from your hand, counting defenses too; All Are Punished into My Kingdom For a Horse gains 2 actions [1][2] · **Watch out:** Going over 10 wastes the line [2].
 
 ### Plan B: Hide behind the cast
-**Goal:** Actors soak hits [2] · **How:** defend with Such Sweet Sorrow and Once More Unto The Breach to bring Actors back [1][2] · **Watch out:** big printed attacks overwhelm him [3].
+**Goal:** Let Actors absorb attacks [2] · **How:** Defend with Such Sweet Sorrow and bring Actors back by defending with Once More Unto The Breach [1][2] · **Watch out:** Big printed attacks overwhelm him [3].
 
 ### How they lose
 - Forced discards and low card draw [2].
 - His best effects need completed lines [2].
 
 ### Key cards
-- **Horror**: grows with each Horror in the line; completion deals up to 5 [1][2].
-- **My Kingdom For a Horse**: completion gains 2 actions [1].
+- **Horror**: Grows with each Horror in the line; its completion deals up to 5 [1][2].
+- **My Kingdom For a Horse**: Gains 2 actions on completion [1].
 
 ### Tips
-- Completions can't be cancelled and fire even on the opponent's turn [2].
+- Completions cannot be cancelled and resolve even on the opponent's turn [2].
 - Again fixes a line by pulling its first card back [1][2].
 
 ### References
@@ -1591,21 +1591,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: hamlet -->
 ## Hamlet
 
-**In short:** A moody brawler who picks TO BE (more cards) or NOT TO BE (self-damage for +2 attacks) each turn; players split between blitzing and out-lasting [1][2][3].
+**In short:** Hamlet is a moody brawler who chooses TO BE (more cards) or NOT TO BE (self-damage for +2 attacks) each turn; players are divided between blitzing and outlasting [1][2][3].
 
 ### Plan A: Hit and run
-**Goal:** Build on TO BE, burst on NOT TO BE [2] · **How:** fill your hand, then boost Cruel To Be Kind and double attack, taking the 2 damage on Rosencrantz & Guildenstern [1][2] · **Watch out:** it burns the deck fast [2].
+**Goal:** Build on TO BE, burst on NOT TO BE [2] · **How:** Fill your hand, then boost Cruel To Be Kind and attack twice, taking the 2 damage on Rosencrantz & Guildenstern [1][2] · **Watch out:** This burns through the deck quickly [2].
 
 ### Plan B: Out-last them
-**Goal:** Win on deck advantage [3][4] · **How:** Method In The Madness puts cards back without drawing, keeping the deck big [1][3] · **Watch out:** without the schemes he fights himself [4].
+**Goal:** Win on deck advantage [3][4] · **How:** Method In The Madness puts cards back without drawing, keeping the deck big [1][3] · **Watch out:** Without his schemes, he fights himself [4].
 
 ### How they lose
 - The wrong hand makes either choice a waste [3].
 - Big printed attacks overwhelm him [5].
 
 ### Key cards
-- **Method In The Madness**: his best card [3].
-- **The Play's The Thing**: random discard and a heal; better as an attack [1][6].
+- **Method In The Madness**: His best card [3].
+- **The Play's The Thing**: Forces a random discard and heals; better as an attack [1][6].
 
 ### Tips
 - Don't defend with the heal against Feint-heavy decks [3].

@@ -2108,30 +2108,30 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: spider_man -->
 ## Spider-Man
 
-**In short:** A solo melee hero with 15 health and 3 movement [1]. When an opponent attacks him, they must tell him the printed value of their card before he chooses a defense [1]. Gridbeast praises his mobility and adaptability [2]; one analyst ranks him near the bottom, with cards that only pay off when he loses combats and low damage output [3].
+**In short:** Spider-Man is a solo melee hero with 15 health and 3 movement [1]. When an opponent attacks him, they must tell him the printed value of their card before he chooses a defense [1]. Gridbeast praises his mobility and adaptability [2]; TFJ383 ranks him near the bottom because of his low damage output and cards that only pay off when he loses combats [3].
 
 ### Plan A: Read the attack
 **Goal:** Use Spidey-Sense to pick the best defense for every attack [2].
-**How to do it:** If the attack is 4 or higher, Spider-Sense Tingling! draws 2 and Counter-Attack deals 2 damage back [1][2]. Web Shooters caps the combat damage he takes at 2 [1], strong against game-ending attacks [2]. Right in the Face! (4) stops the opponent drawing cards this turn [1], and Snark draws a card against an adjacent attacker [1][2]. Keep enough defense cards in hand to always have the right one [4].
-**Watch out for:** He only learns the printed value: many cards change their value with effects, so you need to know the opponent's deck [2][5][6]. He has no cancel cards [2][3].
+**How to do it:** Against an attack worth 4 or higher, Spider-Sense Tingling! draws 2 cards and Counter-Attack deals 2 damage back [1][2]. Web Shooters caps the combat damage he takes at 2 [1], making it strong against game-ending attacks [2]. The 4-value Right in the Face! stops the opponent drawing cards this turn [1], and Snark draws a card against an adjacent attacker [1][2]. Keep enough defense cards in hand to choose the right one each time [4].
+**Watch out for:** Spidey-Sense reveals only the printed value; since effects can change it, you need to know the opponent's deck [2][5][6]. He has no cancel cards [2][3].
 
 ### Plan B: Swing in, swing out
 **Goal:** Use his movement to attack and get away [2].
-**How to do it:** Swinging Kick (6) moves the defender as many spaces as the damage dealt [1]. Thwip! (4) places him anywhere in his zone if he wins, and Wall Crawler does the same unconditionally [1]. Momentous Shift becomes a 5 after any of those moves [2]. With Great Power gives all his attacks +1 this turn, draws a card and gains an action [1], which pairs with Disarming Shot (draw a card per damage dealt) [1][2]. Friendly Neighborhood Spider-Man heals 3 and moves him within his zone [1].
-**Watch out for:** Don't be too aggressive: attack in a wave, then recover [4].
+**How to do it:** The 6-value Swinging Kick moves the defender as many spaces as the damage dealt [1]. The 4-value Thwip! places him anywhere in his zone if he wins; Wall Crawler offers the same placement without needing a win [1]. Momentous Shift becomes a 5 after any of those moves [2]. With Great Power gives all his attacks +1 this turn, draws a card and gains an action [1], pairing well with Disarming Shot, which draws a card per damage dealt [1][2]. Friendly Neighborhood Spider-Man heals 3 and moves him within his zone [1].
+**Watch out for:** Manage your aggression: attack in a wave, then recover [4].
 
 ### How they lose
-- Cards that change their attack value after he's been told it [2][5].
+- Attacks whose value changes after Spidey-Sense reveals it [2][5].
 - No cancels [2][3].
-- Low damage output; he struggles to close out games [3].
+- His low damage output makes games hard to finish [3].
 - Overextending without enough defenses in hand [4][5].
 
 ### Key cards
-- **Web Shooters**: caps the damage at 2 [1][2].
-- **Counter-Attack**: punishes big attacks [1][2].
-- **Swinging Kick**: his biggest attack [1][2].
-- **Thwip!**: attack and reposition [2].
-- **With Great Power**: +1 attacks, a card and an action [1].
+- **Web Shooters**: Limits the damage to 2 [1][2].
+- **Counter-Attack**: Punishes big attacks [1][2].
+- **Swinging Kick**: His biggest attack [1][2].
+- **Thwip!**: Lets him attack and reposition [2].
+- **With Great Power**: Adds +1 to attacks and provides a card and an action [1].
 
 ### Tips
 - Study which fighters' attacks change value [5].
@@ -2156,31 +2156,31 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: doctor_strange -->
 ## Doctor Strange
 
-**In short:** A ranged hero with 14 health and 2 movement, plus Wong (6 health, ranged) [1]. After each combat in which he played a card, he may take 1 damage to put that card on the bottom of his deck and draw a card [1]. He seems to have the right tool for every job [2], healing back what his ability costs [3]; players count him among the strongest fighters [4].
+**In short:** Doctor Strange is a ranged hero with 14 health and 2 movement, accompanied by Wong, a ranged sidekick with 6 health [1]. After each combat in which he played a card, he may take 1 damage to put that card on the bottom of his deck and draw a card [1]. He has a tool for seemingly every job [2], healing back what his ability costs [3]; players count him among the strongest fighters [4].
 
 ### Plan A: Recycle the right spells
 **Goal:** Use Dark Pact to keep your best cards in the deck while drawing cards [1][5].
-**How to do it:** Gridbeast's usual picks to recycle are Cloak of Levitation, Bolts of Balthakk, The Mists of Munnopor, The Rings of Raggadorr and Seven Suns of Cinnibus [5]. Players who play him a lot always recycle Rings, and Cloak in melee matchups [6][4]. Bring recycled cards back up with The Winds of Watoomb, which reshuffles every deck, or Eye of Agamotto, which shuffles your hand away and draws 5 [1][5]. Ask yourself each time whether you really need the card back [6].
-**Watch out for:** Sources disagree on how freely to use the ability. One player uses it constantly to cycle to a curated hand [7]; others warn the damage adds up [6][8], and opponents pressure him precisely to force it [8][9].
+**How to do it:** The usual cards to recycle are Cloak of Levitation, Bolts of Balthakk, The Mists of Munnopor, The Rings of Raggadorr and Seven Suns of Cinnibus [5]. Experienced players always recycle Rings, and Cloak against melee opponents [6][4]. Bring recycled cards closer to the top with The Winds of Watoomb, which reshuffles every deck, or Eye of Agamotto, which shuffles your hand away and draws 5 [1][5]. Ask yourself each time whether you really need the card back [6].
+**Watch out for:** Sources disagree on how freely to use the ability. One player uses it constantly to shape their hand [7]; others warn that the damage adds up [6][8], and opponents pressure him precisely to force it [8][9].
 
 ### Plan B: Heal through the war
 **Goal:** Win a long game of attrition while healing back what you spend [3][4].
-**How to do it:** The Rings of Raggadorr (4) heals your fighter and every adjacent friendly fighter by the damage dealt if you win [1]; one analyst says it can steal games [3]. No Really, I'm a Doctor heals by the boost of a card you put on top of your deck [1]. Keep Wong next to Strange: Master of Kamar-Taj becomes a 4, his best defense besides blind boosting [1][4], and Wong shares in the Rings healing [4]. One player keeps distance, blocks with Wong, attacks from range and lets the opponent burn cards boosting to reach him [4].
-**Watch out for:** Without Wong, Master of Kamar-Taj is just a 2, and cards Wong plays can't be recycled [4][10].
+**How to do it:** The 4-value Rings of Raggadorr heals your fighter and every adjacent friendly fighter by the damage dealt if you win [1]; it can turn a game around [3]. No Really, I'm a Doctor heals by the boost of a card you put on top of your deck [1]. Keep Wong next to Strange so Master of Kamar-Taj becomes a 4, his best defense apart from blind boosting [1][4], and Wong shares in the Rings healing [4]. One player keeps distance, blocks with Wong, attacks from range and lets the opponent burn cards boosting to reach him [4].
+**Watch out for:** Without Wong, Master of Kamar-Taj is only a 2; cards played by Wong cannot be recycled [4][10].
 
 ### How they lose
 - Constant pressure, forcing him to spend health on his ability [4][8][9].
 - Forced discards [5].
-- Mostly 2-value defenses, so he's easy to damage [4][8].
+- His defenses are mostly worth 2, making him easy to damage [4][8].
 - Losing Wong, or being separated from him [10][11].
 - Blind boosts that throw away key cards [5][6].
 
 ### Key cards
-- **Cloak of Levitation**: ignores the opponent's card value if Strange is adjacent [1]; it bullies melee fighters [3].
-- **The Rings of Raggadorr**: the heal you can recycle [5].
-- **The Mists of Munnopor**: discards their card and they play the next attack or versatile card from their deck instead [1]. A gamble that can backfire; some players never recycle it [4][8].
-- **Seven Suns of Cinnibus**: blind boost up to twice, but a value above 7 is ignored [1]. Boosting once is fairly safe [5].
-- **Bolts of Balthakk**: blind boost, and gain an action if you win [1]; one player saves it for the kill [4].
+- **Cloak of Levitation**: Ignores the opponent's card value if Strange is adjacent [1]; it is particularly punishing for melee fighters [3].
+- **The Rings of Raggadorr**: Provides healing that you can recycle [5].
+- **The Mists of Munnopor**: Discards the opposing card and replaces it with the next attack or versatile card from their deck [1]. A gamble that can backfire; some players never recycle it [4][8].
+- **Seven Suns of Cinnibus**: Allows up to two blind boosts, but its value is ignored if it exceeds 7 [1]. Boosting once is fairly safe [5].
+- **Bolts of Balthakk**: Allows a blind boost and gains an action if you win [1]; one player saves it for a finishing attack [4].
 
 ### Tips
 - Keep Wong and Strange close together [5].
@@ -2210,30 +2210,30 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: nikola_tesla -->
 ## Nikola Tesla
 
-**In short:** A solo ranged hero with 14 health and 2 movement who starts with 1 of his 2 coils charged and charges one at the end of each turn [1]. With both charged at the start of his turn, he deals 1 damage to each adjacent opponent and pushes them 1 space [1]. Almost every card can discharge coils for a stronger effect [1]. Gridbeast calls him straightforward to run and a strong ranged attacker with weak defenses [2].
+**In short:** Nikola Tesla is a solo ranged hero with 14 health and 2 movement who starts with 1 of his 2 coils charged and charges one at the end of each turn [1]. With both charged at the start of his turn, he deals 1 damage to each adjacent opponent and pushes them 1 space [1]. Almost every card can discharge coils for a stronger effect [1]. He is straightforward to play, with strong ranged attacks but weak defenses [2].
 
 ### Plan A: Control the field from range
 **Goal:** Keep Tesla at a distance and steer the opponent where your attacks reach them [2].
-**How to do it:** Smart opponents will try to stay out of range; use that to funnel them into areas they can't avoid [2]. Punish them when they come in: Lightning Storm deals 1 or 2 damage to every opponent in your zone [1], best on defense [2], and Repulsion Blast pushes the attacker 2, can move Tesla 2 and can force a random discard [1]. If they end their turn in your zone, Death Ray becomes a 5 or a 7 by discharging, decided after you've seen their defense [1][2]. Remote Control moves every opponent up to 2 and gains an action [1].
+**How to do it:** Opponents who respect his range will try to stay outside it; use that caution to funnel them into areas where they cannot avoid his attacks [2]. Punish their approach with Lightning Storm, which deals 1 or 2 damage to every opponent in your zone [1] and is best on defense [2]. Repulsion Blast pushes the attacker 2 spaces, can move Tesla 2 spaces and can force a random discard [1]. If they end their turn in your zone, Death Ray becomes a 5 or a 7 by discharging, letting you decide after seeing their defense [1][2]. Remote Control moves every opponent up to 2 spaces and gains an action [1].
 **Watch out for:** His defense options are only average [2].
 
 ### Plan B: Overload
-**Goal:** Spend a full charge on a big swing [2][3].
-**How to do it:** X-Ray Radiation (4) reveals the opponent's top card; one coil discards it, two also add its boost to your attack [1]. Gridbeast calls it his most valuable card and attacks with it at every opportunity [2]. 7 Hertz gains an action for one coil, plus a card for two [1]. Fully Charged and The Alternating Current refill both coils [1]. One player looks for an early combo against opponents with no Feints [3].
+**Goal:** Use fully charged coils for a powerful attack [2][3].
+**How to do it:** The 4-value X-Ray Radiation reveals the opponent's top card; one coil discards it; two also add its boost to your attack [1]. It is his most valuable card, worth attacking with at every opportunity [2]. 7 Hertz gains an action for one coil, adding a card for two [1]. Fully Charged and The Alternating Current refill both coils [1]. One player looks for an early combo against opponents with no Feints [3].
 **Watch out for:** Cancel effects waste the coils you discharge [2].
 
 ### How they lose
-- Constant aggression, especially from fighters with extra actions: he can't afford every effect he wants [4][5].
+- Constant aggression, especially from fighters with extra actions, leaves him unable to afford every effect he wants [4][5].
 - Discard effects [6].
 - Cancels [2].
-- Juggling coil charges [2].
+- The difficulty of managing coil charges [2].
 
 ### Key cards
-- **X-Ray Radiation**: his most valuable and deadly card [2].
-- **Death Ray**: a 7 with both coils [1].
-- **Intense Experimentation**: a 3-value defense that draws 1, 2 or 3 cards depending on coils spent [1]; worth seeking early, less useful late [7].
-- **Polyphase Coils**: a cancel for one coil; with two, it also ignores the attacker's value [1].
-- **Kinetic Induction**: charges one coil, or both if you win [1]; on defense with one charge already, you start your turn full [2].
+- **X-Ray Radiation**: His most valuable and deadly card [2].
+- **Death Ray**: Reaches 7 with both coils [1].
+- **Intense Experimentation**: A 3-value defense that draws 1, 2 or 3 cards depending on coils spent [1]; worth seeking early, though less useful late [7].
+- **Polyphase Coils**: Cancels effects for one coil; with two, it also ignores the attacker's value [1].
+- **Kinetic Induction**: Charges one coil, or both if you win [1]; defending with one charge already lets you start your turn fully charged [2].
 
 ### Tips
 - He adapts to each opponent; there's no single mulligan plan [8].
@@ -2259,17 +2259,17 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: annie_christmas -->
 ## Annie Christmas
 
-**In short:** A melee hero with 14 health and 2 movement, plus the ranged Charlie (8 health) [1]. Her attacks get +2 whenever she has less health than the defender [1]. Her game revolves around managing her health total to keep that bonus without putting herself in danger [2]. One analyst names her a good fighter for new players that still holds up in competitive play [3].
+**In short:** Annie Christmas is a melee hero with 14 health and 2 movement, accompanied by Charlie, a ranged sidekick with 8 health [1]. Her attacks get +2 whenever she has less health than the defender [1]. Her game revolves around managing her health total to keep that bonus without putting herself in danger [2]. She suits new players and also holds up in competitive play [3].
 
 ### Plan A: Play the health gap
 **Goal:** Keep Annie's health close to, or just below, the opponent's [2].
-**How to do it:** Don't sit below them all the time; that's a sure way to lose [2]. Stay close, even if it means taking some attacks undefended [2]. Lagniappe is a 5-value attack that can deal Annie up to 2 damage to draw that many cards, before combat [1]; when you're 1 health above the opponent, it switches on her bonus for that attack [2]. When she has more health, opponents may avoid attacking her with big cards, so as not to switch on her bonus [2].
+**How to do it:** Keeping her health below theirs throughout the game is a sure way to lose [2]. Keep the totals close, even if that means leaving some attacks undefended [2]. Lagniappe is a 5-value attack that can deal Annie up to 2 damage before combat, drawing that many cards [1]; when Annie is 1 health above the opponent, it can switch on her bonus for that attack [2]. When she has more health, opponents may avoid attacking her with big cards to avoid switching on her bonus [2].
 **Watch out for:** Activating the bonus is risky, and her attacks are mediocre without it [2].
 
 ### Plan B: Charlie's sleight of hand
 **Goal:** Use Charlie's range and tricks to set Annie up [2].
-**How to do it:** Slick Talker is a 3-value defense that swaps Annie and Charlie, making the other the defender [1]. Opponents rarely see Charlie as a threat, so position him and swap Annie in to attack next turn [2]; or swap Charlie out and let Annie take the hit to switch on her bonus [2]. Bottom Dealing adds the boost of your bottom card [1], and The Turn and the River draws 2 [1]. Better Together heals your fighter and each friendly fighter next to them, if they're adjacent [1]; Captain's Orders places both in Annie's zone and gains an action [1].
-**Watch out for:** Several cards depend on where Annie and Charlie stand relative to each other, so plan your moves ahead [2].
+**How to do it:** Slick Talker is a 3-value defense that swaps Annie and Charlie, making the other the defender [1]. Opponents rarely see Charlie as a threat, so position him to swap Annie in for an attack next turn [2]. Alternatively, swap Charlie out and let Annie take the hit to activate her bonus [2]. Bottom Dealing adds the boost of your bottom card [1], and The Turn and the River draws 2 [1]. Better Together heals your fighter and each friendly fighter next to them, if they're adjacent [1]; Captain's Orders places both in Annie's zone and gains an action [1].
+**Watch out for:** Several cards depend on Annie and Charlie's positions relative to each other, so plan their moves ahead [2].
 
 ### How they lose
 - Low base movement, especially against ranged opponents who keep her away [2].
@@ -2277,14 +2277,14 @@ The strategy text is written from the guides listed under Further reading for th
 - Staying below the opponent's health for too long [2].
 
 ### Key cards
-- **Lagniappe**: her strongest attack [2].
-- **Mississippi Queen**: damage can't reduce Annie below 1 this turn [1]. Save it for a last stand, ideally when you'll win next turn [2].
-- **Slick Talker**: the reason Charlie matters [2].
-- **A Few More Pearls**: 2 damage to every opponent adjacent to Annie [1].
-- **Striking Beauty**: 1 damage, or 2 if you win [1].
+- **Lagniappe**: Her strongest attack [2].
+- **Mississippi Queen**: Prevents damage from reducing Annie below 1 this turn [1]. Save it for a last stand, ideally when you'll win next turn [2].
+- **Slick Talker**: Makes Charlie central to her plan [2].
+- **A Few More Pearls**: Deals 2 damage to every opponent adjacent to Annie [1].
+- **Striking Beauty**: Deals 1 damage, or 2 if you win [1].
 
 ### Tips
-- Her defense matters even more than her offense, because her plan is health management [2].
+- Her defense matters even more than her offense because her plan depends on managing her health [2].
 - Mississippi Queen doesn't stop damage from defensive effects or abilities [2].
 
 ### References
@@ -2300,35 +2300,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: the_golden_bat -->
 ## The Golden Bat
 
-**In short:** A solo melee hero with 18 health and 3 movement whose attacks get +2 on any turn he hasn't taken a maneuver action [1]. Gridbeast calls him simple, reliable and easy to pick up [2]; players rate him very highly [3].
+**In short:** The Golden Bat is a solo melee hero with 18 health and 3 movement whose attacks get +2 on any turn he hasn't taken a maneuver action [1]. He is simple, reliable and easy to pick up [2]; players rate him very highly [3].
 
 ### Plan A: Strike without maneuvering
 **Goal:** Reach the opponent with cards instead of a maneuver, so every attack gets +2 [2].
-**How to do it:** Alpine Fortress shuffles a card from your discard pile into your deck, draws 2 and moves him up to 4 [1]. Follow it with Super Strength, a plain 5 that becomes a 7 no effect can cancel [1][2]. Arrive Just in Time places him in any space [1], and Like a Flash of Golden Light moves him up to 5 and is worth 4 if he ends up sharing no zone with where he started [1]. Terrifying Roar stops every fighter leaving their space this turn [1]; played on defense against a melee attacker, they can't escape you next turn [2]. Skirmish on defense can pull the attacker within reach [2].
-**Watch out for:** Opponents won't end their turn next to him without good defenses, so take them by surprise [2].
+**How to do it:** Alpine Fortress shuffles a card from your discard pile into your deck, draws 2 and moves him up to 4 [1]. Follow it with Super Strength, a plain 5 that becomes a 7 immune to cancel effects [1][2]. Arrive Just in Time places him in any space [1], and Like a Flash of Golden Light moves him up to 5 and is worth 4 if he ends up sharing no zone with where he started [1]. Terrifying Roar stops every fighter leaving their space this turn [1]; defending with it prevents a melee attacker from escaping before your next turn [2]. Skirmish on defense can pull the attacker within reach [2].
+**Watch out for:** Opponents will only end their turn next to him with good defenses ready, so aim to catch them by surprise [2].
 
 ### Plan B: Stay unpredictable and keep the good cards
-**Goal:** Don't fall into predictable patterns, and keep recycling your strongest cards [2][4].
-**How to do it:** Sight Beyond Sight looks at and reorders the top 3 cards of the opponent's deck [1], giving insight into what they'll have [2]. Insight of the Ancients returns a random card from your discard pile if you win, and Alpine Fortress shuffles back a card you choose [1]; between them, discarding his cards is often a fool's errand [4]. A Punch to Shake the Earth deals 1 damage to every opponent in his zone, 2 if he wins [1].
+**Goal:** Keep your play unpredictable while recycling your strongest cards [2][4].
+**How to do it:** Sight Beyond Sight looks at and reorders the top 3 cards of the opponent's deck [1], showing you what they will draw [2]. Insight of the Ancients returns a random card from your discard pile if you win, and Alpine Fortress shuffles back a card you choose [1]; together, they often make attempts to discard his cards fruitless [4]. A Punch to Shake the Earth deals 1 damage to every opponent in his zone, 2 if he wins [1].
 **Watch out for:** Figure out what the opponent expects, then do something else [2].
 
 ### How they lose
 - Constant pressure that forces him to defend with his versatile cards [5][6].
-- Poor card draw that leans on Alpine Fortress, no action gain and no healing [4][6].
+- Poor card draw that relies on Alpine Fortress, alongside no action gain or healing [4][6].
 - Most of his damage depends on his ability [2].
 - Cancel effects [2].
 - Sources disagree on his defense: Gridbeast calls it a weakness [2]; others count six strong defense cards [3].
 
 ### Key cards
-- **Super Strength**: a 5 with no effect; with his bonus, a 7 [1][2].
-- **Alpine Fortress**: his best way to set up an unmaneuvered attack [2].
-- **He Laughs at Your Feebleness**: a plain 5-value defense [1].
-- **Imposing Presence**: a 3-value defense that cancels the attacker's effects [1].
-- **Vaporizing Eyebeams**: a random discard [1]; mostly used for its value, or as a boost [6].
+- **Super Strength**: Has no effect and a value of 5, rising to 7 with his bonus [1][2].
+- **Alpine Fortress**: His best way to set up an attack without maneuvering [2].
+- **He Laughs at Your Feebleness**: A plain 5-value defense [1].
+- **Imposing Presence**: A 3-value defense that cancels the attacker's effects [1].
+- **Vaporizing Eyebeams**: Forces a random discard [1]; mostly used for its value, or as a boost [6].
 
 ### Tips
-- Good for new players, with depth for veterans [2].
-- Vary how you attack, so your set-ups stay surprising [2].
+- He suits new players while offering depth for veterans [2].
+- Vary your attacks to keep your preparations surprising [2].
 
 ### References
 1. Restoration Games. *Unmatched Adventures: Tales to Amaze*, The Golden Bat deck. Card text as recorded in `input/heroes.json`.
@@ -2347,16 +2347,16 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: dr_jill_trent -->
 ## Dr. Jill Trent
 
-**In short:** A melee hero with 13 health and 2 movement, plus Daisy (6 health) [1]. At the start of each turn she activates one of two gadgets, which resolves whenever Jill attacks [1]. The Hypnoray Blaster adds the boost of the opponent's top card when her card's printed value is lower than theirs; the Ultrabiotic Tonic heals 1 when hers is higher [1]. Sources call her versatile and a value fighter [2][3].
+**In short:** Dr. Jill Trent is a melee hero with 13 health and 2 movement, accompanied by Daisy, who has 6 health [1]. At the start of each turn she activates one of two gadgets, whose effect resolves whenever Jill attacks [1]. The Hypnoray Blaster adds the boost of the opponent's top card when her card's printed value is lower than theirs; the Ultrabiotic Tonic heals 1 when hers is higher [1]. She is a versatile fighter who wins through card value [2][3].
 
 ### Plan A: Win the value game
 **Goal:** Get value from nearly every card while Daisy keeps the pressure on [3][4].
-**How to do it:** Daisy has several 5-value cards, including Ace Fighter, which draws a card [1]; she is one of the strongest sidekicks in the game [3]. Keep her alive: her scheme Helpful Assistant shuffles up to 3 Jill cards from your discard pile into your deck and draws a card [1], and it is the best card in the deck [2][5]. Engage often, as long as it's safe, and avoid boosting [6]. Poke at the opponent to trigger effects, waste their defenses and squeeze extra damage from the Hypnoray Blaster [7].
-**Watch out for:** Don't overextend Daisy into counter-attacks; her scary attacks tempt you to [5]. If Daisy dies before using Helpful Assistant, the opponent can win easily [5].
+**How to do it:** Daisy has several 5-value cards, including Ace Fighter, which draws a card [1]; she is one of the strongest sidekicks in the game [3]. Keep Daisy alive to use her scheme Helpful Assistant, which shuffles up to 3 Jill cards from your discard pile into your deck and draws a card [1]. It is the best card in the deck [2][5]. Engage often, as long as it's safe, and avoid boosting [6]. Make probing attacks to trigger effects, draw out defenses and squeeze extra damage from the Hypnoray Blaster [7].
+**Watch out for:** Daisy's powerful attacks make it tempting to overextend her, leaving her open to counterattacks [5]. If Daisy dies before using Helpful Assistant, the opponent can win easily [5].
 
 ### Plan B: Rig the deck
 **Goal:** Control the top of the opponent's deck to power big hits [2][8].
-**How to do it:** Insightful Deduction reveals their top 3 cards, puts one on the bottom and the rest back in any order [1]. Gridbeast plays it as soon as possible, on defense so it can't be cancelled [2]. Put a card with boost 2 or 3 on top, then play Battle of Wits (2) with the Hypnoray Blaster active: it can deal 5 or 6 damage even if blocked [8]. Battle of Wits deals 3 damage if your top card's boost beats theirs [1]. Remember the cards you've revealed and buried [6].
+**How to do it:** Insightful Deduction reveals their top 3 cards, puts one on the bottom and the rest back in any order [1]. Play it as soon as possible, on defense so it cannot be cancelled [2]. Put a card with boost 2 or 3 on top, then play the 2-value Battle of Wits with the Hypnoray Blaster active; this can deal 5 or 6 damage even if blocked [8]. Battle of Wits deals 3 damage if your top card's boost beats theirs [1]. Remember the cards you've revealed and buried [6].
 **Watch out for:** Hypnotist, her only true cancel, works only with the Hypnoray Blaster active [5].
 
 ### How they lose
@@ -2366,14 +2366,14 @@ The strategy text is written from the guides listed under Further reading for th
 - She takes more planning than most heroes [2].
 
 ### Key cards
-- **Helpful Assistant**: the best card in her deck [2][5].
-- **Insightful Deduction**: the key to her success [2].
-- **Stasis Diffuser**: keeps the opponent's card at its printed value [1], blunting value-raising cards [2][5].
-- **Indestructible Cloth**: a 5-value defense that blocks non-combat damage this combat [1].
-- **Battle of Wits**: her big rigged hit [8].
+- **Helpful Assistant**: Her best card [2][5].
+- **Insightful Deduction**: The key to her success [2].
+- **Stasis Diffuser**: Holds the opponent's card at its printed value [1], blunting value-raising cards [2][5].
+- **Indestructible Cloth**: A 5-value defense that blocks non-combat damage this combat [1].
+- **Battle of Wits**: Delivers a big hit after you arrange the deck [8].
 
 ### Tips
-- Use the gadgets for mind games: show the Hypnoray Blaster, then attack high [2][10].
+- Use the gadgets to mislead: show the Hypnoray Blaster, then play a high-value attack [2][10].
 - Keep the Hypnoray Blaster as your default unless you have a plan for the Tonic [7][11].
 
 ### References
@@ -2398,32 +2398,32 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: oda_nobunaga -->
 ## Oda Nobunaga
 
-**In short:** A melee hero with 13 health and 2 movement, plus two 6-health Honor Guard [1]. Other friendly fighters in his zone add +1 to their combat cards, though he doesn't [1]. His whole game is flanking: getting two of his fighters next to the opponent, with the Honor Guard kept in his zone [2].
+**In short:** Oda Nobunaga is a melee hero with 13 health and 2 movement, supported by two 6-health Honor Guard [1]. Other friendly fighters in his zone add +1 to their combat cards, though he doesn't [1]. His game revolves around flanking: placing two of his fighters next to the opponent while keeping the Honor Guard in his zone [2].
 
 ### Plan A: Set up the flank
 **Goal:** Get the opponent adjacent to two or more of your fighters as often as you can [2].
-**How to do it:** Spread the Honor Guard around the board to create as many chances to flank as possible [2]. Five of his eleven card types depend on a flank, so plan a turn ahead [2]. Battle Maneuvers, a 2-value versatile card, draws a card and moves each of your fighters up to 2 spaces [1]; played on defense it can set up a flank, or a flank at the start of your next turn [2]. Keep the guards in Oda's zone: the +1 makes their attacks hit harder and their defenses last longer, so the flank holds [2].
-**Watch out for:** Flanks take setting up, and ranged fighters can be hard to pin down [2]. Don't rush into a bad spot; use the map to push them towards areas with fewer exits, then boost a maneuver to catch them [2].
+**How to do it:** Spread the Honor Guard across the board to create as many flanking opportunities as possible [2]. Five of his eleven card types depend on a flank, so plan a turn ahead [2]. Battle Maneuvers, a 2-value versatile card, draws a card and moves each of your fighters up to 2 spaces [1]; on defense, it can establish a flank immediately or prepare one for the start of your next turn [2]. Keep the guards in Oda's zone so the +1 strengthens their attacks and defenses, helping them sustain the flank [2].
+**Watch out for:** Flanks need preparation, and ranged fighters can be hard to pin down [2]. Avoid rushing into a poor position; use the map to push them towards areas with fewer exits, then boost a maneuver to catch them [2].
 
 ### Plan B: Bait, then strike
-**Goal:** Drain the opponent's big defenses with cheap cards, then land the heavy flanked attacks [2].
-**How to do it:** Don't throw every strong attack the moment you flank [2]. Patience and Strategy is only a 1-value card but heals 2 if the opponent is flanked [1]; if they block it with a big defense, you've weakened their hand and healed in one turn [2]. Then hit with Fire and Flames (3, or 5 if flanked), Lightning and Thunder (4; if flanked, cancels all effects on their card and moves your fighter) and Student of War [1][2].
+**Goal:** Draw out the opponent's big defenses with cheap cards, then land powerful attacks while they are flanked [2].
+**How to do it:** A flank is no reason to spend every strong attack at once [2]. Patience and Strategy has a value of only 1 but heals 2 if the opponent is flanked [1]; if they block it with a big defense, you have weakened their hand while healing [2]. Then hit with Fire and Flames (3, or 5 if flanked), Lightning and Thunder (4; if flanked, cancels all effects on their card and moves your fighter) and Student of War [1][2].
 **Watch out for:** Lightning and Thunder's cancel comes after any immediate effect on the opponent's card, so it is best against defenses that rely on during-combat effects [2].
 
 ### How they lose
-- The Honor Guard die quickly, and without them flanking stops [2].
+- The Honor Guard can fall quickly, leaving Oda unable to flank [2].
 - Once the guards are gone, Oda struggles to beat an opponent who still has plenty of health [2].
 - His ability does nothing for him [2].
 
 ### Key cards
-- **Student of War**: a 5-value Oda attack that draws a card for each point of combat damage dealt [1]; his best attack, since most defenses are only 2 or 3 [2].
-- **Fire and Flames**: 3, or 5 when flanked [1]; a safe attack, because little is lost if its effect is cancelled [2].
-- **Spring the Trap**: a 2-value defense that can swap your fighter with an adjacent friendly fighter, making them the defender, then deals 1 damage [1]. With well-placed fighters it can save Oda and set up the next flank [2].
-- **Demon King of the Sixth Heaven**: an Oda scheme dealing 2 damage to each opposing flanked fighter [1]; easy, reliable damage [2].
+- **Student of War**: A 5-value Oda attack that draws a card for each point of combat damage dealt [1]; it is his best attack, since most defenses are only 2 or 3 [2].
+- **Fire and Flames**: Worth 3, rising to 5 against a flanked opponent [1]; a safe attack, because little is lost if its effect is cancelled [2].
+- **Spring the Trap**: A 2-value defense that can swap your fighter with an adjacent friendly fighter, making them the defender, then deals 1 damage [1]. With your fighters well placed, it can save Oda and prepare the next flank [2].
+- **Demon King of the Sixth Heaven**: An Oda scheme that deals 2 damage to each flanked opposing fighter [1]; a source of easy, reliable damage [2].
 
 ### Tips
 - Allied heroes and sidekicks in team games don't count towards a flank [2].
-- Kept in Oda's zone, the Honor Guard become very hard to kill [2].
+- The Honor Guard become very hard to kill while they stay in Oda's zone [2].
 - He is harder than most heroes for new players [2].
 
 ### References
@@ -2441,31 +2441,31 @@ Gridbeast lists Spring the Trap as versatile and Lightning and Thunder's cancel 
 <!-- id: tomoe_gozen -->
 ## Tomoe Gozen
 
-**In short:** A ranged hero with 14 health, 2 movement and no sidekicks [1]. When an opposing hero leaves her zone, they take 1 damage [1]. She plays almost like a melee fighter with range: her ability pins opponents in her zone, and her strongest cards want her adjacent to them [2].
+**In short:** Tomoe Gozen is a ranged hero with 14 health, 2 movement and no sidekicks [1]. When an opposing hero leaves her zone, they take 1 damage [1]. She plays almost like a melee fighter with range: her ability pins opponents in her zone, and her strongest cards reward being adjacent to them [2].
 
 ### Plan A: Control the battlefield
 **Goal:** Use her range and her ability to decide where the opponent can go [2].
-**How to do it:** Her ability fires whenever an opposing hero leaves her zone for any reason: a maneuver, a scheme, an after-combat effect, even being removed from the board [2]. It only hits heroes, not sidekicks [1][2]. Keep attacking from a distance and try to create an opening where they attack you from an adjacent space, or you can reach one in a single action [2]. Lord Kiso's Final Stand, her only scheme, moves her up to 3 spaces through sidekicks, then heals 2 or gains an action [1]; it gets her out of pins set by sidekick-heavy heroes, though not through enemy heroes [2].
-**Watch out for:** Opponents with enough health may just ignore the ability [3]. A cheap card-draw attack like Piercing Shot helps keep the pressure on [4].
+**How to do it:** Her ability triggers however an opposing hero leaves her zone: by maneuvering, through a scheme or after-combat effect, or even by being removed from the board [2]. It only hits heroes, not sidekicks [1][2]. Keep attacking from a distance, looking for an opening that brings the attacker adjacent or lets you reach an adjacent space in a single action [2]. Lord Kiso's Final Stand, her only scheme, moves her up to 3 spaces through sidekicks, then heals 2 or gains an action [1]; it frees her from pins set by sidekick-heavy heroes, though she cannot pass through enemy heroes [2].
+**Watch out for:** Opponents with enough health may simply ignore the ability [3]. A cheap card-draw attack like Piercing Shot helps keep the pressure on [4].
 
 ### Plan B: Fight up close
 **Goal:** Get adjacent and land her big attacks [2].
-**How to do it:** When the opponent stays at range, A Warrior's Way (2 value) moves them up to 3 spaces and, if they are a hero, places Tomoe next to them [1]: move them out of her zone for 1 damage, then land beside them [2]. Once adjacent, Five Against Thousands (4) can come back to your hand by discarding a card, for back-to-back attacks [1][2]. Witness My Last Battle is a 7-value attack played face up that only targets an adjacent fighter and ends the turn [1]; with nothing worth cancelling, the opponent must throw their best defense at it [2].
+**How to do it:** Against an opponent who stays at range, the 2-value A Warrior's Way moves them up to 3 spaces and, if they are a hero, places Tomoe next to them [1]: move them out of her zone for 1 damage, then appear beside them [2]. Once adjacent, you can discard a card to return the 4-value Five Against Thousands to your hand for back-to-back attacks [1][2]. Witness My Last Battle is a 7-value attack played face up that only targets an adjacent fighter and ends the turn [1]; with nothing worth cancelling, it demands the opponent's best defense [2].
 **Watch out for:** Many of her best effects need adjacency, which is harder to get against ranged fighters [2].
 
 ### How they lose
 - Effects that cancel her cards, and high defense values [2].
 - Teams of several heroes with no sidekicks [2].
-- Her cancel, Flash of Steel, only works on heroes, so sidekick card effects always go off [1][4].
+- Her cancel, Flash of Steel, only works on heroes, allowing sidekick card effects to resolve [1][4].
 
 ### Key cards
-- **Deeds of Valor**: a 2-value defense; she can't take more than 2 combat damage that combat [1]. Hugely valuable: little risk, and the attacker is set up for your next turn [2]. It lets her survive heavy hitters [3].
-- **Refuse to Retreat**: a 3-value defense; she can't leave her space this turn, and if the attacker is adjacent they discard a card [1]. It stops opponents pushing her out of attack range [2].
-- **Witness My Last Battle**: her hardest-hitting card [2]; two copies [1].
-- **A Warrior's Way**: her answer to ranged heroes hiding behind sidekicks [2].
+- **Deeds of Valor**: A 2-value defense that limits her combat damage to 2 for that combat [1]. It is hugely valuable, risking little while leaving the attacker ready for your next turn [2]. It lets her survive heavy hitters [3].
+- **Refuse to Retreat**: A 3-value defense that keeps her in her space this turn and makes an adjacent attacker discard a card [1]. It stops opponents pushing her out of attack range [2].
+- **Witness My Last Battle**: Her hardest-hitting card [2]; two copies [1].
+- **A Warrior's Way**: Reaches ranged heroes hiding behind sidekicks [2].
 
 ### Tips
-- Most of her defense depends on card effects, so cancelling opponents hurt [2].
+- Most of her defenses rely on card effects, making opposing cancels painful [2].
 - Make the opponent spend cards and turns to reach you; the more they waste, the better [5].
 - Save Witness My Last Battle until the opponent is out of their key defense card [6].
 
@@ -2487,16 +2487,16 @@ Gridbeast lists Spring the Trap as versatile and Lightning and Thunder's cancel 
 <!-- id: william_shakespeare -->
 ## William Shakespeare
 
-**In short:** A melee hero with 13 health and 2 movement, plus three 1-health Actors [1]. Each card he attacks or defends with goes into his line; a line of exactly 10 syllables fires the completion effect on its last card, and a line over 10 is discarded with nothing [1][2]. He is one of the most complicated heroes: you win by planning sequences of cards [2].
+**In short:** William Shakespeare is a melee hero with 13 health and 2 movement, supported by three 1-health Actors [1]. Each card he attacks or defends with goes into his line; a line of exactly 10 syllables triggers its last card's completion effect, while a line over 10 is discarded without one [1][2]. He is one of the most complicated heroes, requiring carefully planned card sequences to win [2].
 
 ### Plan A: Write the perfect line
 **Goal:** Finish lines at exactly 10 syllables with a strong last card [2].
-**How to do it:** Each card shows its syllable count [2]. Since defending also adds to the line, plan around when the opponent will attack you as much as your own turns, and build lines from what is in your hand, not what you hope to draw [2]. A completion fires straight away, even on the opponent's turn, and can't be cancelled because it happens after combat [2]. Two good lines: All Are Punished (4 syllables) then My Kingdom For a Horse (6), two strong attacks that gain 2 actions, almost two turns in a row [1][2]; or several Horrors, ending on The Ides Of March to bait a big defense and deal 2 unblockable damage [1][2].
+**How to do it:** Each card shows its syllable count [2]. Defending also adds to the line, so plan around incoming attacks as well as your own turns; build each line from the cards in hand rather than those you hope to draw [2]. A completion resolves immediately, even on the opponent's turn, and cannot be cancelled because it happens after combat [2]. One strong line is All Are Punished (4 syllables) followed by My Kingdom For a Horse (6): two strong attacks that gain 2 actions, almost two turns in a row [1][2]. Another uses several Horrors before ending on The Ides Of March, baiting a big defense and dealing 2 unblockable damage [1][2].
 **Watch out for:** Going over 10 wastes the whole line [2]. All Are Punished also hits your own Actors in the zone [1][2].
 
 ### Plan B: Hide behind the cast
 **Goal:** Let the Actors soak hits while Shakespeare builds his lines [2].
-**How to do it:** He doesn't have much health and can't survive without his Actors [2]. Once More Unto The Breach returns a defeated Actor, or all of them on completion [1]; defend with it so its effect is sure to fire, perhaps after attacking with a 4-syllable card to leave yourself open on purpose [2]. Such Sweet Sorrow (4 value, Actor only) is best used on defense, and makes the opponent spend big attacks on Actors [1][2].
+**How to do it:** His low health makes the Actors essential to his survival [2]. Once More Unto The Breach returns a defeated Actor, or all of them on completion [1]; defend with it to ensure its effect resolves, perhaps after deliberately leaving yourself open by attacking with a 4-syllable card [2]. Such Sweet Sorrow (4 value, Actor only) is best used on defense, and makes the opponent spend big attacks on Actors [1][2].
 **Watch out for:** Big printed attacks can overwhelm him [3].
 
 ### How they lose
@@ -2505,14 +2505,14 @@ Gridbeast lists Spring the Trap as versatile and Lightning and Thunder's cancel 
 - His best effects all depend on completing lines [2].
 
 ### Key cards
-- **Horror**: five 4-value attacks, +1 for each Horror in your line [1]. Predictable, but they grow anyway, and the completion deals 1 damage per other card in the line, up to 5 unblockable [2].
-- **My Kingdom For a Horse**: 5 value with no effect, so nothing to cancel; completion gains 2 actions [1][2].
-- **Again**: an Actor card that returns the first card of your line to your hand [1]; saves a good defense, fixes a line, or moves a better completion card to the end [2].
-- **Et Tu, Brute?**: +1 for each of your fighters next to the opponent, up to 7 depending on the map; better on defense [1][2]. Its completion places your fighters anywhere [1].
-- **Places, Places!**: its completion places him in a zone with no Actors, which is almost anywhere [1][2].
+- **Horror**: Five 4-value attacks that gain +1 for each Horror in your line [1]. Their increasing value matters even when predictable, and the completion deals 1 damage per other card in the line, up to 5 unblockable damage [2].
+- **My Kingdom For a Horse**: Has a value of 5 and no effect to cancel; its completion gains 2 actions [1][2].
+- **Again**: An Actor card that returns the first card of your line to your hand [1]; it can recover a good defense, repair a line or move a better completion card to the end [2].
+- **Et Tu, Brute?**: Gains +1 for each of your fighters next to the opponent, reaching up to 7 depending on the map; it is better on defense [1][2]. Its completion places your fighters anywhere [1].
+- **Places, Places!**: Its completion places him in a zone with no Actors, giving him access to almost anywhere [1][2].
 
 ### Tips
-- Every card has at least a useful completion, but prioritise Horror, My Kingdom For a Horse and Once More Unto The Breach [2].
+- Every card has a useful completion, but prioritise Horror, My Kingdom For a Horse and Once More Unto The Breach [2].
 - One player suggests he does best in 2v2 alongside a good support fighter [4].
 - Reading the line aloud is optional, and encouraged [2].
 
@@ -2532,29 +2532,29 @@ Gridbeast lists Spring the Trap as versatile and Lightning and Thunder's cancel 
 <!-- id: hamlet -->
 ## Hamlet
 
-**In short:** A melee hero with 15 health and 2 movement, plus Rosencrantz & Guildenstern, one 6-health sidekick [1]. Each turn he chooses TO BE (draw an extra card when maneuvering) or NOT TO BE (2 damage to one of his fighters, +2 to Hamlet's attacks) [1]. Players split on how to play him: a fast blitz, or a slower game of card and deck advantage [2][3][4][5].
+**In short:** Hamlet is a melee hero with 15 health and 2 movement, accompanied by Rosencrantz & Guildenstern, a single 6-health sidekick [1]. Each turn he chooses TO BE (draw an extra card when maneuvering) or NOT TO BE (2 damage to one of his fighters, +2 to Hamlet's attacks) [1]. Players disagree on his best approach: a fast blitz or a slower game built on card and deck advantage [2][3][4][5].
 
 ### Plan A: Hit and run
 **Goal:** Build up on TO BE turns, then go all in on NOT TO BE turns [2].
-**How to do it:** Use TO BE turns to fill your hand and get into position, then spend NOT TO BE turns dumping cards into movement and boosts for a big chunk of damage before backing off to recover [2]. Good times for NOT TO BE: you can boost Cruel To Be Kind high, you can double attack, your hand is already 6 or more, or a TO BE turn would drain your deck too fast [2]. Take the NOT TO BE damage on Rosencrantz & Guildenstern: no cards need them, so they are mostly fuel or a blocker [2][6][7]. Boosted 7s and 8s, value-ignoring attacks and after-combat damage are hard to stop all at once [8]. Several players call him a blitz fighter who must go fast [6][9][10].
-**Watch out for:** This burns through the deck, so make the big turns count [2].
+**How to do it:** Use TO BE turns to fill your hand and get into position; on NOT TO BE turns, spend cards on movement and boosts for a burst of damage, then back off to recover [2]. Choose NOT TO BE when you can heavily boost Cruel To Be Kind or attack twice, when your hand already holds 6 or more cards, or when TO BE would drain your deck too fast [2]. Let Rosencrantz & Guildenstern take the NOT TO BE damage; no cards require them, so they mainly absorb that cost or block [2][6][7]. Boosted 7s and 8s, value-ignoring attacks and after-combat damage are hard to stop all at once [8]. Several players favour a blitz, arguing that he needs to play fast [6][9][10].
+**Watch out for:** This approach burns through his deck, so make the big turns count [2].
 
 ### Plan B: Out-last them
-**Goal:** Win on deck advantage instead of damage [3][4].
-**How to do it:** Method In The Madness puts any number of cards from your hand on the bottom of your deck, then draws up to that many, and gains an action [1]. On a TO BE turn, maneuver, play it without drawing, then maneuver again: your hand stays small and your deck stays big [3]. You can end a turn with more cards in your deck than you started with [4]. The Ghost can also stand in for a turn [4]. Against an opponent who hangs back with no way to skip turns, sit back and let exhaustion win [4].
-**Watch out for:** Without the schemes in hand it feels like fighting yourself [4].
+**Goal:** Win through deck advantage rather than damage [3][4].
+**How to do it:** Method In The Madness puts any number of cards from your hand on the bottom of your deck, then draws up to that many, and gains an action [1]. On a TO BE turn, maneuver, play it without drawing, then maneuver again; this keeps your hand small and your deck large [3]. You can end a turn with more cards in your deck than you started with [4]. The Ghost can also let you pass a turn [4]. Against an opponent who hangs back with no way to skip turns, sit back and let exhaustion win [4].
+**Watch out for:** Without his schemes in hand, managing his ability can feel like fighting yourself [4].
 
 ### How they lose
-- NOT TO BE without the right hand is 2 wasted self-damage; TO BE without one overdraws and thins the deck [3].
+- With the wrong hand, NOT TO BE wastes 2 health, while TO BE leads to overdraw and a thinning deck [3].
 - Fighters with big printed attacks can overwhelm him [5].
 - Some rate him weaker than most of the roster [8][11]; one says he wins in the first few turns or not at all [10].
 
 ### Key cards
-- **Method In The Madness**: called his best card [3]; three copies in a 30-card deck, so you usually see one [1][3].
-- **The Play's The Thing**: a forced random discard, and heals by its boost value if you win [1]. Usually better as an attack (5 on NOT TO BE) [12]. Don't defend with it against Feint-heavy decks [3].
-- **The Rest Is Silence**: a defense that ends the turn [1]; timed well, it stops an opponent's plans [2].
-- **Maddening Insight**: worth the cards in your hand [1], which TO BE turns keep high [2].
-- **The Readiness Is All**: on defense, it places a fighter anywhere [1], to catch an opponent keeping their distance and set up a double attack [13].
+- **Method In The Madness**: His best card [3]; with three copies in a 30-card deck, you usually see one [1][3].
+- **The Play's The Thing**: Forces a random discard and heals by its boost value if you win [1]. It is usually better as an attack, worth 5 on NOT TO BE [12]. Don't defend with it against Feint-heavy decks [3].
+- **The Rest Is Silence**: A defense that ends the turn [1]; timed well, it stops an opponent's plans [2].
+- **Maddening Insight**: Its value equals the number of cards in your hand [1], which TO BE turns keep high [2].
+- **The Readiness Is All**: On defense, it places a fighter anywhere [1], to catch an opponent keeping their distance and set up a double attack [13].
 
 ### Tips
 - Uncertain Doom and Nothing Either Good Or Bad punish decks with many versatile cards and few defenses [1][14][15].
