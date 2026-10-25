@@ -895,50 +895,68 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: elektra -->
 ## Elektra
 
-**In short:** A two-life ninja who stalls in her first life, then returns with a reshuffled deck and a lethal combo.
+**In short:** A two-life assassin: survive the first life behind the Hand, then resurrect with her deck reshuffled and her cards stronger [1][2].
 
-### Plan A: First life: stall and dig
-**Goal:** Survive while going through your deck · **How:** hide behind the Hand; defend with Sai and Snakeroot Clan · **Watch out:** 7 health; dying early is a disaster.
+### Plan A: Survive the first life
+**Goal:** Go through as much of the deck as you can before dying [2][3] · **How:** shield her with the Hand; defend with Sai, Ninjitsu and Snakeroot Clan [2] · **Watch out:** an early death leaves her behind [2].
 
-### Plan B: Second life: the combo
-**Goal:** A winning turn after she resurrects · **How:** plan your hand before death, then Mesmerize twice (discards) and Mystic Assassin with no self-damage · **Watch out:** a full hand means fewer cards left to draw.
+### Plan B: Return and strike
+**Goal:** Resurrect with a killer hand [2] · **How:** Mesmerize twice to strip defenses, then Mystic Assassin and The Fist [2][4] · **Watch out:** a full hand on revival means only 13 cards left to draw [5].
 
 ### How they lose
-- Early death before digging through the deck.
-- The Hand gets wiped out.
+- A short first life [6].
+- Damage she can't defend against [7].
 
 ### Key cards
-- **Mesmerize**: hand-reading and discards after resurrection.
-- **Mystic Assassin**: 6 value, safe after resurrection.
+- **Mesmerize**: save it for her second life [8].
+- **Mystic Assassin**: a free 6 once resurrected [2].
 
 ### Tips
-- Don't play Mystic Assassin in her first life.
-- Die on your terms, with the combo in hand.
+- Don't die with an empty hand [3].
+- Attack many times on her return turn [8].
+
+### References
+1. Restoration Games. *Unmatched: Marvel – Hell's Kitchen*, Elektra deck.
+2. Gridbeast. "Unmatched – Elektra." https://gridbeast.gg/unmatched-elektra/
+3. u/GambuzinoSaloio. Comment on "Just got my elektra, any tips to play her?" *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1pkyr6h/
+4. u/Silly_Shenanigans. Comment on "Just got my elektra…" (see [3]).
+5. u/richard-savana. Comment on "Just got my elektra…" (see [3]).
+6. u/LabRat2329. Comment on "Upcoming battle against Elektra." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1s5e5m5/
+7. u/Biggest_Lemon. Comment on "Weekly Discussion: Battling Elektra." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1sgv66c/
+8. u/BarrabasBlonde. Comment on "Just got my elektra…" (see [3]).
 
 ---
 
 <!-- id: bullseye -->
 ## Bullseye
 
-**In short:** A fragile sniper who hits from 5 spaces away and wins combats to unlock deadly follow-ups.
+**In short:** A long-range assassin who attacks from 5 spaces away and hits harder once he has won a combat that turn [1][2].
 
-### Plan A: Win a combat, then cash in
-**Goal:** Double attacks · **How:** win first (Arrogant But Effective), then World's Greatest Assassin or I'm Better And I'll Prove It · **Watch out:** all or nothing.
+### Plan A: Win once, then win bigger
+**Goal:** Two attacks a turn [2][3] · **How:** win with Arrogant But Effective, then World's Greatest Assassin or I'm Better And I'll Prove It; Study The Target after a win [1][2] · **Watch out:** Feints hurt him badly [4].
 
-### Plan B: Shoot and stay away
-**Goal:** Hit from range · **How:** attack from 5 away; escape with Tactical Retreat or Master Strategist · **Watch out:** fighters who close the gap fast.
+### Plan B: Stay just out of reach
+**Goal:** Attack where they can't hit back [2] · **How:** end 5 spaces away; escape with Tactical Retreat and Master Strategist [2][3] · **Watch out:** fast opponents close the gap [2].
 
 ### How they lose
-- 14 health and weak defenses.
-- No first win means dead combo cards.
+- Low health and weak defenses [2].
+- Being pinned [2].
 
 ### Key cards
-- **Study The Target**: draw and an extra action after a win.
-- **Arrogant But Effective**: an automatic combat win.
+- **Study The Target**: draw and an action after a win [1].
+- **Arrogant But Effective**: a guaranteed win [2].
 
 ### Tips
-- Go first.
-- Either maneuver twice or attack twice.
+- Maneuver twice or attack twice: reload, then shoot [5].
+- Go first when you can [6].
+
+### References
+1. Restoration Games. *Unmatched: Marvel – Hell's Kitchen*, Bullseye deck.
+2. Gridbeast. "Unmatched – Bullseye." https://gridbeast.gg/unmatched-bullseye/
+3. TFJ383. "An Unmatched Roster: What's Cooking in Hell's Kitchen?" *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3188799/
+4. u/-Asdepique-. "(Strategy) Did I correctly understand Bullseye's gameplay?" *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1i0drah/
+5. u/Megabro_SgOwDm. Comment on "If I'm playing Bullseye…" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1wz3e9q/
+6. u/CaptainCrockpot. Comment on "(Strategy) Did I correctly understand Bullseye's gameplay?" (see [4]).
 
 ---
 

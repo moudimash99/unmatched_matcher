@@ -1450,87 +1450,111 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: elektra -->
 ## Elektra
 
-**In short:** A two-life ninja assassin who stalls behind the Hand in her first life, dies on her own terms, then comes back with a reshuffled deck and much deadlier cards.
+**In short:** A melee hero with 7 health and 2 movement, four 1-health Hand ninjas, and a 20-card deck [1][2]. The first time she would be defeated she leaves the board instead; next turn she resurrects, flips her health dial (9 health), shuffles her discard pile back into her deck, and her cards' RESURRECTED effects switch on [1][2]. Players widely rate her among the strongest fighters [3][4].
 
-### Plan A: First life: stall and dig
-**Goal:** Survive as long as possible while you go through your small 20-card deck.
-**How to do it:** Keep the Hand between Elektra and the enemy. Snakeroot Clan swaps her with a Hand on defense, and Hands of Red brings a defeated Hand back. Defend with Sai (4) and Ninjitsu (place anywhere). Don't play Mystic Assassin yet: it deals 3 damage to Elektra unless she has resurrected. The more of your deck you've used when she dies, the bigger your card advantage after she comes back.
-**Watch out for:** She has only 7 health. Dying early, before you've dug through your deck, puts you far behind.
+### Plan A: Survive the first life
+**Goal:** Last as long as you can in her first life and go through as much of the deck as possible, so it all comes back when she resurrects [2][5][6].
+**How to do it:** Keep the Hand between Elektra and the opponent [2][5]. Snakeroot Clan swaps her with a Hand ninja, who becomes the defender, and Hands of Red brings back a defeated Hand [1][2]. Use Sai (4) and Ninjitsu (place your fighter anywhere) on defense [1][2]. Don't use The Fist's sacrifice effect until her second life [7]. One analyst describes the first life as running around behind the ninjas while the opponent exhausts their deck [8].
+**Watch out for:** Mystic Assassin deals 3 damage to Elektra in her first life; only play it then if you expect a Feint [1][2]. Dying early leaves her at a big disadvantage [2].
 
-### Plan B: Second life: the resurrection combo
-**Goal:** Win with a devastating turn right after she comes back.
-**How to do it:** When she would first be defeated, she leaves the board with the Hand and returns at the start of your next turn. You flip her health dial, shuffle your discard pile into your deck, and place each fighter in a different zone. You keep your hand, so plan it before she dies. Place her next to the enemy hero. Play Mesmerize (now it also makes them discard a card you choose) twice to strip their best defenses. Then hit with Mystic Assassin, a 6-value attack that no longer hurts her, or chain The Fist with Hand next to them.
-**Watch out for:** Coming back with a full 7-card hand means only 13 cards left to draw. Balance the combo against running out of cards.
+### Plan B: Return and strike
+**Goal:** Resurrect with the right hand and overwhelm the opponent [2][7].
+**How to do it:** Her hand is kept through death, so plan what you'll hold [2][3]. Gridbeast's ideal hand is two Mesmerize, two Mystic Assassin, Sai and Intercept [2]. On resurrection, place Elektra next to the opponent [2]. Each Mesmerize looks at their hand, gains an action and, once resurrected, makes them discard a card you choose: take their best defenses [1][2]. Then attack with Mystic Assassin, a 6 that no longer hurts her [1][2]. Surround the opponent with the Hand and repeat The Fist, which can return to your hand for 1 damage to the attacking ninja and gain an action [1][7]. Once resurrected, Intercept becomes a 5 if you reveal a Sai [1][2].
+**Watch out for:** Resurrecting with a full hand of 7 leaves only 13 cards to draw before exhaustion [9][10]. Players disagree whether to then press the attack or simply out-last the opponent with her card advantage [6].
 
 ### How they lose
-- Her first life ends early, before she's gone through her deck.
-- The Hand is wiped out quickly by auto damage, so The Fist and Snakeroot Clan lose their value.
-- Patient opponents with strong defenses hold out against the second-life combo.
+- A short first life: dying before about 10 cards are in her discard pile leaves her behind [11][2].
+- Damage she can't defend against, or effects that ignore her defense values [12].
+- Area damage and fighters who run through the Hand clear her ninjas [4][13].
+- Low health in both lives [2].
+- Dying with no cards in hand [3].
 
 ### Key cards
-- **Mesmerize**: see their hand and gain an action. After resurrection, also choose a card for them to discard.
-- **Mystic Assassin**: a 6-value attack. Don't play it before she resurrects.
-- **Intercept**: after resurrection, reveal a Sai to make it a 5-value defense.
-- **The Fist**: deal 1 damage to your own attacking Hand to return the card to your hand and gain an action.
+- **Mesmerize**: hand knowledge and an action; once resurrected, a chosen discard too [1][2]. Hold it for the second life [14].
+- **Mystic Assassin**: a 6 that's free to play after resurrection [1][2].
+- **The Fist**: the Hand's repeating attack for the second life [1][7].
+- **Cloaked In Shadow**: her Feint; resurrected, it also moves her up to 3 [1][2].
 
 ### Tips
-- Save The Fist's self-damage until her second life.
-- The ideal hand to die with: two Mesmerize, two Mystic Assassin, a Sai and an Intercept.
-- Cloaked In Shadow is her Feint, and also moves her 3 spaces after resurrection.
+- Use the Hand as shields, without throwing them away [2][5].
+- In the second life, attack as many times as you can in one turn [14].
 
-### Further reading
-- [Unmatched – Elektra](https://gridbeast.gg/unmatched-elektra/): Gridbeast · written guide
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [An Unmatched Roster: What's Cooking in Hell's Kitchen?](https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [Just got my elektra, any tips to play her?](https://www.reddit.com/r/Unmatched/comments/1pkyr6h/): Reddit: FrequentExcitement55 · thread
-- [Upcoming battle against Elektra](https://www.reddit.com/r/Unmatched/comments/1s5e5m5/): Reddit: Naive-Health414 · thread
-- [Weekly Discussion: Battling Elektra (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1sgv66c/): Reddit: LabRat2329 · thread
-- [Elektra - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=Un3FXcyDqlU): To The Table Top! · video
-- [Elektra - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=Xn6IPWpaDaY): Baked Goods · video
+### References
+1. Restoration Games. *Unmatched: Marvel – Hell's Kitchen*, Elektra deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Elektra." *Gridbeast*. https://gridbeast.gg/unmatched-elektra/
+3. u/GambuzinoSaloio. Comment on "Just got my elektra, any tips to play her?" by u/FrequentExcitement55. *r/Unmatched*, Reddit, 12 December 2025. https://www.reddit.com/r/Unmatched/comments/1pkyr6h/
+4. u/GambuzinoSaloio. Comment on "Weekly Discussion: Battling Elektra (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 9 April 2026. https://www.reddit.com/r/Unmatched/comments/1sgv66c/
+5. u/fallenhero588. Comment on "Just got my elektra…" (see [3]).
+6. u/Numerous_Past_726. Comment on "Just got my elektra…" (see [3]).
+7. u/Silly_Shenanigans. Comment on "Just got my elektra…" (see [3]).
+8. mic_al. Reply to "An Unmatched Roster: What's Cooking in Hell's Kitchen?" by TFJ383. *BoardGameGeek*, 11 November 2023. https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen
+9. u/richard-savana. Comment on "Just got my elektra…" (see [3]).
+10. u/richard-savana. Comment on "Weekly Discussion: Battling Elektra" (see [4]).
+11. u/LabRat2329. Comment on "Upcoming battle against Elektra" by u/Naive-Health414. *r/Unmatched*, Reddit, 27 March 2026. https://www.reddit.com/r/Unmatched/comments/1s5e5m5/
+12. u/Biggest_Lemon. Comment on "Weekly Discussion: Battling Elektra" (see [4]).
+13. u/TallBoiPlanks. Comment on "Weekly Discussion: Battling Elektra" (see [4]).
+14. u/BarrabasBlonde. Comment on "Just got my elektra…" (see [3]).
+
+### Not cited
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; nothing on Elektra)
+- [An Unmatched Roster: What's Cooking in Hell's Kitchen?](https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen): BoardGameGeek: TFJ383 · written analysis (read; Elektra is covered in an earlier article not in the sources)
+- [Elektra - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=Un3FXcyDqlU): To The Table Top! · video (not yet reviewed)
+- [Elektra - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=Xn6IPWpaDaY): Baked Goods · video (not yet reviewed)
 
 ---
 
 <!-- id: bullseye -->
 ## Bullseye
 
-**In short:** A fragile sniper who can hit anyone up to 5 spaces away, ignoring zones. He wins combats to unlock his deadly follow-ups, then slips out of reach.
+**In short:** A solo ranged hero with 14 health and 2 movement who can attack from up to 5 spaces away, ignoring zones [1]. Many of his cards get stronger if he has already won a combat that turn, so he wants turns with two attacks [2][3]. Low health and weak defenses balance his reach [2]; one analyst rates him low on power but a joy to play [3].
 
-### Plan A: Win a combat, then cash in
-**Goal:** Attack twice in a turn, winning the first combat to supercharge the second.
-**How to do it:** Many of his cards get better if you already won a combat this turn. World's Greatest Assassin ignores their card's value, I'm Better And I'll Prove It becomes a 6, and Right Between The Eyes makes them discard. Arrogant But Effective counts as a win no matter what, so it's the easiest way to set this up. I Planned To Be Here is worth 5 if you haven't moved. Study The Target draws 2, or 3 plus an action after a win. For My Next Trick draws and gains an action.
-**Watch out for:** He's all-or-nothing: either he keeps the pressure on, or the pressure lands on him.
+### Plan A: Win once, then win bigger
+**Goal:** Attack twice in a turn: win the first combat to power up the second [2][3][4].
+**How to do it:** Open with a card likely to win: Arrogant But Effective counts as winning the combat whatever the values, and I Planned To Be Here is worth 5 if you haven't moved this turn [1][2][5]. Then follow with World's Greatest Assassin (ignores the opponent's card value), I'm Better And I'll Prove It (becomes a 6) or Right Between The Eyes (a discard) [1][2][5]. Study The Target draws 2, or 3 plus an action if you've won a combat this turn, so play it after a win [1][2][4][6]. For My Next Trick moves 1, draws 1 and gains an action [1][2].
+**Watch out for:** He badly dislikes Feints [7]. Several players feel his early hand decides a lot, especially whether it holds Study The Target [7][8].
 
-### Plan B: Shoot and stay away
-**Goal:** Keep hitting from range while the opponent can't reach him.
-**How to do it:** With 5-space range, he can often attack from where he started. On defense, Tactical Retreat moves him to a space that shares no zones with his current one, and Master Strategist moves him exactly 4 spaces, even through enemies. Ricochet deals 1 damage to another fighter in the target's zone, which is great against 1-health sidekicks.
-**Watch out for:** Fighters with tools to close the gap fast, like Bruce Lee or Buffy.
+### Plan B: Stay just out of reach
+**Goal:** Attack from a spot the opponent can't easily reach, so they struggle to strike back [2][3].
+**How to do it:** One trick is to end exactly 5 spaces from the opponent, just out of their reach, so they have to come to you [3]. A space sharing the most zones with the opponent also lets them answer with schemes or ranged attacks, so choose carefully [3]. When attacked, escape: Tactical Retreat places him in a space sharing no zones with his current one, and Master Strategist moves him exactly 4 spaces, through enemies [1][2]. Plan where those 4 spaces can take him before you play it [3].
+**Watch out for:** Fighters who can close the distance quickly [2].
 
 ### How they lose
-- He has 14 health and his best defense is worth 3, so attacks hurt.
-- He's pinned down by fast fighters or, in 2v2, by two opponents at once.
-- He fails to win his first combat and his combo cards go dead.
+- Low health, and no defense above 3 [2].
+- Getting pinned and attacked often [2][9].
+- Feints [7].
+- A slow start without card draw [7][8].
 
 ### Key cards
-- **Arrogant But Effective**: counts as a combat win and moves him 2.
-- **Study The Target**: his most important card. Play it after winning a combat.
-- **World's Greatest Assassin**: ignores their defense value after a win.
-- **I Never Miss**: boost it, or draw a card if you don't.
+- **Study The Target**: one of his most important cards [6].
+- **Arrogant But Effective**: guarantees a "won combat" for his follow-ups, then moves him up to 2 [1][2].
+- **I Never Miss**: 4 copies; boost it, or draw a card if you don't [1]. Don't be afraid to take the draw: he wins by overwhelming with many attacks, and that needs cards [10].
+- **Ricochet**: if the opponent survives, deal 1 damage to another fighter in their zone [1]. Good against 1-health sidekicks [2].
+- **Tactical Retreat**: his only defense card [2].
 
 ### Tips
-- Go first, and pick maps with a spot that can hit most of the board.
-- Usually either maneuver twice to reload, or attack twice to fire.
-- A sneaky trick: when they double attack him, defend with Arrogant But Effective, then Right Between The Eyes, so they spend 3 cards.
+- He usually either maneuvers twice or attacks twice, "like reloading a gun and shooting it" [11].
+- He always wants to go first [6].
+- A risky trick: bait a double attack, defend the first with Arrogant But Effective and the second with Right Between The Eyes, costing the opponent three cards [2][12].
 
-### Further reading
-- [Unmatched – Bullseye](https://gridbeast.gg/unmatched-bullseye/): Gridbeast · written guide
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · written guide
-- [An Unmatched Roster: What's Cooking in Hell's Kitchen?](https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [Bullseye strategy](https://www.reddit.com/r/Unmatched/comments/1facpfu/): Reddit: Life-Rip183 · thread
-- [(Strategy) Did I correctly understand Bullseye's gameplay?](https://www.reddit.com/r/Unmatched/comments/1i0drah/): Reddit: -Asdepique- · thread
-- [If I’m playing Bullseye and can basically always attack, does that mean I’m supposed to stay at around 1–3 cards in hand because I’m constantly attacking?](https://www.reddit.com/r/Unmatched/comments/1wz3e9q/): Reddit: Mean-Shelter5303 · thread
-- [Bullseye - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=P_Kuca-8IA0): To The Table Top! · video
-- [Bullseye - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=1B5X3cK6hl8): Baked Goods · video
-- [Bullseye Advanced Strategy Guide](https://www.youtube.com/watch?v=SziqNdowXA4): The Gaming Geek Net · video
+### References
+1. Restoration Games. *Unmatched: Marvel – Hell's Kitchen*, Bullseye deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Bullseye." *Gridbeast*. https://gridbeast.gg/unmatched-bullseye/
+3. TFJ383. "An Unmatched Roster: What's Cooking in Hell's Kitchen?" *BoardGameGeek*, 11 November 2023. https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen
+4. u/LabRat2329. Comment on "If I'm playing Bullseye and can basically always attack…" by u/Mean-Shelter5303. *r/Unmatched*, Reddit, 6 October 2026. https://www.reddit.com/r/Unmatched/comments/1wz3e9q/
+5. u/HEJscaper. Comment on "Bullseye strategy" by u/Life-Rip183. *r/Unmatched*, Reddit, 6 September 2024. https://www.reddit.com/r/Unmatched/comments/1facpfu/
+6. u/CaptainCrockpot. Comment on "(Strategy) Did I correctly understand Bullseye's gameplay?" by u/-Asdepique-. *r/Unmatched*, Reddit, 13 January 2025. https://www.reddit.com/r/Unmatched/comments/1i0drah/
+7. u/-Asdepique-. "(Strategy) Did I correctly understand Bullseye's gameplay?" (see [6]).
+8. u/Virutita69. Comment on "(Strategy) Did I correctly understand Bullseye's gameplay?" (see [6]).
+9. u/Kitlun. Comment on "If I'm playing Bullseye…" (see [4]).
+10. u/CauseImBatman02. Comment on "(Strategy) Did I correctly understand Bullseye's gameplay?" (see [6]).
+11. u/Megabro_SgOwDm. Comment on "If I'm playing Bullseye…" (see [4]).
+12. u/Life-Rip183. Comment on "(Strategy) Did I correctly understand Bullseye's gameplay?" (see [6]).
+
+### Not cited
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; nothing on Bullseye)
+- [Bullseye - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=P_Kuca-8IA0): To The Table Top! · video (not yet reviewed)
+- [Bullseye - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=1B5X3cK6hl8): Baked Goods · video (not yet reviewed)
+- [Bullseye Advanced Strategy Guide](https://www.youtube.com/watch?v=SziqNdowXA4): The Gaming Geek Net · video (not yet reviewed)
 
 ---
 
