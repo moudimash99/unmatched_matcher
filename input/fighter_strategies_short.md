@@ -1377,100 +1377,125 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: nikola_tesla -->
 ## Nikola Tesla
 
-**In short:** A ranged fighter who charges two coils every turn and spends them on big effects.
+**In short:** A ranged inventor who charges two coils and discharges them to power up almost every card [1][2].
 
-### Plan A: Control the zone
-**Goal:** Make every space near him dangerous · **How:** full coils shock adjacent enemies; Lightning Storm and Repulsion Blast punish attackers · **Watch out:** weak defenses.
+### Plan A: Control the field from range
+**Goal:** Keep away and funnel the opponent [2] · **How:** punish attackers with Lightning Storm and Repulsion Blast; hit campers with Death Ray [1][2] · **Watch out:** average defenses [2].
 
-### Plan B: Charged burst
-**Goal:** One crippling turn · **How:** Death Ray up to 7; X-Ray Radiation discards their top card and adds its boost · **Watch out:** cancels waste your coils.
+### Plan B: Overload
+**Goal:** Big swings with full coils [2] · **How:** X-Ray Radiation and 7 Hertz; refill with Fully Charged [1][2] · **Watch out:** cancels waste your coils [2].
 
 ### How they lose
-- Constant attacks drain his coils.
-- No passes, and discards hurt.
+- Relentless aggression [3].
+- Cancels and discards [2][4].
 
 ### Key cards
-- **X-Ray Radiation**: discards their key card.
-- **Death Ray**: up to 7 after their defense.
+- **X-Ray Radiation**: his deadliest card [2].
+- **Death Ray**: up to a 7 [1].
 
 ### Tips
-- Keep Intense Experimentation in your opening hand.
-- Keep a coil spare for defense.
+- Attack with X-Ray Radiation whenever you can [2].
+- Seek Intense Experimentation early [5].
+
+### References
+1. Restoration Games. *Unmatched Adventures: Tales to Amaze*, Nikola Tesla deck.
+2. Gridbeast. "Unmatched – Nikola Tesla." https://gridbeast.gg/unmatched-nikola-tesla/
+3. u/Cell-division. Comment on "Strategy against Tesla." *r/Unmatched*, Reddit, 2024. https://www.reddit.com/r/Unmatched/comments/1agp0k1/
+4. u/ghostwolf676. Comment on "Strategy against Tesla" (see [3]).
+5. u/Life-Rip183. Comment on "Mulligan Mondays: Nikola Tesla." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1taiaqs/
 
 ---
 
 <!-- id: annie_christmas -->
 ## Annie Christmas
 
-**In short:** A melee brawler whose attacks get +2 while she has less health than the defender.
+**In short:** A riverboat brawler whose attacks get +2 while she has less health than the defender, with the tricky Charlie at her side [1][2].
 
-### Plan A: Stay just behind
-**Goal:** Turn on her +2 at the right time · **How:** keep her health close to theirs; Lagniappe lets her take damage before combat · **Watch out:** too low and one hit kills her.
+### Plan A: Play the health gap
+**Goal:** Stay close to the opponent's health [2] · **How:** Lagniappe can lower her health to switch on the bonus [1][2] · **Watch out:** staying low too long gets her killed [2].
 
-### Plan B: Use Charlie
-**Goal:** Get Annie in range and keep both alive · **How:** Slick Talker swaps them; Captain's Orders places both · **Watch out:** Charlie doesn't get the +2.
+### Plan B: Charlie's sleight of hand
+**Goal:** Use Charlie to set Annie up [2] · **How:** swap them with Slick Talker [1][2] · **Watch out:** plan their positions ahead [2].
 
 ### How they lose
-- Her health falls too far.
-- Kited by ranged fighters.
+- Low movement [2].
+- Weak attacks without the bonus [2].
 
 ### Key cards
-- **Mississippi Queen**: can't drop below 1 this turn.
-- **Lagniappe**: her best attack.
+- **Lagniappe**: her strongest attack [2].
+- **Mississippi Queen**: a last stand [2].
 
 ### Tips
-- Track her health against theirs every turn.
-- Plan Annie and Charlie's moves together.
+- Defense matters most [2].
+- Leave some attacks undefended to stay close in health [2].
+
+### References
+1. Restoration Games. *Unmatched Adventures: Tales to Amaze*, Annie Christmas deck.
+2. Gridbeast. "Unmatched – Annie Christmas." https://gridbeast.gg/unmatched-annie-christmas/
 
 ---
 
 <!-- id: the_golden_bat -->
 ## The Golden Bat
 
-**In short:** A simple melee hitter who gets +2 on turns he doesn't maneuver.
+**In short:** A simple, powerful solo hero whose attacks get +2 on turns he doesn't maneuver [1][2].
 
 ### Plan A: Strike without maneuvering
-**Goal:** Attack at +2 · **How:** move with Alpine Fortress or Arrive Just in Time, then hit with Super Strength for 7 · **Watch out:** opponents expect it; vary your attacks.
+**Goal:** Reach them with cards, not maneuvers [2] · **How:** Alpine Fortress or Arrive Just in Time, then Super Strength for 7 [1][2] · **Watch out:** opponents avoid ending next to him [2].
 
-### Plan B: Trap them
-**Goal:** Keep melee opponents beside you · **How:** defend with Terrifying Roar so they can't leave · **Watch out:** your versatile cards are also your defenses.
+### Plan B: Stay unpredictable
+**Goal:** Surprise them and keep good cards coming [2] · **How:** Sight Beyond Sight; recover cards with Alpine Fortress and Insight of the Ancients [1][3] · **Watch out:** predictable patterns [2].
 
 ### How they lose
-- Constant pressure runs him out of defenses.
-- Weak draw, no healing.
+- Constant pressure [4].
+- Poor draw and no healing [3].
 
 ### Key cards
-- **Alpine Fortress**: draw 2, recursion and a 4-space move.
-- **He Laughs at Your Feebleness**: a plain 5 defense.
+- **Super Strength**: a plain 5, or 7 [2].
+- **Terrifying Roar**: traps the attacker [2].
 
 ### Tips
-- Be unpredictable.
-- Use Sight Beyond Sight to stack their deck.
+- Use Terrifying Roar on defense [2].
+- Vary your attack patterns [2].
+
+### References
+1. Restoration Games. *Unmatched Adventures: Tales to Amaze*, The Golden Bat deck.
+2. Gridbeast. "Unmatched – The Golden Bat." https://gridbeast.gg/unmatched-golden-bat/
+3. u/Potatopancakeman. Comment on "Weekly Discussion: Battling Golden Bat." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1tpeb5w/
+4. u/Silly_Shenanigans. Comment on "Weekly Discussion: Battling Golden Bat" (see [3]).
 
 ---
 
 <!-- id: dr_jill_trent -->
 ## Dr. Jill Trent
 
-**In short:** A flexible melee fighter who wins the value game with gadgets and her strong sidekick Daisy.
+**In short:** A versatile scientist who picks a gadget each turn and wins on value, with the hard-hitting Daisy beside her [1][2][3].
 
 ### Plan A: Win the value game
-**Goal:** Out-value them while Daisy lives · **How:** Daisy's 5s and Helpful Assistant, which recycles 3 Jill cards · **Watch out:** don't expose Daisy with careless attacks.
+**Goal:** Value from every card [3] · **How:** keep Daisy alive to use Helpful Assistant [2][4] · **Watch out:** don't overextend Daisy [4].
 
-### Plan B: Rig their deck
-**Goal:** Big Hypnoray hits · **How:** stack their top card with Insightful Deduction, then attack with Battle of Wits · **Watch out:** play Deduction on defense so it isn't cancelled.
+### Plan B: Rig the deck
+**Goal:** Control their top card [2][5] · **How:** Insightful Deduction, then Battle of Wits with the Hypnoray Blaster [1][5] · **Watch out:** Hypnotist only cancels with the Blaster active [4].
 
 ### How they lose
-- Daisy dies early.
-- Big hitters and mobile ranged fighters.
+- Losing Daisy early [4].
+- Aggressive high-value attackers [2].
 
 ### Key cards
-- **Helpful Assistant**: her best card.
-- **Insightful Deduction**: sets up damage.
+- **Helpful Assistant**: her best card [2][4].
+- **Insightful Deduction**: her key setup [2].
 
 ### Tips
-- Default to Hypnoray Blaster.
-- Hide one fighter behind the other.
+- Default to the Hypnoray Blaster [6].
+- Use gadgets for mind games [2].
+
+### References
+1. Restoration Games. *Unmatched Adventures: Tales to Amaze*, Dr. Jill Trent deck.
+2. Gridbeast. "Unmatched – Dr. Jill Trent." https://gridbeast.gg/unmatched-jill-trent/
+3. u/m9696m. Comment on "Jill Trent Advice." *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1rl16ig/
+4. u/PrinceOfAsphodel. Comment on "Jill Trent Advice" (see [3]).
+5. u/Biggest_Lemon. Comment on "Jill Trent Advice" (see [3]).
+6. u/CD_North. Comment on "Jill Trent Advice" (see [3]).
 
 ---
 

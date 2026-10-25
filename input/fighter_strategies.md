@@ -2210,156 +2210,188 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: nikola_tesla -->
 ## Nikola Tesla
 
-**In short:** A ranged fighter with 14 health and some of the hardest-hitting cards in the game. He charges two coils every turn and spends them to power up his cards, controlling the board from a distance.
+**In short:** A solo ranged hero with 14 health and 2 movement who starts with 1 of his 2 coils charged and charges one at the end of each turn [1]. With both charged at the start of his turn, he deals 1 damage to each adjacent opponent and pushes them 1 space [1]. Almost every card can discharge coils for a stronger effect [1]. Gridbeast calls him straightforward to run and a strong ranged attacker with weak defenses [2].
 
-### Plan A: Control the zone
-**Goal:** Make every space near Tesla dangerous, so opponents go where you want them.
-**How to do it:** Tesla starts with 1 coil charged and charges another at the end of each turn. If both are charged at the start of his turn, each adjacent enemy takes 1 damage and is moved 1 space. Defend with Lightning Storm (3): discharge for 1 or 2 damage to every enemy in your zone, which also clears 1-health sidekicks. Repulsion Blast pushes the attacker 2 spaces, and with coils moves Tesla too or makes them discard a random card. Remote Control moves every enemy up to 2 spaces and gains an action.
-**Watch out for:** His defenses are weak. Opponents who stay out of range and draw can wait you out.
+### Plan A: Control the field from range
+**Goal:** Keep Tesla at a distance and steer the opponent where your attacks reach them [2].
+**How to do it:** Smart opponents will try to stay out of range; use that to funnel them into areas they can't avoid [2]. Punish them when they come in: Lightning Storm deals 1 or 2 damage to every opponent in your zone [1], best on defense [2], and Repulsion Blast pushes the attacker 2, can move Tesla 2 and can force a random discard [1]. If they end their turn in your zone, Death Ray becomes a 5 or a 7 by discharging, decided after you've seen their defense [1][2]. Remote Control moves every opponent up to 2 and gains an action [1].
+**Watch out for:** His defense options are only average [2].
 
-### Plan B: Charged burst
-**Goal:** One huge turn that cripples the opponent.
-**How to do it:** Death Ray (3) becomes 5 with one coil or 7 with two, and you decide after seeing their defense. X-Ray Radiation (4) reveals their top card: discharge one coil to discard it, two to also add its boost to your attack. Fully Charged and The Alternating Current refill both coils. 7 Hertz gains an action with one coil and also draws a card with two, which sets up a combo turn.
-**Watch out for:** Cancel effects waste your coils. Against decks without Feints, you can try this on turn 1 or 2.
+### Plan B: Overload
+**Goal:** Spend a full charge on a big swing [2][3].
+**How to do it:** X-Ray Radiation (4) reveals the opponent's top card; one coil discards it, two also add its boost to your attack [1]. Gridbeast calls it his most valuable card and attacks with it at every opportunity [2]. 7 Hertz gains an action for one coil, plus a card for two [1]. Fully Charged and The Alternating Current refill both coils [1]. One player looks for an early combo against opponents with no Feints [3].
+**Watch out for:** Cancel effects waste the coils you discharge [2].
 
 ### How they lose
-- Opponents attack every turn, so he can never spend his coils on everything he wants.
-- Opponents with action gain or lots of attacks run him down.
-- Random discards hurt, because he has no passes to dig for his cards.
+- Constant aggression, especially from fighters with extra actions: he can't afford every effect he wants [4][5].
+- Discard effects [6].
+- Cancels [2].
+- Juggling coil charges [2].
 
 ### Key cards
-- **X-Ray Radiation**: discards their best card and can add its boost. Attack with it whenever you can.
-- **Death Ray**: up to 7, decided after their defense is revealed.
-- **Intense Experimentation**: a defense that draws up to 3 and heals 1. The card most worth keeping in your opening hand.
-- **Polyphase Coils**: cancels their effects, and with 2 coils ignores their value too.
+- **X-Ray Radiation**: his most valuable and deadly card [2].
+- **Death Ray**: a 7 with both coils [1].
+- **Intense Experimentation**: a 3-value defense that draws 1, 2 or 3 cards depending on coils spent [1]; worth seeking early, less useful late [7].
+- **Polyphase Coils**: a cancel for one coil; with two, it also ignores the attacker's value [1].
+- **Kinetic Induction**: charges one coil, or both if you win [1]; on defense with one charge already, you start your turn full [2].
 
 ### Tips
-- Keep Intense Experimentation, X-Ray Radiation, Lightning Storm or Polyphase Coils in your opening hand.
-- Keep a spare coil for defense.
-- Spread your sidekicks out when you play against him, so Lightning Storm can't hit them all.
+- He adapts to each opponent; there's no single mulligan plan [8].
+- Mulligan targets include X-Ray Radiation, Lightning Storm, Polyphase Coils and Intense Experimentation [7][9].
 
-### Further reading
-- [Unmatched – Nikola Tesla](https://gridbeast.gg/unmatched-nikola-tesla/): Gridbeast · written guide
-- [Strategy against Tesla](https://www.reddit.com/r/Unmatched/comments/1agp0k1/): Reddit: Wookie_Unmatched · thread
-- [Mulligan Mondays: Nikola Tesla (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1taiaqs/): Reddit: LabRat2329 · thread
-- [Nikola Tesla - Unmatched Fighter Review](https://www.youtube.com/watch?v=L3K-MRw84to): To The Table Top! · video
-- [Nikola Tesla Strategy Guide (Strategy Sunday playlist, #2)](https://www.youtube.com/watch?v=csXYxz_a3uQ): Karma · video
+### References
+1. Restoration Games. *Unmatched Adventures: Tales to Amaze*, Nikola Tesla deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Nikola Tesla." *Gridbeast*. https://gridbeast.gg/unmatched-nikola-tesla/
+3. u/MisterAldona. Comment on "Mulligan Mondays: Nikola Tesla (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 11 May 2026. https://www.reddit.com/r/Unmatched/comments/1taiaqs/
+4. u/Cell-division. Comment on "Strategy against Tesla" by u/Wookie_Unmatched. *r/Unmatched*, Reddit, 1 February 2024. https://www.reddit.com/r/Unmatched/comments/1agp0k1/
+5. u/RecursionCafe. Comment on "Strategy against Tesla" (see [4]).
+6. u/ghostwolf676. Comment on "Strategy against Tesla" (see [4]).
+7. u/Life-Rip183. Comments on "Mulligan Mondays: Nikola Tesla" (see [3]).
+8. u/Independent_Act_6367. Comment on "Mulligan Mondays: Nikola Tesla" (see [3]).
+9. u/LabRat2329. "Mulligan Mondays: Nikola Tesla" (see [3]).
+
+### Not cited
+- [Nikola Tesla - Unmatched Fighter Review](https://www.youtube.com/watch?v=L3K-MRw84to): To The Table Top! · video (not yet reviewed)
+- [Nikola Tesla Strategy Guide (Strategy Sunday playlist, #2)](https://www.youtube.com/watch?v=csXYxz_a3uQ): Karma · video (not yet reviewed)
 
 ---
 
 <!-- id: annie_christmas -->
 ## Annie Christmas
 
-**In short:** A melee brawler with 14 health and a ranged partner, Charlie. Her attacks get +2 whenever she has less health than the defender, so she wins by keeping her health just below theirs without getting killed.
+**In short:** A melee hero with 14 health and 2 movement, plus the ranged Charlie (8 health) [1]. Her attacks get +2 whenever she has less health than the defender [1]. Her game revolves around managing her health total to keep that bonus without putting herself in danger [2]. One analyst names her a good fighter for new players that still holds up in competitive play [3].
 
-### Plan A: Stay just behind
-**Goal:** Turn on Necklace of Pearls at the right moment.
-**How to do it:** Keep Annie's health close to her opponent's, not far below it. When you're 1 ahead, attack with Lagniappe (5): before combat it lets her take up to 2 damage and draw that many cards, which can switch on the +2 for that same attack. Striking Beauty (1) deals 1 damage, or 2 if you win. A Few More Pearls deals 2 to every enemy next to her.
-**Watch out for:** Sitting at low health all game is how she dies, even with the bonus. Opponents may avoid attacking with big cards that would switch her bonus on.
+### Plan A: Play the health gap
+**Goal:** Keep Annie's health close to, or just below, the opponent's [2].
+**How to do it:** Don't sit below them all the time; that's a sure way to lose [2]. Stay close, even if it means taking some attacks undefended [2]. Lagniappe is a 5-value attack that can deal Annie up to 2 damage to draw that many cards, before combat [1]; when you're 1 health above the opponent, it switches on her bonus for that attack [2]. When she has more health, opponents may avoid attacking her with big cards, so as not to switch on her bonus [2].
+**Watch out for:** Activating the bonus is risky, and her attacks are mediocre without it [2].
 
-### Plan B: Use Charlie
-**Goal:** Use the pair to get Annie into position and keep both alive.
-**How to do it:** Annie moves only 2, so she needs help reaching ranged fighters. Slick Talker (defense 3) swaps Annie and Charlie, and the other fighter becomes the defender. Use it to pull Annie in close, or to rescue Charlie. Captain's Orders places Annie and then another friendly fighter anywhere in her zone and gains an action. Better Together (4) heals both by 1 when they're adjacent. Charlie's The Turn and the River draws 2, and Bottom Dealing adds the boost of your bottom card to its value.
-**Watch out for:** Charlie doesn't get Annie's +2, so his attacks are modest.
+### Plan B: Charlie's sleight of hand
+**Goal:** Use Charlie's range and tricks to set Annie up [2].
+**How to do it:** Slick Talker is a 3-value defense that swaps Annie and Charlie, making the other the defender [1]. Opponents rarely see Charlie as a threat, so position him and swap Annie in to attack next turn [2]; or swap Charlie out and let Annie take the hit to switch on her bonus [2]. Bottom Dealing adds the boost of your bottom card [1], and The Turn and the River draws 2 [1]. Better Together heals your fighter and each friendly fighter next to them, if they're adjacent [1]; Captain's Orders places both in Annie's zone and gains an action [1].
+**Watch out for:** Several cards depend on where Annie and Charlie stand relative to each other, so plan your moves ahead [2].
 
 ### How they lose
-- Her health drops too low, and one big hit finishes her.
-- Ranged fighters keep her away, since her movement is only 2.
-- Without her bonus, her attacks are average.
+- Low base movement, especially against ranged opponents who keep her away [2].
+- Mediocre attacks without her bonus [2].
+- Staying below the opponent's health for too long [2].
 
 ### Key cards
-- **Mississippi Queen**: damage can't take her below 1 this turn. Her last line of defense; play it when you plan to win on your next turn.
-- **Lagniappe**: her best attack, and it can turn her bonus on.
-- **Slick Talker**: the swap that makes her positioning work.
-- **Quite a Pair**: cancels their effects if you reveal 2 cards with the same name.
+- **Lagniappe**: her strongest attack [2].
+- **Mississippi Queen**: damage can't reduce Annie below 1 this turn [1]. Save it for a last stand, ideally when you'll win next turn [2].
+- **Slick Talker**: the reason Charlie matters [2].
+- **A Few More Pearls**: 2 damage to every opponent adjacent to Annie [1].
+- **Striking Beauty**: 1 damage, or 2 if you win [1].
 
 ### Tips
-- Defense matters more than offense for her. Track her health against theirs every turn.
-- Plan Annie and Charlie's moves together; several cards need them adjacent.
-- Mississippi Queen doesn't stop damage from their defense effects or abilities.
+- Her defense matters even more than her offense, because her plan is health management [2].
+- Mississippi Queen doesn't stop damage from defensive effects or abilities [2].
 
-### Further reading
-- [Unmatched – Annie Christmas](https://gridbeast.gg/unmatched-annie-christmas/): Gridbeast · written guide
-- [Annie Christmas - Unmatched Fighter Review](https://www.youtube.com/watch?v=XesXRXsPPeQ): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched Adventures: Tales to Amaze*, Annie Christmas deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Annie Christmas." *Gridbeast*. https://gridbeast.gg/unmatched-annie-christmas/
+3. TFJ383. "An Unmatched Roster: Anything But Marvelous." *BoardGameGeek*, 18 February 2024. https://boardgamegeek.com/thread/3250019/an-unmatched-roster-anything-but-marvelous
+
+### Not cited
+- [Annie Christmas - Unmatched Fighter Review](https://www.youtube.com/watch?v=XesXRXsPPeQ): To The Table Top! · video (not yet reviewed)
 
 ---
 
 <!-- id: the_golden_bat -->
 ## The Golden Bat
 
-**In short:** A simple, hard-hitting melee fighter with 18 health. His attacks get +2 on any turn he hasn't maneuvered, so he moves with schemes and card effects instead and strikes when the opponent doesn't expect it.
+**In short:** A solo melee hero with 18 health and 3 movement whose attacks get +2 on any turn he hasn't taken a maneuver action [1]. Gridbeast calls him simple, reliable and easy to pick up [2]; players rate him very highly [3].
 
 ### Plan A: Strike without maneuvering
-**Goal:** Attack at +2 as often as possible.
-**How to do it:** The First Superhero adds +2 to his attacks if he hasn't taken a Maneuver action this turn. Alpine Fortress shuffles a card from your discard pile into your deck, draws 2 and moves him up to 4 spaces, all without a maneuver. Follow it with Super Strength (5) for a 7 that no effect can cancel. Arrive Just in Time places him in any space. Like a Flash of Golden Light moves him 5 spaces after combat, and is worth 4 if he ends up sharing no zone with the space he started in.
-**Watch out for:** Opponents won't end their turn next to him without a good defense ready. Vary how you attack.
+**Goal:** Reach the opponent with cards instead of a maneuver, so every attack gets +2 [2].
+**How to do it:** Alpine Fortress shuffles a card from your discard pile into your deck, draws 2 and moves him up to 4 [1]. Follow it with Super Strength, a plain 5 that becomes a 7 no effect can cancel [1][2]. Arrive Just in Time places him in any space [1], and Like a Flash of Golden Light moves him up to 5 and is worth 4 if he ends up sharing no zone with where he started [1]. Terrifying Roar stops every fighter leaving their space this turn [1]; played on defense against a melee attacker, they can't escape you next turn [2]. Skirmish on defense can pull the attacker within reach [2].
+**Watch out for:** Opponents won't end their turn next to him without good defenses, so take them by surprise [2].
 
-### Plan B: Trap them
-**Goal:** Keep a melee opponent next to you for your next turn.
-**How to do it:** Terrifying Roar (3) stops all fighters leaving their spaces for the rest of the turn. Play it on defense against a melee attacker, and they're stuck beside you for your +2 attack. Skirmish (4) moves either fighter 2 spaces if you win, so on defense you can pull them into reach. Against ranged fighters, combine Roar with Alpine Fortress to close the gap.
-**Watch out for:** His versatile cards are also his defenses, so attacking with them leaves you short.
+### Plan B: Stay unpredictable and keep the good cards
+**Goal:** Don't fall into predictable patterns, and keep recycling your strongest cards [2][4].
+**How to do it:** Sight Beyond Sight looks at and reorders the top 3 cards of the opponent's deck [1], giving insight into what they'll have [2]. Insight of the Ancients returns a random card from your discard pile if you win, and Alpine Fortress shuffles back a card you choose [1]; between them, discarding his cards is often a fool's errand [4]. A Punch to Shake the Earth deals 1 damage to every opponent in his zone, 2 if he wins [1].
+**Watch out for:** Figure out what the opponent expects, then do something else [2].
 
 ### How they lose
-- Opponents attack him every turn and make him spend his versatile cards on defense.
-- His card draw is weak, mostly Alpine Fortress, and he has no healing and no action gain.
-- Mobile fighters with strong draw (Raptors, Houdini, Sinbad) are hard for him.
+- Constant pressure that forces him to defend with his versatile cards [5][6].
+- Poor card draw that leans on Alpine Fortress, no action gain and no healing [4][6].
+- Most of his damage depends on his ability [2].
+- Cancel effects [2].
+- Sources disagree on his defense: Gridbeast calls it a weakness [2]; others count six strong defense cards [3].
 
 ### Key cards
-- **Alpine Fortress**: draw, recursion and movement in one. His most important card.
-- **He Laughs at Your Feebleness**: a plain 5 defense, his best block.
-- **Imposing Presence**: a 3 defense that cancels their effects.
-- **Insight of the Ancients**: returns a random card from your discard pile to your hand if you win.
+- **Super Strength**: a 5 with no effect; with his bonus, a 7 [1][2].
+- **Alpine Fortress**: his best way to set up an unmaneuvered attack [2].
+- **He Laughs at Your Feebleness**: a plain 5-value defense [1].
+- **Imposing Presence**: a 3-value defense that cancels the attacker's effects [1].
+- **Vaporizing Eyebeams**: a random discard [1]; mostly used for its value, or as a boost [6].
 
 ### Tips
-- Be unpredictable; a Golden Bat who always attacks the same way gets blocked.
-- Sight Beyond Sight lets you look at and reorder their next 3 cards.
-- Don't feint Super Strength if you play against him; it has no effect to cancel.
+- Good for new players, with depth for veterans [2].
+- Vary how you attack, so your set-ups stay surprising [2].
 
-### Further reading
-- [Unmatched – The Golden Bat](https://gridbeast.gg/unmatched-golden-bat/): Gridbeast · written guide
-- [Weekly Discussion: Battling Golden Bat (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1tpeb5w/): Reddit: LabRat2329 · thread
-- [Golden Bat - Unmatched Fighter Review](https://www.youtube.com/watch?v=cmg7TOSyugs): To The Table Top! · video
-- [Strategy Sunday Vol. 17](https://www.youtube.com/watch?v=RTgu0pUEimQ): Karma · video
+### References
+1. Restoration Games. *Unmatched Adventures: Tales to Amaze*, The Golden Bat deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – The Golden Bat." *Gridbeast*. https://gridbeast.gg/unmatched-golden-bat/
+3. u/LabRat2329. "Weekly Discussion: Battling Golden Bat (Tips and Strategies)." *r/Unmatched*, Reddit, 27 May 2026. https://www.reddit.com/r/Unmatched/comments/1tpeb5w/
+4. u/Potatopancakeman. Comment on "Weekly Discussion: Battling Golden Bat" (see [3]).
+5. u/Silly_Shenanigans. Comment on "Weekly Discussion: Battling Golden Bat" (see [3]).
+6. u/DeeJaySaggy. Comment on "Weekly Discussion: Battling Golden Bat" (see [3]).
+
+### Not cited
+- [Golden Bat - Unmatched Fighter Review](https://www.youtube.com/watch?v=cmg7TOSyugs): To The Table Top! · video (not yet reviewed)
+- [Strategy Sunday Vol. 17](https://www.youtube.com/watch?v=RTgu0pUEimQ): Karma · video (not yet reviewed)
 
 ---
 
 <!-- id: dr_jill_trent -->
 ## Dr. Jill Trent
 
-**In short:** A flexible melee fighter with 13 health and a strong sidekick, Daisy. She doesn't excel at any one thing, but her gadgets, deck tricks and pile of good cards let her win the value game.
+**In short:** A melee hero with 13 health and 2 movement, plus Daisy (6 health) [1]. At the start of each turn she activates one of two gadgets, which resolves whenever Jill attacks [1]. The Hypnoray Blaster adds the boost of the opponent's top card when her card's printed value is lower than theirs; the Ultrabiotic Tonic heals 1 when hers is higher [1]. Sources call her versatile and a value fighter [2][3].
 
 ### Plan A: Win the value game
-**Goal:** Get more out of every card than your opponent does, and keep Daisy alive.
-**How to do it:** Daisy's cards are some of her best: Ace Fighter (5) draws a card, and Energizing Spray (5) gains an action. Helpful Assistant, Daisy's scheme, shuffles up to 3 Jill Trent cards from your discard pile back into your deck and draws 1. It's what lets her outlast most fighters. Poke often to trigger effects like Laser Pen (1 damage) and Caught Red-Handed (they discard 1, or 2 if you win), and try not to boost away good cards. On maps with cover, hide one fighter behind the other so opponents have to split their damage.
-**Watch out for:** Attacking with Daisy is tempting, but it can leave her open to a counterattack. If she dies before Helpful Assistant is played, the plan falls apart.
+**Goal:** Get value from nearly every card while Daisy keeps the pressure on [3][4].
+**How to do it:** Daisy has several 5-value cards, including Ace Fighter, which draws a card [1]; she is one of the strongest sidekicks in the game [3]. Keep her alive: her scheme Helpful Assistant shuffles up to 3 Jill cards from your discard pile into your deck and draws a card [1], and it is the best card in the deck [2][5]. Engage often, as long as it's safe, and avoid boosting [6]. Poke at the opponent to trigger effects, waste their defenses and squeeze extra damage from the Hypnoray Blaster [7].
+**Watch out for:** Don't overextend Daisy into counter-attacks; her scary attacks tempt you to [5]. If Daisy dies before using Helpful Assistant, the opponent can win easily [5].
 
-### Plan B: Rig their deck
-**Goal:** Set up big damage with Hypnoray Blaster.
-**How to do it:** At the start of each turn, Gadgetology activates a gadget. With Hypnoray Blaster, if her card's printed value is lower than theirs, she reveals their top card and adds its boost to her attack. Ultrabiotic Tonic heals 1 when her printed value is higher. Play Insightful Deduction on defense so it can't be cancelled: look at their top 3 cards, put one on the bottom and stack a 2 or 3 boost on top. Then attack with Battle of Wits (2): it gains that boost, and deals 3 damage if your top card's boost is higher.
-**Watch out for:** Remember which cards Hypnoray reveals, since they're now in their deck order.
+### Plan B: Rig the deck
+**Goal:** Control the top of the opponent's deck to power big hits [2][8].
+**How to do it:** Insightful Deduction reveals their top 3 cards, puts one on the bottom and the rest back in any order [1]. Gridbeast plays it as soon as possible, on defense so it can't be cancelled [2]. Put a card with boost 2 or 3 on top, then play Battle of Wits (2) with the Hypnoray Blaster active: it can deal 5 or 6 damage even if blocked [8]. Battle of Wits deals 3 damage if your top card's boost beats theirs [1]. Remember the cards you've revealed and buried [6].
+**Watch out for:** Hypnotist, her only true cancel, works only with the Hypnoray Blaster active [5].
 
 ### How they lose
-- Daisy dies early, so Helpful Assistant never happens.
-- Aggressive fighters with big attack values, like Bigfoot, overwhelm her.
-- Mobile ranged fighters stay out of her reach.
+- Losing Daisy, especially before Helpful Assistant [5][9].
+- Aggressive fighters with high-value attacks [2].
+- Ranged fighters with high movement [2].
+- She takes more planning than most heroes [2].
 
 ### Key cards
-- **Helpful Assistant**: the most valuable card in her deck.
-- **Insightful Deduction**: sets up her best attacks.
-- **Hypnotist**: a defense that cancels their effects while Hypnoray Blaster is active.
-- **Stasis Diffuser**: locks their card at its printed value. Great against value-changing attacks.
+- **Helpful Assistant**: the best card in her deck [2][5].
+- **Insightful Deduction**: the key to her success [2].
+- **Stasis Diffuser**: keeps the opponent's card at its printed value [1], blunting value-raising cards [2][5].
+- **Indestructible Cloth**: a 5-value defense that blocks non-combat damage this combat [1].
+- **Battle of Wits**: her big rigged hit [8].
 
 ### Tips
-- When unsure, keep Hypnoray Blaster active.
-- Choose your gadget to bluff: showing Hypnoray can bait a low defense.
-- Indestructible Cloth (5) blocks all non-combat damage that combat.
+- Use the gadgets for mind games: show the Hypnoray Blaster, then attack high [2][10].
+- Keep the Hypnoray Blaster as your default unless you have a plan for the Tonic [7][11].
 
-### Further reading
-- [Unmatched – Dr. Jill Trent](https://gridbeast.gg/unmatched-jill-trent/): Gridbeast · written guide
-- [Tips for playing Jill](https://www.reddit.com/r/Unmatched/comments/1flizsf/): Reddit: Gaborka111 · thread
-- [Jill Trent Advice](https://www.reddit.com/r/Unmatched/comments/1rl16ig/): Reddit: Naive-Health414 · thread
-- [Dr. Jill Trent - Unmatched Fighter Review](https://www.youtube.com/watch?v=UQ4SBsbwdoE): To The Table Top! · video
-- [Strategy Sunday Vol. 8](https://www.youtube.com/watch?v=E4xbtYc_daU): Karma · video
+### References
+1. Restoration Games. *Unmatched Adventures: Tales to Amaze*, Dr. Jill Trent deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Dr. Jill Trent." *Gridbeast*. https://gridbeast.gg/unmatched-jill-trent/
+3. u/m9696m. Comment on "Jill Trent Advice" by u/Naive-Health414. *r/Unmatched*, Reddit, 4 March 2026. https://www.reddit.com/r/Unmatched/comments/1rl16ig/
+4. u/CaptainCrockpot. Comment on "Tips for playing Jill" by u/Gaborka111. *r/Unmatched*, Reddit, 20 September 2024. https://www.reddit.com/r/Unmatched/comments/1flizsf/
+5. u/PrinceOfAsphodel. Comment on "Jill Trent Advice" (see [3]).
+6. u/Jerry-Red. Comment on "Jill Trent Advice" (see [3]).
+7. u/CD_North. Comment on "Jill Trent Advice" (see [3]).
+8. u/Biggest_Lemon. Comment on "Jill Trent Advice" (see [3]).
+9. u/CaptainCrockpot. Comment on "Tips for playing Jill" (see [4]).
+10. u/GaultheriaHispidula. Comment on "Jill Trent Advice" (see [3]).
+11. u/Ok-Excitement7898. Comment on "Tips for playing Jill" (see [4]).
+
+### Not cited
+- [Dr. Jill Trent - Unmatched Fighter Review](https://www.youtube.com/watch?v=UQ4SBsbwdoE): To The Table Top! · video (not yet reviewed)
+- [Strategy Sunday Vol. 8](https://www.youtube.com/watch?v=E4xbtYc_daU): Karma · video (not yet reviewed)
 
 ---
 
