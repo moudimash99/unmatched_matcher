@@ -993,21 +993,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: t_rex -->
 ## T. Rex
 
-**In short:** A huge, slow dinosaur with 27 health, 2-space reach and a free card every turn, who must win fast [1][2][3].
+**In short:** T. Rex is a huge, slow dinosaur with 27 health, 2-space reach and a free card every turn; she must win fast [1][2][3].
 
 ### Plan A: Hunt relentlessly
-**Goal:** Attack every turn [4] · **How:** boost your movement instead of discarding; close in with Closer Than She Appears and Ripples in the Water [1][4] · **Watch out:** opponents who keep away [3][5].
+**Goal:** Attack every turn [4] · **How:** boost movement instead of discarding cards, and close in with Closer Than She Appears and Ripples in the Water [1][4] · **Watch out:** opponents can keep away [3][5].
 
 ### Plan B: Trade blows
-**Goal:** Out-hit them with her health [3] · **How:** 15,000 Pounds of Muscle and Reckless Lunge; hold them with Terrifying Roar [1][2] · **Watch out:** her self-damage adds up [2].
+**Goal:** Trade blows with her huge health pool [3] · **How:** use 15,000 Pounds of Muscle and Reckless Lunge; hold them with Terrifying Roar [1][2] · **Watch out:** her self-damage adds up [2].
 
 ### How they lose
-- Kited until her deck runs out [3].
-- No cancels [3].
+- Opponents can evade her until her deck runs out [3].
+- She has no cancels [3].
 
 ### Key cards
-- **Reckless Lunge**: damage, or a 4 boost [2].
-- **Terrifying Roar**: keeps them in range [2].
+- **Reckless Lunge**: Offers damage or a boost of 4 [2].
+- **Terrifying Roar**: Keeps the opponent in range [2].
 
 ### Tips
 - A turn without an attack is wasted [4].
@@ -1025,25 +1025,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: houdini -->
 ## Houdini
 
-**In short:** An explosive magician whose cards have boost effects, and who teleports anywhere when he boosts a maneuver [1][2][3].
+**In short:** Houdini is an explosive magician whose cards have boost effects and who teleports anywhere when he boosts a maneuver [1][2][3].
 
 ### Plan A: Boost for value
-**Goal:** Turn every card into damage [4] · **How:** teleport with useful boost effects; Misdirection's boost deals 2 [2] · **Watch out:** he won't win a long game [4].
+**Goal:** Turn every card into damage [4] · **How:** teleport using useful boost effects, including Misdirection's 2 damage [2] · **Watch out:** he won't win a long game [4].
 
 ### Plan B: The Big Reveal
-**Goal:** One huge attack [2] · **How:** boost The Big Reveal twice, for example with Sleight of Hand, and take one card back [1][5] · **Watch out:** not into a hand full of defenses [4].
+**Goal:** Land one huge attack [2] · **How:** boost The Big Reveal twice, for example with Sleight of Hand, and take one card back [1][5] · **Watch out:** avoid attacking into a hand full of defenses [4].
 
 ### How they lose
-- Low health and few defenses [2].
-- Forced discards [2].
+- Low health and few defenses leave him vulnerable [2].
+- Forced discards threaten him [2].
 
 ### Key cards
-- **The Big Reveal**: his signature combo [2].
-- **Sleight of Hand**: a +3 boost that comes back [5].
+- **The Big Reveal**: His signature combo [2].
+- **Sleight of Hand**: Adds 3 when used to boost and returns to your hand [5].
 
 ### Tips
-- Strip a defense with Set the Stage's boost before attacking [2][3].
-- Take hits rather than spend Misdirection [6].
+- Use Set the Stage's boost to strip a defense before attacking [1][2][3].
+- Accept some hits to save Misdirection [6].
 
 ### References
 1. Restoration Games. *Unmatched: Houdini vs. The Genie*, Houdini deck.
@@ -1058,25 +1058,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: the_genie -->
 ## The Genie
 
-**In short:** A fast ranged djinn who discards cards for extra actions and builds toward an explosive turn with Three Wishes [1][2][3].
+**In short:** The Genie is a fast ranged djinn who discards cards for extra actions and builds toward an explosive turn with Three Wishes [1][2][3].
 
 ### Plan A: Ping and pressure
-**Goal:** Steady chip damage [4] · **How:** I Grant You Death, Imprisoned Wrath and extra actions from his ability [1][2] · **Watch out:** exhaustion [2].
+**Goal:** Deal steady chip damage [4] · **How:** use I Grant You Death, Imprisoned Wrath and his ability's extra actions [1][2] · **Watch out:** exhaustion [2].
 
 ### Plan B: The wish turn
-**Goal:** One explosive turn [2] · **How:** hold all three Three Wishes, empty their hand, then attack at 4 [2] · **Watch out:** opponents keep full hands against it [4].
+**Goal:** Build one explosive turn [2] · **How:** hold all three Three Wishes, empty the opponent's hand, then attack at 4 [2] · **Watch out:** prepared opponents keep full hands [4].
 
 ### How they lose
-- Exhaustion and weak defenses [2].
-- Opponents who keep their distance [2].
+- Exhaustion and weak defenses leave him vulnerable [2].
+- Opponents can keep their distance [2].
 
 ### Key cards
-- **Three Wishes**: his premiere card [2].
-- **Back In The Lamp**: heal 4 on defense [1].
+- **Three Wishes**: His defining card [2].
+- **Back In The Lamp**: Heals 4 on defense [1].
 
 ### Tips
 - Always keep one defense card [2].
-- Use wishes late to keep the threat [4].
+- Save wishes until late to keep the threat alive [4].
 
 ### References
 1. Restoration Games. *Unmatched: Houdini vs. The Genie*, The Genie deck.
@@ -1089,24 +1089,24 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: ms_marvel -->
 ## Ms. Marvel
 
-**In short:** A stretchy fighter who attacks from 2 spaces away, with cards that care about zones and hand size; very map dependent [1][2][3].
+**In short:** Ms. Marvel is a stretchy fighter who attacks from 2 spaces away with cards that depend on zones and hand size, making her very map dependent [1][2][3].
 
 ### Plan A: Stretch and strike
-**Goal:** Attack from a space sharing no zones with them [3] · **How:** free step each turn; Big Wind Up and I'm Not Touching You [1][3] · **Watch out:** opponents can deny her positioning [2].
+**Goal:** Attack from a space sharing no zones with the opponent [3] · **How:** use her free step each turn to set up Big Wind Up and I'm Not Touching You [1][3] · **Watch out:** opponents can deny her positioning [2].
 
 ### Plan B: Embiggen the hand
-**Goal:** Keep 4+ cards [2] · **How:** Fangirl scales with your hand; Gyro and Fries gains an action [1] · **Watch out:** a shrinking hand stalls her offense [2].
+**Goal:** Keep 4+ cards [2] · **How:** strengthen Fangirl with a large hand and gain an action from Gyro and Fries [1] · **Watch out:** a shrinking hand stalls her offense [2].
 
 ### How they lose
-- The wrong map [3][4].
-- Good positioning and Feints [4].
+- The wrong map limits her [3][4].
+- Good positioning and Feints counter her [4].
 
 ### Key cards
-- **Big Wind Up**: boost it for big damage [3].
-- **Slingshot**: her only defense card [3].
+- **Big Wind Up**: Boost it for heavy damage [3].
+- **Slingshot**: Her only defense card [3].
 
 ### Tips
-- Pick the map over starting position [5].
+- Choose the map over starting position [5].
 - Keep a defense after attacking [6].
 
 ### References
@@ -1122,21 +1122,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: squirrel_girl -->
 ## Squirrel Girl
 
-**In short:** A hero who summons up to 8 tiny Squirrels; her best cards need four of them around the target [1][2][3].
+**In short:** Squirrel Girl summons up to 8 tiny Squirrels, and her best cards need four around the target [1][2][3].
 
 ### Plan A: Build the horde
-**Goal:** Squirrels out fast [2][4] · **How:** her ability, Get 'Em Tippy-Toe! and Eat Nuts [1][4] · **Watch out:** spread them out against area damage [4].
+**Goal:** Bring Squirrels out quickly [2][4] · **How:** use her ability, Get 'Em Tippy-Toe! and Eat Nuts [1][4] · **Watch out:** spread them out against area damage [4].
 
 ### Plan B: Swarm the target
-**Goal:** Four Squirrels on the opponent [2] · **How:** Kick Butts, Bite of Steel and Unbeatable Squirrel Girl [1][2] · **Watch out:** opponents can wipe adjacent Squirrels [4].
+**Goal:** Surround the opponent with four Squirrels [2] · **How:** attack with Kick Butts, Bite of Steel and Unbeatable Squirrel Girl [1][2] · **Watch out:** opponents can wipe adjacent Squirrels [4].
 
 ### How they lose
-- A slow start [2][3].
-- Few defense cards [2].
+- She starts slowly [2][3].
+- She has few defense cards [2].
 
 ### Key cards
-- **Kick Butts**: up to a 9 [2].
-- **Squirgility**: a long-range escape [2].
+- **Kick Butts**: Reaches up to 9 [2].
+- **Squirgility**: Offers a long-range escape [2].
 
 ### Tips
 - Use Get 'Em Tippy-Toe! early [4].
@@ -1153,21 +1153,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: cloak_and_dagger -->
 ## Cloak and Dagger
 
-**In short:** Two fragile heroes: Cloak's hits strip cards, Dagger's hits chain extra actions into a burst turn [1][2].
+**In short:** Cloak and Dagger are two fragile heroes: Cloak's hits strip cards, while Dagger's chain extra actions into a burst turn [1][2].
 
 ### Plan A: Cloak sets the table
-**Goal:** Drain their hand and drag them to Dagger [3] · **How:** Channel the Dark and Darkforce Dimension [1][4] · **Watch out:** opponents Feint Cloak's cards [4].
+**Goal:** Drain the opponent's hand and pull them toward Dagger [3] · **How:** use Channel the Dark and Darkforce Dimension [1][4] · **Watch out:** opponents Feint Cloak's cards [4].
 
 ### Plan B: Dagger's combo turn
-**Goal:** Chain Dagger's 2-damage hits [3] · **How:** save Perfect Balance, Commanding Impact and Lightforce Barrage for one turn [3][5] · **Watch out:** Lightforce Barrage can kill Dagger [2].
+**Goal:** Chain Dagger's 2-damage hits [3] · **How:** save Perfect Balance, Commanding Impact and Lightforce Barrage to play in one turn [3][5] · **Watch out:** Lightforce Barrage can kill Dagger [2].
 
 ### How they lose
-- Losing either fighter [2][6].
-- Low health and low defense [2].
+- Losing either fighter undermines the other [2][6].
+- Their health and defenses are low [2].
 
 ### Key cards
-- **Channel the Dark**: sets up Dagger [4].
-- **Living Shadow**: saves Dagger [2].
+- **Channel the Dark**: Sets up Dagger [4].
+- **Living Shadow**: Saves Dagger [2].
 
 ### Tips
 - Keep both above 4 health with Chosen Fate [4].
@@ -1187,25 +1187,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: black_panther -->
 ## Black Panther
 
-**In short:** A king who steals cards from the top of the opponent's deck into his Vibranium Suit, and draws a card every time he boosts [1][2].
+**In short:** Black Panther is a king who steals cards from the top of the opponent's deck into his Vibranium Suit and draws a card whenever he boosts [1][2].
 
 ### Plan A: Rob their deck
-**Goal:** Steal up to ten cards [2] · **How:** Analyze and Adjust, Ancestral Insight and Shuri's Tactical Remote Scanning [1][2] · **Watch out:** the steals are random [3].
+**Goal:** Steal up to ten cards [2] · **How:** use Analyze and Adjust, Ancestral Insight and Shuri's Tactical Remote Scanning [1][2] · **Watch out:** the steals are random [3].
 
 ### Plan B: Boost everything
-**Goal:** Big boosted attacks that refill your hand [2] · **How:** Wakanda Forever! twice-boosted, Anti-Metal Claws [1][2] · **Watch out:** too much boosting means exhaustion [2][4].
+**Goal:** Land big boosted attacks while refilling your hand [2] · **How:** boost Wakanda Forever! twice and use Anti-Metal Claws [1][2] · **Watch out:** too much boosting means exhaustion [2][4].
 
 ### How they lose
-- Exhaustion [2].
-- Losing Shuri early [2].
+- He is vulnerable to exhaustion [2].
+- Losing Shuri early weakens him [2].
 
 ### Key cards
-- **Tactical Remote Scanning**: steal two [1].
-- **Wakanda Forever!**: his big hit [2].
+- **Tactical Remote Scanning**: Steals two cards [1].
+- **Wakanda Forever!**: His heavy attack [2].
 
 ### Tips
 - Mulligan for Shuri's schemes [4].
-- Keep key stolen cards in the Suit [2][4].
+- Hold key stolen cards in the Suit [2][4].
 
 ### References
 1. Restoration Games. *Unmatched: Marvel – For King and Country*, Black Panther deck.
@@ -1218,25 +1218,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: black_widow -->
 ## Black Widow
 
-**In short:** A ranged spy who completes missions, powerful schemes with conditions, backed by Maria Hill [1][2][3].
+**In short:** Black Widow is a ranged spy backed by Maria Hill who completes missions, powerful schemes with conditions [1][2][3].
 
 ### Plan A: Run the missions
-**Goal:** Complete missions for unblockable damage and discards [2][3] · **How:** plan positions for each mission's condition; recover missions with Acting Director of S.H.I.E.L.D. [1][2] · **Watch out:** opponents see new missions coming [2][3].
+**Goal:** Complete missions for unblockable damage and discards [2][3] · **How:** plan your positioning around each mission's condition and recover missions with Acting Director of S.H.I.E.L.D. [1][2] · **Watch out:** opponents see new missions coming [2][3].
 
 ### Plan B: Spy games
-**Goal:** Keep the opponent guessing [2] · **How:** work on a mission they haven't seen; bait with Fake Out [2] · **Watch out:** keep Maria alive [2].
+**Goal:** Keep the opponent guessing [2] · **How:** pursue a mission they haven't seen and bait them with Fake Out [2] · **Watch out:** keep Maria alive [2].
 
 ### How they lose
-- Low health and low defenses [2].
-- Telegraphed missions [3].
+- Low health and weak defenses leave her vulnerable [2].
+- Her missions reveal what is coming [3].
 
 ### Key cards
-- **Acting Director of S.H.I.E.L.D.**: her most important card [2].
-- **The Madripoor Sanction**: punishes many sidekicks [2].
+- **Acting Director of S.H.I.E.L.D.**: Her most important card [2].
+- **The Madripoor Sanction**: Punishes opponents with many sidekicks [2].
 
 ### Tips
 - Use Life Model Decoy only when Maria will surely fall [2].
-- Fake Out works best as your first attack [2].
+- Play Fake Out as your first attack for the best results [2].
 
 ### References
 1. Restoration Games. *Unmatched: Marvel – For King and Country*, Black Widow deck.
@@ -1248,24 +1248,24 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: winter_soldier -->
 ## Winter Soldier
 
-**In short:** A solo marksman whose effects can't be cancelled, who recycles his best cards with Reprogram but must manage RED ROOM drawbacks [1][2].
+**In short:** Winter Soldier is a solo marksman whose effects can't be cancelled; he recycles his best cards with Reprogram while managing RED ROOM drawbacks [1][2].
 
 ### Plan A: Recycle the best cards
-**Goal:** Outlast them by looping good cards [2] · **How:** Reprogram back Complete the Mission, Wily Fighting and another Reprogram [2] · **Watch out:** he may not survive long enough [3].
+**Goal:** Outlast the opponent by recycling good cards [2] · **How:** use Reprogram to return Complete the Mission, Wily Fighting and another Reprogram [2] · **Watch out:** he may not survive long enough [3].
 
 ### Plan B: Brainwashed, then freed
 **Goal:** Use strong RED ROOM cards safely [2] · **How:** play A Boy Named Bucky, then Bionic Arm or Programmed to Kill [1][2] · **Watch out:** Reflex Memories discards at random [1].
 
 ### How they lose
-- Early pressure before he curates his deck [4].
-- Low movement; pinned in corners [3].
+- Early pressure denies him time to refine his deck [4].
+- Low movement leaves him vulnerable to being pinned in corners [3].
 
 ### Key cards
-- **Reprogram**: his engine [2].
-- **Complete the Mission**: one of the game's best defenses [2].
+- **Reprogram**: Drives his recycling [2].
+- **Complete the Mission**: One of the game's best defenses [2].
 
 ### Tips
-- Only play Programmed to Kill with Bucky [2].
+- Play Programmed to Kill only with Bucky [2].
 - Boost maneuvers with your bad cards [5].
 
 ### References
@@ -1280,25 +1280,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: she_hulk -->
 ## She-Hulk
 
-**In short:** A 20-health powerhouse who throws cards for free damage and hits hard enough that opponents must always defend [1][2][3].
+**In short:** She-Hulk is a 20-health powerhouse who throws cards for free damage and hits hard enough to force opponents to defend every turn [1][2][3].
 
 ### Plan A: Smash
-**Goal:** Land her big attacks [2] · **How:** Omega-Level Threat, then The Savage She-Hulk set up by Leap Toward [1][2] · **Watch out:** the setup is predictable [2].
+**Goal:** Land her big attacks [2] · **How:** play Omega-Level Threat, then use Leap Toward to set up The Savage She-Hulk [1][2] · **Watch out:** the setup is predictable [2].
 
 ### Plan B: Pin and grind
-**Goal:** Trap them and recycle her best attacks [2] · **How:** Nerve Cluster Strike; Sensational shuffles attacks back [1][2] · **Watch out:** low defense values [2].
+**Goal:** Trap them and recycle her best attacks [2] · **How:** trap them with Nerve Cluster Strike and shuffle attacks back with Sensational [1][2] · **Watch out:** low defense values [2].
 
 ### How they lose
-- Mobile ranged opponents [2].
-- Well-timed 4-value blocks [4].
+- Mobile ranged opponents can evade her [2].
+- Well-timed 4-value blocks disrupt her [4].
 
 ### Key cards
-- **The Savage She-Hulk**: a 9 for two actions [1].
-- **Omega-Level Threat**: two random discards [1].
+- **The Savage She-Hulk**: Reaches 9 for two actions [1].
+- **Omega-Level Threat**: Forces two random discards [1].
 
 ### Tips
 - Save her ability for finishing blows [2].
-- Recover Savage or Omega with Sensational [2].
+- Use Sensational to recover The Savage She-Hulk or Omega-Level Threat [2].
 
 ### References
 1. Restoration Games. *Unmatched: Marvel – Brains and Brawn*, She-Hulk deck.

@@ -1605,32 +1605,32 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: t_rex -->
 ## T. Rex
 
-**In short:** A solo large fighter with 27 health and 1 movement [1]. She occupies up to two spaces, can attack up to 2 spaces away, even over fighters, and draws a card at the end of every turn [1]. She hits like a freight train and can take a lot of punishment [2][3], but her slow movement and constant drawing push her to end the game fast [3][4].
+**In short:** T. Rex is a solo large fighter with 27 health and 1 movement [1]. She occupies up to two spaces, can attack up to 2 spaces away, even over fighters, and draws a card at the end of every turn [1]. She hits hard and can withstand considerable punishment [2][3], but her slow movement and constant drawing push her to end the game fast [3][4].
 
 ### Plan A: Hunt relentlessly
 **Goal:** Attack every turn and win before she runs out of cards [4][5].
-**How to do it:** Boost your movement almost every turn: the forced draw fills your hand anyway, so a card spent on movement beats discarding at the hand limit [5]. Closer Than She Appears moves her 1, draws a card and gains an action, and Ripples in the Water places her anywhere in her zone and makes adjacent opponents discard a random card [1]; use them to close the last gap [2]. Plan your approach to herd the opponent where they can't escape [2]. When Dinosaurs Ruled the Earth can be boosted and, if you win, draws a card and gains an action for 2 damage to her [1].
-**Watch out for:** Her extra draw mills her deck faster than most [3][4]. Opponents who simply keep away can win by exhaustion [3][6].
+**How to do it:** Boost your movement almost every turn [5]. Her forced draw keeps your hand full, so spending a card to move is better than discarding it at the hand limit [5]. Closer Than She Appears moves her 1, draws a card and gains an action, and Ripples in the Water places her anywhere in her zone and makes adjacent opponents discard a random card [1]; use them to close the last gap [2]. Plan your approach so it herds the opponent into a position they can't escape [2]. When Dinosaurs Ruled the Earth can be boosted and, if you win, draws a card and gains an action for 2 damage to her [1].
+**Watch out for:** Her extra draw runs through her deck faster than most fighters [3][4]. Opponents who simply keep away can win by exhaustion [3][6].
 
 ### Plan B: Trade blows
-**Goal:** Use her huge health to take damage and hit back harder [2][3].
-**How to do it:** She rarely needs to defend, so she keeps a full hand and answers attacks with big swings [3]. 15,000 Pounds of Muscle ignores the defense's value for 2 damage to herself, and Reckless Lunge deals 3 to the opponent and then 3 to her [1]. Gridbeast prefers to use Reckless Lunge, with its boost of 4, as boost fuel [2]. On defense, Terrifying Roar stops every fighter leaving their space this turn, keeping the attacker in range [1][2], and Thrash damages every opponent in her zone if she wins [1]; Gridbeast uses it on defense [2].
+**Goal:** Use her huge health pool to absorb damage and hit back harder [2][3].
+**How to do it:** She rarely needs to defend; instead, she can keep a full hand and answer attacks with powerful swings [3]. 15,000 Pounds of Muscle ignores the defense's value for 2 damage to herself, and Reckless Lunge deals 3 to the opponent and then 3 to her [1]. Reckless Lunge is better spent on boosting, with its boost value of 4 [2]. On defense, Terrifying Roar stops every fighter leaving their space this turn, keeping the attacker in range [1][2], and Thrash damages every opponent in her zone if she wins [1]; use it on defense [2].
 **Watch out for:** Her self-damage adds up; don't play those cards carelessly [2][4].
 
 ### How they lose
-- Opponents who run away or keep their distance [3][6][7].
-- Exhaustion from her end-of-turn draw [3][4].
-- Movement of 1 [2][3].
-- No cancel cards [3][8].
-- Few defenses [2], and damage from her own cards [2][4].
+- Opponents can deny her attacks by running away or keeping their distance [3][6][7].
+- Her end-of-turn draw leaves her vulnerable to exhaustion [3][4].
+- Her movement of 1 makes pursuit difficult [2][3].
+- She has no cancel cards [3][8].
+- She has few defenses [2], and her own cards damage her [2][4].
 - Maps with special rules can be awkward: she can't use secret passages and ignores one-way arrows [1][3].
 
 ### Key cards
-- **Reckless Lunge**: 3 damage that ignores defense, or a boost of 4 [1][2].
-- **Ripples in the Water**: reposition and a random discard [1][2].
-- **Terrifying Roar**: holds the opponent in place [2].
+- **Reckless Lunge**: Offers 3 damage that ignores defense, or a boost of 4 [1][2].
+- **Ripples in the Water**: Repositions her and forces a random discard [1][2].
+- **Terrifying Roar**: Holds the opponent in place [2].
 - **You're Just Making Her Angry**: a boostable 1-value defense that returns to your hand if you win [1]; boost it to match the attack so you can reuse it [2].
-- **65 Million Years of Gut Instinct**: return any other card from your discard pile [1].
+- **65 Million Years of Gut Instinct**: Returns any other card from your discard pile [1].
 
 ### Tips
 - Any turn you don't attack is a wasted turn [5].
@@ -1655,34 +1655,34 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: houdini -->
 ## Houdini
 
-**In short:** A melee hero with 14 health and 2 movement, plus Bess (5 health) [1]. When he boosts a maneuver he may place himself in any space instead of moving [1]. Many of his cards also have boost effects that trigger when the card is used to boost [2]. Sources call him one of the most creative and explosive fighters [3][4], and players rate him top tier [5].
+**In short:** Houdini is a melee hero with 14 health and 2 movement, accompanied by Bess (5 health) [1]. When he boosts a maneuver he may place himself in any space instead of moving [1]. Many of his cards also have boost effects that trigger when the card is used to boost [2]. He is among the most creative and explosive fighters [3][4], and players rate him top tier [5].
 
 ### Plan A: Boost for value
-**Goal:** Turn every card into damage: bait out defenses with weaker cards, deal damage with strong ones [6].
-**How to do it:** Boost a maneuver to appear anywhere [1], picking boost cards with useful effects; don't boost movement with cards worth 3 or 4 boost that should go into attacks [6]. According to Gridbeast, Set the Stage's boost effect lets you look at the opponent's hand and discard a card; And the Beautiful Bess! gains an action on your turn; Misdirection deals 2 damage to any fighter; and All Part of the Show heals 2 [2]. Misdirection's boost means three copies can deal 6 damage, at the cost of not using them as Feints [2][6][7].
-**Watch out for:** One player sums him up as "yes aggressive, no fatigue": he won't win a long, grinding game [6][7].
+**Goal:** Turn every card into damage by baiting defenses with weaker cards and dealing damage with stronger ones [6].
+**How to do it:** Boost a maneuver to appear anywhere [1], choosing boost cards with useful effects. Save cards with boost values of 3 or 4 for attacks instead of movement [6]. Set the Stage's boost effect lets you look at the opponent's hand and choose a card for them to discard [1][2]. Other boost effects offer different benefits: And the Beautiful Bess! gains an action on your turn, Misdirection deals 2 damage to any fighter, and All Part of the Show heals 2 [2]. Misdirection's boost means three copies can deal 6 damage, at the cost of not using them as Feints [2][6][7].
+**Watch out for:** Play aggressively: he won't win a long, grinding game [6][7].
 
 ### Plan B: The Big Reveal
 **Goal:** Set up one devastating attack [2][3].
-**How to do it:** The Big Reveal is a 2-value attack you may boost twice, returning one of the boost cards to your hand [1]. Boost it with A Magician Never Reveals His Secrets (boost 4) and Misdirection for a 7 plus 2 damage, then take Misdirection back [2]. Sleight of Hand is a favorite boost too: +3, and it comes back to your hand [8]. The feared opening: boost a maneuver with Set the Stage, teleport next to the opponent, strip their best defense, then hit for 8 or 9 [3][6]. Feint-check first with For My Next Trick or Sleight of Hand [8].
+**How to do it:** The Big Reveal is a 2-value attack you may boost twice, returning one of the boost cards to your hand [1]. Boost it with A Magician Never Reveals His Secrets (boost 4) and Misdirection for a 7 plus 2 damage, then take Misdirection back [2]. Sleight of Hand is another favored boost: it adds 3 and returns to your hand [8]. For a particularly threatening opening, boost a maneuver with Set the Stage, teleport next to the opponent, strip their best defense, then hit for 8 or 9 [3][6]. Test for Feint first with For My Next Trick or Sleight of Hand [8].
 **Watch out for:** Don't launch The Big Reveal into a hand that may hold strong defenses [6].
 
 ### How they lose
-- Low health and few defense options [2][4].
-- Forced discards, which can take his key cards [2][9].
-- A long game, as he runs through his cards faster than most [6][10].
-- Opponents who keep a big hand, so he can't catch them without defenses [4][11].
+- Low health and few defensive options leave him vulnerable [2][4].
+- Forced discards can take away his key cards [2][9].
+- He runs through his cards faster than most fighters, making long games dangerous [6][10].
+- Opponents who keep a big hand make it hard to catch them without defenses [4][11].
 
 ### Key cards
-- **The Big Reveal**: his signature combo attack [2]. Opponents say you aren't safe until both copies are gone [12].
-- **A Magician Never Reveals His Secrets**: draw 2 and gain an action, or reveal it to cancel an effect that would let the opponent look at your hand [1]. Hold it against such effects; otherwise it's a 4 boost [2].
-- **Sleight of Hand**: return it to your hand and play a different card instead [1].
-- **All Part of the Show**: if your fighter is defeated, set their health to 4 and place them anywhere; it can't be cancelled [1]. Gridbeast prefers using it to heal [2].
-- **Smoke and Mirrors**: Houdini and Bess swap, and the other fighter enters the combat [1]; the best reason to keep Bess alive [2].
+- **The Big Reveal**: His signature combo attack [2]. Opponents say you aren't safe until both copies are gone [12].
+- **A Magician Never Reveals His Secrets**: Draw 2 and gain an action, or reveal it to cancel an effect that would let the opponent look at your hand [1]. Hold it against such effects; otherwise it's a 4 boost [2].
+- **Sleight of Hand**: Returns to your hand so you can play a different card instead [1].
+- **All Part of the Show**: If your fighter is defeated, it sets their health to 4 and places them anywhere; it can't be cancelled [1]. Its healing boost effect is the preferred use [2].
+- **Smoke and Mirrors**: Swaps Houdini and Bess, bringing the other fighter into the combat [1]; the best reason to keep Bess alive [2].
 
 ### Tips
 - Be content to take an attack now and then, rather than spend Misdirection on defense [7].
-- Bess barely serves as more than a body-blocker; her cards are mostly worth boosting [3].
+- Bess mainly blocks movement; her cards are mostly better spent on boosting [3].
 - Going first matters a lot for him [11].
 
 ### References
@@ -1709,35 +1709,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: the_genie -->
 ## The Genie
 
-**In short:** A solo ranged hero with 16 health and 3 movement who may discard a card at the start of each turn to gain an action [1]. He treats his cards as a resource as much as for their values [2]. His card values are low but his effects are flashy, and Three Wishes is the heart of his deck [2][3]. One analyst calls him one of the toughest fighters to play, but balanced and fair [3].
+**In short:** The Genie is a solo ranged hero with 16 health and 3 movement who may discard a card at the start of each turn to gain an action [1]. His cards are resources to spend as well as values to play [2]. His card values are low but his effects are flashy, and Three Wishes is the heart of his deck [2][3]. He is considered one of the toughest fighters to play, though balanced and fair [3].
 
 ### Plan A: Ping and pressure
 **Goal:** Wear the opponent down with small, steady damage and extra actions [4][5].
-**How to do it:** Most of his attacks deal little damage; he's good at slowly draining health with pings [4]. I Grant You Death deals 1 damage to an adjacent fighter, Imprisoned Wrath can discard 2 cards for 2 damage, and I Am Freed teleports him and damages everyone adjacent [1]. Use his ability when you hold 6 or more cards, and spend extra cards on Imprisoned Wrath or Your Wish is My Command when you'd otherwise discard at the hand limit [2]. I Am Freed lets him follow an opponent who moves away [6].
+**How to do it:** Most of his attacks deal little damage, but he can steadily drain health through small hits [4]. I Grant You Death deals 1 damage to an adjacent fighter, Imprisoned Wrath can discard 2 cards for 2 damage, and I Am Freed teleports him and damages everyone adjacent [1]. Use his ability when you hold 6 or more cards, and spend extra cards on Imprisoned Wrath or Your Wish is My Command when you'd otherwise discard at the hand limit [2]. I Am Freed lets him follow an opponent who moves away [6].
 **Watch out for:** He runs through his deck fast, so exhaustion is his biggest risk [2][5][7].
 
 ### Plan B: The wish turn
 **Goal:** Collect Three Wishes, then unleash them together in one explosive turn [2][8].
-**How to do it:** Three Wishes gains an action and either draws 5, makes your card values 4 for the turn, or makes each opponent discard 2 [1]. Gridbeast suggests waiting until you hold all three: use the discards to empty the opponent's hand, then the 4-value effect to attack into no defense [2]. One player saw over 15 damage in a single turn this way [8]. The discard wish is strongest when it can empty their whole hand [4]. Defensive draws such as Wishing For More Wishes and Prisoner's Torment set the turn up [4].
-**Watch out for:** Opponents can see a big-hand turn coming [5]; aware opponents keep 7 cards in hand to survive it [4]. Spending wishes carelessly can doom him [3]; one player uses them as late as possible to keep the threat alive [4].
+**How to do it:** Three Wishes gains an action and either draws 5, makes your card values 4 for the turn, or makes each opponent discard 2 [1]. Wait until you hold all three, using the discards to empty the opponent's hand before the 4-value effect lets you attack without a defense in the way [2]. This sequence has dealt over 15 damage in a single turn [8]. The discard wish is strongest when it can empty their whole hand [4]. Drawing on defense with Wishing For More Wishes and Prisoner's Torment helps set up that turn [4].
+**Watch out for:** A large hand can reveal that the burst turn is coming [5]; aware opponents keep 7 cards in hand to survive it [4]. Spending wishes carelessly can doom him [3]; holding them as late as possible keeps the threat alive [4].
 
 ### How they lose
-- Exhaustion [2][5].
-- Weak defense cards [2].
-- Opponents who safely keep their distance, or have high defense and many cancels [2].
-- A solo fighter: always the target [5].
+- He is vulnerable to exhaustion [2][5].
+- His defense cards are weak [2].
+- Opponents can frustrate him by safely keeping their distance, or by relying on high defenses and many cancels [2].
+- As a solo fighter, he is always the target [5].
 
 ### Key cards
-- **Three Wishes**: his premiere card, around which every strategy is built [2].
-- **Back In The Lamp**: a 0-value defense that heals 4 [1], effectively blocking 4 [2].
-- **Wishing For More Wishes**: perhaps his best defense: you draw 3, they draw 1 [1][2].
-- **I've Made Sultans Out of Less**: look at their hand and choose a discard [1]. Strips their best defense before your turn [2][4].
-- **This is No Parlor Trick**: sets the opponent's card value to its boost [1]. Gridbeast always discards it [2]; another player finds it excellent against some opponents, and a guaranteed hit with the 4-value wish [4].
+- **Three Wishes**: His defining card, around which every strategy is built [2].
+- **Back In The Lamp**: A 0-value defense that heals 4 [1], effectively blocking 4 [2].
+- **Wishing For More Wishes**: Perhaps his best defense: you draw 3 cards and the opponent draws 1 [1][2].
+- **I've Made Sultans Out of Less**: Lets you look at their hand and choose a discard [1], removing their best defense before your turn [2][4].
+- **This is No Parlor Trick**: Sets the opponent's card value to its boost [1]. Gridbeast always discards it [2]; another player finds it excellent against some opponents, and a guaranteed hit with the 4-value wish [4].
 
 ### Tips
 - Keep at least one defense card in hand at all times [2].
 - An offensive Feint can ruin an escape card the opponent was saving [5].
-- Decide early whether this game is aggro, combo or fatigue, and adapt [4].
+- Decide early whether to pursue aggression, a combo or exhaustion, and adapt your play [4].
 
 ### References
 1. Restoration Games. *Unmatched: Houdini vs. The Genie*, The Genie deck. Card text as recorded in `input/heroes.json`.
@@ -1762,31 +1762,31 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: ms_marvel -->
 ## Ms. Marvel
 
-**In short:** A solo melee hero with 14 health and 2 movement who may move 1 space at the start of her turn and can attack from up to 2 spaces away, ignoring zones [1]. Half her deck cares about zones and half about her hand size [2], which makes her probably the most map-dependent fighter in the game [2][3].
+**In short:** Ms. Marvel is a solo melee hero with 14 health and 2 movement who may move 1 space at the start of her turn and can attack from up to 2 spaces away, ignoring zones [1]. Half her deck depends on zones and half on her hand size [2], which makes her probably the most map-dependent fighter in the game [2][3].
 
 ### Plan A: Stretch and strike
 **Goal:** Attack from spaces that share no zone with the opponent, or that sit in more zones than theirs [3][4].
-**How to do it:** Use her free step at the start of every turn to move 1 away from the opponent, or toward them to set up a double attack [3]. Big Wind Up (4) can be boosted, and I'm Not Touching You (4) draws 2, if her space shares no zones with the target; Shrink! Shrink! Shrink! then does both of its effects, a discard and a 3-space push [1]. Embiggen is worth 6 if she's in more zones than the opponent [1], the hardest card to set up [3]; one player defends with it from a three-zone space [5]. Her free step also turns on Momentous Shift every turn [3].
+**How to do it:** Use her free step at the start of every turn to move 1 away from the opponent, or toward them to set up a double attack [3]. Big Wind Up (4) can be boosted, and I'm Not Touching You (4) draws 2, if her space shares no zones with the target; Shrink! Shrink! Shrink! then does both of its effects, a discard and a 3-space push [1]. Embiggen is worth 6 if she's in more zones than the opponent [1], making it her hardest card to set up [3]. Defending from a three-zone space is one way to use it [5]. Her free step also activates Momentous Shift every turn [3].
 **Watch out for:** The opponent controls positioning as much as you do, and can move where her effects won't trigger [2][3].
 
 ### Plan B: Embiggen the hand
 **Goal:** Keep a big hand so her hand-size cards hit hard [2][3].
-**How to do it:** Fangirl is worth the number of cards in your hand [1], up to 7 [3]. Easy Peasy draws 1 and, with 4 or more cards, deals 1 damage to an adjacent fighter; Gyro and Fries heals 2 and gains an action with 4 or more [1]. Friends and Family draws 2, then can spend an action to draw up to 7 [1]. Sources disagree on it: Gridbeast uses it to recover under pressure, or as a 4 boost on Big Wind Up [3]; another player never plays it as a scheme, only as the boost [4].
+**How to do it:** Fangirl takes its value from the number of cards in your hand [1], reaching up to 7 [3]. Easy Peasy draws 1 and, with 4 or more cards, deals 1 damage to an adjacent fighter; Gyro and Fries heals 2 and gains an action with 4 or more [1]. Friends and Family draws 2, then can spend an action to draw up to 7 [1]. Sources disagree on it: Gridbeast uses it to recover under pressure, or as a 4 boost on Big Wind Up [3]; another player never plays it as a scheme, only as the boost [4].
 **Watch out for:** She wants 4 or more cards in hand almost all the time, which makes it hard to keep up an offense [2].
 
 ### How they lose
-- Map dependency: maps without hard zone cut-offs or three-zone spaces cripple her [2][3][4].
-- Good positioning and well-timed Feints counter her [4].
-- Weak defense [3].
-- Aggressive opponents who keep her hand small [2].
-- Low health, which one analyst says forces her to play cautiously [2].
+- Maps without hard zone cut-offs or three-zone spaces severely limit her [2][3][4].
+- Opponents can counter her with good positioning and well-timed Feints [4].
+- Her defenses are weak [3].
+- Aggressive opponents can keep her hand too small to sustain an offense [2].
+- Her low health forces cautious play [2].
 
 ### Key cards
-- **Big Wind Up**: boost it for a big hit; with Friends and Family, an 8 [1][3].
-- **Fangirl**: scales with your hand [1][3].
-- **Shrink! Shrink! Shrink!**: discard and push [1]. Restoration Games' owner advises holding one to handle the counterattack after attacking with Big Wind Up [6].
-- **Slingshot**: her only defense card, placing her anywhere in her zone [1][3].
-- **I'm Not Touching You**: a good punish for a Feint that preserves your bigger attacks [5].
+- **Big Wind Up**: Boost it for a big hit; Friends and Family takes it to 8 [1][3].
+- **Fangirl**: Grows stronger with your hand [1][3].
+- **Shrink! Shrink! Shrink!**: Forces a discard and pushes the opponent away [1]. Hold one to handle the counterattack after Big Wind Up [6].
+- **Slingshot**: Her only defense card; it places her anywhere in her zone [1][3].
+- **I'm Not Touching You**: Punishes Feint while preserving your bigger attacks [5].
 
 ### Tips
 - When choosing between map and starting position, take the map [7].
@@ -1811,31 +1811,31 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: squirrel_girl -->
 ## Squirrel Girl
 
-**In short:** A melee hero with 13 health and 2 movement who summons a Squirrel next to her at the start of each turn, up to 8 [1]. Squirrels are 1-health small fighters: they share spaces, move through enemies, and all die together if their space takes damage [2][3]. Restoration Games' owner calls her horde one of the most unusual play styles in the game [4]; most of her best cards need four or more Squirrels in place [2][3].
+**In short:** Squirrel Girl is a melee hero with 13 health and 2 movement who summons a Squirrel next to her at the start of each turn, up to 8 [1]. Squirrels are 1-health small fighters: they share spaces, move through enemies, and all die together if their space takes damage [2][3]. Managing her horde is one of the most unusual play styles in the game [4]; most of her best cards need four or more Squirrels in place [2][3].
 
 ### Plan A: Build the horde
-**Goal:** Get as many Squirrels on the board as fast as you can [2][5].
-**How to do it:** Her ability adds one a turn [1]. Get 'Em Tippy-Toe! summons two in any space [1], an important early card [5], and can set up your next turn when played on defense [2]. Eat Nuts heals 2 and summons one, even into an occupied space, and Squirmish summons one in her space and moves her within her zone [1][2]. Keep them spread out so area attacks can't wipe several at once; only stack them with a good reason [2][5].
+**Goal:** Bring as many Squirrels onto the board as quickly as possible [2][5].
+**How to do it:** Her ability supplies one each turn [1]. Get 'Em Tippy-Toe! summons two in any space [1], an important early card [5], and can set up your next turn when played on defense [2]. Eat Nuts heals 2 and summons one, even into an occupied space, and Squirmish summons one in her space and moves her within her zone [1][2]. Spread the Squirrels out so area attacks can't wipe out several at once, and only stack them with a good reason [2][5].
 **Watch out for:** She is noticeably weaker before her Squirrels are out [2]. One analyst finds she often has only 1 or 2 Squirrels in play, and depends heavily on deck order [3].
 
 ### Plan B: Swarm the target
-**Goal:** Surround the opponent so her horde cards switch on [2].
-**How to do it:** Kick Butts is +1 for each Squirrel adjacent to the opponent, up to 9 [1][2]. Bite of Steel, a Squirrel attack, becomes a 5 with four Squirrels in the target's zone [1]. Unbeatable Squirrel Girl (4) cancels the opponent's effects and ignores their card's value with four Squirrels adjacent [1]; even without that it deals 2 over a Feint [5]. Horde of Squirrels deals 2 damage into a space surrounded by four Squirrels, and Nutwork of Spies discards 1 chosen card, or 2 when four Squirrels are adjacent [1]. Fuzzball Special moves every Squirrel up to 3 spaces [1].
-**Watch out for:** Many opponents can kill all adjacent Squirrels in reply, so decide which horde cards are worth cashing in [5].
+**Goal:** Surround the opponent to activate her horde cards [2].
+**How to do it:** Kick Butts gains +1 for each Squirrel adjacent to the opponent, reaching up to 9 [1][2]. Bite of Steel, a Squirrel attack, becomes a 5 with four Squirrels in the target's zone [1]. Unbeatable Squirrel Girl (4) cancels the opponent's effects and ignores their card's value with four Squirrels adjacent [1]; even without that it deals 2 over a Feint [5]. Horde of Squirrels deals 2 damage into a space surrounded by four Squirrels, and Nutwork of Spies discards 1 chosen card, or 2 when four Squirrels are adjacent [1]. Fuzzball Special moves every Squirrel up to 3 spaces [1].
+**Watch out for:** Many opponents can kill all adjacent Squirrels in reply, so decide which horde cards justify committing the Squirrels [5].
 
 ### How they lose
-- A slow early game [2][3].
-- Area damage that wipes stacked Squirrels [2][5].
-- Few defense cards [2], and only Call of the Mild for Squirrels to defend with [1][2].
-- Low movement without card effects [2].
-- Turns get slow with a big army to manage [3].
+- She gets off to a slow start [2][3].
+- Area damage can wipe out stacked Squirrels [2][5].
+- She has few defense cards [2], and Squirrels can only defend with Call of the Mild [1][2].
+- Without card effects, her movement is low [2].
+- Managing a large army can make turns slow [3].
 
 ### Key cards
-- **Get 'Em Tippy-Toe!**: two Squirrels anywhere [1][5].
-- **Kick Butts**: scales with Squirrels around the target [1][2].
-- **Squirgility**: a 3-value defense that moves her 3 spaces through sidekicks without counting those spaces [1]; with Squirrels spread out, she can cross the map [2].
-- **Call of the Mild**: a 4 with four Squirrels in your zone, and draws 2 if you win [1]. Best on defense [2].
-- **Unbeatable Squirrel Girl**: shuts down a defense or attack with four Squirrels adjacent [1][2].
+- **Get 'Em Tippy-Toe!**: Summons two Squirrels anywhere [1][5].
+- **Kick Butts**: Grows stronger with each Squirrel around the target [1][2].
+- **Squirgility**: A 3-value defense that moves her 3 spaces through sidekicks without counting those spaces [1]; with Squirrels spread out, she can cross the map [2].
+- **Call of the Mild**: Worth 4 with four Squirrels in your zone, and draws 2 if you win [1]. Use it on defense [2].
+- **Unbeatable Squirrel Girl**: Shuts down a defense or attack with four Squirrels adjacent [1][2].
 
 ### Tips
 - Squirrels can slip past sidekicks that heroes hide behind [2].
@@ -1858,35 +1858,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: cloak_and_dagger -->
 ## Cloak and Dagger
 
-**In short:** Two melee heroes with 8 health and 2 movement each, and no sidekicks; both must be defeated [1][2]. After Cloak deals at least 2 combat damage, the opponent discards a card; after Dagger does, you gain an action [1]. They are swingy and high-risk [2][3], widely rated low tier [4], but capable of huge burst turns [5][6].
+**In short:** Cloak and Dagger are two melee heroes with 8 health and 2 movement each, no sidekicks, and both must be defeated [1][2]. After Cloak deals at least 2 combat damage, the opponent discards a card; after Dagger does, you gain an action [1]. They are volatile and risky to play [2][3], widely rated low tier [4], but capable of huge burst turns [5][6].
 
 ### Plan A: Cloak sets the table
 **Goal:** Use Cloak to drain the opponent's hand and drag them into position while you collect attacks for Dagger [4].
-**How to do it:** Lead with Cloak and keep Dagger close behind [4]. Every Cloak hit for 2 strips a card [1]. Channel the Dark, played by Cloak, places the opponent next to Dagger and gains an action [1], so they either block or discard, and end up beside Dagger either way [6]. Darkforce Dimension places the opponent anywhere and makes them discard [1]; it's a good card to take a Feint [6]. Throwing weaker cards early makes the opponent spend good blocks on them [7].
-**Watch out for:** Opponents often Feint Cloak's cards and block Dagger's with high values; mix up your attacks to play on that [6].
+**How to do it:** Lead with Cloak and keep Dagger close behind [4]. Every Cloak hit for 2 strips a card [1]. Channel the Dark, played by Cloak, places the opponent next to Dagger and gains an action [1], forcing them to block or discard while leaving them beside Dagger either way [6]. Darkforce Dimension places the opponent anywhere and makes them discard [1], making it a good card to draw out a Feint [6]. Playing weaker attacks early draws good blocks from the opponent [7].
+**Watch out for:** Opponents often Feint Cloak's cards and block Dagger's with high values; vary your attacks to exploit that expectation [6].
 
 ### Plan B: Dagger's combo turn
-**Goal:** Once the opponent is down to about five cards or fewer, chain Dagger's attacks while each one deals 2 and gains another action [4][5].
-**How to do it:** Store up at least three big attacks for Dagger [8]. Perfect Balance is a 6 when both are adjacent to the opponent [1], a good opener over high defenses [9]. Commanding Impact (5) keeps the chain going [4][9]. Lightforce Barrage is a 7 that can't be cancelled, but Dagger takes damage equal to what she deals if she wins [1]; save it as a finisher, never against a sidekick [2][10]. Use it when Dagger is at full health, or the opponent has less health than she does [4].
-**Watch out for:** Lightforce Barrage can kill Dagger if you're not looking to end the game [3][10].
+**Goal:** Once the opponent has about five cards or fewer, chain Dagger's attacks by dealing 2 damage with each to gain another action [4][5].
+**How to do it:** Save at least three powerful attacks for Dagger [8]. Perfect Balance is a 6 when both are adjacent to the opponent [1], making it a good opening attack into high defenses [9]. Commanding Impact (5) keeps the chain going [4][9]. Lightforce Barrage is a 7 that can't be cancelled, but Dagger takes damage equal to what she deals if she wins [1]; save it as a finisher, never against a sidekick [2][10]. Use it when Dagger is at full health, or the opponent has less health than she does [4].
+**Watch out for:** Lightforce Barrage can kill Dagger, so it is dangerous outside a finishing turn [3][10].
 
 ### How they lose
-- Losing either fighter: their abilities depend on each other [2][3][10].
-- Low health on each, and low defense values [2][4].
-- Opponents with high defense values make 2 damage hard to reach [4].
-- No early wins: without a few early wins they fizzle out on low card values [3].
-- Low boost values [8][10].
+- Losing either fighter undermines the other because their abilities depend on each other [2][3][10].
+- Both have low health and low defense values [2][4].
+- High defense values make it hard to reach the 2 damage their abilities need [4].
+- Without a few early combat wins, their low card values leave them struggling to keep up [3].
+- Their boost values are low [8][10].
 
 ### Key cards
-- **Channel the Dark**: Cloak's setup for Dagger [1][6].
-- **Living Shadow**: a 4 when Dagger plays it, swapping her with Cloak as defender [1]; keep it to save Dagger [2][10].
-- **Chosen Fate**: shift up to 4 health between them and draw 2 [1]. Keep each fighter at 4 or more health [10].
-- **The Living Light**: heals the other fighter 2 when Cloak defends or Dagger attacks with it [1].
-- **Lightforce Barrage**: Dagger's finisher [2].
+- **Channel the Dark**: Lets Cloak set up Dagger [1][6].
+- **Living Shadow**: Worth 4 when Dagger plays it, swapping her with Cloak as defender [1]; keep it to save Dagger [2][10].
+- **Chosen Fate**: Transfers up to 4 health between them and draws 2 [1]. Keep each fighter at 4 or more health [10].
+- **The Living Light**: Heals the other fighter 2 when Cloak defends or Dagger attacks with it [1].
+- **Lightforce Barrage**: Dagger's finishing attack [2].
 
 ### Tips
-- Keep a healthy hand; they don't manage well on few cards [11].
-- Never let the opponent focus one of them down [11].
+- Keep a healthy hand; they struggle with few cards [11].
+- Never let the opponent concentrate damage on one fighter until they fall [11].
 - They want to go first, and prefer maps with items, high ground or a central spot with 3 movement [8][10].
 
 ### References
@@ -1914,35 +1914,35 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: black_panther -->
 ## Black Panther
 
-**In short:** A melee hero with 14 health and 2 movement, plus the ranged Shuri (6 health) [1]. Whenever he boosts, he draws a card; cards stolen from the opponent's deck go into his Vibranium Suit and can only be used to boost [1]. He is built around boosting [2], and one analyst calls him an evolution of the boosting idea behind older heroes [3].
+**In short:** Black Panther is a melee hero with 14 health and 2 movement, accompanied by the ranged Shuri (6 health) [1]. Whenever he boosts, he draws a card; cards stolen from the opponent's deck go into his Vibranium Suit and can only be used to boost [1]. He is built around boosting [2], and he develops the boosting approach used by older heroes [3].
 
 ### Plan A: Rob their deck
 **Goal:** Take cards off the top of the opponent's deck into the Vibranium Suit [2][4].
-**How to do it:** Analyze and Adjust (either fighter) and Ancestral Insight (if he wins) each steal the top card, and Shuri's Tactical Remote Scanning steals two [1]: up to ten cards in all [2][4]. Stolen cards are in neither their deck nor their discard pile, so the opponent can't use them [2]. Hold key cards in the Suit against opponents who recover cards from their discard pile [2][4]. Shuri's schemes are your most powerful cards: mulligan for them and keep her alive until you've used them [4][5][6].
-**Watch out for:** What you steal is random: whether he can rip the boosts he needs off their deck decides many games, and it can feel bad for both players [3]. Opponents may focus Shuri down early [2].
+**How to do it:** Analyze and Adjust (either fighter) and Ancestral Insight (if he wins) each steal the top card, and Shuri's Tactical Remote Scanning steals two [1]: up to ten cards in all [2][4]. Stolen cards are in neither their deck nor their discard pile, so the opponent can't use them [2]. Keep key cards in the Suit when the opponent can recover cards from their discard pile [2][4]. Shuri's schemes are your most powerful cards: mulligan for them and keep her alive until you've used them [4][5][6].
+**Watch out for:** The steals are random, and many games hinge on whether he takes the boost values he needs [3]. That uncertainty can feel frustrating for both players [3]. Opponents may focus Shuri down early [2].
 
 ### Plan B: Boost everything
-**Goal:** Use stolen and own cards to power up attacks and movement, drawing a card each time [2].
+**Goal:** Power up attacks and movement with stolen cards and your own, drawing a card each time [2].
 **How to do it:** Wakanda Forever! can be boosted twice, drawing two cards [1], and is better as an attack [2]. Anti-Metal Claws adds the opponent's boost, then can be boosted [1]; save it for attacking [2]. Microweave Mesh (2) can be boosted on defense, after you've seen their card [1][2]. If the opponent's cards have boost effects, he uses those effects when he boosts with them [2].
 **Watch out for:** Sources disagree on how much to boost. Gridbeast boosts at nearly every opportunity and warns that a slow game loses to exhaustion [2]. Others avoid boosting until they have a deck advantage [4][5], or boost mainly with the opponent's stolen cards [6].
 
 ### How they lose
-- Exhaustion from the extra draws [2][5].
-- A slow early game before the Suit fills [2].
-- Random steals that miss the boosts he needs [3].
+- The extra draws leave him vulnerable to exhaustion [2][5].
+- He starts slowly before the Suit fills [2].
+- Random steals may miss the boosts he needs [3].
 - A stray cancel can ruin his big boosted attack [3].
-- Losing Shuri before her schemes [2][4].
+- Losing Shuri early denies him her schemes [2][4].
 
 ### Key cards
-- **Tactical Remote Scanning**: the best thing Shuri brings [2].
-- **Wakanda Forever!**: his big boosted hit [2][3].
-- **Ancestral Insight**: a 4 that steals a card when you win [1]. Gridbeast plays it on defense, where the effect can't be cancelled [2]; against low defenses one player attacks with it [4].
-- **Nanotriage Processor**: heals Shuri 1, and Black Panther 1 if he's in her zone [1]. Attack with it; opponents rarely cancel effects on Shuri [2].
-- **Cat-Like Reflexes**: moves either fighter up to 3 if you win [1].
+- **Tactical Remote Scanning**: Shuri's strongest contribution [2].
+- **Wakanda Forever!**: His heavy boosted attack [2][3].
+- **Ancestral Insight**: A 4 that steals a card when you win [1]. Gridbeast plays it on defense, where the effect can't be cancelled [2]; against low defenses one player attacks with it [4].
+- **Nanotriage Processor**: Heals Shuri 1, and Black Panther 1 if he's in her zone [1]. Attack with it; opponents rarely cancel effects on Shuri [2].
+- **Cat-Like Reflexes**: Moves either fighter up to 3 if you win [1].
 
 ### Tips
 - Stealing is strongest against opponents with small decks or high boost values [6].
-- One player only won by storing as many cards as possible and using few of them [7].
+- One player reports only finding wins by storing as many cards as possible and using few of them [7].
 
 ### References
 1. Restoration Games. *Unmatched: Marvel – For King and Country*, Black Panther deck. Card text as recorded in `input/heroes.json`.
@@ -1964,34 +1964,34 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: black_widow -->
 ## Black Widow
 
-**In short:** A ranged hero with 13 health and 2 movement, plus the ranged Maria Hill (6 health) [1]. She starts with an extra card, The Moscow Protocol, her first mission [1]. Missions are powerful schemes she can only play when their condition is met; each one completed fetches the next [1][2]. One analyst calls her the best Marvel design, a spy game of baiting and dodging [3].
+**In short:** Black Widow is a ranged hero with 13 health and 2 movement, accompanied by the ranged Maria Hill (6 health) [1]. She starts with an extra card, The Moscow Protocol, her first mission [1]. Missions are powerful schemes she can only play when their condition is met; each one completed fetches the next [1][2]. Her game of baiting and dodging has been praised as the best Marvel design [3].
 
 ### Plan A: Run the missions
-**Goal:** Complete missions, which deal damage the opponent can't block or strip cards from their hand [2][3].
-**How to do it:** The Moscow Protocol needs an opponent to have taken damage this turn, and draws a card and gains an action [1]. The Firenze Agenda needs her adjacent to an opposing hero, then deals 2 damage to every opponent in her zone [1]; it's a good start to a turn after a melee attacker ends next to her [2]. The Kinshasa Directive needs her on your starting space and makes the opponent discard 2; The Madripoor Sanction needs her on the opponent's starting space and deals 2 damage to each of their fighters [1]. The Budapest Gambit needs 2 or fewer other cards in hand, then draws 5 and makes them discard at random [1]; it is her most situational, and gets you closer to exhaustion [2]. Plan your positioning ahead so you're ready when each mission arrives [2].
-**Watch out for:** Missions are telegraphed: the opponent sees each new one when you reveal cards to find it, and can play to stop it [2][3].
+**Goal:** Complete missions to deal damage the opponent can't block or to strip cards from their hand [2][3].
+**How to do it:** The Moscow Protocol needs an opponent to have taken damage this turn, and draws a card and gains an action [1]. The Firenze Agenda needs her adjacent to an opposing hero, then deals 2 damage to every opponent in her zone [1], making it a good way to start a turn after a melee attacker ends beside her [2]. The Kinshasa Directive needs her on your starting space and makes the opponent discard 2; The Madripoor Sanction needs her on the opponent's starting space and deals 2 damage to each of their fighters [1]. The Budapest Gambit needs 2 or fewer other cards in hand, then draws 5 and makes them discard at random [1]; it is her most situational mission and brings her closer to exhaustion [2]. Plan your positioning in advance so you're ready when each mission arrives [2].
+**Watch out for:** Revealing cards to find a new mission shows the opponent what is coming, giving them a chance to prevent it [2][3].
 
 ### Plan B: Spy games
 **Goal:** Deceive the opponent about what you hold and what you're planning [2][3].
-**How to do it:** If you drew a mission normally, the opponent doesn't know about it; work on that one while they guard against the one they saw [2]. Fake Out (1) draws a card and gains an action if it loses [1]; use it as the first attack of a turn, since opponents save strong defenses for the second [2]. One analyst compares it to the Outlaws' bluff card [3]. Caught in a Web cancels after-combat effects, and Widow's Kiss stops the opponent leaving their space this turn [1]. Maria Hill's Acting Director of S.H.I.E.L.D. moves both fighters 3 spaces and shuffles a scheme from your discard pile back into your deck [1], letting you reuse your best missions [2][3].
+**How to do it:** A mission drawn normally stays hidden from the opponent [2]. Work toward it while they guard against the mission they saw [2]. Fake Out (1) draws a card and gains an action if it loses [1]; use it as the first attack of a turn, since opponents save strong defenses for the second [2]. It has been compared to a bluff card used by outlaw sidekicks [3]. Caught in a Web cancels after-combat effects, and Widow's Kiss stops the opponent leaving their space this turn [1]. Maria Hill's Acting Director of S.H.I.E.L.D. moves both fighters 3 spaces and shuffles a scheme from your discard pile back into your deck [1], letting you reuse your best missions [2][3].
 **Watch out for:** Keep Maria alive; she is central to the deck [2].
 
 ### How they lose
-- Low health on Black Widow and Maria Hill [2].
-- Low-value defense options [2].
-- Opponents who know part of her deck and hand [2].
-- Telegraphed missions [3].
+- Black Widow and Maria Hill both have low health [2].
+- Their defensive options have low values [2].
+- Opponents can exploit their knowledge of part of her deck and hand [2].
+- Her missions give away what she is planning [3].
 
 ### Key cards
-- **Acting Director of S.H.I.E.L.D.**: arguably the most important card in the deck [2]. Gridbeast always uses it on defense, with a mission in your discard pile to recover [2].
-- **The Madripoor Sanction**: deadly against heroes with several sidekicks [2].
-- **Life Model Decoy**: if Maria Hill is defeated, place her next to Black Widow at 3 health [1]. Only play it when she will certainly be defeated [2].
-- **Double Identity**: a 3-value defense that swaps the two fighters, making the other the defender [1]; usually to save Maria [2].
-- **Widow's Sting**: a 5-value attack that moves her up to 3 after combat [1].
+- **Acting Director of S.H.I.E.L.D.**: Arguably the most important card in the deck [2]. Always use it on defense with a mission in your discard pile to recover [2].
+- **The Madripoor Sanction**: Deadly against heroes with several sidekicks [2].
+- **Life Model Decoy**: If Maria Hill is defeated, it places her next to Black Widow at 3 health [1]. Only play it when she will certainly be defeated [2].
+- **Double Identity**: A 3-value defense that swaps the two fighters, making the other the defender [1]; usually used to save Maria [2].
+- **Widow's Sting**: A 5-value attack that moves her up to 3 after combat [1].
 
 ### Tips
 - Keep Maria out of danger once she's hurt, until you hold Life Model Decoy [2].
-- Restoration Games' owner says her missions can add a very surprising twist to the game [4].
+- Her missions can bring a very surprising twist to the game [4].
 
 ### References
 1. Restoration Games. *Unmatched: Marvel – For King and Country*, Black Widow deck. Card text as recorded in `input/heroes.json`.
@@ -2009,31 +2009,31 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: winter_soldier -->
 ## Winter Soldier
 
-**In short:** A solo ranged hero with 15 health and 2 movement whose card effects can't be cancelled [1]. Several of his strongest cards carry RED ROOM drawbacks that help the opponent or hurt him [1][2]. Reprogram lets him recycle his discard pile, so in theory he never runs out of cards [2][3].
+**In short:** Winter Soldier is a solo ranged hero with 15 health and 2 movement whose card effects can't be cancelled [1]. Several of his strongest cards carry RED ROOM drawbacks that help the opponent or hurt him [1][2]. Reprogram lets him recycle his discard pile, so in theory he never runs out of cards [2][3].
 
 ### Plan A: Recycle the best cards
-**Goal:** Cycle your best cards back into your deck again and again, and outlast the opponent [2][4].
-**How to do it:** Reprogram (3 copies) shuffles 3 cards of your choice from your discard pile into your deck [1]; build your game around it, and always return a Reprogram among the three [2]. Good picks are Complete the Mission, Wily Fighting and, on maps where it reaches 4 or 5, Marksman (+1 per space to the target) [1][2]. One player boosts maneuvers with his bad cards to make the opponent chase him; once they're gone, he boosts with good cards and recovers them forever [4]. The same player attacks only with 6 or 7 cards in hand [4].
-**Watch out for:** One analyst warns that in practice he won't survive long enough to recycle forever [3]. Forced discards that take his Reprograms break the loop [2].
+**Goal:** Keep returning your best cards to the deck until you outlast the opponent [2][4].
+**How to do it:** Reprogram (3 copies) shuffles 3 cards of your choice from your discard pile into your deck [1]; build your game around it, and always return a Reprogram among the three [2]. Good choices include Complete the Mission and Wily Fighting, plus Marksman (+1 per space to the target) on maps where it reaches 4 or 5 [1][2]. One approach is to boost maneuvers with bad cards and make the opponent give chase [4]. Once those are gone, boost with good cards and keep recovering them [4]. That approach also reserves attacks for hands of 6 or 7 cards [4].
+**Watch out for:** In practice, he may not survive long enough to keep recycling indefinitely [3]. Forced discards that take his Reprograms break the loop [2].
 
 ### Plan B: Brainwashed, then freed
 **Goal:** Play his strong RED ROOM cards when their drawbacks don't matter [2].
-**How to do it:** A Boy Named Bucky ignores RED ROOM effects for the rest of the turn and gains an action [1]. Use it with Bionic Arm (6 when adjacent, but otherwise lets the opponent move every fighter 5 spaces) or Programmed to Kill (4, but 2 damage to him if he wins) [1][2]. Without Remorse is a 6 whose drawback only lets the opponent draw a card [1], and Gridbeast doesn't worry about it [2]. Reflex Memories is a versatile 5 that discards 2 random cards and draws 2 [1].
+**How to do it:** A Boy Named Bucky ignores RED ROOM effects for the rest of the turn and gains an action [1]. Use it with Bionic Arm (6 when adjacent, but its RED ROOM effect lets the opponent move each of their fighters up to 5 spaces) or Programmed to Kill (4, but 2 damage to him if he wins) [1][2]. Without Remorse is a 6 whose drawback only lets the opponent draw a card [1], and its drawback is little cause for concern [2]. Reflex Memories is a versatile 5 that discards 2 random cards and draws 2 [1].
 **Watch out for:** Sources disagree on Reflex Memories. Gridbeast says never play it without Bucky [2]; another player plays it when only 0 or 1 bad cards are left in hand, to draw two new ones [4]; one analyst notes the discard only hurts if you have cards to lose [3].
 
 ### How they lose
-- Early pressure: half his deck is strong, but playing the strong half hurts him, and he needs time to curate his deck [5][6].
-- Low health [6].
-- Low movement and no way to relocate, so he gets pinned in corners [2][3].
-- Forced discards [2].
-- Little card draw [7].
+- Early pressure denies him time to refine his deck: half is strong, but playing that half hurts him [5][6].
+- His health is low [6].
+- Low movement and no way to relocate leave him vulnerable to being pinned in corners [2][3].
+- Forced discards threaten his plan [2].
+- He has little card draw [7].
 
 ### Key cards
-- **Reprogram**: the card to build around [2].
-- **Complete the Mission**: a boostable 3-value defense that deals back the combat damage you take [1]; arguably one of the best defense cards in the game [2].
-- **A Boy Named Bucky**: switches off his drawbacks for a turn [1][2].
+- **Reprogram**: The card to build your game around [2].
+- **Complete the Mission**: A boostable 3-value defense that deals back the combat damage you take [1]; arguably one of the best defense cards in the game [2].
+- **A Boy Named Bucky**: Switches off his drawbacks for a turn [1][2].
 - **Without Remorse**: 3 copies of a 6 with a mild drawback [1][2].
-- **Born in the Barracks**: heal 2 if you win [1]; mainly a defense [2].
+- **Born in the Barracks**: Heals 2 if you win [1]; use it mainly on defense [2].
 
 ### Tips
 - He likes big maps, and maps with items [4].
@@ -2059,33 +2059,33 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: she_hulk -->
 ## She-Hulk
 
-**In short:** A solo melee hero with 20 health and 2 movement [1]. At the start of her turn she may discard a card to deal damage equal to its boost to a fighter in her zone, without using an action [1][2]. She hits very hard and forces opponents to defend every turn [2][3]; players rate her highly [4].
+**In short:** She-Hulk is a solo melee hero with 20 health and 2 movement [1]. At the start of her turn she may discard a card to deal damage equal to its boost to a fighter in her zone, without using an action [1][2]. She hits very hard and forces opponents to defend every turn [2][3]; players rate her highly [4].
 
 ### Plan A: Smash
-**Goal:** Land her big attacks and shred the opponent's health and hand [2][3].
-**How to do it:** Omega-Level Threat (5) makes the opponent discard 2 random cards if it deals 2 or more damage [1], so it is strong in any situation [2]. The Savage She-Hulk is a 3 you can make a 9 by spending your other action [1]: her strongest card, best when the opponent ended their turn next to her [2][3]. Leap Toward moves her up to 4 through enemies and gains an action if she ends adjacent, and Jennifer Walters, Esq. places her in a starting space, draws a card and gains an action [1]; both set up Savage [2][4]. Use Omega-Level Threat the turn before to shrink their hand first [2]. Cease and Desist is a 4 on attack that cancels the defender's effects [1], a surprise against defensive tricks [2].
-**Watch out for:** Leap Toward into Savage is predictable [2]. Spending her versatile cards on offense leaves few defenses [2][5].
+**Goal:** Land powerful attacks that tear through the opponent's health and hand [2][3].
+**How to do it:** Omega-Level Threat (5) makes the opponent discard 2 random cards if it deals 2 or more damage [1], so it is strong in any situation [2]. The Savage She-Hulk is a 3 you can make a 9 by spending your other action [1]: her strongest card, best used when the opponent ends their turn beside her [2][3]. Leap Toward moves her up to 4 through enemies and gains an action if she ends adjacent, and Jennifer Walters, Esq. places her in a starting space, draws a card and gains an action [1]; both set up The Savage She-Hulk [2][4]. Play Omega-Level Threat the turn before to reduce their hand first [2]. Cease and Desist is a 4 on attack that cancels the defender's effects [1], a surprise against defensive tricks [2].
+**Watch out for:** Following Leap Toward with The Savage She-Hulk is predictable [2]. Using her versatile cards to attack leaves few defenses [2][5].
 
 ### Plan B: Pin and grind
-**Goal:** Trap opponents in her reach and recover her best attacks [2][3].
-**How to do it:** Nerve Cluster Strike stops an adjacent opponent leaving their space this turn [1]. Against ranged fighters, end next to them so they attack you and can't escape your zone [2]. Sensational (4) shuffles a card from your discard pile back into your deck if you win [1]; recover Omega-Level Threat, The Savage She-Hulk or Leap Toward [2]. Her ability chips away at opponents who keep their distance, and finishes them off [2]; once their health is low, it can leave them in an unwinnable position [3].
+**Goal:** Keep opponents within reach while recovering her best attacks [2][3].
+**How to do it:** Nerve Cluster Strike stops an adjacent opponent leaving their space this turn [1]. Against ranged fighters, end beside them to draw an attack and keep them from escaping your zone [2]. Sensational (4) shuffles a card from your discard pile back into your deck if you win [1]; recover Omega-Level Threat, The Savage She-Hulk or Leap Toward [2]. Her ability chips away at opponents who keep their distance, and finishes them off [2]; once their health is low, it can leave them in an unwinnable position [3].
 **Watch out for:** Her printed defense values are low [2].
 
 ### How they lose
-- Low-value defense cards [2].
-- Mobile ranged opponents who stay out of her zone [2][4].
-- Opponents who block at 4 at the right times, stopping Sensational loops and Omega-Level Threat [6].
-- Opponents who keep hitting back every turn, then run [5].
+- Her defense cards have low values [2].
+- Mobile ranged opponents can stay outside her zone [2][4].
+- Well-timed 4-value blocks stop Sensational loops and Omega-Level Threat [6].
+- Opponents can wear her down by hitting back every turn and then retreating [5].
 
 ### Key cards
-- **The Savage She-Hulk**: the most powerful card in her deck [2].
-- **Omega-Level Threat**: two random discards [1][3].
-- **Lady Justice**: a defense worth twice the boost of the opponent's top card, which it discards [1]; usually about 4 [2].
-- **Green Energy**: a 4-value versatile card that damages everyone adjacent if you win [1]; a solid defense [2].
-- **The Defense Rests**: draws a card for each damage you take [1].
+- **The Savage She-Hulk**: The most powerful card in her deck [2].
+- **Omega-Level Threat**: Forces two random discards [1][3].
+- **Lady Justice**: A defense that discards the opponent's top card and is worth twice its boost [1]; usually about 4 [2].
+- **Green Energy**: A 4-value versatile card that damages everyone adjacent if you win [1]; a solid defense [2].
+- **The Defense Rests**: Draws a card for each damage you take [1].
 
 ### Tips
-- Use her ability for finishing blows, or on opponents who keep running, rather than throwing away good cards [2].
+- Use her ability for finishing blows, or on opponents who keep running, so you avoid throwing away good cards [2].
 - Keep a high-value card for defense after an attacking turn [2].
 
 ### References
