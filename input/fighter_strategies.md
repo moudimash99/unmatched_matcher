@@ -548,132 +548,169 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: invisible_man -->
 ## The Invisible Man
 
-**In short:** A slippery defensive fighter who jumps between fog tokens, chips in damage with schemes, and wins by making the opponent run out of cards chasing him.
+**In short:** A solo melee hero with 15 health and 2 movement who starts with 3 fog tokens in his zone [1]. On a fog token his defense cards get +1, and he can move between fog tokens as if they were adjacent [1]. His offense is weak, so most sources play him to chip the opponent with schemes and then outlast them [2][3][4].
 
-### Plan A: Run them out of cards
-**Goal:** Survive while the opponent burns through their deck trying to reach him.
-**How to do it:** Spread your 3 fog tokens far apart early. He can move between fog spaces as if they were next to each other, and gets +1 to his defense cards while standing on fog. Stay on fog, and only step off for an attack you can get back from. Vanish heals 1 and takes him off the board until your next turn, so the opponent wastes actions moving. Play your schemes carefully to slow your own drawing.
-**Watch out for:** Ranged fighters can hit him without chasing. Move your fog tokens to where you can strike back.
+### Plan A: Haunt the fog
+**Goal:** Stay out of reach, make the opponent come to you, and keep them maneuvering until they run out of cards [2][3][5].
+**How to do it:** Spread the fog tokens out early, so the opponent has to cover a lot of ground to reach you [2][4][6]. Stay on fog tokens and never end a turn off one [2][4]. Stand just beyond the opponent's maneuver range, so they have to boost or use movement cards to reach you [6]. Vanish recovers 1 health and removes him from the board until your next turn [1]: play it as your first action when the opponent already has 7 cards, so they have to double maneuver and discard [4][6].
+**Watch out for:** One analyst disagrees with the pure exhaustion plan: he draws a lot, so he needs to close the game sooner rather than just outlast [7]. One player argues against drawing at all, calling Covert Preparation and Coded Notes noob traps [8].
 
-### Plan B: Scheme damage from the fog
-**Goal:** Deal enough direct damage to finish a weakened opponent.
-**How to do it:** Reign of Terror deals 2 damage to any enemy while he's on fog. Step Lightly deals 3 to an adjacent fighter while he's on fog. Rolling Fog moves a token and gains an action, so you can set up Step Lightly the same turn. With two Vanish in hand: Vanish, reappear next to them, Surprise Attack, then Vanish again.
-**Watch out for:** His attacks are weak, so this rarely wins by itself. Use it to soften the opponent up for Plan A.
+### Plan B: Strike from the mist
+**Goal:** Deal the damage his attacks can't, with schemes [2][9].
+**How to do it:** Reign of Terror (2 damage to any opposing fighter) and Step Lightly (3 to an adjacent fighter) both need him to be on fog [1]: 10 damage from schemes in all [9]. Rolling Fog moves a fog token and gains an action, so it can set up Step Lightly [1][2][4]. Surprise Attack (5, cancels the defense's effects) and Emerge From Mist (5 if he started on fog) are his big attacks [1][6].
+**Watch out for:** The damage schemes need precise positioning [7], so make each one count [4][6].
 
 ### How they lose
-- He has no Feints, so heavy scheme damage and healing fighters outlast him.
-- Small, tight maps leave no room to run.
-- Opponents with strong sidekicks or lots of movement pin him down, and clump his fog tokens when they get to move them.
+- He has no cancel cards to stop effect and scheme damage [10].
+- Opponents with big health, healing or a good exhaustion game outlast him [10].
+- Tight maps leave him nowhere to run [10][11].
+- Opponents who bait his best defenses with weak attacks [12], or who move his fog tokens together whenever they get to move one [12].
+- Heroes with strong sidekicks [2].
 
 ### Key cards
-- **Vanish**: heal 1 and disappear until your next turn. His most important card.
-- **Impossible to See**: sets the opponent's attack or defense value to 0. Saves you from big hits like Beastform.
-- **Into Thin Air**: a 4-value defense (5 on fog) that moves him 1 space.
-- **Reign of Terror** and **Step Lightly**: his direct damage from the fog.
+- **Vanish**: his most important card [2]. With two, you can vanish, reappear next to the opponent, Surprise Attack, and vanish again [2].
+- **Impossible to See**: sets the opponent's card value to 0 [1]. Invaluable against big attacks [2]; one player treats it as 2 free damage when it can't be Feinted [4][6].
+- **Into Thin Air**: a 4-value defense, 5 on fog; moves him 1 space but lets the opponent move a fog token up to 3 [1]. Worth the trade [2].
+- **Coded Notes**: draw 3, put 2 back on top [1]. Good for protecting cards and planning [2]; use it early, because late it pushes you toward exhaustion [4].
+- **Dreaming of Revenge**: 1 damage to every opponent on fog when he's on fog [1]; it clears 1-health sidekicks blocking your tokens [4].
 
 ### Tips
-- Move your fog tokens as soon as you can, before the opponent gets to.
-- Coded Notes lets you put 2 cards back on top of your deck, which protects them from discard effects.
-- Make them come to you: every extra maneuver costs them cards.
+- With Covert Preparation, "move" the token you're standing on zero spaces, so the opponent can't move that one [4].
+- Use your versatile cards on defense [4].
+- Don't play Surprise Attack from a fog token as your second action [8].
+- One player suggests going second, unless you could be pinned on turn one [13].
 
-### Further reading
-- [Unmatched – Invisible Man](https://gridbeast.gg/unmatched-invisible-man/): Gridbeast · written guide
-- [An Unmatched Roster: Cobble and Fog](https://boardgamegeek.com/thread/3097271/an-unmatched-roster-cobble-and-fog): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [help fighting the invisible man!](https://www.reddit.com/r/Unmatched/comments/xau7ye/): Reddit: Dachoosen182 · thread
-- [Cobble & Fog newbie tips](https://www.reddit.com/r/Unmatched/comments/1g2srxm/): Reddit: dogenes09 · thread
-- [How do you effectively use Invisible Man?](https://www.reddit.com/r/Unmatched/comments/1svqxef/): Reddit: BeneficialMethod3866 · thread
-- [Invisible Man (Unmatched Strategy Guide 11)](https://www.youtube.com/watch?v=tGGpBqHV8Vo): Baked Goods · video
-- [Unmatched: Cobble And Fog - How To Play](https://www.youtube.com/watch?v=hYLqGBLt8sM&t=152s): Watch It Played · video
-- [Invisible Man - Unmatched Fighter Review](https://www.youtube.com/watch?v=Qdk8rHHAXmE): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Cobble & Fog*, Invisible Man deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Invisible Man." *Gridbeast*. https://gridbeast.gg/unmatched-invisible-man/
+3. u/Steelersandstarwars. Comment on "How do you effectively use Invisible Man?" by u/BeneficialMethod3866. *r/Unmatched*, Reddit, 25 April 2026. https://www.reddit.com/r/Unmatched/comments/1svqxef/
+4. u/Personal-Hunt-1434. Comment on "How do you effectively use Invisible Man?" (see [3]).
+5. u/D6Desperados. Comment on "help fighting the invisible man!" by u/Dachoosen182. *r/Unmatched*, Reddit, 10 September 2022. https://www.reddit.com/r/Unmatched/comments/xau7ye/
+6. u/Life-Rip183. Comment on "Cobble & Fog newbie tips" by u/dogenes09. *r/Unmatched*, Reddit, 13 October 2024. https://www.reddit.com/r/Unmatched/comments/1g2srxm/
+7. TFJ383. "An Unmatched Roster: Cobble and Fog." *BoardGameGeek*, 8 June 2023. https://boardgamegeek.com/thread/3097271/an-unmatched-roster-cobble-and-fog
+8. u/super_huesos_. Comment on "How do you effectively use Invisible Man?" (see [3]).
+9. u/Jerry-Red. Comment on "How do you effectively use Invisible Man?" (see [3]).
+10. u/Darkblade113. Comment on "help fighting the invisible man!" (see [5]).
+11. u/tehsideburns. Comment on "help fighting the invisible man!" (see [5]).
+12. u/EarthBoundFan3. Comment on "help fighting the invisible man!" (see [5]).
+13. u/CaptainCrockpot. Comment on "How do you effectively use Invisible Man?" (see [3]).
+
+### Not cited
+- [Invisible Man (Unmatched Strategy Guide 11)](https://www.youtube.com/watch?v=tGGpBqHV8Vo): Baked Goods · video (not yet reviewed)
+- [Unmatched: Cobble And Fog - How To Play](https://www.youtube.com/watch?v=hYLqGBLt8sM&t=152s): Watch It Played · video (not yet reviewed)
+- [Invisible Man - Unmatched Fighter Review](https://www.youtube.com/watch?v=Qdk8rHHAXmE): To The Table Top! · video (not yet reviewed)
 
 ---
 
 <!-- id: jekyll_hyde -->
 ## Jekyll & Hyde
 
-**In short:** A two-sided melee fighter: Dr. Jekyll defends, heals and sets up, then Mr. Hyde comes out for a few brutal attacks before turning back.
+**In short:** A solo melee hero with 16 health and 2 movement who starts as Dr. Jekyll and may transform into Jekyll or Mr. Hyde at the start of each turn; Hyde takes 1 damage after every maneuver [1]. Jekyll's cards defend, Hyde's cards attack [2][3]. Most sources rate him below average and hard to play well [3][4][5].
 
-### Plan A: Jekyll by default, Hyde to strike
-**Goal:** Spend most of the game as Jekyll and only switch to Hyde when you're ready to attack.
-**How to do it:** Transform at the start of your turn. As Jekyll, maneuver, defend and heal. With Haste! is a 4-value defense that moves him 4 spaces, setting up Hyde's next attack. Calming Research heals 2. As Hyde, hit hard, then turn back with Recoiling Blow (attack 5, then become Jekyll) or Madness Relents (a 4-value versatile that turns him back).
-**Watch out for:** Hyde takes 1 damage every time he maneuvers, and he has very few defenses. Don't get caught defending as Hyde.
+### Plan A: Jekyll holds the line
+**Goal:** Stay as Jekyll for most of the game, defending and setting Hyde up to attack [2].
+**How to do it:** With Haste! is a 4-value defense that moves Jekyll up to 4 spaces [1]: it blocks well and sets up Hyde's attack next turn [2], or closes the gap so Hyde can attack twice [6]. Scientific Method draws a card for each damage you take [1], building a hand for Forever Hyde, even past your hand limit [2][6]. Calming Research heals 2 and digs for a card [1]; Gridbeast suggests drawing just one, so good cards don't go to the bottom of your deck [2]. Duality of Man is worth 6 when Jekyll defends with it [1].
+**Watch out for:** Early aggression forces you to spend Jekyll's defense cards that Forever Hyde would have used [2].
 
-### Plan B: Forever Hyde
-**Goal:** Land one massive hit.
-**How to do it:** Forever Hyde is a 5-value attack that gets +2 for each Dr. Jekyll card you discard into it. Feed it Jekyll cards you don't need, such as Succumb to Compulsion and Distracted Triage. Pure Evil places Hyde anywhere in his zone and deals 2 damage to everything next to him, without the maneuver damage. It's a good way to get into position, and a good bait: if they expect Forever Hyde and hold a Feint, attack with Skirmish instead.
-**Watch out for:** Jekyll's cards are what keep you alive, so don't throw your hand away too early.
+### Plan B: Hyde breaks loose
+**Goal:** Transform, hit as hard as possible, then get back to Jekyll before the opponent strikes back [2].
+**How to do it:** Forever Hyde is a 5-value attack, +2 for each Jekyll card you discard [1], in theory up to 17 [3]. Feed it Succumb to Compulsion and Distracted Triage, whose effects are unreliable anyway [2][6]. Pure Evil places Hyde anywhere in his zone and deals 2 damage to everyone adjacent [1]: a way to move without taking damage and to bait out cancels [2][6]. When the opponent expects Forever Hyde, attack with something plain like Skirmish instead [2]. Recoiling Blow (5) and Madness Relents both turn him back into Jekyll [1].
+**Watch out for:** If Forever Hyde is cancelled, you're left with a hand you can't use well and are set up to take big damage [3].
 
 ### How they lose
-- Early aggression forces him to spend Jekyll's defensive cards before Forever Hyde is ready.
-- He gets caught as Hyde with no defense, or takes too much damage moving as Hyde.
-- He has only 2 movement, so faster fighters keep away from him.
+- Predictability: Jekyll attacks for 2 or 3 and Hyde has few defenses, so the opponent always knows how to respond [3].
+- His hand dictates his form: a hand of Jekyll cards can't attack, a hand of Hyde cards can't defend [3].
+- Hyde takes damage every time he maneuvers [1][2].
+- Opponents target Hyde, so Skirmish and Feint should stay in hand for him [6].
+- A solo fighter, with no sidekick to share the damage [3].
 
 ### Key cards
-- **Forever Hyde**: +2 per Jekyll card discarded. His big finisher.
-- **Duality of Man**: worth 6 when Jekyll defends or when Hyde attacks.
-- **With Haste!**: Jekyll's 4-value defense that moves him 4 spaces.
-- **Pure Evil**: places Hyde and deals 2 damage to everything next to him.
+- **Forever Hyde**: the deadliest card in the deck and the ultimate high-risk, high-reward attack [2].
+- **With Haste!**: Jekyll's best defense, and his setup for Hyde [2][6].
+- **Madness Relents**: a 4-value versatile card, Hyde's only block of his own [1][2], turning him back into Jekyll to avoid a double attack [2].
+- **Pure Evil**: 3 copies of a 2-damage burst that moves Hyde for free [1][2].
+- **Duality of Man**: worth 6 for Jekyll on defense and for Hyde on attack [1].
 
 ### Tips
-- Scientific Method draws cards equal to the damage you took, which feeds Forever Hyde.
-- With Calming Research, draw just 1 card, so good cards don't end up at the bottom of your deck.
-- Keep a couple of Skirmish or Madness Relents as emergency defenses for Hyde.
+- Keep a couple of Skirmish and Madness Relents for Hyde's emergencies [2].
+- Don't discard Jekyll's cards into Forever Hyde too early; they keep you alive [2].
+- He takes a lot of foresight to play well [4].
 
-### Further reading
-- [Unmatched – Jekyll & Hyde](https://gridbeast.gg/unmatched-jekyll-hyde/): Gridbeast · written guide
-- [An Unmatched Roster: Cobble and Fog](https://boardgamegeek.com/thread/3097271/an-unmatched-roster-cobble-and-fog): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [Cobble & Fog newbie tips](https://www.reddit.com/r/Unmatched/comments/1g2srxm/): Reddit: dogenes09 · thread
-- [Jekyll & Hyde (Unmatched Strategy Guide 13)](https://www.youtube.com/watch?v=9DW9KCzypDo): Baked Goods · video
-- [Unmatched: Cobble And Fog - How To Play](https://www.youtube.com/watch?v=hYLqGBLt8sM&t=393s): Watch It Played · video
-- [Jekyll & Hyde - Unmatched Fighter Review](https://www.youtube.com/watch?v=qmnRkqxFVbQ): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Cobble & Fog*, Jekyll & Hyde deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Jekyll & Hyde." *Gridbeast*. https://gridbeast.gg/unmatched-jekyll-hyde/
+3. TFJ383. "An Unmatched Roster: Cobble and Fog." *BoardGameGeek*, 8 June 2023. https://boardgamegeek.com/thread/3097271/an-unmatched-roster-cobble-and-fog
+4. u/Delicious-Survey2915. Comment on "Cobble & Fog newbie tips" by u/dogenes09. *r/Unmatched*, Reddit, 13 October 2024. https://www.reddit.com/r/Unmatched/comments/1g2srxm/
+5. u/itsactuallyoctopuses. Comment on "Cobble & Fog newbie tips" (see [4]).
+6. u/Life-Rip183. Comment on "Cobble & Fog newbie tips" (see [4]).
+
+### Not cited
+- [Jekyll & Hyde (Unmatched Strategy Guide 13)](https://www.youtube.com/watch?v=9DW9KCzypDo): Baked Goods · video (not yet reviewed)
+- [Unmatched: Cobble And Fog - How To Play](https://www.youtube.com/watch?v=hYLqGBLt8sM&t=393s): Watch It Played · video (not yet reviewed)
+- [Jekyll & Hyde - Unmatched Fighter Review](https://www.youtube.com/watch?v=qmnRkqxFVbQ): To The Table Top! · video (not yet reviewed)
 
 ---
 
 <!-- id: sherlock_holmes -->
 ## Sherlock Holmes
 
-**In short:** A methodical schemer who studies the opponent's hand, then uses that knowledge to strip their best cards, call their bluffs and deal damage they can't block.
+**In short:** A melee hero with 16 health and 2 movement, plus Dr. Watson (8 health, ranged) [1]. Effects on Holmes and Watson cards can't be cancelled by the opponent [1]. He learns what's in the opponent's hand and uses it against them [2], and is widely rated one of the strongest fighters in the game [3][4][5].
 
-### Plan A: Observe, then strike with schemes
-**Goal:** Learn what's in the opponent's hand and punish it.
-**How to do it:** Early on, keep your distance and maneuver often to draw into his schemes, while keeping defenses in hand. Eliminate the Impossible lets you see their hand and choose a card for them to discard. Remember their card values and boosts, then play Confirm Suspicion: name a value, they must discard a card of that value and take damage equal to its boost. If they have no match, they reveal their hand.
-**Watch out for:** He draws few cards, so a fast, aggressive opponent can run him out of defenses before his plan comes together.
+### Plan A: Observe from a distance
+**Goal:** Keep away from the opponent while you draw your schemes and learn their hand [2].
+**How to do it:** Double maneuver on many turns, letting the opponent chase you while Watson shields Holmes [2]. Keep defense and versatile cards in hand while you wait [2]. Study Methods (look at their hand if you win) is best played on defense, and Eliminate the Impossible lets you look at their hand and pick a card for them to discard [1][2]; play it when they hold many cards [6]. Attack when the opponent ends their turn next to you: The Game is Afoot is a 5-value attack that then moves Holmes 3 spaces [1][2].
+**Watch out for:** He gets better the more he knows about the opponent's deck; his strength depends on knowing the other fighters' cards [2][7][8].
 
-### Plan B: Read their attacks
-**Goal:** Turn hand knowledge into perfect defense.
-**How to do it:** Elementary is played face up: predict the printed value of their attack, and if you're right it cancels the attack's effects and ignores its value. Deduce Strategy turns their card's value into its boost value. His ability means effects on Holmes and Dr. Watson cards can't be canceled, so The Game is Afoot always moves him 3 after a 5-value attack.
-**Watch out for:** Effects on Any cards can still be canceled.
+### Plan B: Confirm your suspicions
+**Goal:** Turn hand knowledge into damage the opponent can't block [2][9].
+**How to do it:** Confirm Suspicion makes the opponent discard a card of the value you name and take damage equal to its boost [1]. Look at their hand with Eliminate the Impossible first, remembering values and boosts, then name a value to hit their highest boost [9]; or use Eliminate to remove one of two matching cards and guarantee the damage [2]. If you name a value they don't have, they must reveal their hand [1]. Elementary is a face-up 3 defense: name the attacking card's printed value and you cancel its effects and ignore its attack value [1][2].
+**Watch out for:** Elementary depends on the printed value, not the final one [10]. Opponents with many cards of the same value make your guesses harder [11].
 
 ### How they lose
-- Early, relentless aggression before he's seen their hand. The longer the game, the better for him.
-- Dr. Watson is killed early, taking away his ranged attack and healing.
-- Fighters who gain extra actions attack him so often that his weak card draw can't keep up.
+- Early, relentless aggression: the longer the game goes, the stronger he gets [4][12][13].
+- Little card draw: he can run out of defense cards [11][14][15], and about half his deck can't block [11].
+- His highest printed defense is 3 [14].
+- Losing Watson costs him his ranged attack and his healing [3][12].
+- Fighters who attack many times a turn [7][11].
+- Ranged attackers avoid his Counterpunch [3][16].
 
 ### Key cards
-- **Eliminate the Impossible**: see their hand and choose a card for them to discard.
-- **Confirm Suspicion**: forced discard plus boost-value damage.
-- **Elementary**: cancels the attack completely if you guess its value.
-- **Service Revolver**: Dr. Watson's 5-value ranged attack with no effect.
+- **Eliminate the Impossible**: hand knowledge plus a chosen discard [1]; the key to his game [2].
+- **Confirm Suspicion**: 3 copies of unblockable damage [1].
+- **Elementary**: his defense that turns hand knowledge into a full block [2].
+- **Counterpunch**: a 3-value versatile card that deals 2 damage if Holmes is adjacent to the opponent [1].
+- **Master of Disguise**: Holmes swaps spaces with the opposing hero and deals 1 damage [1]; with Administer Aid, it escapes pins and keeps Holmes and Watson together [2].
 
 ### Tips
-- Use Eliminate the Impossible when their hand is big, so there's more to choose from.
-- Pair Eliminate the Impossible with Confirm Suspicion: discard one of two matching cards, then call the value of the other.
-- Keep Dr. Watson next to Holmes; Administer Aid and Fixed Point in a Changing Age heal them both.
-- Learn your opponents' decks; his power depends on knowing their cards.
+- Keep Watson alive; letting him die while defending Holmes is an easy mistake [6].
+- Track their hand size, deck and discard pile to work out what they're holding [6].
+- Service Revolver is Watson's plain 5-value attack [1][2].
+- His ability protects only a few card effects; it's his schemes that win [2].
 
-### Further reading
-- [Unmatched – Sherlock Holmes](https://gridbeast.gg/unmatched-sherlock-holmes/): Gridbeast · written guide
-- [An Unmatched Roster: Cobble and Fog](https://boardgamegeek.com/thread/3097271/an-unmatched-roster-cobble-and-fog): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [Sherlock vs Medusa tips?](https://www.reddit.com/r/Unmatched/comments/t2rkyi/): Reddit: dpeacock0424 · thread
-- [Going for a tournament, going to use Simbad and Sherlock Holmes. Any tips and hard counters i should know?](https://www.reddit.com/r/Unmatched/comments/wsqft5/): Reddit: Ben__Harlan · thread
-- [How to counter Sherlock?](https://www.reddit.com/r/Unmatched/comments/10osa00/): Reddit: nikolayashigov · thread
-- [Tips on playing as Dracula and Counter tips on Holmes](https://www.reddit.com/r/Unmatched/comments/1ajd5cp/): Reddit: Ok-Consideration989 · thread
-- [Cobble & Fog newbie tips](https://www.reddit.com/r/Unmatched/comments/1g2srxm/): Reddit: dogenes09 · thread
-- [Wukong tips vs Sherlock](https://www.reddit.com/r/Unmatched/comments/1mirepy/): Reddit: tonigami_ · thread
-- [Weekly Discussion: Battling Sherlock Holmes (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1refj9o/): Reddit: LabRat2329 · thread
-- [Sherlock Holmes (Unmatched Strategy Guide 14)](https://www.youtube.com/watch?v=YlKzLNe9sD0): Baked Goods · video
-- [Unmatched: Cobble And Fog - How To Play](https://www.youtube.com/watch?v=hYLqGBLt8sM&t=496s): Watch It Played · video
-- [Sherlock Holmes - Unmatched Fighter Review](https://www.youtube.com/watch?v=6RzuFuqsvhQ): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Cobble & Fog*, Sherlock Holmes deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Sherlock Holmes." *Gridbeast*. https://gridbeast.gg/unmatched-sherlock-holmes/
+3. u/GambuzinoSaloio. Comment on "Weekly Discussion: Battling Sherlock Holmes (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 25 February 2026. https://www.reddit.com/r/Unmatched/comments/1refj9o/
+4. u/NebGonagal. Comment on "How to counter Sherlock?" by u/nikolayashigov. *r/Unmatched*, Reddit, 30 January 2023. https://www.reddit.com/r/Unmatched/comments/10osa00/
+5. u/nick_gadget. Comment on "Going for a tournament, going to use Simbad and Sherlock Holmes" by u/Ben__Harlan. *r/Unmatched*, Reddit, 19 August 2022. https://www.reddit.com/r/Unmatched/comments/wsqft5/
+6. u/Delicious-Survey2915. Comment on "Cobble & Fog newbie tips" by u/dogenes09. *r/Unmatched*, Reddit, 13 October 2024. https://www.reddit.com/r/Unmatched/comments/1g2srxm/
+7. u/AndJDrake. Comment on "Going for a tournament…" (see [5]).
+8. u/BuckNasty789. Comment on "Going for a tournament…" (see [5]).
+9. u/Chidwick. Comment on "Sherlock vs Medusa tips?" by u/dpeacock0424. *r/Unmatched*, Reddit, 27 February 2022. https://www.reddit.com/r/Unmatched/comments/t2rkyi/
+10. u/lega1988. Comment on "Beovulf against Sherlock" by u/why_-not. *r/Unmatched*, Reddit, 28 January 2025. https://www.reddit.com/r/Unmatched/comments/1ic00hv/
+11. u/feebleblobber. Comment on "How to counter Sherlock?" (see [4]).
+12. u/MrWatson193. Comment on "How to counter Sherlock?" (see [4]).
+13. u/Silly_Shenanigans. Comment on "Weekly Discussion: Battling Sherlock Holmes" (see [3]).
+14. u/Altruistic_File3686. Comment on "Weekly Discussion: Battling Sherlock Holmes" (see [3]).
+15. u/Life-Rip183. Comment on "Cobble & Fog newbie tips" (see [6]).
+16. u/Dear_Huckleberry_394. Comment on "Tips on playing as Dracula and Counter tips on Holmes" by u/Ok-Consideration989. *r/Unmatched*, Reddit, 5 February 2024. https://www.reddit.com/r/Unmatched/comments/1ajd5cp/
+
+### Not cited
+- [An Unmatched Roster: Cobble and Fog](https://boardgamegeek.com/thread/3097271/an-unmatched-roster-cobble-and-fog): BoardGameGeek: TFJ383 · written analysis (read; Sherlock is covered in an earlier article not in the sources)
+- [Wukong tips vs Sherlock](https://www.reddit.com/r/Unmatched/comments/1mirepy/): Reddit: tonigami_ · thread (read; matchup-specific)
+- [Sherlock Holmes (Unmatched Strategy Guide 14)](https://www.youtube.com/watch?v=YlKzLNe9sD0): Baked Goods · video (not yet reviewed)
+- [Unmatched: Cobble And Fog - How To Play](https://www.youtube.com/watch?v=hYLqGBLt8sM&t=496s): Watch It Played · video (not yet reviewed)
+- [Sherlock Holmes - Unmatched Fighter Review](https://www.youtube.com/watch?v=6RzuFuqsvhQ): To The Table Top! · video (not yet reviewed)
 
 ---
 
