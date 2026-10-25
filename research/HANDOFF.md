@@ -2,6 +2,30 @@
 
 Everything the cloud session that wrote the fighter strategy files knew, so the work can continue anywhere. All of it is on the branch `claude/jolly-mayer-q2s9pw` of `moudimash99/unmatched_matcher`.
 
+## 0. Current status (October 2026)
+
+**Research pass in progress on branch `claude/strategy-guide-format-n0n1vb`.** Each fighter is being rewritten from their sources, with every claim cited (see sections 2 and 3). The wording is deliberately plain; Codex polishes it afterwards (`research/CODEX-PROMPT.md`).
+
+**Done (47):** daredevil, king_arthur, alice, medusa, sinbad, robin_hood, bigfoot, bruce_lee, robert_muldoon, raptors, dracula, invisible_man, jekyll_hyde, sherlock_holmes, buffy, spike, willow, angel, little_red, beowulf, deadpool, achilles, bloody_mary, sun_wukong, yennenga, luke_cage, ghost_rider, moon_knight, elektra, bullseye, dr_sattler, t_rex, houdini, the_genie, ms_marvel, squirrel_girl, cloak_and_dagger, black_panther, black_widow, winter_soldier, she_hulk, spider_man, doctor_strange, nikola_tesla, annie_christmas, the_golden_bat, dr_jill_trent.
+
+**Still to do (27), in site order:** oda_nobunaga, tomoe_gozen, william_shakespeare, hamlet, titania, the_wayward_sisters, geralt, ciri, yennefer_triss, philippa_eilhart, eredin, muhammad_ali, ancient_leshen, blackbeard, chupacabra, loki, pandora, leonardo, donatello, raphael, michelangelo, shredder, krang, wyatt_earp, john_henry, george_washington, rosie_the_riveter. Their entries are still the old uncited ones.
+
+**Workflow that worked (cheap on tokens):**
+1. `python3 -I research/scripts/packs.py` builds `research/private/packs/{id}.md` for every fighter: deck data, old link list, the fighter's own sources and the shared sources that cover them (git ignores `research/private/`). Needs `research/private/unmatched-fighter-sources.md`.
+2. Read one pack, then write `research/private/entries/{id}.med.md` and `{id}.short.md`, using any finished entry (e.g. Daredevil, Dracula) as the model.
+3. `python3 -I research/scripts/put.py {id}` checks the pair (every [n] defined, bold names are real cards, no other fighter named in the body, word count) and splices both into the `input/` files. Add `--dry` to check only. "NAMES OTHER FIGHTER?" warnings must be fixed (rephrase); unused-ref warnings too.
+4. Commit and push every few fighters.
+Keep sessions short: a long conversation re-reads its whole history on every step, which is what made the first 47 expensive. About 10 fighters per session is a good size.
+
+**Conventions used in the finished entries:**
+- Medium entry about 500 words before References (the validator's count includes headings; 480–600 is fine). Short entry about 150.
+- Card facts cite the deck as [1]: `Restoration Games. *Set name*, Hero deck. Card text as recorded in \`input/heroes.json\`.`
+- Reddit: `u/name. Comment on "Thread title" by u/op. *r/Unmatched*, Reddit, D Month YYYY. URL`; later ones from the same thread: `u/name. Comment on "Thread title" (see [n]).` BGG: `name. Reply in "Thread" by op. *BoardGameGeek*, date. URL`. TFJ383's "An Unmatched Roster" posts are cited as articles.
+- Where sources disagree, say so and cite both sides (e.g. "Gridbeast says X [2]; another player says Y [5]").
+- "Not cited" lists: sources read but not used get "(read; reason)", videos get "(not yet reviewed)".
+- When a guide disagrees with `heroes.json` on a value or copy count, the deck wins; note it below.
+- Fighters the sources cover badly get a shorter entry rather than padding.
+
 ## 1. What's in the repo
 
 | File | What it is |
@@ -52,11 +76,11 @@ Entries were written one at a time in `entries/{id}.md` and `entries_short/{id}.
 
 **Thinner entries.** Leonardo, Michelangelo, Krang, John Henry and Annie Christmas had no player discussions. Their entries rest on official Restoration Games articles, Gridbeast (Annie only) and the deck data.
 
-**BoardGameGeek wasn't used for writing.** The 16 BGG threads, including the 11-part "An Unmatched Roster" analysis series, were downloaded after the entries were written. They're in the sources file and could improve many entries, especially Battle of Legends 1, Cobble & Fog, Jurassic Park, Hell's Kitchen, Redemption Row and the later Marvel boxes.
+**BoardGameGeek wasn't used for the original entries.** (It is used in the new cited ones.) The 16 BGG threads, including the 11-part "An Unmatched Roster" analysis series, were downloaded after the entries were written. They're in the sources file and could improve many entries, especially Battle of Legends 1, Cobble & Fog, Jurassic Park, Hell's Kitchen, Redemption Row and the later Marvel boxes.
 
 **YouTube transcripts aren't in yet.** Run the prompt in `research/youtube-transcripts/` on your own computer.
 
-**The owner's open request:** "write more info and strategy, maybe correct some stuff". Not started. The natural next step: re-read each fighter's sources (now including BGG and, once you have them, the transcripts) and revise the two strategy files.
+**The owner's open request:** "write more info and strategy, maybe correct some stuff". In progress; see section 0. The natural next step: re-read each fighter's sources (now including BGG and, once you have them, the transcripts) and revise the two strategy files.
 
 **Data errors in `input/heroes.json`:**
 - Michelangelo's Nunchaku says "All of Bruce Lee's attacks this turn are +1 value". That looks copied from Bruce Lee, so the card was left out of his entry.
@@ -66,6 +90,13 @@ Entries were written one at a time in `entries/{id}.md` and `entries_short/{id}.
 - Philippa: Spymaster's ruse is credited to "Djkstra".
 - Loki's and Pandora's card titles are all in capitals, unlike every other fighter.
 - Little Red's card titles include their symbol emoji (for example "Once Upon a Time 🌹").
+
+- Alice's cards are credited to "Allice"; Sinbad's By Fortune and Fate to "The Potter".
+- Houdini's boost effects (and probably other fighters' boost effects) are missing from the data; they were cited from Gridbeast.
+
+**Guides that disagree with the deck data (deck used):** Gridbeast gives Claws That Catch (Alice) 2, What Big Eyes You Have (Little Red) 3, I'm Not Real (Moon Knight) 3, Double Identity 2 and Widow's Kiss 3 (Black Widow), 4 copies of Arrogant But Effective (Bullseye), Shuri 8 health, Elektra's resurrected health 9 (not in the data). Antlerflax says 2 Noble Sacrifice (deck: 3). Gridbeast's Willow reverts "in the same zone" as Tara (card: adjacent). Gridbeast adds a line to Luke Cage's ability (wins combat if he takes no damage) that isn't in the data.
+
+**Thin sources in the new entries:** Buffy, Spike, Willow, Angel (Gridbeast plus one-line comments), Deadpool (Gridbeast only), Annie Christmas (Gridbeast plus one mention). Their entries are shorter.
 
 **Fixed in the reference list:** the To The Table Top! review videos for Shredder and Krang were filed under each other. They were swapped back.
 
@@ -92,6 +123,6 @@ Entries were written one at a time in `entries/{id}.md` and `entries_short/{id}.
 
 ## 6. Prompt to continue with Claude Code
 
-Open Claude Code in this repo, with `unmatched-fighter-sources.md` (and the transcripts, if you have them) in `research/private/`, which git ignores, then paste:
+Start a new session on branch `claude/strategy-guide-format-n0n1vb`, upload `unmatched-fighter-sources.md`, then paste:
 
-> Read `research/HANDOFF.md`. Then, for each fighter in `input/fighters.json`, read that fighter's section of `research/private/unmatched-fighter-sources.md` (including the shared sources it points to) and improve its entries in `input/fighter_strategies.md` and `input/fighter_strategies_short.md`. Add strategy the sources support that's missing, and correct anything they contradict. Follow the writing rules in section 3 and keep the format in section 2. Start with the fighters the BoardGameGeek "An Unmatched Roster" posts cover. Show me one fighter's changes before doing the rest.
+> Read `research/HANDOFF.md`, sections 0, 2 and 3 first. Copy the uploaded `unmatched-fighter-sources.md` to `research/private/` (never commit it), then run `python3 -I research/scripts/packs.py`. Continue the research pass with the next 10 fighters from the "Still to do" list in section 0. For each one: read its pack in `research/private/packs/`, write the cited medium and short entries in `research/private/entries/` following the conventions in section 0 (use Daredevil or Dracula in `input/fighter_strategies.md` as the model), check and splice them with `python3 -I research/scripts/put.py <id>`, and fix any warnings. No matchup tips: never name another fighter. Don't add anything the sources don't say. Commit and push after every few fighters, and when you're done update the Done / Still to do lists in section 0.
