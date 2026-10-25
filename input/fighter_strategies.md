@@ -390,129 +390,158 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: robert_muldoon -->
 ## Robert Muldoon
 
-**In short:** A ranged hunter who controls the map with traps and InGen Workers, keeps opponents at a distance and shoots them while they pick their way through.
+**In short:** A ranged hero with 14 health and 3 movement, three 1-health ranged InGen Workers, and 8 traps [1]. At the start of each turn he may place a trap, and whenever a trap is returned to the box he draws a card [1]. He's a zoner who controls the map with traps and Workers and picks the opponent off from range [2][3], widely called the best zoner in the game [2].
 
-### Plan A: Zone them with traps
-**Goal:** Decide where the fight happens and make every approach costly.
-**How to do it:** At the start of each turn you may place a trap in Muldoon's zone. An enemy who walks onto it stops, takes 1 damage, and you draw a card. Block busy paths and choke points, and keep InGen Workers near Muldoon as extra walls. Rending Shot moves the enemy up to 3 spaces, which can push them back out of range or into a trap.
-**Watch out for:** Don't place a trap every turn. Keep 3 or 4 on the board so you have some left for an emergency and the opponent can't force you to draw when you're close to running out.
+### Plan A: Lay the traps
+**Goal:** Control where the opponent can go [2][3].
+**How to do it:** A trap goes on an empty space in Muldoon's zone; an opposing fighter who enters it stops, takes 1 damage, and the trap goes back to the box, drawing Muldoon a card [1][2]. Block high-traffic areas and choke points [2][4]. Don't place one every turn: keep 3 or 4 on the board at most, so you can still set one in a pinch and the opponent can't use your traps to force you to draw near exhaustion [2]. Never end your turn next to your own traps, so an opponent who springs one still can't reach you [4].
+**Watch out for:** With only eight traps, when and where to place each one always matters [3].
 
-### Plan B: Punish them near the traps
-**Goal:** Turn your traps into extra damage.
-**How to do it:** They Should All Be Destroyed is a 4-value attack that gets +1 for each trap next to the enemy. Call for Backup can place 3 traps at once just before you use it. Shoot Her! is worth 5 as your first action of the turn. Remote Detonation deals 1 damage to every enemy next to a trap near your Workers.
-**Watch out for:** Fighters who attack at range regardless of zones, such as Bullseye, ignore much of your setup.
+### Plan B: Hunt from range
+**Goal:** Keep the opponent at a distance and wear their defenses down [2][4].
+**How to do it:** Rending Shot (4 copies, usable by Workers too) moves the opponent up to 3 spaces [1]: into a trap if you need the draw, or away to keep your distance [5]. It's especially punishing to slow melee heroes [2]. They Should All Be Destroyed is a 4-value attack, +1 for each trap next to the target [1], his best attack [2]. Shoot Her! is worth 5 as your first action [1]. Pepper the opponent with smaller attacks until their defenses crumble [4]. The Workers help funnel enemies toward Muldoon [3].
+**Watch out for:** One player calls him a glass cannon: even with a big hand he often has no defense [5].
 
 ### How they lose
-- He runs out of defenses. He has only about five good defense cards, so once they're gone he goes down fast.
-- Scheme damage and ranged attacks reach him past the traps.
-- His Workers are cleared and nothing is left to block for him.
+- He runs out of defense: Gridbeast counts five good defense cards, fewer than most, and once they're gone he goes down fast [2][3][5].
+- Damage from schemes [2].
+- Fighters who can attack at range without caring about zones [2].
+- Losing his Workers and running out of traps, which loosens his grip on the map [2][3].
 
 ### Key cards
-- **Call for Backup**: pick two of: place up to 3 traps, bring back all defeated Workers, or draw 2 cards. Save it until a Worker has been defeated.
-- **They Should All Be Destroyed**: his best attack near traps.
-- **I've Hunted Most Things That Can Hunt You**: his only pure defense (value 4). It moves all your fighters up to 5 spaces.
-- **Rending Shot**: shove the enemy away or into a trap.
+- **Call for Backup**: choose two of place up to 3 traps, return all defeated Workers, or draw 2 [1]. Perhaps his most important card; play it when there are Workers to bring back [2]. You can place 0 traps if you'd rather save them [2].
+- **I've Hunted Most Things That Can Hunt You**: his only defense card, a 4 that moves all his fighters up to 5 spaces, even through enemies [1][2].
+- **They Should All Be Destroyed**: pairs with Call for Backup's traps [2].
+- **Leap Away**: a 4-value versatile card; use it only on defense [2].
+- **Remote Detonation**: sets off a trap in a Worker's zone, dealing 1 damage to each opposing fighter next to it [1].
 
 ### Tips
-- Play the long game: avoid even trades and take safe shots.
-- Don't end your turn right next to your own traps, so enemies who set one off still can't reach you.
-- Use Leap Away only on defense, to win the combat and move away.
+- Surround Muldoon with Workers and traps [5].
+- Tactical Advance moves your Workers; with 1-health sidekicks it may be more useful on attack than on defense [2].
+- Muldoon is hard for newcomers; practice on different maps [2].
 
-### Further reading
-- [Unmatched – Robert Muldoon (InGen)](https://gridbeast.gg/unmatched-robert-muldoon/): Gridbeast · written guide
-- [An Unmatched Roster: Jurassic Park](https://boardgamegeek.com/thread/3101319/an-unmatched-roster-jurassic-park): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [I need Tips for Ingen](https://www.reddit.com/r/Unmatched/comments/1au8cin/): Reddit: Fit-Lab6434 · thread
-- [Muldoon (Unmatched Strategy Guide 18)](https://www.youtube.com/watch?v=hjcUhfmne8c): Baked Goods · video
-- [InGen / Robert Muldoon - Jurassic Park Unmatched Fighter Review](https://www.youtube.com/watch?v=ZGxNQn7P-to): To The Table Top! · video
-- [Strategy Sunday Vol. 14](https://www.youtube.com/watch?v=m2gLIrx2IOw): Karma · video
+### References
+1. Restoration Games. *Unmatched: Jurassic Park – InGen vs. Raptors*, Robert Muldoon deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Robert Muldoon (InGen)." *Gridbeast*. https://gridbeast.gg/unmatched-robert-muldoon/
+3. TFJ383. "An Unmatched Roster: Jurassic Park." *BoardGameGeek*, 16 June 2023. https://boardgamegeek.com/thread/3101319/an-unmatched-roster-jurassic-park
+4. u/Competitive-Ad3424. Comment on "I need Tips for Ingen" by u/Fit-Lab6434. *r/Unmatched*, Reddit, 18 February 2024. https://www.reddit.com/r/Unmatched/comments/1au8cin/
+5. u/richard-savana. Comment on "Tips on playing Muldoon and Sattler Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 4 May 2026. https://www.reddit.com/r/Unmatched/comments/1t3rga4/
+
+### Not cited
+- [Ingen v Raptors set advice](https://www.reddit.com/r/Unmatched/comments/1oodwzq/): Reddit: dmac2K15 · thread (read; about collecting, no strategy)
+- [Muldoon (Unmatched Strategy Guide 18)](https://www.youtube.com/watch?v=hjcUhfmne8c): Baked Goods · video (not yet reviewed)
+- [InGen / Robert Muldoon - Jurassic Park Unmatched Fighter Review](https://www.youtube.com/watch?v=ZGxNQn7P-to): To The Table Top! · video (not yet reviewed)
+- [Strategy Sunday Vol. 14](https://www.youtube.com/watch?v=m2gLIrx2IOw): Karma · video (not yet reviewed)
 
 ---
 
 <!-- id: raptors -->
 ## Raptors
 
-**In short:** Three fast 7-health hunters who get stronger together: swarm one target, surround it and tear it down before the opponent can pick them off one by one.
+**In short:** Three melee heroes with 7 health and 3 movement each, and no sidekicks [1]. Every Raptor attack gets +1 for each other Raptor adjacent to the defender [1]. A fast, aggressive glass cannon [2] that gets weaker each time a Raptor falls [2][3][4].
 
-### Plan A: Surround and shred
-**Goal:** Pin the enemy hero with two or three Raptors and land huge attacks.
-**How to do it:** Each other Raptor next to the defender adds +1 to the attack. Pack Hunters can deal up to 9 damage on a pinned target, and Eviscerate (5, no effect) reaches 7. Corner the enemy against a wall or edge, using Working Things Out (move 3 through enemies and gain an action) or Coordinated Attack Pattern (regroup all Raptors in one zone).
-**Watch out for:** Defenses that move the enemy away after combat cancel Pack Hunters' and Clever Girl's bonus effects. Pin them so they have nowhere to go.
+### Plan A: Surround and strike
+**Goal:** Pin the opponent with two or three Raptors and take them down before they can kill a Raptor [2][4].
+**How to do it:** Keep the Raptors together and surround the target so it has no path of escape [2]. With all three adjacent, Pack Hunters can deal up to 9 damage [2]. They Remember (4 copies) and Clever Girl gain extra actions [1], so a turn can string several attacks together [5]; They Remember is weak, but it makes the opponent spend a defense [2]. Coordinated Attack Pattern brings the other two Raptors into one Raptor's zone, and Working Things Out moves all three up to 3 spaces through enemies and gains an action [1]: both set up surprise pins [2]. Don't be afraid to boost movement to get two Raptors on a cornered target [6].
+**Watch out for:** After-combat movement on the opponent's defense cards ruins pins and switches off Pack Hunters and Clever Girl [2]. Don't let those cards' effects get Feinted [2].
 
-### Plan B: Strike and run
-**Goal:** Choose when fights happen and rebuild your hand between attacks.
-**How to do it:** Wait at the edge of zones about 3 spaces away, so a 2-movement enemy has to boost to reach you. Strike, then pull back with Disengage, which moves the attacking Raptor to an empty space in her zone. Chain They Remember and Clever Girl for extra actions in a big turn.
-**Watch out for:** They are weakest late in the game. Every lost Raptor costs you both damage and board presence.
+### Plan B: Hit and run
+**Goal:** Choose when fights happen, and build up a hand between them [7][8].
+**How to do it:** The Raptors have no card draw, so between attacks they hide and double maneuver to rebuild to 6 or 7 cards [8]. Staying three spaces away means a 2-movement opponent must boost to reach you, which gains you cards [7]. Stand at the edge of zones where ranged fighters can't target you without coming close [8]. Strike, then keep your last action to maneuver away [7].
+**Watch out for:** Opponents will focus on one Raptor to take it out first [5]. Keep injured Raptors out of combat and behind the others [5][9].
 
 ### How they lose
-- The game drags on and the opponent picks off a lone Raptor. Each one lost makes the pack much weaker.
-- They run out of the few defenses they have.
-- Opponents who move through or around fighters escape the pin.
+- Losing one Raptor puts them on the back foot; games snowball from there [3][4].
+- Few defenses: only 10 cards can defend, so save Eaten Alive and Feint for defense [8], and each Raptor has low health [2].
+- A long game: they are strongest early and weaken as it drags on [2][4][6].
+- Heroes who can move through opposing fighters escape their pins [2].
+- A bad opening hand: they can feel feast-or-famine [3].
 
 ### Key cards
-- **Pack Hunters**: up to 9 damage on a surrounded target.
-- **Eviscerate**: a 5-value attack with no effect. It can't be Feinted, so it's good for drawing out their Feint.
-- **Decoy**: their only defense card. It places another Raptor next to the attacker, which is great against ranged fighters.
-- **Working Things Out**: sets up a surprise pin and gives a free action.
+- **Eviscerate**: a 5-value attack with no effect, up to 7 with both Raptors adjacent [1][2]. Nothing to cancel, so it baits out Feints [2].
+- **Pack Hunters**: 1 extra damage per adjacent Raptor if you win [1].
+- **Decoy**: their only defense card, a 3 that places another Raptor next to the attacker, always [1][2]. Great against ranged attackers [2].
+- **Disengage**: a 4-value attack that relocates the attacker within its zone [1]. Use it to pull an injured Raptor out [2].
+- **Ambush**: random discard, adding its boost [1].
 
 ### Tips
-- Attack first, attack hard, attack often.
-- Save versatile cards for defense.
-- Don't be afraid to boost movement early to complete a surround.
+- Save your versatile cards for defense [2][8].
+- Build your hand before going in [5][9].
+- Before charging, make sure you hold at least one defense for the opponent's turn [8].
 
-### Further reading
-- [Unmatched – Raptors](https://gridbeast.gg/unmatched-raptors/): Gridbeast · written guide
-- [An Unmatched Roster: Jurassic Park](https://boardgamegeek.com/thread/3101319/an-unmatched-roster-jurassic-park): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [What is the raptor strategy?](https://www.reddit.com/r/Unmatched/comments/mvb00p/): Reddit: zilogrok · thread
-- [Any tips for raptors vs T-Rex?](https://www.reddit.com/r/Unmatched/comments/yypc6r/): Reddit: javivr621 · thread
-- [Tips on Playing as the Raptors](https://boardgamegeek.com/thread/2450948/tips-on-playing-as-the-raptors): BoardGameGeek · thread (not checked: BoardGameGeek blocks automated access)
-- [Raptors (Unmatched Strategy Guide 17)](https://www.youtube.com/watch?v=1r42rsXhHkg): Baked Goods · video
-- [Raptors - Jurassic Park Unmatched Fighter Review](https://www.youtube.com/watch?v=ZnmSTcz1v9A): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Jurassic Park – InGen vs. Raptors*, Raptors deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Raptors." *Gridbeast*. https://gridbeast.gg/unmatched-raptors/
+3. TFJ383. "An Unmatched Roster: Jurassic Park." *BoardGameGeek*, 16 June 2023. https://boardgamegeek.com/thread/3101319/an-unmatched-roster-jurassic-park
+4. u/FamousWerewolf. Comment on "What is the raptor strategy?" by u/zilogrok. *r/Unmatched*, Reddit, 21 April 2021. https://www.reddit.com/r/Unmatched/comments/mvb00p/
+5. chux1432. Reply in "Tips on Playing as the Raptors" by srpad. *BoardGameGeek*, 19 June 2020. https://boardgamegeek.com/thread/2450948/tips-on-playing-as-the-raptors
+6. u/SandoVillain. Comment on "What is the raptor strategy?" (see [4]).
+7. u/DucksDeluxe. Comment on "What is the raptor strategy?" (see [4]).
+8. Behaner. Reply in "Tips on Playing as the Raptors" (see [5]), 6 April 2021.
+9. vtyler98. Reply in "Tips on Playing as the Raptors" (see [5]).
+
+### Not cited
+- [Any tips for raptors vs T-Rex?](https://www.reddit.com/r/Unmatched/comments/yypc6r/): Reddit: javivr621 · thread (read; matchup-specific)
+- [Raptors (Unmatched Strategy Guide 17)](https://www.youtube.com/watch?v=1r42rsXhHkg): Baked Goods · video (not yet reviewed)
+- [Raptors - Jurassic Park Unmatched Fighter Review](https://www.youtube.com/watch?v=ZnmSTcz1v9A): To The Table Top! · video (not yet reviewed)
 
 ---
 
 <!-- id: dracula -->
 ## Dracula
 
-**In short:** A stalking melee vampire who chips away with his ability and his Sisters, manipulates the opponent's hand, and ends the game with one huge Beastform.
+**In short:** A melee hero with 13 health and 2 movement, plus three 1-health Sisters [1]. At the start of his turn he may deal 1 damage to an adjacent fighter and draw a card [1]. His plan is to whittle the opponent down over the game, then finish them with one of his two Beastforms [2][3][4].
 
-### Plan A: Stalk, chip and manipulate
-**Goal:** Whittle the opponent down slowly without taking big risks.
-**How to do it:** At the start of each turn, deal 1 damage to an adjacent fighter and draw a card. Ravening Seduction moves an enemy 2 spaces and deals 1 damage for each Sister next to them. On defense, Do My Bidding lets you see their hand and choose which attack or versatile card they play instead. Use it to force out their Feints and good versatiles. Ambush, ideally played by a Sister, strips another card from their hand.
-**Watch out for:** He has only 13 health and few defenses, so don't jump into the fight early.
+### Plan A: Stalk and whittle
+**Goal:** Chip away at the opponent's health and hand without taking big fights [2][5].
+**How to do it:** Play a patient, mostly unaggressive game [2][5][6]. Ravening Seduction moves any fighter up to 2 spaces, then deals 1 damage for each Sister next to them [1]; use it early, while the Sisters are alive [7]. Prey Upon hits every adjacent opponent and heals Dracula for each [1], and Baptism of Blood heals 2 and revives a Sister [1]. Playing a scheme instead of a combat avoids overdrawing and makes the opponent come to you, which lets his ability fire [8]. Against melee opponents you can sit back; against ranged ones, use Mistform and zone edges to force them closer [9].
+**Watch out for:** Nearly a third of his deck is schemes [1][4][7], so a hand can end up with almost no defense [4][7]. Never leave yourself open to a double attack [6].
 
-### Plan B: Beastform for the kill
-**Goal:** End the game in one hit.
-**How to do it:** Beastform is a 6-value attack that gets +1 for each card you discard from your hand. Starting your turn next to the enemy with a full hand can mean up to 14 damage. Use Mistform to appear anywhere and gain an action, then strike. Keep your hand full so the threat is always there, and save both copies for the end game if you can.
-**Watch out for:** A Feint or a cancel effect on Beastform wastes the cards you threw in. Wait until you know they're out of cancels.
+### Plan B: Unleash the beast
+**Goal:** Land a lethal Beastform [2][4].
+**How to do it:** Beastform is a 6-value attack, +1 for each card you discard from your hand [1]; with a full hand it can reach 13 or 14 [2][7]. First strip the opponent's cancels with bait attacks, Ambush and Do My Bidding [10][11][12]; Mistform then places Dracula anywhere and gains an action, for a surprise double attack [1][2]. Count lethal from your hand size, your ping damage and their best block [13]. Good cards to discard into it: Feeding Frenzy, Thirst for Sustenance and Prey Upon [12].
+**Watch out for:** A Feint still lets a base Beastform deal 4 [4][13], so a first Beastform that gets Feinted is fine [13]. If you can't count on keeping it until late, a plain 6 early is still strong [9].
 
 ### How they lose
-- He goes in swinging too early and gets worn down; he has low health and few defenses.
-- His Sisters die before they've played their attacks and schemes.
-- Hand-reading opponents such as Sherlock Holmes counter his Beastform plan; against them, use Beastform early.
+- Low health and few defense cards [2][6].
+- Opponents keep his hand small, so Beastform has little to discard [4].
+- Beastforms lost to discards or stuck at the bottom of the deck leave him treading water [4].
+- Ranged opponents rarely let him use his ability [9][7].
 
 ### Key cards
-- **Beastform**: his finisher, worth 6 plus 1 per card discarded.
-- **Mistform**: teleport anywhere and gain an action. Sets up the kill or a double attack on a ranged fighter.
-- **Do My Bidding**: a 3-value defense that shows you their hand and lets you pick their card.
-- **Prey Upon**: hits every adjacent enemy and heals him for each one. Great against sidekick swarms.
+- **Beastform**: his finisher; two copies, two chances [2].
+- **Do My Bidding**: a 3-value defense that hands back the attacker's card, looks at their hand and picks the attack or versatile card they must play instead [1]. One of the best defense cards in the game [7][14], and a way to drain their Feints before Beastform [4][11].
+- **Mistform**: places him anywhere and gains an action [1]; two copies, so use them wisely [2].
+- **Look Into My Eyes**: a 1-value defense that adds the attacker's boost [1]; risky, since many big cards boost low [2].
+- **Ambush**: a random discard [1]. Attack with it from a Sister; opponents rarely Feint a Sister [5][14].
 
 ### Tips
-- Keep your hand big: it's your Beastform threat and your defense.
-- Baptism of Blood heals 2 and revives a Sister, so don't fear losing one.
-- Look Into My Eyes adds the attacker's boost value, so it works best against attacks with high boosts.
+- Never forget his ability: once you take your first action it's too late [15].
+- He can ping his own Sisters to draw a card [8][14].
+- Watch the deck count late: using his ability near the end can push him into exhaustion damage [8].
+- Keep a big hand, both for defense and to hide Beastform [6][15].
 
-### Further reading
-- [Unmatched – Dracula](https://gridbeast.gg/unmatched-dracula/): Gridbeast · written guide
-- [An Unmatched Roster: Cobble and Fog](https://boardgamegeek.com/thread/3097271/an-unmatched-roster-cobble-and-fog): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [Tips on playing as Dracula and Counter tips on Holmes](https://www.reddit.com/r/Unmatched/comments/1ajd5cp/): Reddit: Ok-Consideration989 · thread
-- [Help with Dracula?](https://www.reddit.com/r/Unmatched/comments/1av3glo/): Reddit: qJxxxBp · thread
-- [Cobble & Fog newbie tips](https://www.reddit.com/r/Unmatched/comments/1g2srxm/): Reddit: dogenes09 · thread
-- [How to play Dracula?](https://www.reddit.com/r/Unmatched/comments/1jr0m7k/): Reddit: Wooper_Dooper491 · thread
-- [need help with dracula style of play](https://www.reddit.com/r/Unmatched/comments/1m4yftz/): Reddit: Crimson_Infern0 · thread
-- [Tips on effectively playing Dracula?](https://www.reddit.com/r/Unmatched/comments/1r3k26c/): Reddit: ronchman · thread
-- [Dracula (Unmatched Strategy Guide 12)](https://www.youtube.com/watch?v=hNkqbvBH_5k): Baked Goods · video
-- [Unmatched: Cobble And Fog - How To Play](https://www.youtube.com/watch?v=hYLqGBLt8sM&t=309s): Watch It Played · video
-- [Dracula - Unmatched Fighter Review](https://www.youtube.com/watch?v=xTXYm6nPnvI): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Cobble & Fog*, Dracula deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Dracula." *Gridbeast*. https://gridbeast.gg/unmatched-dracula/
+3. u/Megabro_SgOwDm. Comment on "Tips on effectively playing Dracula?" by u/ronchman. *r/Unmatched*, Reddit, 13 February 2026. https://www.reddit.com/r/Unmatched/comments/1r3k26c/
+4. TFJ383. "An Unmatched Roster: Cobble and Fog." *BoardGameGeek*, 8 June 2023. https://boardgamegeek.com/thread/3097271/an-unmatched-roster-cobble-and-fog
+5. u/Dear_Huckleberry_394. Comment on "Help with Dracula?" by u/qJxxxBp. *r/Unmatched*, Reddit, 20 February 2024. https://www.reddit.com/r/Unmatched/comments/1av3glo/
+6. u/Dear_Huckleberry_394. Comments on "Tips on effectively playing Dracula?" (see [3]) and "Tips on playing as Dracula and Counter tips on Holmes" by u/Ok-Consideration989, *r/Unmatched*, Reddit, 5 February 2024, https://www.reddit.com/r/Unmatched/comments/1ajd5cp/
+7. u/szana420. Comment on "How to play Dracula?" by u/Wooper_Dooper491. *r/Unmatched*, Reddit, 4 April 2025. https://www.reddit.com/r/Unmatched/comments/1jr0m7k/ (repeated in "need help with dracula style of play", 20 July 2025)
+8. u/Jerry-Red. Comment on "Tips on effectively playing Dracula?" (see [3]).
+9. u/DartsAreSick. Comment on "How to play Dracula?" (see [7]).
+10. u/BuckNasty789. Comment on "How to play Dracula?" (see [7]).
+11. u/Scorcher505. Comment on "Help with Dracula?" (see [5]).
+12. u/Megabro_SgOwDm. Reply in "Tips on effectively playing Dracula?" (see [3]).
+13. u/CaptainCrockpot. Comment on "Tips on effectively playing Dracula?" (see [3]).
+14. u/Life-Rip183. Comment on "Cobble & Fog newbie tips" by u/dogenes09. *r/Unmatched*, Reddit, 13 October 2024. https://www.reddit.com/r/Unmatched/comments/1g2srxm/
+15. u/Delicious-Survey2915. Comment on "Cobble & Fog newbie tips" (see [14]).
+
+### Not cited
+- [Dracula (Unmatched Strategy Guide 12)](https://www.youtube.com/watch?v=hNkqbvBH_5k): Baked Goods · video (not yet reviewed)
+- [Unmatched: Cobble And Fog - How To Play](https://www.youtube.com/watch?v=hYLqGBLt8sM&t=309s): Watch It Played · video (not yet reviewed)
+- [Dracula - Unmatched Fighter Review](https://www.youtube.com/watch?v=xTXYm6nPnvI): To The Table Top! · video (not yet reviewed)
 
 ---
 

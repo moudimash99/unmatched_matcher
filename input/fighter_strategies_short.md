@@ -233,75 +233,97 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: robert_muldoon -->
 ## Robert Muldoon
 
-**In short:** A ranged hunter who controls the map with traps and Workers and shoots you as you approach.
+**In short:** A ranged zoner who controls the map with traps and InGen Workers, drawing a card whenever a trap is used up [1][2].
 
-### Plan A: Zone them with traps
-**Goal:** Make every approach costly · **How:** traps on choke points; Rending Shot pushes enemies out of range or into traps · **Watch out:** keep 3–4 traps out, not all 8.
+### Plan A: Lay the traps
+**Goal:** Control where the opponent can go [2] · **How:** trap choke points, keeping 3 or 4 on the board [2] · **Watch out:** don't end your turn next to your own traps [3].
 
-### Plan B: Punish them near traps
-**Goal:** Extra damage from traps · **How:** They Should All Be Destroyed gets +1 per adjacent trap; Shoot Her! is 5 as a first action · **Watch out:** fighters who ignore zones, like Bullseye.
+### Plan B: Hunt from range
+**Goal:** Keep them away and wear down their defenses [2][3] · **How:** Rending Shot moves them into traps or away; They Should All Be Destroyed hits harder near traps [1][2] · **Watch out:** he often holds no defense [4].
 
 ### How they lose
-- He runs out of his few good defenses.
-- Scheme damage and long-range attacks get past his traps.
+- He runs out of defense cards [2][4].
+- Scheme damage and attacks that ignore zones [2].
 
 ### Key cards
-- **Call for Backup**: traps, Workers back, or cards.
-- **I've Hunted Most Things That Can Hunt You**: his only pure defense.
+- **Call for Backup**: traps, Workers back, or cards [1][2].
+- **I've Hunted Most Things That Can Hunt You**: his only defense card [2].
 
 ### Tips
-- Play the long game.
-- Don't end your turn next to your own traps.
+- Use Leap Away only on defense [2].
+- Surround him with Workers and traps [4].
+
+### References
+1. Restoration Games. *Unmatched: Jurassic Park – InGen vs. Raptors*, Robert Muldoon deck.
+2. Gridbeast. "Unmatched – Robert Muldoon (InGen)." https://gridbeast.gg/unmatched-robert-muldoon/
+3. u/Competitive-Ad3424. Comment on "I need Tips for Ingen." *r/Unmatched*, Reddit, 2024. https://www.reddit.com/r/Unmatched/comments/1au8cin/
+4. u/richard-savana. Comment on "Tips on playing Muldoon and Sattler Effectively?" *r/Unmatched*, Reddit, 2026. https://www.reddit.com/r/Unmatched/comments/1t3rga4/
 
 ---
 
 <!-- id: raptors -->
 ## Raptors
 
-**In short:** Three fast, fragile hunters who swarm one target and tear it apart.
+**In short:** Three fast 7-health hunters whose attacks grow with every other Raptor next to the target; strong early, weaker with each loss [1][2].
 
-### Plan A: Surround and shred
-**Goal:** Pin the enemy hero with 2–3 Raptors · **How:** each adjacent Raptor adds +1; Pack Hunters can deal 9 on a pinned target · **Watch out:** movement defenses break the pin.
+### Plan A: Surround and strike
+**Goal:** Pin the target with two or three Raptors [2] · **How:** chain They Remember and Clever Girl; set up with Working Things Out [1][2] · **Watch out:** after-combat movement breaks pins [2].
 
-### Plan B: Strike and run
-**Goal:** Choose when fights happen · **How:** wait 3 spaces away, strike, then Disengage · **Watch out:** they get weaker with every Raptor lost.
+### Plan B: Hit and run
+**Goal:** Pick your fights [3] · **How:** hide and double maneuver to rebuild your hand, then strike [4] · **Watch out:** opponents focus one Raptor down [5].
 
 ### How they lose
-- A long game lets the opponent pick off a lone Raptor.
-- They have very few defenses.
+- One Raptor falls and the rest snowball [2][6].
+- Only 10 defense cards and no card draw [4].
 
 ### Key cards
-- **Pack Hunters**: up to 9 damage.
-- **Decoy**: their only defense; it pulls another Raptor in.
+- **Eviscerate**: up to 7, and nothing to cancel [2].
+- **Decoy**: their only defense card [2].
 
 ### Tips
-- Attack first and often.
-- Boost movement to finish a surround.
+- Save versatile cards for defense [2].
+- Build your hand before attacking [5].
+
+### References
+1. Restoration Games. *Unmatched: Jurassic Park – InGen vs. Raptors*, Raptors deck.
+2. Gridbeast. "Unmatched – Raptors." https://gridbeast.gg/unmatched-raptors/
+3. u/DucksDeluxe. Comment on "What is the raptor strategy?" *r/Unmatched*, Reddit, 2021. https://www.reddit.com/r/Unmatched/comments/mvb00p/
+4. Behaner. Reply in "Tips on Playing as the Raptors." *BoardGameGeek*, 2021. https://boardgamegeek.com/thread/2450948/
+5. chux1432. Reply in "Tips on Playing as the Raptors" (see [4]).
+6. TFJ383. "An Unmatched Roster: Jurassic Park." *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3101319/
 
 ---
 
 <!-- id: dracula -->
 ## Dracula
 
-**In short:** A stalking vampire who chips you down, plays with your hand, then ends it with Beastform.
+**In short:** A patient vampire who whittles the opponent down with his ability, Sisters and schemes, then finishes them with Beastform [1][2][3].
 
-### Plan A: Stalk and chip
-**Goal:** Wear them down safely · **How:** ability damage each turn, Ravening Seduction, and Do My Bidding to pick the card they play · **Watch out:** 13 health and few defenses.
+### Plan A: Stalk and whittle
+**Goal:** Chip damage without big fights [2] · **How:** Ravening Seduction, Prey Upon and his start-of-turn ping [1][2] · **Watch out:** a scheme-heavy hand can leave him without defense [3].
 
-### Plan B: Beastform for the kill
-**Goal:** One-hit KO · **How:** Beastform is 6 +1 per card discarded; Mistform in with a full hand · **Watch out:** a Feint wastes it.
+### Plan B: Unleash the beast
+**Goal:** A lethal Beastform [2] · **How:** strip their Feints with Do My Bidding and bait attacks, then Mistform in and discard your hand into Beastform [2][4] · **Watch out:** Feinted, a base Beastform still deals 4 [3].
 
 ### How they lose
-- He goes in too early and gets worn down.
-- The Sisters die before they're useful.
+- Low health and few defenses [2].
+- A small hand leaves Beastform weak [3].
 
 ### Key cards
-- **Beastform**: up to 14 damage.
-- **Mistform**: appear anywhere and gain an action.
+- **Beastform**: 6, +1 per card discarded [1].
+- **Do My Bidding**: one of the game's best defenses [5].
 
 ### Tips
-- Keep your hand full.
-- Use Beastform early against hand-readers like Sherlock.
+- Use his ability before your first action [6].
+- Keep a big hand [6].
+
+### References
+1. Restoration Games. *Unmatched: Cobble & Fog*, Dracula deck.
+2. Gridbeast. "Unmatched – Dracula." https://gridbeast.gg/unmatched-dracula/
+3. TFJ383. "An Unmatched Roster: Cobble and Fog." *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3097271/
+4. u/BuckNasty789. Comment on "How to play Dracula?" *r/Unmatched*, Reddit, 2025. https://www.reddit.com/r/Unmatched/comments/1jr0m7k/
+5. u/szana420. Comment on "How to play Dracula?" (see [4]).
+6. u/Delicious-Survey2915. Comment on "Cobble & Fog newbie tips." *r/Unmatched*, Reddit, 2024. https://www.reddit.com/r/Unmatched/comments/1g2srxm/
 
 ---
 
