@@ -717,152 +717,175 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: buffy -->
 ## Buffy
 
-**In short:** A mobile melee slayer who moves through enemies freely, hits and gets out, and brings either Giles (knowledge and cards) or Xander (extra punch).
+**In short:** A melee hero with 14 health and 3 movement who can move through spaces with opposing fighters, even when moved by effects [1]. Before the game you choose one sidekick, Giles or Xander, each with 6 health [1]. Gridbeast calls her movement one of the most flexible in the game and her play style built on strong fundamentals [2].
 
-### Plan A: Hit and slip away
-**Goal:** Fight on your terms: strike, then end your turn out of reach.
-**How to do it:** Buffy can move through enemy fighters, so she's very hard to pin down. Avoid ending your turn next to the enemy. A combo: end your turn about 3 spaces away. When they attack, defend with Cartwheel Kick, which moves her up to 3 spaces and deals 1 damage to every enemy next to her. On your turn, attack with Mr. Pointy (5, no effect, so a Feint is wasted). Then use Slayer's Strength to push every adjacent enemy away and deal 1 damage to each.
-**Watch out for:** Fighters who cancel after-combat effects often, such as Bigfoot or Black Widow, stop her escapes.
+### Plan A: Cartwheel, stake, slip away
+**Goal:** Choose when to fight, and never end your turn next to the opponent [2].
+**How to do it:** Gridbeast's combo starts on defense. End your turn no more than 3 spaces from the opponent, so they attack you with their second action [2]. Defend with Cartwheel Kick: it moves Buffy up to 3 spaces and then deals 1 damage to each opposing fighter adjacent to her [1][2]. On your turn, attack with Mr. Pointy, a 5-value attack with no effect, so a Feint is wasted on it [1][2]. Then use Slayer's Strength, which moves every fighter adjacent to Buffy elsewhere in their zone and deals them 1 damage each [1], so the opponent can't attack you twice next turn [2].
+**Watch out for:** If Slayer's Strength is Feinted, you're left next to the opponent [2]. Heroes who cancel after-combat effects often are a weakness [2].
 
-### Plan B: Pick the right sidekick
-**Goal:** Choose Giles or Xander before the game to fit the matchup.
-**How to do it:** Giles brings her only schemes. Insight looks at their hand and makes them discard a card you choose; Training draws 3. Keep him alive until you've used them. Xander brings Military Knowledge (attack 4, draw 1) and Right-hand Man, which is worth 6 when Xander is next to Buffy. Keep them together and use it on attack.
-**Watch out for:** Both sidekicks have only 6 health.
+### Plan B: Choose your Watcher
+**Goal:** Pick the sidekick that suits the game: card advantage with Giles, or damage with Xander [2].
+**How to do it:** Giles brings Buffy's only schemes: Insight (look at their hand and choose a card for them to discard) and Training (draw 3) [1]. Keep him alive until you've used them [2]; one player calls Insight one of the best cards in the game [3]. Xander brings Military Knowledge (a 4-value attack that draws 1) and Right-hand Man, worth 6 when Xander is adjacent to Buffy [1]. That's the highest attack in her deck, so keep the two close and use it on attack early [2].
+**Watch out for:** Choosing means giving up either Giles's card draw or Xander's damage [2].
 
 ### How they lose
-- She has 14 health and little healing, so a few big hits add up.
-- Opponents cancel her after-combat movement and pin her down.
-- With Xander she draws few cards, and can run out of good cards.
+- Low health on Buffy and her sidekicks [2].
+- Opponents who cancel her after-combat movement [2].
+- Low card draw, especially without Giles [2].
+- Sources rate the whole Buffy box as weak in one-on-one games [4], and better in 2v2 [5].
 
 ### Key cards
-- **Mr. Pointy**: a 5-value attack with no effect.
-- **Cartwheel Kick**: a defense that moves her 3 spaces and damages adjacent enemies.
-- **Slayer's Strength**: pushes adjacent enemies away and damages them.
-- **Insight** (Giles): see their hand and choose a card for them to discard.
+- **Mr. Pointy**: a 5-value attack with no effect [1]; it wastes Feints [2].
+- **Cartwheel Kick**: a 2-value defense that moves Buffy 3 and damages everyone adjacent [1]. Can take out several sidekicks [2].
+- **Slayer's Strength**: a 4-value versatile card that pushes adjacent fighters away and damages them [1][2].
+- **Insight** (Giles): hand knowledge plus a chosen discard [1][2][3].
+- **Right-hand Man** (Xander): 6 when Xander is next to Buffy [1][2].
 
 ### Tips
-- Make the opponent come to you; she punishes fighters who rely on pinning.
-- Don't let a Feint cancel Slayer's Strength, or you may get attacked twice.
-- Daring Strike draws 2 if you win, but costs her 1 health if you lose.
+- She is good against fighters who rely on pinning their opponent [2].
+- If you only hold one good attack, play Slayer's Strength first, then maneuver away [2].
+- Buffy works on any map [2].
 
-### Further reading
-- [Unmatched – Buffy](https://gridbeast.gg/unmatched-buffy/): Gridbeast · written guide
-- [Unmatched: Buffy The Vampire Slayer - How To Play](https://youtu.be/QthjkXuo4D0?t=93): Watch It Played · video
-- [Buffy - Unmatched Fighter Review - Buffy the Vampire Slayer](https://www.youtube.com/watch?v=kDJlND0SKrY): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Buffy deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Buffy." *Gridbeast*. https://gridbeast.gg/unmatched-buffy/
+3. u/EarthBoundFan3. Comment on "help fighting the invisible man!" by u/Dachoosen182. *r/Unmatched*, Reddit, 10 September 2022. https://www.reddit.com/r/Unmatched/comments/xau7ye/
+4. u/TivaDi. Comment on "How do I win with Arthur?" by u/tofudelivery300. *r/Unmatched*, Reddit, 7 July 2024. https://www.reddit.com/r/Unmatched/comments/1dxmgn3/
+5. u/nick_gadget. Comment on "How do I win with Arthur?" (see [4]).
+
+### Not cited
+- [What's the point of playing Buffy?](https://www.reddit.com/r/Unmatched/comments/1lt61bi/): Reddit: FortAnglerFish · thread (read; only one reply)
+- [Unmatched: Buffy The Vampire Slayer - How To Play](https://youtu.be/QthjkXuo4D0?t=93): Watch It Played · video (not yet reviewed)
+- [Buffy - Unmatched Fighter Review - Buffy the Vampire Slayer](https://www.youtube.com/watch?v=kDJlND0SKrY): To The Table Top! · video (not yet reviewed)
 
 ---
 
 <!-- id: spike -->
 ## Spike
 
-**In short:** A slow-starting melee fighter who covers the map in shadow tokens and gets much stronger whenever the fight happens inside them.
+**In short:** A melee hero with 15 health and 2 movement, plus Drusilla (7 health) [1]. At the start of each turn he may place a shadow token next to Spike or Drusilla [1], and his best cards get stronger when he or his target stands on shadow [1][2]. He starts slow and grows stronger as the shadows spread [2].
 
-### Plan A: Cover the map in shadows
-**Goal:** Spread shadow tokens so the opponent has to enter them to reach you.
-**How to do it:** Place a token each turn with his ability (next to Spike or Drusilla). Every time you draw Seek the Shadows (4 copies), first move to a spot where it places the most tokens: Spike's space and every space around him. Stay close to your shadows and make the opponent come to you, double maneuvering if you need to. If you have to discard at the end of your turn, use the cards to boost movement instead and spread the shadows further.
-**Watch out for:** He is weak early, and ranged fighters can avoid the shadows. Some maps have less room for tokens.
+### Plan A: Spread the shadows
+**Goal:** Cover as much of the map with shadow tokens as you can, as early as you can [2].
+**How to do it:** Seek the Shadows (4 copies) draws 2 cards and places shadow in Spike's space and every adjacent space [1]. Each time you draw one, move to where it places the most tokens [2]. Spread them widely: opponents will try to avoid them [2]. Only maneuver away from the shadows to play another Seek the Shadows [2]. If you would have to discard at the hand limit, spend the cards boosting your maneuvers instead, to reach further [2].
+**Watch out for:** His tokens are limited, and his ability alone spreads them slowly [2]. He is map dependent: on some maps adjacency limits how many tokens you can place [2].
 
-### Plan B: Fight in the shadows
-**Goal:** Cash in once the enemy is standing in shadow.
-**How to do it:** The Rush becomes 5. Bloody Hell! deals 1 damage, plus 1 for each shadow space around them. Let's Dance can be boosted. Drusilla's Empathy draws 3, and The Sight shows you their hand and makes them discard 2 cards you choose.
-**Watch out for:** Once they're in the shadows, opponents expect a big card and hold a Feint. Bait it with Regroup first.
+### Plan B: Fight in the dark
+**Goal:** Make the opponent come to you and fight on your shadow tokens [2].
+**How to do it:** Stay among your shadows and double maneuver often if the opponent is ranged [2]. On shadow, The Rush becomes a 5, Let's Dance can be boosted, and Bloody Hell! deals 1 damage plus 1 for each shadow space next to the target [1]. Drusilla's Empathy draws 3 if the opponent is on shadow, Always Surprising doubles its blind boost on shadow, and The Sight makes them discard 2 chosen cards if any of their fighters is on shadow [1]. Note which cards need you on shadow and which need the opponent on it [2].
+**Watch out for:** When opponents finally step into your shadows they'll be cautious, ready to Feint your attack [2].
 
 ### How they lose
-- A fast early attack before the shadows are in place.
-- Ranged opponents who stay out of the shadows and shut off his best effects.
-- Maps without enough room for his tokens.
+- A slow early game, before the shadows are out [2].
+- Opponents who avoid the shadow tokens [2].
+- Ranged opponents who won't come to him [2].
+- Maps that limit where shadows can go [2].
 
 ### Key cards
-- **Seek the Shadows**: draws 2 and places tokens all around Spike.
-- **The Rush**: attack 3, or 5 in shadow.
-- **Bloody Hell!**: damage that grows with nearby shadows.
-- **The Sight** (Drusilla): see their hand; 2 discards if they're in shadow.
+- **Seek the Shadows**: his engine, 4 copies [1][2].
+- **Bloody Hell!**: damage that grows with the shadows around the target [1][2].
+- **The Sight**: look at their hand and choose one or two cards for them to discard [1].
+- **Leap Away**: a 4 on defense that can move the attacker into your shadows, or Spike behind them [1][2].
+- **Arrogance**: a 4-value attack, 6 if you discard your hand [1].
 
 ### Tips
-- Use Leap Away and Skirmish on defense to push the enemy into shadows, or to put shadows between you.
-- Track which cards need Spike in shadow and which need the enemy in shadow.
-- Arrogance becomes 6 if you discard your hand, so it's a good finisher when your hand is small.
+- When the opponent first steps onto shadow, attack with Regroup to bait their Feint [2].
+- Defend with Leap Away and Skirmish to shove opponents into shadow [2].
+- One player calls Spike excellent in 2v2 [3].
 
-### Further reading
-- [Unmatched – Spike](https://gridbeast.gg/unmatched-spike/): Gridbeast · written guide
-- [Unmatched: Buffy The Vampire Slayer - How To Play](https://www.youtube.com/watch?v=QthjkXuo4D0&t=368s): Watch It Played · video
-- [Spike - Unmatched Fighter Review - Buffy the Vampire Slayer](https://www.youtube.com/watch?v=r5hqxS3txqo): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Spike deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Spike." *Gridbeast*. https://gridbeast.gg/unmatched-spike/
+3. u/FortAnglerFish. "What's the point of playing Buffy?" *r/Unmatched*, Reddit, 6 July 2025. https://www.reddit.com/r/Unmatched/comments/1lt61bi/
+
+### Not cited
+- [Unmatched: Buffy The Vampire Slayer - How To Play](https://www.youtube.com/watch?v=QthjkXuo4D0&t=368s): Watch It Played · video (not yet reviewed)
+- [Spike - Unmatched Fighter Review - Buffy the Vampire Slayer](https://www.youtube.com/watch?v=r5hqxS3txqo): To The Table Top! · video (not yet reviewed)
 
 ---
 
 <!-- id: willow -->
 ## Willow
 
-**In short:** A ranged witch with strong attacks and defenses who fights from behind Tara and tries to stay in control of her dangerous Dark Willow side.
+**In short:** A ranged hero with 14 health and 2 movement, plus Tara (6 health, ranged) [1]. Whenever Willow or Tara takes damage, Willow becomes Dark Willow; she turns back at the end of your turn if she is adjacent to Tara [1]. Dark Willow is stronger but has costly card effects [2].
 
-### Plan A: Poke from behind Tara
-**Goal:** Wear the opponent down at range while Tara stands in front.
-**How to do it:** Both Willow and Tara are ranged, so keep Tara between Willow and the enemy and attack with both. Use Rending Shot (move the enemy 3) and Swift Strike (move yourself 4) to keep your distance, since she only has 2 movement. Resurrect brings Tara back at 3 health, so she can be lost more than once.
-**Watch out for:** Tara has only 6 health, and Willow is slow if the enemy closes in.
+### Plan A: Stay in control
+**Goal:** Spend as little time as Dark Willow as you can, and be ready when it happens [2].
+**How to do it:** Keep Tara close so Willow reverts at the end of your turn [1][2]. Meditation is a 5-value defense that turns Dark Willow back into Willow [1], a great block and a way back even without Tara [2]. While Dark, Flayed Alive (4) and Black Magic (3) let you blind boost [1]: use that power while you have it [2].
+**Watch out for:** As Dark Willow, When Good Magic Fails discards your top card, and Love and Loss discards 2 and deals 3 damage to a sidekick in your zone, even Tara [1]. Gridbeast says never play Love and Loss while Dark [2].
 
-### Plan B: Use Dark Willow when it happens
-**Goal:** Make the most of Dark Willow without hurting yourself.
-**How to do it:** When Willow or Tara takes damage, she becomes Dark Willow. Flayed Alive and Black Magic can then be blind boosted for big hits. She turns back at the end of your turn if she's next to Tara, or when she defends with Meditation.
-**Watch out for:** Dark Willow's other effects throw away your own cards. Never play Love and Loss as Dark Willow: it discards 2 cards and deals 3 damage to a sidekick in your zone, even Tara.
+### Plan B: Tara in front, both at range
+**Goal:** Poke from a distance with both fighters while Tara stands between Willow and the opponent [2].
+**How to do it:** Play Tara as the primary fighter in front [2]. Revoke is her 3-value cancel, giving the deck five cancel cards [1][2]. Knowledge of the Craft returns any card from your discard pile, which is insurance against forced discards [1][2]. Resurrect brings back a defeated fighter at 3 health, so Tara effectively has 12 health over a game [1][2]. Swift Strike moves your attacker 4 spaces after combat, and Rending Shot moves the opponent 3, keeping you out of reach [1][2].
+**Watch out for:** Low movement makes it hard to keep the distance a ranged fighter wants [2].
 
 ### How they lose
-- Tara is killed repeatedly, so Willow is stuck as Dark Willow and alone.
-- Fast melee fighters reach her; she moves only 2.
-- Dark Willow's discards burn through her deck too fast.
+- Dark Willow's self-harming effects, used carelessly [2].
+- Low movement [2].
+- Tara's 6 health; she can't survive many attacks [2].
 
 ### Key cards
-- **Meditation**: a 5-value defense that turns her back into Willow.
-- **Flayed Alive**: a 4-value attack that can be blind boosted as Dark Willow.
-- **Revoke** (Tara): a 3-value card that cancels the opponent's effects, effectively an extra Feint.
-- **Resurrect**: brings back a defeated fighter at 3 health. In team games it can revive an ally hero.
+- **Meditation**: a 5 that ends Dark Willow [1][2].
+- **Resurrect**: two chances to bring Tara back [1][2]; it can revive teammates in team games [2].
+- **Revoke**: a 3-value cancel for Tara [1][2].
+- **Flayed Alive**: her strongest attack, with a blind boost as Dark Willow [1][2].
 
 ### Tips
-- End your turn with Willow next to Tara so Dark Willow turns back.
-- Use Knowledge of the Craft to recover a key card you had to discard.
-- She is especially strong in 2v2.
+- Swift Strike at the end of your turn forces the opponent to double maneuver or boost to reach you [2].
+- She is stronger in team games [2][3].
 
-### Further reading
-- [Unmatched – Willow](https://gridbeast.gg/unmatched-willow/): Gridbeast · written guide
-- [Unmatched: Buffy The Vampire Slayer - How To Play](https://youtu.be/QthjkXuo4D0?t=242): Watch It Played · video
-- [Willow - Unmatched Fighter Review - Buffy the Vampire Slayer](https://www.youtube.com/watch?v=PkhsccVP3sA): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Willow deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Willow." *Gridbeast*. https://gridbeast.gg/unmatched-willow/
+3. u/FortAnglerFish. "What's the point of playing Buffy?" *r/Unmatched*, Reddit, 6 July 2025. https://www.reddit.com/r/Unmatched/comments/1lt61bi/
+
+### Not cited
+- [Unmatched: Buffy The Vampire Slayer - How To Play](https://youtu.be/QthjkXuo4D0?t=242): Watch It Played · video (not yet reviewed)
+- [Willow - Unmatched Fighter Review - Buffy the Vampire Slayer](https://www.youtube.com/watch?v=PkhsccVP3sA): To The Table Top! · video (not yet reviewed)
 
 ---
 
 <!-- id: angel -->
 ## Angel
 
-**In short:** A no-frills melee fighter with strong attacks who teams up with Faith, wins on good positioning, and even gains from losing fights.
+**In short:** A melee hero with 16 health and 2 movement, plus Faith (8 health) [1]. After Angel or Faith attacks, if you lost the combat, you draw a card [1]. Strong attacks, few defenses, and many effects that only work when he loses [2]. Gridbeast places him near the bottom of most tier lists [2]; one player calls him a fighter who looks threatening but is actually weak [3].
 
 ### Plan A: Hit hard, stay out of reach
-**Goal:** Land big attacks with Angel and Faith while making the opponent spend actions to reach you.
-**How to do it:** End turns where the enemy needs a maneuver or a boost to reach you. Five by Five is a 5-value Faith attack that moves her 5 spaces, even through enemies. Disengage places the attacker anywhere in its zone. Killer of the Dead deals 2 damage to an enemy next to Faith; play it before Five by Five when they end their turn next to her. If they hold Feints for your movement effects, punish them with Angelus, Scourge of Europe (5, no effect).
-**Watch out for:** He has few defenses, so don't overextend.
+**Goal:** Attack with his strong cards, then end where the opponent needs an action, or a boost, to reach you [2].
+**How to do it:** Angelus, Scourge of Europe is a 5-value attack with no effect [1], good for punishing a Feint [2]. Five by Five is Faith's 5-value attack that then moves her up to 5 spaces through enemies [1], to escape or to box the opponent in [2]. Disengage places the attacker anywhere in its zone [1]. Killer of the Dead deals 2 damage to an opponent next to Faith [1]; if they end their turn beside her, open with it and follow with Five by Five [2].
+**Watch out for:** Plan your defense before each fight, and don't over-commit [2].
 
 ### Plan B: Plan to lose
-**Goal:** Turn lost combats into cards and chip damage.
-**How to do it:** After Angel or Faith attacks and loses the combat, you draw a card. Once your big attacks have them using strong defenses, bait those defenses with Regroup (a near-guaranteed 2 cards), Wisdom of Ages, or Brooding, which deals 1 damage if he loses.
-**Watch out for:** This only works if the opponent respects your big attacks, so mix them in.
+**Goal:** Lose combats on purpose with cheap attacks, drawing cards and draining the opponent's best defenses [2].
+**How to do it:** After a few strong attacks, opponents defend hard, so attack with Regroup: losing combat still draws 2 cards with his ability [1][2]. Wisdom of Ages draws a card either way, Brooding deals 1 damage when you lose, and Cursed with a Soul heals 1 when you lose [1][2].
+**Watch out for:** Haunted by the Faces, his only defense card, only works if you lose, and his ability doesn't trigger on defense [2].
 
 ### How they lose
-- Ranged fighters keep him at a distance.
-- Opponents with big attacks punish his weak defenses.
-- Bad positioning leaves him open to double attacks.
+- Few defense cards [2].
+- Opponents with high-value attacks [2].
+- Ranged opponents [2].
+- Few card effects, so he relies on fundamentals [2].
 
 ### Key cards
-- **Angelus, Scourge of Europe**: a 5-value attack with no effect to cancel.
-- **Five by Five**: Faith hits for 5 and moves 5.
-- **Killer of the Dead**: 2 damage next to Faith.
-- **The Rogue Slayer**: a 3-value Faith card that damages everything next to her. Best on defense.
+- **Angelus, Scourge of Europe**: 3 copies of a 5 with nothing to cancel [1][2].
+- **Five by Five**: Faith hits for 5 and moves 5 [1][2].
+- **Killer of the Dead**: Faith's best card [2].
+- **The Rogue Slayer**: a 3-value versatile card that deals 1 to everyone adjacent to Faith [1]. Save it for defense [2].
 
 ### Tips
-- Save your versatile cards, such as Momentous Shift and The Rogue Slayer, for defense.
-- Keep Haunted by the Faces as a last-resort defense.
-- Plan your defense before every attack.
+- Save your versatile cards for defense; his attacks are strong enough [2].
+- Feint is his most valuable defense [2].
+- He's a good fighter for teaching the game [2][3].
 
-### Further reading
-- [Unmatched – Angel](https://gridbeast.gg/unmatched-angel/): Gridbeast · written guide
-- [Unmatched: Buffy The Vampire Slayer - How To Play](https://youtu.be/QthjkXuo4D0?t=468): Watch It Played · video
-- [Angel - Unmatched Fighter Review - Buffy the Vampire Slayer](https://www.youtube.com/watch?v=_5v7nKsLIC0): To The Table Top! · video
+### References
+1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Angel deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Angel." *Gridbeast*. https://gridbeast.gg/unmatched-angel/
+3. u/FortAnglerFish. "What's the point of playing Buffy?" *r/Unmatched*, Reddit, 6 July 2025. https://www.reddit.com/r/Unmatched/comments/1lt61bi/
+
+### Not cited
+- [Unmatched: Buffy The Vampire Slayer - How To Play](https://youtu.be/QthjkXuo4D0?t=468): Watch It Played · video (not yet reviewed)
+- [Angel - Unmatched Fighter Review - Buffy the Vampire Slayer](https://www.youtube.com/watch?v=_5v7nKsLIC0): To The Table Top! · video (not yet reviewed)
 
 ---
 

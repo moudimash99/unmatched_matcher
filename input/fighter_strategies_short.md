@@ -427,100 +427,117 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: buffy -->
 ## Buffy
 
-**In short:** A mobile slayer who moves through enemies, strikes and slips away, with Giles or Xander at her side.
+**In short:** A mobile slayer who moves through enemies, fighting alongside either Giles or Xander [1][2].
 
-### Plan A: Hit and slip away
-**Goal:** Strike, then end your turn out of reach · **How:** defend with Cartwheel Kick, attack with Mr. Pointy, then push enemies off with Slayer's Strength · **Watch out:** opponents who cancel after-combat effects.
+### Plan A: Cartwheel, stake, slip away
+**Goal:** Fight on your terms, never ending next to the enemy [2] · **How:** defend with Cartwheel Kick, then hit with Mr. Pointy and push them off with Slayer's Strength [2] · **Watch out:** a Feint on Slayer's Strength leaves you exposed [2].
 
-### Plan B: Pick the right sidekick
-**Goal:** Fit the matchup · **How:** Giles for hand knowledge and draw, Xander for a 6-value Right-hand Man · **Watch out:** both have only 6 health.
+### Plan B: Choose your Watcher
+**Goal:** Cards with Giles or damage with Xander [2] · **How:** use Giles's Insight and Training; keep Xander next to Buffy for Right-hand Man [2] · **Watch out:** you only get one [2].
 
 ### How they lose
-- 14 health and little healing.
-- Pinned down when her movement is canceled.
+- Low health all round [2].
+- Opponents who cancel her after-combat effects [2].
 
 ### Key cards
-- **Mr. Pointy**: 5 value, no effect to Feint.
-- **Slayer's Strength**: pushes enemies away.
+- **Mr. Pointy**: a 5 that wastes Feints [2].
+- **Cartwheel Kick**: defend, move and damage [2].
 
 ### Tips
-- Don't end your turn next to the enemy.
-- Keep Xander next to Buffy.
+- End your turn within 3 spaces, inviting an attack you can punish [2].
+- Insight is one of the game's best cards [3].
+
+### References
+1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Buffy deck.
+2. Gridbeast. "Unmatched – Buffy." https://gridbeast.gg/unmatched-buffy/
+3. u/EarthBoundFan3. Comment on "help fighting the invisible man!" *r/Unmatched*, Reddit, 2022. https://www.reddit.com/r/Unmatched/comments/xau7ye/
 
 ---
 
 <!-- id: spike -->
 ## Spike
 
-**In short:** Covers the map in shadow tokens and becomes deadly when the fight happens inside them.
+**In short:** A vampire who covers the map in shadow tokens and fights hardest on them, with Drusilla at his side [1][2].
 
-### Plan A: Cover the map in shadows
-**Goal:** Force them into your shadows · **How:** a token every turn, plus Seek the Shadows from the best spot · **Watch out:** he is weak early.
+### Plan A: Spread the shadows
+**Goal:** Shadow everywhere, early [2] · **How:** play each Seek the Shadows where it places the most tokens [2] · **Watch out:** some maps limit placement [2].
 
-### Plan B: Fight in the shadows
-**Goal:** Cash in on shadows · **How:** The Rush becomes 5, Bloody Hell! scales, The Sight discards 2 · **Watch out:** bait their Feint first.
+### Plan B: Fight in the dark
+**Goal:** Fight on your tokens [2] · **How:** The Rush, Let's Dance and Bloody Hell! all improve on shadow [1] · **Watch out:** opponents arrive ready to Feint [2].
 
 ### How they lose
-- Early aggression before the shadows are set.
-- Ranged foes avoid the shadows.
+- A slow start [2].
+- Opponents who avoid the shadows [2].
 
 ### Key cards
-- **Seek the Shadows**: spreads tokens and draws 2.
-- **The Sight**: hand reading and discards.
+- **Seek the Shadows**: four copies of his engine [2].
+- **Bloody Hell!**: grows with nearby shadows [1].
 
 ### Tips
-- Make them come to you.
-- Push enemies into shadows with Leap Away.
+- Bait their Feint with Regroup [2].
+- Use Leap Away to shove them into shadow [2].
+
+### References
+1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Spike deck.
+2. Gridbeast. "Unmatched – Spike." https://gridbeast.gg/unmatched-spike/
 
 ---
 
 <!-- id: willow -->
 ## Willow
 
-**In short:** A ranged witch who fights from behind Tara and manages her risky Dark Willow side.
+**In short:** A ranged witch who turns into the stronger but self-harming Dark Willow when she or Tara is hurt [1][2].
 
-### Plan A: Poke from behind Tara
-**Goal:** Ranged pressure · **How:** keep Tara in front; Rending Shot and Swift Strike keep your distance · **Watch out:** she has only 2 movement.
+### Plan A: Stay in control
+**Goal:** Minimise time as Dark Willow [2] · **How:** keep Tara adjacent, and defend with Meditation [1][2] · **Watch out:** never play Love and Loss while Dark [2].
 
-### Plan B: Use Dark Willow when it happens
-**Goal:** Big blind-boosted hits · **How:** Flayed Alive and Black Magic as Dark Willow; turn back next to Tara or with Meditation · **Watch out:** never play Love and Loss as Dark Willow.
+### Plan B: Tara in front, both at range
+**Goal:** Poke from range behind Tara [2] · **How:** Tara leads; Resurrect brings her back twice [2] · **Watch out:** low movement [2].
 
 ### How they lose
-- Tara dies and Willow is stuck as Dark Willow.
-- Fast melee fighters reach her.
+- Careless Dark Willow turns [2].
+- Low movement [2].
 
 ### Key cards
-- **Meditation**: a 5-value defense that turns her back.
-- **Resurrect**: brings Tara back.
+- **Meditation**: a 5-value defense that ends Dark Willow [1].
+- **Revoke**: Tara's 3-value cancel [2].
 
 ### Tips
-- End your turn next to Tara.
-- She shines in 2v2.
+- End turns with Swift Strike to keep your distance [2].
+- Stronger in team games [2].
+
+### References
+1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Willow deck.
+2. Gridbeast. "Unmatched – Willow." https://gridbeast.gg/unmatched-willow/
 
 ---
 
 <!-- id: angel -->
 ## Angel
 
-**In short:** A no-frills fighter with big attacks who works with Faith and gains from losing fights.
+**In short:** A hard-hitting vampire who draws a card whenever he or Faith loses an attack, with few defenses [1][2].
 
 ### Plan A: Hit hard, stay out of reach
-**Goal:** Big hits without getting hit back · **How:** Five by Five, Disengage and Killer of the Dead; punish Feints with Angelus · **Watch out:** he has few defenses.
+**Goal:** Strong attacks, then distance [2] · **How:** Angelus and Five by Five hit for 5; Disengage repositions [1][2] · **Watch out:** plan your defense first [2].
 
 ### Plan B: Plan to lose
-**Goal:** Draw from lost fights · **How:** losing after attacking draws a card; bait with Regroup and Brooding · **Watch out:** mix in real threats.
+**Goal:** Lose cheap combats to draw [2] · **How:** attack with Regroup and Wisdom of Ages once they defend hard [2] · **Watch out:** his ability doesn't work on defense [2].
 
 ### How they lose
-- Ranged fighters keep him away.
-- Big hitters punish his weak defenses.
+- Few defenses [2].
+- Ranged and high-value attackers [2].
 
 ### Key cards
-- **Angelus, Scourge of Europe**: 5 value, no effect.
-- **Five by Five**: Faith hits for 5 and moves 5.
+- **Angelus, Scourge of Europe**: a 5 to punish Feints [2].
+- **Killer of the Dead**: Faith's best card [2].
 
 ### Tips
-- Save versatile cards for defense.
-- Position so they need a maneuver to reach you.
+- Save versatile cards for defense [2].
+- Good for teaching new players [2].
+
+### References
+1. Restoration Games. *Unmatched: Buffy the Vampire Slayer*, Angel deck.
+2. Gridbeast. "Unmatched – Angel." https://gridbeast.gg/unmatched-angel/
 
 ---
 
