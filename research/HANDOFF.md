@@ -6,7 +6,7 @@ Everything the cloud session that wrote the fighter strategy files knew, so the 
 
 | File | What it is |
 |---|---|
-| `input/fighter_strategies.md` | Medium write-up for all 74 fighters (about 420 words each, 36,000 total), with a Further reading list per fighter |
+| `input/fighter_strategies.md` | Medium write-up for all 74 fighters (about 420 words each, 36,000 total), with a Further reading list per fighter. Daredevil has been rewritten in the new cited format (about 500 words plus References) and is the model for the rest |
 | `input/fighter_strategies_short.md` | Short write-up for all 74 fighters (about 145 words each), no links |
 | `research/strategy-references.md` / `.csv` | 456 links (guides, threads, videos) filed by fighter. CSV columns: fighter, set, format, focus, source, title, url, date, checked, note |
 | `research/youtube-transcripts/` | A prompt for Claude Code on your own computer, plus the 169 video links, to download transcripts (YouTube blocks cloud servers) |
@@ -29,8 +29,10 @@ Each fighter entry starts with `<!-- id: {site id} -->` (ids from `input/fighter
 ### Key cards       (each: **Card name**: why it matters, when to play or hold it)
 ### Tips            (3–5 short practical tips)
 ### References       (numbered, academic style; short file keeps its own shorter list)
-### Not yet reviewed (medium file only: links not used as sources)
+### Not cited       (medium file only: links read but not used, or not yet reviewed)
 ```
+
+Length: aim for about 500 words per medium entry, not counting References and Not cited. Let the [n] numbers carry attribution; name a source in the sentence only where sources disagree. Don't repeat a point across Plans, Key cards and Tips.
 
 The short file uses the same headings, with each plan on one line: `**Goal:** … · **How:** … · **Watch out:** …`, plus 2 bullets for How they lose, 2 key cards and 2–3 tips.
 

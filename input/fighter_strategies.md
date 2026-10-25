@@ -1148,37 +1148,38 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: daredevil -->
 ## Daredevil
 
-**In short:** A solo melee fighter with 17 health, 3 movement and a 22-card deck [1], built to recycle his own cards so that, played well, he never runs out [2]. Players disagree on how strong he is: one reviewer calls his core ability a trap [3], while others find him flexible and tanky [4][5].
+**In short:** A solo melee fighter with 17 health, 3 movement and a 22-card deck [1] who recycles his own cards so that, played well, he never runs out [2]. Players disagree on his strength: one reviewer calls his core ability a trap [3]; others find him flexible and tanky [4][5].
 
 ### Plan A: Keep the recursion going
-**Goal:** Avoid running out of cards despite a 22-card deck [2].
-**How to do it:** Devil of Hell's Kitchen shuffles itself and the top four cards of your discard pile into your deck [1]. Gridbeast advises having Take A Knee, Breather, Through Adversity and Feint either in hand or among those four cards when you play it [2]. Breather returns an attack, defense or versatile card from your discard pile to your hand [1], so Breather and Devil of Hell's Kitchen can bring each other back; with 3 Breathers and 2 Devil of Hell's Kitchen, one player notes you only need to get a few of them through [4]. Keeping the recursion going is also what keeps his healing coming [9].
-**Watch out for:** A Feint on Devil of Hell's Kitchen cancels the reshuffle [2]. Gridbeast suggests holding both copies, or one copy and a Breather, for when your deck runs out [2]; one player answers a cancelled Devil of Hell's Kitchen by using Breather to take it back [4].
+**Goal:** Never run out of cards [2].
+**How to do it:** Devil of Hell's Kitchen shuffles itself and the top four cards of your discard pile into your deck [1]. Have Take A Knee, Breather, Through Adversity and Feint in hand or among those four [2]. Breather returns a discarded attack, defense or versatile card to your hand [1], so the two cards bring each other back; with 5 copies between them, you only need a few to land [4].
+**Watch out for:** A Feint cancels the reshuffle. Hold both copies, or one and a Breather, for when your deck runs out [2], or take a cancelled copy back with Breather [4].
 
 ### Plan B: Blind boost
-**Goal:** Get damage through with a deck made almost entirely of 2- and 3-value cards [2].
-**How to do it:** With 2 or fewer cards in hand, his ability lets you blind boost your attack or defense [1]. Man Without Fear has its own blind boost, so it can be blind boosted twice [1][2]. Gridbeast's rule: "Fearless does not mean careless." Boost when the combat needs it, not as often as you can [2].
-**Watch out for:** A blind boost can discard Devil of Hell's Kitchen or Breather [2][3]. The BoardGameGeek reviewer argues that being attacked with 3 or fewer cards in hand is dangerous, and that blind boosting is often what gets Daredevil killed [3].
+**Goal:** Get damage through with cards worth mostly 2 or 3 [2].
+**How to do it:** With 2 or fewer cards in hand, you may blind boost your attack or defense; Man Without Fear adds a second blind boost [1]. Boost when the combat needs it, not whenever you can [2].
+**Watch out for:** A blind boost can discard Devil of Hell's Kitchen or Breather [2]. One reviewer argues that a hand of 3 or fewer is dangerous to be attacked with, and that blind boosting is often what gets him killed [3].
 
 ### Plan C: Fight up close
-**Goal:** Pressure the opponent instead of waiting for them to run out of cards, the way several players prefer to play him [4][6][7].
-**How to do it:** Through Adversity moves him up to 4 spaces through opposing fighters and deals 1 damage to each one [1]. Gridbeast recommends it against ranged heroes with sidekicks [2], and one player uses it to escape a pin [4]. Take A Knee heals him on defense [2], and Son Of A Boxer deals 2 damage to an adjacent fighter if he loses the combat [1].
-**Watch out for:** As a solo fighter he is the only target, so opponents can gang up on him and corner him [3].
+**Goal:** Pressure the opponent instead of playing for exhaustion, as several players prefer [4][6][7].
+**How to do it:** Through Adversity moves him up to 4 spaces through opposing fighters, dealing 1 damage to each [1]: a way past ranged heroes' sidekicks [2] and out of a pin [4].
+**Watch out for:** As a solo fighter he is the only target, easy to gang up on and corner [3].
 
 ### How they lose
-- Feints and forced discards break his recursion [2], and so can his own risky blind boosts [8].
-- He is predictable. He has few abilities to track, so opponents can tell when Devil of Hell's Kitchen is coming [3], read it from his discard pile and plan attacks for when his hand is small [5].
-- His small hand can be all schemes: 6 of his 22 cards are schemes [1], and the reviewer describes him holding a hand he can't use [3].
-- Ranged heroes with sidekicks are hard for him to reach [2].
+- Feints and forced discards break his recursion [2], and so do his own risky blind boosts [8].
+- He is predictable: opponents can read Devil of Hell's Kitchen coming from his discard pile and attack while his hand is small [3][5].
+- His small hand can be all schemes; 6 of his 22 cards are schemes [1][3].
+- Ranged heroes with sidekicks are hard to reach [2].
 
 ### Key cards
-- **Devil of Hell's Kitchen**: a 4-value attack, 8 if your deck is empty [1]. Gridbeast says the 8 tempts you to save it, but that is predictable, and against an opponent who knows his deck playing it in the early to mid game may be better [2]. One player goes further: use it early and often [4].
-- **Breather** (3 copies) [1]: Gridbeast's first use for it is getting back a discarded Devil of Hell's Kitchen [2].
-- **Take A Knee**: a 3-value versatile card that discards your top card and heals you by its boost [1], usually 2 [2]. Best on defense [2]; one player blocks with it again and again, recycling it with Devil of Hell's Kitchen [4].
-- **Son Of A Boxer**: a 3-value defense [1]. Good insurance against melee heroes, less so against ranged ones [2].
+- **Devil of Hell's Kitchen**: 4 value, or 8 with an empty deck [1]. Saving it for the 8 is predictable, so playing it early to mid game may be better [2]; one player says to play it early and often [4].
+- **Breather** (3 copies) [1]: first use is recovering a discarded Devil of Hell's Kitchen [2].
+- **Take A Knee**: 3-value versatile that heals by the boost of your top card [1], usually 2 [2]; one player recycles it to block again and again [4].
+- **Son Of A Boxer**: 3-value defense [1]; good insurance against melee heroes, weaker against ranged ones [2].
 
 ### Tips
-- All his defenses are worth 3 except Feint, so a small hand still defends well [2].
+- All his defenses are worth 3 except Feint, so a small hand still defends [2].
+- Heal by defending with Take A Knee rather than attacking with it [2].
 
 ### References
 1. Restoration Games. *Unmatched: Hell's Kitchen*, Daredevil deck. Card text as recorded in `input/heroes.json`.
@@ -1189,13 +1190,13 @@ The strategy text is written from the guides listed under Further reading for th
 6. COMaestro. Reply to [3]. *BoardGameGeek*, 15 November 2023.
 7. u/WeakSwitchKick. Comment on "Help daredevil!" by u/Practical-Fig-7209. *r/Unmatched*, Reddit, 27 February 2024. https://www.reddit.com/r/Unmatched/comments/1b11b6o/
 8. u/Cell-division. Comment on "Help daredevil!" (see [7]).
-9. u/ghostwolf676. Comment on "Help daredevil!" (see [7]).
 
-### Not yet reviewed
-- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; no Daredevil strategy)
-- [Daredevil - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=w_diciqXDqQ): To The Table Top! · video
-- [Daredevil - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=7b4lHIAATAU): Baked Goods · video
-- [Strategy Sunday Vol. 10](https://www.youtube.com/watch?v=wb3KdBzGq-M): Karma · video
+
+### Not cited
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; nothing on Daredevil's strategy)
+- [Daredevil - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=w_diciqXDqQ): To The Table Top! · video (not yet reviewed)
+- [Daredevil - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=7b4lHIAATAU): Baked Goods · video (not yet reviewed)
+- [Strategy Sunday Vol. 10](https://www.youtube.com/watch?v=wb3KdBzGq-M): Karma · video (not yet reviewed)
 
 ---
 
