@@ -1561,80 +1561,94 @@ The strategy text is written from the guides listed under Further reading for th
 <!-- id: dr_sattler -->
 ## Dr. Sattler
 
-**In short:** A planner who seeds the board with insight tokens as she and Dr. Malcolm move, then cashes them in for big attacks, area damage, healing and escapes.
+**In short:** A melee hero with 13 health and 2 movement, plus Dr. Malcolm (7 health) [1]. Whenever either of them moves to a new space, you place one of your 5 insight tokens there; the tokens do nothing alone, but many of her cards use them [1]. She heals a lot and outlasts opponents [2][3], but she rewards knowing her deck and planning ahead [2].
 
-### Plan A: Seed insight, then cash it in
-**Goal:** Build up insight tokens, then spend them on one big play.
-**How to do it:** Every time Sattler or Malcolm moves, place an insight token in the new space (5 in total; removed tokens come back to your supply). You Never Had Control, That's the Illusion is worth 2 plus 1 for each token on the board, up to 7, then clears them. Violently, If Necessary deals 2 damage to every enemy on or next to a token. Use Chaotician or Must Go Faster to drop tokens where the enemy will be.
-**Watch out for:** She has 2 movement and 13 health, and many effects need setup. Learn her deck and plan a couple of turns ahead.
+### Plan A: Spread the insight
+**Goal:** Get insight tokens where your cards can use them [2][3].
+**How to do it:** Plan every maneuver around where its tokens will land, even for cards you haven't drawn yet [2]. Tokens can share a space with other tokens [1][2]. Must Go Faster places both fighters anywhere if you win, and Chaotician places a token anywhere [1]; both seed insight, and set up traps [2]. The Future Ex-Mrs. Malcolm draws 2, places a token and gains an action [1]. Malcolm's movement matters: keep him alive long enough to support her [2][3].
+**Watch out for:** Moving is how she places insight, so she tends to maneuver around and avoid fights until the tokens are out [3].
 
-### Plan B: Heal, escape and reset
-**Goal:** Survive the opponent's pressure and outlast them.
-**How to do it:** The Concept of Attraction (3 copies) is a defense that places her on any space with a token, letting her escape. Life Finds a Way makes the opponent discard their top card and heals both doctors by its boost value. Woman Inherits the Earth draws a card and heals 1 per token, then clears the board for a fresh setup. It's best on defense, where it can't be Feinted.
-**Watch out for:** Keep Dr. Malcolm alive; his cards support her a lot.
+### Plan B: Cash in the insight
+**Goal:** Turn tokens into damage, healing or escape [2].
+**How to do it:** You Never Had Control, That's the Illusion is a 2-value attack, +1 per token on the board, up to 7, and then removes them all [1][2]. Violently, If Necessary deals 2 damage to each opponent on or next to a token [1]; follow Chaotician or Must Go Faster with it to spring a trap [2]. The Concept of Attraction (3 copies) places your defender on any token [1], a way to escape pressure [2]. Life Finds a Way discards the opponent's top card and heals both your fighters by its boost [1].
+**Watch out for:** Sources disagree about Woman Inherits the Earth, which heals Sattler 1 per token and removes them [1]. One analyst calls it her most powerful tool, worth up to 15 health over a game [3]; Gridbeast treats it more as a way to reset the board than a reliable heal, and plays it on defense so it can't be Feinted [2].
 
 ### How they lose
-- Opponents avoid her tokens and stay away from her setups.
-- She's slow, so fast fighters pressure her before her tokens are in place.
-- Dr. Malcolm dies, taking her best healing and setup cards with him.
+- Low mobility [2].
+- Her effects depend on conditions being met [2].
+- Only one scheme in her deck, so her engine is easy to shut down: opponents save Feints for when all five tokens are out [3].
+- Losing Malcolm early limits how many tokens she can place [3].
 
 ### Key cards
-- **You Never Had Control, That's the Illusion**: an attack worth up to 7.
-- **Violently, If Necessary**: area damage around tokens.
-- **The Concept of Attraction**: teleport defense between tokens.
-- **I Think We're Back In Business**: worth the number of cards in your hand, so keep your hand big.
+- **You Never Had Control, That's the Illusion**: up to a 7 [2].
+- **Violently, If Necessary**: area damage around your tokens [1][2].
+- **I Think We're Back In Business**: worth the number of cards in your hand [1]; keep your hand big [2].
+- **The Concept of Attraction**: defensive teleport [2].
+- **Sexism in Survival Situations**: worth 4 against heroes, and moves her 1 [1].
 
 ### Tips
-- Tokens can share spaces with other tokens, even an opponent's traps or fog.
-- Sexism in Survival Situations is worth 4 against heroes and moves her 1 space.
-- Must Go Faster places both doctors anywhere if you win the combat. Use it to set up tokens.
+- Know her whole deck before planning moves [2].
+- Use Hey! Hey! Hey! on defense to reposition your other fighter and place more insight [1][2].
 
-### Further reading
-- [Unmatched – Dr. Sattler](https://gridbeast.gg/unmatched-dr-sattler/): Gridbeast · written guide
-- [An Unmatched Roster: Jurassic Park](https://boardgamegeek.com/thread/3101319/an-unmatched-roster-jurassic-park): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [Dr. Ellie Sattler - Jurassic Park Unmatched Fighter Review](https://www.youtube.com/watch?v=Ft4JNGHuPp8): To The Table Top! · video
-- [Sattler - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=MpJJ9cCHL3s&t=1581s): Baked Goods · video
+### References
+1. Restoration Games. *Unmatched: Jurassic Park – Dr. Sattler vs. T. Rex*, Dr. Sattler deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – Dr. Sattler." *Gridbeast*. https://gridbeast.gg/unmatched-dr-sattler/
+3. TFJ383. "An Unmatched Roster: Jurassic Park." *BoardGameGeek*, 16 June 2023. https://boardgamegeek.com/thread/3101319/an-unmatched-roster-jurassic-park
+
+### Not cited
+- [Tips on playing Muldoon and Sattler Effectively?](https://www.reddit.com/r/Unmatched/comments/1t3rga4/): Reddit: ronchman · thread (read; replies cover Muldoon only)
+- [Dr. Ellie Sattler - Jurassic Park Unmatched Fighter Review](https://www.youtube.com/watch?v=Ft4JNGHuPp8): To The Table Top! · video (not yet reviewed)
+- [Sattler - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=MpJJ9cCHL3s&t=1581s): Baked Goods · video (not yet reviewed)
 
 ---
 
 <!-- id: t_rex -->
 ## T. Rex
 
-**In short:** A huge, slow large fighter with 27 health who attacks from 2 spaces away, draws a card every turn, and wins by hunting the opponent down and overwhelming them.
+**In short:** A solo large fighter with 27 health and 1 movement [1]. She occupies up to two spaces, can attack up to 2 spaces away, even over fighters, and draws a card at the end of every turn [1]. She hits like a freight train and can take a lot of punishment [2][3], but her slow movement and constant drawing push her to end the game fast [3][4].
 
-### Plan A: Hunt them down
-**Goal:** Stay in attack range and keep attacking every turn.
-**How to do it:** She moves only 1, but she reaches 2 spaces and draws a card at the end of every turn, so boost your movement almost every time. You'll go over 7 cards anyway, and boosting beats discarding. Closer Than She Appears moves 1, draws 1 and gains an action. Ripples in the Water places her anywhere in her zone, and every opponent next to her discards a random card. Terrifying Roar stops all fighters from leaving their spaces for the rest of the turn, keeping prey in range for your next attacks.
-**Watch out for:** A turn without an attack is a wasted turn. Pick tight maps where prey can't run far.
+### Plan A: Hunt relentlessly
+**Goal:** Attack every turn and win before she runs out of cards [4][5].
+**How to do it:** Boost your movement almost every turn: the forced draw fills your hand anyway, so a card spent on movement beats discarding at the hand limit [5]. Closer Than She Appears moves her 1, draws a card and gains an action, and Ripples in the Water places her anywhere in her zone and makes adjacent opponents discard a random card [1]; use them to close the last gap [2]. Plan your approach to herd the opponent where they can't escape [2]. When Dinosaurs Ruled the Earth can be boosted and, if you win, draws a card and gains an action for 2 damage to her [1].
+**Watch out for:** Her extra draw mills her deck faster than most [3][4]. Opponents who simply keep away can win by exhaustion [3][6].
 
-### Plan B: Trade damage, she has more to spare
-**Goal:** Use her enormous health to win trades that would cripple other fighters.
-**How to do it:** Several attacks hurt her too: Reckless Lunge deals 3 to both, 15,000 Pounds of Muscle ignores their defense but costs her 2, and When Dinosaurs Ruled the Earth draws and gains an action on a win for 2 damage. With 27 health she can afford it, but don't spend health carelessly. Reckless Lunge's boost value of 4 is often better used for movement.
-**Watch out for:** Self-damage plus their attacks adds up. She burns through her health and deck faster than anyone.
+### Plan B: Trade blows
+**Goal:** Use her huge health to take damage and hit back harder [2][3].
+**How to do it:** She rarely needs to defend, so she keeps a full hand and answers attacks with big swings [3]. 15,000 Pounds of Muscle ignores the defense's value for 2 damage to herself, and Reckless Lunge deals 3 to the opponent and then 3 to her [1]. Gridbeast prefers to use Reckless Lunge, with its boost of 4, as boost fuel [2]. On defense, Terrifying Roar stops every fighter leaving their space this turn, keeping the attacker in range [1][2], and Thrash damages every opponent in her zone if she wins [1]; Gridbeast uses it on defense [2].
+**Watch out for:** Her self-damage adds up; don't play those cards carelessly [2][4].
 
 ### How they lose
-- Opponents keep away on big maps until she runs out of cards; she has no way to slow her draw.
-- Ranged fighters and sidekick walls keep her from reaching the hero.
-- She has no Feints, so combos and nasty effects always go through.
+- Opponents who run away or keep their distance [3][6][7].
+- Exhaustion from her end-of-turn draw [3][4].
+- Movement of 1 [2][3].
+- No cancel cards [3][8].
+- Few defenses [2], and damage from her own cards [2][4].
+- Maps with special rules can be awkward: she can't use secret passages and ignores one-way arrows [1][3].
 
 ### Key cards
-- **Commanding Impact**: a 5-value attack that draws a card.
-- **Terrifying Roar**: locks everyone in place.
-- **Ripples in the Water**: relocate and force random discards.
-- **You're Just Making Her Angry**: a defense that can be boosted, and returns to your hand if you win the combat.
+- **Reckless Lunge**: 3 damage that ignores defense, or a boost of 4 [1][2].
+- **Ripples in the Water**: reposition and a random discard [1][2].
+- **Terrifying Roar**: holds the opponent in place [2].
+- **You're Just Making Her Angry**: a boostable 1-value defense that returns to your hand if you win [1]; boost it to match the attack so you can reuse it [2].
+- **65 Million Years of Gut Instinct**: return any other card from your discard pile [1].
 
 ### Tips
-- Play aggressively; her card draw lets her keep attacking.
-- Thrash is best on defense: win and deal 1 damage to every enemy in her zone.
-- 65 Million Years of Gut Instinct gets back your best card.
+- Any turn you don't attack is a wasted turn [5].
+- Keep the opponent within her 2-space reach [2].
 
-### Further reading
-- [Unmatched – T. Rex](https://gridbeast.gg/unmatched-t-rex/): Gridbeast · written guide
-- [An Unmatched Roster: Jurassic Park](https://boardgamegeek.com/thread/3101319/an-unmatched-roster-jurassic-park): BoardGameGeek: Luke M. (@TFJ383) · written analysis (not checked: BoardGameGeek blocks automated access)
-- [Any tips for raptors vs T-Rex?](https://www.reddit.com/r/Unmatched/comments/yypc6r/): Reddit: javivr621 · thread
-- [Tips againt Rexy?](https://www.reddit.com/r/Unmatched/comments/1fjo69b/): Reddit: Gaborka111 · thread
-- [T. Rex - Jurassic Park Unmatched Fighter Review](https://www.youtube.com/watch?v=lbS2xd_1A00): To The Table Top! · video
-- [T Rex - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=rIs1F2miyKc): Baked Goods · video
+### References
+1. Restoration Games. *Unmatched: Jurassic Park – Dr. Sattler vs. T. Rex*, T. Rex deck. Card text as recorded in `input/heroes.json`.
+2. Gridbeast. "Unmatched – T. Rex." *Gridbeast*. https://gridbeast.gg/unmatched-t-rex/
+3. TFJ383. "An Unmatched Roster: Jurassic Park." *BoardGameGeek*, 16 June 2023. https://boardgamegeek.com/thread/3101319/an-unmatched-roster-jurassic-park
+4. u/TivaDi. Comment on "Tips againt Rexy?" by u/Gaborka111. *r/Unmatched*, Reddit, 18 September 2024. https://www.reddit.com/r/Unmatched/comments/1fjo69b/
+5. u/MyHusbandIsGayImNot. Comments on "Tips againt Rexy?" (see [4]).
+6. u/Transasaurus-Hex. Comment on "Tips againt Rexy?" (see [4]).
+7. u/Steelersandstarwars. Comment on "Tips againt Rexy?" (see [4]).
+8. u/TheOncomingStorm08. Comment on "Any tips for raptors vs T-Rex?" by u/javivr621. *r/Unmatched*, Reddit, 18 November 2022. https://www.reddit.com/r/Unmatched/comments/yypc6r/
+
+### Not cited
+- [T. Rex - Jurassic Park Unmatched Fighter Review](https://www.youtube.com/watch?v=lbS2xd_1A00): To The Table Top! · video (not yet reviewed)
+- [T Rex - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=rIs1F2miyKc): Baked Goods · video (not yet reviewed)
 
 ---
 

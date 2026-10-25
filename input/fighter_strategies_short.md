@@ -963,50 +963,62 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: dr_sattler -->
 ## Dr. Sattler
 
-**In short:** A planner who seeds insight tokens as she moves, then cashes them in for big hits, area damage, healing and escapes.
+**In short:** A planner who leaves insight tokens wherever she and Dr. Malcolm move, then spends them on damage, healing and escapes [1][2].
 
-### Plan A: Seed insight, then cash it in
-**Goal:** One big play · **How:** You Never Had Control, That's the Illusion (2 +1 per token, up to 7); Violently, If Necessary for area damage · **Watch out:** slow and needs setup.
+### Plan A: Spread the insight
+**Goal:** Tokens where your cards need them [2] · **How:** plan each move; Chaotician and Must Go Faster place more [2] · **Watch out:** keep Malcolm alive [2][3].
 
-### Plan B: Heal, escape and reset
-**Goal:** Outlast them · **How:** The Concept of Attraction to teleport; Life Finds a Way and Woman Inherits the Earth to heal · **Watch out:** keep Malcolm alive.
+### Plan B: Cash in the insight
+**Goal:** Damage and healing from tokens [2] · **How:** You Never Had Control (up to 7), Violently, If Necessary, Woman Inherits the Earth [1][2][3] · **Watch out:** opponents save Feints for when all tokens are out [3].
 
 ### How they lose
-- Opponents avoid her tokens.
-- Fast pressure before setup.
+- Low mobility [2].
+- One scheme, so her engine is easy to stop [3].
 
 ### Key cards
-- **You Never Had Control, That's the Illusion**: up to 7.
-- **The Concept of Attraction**: escape to a token.
+- **Violently, If Necessary**: area damage at your tokens [1].
+- **The Concept of Attraction**: teleport on defense [2].
 
 ### Tips
-- Plan two turns ahead.
-- Keep your hand big for I Think We're Back In Business.
+- Learn her deck before you play [2].
+- Keep a big hand for I Think We're Back In Business [2].
+
+### References
+1. Restoration Games. *Unmatched: Jurassic Park – Dr. Sattler vs. T. Rex*, Dr. Sattler deck.
+2. Gridbeast. "Unmatched – Dr. Sattler." https://gridbeast.gg/unmatched-dr-sattler/
+3. TFJ383. "An Unmatched Roster: Jurassic Park." *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3101319/
 
 ---
 
 <!-- id: t_rex -->
 ## T. Rex
 
-**In short:** A huge, slow fighter with 27 health who reaches 2 spaces, draws every turn and overwhelms her prey.
+**In short:** A huge, slow dinosaur with 27 health, 2-space reach and a free card every turn, who must win fast [1][2][3].
 
-### Plan A: Hunt them down
-**Goal:** Attack every turn · **How:** boost movement constantly; Ripples in the Water and Closer Than She Appears close the gap; Terrifying Roar pins them · **Watch out:** big maps let prey run.
+### Plan A: Hunt relentlessly
+**Goal:** Attack every turn [4] · **How:** boost your movement instead of discarding; close in with Closer Than She Appears and Ripples in the Water [1][4] · **Watch out:** opponents who keep away [3][5].
 
-### Plan B: Trade damage
-**Goal:** Win trades with her huge health · **How:** Reckless Lunge and 15,000 Pounds of Muscle hit hard but hurt her too · **Watch out:** she burns health and cards fast.
+### Plan B: Trade blows
+**Goal:** Out-hit them with her health [3] · **How:** 15,000 Pounds of Muscle and Reckless Lunge; hold them with Terrifying Roar [1][2] · **Watch out:** her self-damage adds up [2].
 
 ### How they lose
-- Kited until she runs out of cards.
-- No Feints.
+- Kited until her deck runs out [3].
+- No cancels [3].
 
 ### Key cards
-- **Terrifying Roar**: nobody moves.
-- **Commanding Impact**: 5 value plus a draw.
+- **Reckless Lunge**: damage, or a 4 boost [2].
+- **Terrifying Roar**: keeps them in range [2].
 
 ### Tips
-- Boost movement almost every turn.
-- Pick tight maps.
+- A turn without an attack is wasted [4].
+- Herd the opponent where they can't escape [2].
+
+### References
+1. Restoration Games. *Unmatched: Jurassic Park – Dr. Sattler vs. T. Rex*, T. Rex deck.
+2. Gridbeast. "Unmatched – T. Rex." https://gridbeast.gg/unmatched-t-rex/
+3. TFJ383. "An Unmatched Roster: Jurassic Park." *BoardGameGeek*, 2023. https://boardgamegeek.com/thread/3101319/
+4. u/MyHusbandIsGayImNot. Comment on "Tips againt Rexy?" *r/Unmatched*, Reddit, 2024. https://www.reddit.com/r/Unmatched/comments/1fjo69b/
+5. u/Transasaurus-Hex. Comment on "Tips againt Rexy?" (see [4]).
 
 ---
 
