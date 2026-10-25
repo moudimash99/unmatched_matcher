@@ -2587,34 +2587,34 @@ Gridbeast lists Spring the Trap as versatile and Lightning and Thunder's cancel 
 <!-- id: titania -->
 ## Titania
 
-**In short:** A ranged hero with 12 health and 2 movement, plus Oberon, a 6-health melee sidekick [1]. If she has no face-up glamour at the start of her turn, she flips the next card of her six-card glamour deck, and its effect stays on while face-up [1][2]. Her cards have low printed values but strong effects, and many get better as she burns through glamours [2].
+**In short:** Titania is a ranged hero with 12 health and 2 movement, accompanied by Oberon, a 6-health melee sidekick [1]. If she has no face-up glamour at the start of her turn, she flips the next card of her six-card glamour deck, and its effect remains active while face-up [1][2]. Her cards combine low printed values with strong effects, and discarding glamours strengthens many of them [2].
 
 ### Plan A: Cycle the glamours
-**Goal:** Find the glamour that suits the game, and keep discarding glamours to power up your cards [2].
-**How to do it:** Balance drawing through the glamour deck against keeping a useful glamour up long enough to use it [2]. Glamours only leave through your own card effects, and a used-up glamour deck is not reshuffled [2]. Discarding one makes Fairy Song a 5, lets Whisked Away place your fighter anywhere, makes As Wise As Beautiful draw 2, or lets Protection Of The Fairy Woods cancel the attacker's effects [1]. The Moon Looks Down puts a discarded glamour of your choice on the bottom of the glamour deck [1][2]. Among the glamours: Love moves an opponent 1 space when you maneuver; Greed draws a card at the end of your turn; Sleep stops all non-combat damage, even exhaustion; Jealousy swaps Titania and Oberon when one is attacked; Invisibility lets your fighters move through opponents [2].
-**Watch out for:** Which glamour comes up is luck [2].
+**Goal:** Find a glamour that suits the game, using the others to strengthen your cards as you discard them [2].
+**How to do it:** Work through the glamour deck without giving up a useful glamour before you have benefited from it [2]. Only your own card effects can discard glamours, and the glamour deck is not reshuffled when it runs out [2]. Discard a glamour to make Fairy Song a 5, place your fighter anywhere with Whisked Away, draw 2 with As Wise As Beautiful, or cancel the attacker's effects with Protection Of The Fairy Woods [1]. The Moon Looks Down puts a discarded glamour of your choice on the bottom of the glamour deck [1][2]. Each glamour offers a different benefit: Love moves an opponent 1 space when you maneuver; Greed draws a card at the end of your turn; Sleep prevents all non-combat damage, including exhaustion; Jealousy swaps Titania and Oberon when one is attacked; and Invisibility lets your fighters move through opponents [2].
+**Watch out for:** You cannot count on revealing the glamour you need [2].
 
 ### Plan B: The scheme chain
-**Goal:** With Glamour of Rhyme up (gain an action after each scheme), chain free schemes into a big attack [2].
-**How to do it:** Gift Of The Fair Folk to move two fighters into range and draw 2, then What Fools These Mortals Be to shuffle their best defense back into their deck, then any more schemes you hold, all free [1][2]. Finish with Met By Moonlight (5) from Oberon or Queen Of The Fairies [1][2]. Queen Of The Fairies is 2, +1 per discarded glamour [1]: play it with 4 or 5 glamours gone, ideally after removing a Feint, for up to 8 damage [2]. Fairy Song first adds another discarded glamour [2].
+**Goal:** Chain free schemes into a big attack with Glamour of Rhyme, which gains an action after each scheme [2].
+**How to do it:** Open with Gift Of The Fair Folk to move two fighters into range and draw 2, then follow with What Fools These Mortals Be to shuffle their best defense back into their deck, then play any further schemes you hold; each scheme is free [1][2]. Finish with Met By Moonlight (5) from Oberon or Queen Of The Fairies [1][2]. Queen Of The Fairies has a value of 2, gaining +1 per discarded glamour [1]: wait until 4 or 5 glamours are discarded, ideally remove a Feint, then attack for up to 8 damage [2]. Playing Fairy Song first adds another discarded glamour [2].
 **Watch out for:** Queen Of The Fairies is weak early [2].
 
 ### How they lose
-- Low printed values [2].
-- Opponents with many sidekicks, or many ways to cancel her effects [2].
-- Without a face-up glamour she can't use her cancelling defense, so that turn is a good time to attack her [1][3].
+- Low printed values leave her vulnerable [2].
+- Opponents with many sidekicks or many ways to cancel her effects cause problems [2].
+- A turn without a face-up glamour leaves her unable to cancel with Protection Of The Fairy Woods and gives the opponent an opening [1][3].
 - Oberon can be focused down early [3][4].
 
 ### Key cards
-- **Met By Moonlight**: Oberon's 5-value attack that places him next to Titania [1]. Bringing both into one zone baits the opponent in for A Momentary Glance, 2 damage to any fighter in her zone [1][2].
-- **But A Dream**: a 0-value defense that cancels the attack's effects, ignores its value and returns it to the attacker's hand [1]; a real pain to face [4].
-- **What Fools These Mortals Be**: removes a card from the opponent's hand [1]; clear the way for a big attack [2].
-- **Whisked Away**: 4 value, and a glamour discard places your fighter anywhere [1]; gets either fighter out of trouble or brings them together [2].
+- **Met By Moonlight**: Oberon's 5-value attack that places him next to Titania [1]. Bringing both fighters into one zone can lure the opponent into range of A Momentary Glance, which deals 2 damage to any fighter in her zone [1][2].
+- **But A Dream**: A 0-value defense that cancels the attack's effects, ignores its value and returns it to the attacker's hand [1]; a particularly frustrating defense to face [4].
+- **What Fools These Mortals Be**: Removes a card from the opponent's hand [1]; clear the way for a big attack [2].
+- **Whisked Away**: Worth 4, with the option to discard a glamour and place your fighter anywhere [1]. Use it to get either fighter out of trouble or bring them together [2].
 
 ### Tips
 - Titania and Oberon are one of the best hero-and-sidekick pairs in the game [2].
-- With Glamour of Jealousy, swap to protect Titania or to save a focused Oberon [2].
-- Glamour of Greed lets her push back hard [4].
+- With Glamour of Jealousy, swap to protect Titania or to save Oberon when he is being focused down [2].
+- Glamour of Greed lets her respond with strong pressure [4].
 
 ### References
 1. Restoration Games. *Unmatched: Slings and Arrows*, Titania deck. Card text as recorded in `input/heroes.json`.
@@ -2634,29 +2634,29 @@ The glamour cards are not in `input/heroes.json`; their effects are as Gridbeast
 <!-- id: the_wayward_sisters -->
 ## The Wayward Sisters
 
-**In short:** Three melee heroes with 6 health each and 2 movement, no sidekicks [1][2]. Their cards go into a cauldron instead of the discard pile; after attacking they may cast one spell whose ingredients are in the cauldron, then discard the whole cauldron [1]. Very versatile, but fragile [2].
+**In short:** The Sisters are three melee heroes with 6 health each, 2 movement and no sidekicks [1][2]. Their cards go into a cauldron instead of the discard pile; after attacking they may cast one spell whose ingredients are in the cauldron, then discard the whole cauldron [1]. Their spells give them considerable versatility, but each Sister is fragile [2].
 
 ### Plan A: Brew the right spell
-**Goal:** Cast the spell the moment needs, without wasting ingredients [2].
-**How to do it:** Every card shows one of three ingredient symbols [2]. Snake and bat: draw 1 and heal 1. Snake and lizard leg: move any fighter up to 3 spaces. Lizard leg and bat: 1 damage to a fighter sharing a zone with one of yours. All three: gain an action [2]. Which to aim for depends on the game and your hand: play the cards that line up with a spell [2]. Don't overfill the cauldron, since extra cards just cut how many spells you cast per game [2]. All-Seeing Familiar returns a card from your discard pile to the cauldron, and the attack card itself counts, so it can set up a spell from an empty cauldron [1][2]. Curious Familiar returns a cauldron card to your hand, to reuse it or avoid wasting an ingredient [1][2]. Something Wicked This Way Comes casts any two different spells with no ingredients and no discard; you only have two [1][2].
-**Watch out for:** Which ingredients you get is luck, though they are spread evenly enough that a spell is rarely out of reach [2].
+**Goal:** Match your spell to the situation without wasting ingredients [2].
+**How to do it:** Every card shows one of three ingredient symbols [2]. Combine snake and bat to draw 1 and heal 1, or snake and lizard leg to move any fighter up to 3 spaces; lizard leg and bat deal 1 damage to a fighter sharing a zone with one of yours, while all three ingredients gain an action [2]. Let the situation and your hand guide your choice of spell, then play cards that supply its ingredients [2]. Avoid overfilling the cauldron: surplus ingredients leave you with fewer spells to cast over the game [2]. All-Seeing Familiar returns a card from your discard pile to the cauldron, and the attack card itself counts as an ingredient, letting you set up a spell from an empty cauldron [1][2]. Curious Familiar returns a cauldron card to your hand, letting you reuse it or avoid wasting an ingredient [1][2]. Something Wicked This Way Comes casts any two different spells without ingredients or discarding the cauldron, but you have only two copies [1][2].
+**Watch out for:** You depend on the draw for ingredients, though their even distribution means a spell is rarely out of reach [2].
 
 ### Plan B: Spread out and survive
-**Goal:** Keep all three Sisters alive with good positioning and defense [2].
-**How to do it:** When an effect hits "your hero", you choose which Sister takes it [2][3]. The Stars Align is worth the number of zones your fighters are in, up to 6 on a big map; use it before anyone falls [1][2]. Unnatural Remedy turns spare cauldron cards into healing: keep the most hurt Sister away from combat and defend another with it to heal her [1][2].
+**Goal:** Use positioning and defense to keep all three Sisters alive [2].
+**How to do it:** When an effect hits "your hero", you choose which Sister takes it [2][3]. The Stars Align is worth the number of zones your fighters are in, up to 6 on a big map; use it before anyone falls [1][2]. Turn spare cauldron cards into healing with Unnatural Remedy: keep the most injured Sister away from combat, then use it to defend another and heal the injured one [1][2].
 **Watch out for:** Each Sister has very little health [2].
 
 ### How they lose
-- Losing even one Sister badly hurts their damage and their kit [2][4][5]. One player disagrees: only a few cards care how many Sisters are left [6].
-- Steady pressure: they need luck every time, the opponent only once or twice [4]. Some found them easy to rush down [7].
-- Opponents who disrupt the cauldron, or stand at zone edges to dodge spell damage [6].
-- Multi-target and area damage [8][9].
+- Losing even one Sister sharply reduces their damage and weakens their kit [2][4][5]. Another player disputes the scale of that loss, noting that only a few cards care how many Sisters remain [6].
+- Steady pressure demands that they get lucky every time, while the opponent needs luck only once or twice [4]. Some players found them easy to overwhelm with early aggression [7].
+- Opponents can disrupt the cauldron or stand at zone edges to avoid spell damage [6].
+- Multi-target and area damage threaten the Sisters [8][9].
 
 ### Key cards
-- **Ward**: their best defense, despite being versatile [2]. It places the attacker anywhere in your fighter's zone [1], to reach ranged fighters or push melee ones away [2].
-- **Pricking Of My Thumbs**: a 2-value defense that deals back the combat damage you took [1]; good when they try to finish a weak Sister [2].
-- **All-Seeing Familiar**: lets you cast almost any spell you want [2].
-- **Double, Double** and **Toil And Trouble**: +1 for each different ingredient in the cauldron [1].
+- **Ward**: Their best defense, despite being versatile [2]. It places the attacker anywhere in your fighter's zone [1], helping you reach ranged fighters or push melee ones away [2].
+- **Pricking Of My Thumbs**: A 2-value defense that returns the combat damage you took [1]; useful when the opponent tries to finish a weakened Sister [2].
+- **All-Seeing Familiar**: Helps you cast almost any spell you need [2].
+- **Double, Double** and **Toil And Trouble**: Each gains +1 for every different ingredient in the cauldron [1].
 
 ### Tips
 - Unnatural Remedy can heal any fighter, including an ally in team games [1][2].
@@ -2685,34 +2685,34 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 <!-- id: geralt -->
 ## Geralt of Rivia
 
-**In short:** A melee hero with 16 health and 2 movement, plus Dandelion, a 5-health ranged sidekick [1]. Before the game he picks one potion, one armor and one sword, and shuffles two copies of each into his deck [1]. He can play fast or slow, and choosing which, along with his gear, is most of his strategy [2][3][4].
+**In short:** Geralt is a melee hero with 16 health and 2 movement, accompanied by Dandelion, a 5-health ranged sidekick [1]. Before the game he picks one potion, one armor and one sword, and shuffles two copies of each into his deck [1]. His strategy centers on choosing his gear and deciding whether to play aggressively or patiently [2][3][4].
 
 ### Plan A: Burst them down
-**Goal:** Keep a full hand, then unload a big turn [5][6].
-**How to do it:** With the right gear he can almost end the game in one turn [6]. Sword of steel is a 4-value attack that gains an action, or two if the opponent has 8 or more health [1]; it is the more flexible sword, and can double as a maneuver [5]. Both potions are discarded at the end of your turn if you didn't attack, so play them at the right moment and keep attacking [1][7]. Tawny Owl draws 2 and gains an action [1]; one player calls Blizzard strictly worse unless you want its stop on action gain, since a maneuver boosted by Tawny Owl does much the same [8]. Movement wins games against ranged heroes [6].
+**Goal:** Build a full hand for a powerful turn [5][6].
+**How to do it:** The right gear can let him all but end the game in one turn [6]. Sword of steel is a 4-value attack that gains an action, or two if the opponent has 8 or more health [1]; it is the more flexible sword and can also be used for a maneuver [5]. Both potions are discarded at the end of your turn if you didn't attack, so time them carefully and keep attacking to retain them [1][7]. Tawny Owl draws 2 and gains an action [1]; Blizzard is considered strictly worse unless you need to prevent action gain: boosting a maneuver with Tawny Owl achieves much the same result [8]. Movement can win games against ranged heroes [6].
 **Watch out for:** Rushing risks running out of cards [6].
 
 ### Plan B: Wear them down
-**Goal:** Play the long game and finish the opponent once they run out of cards [6].
-**How to do it:** Keep Dandelion alive to strip as many cards as possible [7]. His Plot twist shows you their hand and makes them discard a card you choose, then draws you one [1]. Sword of silver ignores the value of a card printed at 4 or more [1]; with it, play the mind game: hit their big defenses with the sword and Igni, and use the 5 and the boostable 3 when they defend low [5]. Plot twist and Witcher Senses help you read and bait them [5].
+**Goal:** Outlast the opponent, then finish them once their cards run out [6].
+**How to do it:** Keep Dandelion alive so he can strip as many cards as possible [7]. Plot twist reveals their hand, makes them discard a card you choose, then draws you one [1]. Sword of silver ignores the value of a card printed at 4 or more [1]; aim it and Igni at their big defenses, saving the 5 and the boostable 3 for an expected low defense [5]. Plot twist and Witcher Senses help you anticipate their plays and bait their responses [5].
 **Watch out for:** Dandelion has only 5 health and dies quickly [9].
 
 ### How they lose
-- Everything he commits to defense is gone for attack, and vice versa; pressure him so he must block with his big versatiles [10].
-- No healing, and his low movement bleeds cards when he has to boost in [10].
-- Players disagree on his strength: one calls him top tier at every playstyle [11], another says he is mid-pack and often fails to finish [10].
+- Committing cards to defense weakens his offense, and vice versa; under pressure, his high-value versatiles have to serve as blocks [10].
+- Without healing or much movement, he loses cards to boosts whenever he must close the distance [10].
+- Players disagree on his strength: one rates him top tier at every playstyle [11], while another places him in the middle of the pack and finds he often fails to finish [10].
 
 ### Key cards
-- **Gear: Wolf Medallion**: a 3-value defense that cancels all effects, and ignores the attack's value if the attacker isn't adjacent [1]. With Sword of steel and Tawny Owl, the gear players pick most [9].
-- **Gear: Armor of the Forgotten Wolf**: +1 per adjacent fighter and ends the turn [1]. Worth it against several opponents [6][9], and the end of turn stops action gain, non-combat effects and hit-and-run play [12].
-- **Rend**: a 3 you may boost [1]; the timing of that boost, and of the 5-value Damn, you're ugly, matters [1][2].
-- **Disciplined Duelist**: its effect depends on the printed value of the other card [1], so timing it matters [7].
-- **Witcher Senses**: fetches a gear card [1].
+- **Gear: Wolf Medallion**: A 3-value defense that cancels all effects, and ignores the attack's value if the attacker isn't adjacent [1]. Alongside Sword of steel and Tawny Owl, it is among the most popular gear choices [9].
+- **Gear: Armor of the Forgotten Wolf**: Gains +1 per adjacent fighter and ends the turn [1]. It is worthwhile against several opponents [6][9], and ending the turn stops action gain, non-combat effects and hit-and-run play [12].
+- **Rend**: A 3-value card you may boost [1]. Time that boost carefully, along with the 5-value Damn, you're ugly [1][2].
+- **Disciplined Duelist**: Its effect depends on the opposing card's printed value [1], making timing important [7].
+- **Witcher Senses**: Retrieves a gear card [1].
 
 ### Tips
-- Your gear pick can decide the match before it starts; choose with care [7].
+- Choose your gear carefully; it can decide the game before it starts [7].
 - Choose the plan based on the opponent [6].
-- Use his versatile cards wisely: each one is a choice between attack and defense [3].
+- Weigh each versatile card carefully: using it to attack means giving up a defense [3].
 
 ### References
 1. Restoration Games. *Unmatched: The Witcher: Steel and Silver*, Geralt of Rivia deck. Card text as recorded in `input/heroes.json`.
@@ -2737,30 +2737,30 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 <!-- id: ciri -->
 ## Ciri
 
-**In short:** A melee hero with 15 health and 2 movement, plus Ihuarraquax, a 7-health unicorn sidekick [1]. Many of her cards get stronger as more source (🔵) cards pile up in her discard pile, and at 7 her card effects can no longer be cancelled [1][2]. She is weak early and strongest late, and flexible enough to win in several ways [3][4][5].
+**In short:** Ciri is a melee hero with 15 health and 2 movement, accompanied by Ihuarraquax, a 7-health unicorn sidekick [1]. Source (🔵) cards in her discard pile strengthen many of her cards; at 7, her card effects can no longer be cancelled [1][2]. She starts weak and reaches her greatest strength late, with the flexibility to win in several ways [3][4][5].
 
 ### Plan A: Survive, then take over
 **Goal:** Hold out until the late game [3].
-**How to do it:** Stay somewhere safe and fill your discard pile with source cards; good players will rush you early [2]. In 1v1, boost and maneuver often to stock the pile [3]. Ihuarraquax shields Ciri early, while she is weaker; once her effects unlock she can go in herself [5]. Early on, Pushed to the brink (1 damage at 2 sources) is the best card to play, and a 4-value Lion cub of Cintra is fine once [2]. At 5 sources Zireael makes the opponent discard a random card, 3 to 5 times a game [2]. Lion cub of Cintra becomes 7 at 5 sources: her main attack, so save one or two and watch for Feints until you reach 7 [2]. Child of the Elder Blood at 9 deals 3 to each other fighter in her zone, a strong finisher [1][2].
+**How to do it:** Find safety while filling your discard pile with source cards, and expect skilled opponents to rush you early [2]. In 1v1, boost and maneuver often to build up the pile [3]. Let Ihuarraquax shield Ciri during her weak early game; she can enter combat herself once her effects unlock [5]. Pushed to the brink is her best early play, dealing 1 damage at 2 sources; spending one Lion cub of Cintra at 4 value is also fine [2]. At 5 sources, Zireael makes the opponent discard a random card, potentially 3 to 5 times a game [2]. Lion cub of Cintra, her main attack, becomes a 7 at 5 sources; save one or two copies, watching for Feints until you reach 7 [2]. At 9 sources, Child of the Elder Blood deals 3 to each other fighter in her zone, making it a strong finisher [1][2].
 **Watch out for:** She can struggle late against exhaustion [6].
 
 ### Plan B: Pick a win condition
-**Goal:** Choose the route that fits the game [4][7].
-**How to do it:** A big Channel the source (+2 for each source card discarded from hand) can one-shot some opponents [1][4]. She can out-value with 7-value attacks and repeated random discards, or keep Unicorn ally up for a low-hand aggressive game [4]. You can't use every strong effect, so decide which source cards to hold for later and which to spend now [7].
+**Goal:** Choose a way to win that fits the game [4][7].
+**How to do it:** Channel the source gains +2 for each source card discarded from hand, and a large enough attack can defeat some opponents in one hit [1][4]. Other routes include gaining the upper hand with 7-value attacks and repeated random discards, or keeping Unicorn ally active to play aggressively with a small hand [4]. You cannot use every strong effect: decide which source cards to save and which to spend now [7].
 **Watch out for:** Opponents who watch her discard pile and save their cancels for the late game [3].
 
 ### How they lose
-- Rushed early, before her effects come online [2][3].
+- Early aggression can overwhelm her before her effects become available [2][3].
 - Exhaustion, if she draws too freely [6][8].
 
 ### Key cards
-- **The lady of space and time**: at 3 sources returns a discard to the top of the deck; at 8 to your hand [1]. One player says use it only at 3 [9]; another cycles it before 8 to recur the same card [8]; a third avoids cycling it, since it can be cancelled on attack and is a weak defense [2].
-- **Unicorn ally**: heals 2 and draws after each combat, but is discarded at the end of your turn if you hold 5 or more [1]. Play it with 5 or more cards to dodge the draw [8], keep it up longer against aggressive opponents, or use it for a short burst [7].
-- **Searching strike**: Ihuarraquax's versatile, which fetches a source card on a win [1]. Attacking with it is often fine; if you lose you don't thin the deck [9].
-- **Parry**: a 3-value cancel any fighter can use [1].
+- **The lady of space and time**: Returns a discarded card to the top of your deck at 3 sources, or to your hand at 8 [1]. Players disagree on its use: one recommends playing it only at 3 [9], another cycles it before 8 to recover the same card repeatedly [8], and a third avoids cycling because it can be cancelled on attack and is weak on defense [2].
+- **Unicorn ally**: Heals 2 and draws after each combat, but is discarded at the end of your turn if you hold 5 or more cards [1]. Play it with 5 or more cards to avoid the draw [8], keep it up longer against aggressive opponents, or use it for a short burst [7].
+- **Searching strike**: Ihuarraquax's versatile fetches a source card on a win [1]. It is often fine to attack with it, since losing avoids thinning your deck [9].
+- **Parry**: A 3-value cancel that any of her fighters can use [1].
 
 ### Tips
-- Opinions differ on Ihuarraquax: one player treats his cards as boost fodder because he dies early [2]; another calls him sturdy, since he can use cancels and isn't easily farmed [10].
+- Opinions differ on Ihuarraquax: one player uses his cards for boosts, expecting him to die early [2]; another considers him sturdy because he can use cancels and opponents cannot easily exploit him for card effects [10].
 - Her best plan depends on the opponent [4].
 
 ### References
@@ -2785,29 +2785,29 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 <!-- id: yennefer_triss -->
 ## Yennefer & Triss
 
-**In short:** Two ranged sorceresses: at the start of the game one becomes the 14-health hero and the other a 6-health sidekick, both with 2 movement [1]. As hero, Yennefer may boost her attacks, and that boost can't be cancelled; Triss deals 2 damage to an adjacent fighter after she plays a scheme [1]. They are strong at the value game [2], but fragile [3].
+**In short:** At the start of the game, choose one sorceress as the 14-health ranged hero and the other as a 6-health ranged sidekick; both have 2 movement [1]. Yennefer's hero ability lets her boost attacks without that boost being cancelled; Triss's deals 2 damage to an adjacent fighter after she plays a scheme [1]. They get excellent value from their cards [2], but their fragility demands care [3].
 
 ### Plan A: Yennefer leads
-**Goal:** Wait until the opponent is out of strong defenses, then hit for big damage [4].
-**How to do it:** The best moment is when they are low on cards: one player waited for a 2-card hand, then landed a boosted Incinerate, plus an extra boost after seeing a Feint, for 9 damage [5]. Incinerate is a 7 the defender can only ignore by discarding 2 cards [1]. Don't boost every attack: almost every card has a boost of 1 or 2, so boost only when it adds damage and you can spare the cards [6][7]; Yennefer mostly hits for 5s and 6s [7]. She is probably the better pick most of the time [7], and she is said to do better against ranged opponents [4].
-**Watch out for:** Opponents who draw a lot can afford the discard to ignore Incinerate [9].
+**Goal:** Wait for the opponent's strong defenses to run out, then strike hard [4].
+**How to do it:** Look for a small hand: one player waited until the opponent held 2 cards, then landed a boosted Incinerate, adding a boost after seeing a Feint, for 9 damage [5]. Incinerate is worth 7, and the defender must discard 2 cards to ignore that value [1]. Don't boost every attack: almost every card has a boost of 1 or 2, so spend a card on a boost only when it adds damage and you can afford it [6][7]; her attacks usually reach 5 or 6 [7]. Yennefer is probably the better choice most of the time [7], and is said to do better against ranged opponents [4].
+**Watch out for:** Opponents who draw a lot can afford the discard to ignore Incinerate [8].
 
 ### Plan B: Triss leads
-**Goal:** Pile up scheme damage on adjacent opponents [4].
-**How to do it:** Triss suits melee opponents and high-defense decks, because her damage goes around their blocks [4][10][11]. Play all your schemes for as much automatic damage as you can [4]. Keep Triss away and attack with Yennefer's shared cards so they have to come to Triss and end their turn next to her [6]. She suits a longer game [3].
-**Watch out for:** She has to stand in melee range, which is risky against hard-hitting melee fighters [12][13].
+**Goal:** Deal repeated scheme damage to adjacent opponents [4].
+**How to do it:** Triss suits melee opponents and high-defense decks, because her damage bypasses their blocks [4][9][10]. Use all your schemes to maximize automatic damage [4]. Keep Triss back while Yennefer attacks with shared cards, making the opponent approach Triss and finish their turn beside her [6]. This approach suits a longer game [3].
+**Watch out for:** She has to stand in melee range, which is risky against hard-hitting melee fighters [11][12].
 
 ### How they lose
-- Low health; under enough pressure they must turn defensive [3]. Feints on attack hurt them [3].
-- Only 6 true defense cards, so steady pressure from a fighter who can draw through discards, or block big, wears them down [1][2].
-- Aggression: make every boost and every scheme cost them cards [2][14].
-- Lose the sidekick, and you lose half your options [15].
+- Their low health forces them onto the defensive under sustained pressure [3]. Feints against their attacks are painful [3].
+- With only 6 true defense cards, they wear down under pressure from fighters who can draw through discards or block high-value attacks [1][2].
+- Losing the sidekick removes half their options [13].
+- Aggressive opponents strain their hand and make every boost and scheme costly [2][14].
 
 ### Key cards
-- **Merigold's Hailstorm**: Triss's 4 that makes the opponent choose 2 discards, 3 damage, or 4 cards off their deck [1]; one of the strongest attacks printed [6]. Its boost of 3 is worth using once Triss is dead [6].
-- **Incinerate**: three copies; if Yennefer is the sidekick and dies, they become boost fodder [1][8].
-- **Paralyzing fetters**: locks the attack at its printed value [1].
-- **Advisor to the king**: heals each fighter 1, draws 1 and gives +1 to boosts, but is discarded if you didn't attack [1].
+- **Merigold's Hailstorm**: Triss's 4-value attack makes the opponent choose between 2 discards, 3 damage or 4 cards off their deck [1]; it is among the strongest attacks printed [6]. Once Triss dies, its boost of 3 is worth using [6].
+- **Incinerate**: Its three copies become cards to boost with if Yennefer dies as the sidekick [1][15].
+- **Paralyzing fetters**: Locks the attack at its printed value [1].
+- **Advisor to the king**: Heals each fighter by 1, draws 1 and adds +1 to boosts; you discard it if you did not attack [1].
 
 ### Tips
 - Keep your distance and hold as many defense cards as you can [3].
@@ -2821,14 +2821,14 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 5. u/Affectionate_Lead907. Comment on "Yennefer and Triss strategies" (see [3]).
 6. u/RGCarter. Comment on "Yennefer and Triss strategies" (see [3]).
 7. u/poindexterg. Replies in "In which matchups would Triss be better than Yen?" by u/Lumos_eriksian. *r/Unmatched*, Reddit, 12 December 2024. https://www.reddit.com/r/Unmatched/comments/1hch4gt/
-8. u/jclayton111. Reply in "In which matchups would Triss be better than Yen?" (see [7]).
-9. u/Available_Hawk_2300. Comment on "In which matchups would Triss be better than Yen?" (see [7]).
-10. u/Altruistic_File3686. Comments on "In which matchups would Triss be better than Yen?" (see [7]).
-11. u/HealthyVehicle7639. Comment on "Yennefer and Triss strategies" (see [3]).
-12. u/tundranocaps. Replies in "In which matchups would Triss be better than Yen?" (see [7]).
-13. u/TivaDi. Comment on "In which matchups would Triss be better than Yen?" (see [7]).
+8. u/Available_Hawk_2300. Comment on "In which matchups would Triss be better than Yen?" (see [7]).
+9. u/Altruistic_File3686. Comments on "In which matchups would Triss be better than Yen?" (see [7]).
+10. u/HealthyVehicle7639. Comment on "Yennefer and Triss strategies" (see [3]).
+11. u/tundranocaps. Replies in "In which matchups would Triss be better than Yen?" (see [7]).
+12. u/TivaDi. Comment on "In which matchups would Triss be better than Yen?" (see [7]).
+13. u/GambuzinoSaloio. Comment on "Tactics against Triss/Yennifer" (see [2]).
 14. u/ServantOfTheShepherd. Comment on "Tactics against Triss/Yennifer" (see [2]).
-15. u/GambuzinoSaloio. Comment on "Tactics against Triss/Yennifer" (see [2]).
+15. u/jclayton111. Reply in "In which matchups would Triss be better than Yen?" (see [7]).
 
 ### Not cited
 - [Strategy Sunday Vol. 23: Yennefer & Triss](https://www.reddit.com/r/Unmatched/comments/1n56dad/): Reddit thread (read; only links the video)
@@ -2841,34 +2841,34 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 <!-- id: philippa_eilhart -->
 ## Philippa Eilhart
 
-**In short:** A ranged hero with 12 health and 2 movement, plus Dijkstra, a 6-health melee sidekick [1]. At the end of her turn she may draw up to 4 cards [1]. Most players run her aggressively, though a stalling value game also works [2][3][4].
+**In short:** Philippa is a ranged hero with 12 health and 2 movement, accompanied by Dijkstra, a 6-health melee sidekick [1]. At the end of her turn she may draw up to 4 cards [1]. Most players favor an aggressive approach, though stalling and getting more from each card can also win games [2][3][4].
 
 ### Plan A: Attack every turn
-**Goal:** Attack so steadily that the opponent either double maneuvers or keeps losing cards to block you [2].
-**How to do it:** Her attacks are low quality but hit hard enough that the opponent feels they must block, and her ability means aggression never runs her out of cards [2][4][5]. Boosting to attack is almost always worth it, since you draw back up [2]. Going first with a boosted maneuver and an attack on turn 1 is ideal; without that, start slow and turn up the aggression once they engage [2]. Polymorphy places her anywhere and sets her move to 5, but is discarded if she isn't in a zone with an opponent, so it rewards aggression [1][3]. Owlform, a 3 plus 1 per card discarded from hand, can also drive a hit-and-run game [1][4].
-**Watch out for:** Opponents who can draw and keep hand advantage through the pressure crush this plan; switch to value [2]. Pushing too hard can run her deck out [6].
+**Goal:** Attack every turn, forcing the opponent either to double maneuver or to keep spending cards on blocks [2].
+**How to do it:** Her modest attacks still hit hard enough to demand blocks, and her ability replaces the cards she spends keeping up that pressure [2][4][5]. Boosting into attack range is almost always worthwhile because you draw back up [2]. Ideally, go first and use a boosted maneuver to attack on turn 1; if that opening is unavailable, start slowly and increase the pressure once they engage [2]. Polymorphy places her anywhere and sets her movement to 5, but is discarded if she isn't in a zone with an opponent, so it rewards aggression [1][3]. Owlform starts at 3 and adds 1 per card discarded from hand, supporting hit-and-run play as well [1][4].
+**Watch out for:** If the opponent draws enough to maintain a larger hand, this plan can fall apart; switch to getting more value from each card [2]. Pushing too hard can exhaust her deck [6].
 
 ### Plan B: Stall and control
 **Goal:** Keep your distance, attack about once a turn, and grind out an advantage [7].
-**How to do it:** She and Dijkstra have many discard and look-at-their-hand effects; strip the opponent down to a few good cards, so they must draw heavily, and you will often know when your big attacks can land [1][7]. Spellbreaker cancels effects and ends the turn; played first, it works as a pass when your hand is safe and you are ahead [1][7]. Use Polymorphy to escape, and put Dijkstra where they can't reach Philippa without double maneuvering [7]. Stalling suits opponents who burn out fast; against one who grows stronger the longer the game runs, attack [7].
-**Watch out for:** If Dijkstra dies before using Spymaster's ruse, you may have to switch to aggression [7]. One player finds her damage too low to finish games this way [8].
+**How to do it:** Use Philippa and Dijkstra's forced discards and hand reveals to leave the opponent with only a few good cards so they must draw heavily, using knowledge of their hand to time big attacks [1][7]. Spellbreaker cancels effects and ends the turn; as your first action, it can serve as a pass when your hand is safe and you are ahead [1][7]. Escape with Polymorphy and position Dijkstra so reaching Philippa requires a double maneuver [7]. Stall when the opponent burns out quickly; attack when time makes them stronger [7].
+**Watch out for:** If Dijkstra dies before using Spymaster's ruse, you may have to switch to aggression [7]. Another player finds her damage too low to finish games this way [8].
 
 ### How they lose
-- A first-turn or map disadvantage [2].
-- Opponents who keep hand advantage [2].
-- Her many attacks can leave her short of defenses, and her defenses set up counter-attacks rather than protect her [9].
-- Low health: a glass cannon [6].
+- Turn order or the map can put her at a disadvantage [2].
+- Opponents who maintain a larger hand can withstand her pressure [2].
+- An abundance of attacks can leave her short of defenses, which often do more to set up counter-attacks than protect her [9].
+- Her low health makes her a glass cannon [6].
 
 ### Key cards
-- **Do my bidding**: returns their attack and picks the card they must play [1]; ideally it pulls out a versatile card for more attacks later [2].
-- **Polymorphy**: called the best escape card in the game [7].
-- **Regicide**: 6 against a hero [1].
-- **Spymaster's ruse**: Dijkstra's scheme; they reveal 4, you discard 2 of them [1].
+- **Do my bidding**: Returns their attack and lets you choose its replacement [1]. Ideally, draw out a versatile card so you can sustain more attacks on later turns [2].
+- **Polymorphy**: Called the best escape card in the game [7].
+- **Regicide**: Has a value of 6 against a hero [1].
+- **Spymaster's ruse**: Dijkstra makes the opponent reveal 4 cards, then lets you choose 2 to discard [1].
 
 ### Tips
-- A small map makes engaging easier; a big one makes the most of 5 movement [8].
-- Pick the plan by your hand, the map and the opponent [4][7].
-- Some rate her the weakest of her sets, but she has several playstyles [9].
+- Small maps make engaging easier, while large maps let you make the most of 5 movement [8].
+- Choose your plan according to your hand, the map and the opponent [4][7].
+- Some consider her the weakest fighter in her sets, though she supports several playstyles [9].
 
 ### References
 1. Restoration Games. *Unmatched: The Witcher: Realms Fall*, Philippa Eilhart deck. Card text as recorded in `input/heroes.json`.
@@ -2890,31 +2890,31 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 <!-- id: eredin -->
 ## Eredin Bréacc Glas
 
-**In short:** A melee hero with 14 health and 2 movement, plus four 1-health Red Riders [1]. Once all the Riders are defeated, Eredin is ENRAGED: +1 to his combat cards, move 3, and many of his cards gain extra effects [1]. Most players get the Riders killed as fast as possible and then hit hard [2][3][4], but some say it depends on the game [5][6].
+**In short:** Eredin is a melee hero with 14 health and 2 movement, accompanied by four 1-health Red Riders [1]. Once all the Riders are defeated, Eredin becomes ENRAGED: his combat cards gain +1, his movement becomes 3 and many cards gain extra effects [1]. Most players favor losing the Riders quickly and following with heavy attacks [2][3][4]; others choose their timing according to the game [5][6].
 
 ### Plan A: Enrage fast
-**Goal:** Get every Red Rider defeated quickly, then overpower the opponent [2][3][4].
-**How to do it:** The Riders are weak; the value is in losing them [3]. Getting the opponent to kill them is the hard part [7]. You can also defeat them yourself: Foul purpose defeats a Rider to come back to your hand, and Icy guile defeats one to ignore the attacker's value [1]. Pin the opponent with Riders, keeping one nearby for Portal defense [8]. Once enraged he can attack anywhere with a face-up Foul purpose, hit for 5 with a Backhand that discards a random card, or turn Implacable into an attack [1][9][4]. On defense, Wild hunt deals 2 to every adjacent opponent and Skirmish is a 5 [1][9]. Used on attack, his Feints are free damage [4].
-**Watch out for:** Some cards are dead without Riders; one player lost a game holding only Portal defense [10]. Boost to cycle past them [11].
+**Goal:** Lose every Red Rider quickly, then overpower the opponent [2][3][4].
+**How to do it:** The Riders offer little strength themselves; their main value comes from being defeated [3]. Persuading the opponent to kill them is the difficult part [7]. You can also defeat them yourself: Foul purpose returns to your hand when you defeat a Rider, and Icy guile defeats one to ignore the attacker's value [1]. Pin the opponent with Riders, keeping one nearby for Portal defense [8]. Once enraged, attack anywhere with a face-up Foul purpose, combine a 5-value Backhand with a random discard, or play Implacable as an attack [1][9][4]. On defense, Wild hunt deals 2 to every adjacent opponent and Skirmish is a 5 [1][9]. His Feints provide free damage when used to attack [4].
+**Watch out for:** Losing the Riders leaves some cards unusable; one player lost with only Portal defense in hand [10]. Spend those cards on boosts to keep your hand moving [11].
 
 ### Plan B: Use the Riders first
-**Goal:** Spend the first half grinding down the opponent's defenses, so the late push lands [6].
-**How to do it:** Attack with Foul purpose, defeat a Rider to get it back, then bring Riders back with Unyielding hordes and keep stripping their defenses [1][6]. For the final push, hold Backhand, Foul purpose and both Might of the Aen Elle, ideally with Portal defense too [6]. Whether to rush the Riders or keep them is the key read, and it depends on the opponent [5][6].
-**Watch out for:** Enraged with nothing to attack with, his values are only a little higher [6]. Spending his few cancels early leaves him none later [6].
+**Goal:** Wear down defenses during the first half of the game to clear the way for a final push [6].
+**How to do it:** Attack with Foul purpose and defeat a Rider to recover it, then revive Riders with Unyielding hordes to keep drawing out defenses [1][6]. For the final push, hold Backhand, Foul purpose and both Might of the Aen Elle, ideally with Portal defense too [6]. The key decision is whether to lose the Riders quickly or keep them, and the opponent determines that choice [5][6].
+**Watch out for:** The small increase in value does little if he becomes enraged without attacks in hand [6]. Spending his few cancels early leaves him none later [6].
 
 ### How they lose
-- Ranged opponents on very open maps [8].
-- An empty, enraged hand: lots of flair, no damage [6].
+- Ranged opponents on very open maps cause problems [8].
+- Becoming enraged with an empty hand leaves him unable to deal damage [6].
 
 ### Key cards
-- **Icy guile**: its cancel needs Eredin already enraged, so it can't cancel and ignore on the same play; with one Rider left, it's a surprise 3-value ignore [12]. Another player says killing the last Rider with it does both [6].
-- **Portal defense**: swaps Eredin with an adjacent friendly fighter, who becomes the defender; enraged, draws 2 [1]. A 0 defense without an adjacent Rider [6]; once enraged and far ahead, the draw is worth the hit [13].
-- **Foul purpose**: enraged, it targets a fighter in any space [1][6].
-- **Might of the Aen Elle**: draws 1, gains an action, and only combat and exhaustion damage hurt him while it stays [1].
+- **Icy guile**: Players disagree on its timing. One explains that the cancel checks whether Eredin is already enraged, preventing a cancel and ignore on the same play; with one Rider left, it instead offers a surprise 3-value ignore [12]. Another says defeating the last Rider with it triggers both [6].
+- **Portal defense**: Swaps Eredin with an adjacent friendly fighter, who becomes the defender; while enraged, he draws 2 [1]. It is a 0-value defense without an adjacent Rider [6]; once enraged with a large lead, he can afford to take the hit for the draw [13].
+- **Foul purpose**: While enraged, Eredin can target a fighter in any space [1][6].
+- **Might of the Aen Elle**: Draws 1 and gains an action; while it remains active, only combat and exhaustion damage can hurt him [1].
 
 ### Tips
 - The revives are usually not worth it [4].
-- Learn which approach suits each opponent by playing him a lot [5].
+- Experience helps you judge which approach suits each opponent [5].
 
 ### References
 1. Restoration Games. *Unmatched: The Witcher: Realms Fall*, Eredin Bréacc Glas deck. Card text as recorded in `input/heroes.json`.
@@ -2939,34 +2939,34 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 <!-- id: muhammad_ali -->
 ## Muhammad Ali
 
-**In short:** A melee hero with 16 health, 3 movement and no sidekicks [1]. He starts in Float Like a Butterfly (attack from 2 spaces away, plus the butterfly effects on his cards) and switches stance each time he wins a combat as attacker; Sting Like a Bee adds +2 to his attacks [1]. He plays like a boxer: patient, mobile, waiting for the opening [2][3][4].
+**In short:** Ali is a melee hero with 16 health, 3 movement and no sidekicks [1]. He begins in Float Like a Butterfly, attacking from 2 spaces away and using his cards' butterfly effects; each combat he wins as attacker changes his stance, and Sting Like a Bee adds +2 to his attacks [1]. A boxer's patience and mobility help him wait for an opening [2][3][4].
 
 ### Plan A: Float and wear them down
-**Goal:** Play the longer game, keep your guard up, and make the opponent come to you [2][3].
-**How to do it:** Stay light on your feet and just out of reach, and stand where you could trigger Fancy footwork even if you don't hold it [3][5]. Fancy footwork ignores the attack's value if Ali shares no zone with the attacker [1]. Look at their hand often with Stronger than the skill and Hard to be humble, counting their defenses and the attacks that would trigger Rope-a-dope [5][6]. Bait out Feints with low attacks [7], and switch stance by forcing poor defenses [6]. With move 3 and reach 2 he can kite many fighters [8], and his recursion can win on card count [8]. His healing lets him take hits to build an advantage [9].
-**Watch out for:** Without enough damage, you only tickle until exhaustion [10].
+**Goal:** Keep your guard up through a longer game and make the opponent approach [2][3].
+**How to do it:** Stay just out of reach and position to threaten Fancy footwork, even when it is not in your hand [3][5]. Fancy footwork ignores the attack's value if Ali shares no zone with the attacker [1]. Use Stronger than the skill and Hard to be humble to inspect their hand regularly, counting their defenses and noting which attacks would trigger Rope-a-dope [5][6]. Bait out Feints with low attacks [7], and switch stance by forcing poor defenses [6]. His move 3 and reach 2 let him kite many fighters [8], while recycling cards can give him enough of a card-count advantage to win [8]. His healing lets him take hits to build an advantage [9].
+**Watch out for:** Without enough damage, he makes little progress before exhaustion [10].
 
 ### Plan B: The flurry
-**Goal:** Once their defenses are spent, unload a multi-attack turn [2][3][5].
-**How to do it:** Close and clinch on defense sets up the counter [3][6]. In Bee, play the big cards: The greatest, Champion of the world and Momentous Shift [6], a 7 in Bee [5]. The greatest gains 2 actions if you dealt 6 or more combat damage this turn, counting earlier attacks [1][5]. Answer the bell moves 3, heals 2 and gains an action, to reach them or set up a double attack [1][5][6]. Attack in Bee, switch back to Butterfly, then play Louisville lip for a random discard [5].
-**Watch out for:** Don't over-commit: strike, retreat, repeat [6]. Several players call The greatest a trap to build a plan around [11][8], though it can fire on an undefended sidekick [5].
+**Goal:** Launch several attacks in one turn once their defenses are spent [2][3][5].
+**How to do it:** Defending with Close and clinch sets up a counter-attack [3][6]. Commit your big cards while in Bee: The greatest, Champion of the world and Momentous Shift [6], which reaches 7 in Bee [5]. The greatest gains 2 actions if you dealt 6 or more combat damage this turn, counting earlier attacks [1][5]. Answer the bell moves 3, heals 2 and gains an action, helping you reach the opponent or set up a double attack [1][5][6]. Attack in Bee, switch back to Butterfly, then play Louisville lip for a random discard [5].
+**Watch out for:** Avoid overcommitting: strike, retreat and repeat [6]. Several players caution against building the plan around The greatest [11][8], although an undefended sidekick can let its effect trigger [5].
 
 ### How they lose
-- In Bee most of his defense effects are off, so opponents strike then [2][8]. He can get stuck there [10].
-- Strong defenses can lock him in Butterfly, and the stance tells the opponent what is coming [12].
-- Many attacks and schemes can leave him without defenses [12].
-- Hardest against fighters who are not slow melee fighters with sidekicks [10].
+- Most of his defensive effects are inactive in Bee, giving opponents an opening to attack [2][8]. He can become stuck in that stance [10].
+- Strong defenses can lock him in Butterfly, and his stance reveals his intentions [12].
+- A hand full of attacks and schemes can leave him defenseless [12].
+- He has a harder time when opponents lack any of these traits: slow movement, melee attacks and sidekicks [10].
 
 ### Key cards
-- **Champion of the world**: his precious 4-value versatiles, also his best defense [5].
-- **Stronger than the skill**: shows their hand and, on a win, shuffles a card back into their deck [1].
-- **Ali Shuffle**: boostable in Butterfly, and a good way to switch to Bee [1][6].
-- **Momentous Shift**: 5 if he moved this turn; using it well is vital [1][10].
+- **Champion of the world**: A valuable 4-value versatile that also serves as his best defense [5].
+- **Stronger than the skill**: Shows their hand and, on a win, shuffles a card back into their deck [1].
+- **Ali Shuffle**: Boostable in Butterfly, making it a good way to switch to Bee [1][6].
+- **Momentous Shift**: Worth 5 if he moved this turn; making good use of it is vital [1][10].
 
 ### Tips
 - Try to end your turn in Butterfly [6].
 - Jab, Champion of the world and Close and clinch can set up a Momentous Shift or Fancy footwork [6].
-- Players disagree on his strength: some find him strong but very hard [13][5], others weak [14][12].
+- Players disagree on his strength: some find him strong but difficult to master [13][5], while others consider him weak [14][12].
 
 ### References
 1. Restoration Games. *Unmatched: Muhammad Ali vs. Bruce Lee*, Muhammad Ali deck. Card text as recorded in `input/heroes.json`.
@@ -2997,30 +2997,30 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 <!-- id: ancient_leshen -->
 ## Ancient Leshen
 
-**In short:** A ranged hero with 13 health and only 1 movement, plus two 1-health Wolves that move 3 [1]. The Leshen adds +3 to its attacks if it already attacked this turn [1]. It plays a patient game: make the opponent come to you, hide behind the Wolves, and heal [2][3].
+**In short:** The Leshen is a ranged hero with 13 health and only 1 movement, accompanied by two 1-health Wolves that move 3 [1]. The Leshen adds +3 to its attacks if it already attacked this turn [1]. Draw the opponent toward you with patient play, healing behind the shelter of the Wolves [2][3].
 
 ### Plan A: Make them come to you
-**Goal:** Force the opponent to walk into your zone, through your Wolves [2][3].
-**How to do it:** Don't be the one chasing [3]. The best way to draw them in is to leave them holding more cards than you [3]. Double maneuver a lot to build up your own hand, and almost always save your versatile cards for defense [2]. The Wolves are good for pushing this hand plan, and they can do the attacking instead of the Leshen [3]. Vanish into murder deals 1 damage to each opponent in the Leshen's zone, removes it from the board and places it anywhere at the start of your next turn [1]; once the Wolves are gone it works as a double pass [4]. Unlike some vanish effects it doesn't end your turn, so if you play it first with no Wolves out you'll probably maneuver as your second action [5].
-**Watch out for:** One player calls the Leshen unreliable, more a casual pick than a competitive one [2].
+**Goal:** Make the opponent approach through your Wolves and enter your zone [2][3].
+**How to do it:** Leave the chasing to the opponent [3]. Holding fewer cards than they do is the best way to draw them in [3]. Double maneuver often to build your own hand, and almost always save your versatile cards for defense [2]. Use the Wolves to maintain this difference in hand size or to attack in the Leshen's place [3]. Vanish into murder deals 1 damage to each opponent in the Leshen's zone, removes it from the board and places it anywhere at the start of your next turn [1]; after the Wolves are gone, it can serve as a double pass [4]. It does not end your turn as some vanish effects do: played first with no Wolves on the board, it will probably leave you maneuvering for your second action [5].
+**Watch out for:** The Leshen has been described as unreliable and better suited to casual than competitive play [2].
 
 ### Plan B: The pack holds the line
-**Goal:** Keep the Wolves between the opponent and the Leshen, and heal [2][3].
-**How to do it:** Position so attackers must hit the Wolves first, and defend with or for them so they can't reach the Leshen [2][3]. Defend and revive them well and they prove surprisingly tanky [3]. Primeval slam and Strength of the pack summon a Wolf in the Leshen's zone [1]. Strength of the pack also heals the Leshen 1 at the start of each turn while a Wolf stays in its zone [1]. Aim for about 5 to 8 healing a game [2][3].
-**Watch out for:** The Leshen has only 9 defense cards of its own [3], so positioning matters [3].
+**Goal:** Heal while keeping Wolves between the Leshen and its opponent [2][3].
+**How to do it:** Make attackers go through the Wolves first, using them to defend or playing defense cards for them to keep the Leshen out of reach [2][3]. Defending and reviving the Wolves makes them surprisingly durable [3]. Primeval slam and Strength of the pack summon a Wolf in the Leshen's zone [1]. Strength of the pack also heals the Leshen 1 at the start of each turn while a Wolf stays in its zone [1]. Aim for about 5 to 8 healing a game [2][3].
+**Watch out for:** With only 9 defensive cards of its own [3], the Leshen depends on careful positioning [3].
 
 ### How they lose
-- Bad positioning leaves its few defenses exposed [3].
-- An opponent who doesn't take the bait and has fewer cards [3].
+- Poor positioning leaves its limited defenses exposed [3].
+- The plan can stall when opponents hold fewer cards and refuse to approach [3].
 
 ### Key cards
-- **Primeval guardian**: a 5-value defense; the attacker adds the boost of the top card of their deck, and each Wolf moves up to 3 spaces [1].
-- **Strength of the pack**: a Wolf plus ongoing healing [1][2].
-- **Vanish into murder**: escape and a pass [1][4].
+- **Primeval guardian**: A 5-value defense that lets the attacker add the top card's boost from their deck and moves each Wolf up to 3 spaces [1].
+- **Strength of the pack**: Summons a Wolf and provides ongoing healing [1][2].
+- **Vanish into murder**: Provides an escape and a way to pass [1][4].
 
 ### Tips
-- It is comfortable holding just one defense, because opponents rarely want to hit it twice [6].
-- It has a decent exhaustion game [3][5].
+- Holding just one defense can be comfortable, since opponents rarely want to attack it twice [6].
+- It can play a decent game of exhaustion [3][5].
 
 ### References
 1. Restoration Games. *Unmatched: The Witcher: Steel and Silver*, Ancient Leshen deck. Card text as recorded in `input/heroes.json`.
@@ -3040,32 +3040,32 @@ The spells are not in `input/heroes.json`; they are as Gridbeast lists them.
 <!-- id: blackbeard -->
 ## Blackbeard
 
-**In short:** A ranged hero with 13 health and 2 movement, plus two 1-health Sea Dogs [1]. He starts with 2 of the 3 doubloons; he can pay one at the start of his turn for an extra action, and pays one whenever he takes combat damage [1]. Many of his card effects can be ignored if the opponent pays a ransom, which hands those doubloons to Blackbeard [1]. He plays like chess: planning when to hoard coins and when to spend them [2].
+**In short:** Blackbeard is a ranged hero with 13 health and 2 movement, accompanied by two 1-health Sea Dogs [1]. He starts with 2 of the 3 doubloons; he can pay one at the start of his turn for an extra action, and pays one whenever he takes combat damage [1]. Many of his card effects can be ignored if the opponent pays a ransom, which hands those doubloons to Blackbeard [1]. Playing him well means planning ahead and judging when to hold coins or spend them [2].
 
 ### Plan A: Run them out of resources
-**Goal:** Drain the opponent, then strike when they are vulnerable [3].
-**How to do it:** Force the opponent to take the initiative, for example with Plunder, so they boost cards away; body block with Sea Dogs; and use the chosen-discard effects [1][3]. Plunder moves each of your fighters up to 3 spaces through opponents and steals a doubloon from the treasury [1]. Use the Sea Dogs for the steady game and find the right moments to bring Blackbeard in [2]. Big, corridor-heavy maps suit him, and anti-range maps help against ranged aggressive fighters [3].
-**Watch out for:** Once the Sea Dogs die, he becomes a walking piggy bank for the opponent to punch [4].
+**Goal:** Drain the opponent's resources and strike when they are vulnerable [3].
+**How to do it:** Force the opponent to take the initiative with Plunder and spend cards on boosts; block their path with Sea Dogs, then use effects that let you choose their discards [1][3]. Plunder moves each of your fighters up to 3 spaces through opponents and steals a doubloon from the treasury [1]. Let the Sea Dogs hold your position until the right moment to bring Blackbeard in [2]. He favors large maps with plenty of corridors; maps that hinder range help against aggressive ranged fighters [3].
+**Watch out for:** Once the Sea Dogs die, opponents can attack Blackbeard to take his doubloons [4].
 
 ### Plan B: Spend for tempo
-**Goal:** Turn a full treasury into an extra-action turn that forces payments [5][6].
-**How to do it:** Take the action gain only when you hold all 3 doubloons, then attack with Give no quarter (3, or 5 with another friendly fighter next to the target, and gains an action unless they pay) or Avast Ye! (a 5 with two ransoms) [1][5]. They'll likely pay for one, and your next attacks fire their nasty effects freely [5]. Either they hand back the coin or you get a fourth action [6]. Taking the extra action on a Plunder turn moves you 3, keeps your doubloons and still leaves 2 actions [7].
-**Watch out for:** Once the opponent holds 2 doubloons, his strongest two-coin effects stop forcing payment, and paying 1 coin starts to feel cheap for them [5].
+**Goal:** Turn a full supply of doubloons into an extra-action turn that forces ransom payments [5][6].
+**How to do it:** Wait until you hold all 3 doubloons to take the extra action, then follow with Give no quarter, worth 3 or 5 with another friendly fighter beside the target and gaining an action unless they pay, or Avast Ye!, a 5 with two ransoms [1][5]. They will likely pay to avoid an effect, leaving your next attacks free to resolve their punishing effects [5]. The choice is theirs: return the coin or give you a fourth action [6]. Pair the extra action with Plunder to move 3, retain your doubloons and still have 2 actions left [7].
+**Watch out for:** Once the opponent holds 2 doubloons, his strongest two-coin effects lose their power to force payment, while paying 1 coin becomes less painful [5].
 
 ### How they lose
-- Losing combats and getting hit: doubloons are hard to win back, and without them he has no gas [5].
-- Losing his Sea Dogs [4][5].
+- Lost combats and incoming hits cost him doubloons, which are hard to recover; losing them drains his momentum [5].
+- Losing his Sea Dogs leaves him vulnerable [4][5].
 
 ### Key cards
-- **Queen Anne's revenge**: a 7-value versatile, -2 for each doubloon the opponent pays; its effect can't be cancelled [1].
-- **A brace of primed pistols**: 3 damage to an opponent in his zone unless they pay 2 [1].
-- **Fearsome and calculating**: look at their hand and pick a discard, unless they pay [1].
-- **Show a leg!**: summons a Sea Dog in his zone [1].
+- **Queen Anne's revenge**: A 7-value versatile that loses 2 for each doubloon paid by the opponent; its effect cannot be cancelled [1].
+- **A brace of primed pistols**: Deals 3 damage to an opponent in his zone unless they pay 2 [1].
+- **Fearsome and calculating**: Lets you inspect their hand and choose a discard unless they pay [1].
+- **Show a leg!**: Summons a Sea Dog in his zone [1].
 
 ### Tips
-- Protect the Sea Dogs, and defending them is fine [3][5][6].
+- Protect the Sea Dogs; spending cards to defend them is worthwhile [3][5][6].
 - Position so attackers must go through the Sea Dogs to reach him [5].
-- You can skip the action gain entirely and fire many effects instead [5].
+- Forgoing the extra action entirely is also an option, letting more card effects resolve [5].
 
 ### References
 1. Restoration Games. *Unmatched: Battle of Legends, Volume 3*, Blackbeard deck. Card text as recorded in `input/heroes.json`.

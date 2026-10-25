@@ -1624,25 +1624,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: titania -->
 ## Titania
 
-**In short:** A fairy queen whose ongoing glamours shape the game; she burns through them to power up low-value cards, with Oberon hitting hard beside her [1][2].
+**In short:** The fairy queen Titania shapes the game with ongoing glamours, discarding them to strengthen low-value cards while Oberon delivers heavy hits [1][2].
 
 ### Plan A: Cycle the glamours
-**Goal:** The right glamour up, and steady discards [2] · **How:** discard for Fairy Song, Whisked Away and the cancel on Protection Of The Fairy Woods; The Moon Looks Down recovers one [1][2] · **Watch out:** the order is luck [2].
+**Goal:** Keep useful glamours active while steadily discarding others [2] · **How:** discard for Fairy Song, Whisked Away or Protection Of The Fairy Woods' cancel; recover a glamour with The Moon Looks Down [1][2] · **Watch out:** you cannot control their order [2].
 
 ### Plan B: The scheme chain
-**Goal:** Free schemes under Glamour of Rhyme [2] · **How:** Gift Of The Fair Folk, What Fools These Mortals Be, then Queen Of The Fairies or Met By Moonlight [1][2] · **Watch out:** Queen is weak until 4–5 glamours are gone [2].
+**Goal:** Chain free schemes under Glamour of Rhyme [2] · **How:** play Gift Of The Fair Folk and What Fools These Mortals Be, then Queen Of The Fairies or Met By Moonlight [1][2] · **Watch out:** Queen Of The Fairies is weak until 4–5 glamours are discarded [2].
 
 ### How they lose
-- Many sidekicks or cancels against her [2].
-- No glamour up means no cancel on defense [3].
+- She struggles with numerous opposing sidekicks or cancels [2].
+- Without an active glamour, she cannot cancel on defense [3].
 
 ### Key cards
-- **Met By Moonlight**: Oberon's 5, placing him beside her [1].
-- **But A Dream**: cancels, ignores and returns the attack [1].
+- **Met By Moonlight**: Oberon attacks for 5, then appears beside Titania [1].
+- **But A Dream**: Cancels the attack's effects, ignores its value and returns it [1].
 
 ### Tips
 - Use Glamour of Jealousy to protect Titania or save Oberon [2].
-- Bait opponents into her zone for A Momentary Glance [2].
+- Lure opponents into her zone for A Momentary Glance [2].
 
 ### References
 1. Restoration Games. *Unmatched: Slings and Arrows*, Titania deck.
@@ -1654,24 +1654,24 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: the_wayward_sisters -->
 ## The Wayward Sisters
 
-**In short:** Three fragile witches who brew ingredients in a cauldron to cast spells after attacking: healing, movement, damage or an extra action [1][2].
+**In short:** These three fragile witches fill a cauldron with ingredients, then cast spells after attacking to heal, move fighters, deal damage or gain an extra action [1][2].
 
 ### Plan A: Brew the right spell
-**Goal:** Cast what the moment needs [2] · **How:** play cards that match a spell; All-Seeing Familiar and Curious Familiar fix the cauldron [1][2] · **Watch out:** don't overfill the cauldron [2].
+**Goal:** Choose a spell to suit the situation [2] · **How:** supply the ingredients through card play, adjusting the cauldron with All-Seeing Familiar and Curious Familiar [1][2] · **Watch out:** don't overfill the cauldron [2].
 
 ### Plan B: Spread out and survive
-**Goal:** Keep all three alive [2] · **How:** The Stars Align across zones, Unnatural Remedy for healing, Ward on defense [1][2] · **Watch out:** 6 health each [2].
+**Goal:** Keep all three Sisters alive [2] · **How:** spread across zones for The Stars Align, heal with Unnatural Remedy and defend with Ward [1][2] · **Watch out:** each Sister has only 6 health [2].
 
 ### How they lose
-- Losing one Sister hurts badly [2][3].
-- Steady pressure and area damage [3][4].
+- Even one Sister's defeat is a serious loss [2][3].
+- They are vulnerable to steady pressure and area damage [3][4].
 
 ### Key cards
-- **Ward**: their best defense [2].
-- **Something Wicked This Way Comes**: two free spells [1].
+- **Ward**: Their best defense [2].
+- **Something Wicked This Way Comes**: Casts two spells for free [1].
 
 ### Tips
-- You choose which Sister an effect on "your hero" hits [2].
+- When an effect hits "your hero", you choose the Sister [2].
 - Use The Stars Align before anyone falls [2].
 
 ### References
@@ -1685,25 +1685,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: geralt -->
 ## Geralt of Rivia
 
-**In short:** A tough, flexible witcher who picks his gear before the game and chooses between a big-burst and a long, grinding plan [1][2][3].
+**In short:** Geralt is a tough, flexible witcher who chooses gear before the game for a powerful burst or a longer battle of attrition [1][2][3].
 
 ### Plan A: Burst them down
-**Goal:** A full hand, then one huge turn [3][4] · **How:** Sword of steel and Tawny Owl for extra actions and cards [1][5] · **Watch out:** potions are lost if you don't attack [1].
+**Goal:** Prepare a full hand for one decisive turn [3][4] · **How:** gain extra actions and cards with Sword of steel and Tawny Owl [1][5] · **Watch out:** potions are lost if you don't attack [1].
 
 ### Plan B: Wear them down
-**Goal:** Out-last the opponent [3] · **How:** keep Dandelion alive for Plot twist discards; Sword of silver for mind games [1][4] · **Watch out:** Dandelion dies fast [6].
+**Goal:** Outlast the opponent [3] · **How:** preserve Dandelion for Plot twist discards, and make the opponent second-guess defenses with Sword of silver [1][4] · **Watch out:** Dandelion is easily lost [6].
 
 ### How they lose
-- Cards spent on defense can't attack [7].
-- No healing and slow movement [7].
+- Defending with a card means giving up its attack [7].
+- Slow movement and a lack of healing limit him [7].
 
 ### Key cards
-- **Gear: Wolf Medallion**: cancels effects, and ignores the value of a non-adjacent attacker [1].
-- **Plot twist**: picks a card for them to discard [1].
+- **Gear: Wolf Medallion**: Cancels effects, and ignores the value of a non-adjacent attacker [1].
+- **Plot twist**: Lets you choose a card for the opponent to discard [1].
 
 ### Tips
 - Gear choice can decide the game [2].
-- Choose your plan by the opponent [3].
+- Choose your plan according to the opponent [3].
 
 ### References
 1. Restoration Games. *Unmatched: The Witcher: Steel and Silver*, Geralt of Rivia deck.
@@ -1719,25 +1719,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: ciri -->
 ## Ciri
 
-**In short:** A late-game powerhouse whose cards grow with the source cards in her discard pile; weak early, flexible and very strong once they pile up [1][2][3].
+**In short:** Ciri starts weak and builds into a flexible late-game powerhouse as source cards in her discard pile strengthen her cards [1][2][3].
 
 ### Plan A: Survive, then take over
-**Goal:** Reach the late game [3] · **How:** stay safe, boost and maneuver to stock source cards, and let Ihuarraquax shield her [2][3][4] · **Watch out:** opponents rush her early [2].
+**Goal:** Reach the late game [3] · **How:** let Ihuarraquax shield her while she stays safe, boosting and maneuvering to stock source cards [2][3][4] · **Watch out:** opponents rush her early [2].
 
 ### Plan B: Pick a win condition
-**Goal:** The route that fits the game [5] · **How:** a big Channel the source, 7-value Lion cub of Cintra with Zireael discards, or Unicorn ally aggression [1][5] · **Watch out:** saved cancels in the late game [3].
+**Goal:** Choose a way to win that fits the game [5] · **How:** pursue a big Channel the source, combine 7-value Lion cub of Cintra attacks with Zireael discards, or use Unicorn ally for aggression [1][5] · **Watch out:** opponents may save cancels for the late game [3].
 
 ### How they lose
-- Rushed early [2][3].
-- Exhaustion from overdrawing [6].
+- Early aggression can overwhelm her [2][3].
+- Drawing too freely leads to exhaustion [6].
 
 ### Key cards
-- **Lion cub of Cintra**: 7 at 5 sources, her main attack [1][2].
-- **Unicorn ally**: play it at 5+ cards to skip the draw [6].
+- **Lion cub of Cintra**: Her main attack, worth 7 at 5 sources [1][2].
+- **Unicorn ally**: Play with 5+ cards to avoid its draw [6].
 
 ### Tips
-- Save a Lion cub of Cintra or two for later [2].
-- Choose your plan by the opponent [5].
+- Hold one or two Lion cub of Cintra copies for later [2].
+- Choose your plan according to the opponent [5].
 
 ### References
 1. Restoration Games. *Unmatched: The Witcher: Steel and Silver*, Ciri deck.
@@ -1752,25 +1752,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: yennefer_triss -->
 ## Yennefer & Triss
 
-**In short:** Two fragile ranged sorceresses, one hero and one sidekick, who win the value game with heavy attacks and punishing discards [1][2][3].
+**In short:** These fragile ranged sorceresses fight as hero and sidekick, gaining the upper hand with heavy attacks and punishing discards [1][2][3].
 
 ### Plan A: Yennefer leads
-**Goal:** Big hits once their defenses are gone [4] · **How:** uncancellable boosts and Incinerate when the opponent is low on cards [1][5] · **Watch out:** boosts are small, so don't boost every attack [6].
+**Goal:** Strike hard once their defenses run out [4] · **How:** wait for a small opposing hand, then use Incinerate and uncancellable boosts [1][5] · **Watch out:** small boosts are not worth spending on every attack [6].
 
 ### Plan B: Triss leads
-**Goal:** Scheme damage on adjacent opponents [4] · **How:** play every scheme, and keep Triss back so attackers end beside her [4][6] · **Watch out:** melee range is dangerous [7].
+**Goal:** Damage adjacent opponents through schemes [4] · **How:** keep Triss back so attackers end beside her, then use every scheme [4][6] · **Watch out:** melee range is dangerous [7].
 
 ### How they lose
-- Low health under steady pressure [3].
-- Few true defense cards [2].
+- Sustained pressure punishes their low health [3].
+- Their supply of true defense cards is limited [2].
 
 ### Key cards
-- **Merigold's Hailstorm**: one of the strongest attacks printed [6].
-- **Incinerate**: a 7 they must discard 2 to ignore [1].
+- **Merigold's Hailstorm**: One of the strongest attacks printed [6].
+- **Incinerate**: A 7-value attack whose value the opponent must discard 2 cards to ignore [1].
 
 ### Tips
-- Keep your distance and hoard defenses [3].
-- Make the opponent pay for every boost [8].
+- Keep your distance and hold onto defenses [3].
+- Every boost should make the opponent pay [8].
 
 ### References
 1. Restoration Games. *Unmatched: The Witcher: Realms Fall*, Yennefer & Triss deck.
@@ -1787,25 +1787,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: philippa_eilhart -->
 ## Philippa Eilhart
 
-**In short:** A ranged sorceress who refills to 4 cards every turn, so she can attack relentlessly or stall with discards and hand control [1][2][3].
+**In short:** Refilling her hand to 4 cards each turn lets Philippa sustain ranged pressure or play more slowly through discards and hand control [1][2][3].
 
 ### Plan A: Attack every turn
-**Goal:** Constant pressure [2] · **How:** boost and attack freely, since her ability draws you back up; Polymorphy keeps her in their zone [1][2] · **Watch out:** opponents with strong draw [2].
+**Goal:** Keep up constant pressure [2] · **How:** use boosts and attacks freely, replenishing her hand through her ability and staying in their zone with Polymorphy [1][2] · **Watch out:** opponents with strong draw [2].
 
 ### Plan B: Stall and control
-**Goal:** Grind a card advantage [3] · **How:** discards and hand peeks, Spellbreaker as a pass, Dijkstra as a blocker [1][3] · **Watch out:** losing Dijkstra early [3].
+**Goal:** Establish a lasting advantage in cards [3] · **How:** inspect their hand and force discards, passing with Spellbreaker and blocking with Dijkstra [1][3] · **Watch out:** losing Dijkstra early [3].
 
 ### How they lose
-- Opponents who keep hand advantage [2].
-- Few defenses that truly protect her [4].
+- Opponents who maintain a larger hand can withstand her pressure [2].
+- Her defenses offer little direct protection [4].
 
 ### Key cards
-- **Do my bidding**: picks the card they must play [1].
-- **Polymorphy**: the best escape card in the game [3].
+- **Do my bidding**: Lets you choose the card they must play [1].
+- **Polymorphy**: The game's best escape card [3].
 
 ### Tips
-- Going first with a turn-1 attack is ideal [2].
-- Choose your plan by hand, map and opponent [3].
+- Ideally, go first and attack on turn 1 [2].
+- Choose your plan according to your hand, the map and the opponent [3].
 
 ### References
 1. Restoration Games. *Unmatched: The Witcher: Realms Fall*, Philippa Eilhart deck.
@@ -1818,25 +1818,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: eredin -->
 ## Eredin Bréacc Glas
 
-**In short:** A Wild Hunt king who grows stronger once his four Red Riders are gone; most players lose the Riders fast, then hit hard [1][2][3].
+**In short:** The Wild Hunt's king grows stronger after his four Red Riders fall; most players lose them quickly before launching heavy attacks [1][2][3].
 
 ### Plan A: Enrage fast
-**Goal:** All Riders defeated, then overpower them [2][3] · **How:** sacrifice Riders with Foul purpose and Icy guile, then attack with Backhand, Implacable and Wild hunt [1][4] · **Watch out:** Portal defense is dead without Riders [5].
+**Goal:** Overpower the opponent after losing every Rider [2][3] · **How:** use Foul purpose and Icy guile to sacrifice Riders, then attack with Backhand, Implacable and Wild hunt [1][4] · **Watch out:** Portal defense is dead without Riders [5].
 
 ### Plan B: Use the Riders first
-**Goal:** Grind down their defenses early [6] · **How:** loop Foul purpose and Unyielding hordes, then save a final push [1][6] · **Watch out:** an enraged but empty hand does little [6].
+**Goal:** Wear down their defenses early [6] · **How:** cycle Foul purpose and Unyielding hordes while saving cards for a final push [1][6] · **Watch out:** becoming enraged achieves little with an empty hand [6].
 
 ### How they lose
-- Ranged opponents on open maps [7].
-- No attacks left once enraged [6].
+- Ranged opponents on open maps cause problems [7].
+- Without attacks left when he becomes enraged, he cannot finish strongly [6].
 
 ### Key cards
-- **Foul purpose**: enraged, hits anywhere [1].
-- **Wild hunt**: 2 damage to each adjacent opponent when enraged [1].
+- **Foul purpose**: Targets any space while enraged [1].
+- **Wild hunt**: Deals 2 damage to each adjacent opponent when enraged [1].
 
 ### Tips
 - Revives are usually not worth it [3].
-- Rush or keep the Riders depending on the opponent [6].
+- Let the opponent guide whether you keep the Riders or lose them quickly [6].
 
 ### References
 1. Restoration Games. *Unmatched: The Witcher: Realms Fall*, Eredin Bréacc Glas deck.
@@ -1852,21 +1852,21 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: muhammad_ali -->
 ## Muhammad Ali
 
-**In short:** A mobile boxer who switches between a ranged, tricky Butterfly stance and a +2 Bee stance; patient until he sees the opening [1][2][3].
+**In short:** The mobile boxer Ali waits for an opening, switching between Butterfly's tricky ranged attacks and Bee's +2 bonus [1][2][3].
 
 ### Plan A: Float and wear them down
-**Goal:** Make them come to you [2][3] · **How:** stay out of reach, peek at their hand, bait Feints, threaten Fancy footwork [1][4][5] · **Watch out:** too little damage just tickles [6].
+**Goal:** Make the opponent approach [2][3] · **How:** inspect their hand while staying out of reach, baiting Feints and threatening Fancy footwork [1][4][5] · **Watch out:** low damage leaves him making little progress [6].
 
 ### Plan B: The flurry
-**Goal:** A multi-attack turn once their defenses are gone [2][3] · **How:** Close and clinch, Answer the bell, then The greatest or Momentous Shift in Bee [1][5] · **Watch out:** don't over-commit [5].
+**Goal:** Attack several times once their defenses run out [2][3] · **How:** prepare with Close and clinch and Answer the bell, then use The greatest or Momentous Shift in Bee [1][5] · **Watch out:** avoid overcommitting [5].
 
 ### How they lose
-- His defenses are weak in Bee [2][7].
-- The stance telegraphs his plan [8].
+- Bee leaves his defenses weak [2][7].
+- His stance makes his intentions clear [8].
 
 ### Key cards
-- **Champion of the world**: 4 value, his best defense too [4].
-- **Answer the bell**: move, heal and an action [1].
+- **Champion of the world**: Worth 4 and also his best defense [4].
+- **Answer the bell**: Provides movement, healing and an action [1].
 
 ### Tips
 - End turns in Butterfly when you can [5].
@@ -1887,24 +1887,24 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: ancient_leshen -->
 ## Ancient Leshen
 
-**In short:** A slow forest spirit that waits behind its Wolves, heals, and makes the opponent come to it [1][2][3].
+**In short:** The Leshen is a slow forest spirit that draws opponents toward it while healing behind its Wolves [1][2][3].
 
 ### Plan A: Make them come to you
-**Goal:** Draw them into your zone [2][3] · **How:** leave them holding more cards than you, double maneuver, save versatiles for defense [2][3] · **Watch out:** it is unreliable in competitive play [2].
+**Goal:** Lure the opponent into your zone [2][3] · **How:** let them hold more cards than you, using double maneuvers and saving versatiles for defense [2][3] · **Watch out:** competitive play exposes its unreliability [2].
 
 ### Plan B: The pack holds the line
-**Goal:** Wolves in front, steady healing [2][3] · **How:** summon Wolves with Primeval slam and Strength of the pack, and defend them [1][3] · **Watch out:** only 9 defenses of its own [3].
+**Goal:** Heal steadily behind a line of Wolves [2][3] · **How:** defend the Wolves you summon with Primeval slam and Strength of the pack [1][3] · **Watch out:** the Leshen has only 9 defenses of its own [3].
 
 ### How they lose
-- Poor positioning [3].
-- Opponents who won't take the bait [3].
+- Careless positioning exposes it [3].
+- The plan suffers when opponents refuse the bait [3].
 
 ### Key cards
-- **Primeval guardian**: a 5-value defense [1].
-- **Vanish into murder**: leaves the board and returns anywhere next turn [1].
+- **Primeval guardian**: A 5-value defense [1].
+- **Vanish into murder**: Removes the Leshen from the board and returns it anywhere next turn [1].
 
 ### Tips
-- Aim for 5 to 8 healing a game [2].
+- Try to recover 5 to 8 health per game [2].
 - Opponents rarely want to hit it twice [4].
 
 ### References
@@ -1918,25 +1918,25 @@ Fighters are in the same order as the site. Each entry starts with an `<!-- id: 
 <!-- id: blackbeard -->
 ## Blackbeard
 
-**In short:** A pirate who juggles doubloons: spend them for extra actions, or make opponents pay ransoms to dodge his nasty effects [1][2].
+**In short:** The pirate Blackbeard manages doubloons to buy extra actions and demand ransoms from opponents who want to avoid his punishing effects [1][2].
 
 ### Plan A: Run them out of resources
-**Goal:** Drain them, then strike [3] · **How:** Plunder to force their hand, Sea Dog body blocks, chosen discards [1][3] · **Watch out:** without Sea Dogs he's a piggy bank [4].
+**Goal:** Strike after draining the opponent's resources [3] · **How:** use Plunder to force their hand, Sea Dogs to block, and chosen discards to drain cards [1][3] · **Watch out:** losing the Sea Dogs lets opponents attack him for doubloons [4].
 
 ### Plan B: Spend for tempo
-**Goal:** An extra-action turn that forces payments [5] · **How:** with all 3 doubloons, take the action and attack with Give no quarter or Avast Ye! [1][5] · **Watch out:** once they hold 2 coins, ransoms stop biting [5].
+**Goal:** Buy an extra action and force ransom payments [5] · **How:** wait for all 3 doubloons, then take the action and attack with Give no quarter or Avast Ye! [1][5] · **Watch out:** ransoms lose their force once they hold 2 coins [5].
 
 ### How they lose
-- Lost combats bleed doubloons [5].
-- Dead Sea Dogs [4][5].
+- Lost combats drain his doubloons [5].
+- Losing the Sea Dogs leaves him vulnerable [4][5].
 
 ### Key cards
-- **Queen Anne's revenge**: 7 value, -2 per doubloon paid [1].
-- **Plunder**: moves everyone 3 and steals a doubloon [1].
+- **Queen Anne's revenge**: Starts at 7, losing 2 per doubloon paid [1].
+- **Plunder**: Moves everyone 3 and steals a doubloon [1].
 
 ### Tips
 - Protect the Sea Dogs [5].
-- Big, corridor-heavy maps suit him [3].
+- He favors large maps with plenty of corridors [3].
 
 ### References
 1. Restoration Games. *Unmatched: Battle of Legends, Volume 3*, Blackbeard deck.
