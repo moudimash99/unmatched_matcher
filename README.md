@@ -1,5 +1,18 @@
 # unmatched_matcher
 
+## Deploy
+
+The live site (unmatched.machaka.net) runs in k3s on the server. After merging to `main`, run on the server:
+
+```bash
+cd ~/unmatched_matcher && sh scripts/deploy.sh
+```
+
+It pulls, builds an image, loads it into k3s, rolls the deployment and updates the image in
+`~/Infra/k8s/apps/unmatched/unmatched.yaml` (commit that in `~/Infra`). Don't `docker compose up`:
+a second copy would write the same tournament data, so the compose service only starts with
+`--profile docker`.
+
 ## Win-rate stats
 
 Matchup stats come from [The Unmatched Club](https://www.the-unmatched.club/tools/matchups),

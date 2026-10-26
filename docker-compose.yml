@@ -1,7 +1,12 @@
 version: "3.9"
 
+# The live site runs in k3s, not here: deploy with `sh scripts/deploy.sh`.
+# This service sits behind a profile so a plain `docker compose up` doesn't start a second copy
+# writing the same tournament data. Only for running it in Docker on purpose:
+#   docker compose --profile docker up -d --build
 services:
   unmatched:
+    profiles: ["docker"]
     container_name: unmatched
     build:
       context: .
