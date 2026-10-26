@@ -147,7 +147,7 @@
     "price": 45.0,
     "currency": "USD",
     "in_stock": false,
-    "status": "sold_out",
+    "status": "not_released",
     "stock_text": "OUT OF STOCK",
     "url": "https://restorationgames.com/shop/unmatched-stars-and-stripes/",
     "product": "Unmatched: Stars and Stripes"
@@ -165,8 +165,8 @@
     "price": 20.0,
     "currency": "USD",
     "in_stock": true,
-    "status": "in_stock",
-    "stock_text": "In stock",
+    "status": "low_stock",
+    "stock_text": "Only 5 left in stock",
     "url": "https://restorationgames.com/shop/unmatched-adventures-teenage-mutant-ninja-turtles-shredder-krang-hero-decks/",
     "product": "Unmatched Adventures: TMNT – Shredder & Krang Hero Decks"
   },
@@ -236,7 +236,7 @@
     }
   },
   "_meta": {
-    "fetched_at": "2026-10-13",
+    "fetched_at": "2026-10-26",
     "store": "https://restorationgames.com"
   }
 }
