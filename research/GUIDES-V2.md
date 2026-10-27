@@ -106,7 +106,7 @@ In `research/private/sample/` (gitignored): `little_red.long.md` (card by card),
 ## Status
 
 - [x] Format agreed, samples approved
-- [ ] Medium pass (12 / 74; next: jekyll_hyde)
+- [ ] Medium pass (22 / 74; next: sun_wukong)
 - [ ] Card by card for Medusa and Bruce Lee
 - [ ] Site: tabs + card hovers
 - [ ] Short pass

@@ -507,6 +507,238 @@ Written from player guides, videos and forum discussions; format and rules in re
 
 ---
 
+<!-- id: jekyll_hyde -->
+## Jekyll & Hyde
+
+**In short:** You are a burst attacker who spends most turns as Dr. Jekyll, building a hand and preserving health for brief, violent turns as Mr. Hyde. Make opponents come to you, punish their approach, and avoid spending your future finishing attack just to survive their pressure. [1]
+
+### How they win
+
+**Turn their approach into two damaging actions**
+- **Choose this when:** Melee opponents must approach and finish beside you, or a ranged opponent attacks late in their turn and gives With Haste! an opening to close the gap. You want both actions available for damage after transforming. [1][2]
+- **On your turn:** Draw and prepare as Dr. Jekyll until the opening arrives, then transform and commit your best attacks. If you start adjacent, Strange Case before Forever Hyde can replenish your hand before the finisher; avoid spending a whole turn chasing merely to play Strange Case. [1]
+- **On their turn:** Use With Haste! against their last attack to set up adjacency, but watch for attacking cards with movement afterward: their movement resolves later and can undo your setup. Against a large swing, Scientific Method can prepare a bigger retaliation if you have health to spare. [1][2]
+- **Positioning:** After your damaging action, use Recoiling Blow to reset the approach against melee opponents. Against ranged opponents, remaining in their zone can leave you exposed to another attack despite the retreat. [1]
+- **Keep a way back:** Hold Madness Relents for their first attack when you finish as Mr. Hyde; save Skirmish for defense rather than spending all your flexible cards on offense. [1][2]
+
+**Set up the finishing blow without chasing**
+- **Choose this when:** The opponent leaves a reachable landing space for Pure Evil, especially beside several fighters, or your hand contains Forever Hyde and enough Dr. Jekyll cards to threaten the finish. This route gives you an entry when they refuse to end adjacent. [1][3]
+- **On your turn:** Build the hand as Dr. Jekyll, then use Pure Evil before Forever Hyde or Recoiling Blow. Prefer Succumb to Compulsion and Distracted Triage as finishing fuel; keep essential defenses unless the attack will end the game. [1][3]
+- **On their turn:** Preserve your health while assembling the attack; do not spend Duality of Man against a small attack merely because it is your biggest block. Keep it available for a serious defense or Mr. Hyde's offense. [1]
+- **Sources disagree on cancel bait:** Gridbeast recommends Skirmish after Pure Evil when you expect Feint. Baked Goods advises spending scarce Mr. Hyde turns on your best attacks and reserving Skirmish for defense; Recoiling Blow can absorb a cancel while still applying pressure. [3][1]
+
+### How they lose
+
+- **Early pressure consumes your finish.** Repeated attacks force Dr. Jekyll cards out before Forever Hyde can use them. **Answer:** Use With Haste! to break attack chains and Calming Research to recover while rebuilding; keep its draw modest unless you urgently need a particular card. [1][3]
+- **Movement and cancels strand Mr. Hyde.** An opponent escaping your first attack, or canceling Recoiling Blow, can wreck the second action and expose your weaker defenses. **Answer:** Plan that failure before attacking, hold Madness Relents, and use Pure Evil as movement BOOST if its placement cannot reach them. [1][4]
+
+### References
+1. Baked Goods. "Jekyll & Hyde [Unmatched Strategy Guide 13]." *YouTube*. https://www.youtube.com/watch?v=9DW9KCzypDo
+2. u/Life-Rip183. Comment on "Cobble & Fog newbie tips" by u/dogenes09. *r/Unmatched*, Reddit, 13 October 2024. https://www.reddit.com/r/Unmatched/comments/1g2srxm/
+3. Gridbeast. "Unmatched – Jekyll & Hyde." *Gridbeast*. https://gridbeast.gg/unmatched-jekyll-hyde/
+4. PoindexterG - To The Table Top! "Jekyll & Hyde - Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=qmnRkqxFVbQ
+
+### Not cited
+- [An Unmatched Roster: Cobble and Fog](https://boardgamegeek.com/thread/3097271/an-unmatched-roster-cobble-and-fog): BoardGameGeek · article and replies (read; predictability and awkward hands covered more concretely by the videos; replies add no strategy).
+- [Unmatched: Cobble And Fog - How To Play](https://www.youtube.com/watch?v=hYLqGBLt8sM): Watch It Played · video (read; rules overview rather than strategic decisions).
+
+---
+
+<!-- id: sherlock_holmes -->
+## Sherlock Holmes
+
+**In short:** You win through hand disruption and damage outside combat, while making opponents chase you for ordinary attacks. Keep your defenses stocked, learn what they are holding, and dismantle their best turns before committing your own attacks. [1]
+
+### How they win
+
+**Dismantle their hand from a safe distance**
+- **Choose this when:** Their deck depends on a few crucial cards, or their hand contains high BOOST targets for Confirm Suspicion. Choose a distant scheme turn when they give you room to build your hand instead of forcing repeated defenses. [1][2]
+- **On your turn:** Play Eliminate the Impossible first, then Confirm Suspicion immediately; remove a low BOOST card that shares the value of your intended target so they cannot discard it instead. Prioritize a crucial scheme with Eliminate the Impossible when destroying their plan matters more than maximizing immediate damage. [1]
+- **On their turn:** Use the revealed hand to decide whether you need Feint or can spend an ordinary defense. With Elementary, predict the dangerous attack; when two values seem equally plausible, cover the higher one so a wrong guess costs less health. [1]
+- **Positioning:** Double maneuver away while assembling the schemes, keeping versatile cards for defense. If they end adjacent, attack first with The Game is Afoot and then maneuver away; your escape survives their cancels. [1][2]
+- **Keeping track:** Follow their discards, hand size, and remaining deck rather than treating an earlier hand reveal as permanent knowledge. Prefer Eliminate the Impossible into a large hand, where you have more chances to find something worth removing. [1][3]
+
+**Make melee pressure pay for itself**
+- **Choose this when:** Melee fighters must stay adjacent to hurt you, giving Counterpunch reliable defensive targets. This plan supplements your schemes while preserving the cards you need to survive their attacks. [1]
+- **On their turn:** Save Counterpunch for defense rather than attacking into movement defenses that can break adjacency. Against decks with many cancels, lean on this protected retaliation instead of expecting Study Methods to deliver hand information. [1]
+- **On your turn:** When hand disruption leaves them without a defense, follow with The Game is Afoot. Alternatively, start with Master of Disguise while Sherlock shares Dr. Watson's zone, then fire Service Revolver at the displaced hero. [1]
+- **Protecting Dr. Watson:** Keep him adjacent for Fixed Point in a Changing Age; if opponents ignore him, attack with it to secure healing. If they chase him instead, move Sherlock away before using Administer Aid to rescue him and waste their pursuit. [1]
+
+### How they lose
+
+- **Repeated attacks empty your defenses.** Fighters with extra actions, card advantage, or pins can leave you unable to block despite a large hand. **Answer:** Preserve versatile cards, use Education Never Ends against the first attack when you expect to lose combat, and escape a pin with Master of Disguise followed by a maneuver. [4][1]
+- **Ranged pressure denies retaliation.** Attacks from beyond adjacency bypass Counterpunch's payoff. **Answer:** Consider Counterpunch offensively in this situation, while using your distant schemes rather than relying on defensive damage. [1][2]
+- **Value increases beat the wrong defense.** Deduce Strategy does not lock an attack's final value. **Answer:** Use your hand knowledge to recognize attacks that increase during combat, and reserve Feint or Elementary for those threats. [1]
+
+### References
+1. Baked Goods. "Sherlock Holmes [Unmatched Strategy Guide 14]." *YouTube*. https://www.youtube.com/watch?v=YlKzLNe9sD0
+2. Gridbeast. "Unmatched – Sherlock Holmes." *Gridbeast*. https://gridbeast.gg/unmatched-sherlock-holmes/
+3. u/Delicious-Survey2915. Comment on "Cobble & Fog newbie tips" by u/dogenes09. *r/Unmatched*, Reddit, 13 October 2024. https://www.reddit.com/r/Unmatched/comments/1g2srxm/
+4. u/feebleblobber. Comment on "How to counter Sherlock?" by u/nikolayashigov. *r/Unmatched*, Reddit, 30 January 2023. https://www.reddit.com/r/Unmatched/comments/10osa00/
+
+### Not cited
+- [Weekly Discussion: Battling Sherlock Holmes (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1refj9o/): Reddit · forum thread (read; pressure and ranged threats already supported by cited sources).
+- [Tournament preparation discussion](https://www.reddit.com/r/Unmatched/comments/wsqft5/): Reddit · forum thread (read; deck knowledge and aggression overlap cited advice).
+- [Ranged opponent discussion](https://www.reddit.com/r/Unmatched/comments/t2rkyi/): Reddit · forum thread (read; scheme targeting overlaps cited advice; corrected sidekick interaction not needed).
+- [Counterplay discussion](https://www.reddit.com/r/Unmatched/comments/1ajd5cp/): Reddit · forum thread (read; aggression overlaps cited advice).
+- [An Unmatched Roster: Cobble and Fog](https://boardgamegeek.com/thread/3097271/an-unmatched-roster-cobble-and-fog): BoardGameGeek · article and replies (read; little additional Sherlock strategy).
+- [Defense timing discussion](https://www.reddit.com/r/Unmatched/comments/1ic00hv/): Reddit · forum thread (read; detailed value-ignoring interaction omitted for space).
+- [Persistent sidekick pressure discussion](https://www.reddit.com/r/Unmatched/comments/1mirepy/): Reddit · forum thread (read; opposing aggression overlaps cited advice).
+- [Unmatched: Cobble And Fog - How To Play](https://www.youtube.com/watch?v=hYLqGBLt8sM): Watch It Played · video (read; rules overview rather than strategic decisions).
+- [Sherlock Holmes - Unmatched Fighter Review](https://www.youtube.com/watch?v=6RzuFuqsvhQ): PoindexterG - To The Table Top! · video (read; combo and timing advice overlaps cited strategy video).
+
+---
+
+<!-- id: buffy -->
+## Buffy
+
+**In short:** You play Buffy as a mobile melee fighter who makes opponents spend actions reaching her, then punishes their approach. Build around a defensive counterattack with Giles supplying the setup, or bring Xander when you want extra attacks and an early offensive payoff. [1][2]
+
+### How they win
+
+**Make their approach pay for your counterattack**
+
+- **Choose this when:** The opponent relies on surrounding or trapping you, or must maneuver before attacking. Choose Giles when finding your attack sequence and knowing the opposing hand matter more than adding another attacker. [1][2]
+- **Setup:** With Giles, use Training to find the pieces before committing. Use Insight to prepare the engagement with knowledge of their defenses; protecting Giles matters until you have spent his schemes. [1]
+- **On their turn:** Aim to receive their attack on their second action, with Cartwheel Kick ready. Use the landing space to prepare your next turn's attack; against several 1-health sidekicks, look for a landing that removes more than one. [1][3]
+- **On your turn:** Follow with Mr. Pointy first, then Slayer's Strength to end the exchange with separation. Mr. Pointy is the preferred opening attack into a possible Feint; the second attack needs more care because a cancel can leave you exposed. [1]
+- **Positioning:** End turns separated whenever possible, but close enough to invite the second-action attack you want. Count their movement and ranged reach, and route Buffy through opposing bodies instead of accepting their attempt to pen her in. [1][2]
+- **When the hand is incomplete:** If you have only one good attack, lead with Slayer's Strength and spend your remaining action maneuvering farther away. Don't force the two-attack sequence merely because you successfully set up Cartwheel Kick. [1]
+
+**Cash in Xander before the opportunity disappears**
+
+- **Choose this when:** You want extra combat pressure rather than Giles's hand information and card access, and can arrange an engagement with Buffy beside Xander. This plan asks you to commit both fighters close together instead of protecting a scheme supplier. [1][2]
+- **On your turn:** Establish that adjacency before attacking with Right-hand Man, and spend the offensive opportunity early. Their low health makes waiting for an ideal late-game attack a poor reason to keep it unused. [1][2]
+- **Positioning:** Keep Buffy and Xander close enough to support the attack. Where the map offers a loop that prevents an easy route around Xander, he can stand between the attacker and Buffy. [2]
+- **On their turn:** Prefer spending Right-hand Man offensively; defend with it only when necessary. Don't build the plan around an opponent attacking Xander while Buffy is equally accessible: they can simply target her instead. [1][2]
+
+### How they lose
+
+- **Cancels strand you in reach.** Decks with frequent cancels threaten the separation your counterattack depends on. **Answer:** Lead with Mr. Pointy into a suspected Feint, and avoid relying on Slayer's Strength as your sole exit when its effect may be canceled. [1]
+- **Repeated close exchanges overwhelm your health.** Staying adjacent gives away the movement advantage. **Answer:** Attack with Slayer's Strength, then maneuver when you cannot safely sustain the full counterattack; with Daring Strike, attack only when you expect to win rather than gambling with more health. [1][2]
+
+### References
+
+1. Gridbeast. "Unmatched – Buffy." *Gridbeast*. https://gridbeast.gg/unmatched-buffy/
+2. PoindexterG - To The Table Top! "Buffy - Unmatched Fighter Review - Buffy the Vampire Slayer." *YouTube*. https://www.youtube.com/watch?v=kDJlND0SKrY
+3. Restoration Games. *Buffy the Vampire Slayer*, Buffy deck. Card text as recorded in `input/heroes.json`.
+
+### Not cited
+
+- [What's the point of playing Buffy?](https://www.reddit.com/r/Unmatched/comments/1lt61bi/): r/Unmatched · forum thread (read; the reply supplies no tactical advice, and the post does not explain its matchup claims).
+- "Any tips Vs each character?": r/Unmatched · forum excerpt (read; general research advice and availability discussion, with no Buffy tactics; the pack supplies no thread URL).
+
+---
+
+<!-- id: spike -->
+## Spike
+
+**In short:** Spike is a positional melee fighter who wants opponents to cross his shadows before they can fight him. Build a defended patch of ground, make their approach awkward, and turn a committed enemy's position into damage or a ruined hand. [1][2]
+
+### How they win
+
+**Make the approach cost them**
+- **Choose this when:** melee opponents are coming to you and must enter your prepared ground to attack. This plan depends on their approach; it is much less convincing against opponents who can stay away and still hurt you. [1][2]
+- **On your turn:** move Spike into a position with several adjacent spaces before playing Seek the Shadows. Once they enter the shadows, lead with Regroup to tempt a cautious opponent into spending Feint before you commit The Rush or Let's Dance. [1]
+- **On their turn:** hold Leap Away or Skirmish for defense rather than spending every versatile card attacking. After a won defense, either put the attacker into shadows or retreat behind them so the opponent must cross them again. [1]
+- **Positioning:** keep Spike close to the shadows; moving away should prepare another Seek the Shadows, rather than abandon the ground you need. Use spare cards to boost movement when you would otherwise have to discard them. [1]
+- **Sources disagree on inevitability:** Gridbeast expects retreating and preparing shadows to force an approach eventually; PoindexterG warns that an informed opponent can simply refuse. Treat the lure as a response to an approaching opponent, not a guarantee that waiting wins. [1][2]
+
+**Punish an opponent who cannot leave**
+- **Choose this when:** an opponent is already pinned and lacks an easy escape. This is your opportunity to make shadow-dependent pressure stick instead of asking them to cooperate. Even here, expect a workable fight rather than overwhelming strength. [2]
+- **On your turn:** use the start-of-turn placement around Spike or Drusilla to keep the trapped opponent in shadows, then look for The Sight. Prioritize that window while it exists: attacking their hand is one of your most punishing payoffs for holding them there. [2]
+- **Damage:** prepare shadows around the opponent for Bloody Hell! rather than treating every shadow arrangement as equivalent. Use The Rush and Let's Dance when the fight is actually taking place on your terms. [1][2]
+- **Positioning:** plan around both fighters, but distinguish an enemy standing in shadows from Drusilla standing in them. The former is the opportunity for The Sight; do not assume Drusilla's own shadow position makes every card ready. [1][2]
+
+### How they lose
+
+- **Ranged opponents bypass the lure.** They can attack without entering your prepared ground. **Answer:** use double maneuvers and Seek the Shadows to reposition the fight, but recognize that these sources offer no reliable way to force a patient ranged opponent to approach. [1][2]
+- **You spend resources for too little pressure.** Arrogance does not justify throwing away a substantial hand, and chasing maximum Empathy draw can be detrimental. **Answer:** resist paying everything for Arrogance; accept an ordinary Empathy opportunity instead of insisting on its largest draw. [2]
+- **You plan around imaginary map coverage.** **Answer:** reposition your three shadows with the start-of-turn placement and Seek the Shadows; you cannot accumulate a permanent carpet across the board. [3]
+
+### References
+1. Gridbeast. "Unmatched – Spike." *Gridbeast*. https://gridbeast.gg/unmatched-spike/
+2. PoindexterG - To The Table Top! "Spike - Unmatched Fighter Review - …" *YouTube*. https://www.youtube.com/watch?v=r5hqxS3txqo
+3. Watch It Played. "Unmatched: … - How To Play." *YouTube*. https://www.youtube.com/watch?v=QthjkXuo4D0
+
+### Not cited
+- [Shared set discussion](https://www.reddit.com/r/Unmatched/comments/1lt61bi/): Reddit · forum thread (read; the post's team-play endorsement supplies no plan, and the reply supplies no Spike strategy).
+
+---
+
+<!-- id: willow -->
+## Willow
+
+**In short:** Willow is a ranged fighter who wants to build her hand before committing to a short, hard Dark Willow offensive. You can instead play a more controlled ranged game through Tara, but the sources disagree about whether limiting Dark Willow is worth sacrificing her pressure. [1][2]
+
+### How they win
+
+**Build a hand, then race**
+- **Choose this when:** you already have Willow's attacks in hand and can commit to dealing damage quickly. Finish the game through pressure rather than stretching it into a long contest. [1]
+- **On your turn:** draw while you are regular Willow; once damage turns you dark, commit your Flayed Alive attacks and keep attacking. Build the hand first so the transformation starts an offensive you can sustain, rather than arriving before you have attacks to spend. [1]
+- **On their turn:** Black Magic belongs in your Dark Willow combat plan alongside Flayed Alive. Staying dark keeps those blind boosts available, but accept that your stronger combats consume the deck you need to finish the game. [1]
+- **Positioning:** send Tara away from Willow and let her fight at range independently. Put Tara under some pressure: damage to her enables Willow's offensive without requiring Willow herself to take that hit. [1]
+- **Protecting the plan:** Resurrect lets you risk Tara, but do not treat her return as guaranteed. Dark Willow's deck consumption can discard the very card you were counting on to bring her back. [1]
+- **Sources disagree on commitment:** Gridbeast recommends minimizing Dark Willow and exploiting her briefly; PoindexterG recommends staying dark once the attacks are ready. [2][1]
+
+**Let Tara lead and keep disengaging**
+- **Choose this when:** you need to deny repeated attacks, especially from an opponent who must close distance to fight. Poke from range, screen with Tara, and keep Dark Willow windows short. [2]
+- **On your turn:** attack through Tara, then use Rending Shot to disrupt the opponent's next approach or Swift Strike to disengage. Make them spend movement reaching you again instead of handing them a turn of consecutive attacks. [2]
+- **On their turn:** keep Revoke and Feint available to disrupt opposing effects. Hold Meditation for Willow when you need a substantial defense and a way back from Dark Willow without relying on Tara's position. [2]
+- **Positioning:** keep Tara between Willow and the opponent. To end a Dark Willow window through Tara, finish adjacent to her; merely sharing her zone does not satisfy the ability. [2][3]
+- **Recovery:** use Knowledge of the Craft to recover a valuable spent card, including one used for movement boosting or lost to Dark Willow. Keep Tara involved in recovering those resources. [2]
+
+### How they lose
+
+- **The chase catches up.** Low movement makes maintaining distance difficult. **Answer:** spend Swift Strike or Rending Shot on separation before the opponent can settle into repeated attacks. [2]
+- **Dark Willow consumes the finish.** Blind boosts and discards can burn through your remaining resources. **Answer:** commit to finishing quickly under the aggressive plan; under the conservative plan, use Meditation or Tara's adjacency to regain control. [1][2][3]
+- **Tara falls too soon.** Your screen cannot survive prolonged punishment. **Answer:** use Resurrect to put her back into the ranged plan, but remember that the aggressive plan can discard your recovery before you need it. [2][1]
+
+### References
+1. PoindexterG - To The Table Top!. "Willow - Unmatched Fighter Review - Buffy the Vampire Slayer." *YouTube*. https://www.youtube.com/watch?v=PkhsccVP3sA
+2. Gridbeast. "Unmatched – Willow." *Gridbeast*. https://gridbeast.gg/unmatched-willow/
+3. Restoration Games. *Buffy the Vampire Slayer*, Willow deck. Card text as recorded in `input/heroes.json`.
+
+### Not cited
+- [Shared discussion of the set](https://www.reddit.com/r/Unmatched/comments/1lt61bi/): r/Unmatched · forum thread (read; the post only praises Willow in team games, and the reply adds no Willow strategy).
+
+---
+
+<!-- id: angel -->
+## Angel
+
+**In short:** You play an attacking pair who want short engagements, with an exit planned before either fighter commits. Make opponents spend actions chasing you, then alternate heavy attacks with weaker bait rather than expecting your hardest hits to refill your hand. [1][2]
+
+### How they win
+
+**Hit, punish pursuit, and leave**
+- **Choose this when:** melee opponents must approach to retaliate, or an opponent has ended their turn beside Faith; punish that proximity without accepting a prolonged exchange. Against fighters with several 1-health sidekicks, Faith also gives you a way to clear a crowded engagement. [1][2]
+- **On your turn:** when Faith starts beside the enemy, lead with Killer of the Dead and follow with Five by Five. Otherwise, plan an attack with Disengage around the space you want to occupy afterward, rather than simply taking whichever attack looks strongest. [1][2]
+- **On their turn:** keep The Rogue Slayer for Faith's defense, especially when several fragile sidekicks surround her. Preserve Momentous Shift for defense instead of spending every versatile card to press your attack; you already have dedicated attacks for that job. [1]
+- **Positioning:** finish where the opponent must maneuver, ideally boost, before attacking again. Use Five by Five to extract Faith or box the enemy in, and Disengage to prevent either fighter from facing two attacks next turn. [1][2]
+- **Against cancels:** Angelus, Scourge of Europe punishes an anticipated Feint, but do not assume the opponent will oblige: Faith's escape and area damage are more attractive cancellation targets. Plan your defense before committing her, even with an escape card ready. [1][2]
+
+**Make strong defenses answer weak attacks**
+- **Choose this when:** you have already shown heavy attacks and the opponent is committing strong defenses to stop them. This is a baiting plan for that situation, rather than a reason to chase losing combats with every card. [1]
+- **On your turn:** establish the threat with your strong attacks, then slip in Regroup or Wisdom of Ages while the opponent still expects another heavy hit. Make their defensive commitment buy you another attack later instead of measuring this turn only by damage dealt. [1]
+- **Using the special ability:** take advantage of those weaker attacks to keep cards flowing; do not build the same expectation around Angelus, Scourge of Europe or Five by Five. Treat Cursed with a Soul's consolation as a bonus, rather than spending your turn trying to arrange it. [1][2]
+- **On their turn:** usually retain Brooding for defense; attack with it only when you expect to draw out a stronger defense and make that exchange pay. Keep Feint for the opponent's important effects rather than using it merely because you have a defense available. [1]
+
+### How they lose
+
+- **Heavy retaliation.** High-value attacks punish your thin defenses, especially after you stay adjacent. **Answer:** reserve versatile cards to defend and finish attacks with Disengage when possible; decide how you will survive the reply before entering combat. [1][2]
+- **Ranged pressure.** Distance makes your approach awkward while your defenses remain limited. **Answer:** retain Haunted by the Faces as a last resort and use the resulting repositioning to reach the ranged attacker when the opportunity appears. [1]
+- **Cancelling Faith's exit.** An opponent who saves Feint for Five by Five can strand her in the engagement. **Answer:** account for that cancellation before attacking, and use Angelus, Scourge of Europe to punish Feint when you can actually bait it onto Angel. [1][2]
+
+### References
+1. Gridbeast. "Unmatched – Angel." *Gridbeast*. https://gridbeast.gg/unmatched-angel/
+2. PoindexterG - To The Table Top! "Angel - Unmatched Fighter Review - Buffy the Vampire Slayer." *YouTube*. https://www.youtube.com/watch?v=_5v7nKsLIC0
+
+### Not cited
+- [Forum discussion of the set's appeal](https://www.reddit.com/r/Unmatched/comments/1lt61bi/): Reddit · forum thread (read in full; Angel's beginner-opponent assessment and the reply supply no tactical plan).
+
+---
+
 <!-- id: little_red -->
 ## Little Red Riding Hood
 
@@ -545,5 +777,180 @@ Written from player guides, videos and forum discussions; format and rules in re
 
 ### Not cited
 - [An Unmatched Roster: Ferociously Fantastic](https://boardgamegeek.com/thread/3281478/an-unmatched-roster-ferociously-fantastic): BoardGameGeek · written analysis (read; its claim that the Huntsman cannot benefit from basket effects conflicts with the printed Huntsman and Any cards; other points covered more concretely by the videos)
+
+---
+
+<!-- id: beowulf -->
+## Beowulf
+
+**In short:** You are a patient value fighter with frightening bursts of damage, happiest making the opponent spend actions coming to you. Preserve your defenses and deck, then turn carefully managed Rage into punishing trades or a late exhaustion win. [1][2]
+
+### How they win
+
+**Make them spend the game approaching**
+- **Choose this when:** you can keep combat infrequent and make the opponent approach; this is your exhaustion plan, rather than a reason to chase every available attack. Your limited supply of good combat cards rewards fewer exchanges. [1][3]
+- **On your turn:** use Golden Drinking Horn to heal and pass instead of drawing deeper into your deck. Remnant of Valor can also spend an action without drawing, even when Wiglaf cannot hit anyone; resist boosting movement just to start a fight. [1][2]
+- **On their turn:** keep your versatile cards for defense. Below full Rage, accept a small amount of damage when safe rather than spending extra Rage to prevent every scratch; preserve enough health to keep doing this. [2][4]
+- **Positioning:** make Wiglaf a body blocker while Beowulf waits behind him, but do not throw Wiglaf away: losing his schemes also costs you passes. Nearby enemy sidekicks give you targets without chasing their hero. [1][2][5]
+- **Closing it out:** once the opposing deck is empty, Fatal Struggle becomes an exhaustion threat even when the opponent wins the combat. Save that opportunity for the point when drawing hurts them. [6]
+
+**Punish attacks, then spend on a decisive swing**
+- **Choose this when:** the opponent presents high printed attacks, or feeds you small automatic damage that you can afford. The former gives The Equal of Grendel valuable targets; the latter helps fund your next exchange cheaply. [7]
+- **On your turn:** plan Epic Poem for a turn starting at two Rage. After spending Rage on The Ancient Heirloom, follow with Vigor and Courage when you need to restore your defensive threat before their turn. [7][8]
+- **On their turn:** hold two Rage for The Equal of Grendel and reserve the retaliation for a worthwhile printed attack. Keep Feint or Skirmish available if you cannot restore that reserve, and use The War-King economically as a backup block. [7][8]
+- **Positioning:** use Hot for the Battle to bring Beowulf into an unexpected attack position, or have Wiglaf attack a sidekick to pull Beowulf out of danger. Protect Wiglaf with Skirmish when keeping that escape route matters. [7]
+- **Sources disagree on committing Rage:** Lord of the Board recommends preparing a full-Rage The Ancient Heirloom; one forum player usually prefers its cheaper boost and saving Rage for defense. Choose the expensive commitment only when you can afford it and the opponent is leaving the attack undefended. [7][1][8]
+
+### How they lose
+
+- **Big individual hits.** These deny the repeated Rage income that small hits supply. **Answer:** keep The Equal of Grendel ready for high printed attacks, with The War-King available to limit damage when retaliation is less rewarding. [6][7]
+- **An empty Rage reserve.** Spending everything leaves your next defense exposed. **Answer:** arrange Vigor and Courage to recharge, or retain Feint and Skirmish before committing to the attack. [8]
+
+### References
+1. u/d_Shirt. Comment on "Tips on effectively playing Beowulf?" by u/ronchman. *r/Unmatched*, Reddit, 28 February 2026. https://www.reddit.com/r/Unmatched/comments/1rha060/
+2. u/Dear_Huckleberry_394. Comment on "Beo Strategy Tips" by u/Free-Neighborhood425. *r/Unmatched*, Reddit, 27 May 2024. https://www.reddit.com/r/Unmatched/comments/1d1y8tj/
+3. u/Derf1OO. Comment on "Tips on effectively playing Beowulf?" (see [1]).
+4. u/CupAlternative. Comment on "Tips on effectively playing Beowulf?" (see [1]).
+5. u/itsactuallyoctopuses. Comment on "Tips on effectively playing Beowulf?" (see [1]).
+6. PoindexterG - To The Table Top!. "Beowulf - Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=hPfrcSdpD84
+7. Lord of the Board. "Unmatched - BEOWULF - Overview & Strategy Guide." *YouTube*. https://www.youtube.com/watch?v=5HixnGp8mbE
+8. u/Life-Rip183. Comment on "Tips on effectively playing Beowulf?" (see [1]).
+
+### Not cited
+- [Unmatched – Beowulf](https://gridbeast.gg/unmatched-beowulf/): Gridbeast · written guide (read; overlapping advice covered by the video and forum replies).
+- [Shared rules discussion](https://www.reddit.com/r/Unmatched/comments/1ic00hv/): Reddit · forum thread (read; narrow interaction omitted from this plan-focused guide).
+- [Beo Strategy Tips](https://www.reddit.com/r/Unmatched/comments/1d1y8tj/): Reddit · remaining forum replies (read; duplicate advice, acknowledgments, jokes, and a linked recommendation add no distinct cited plan).
+- [Tips on effectively playing Beowulf?](https://www.reddit.com/r/Unmatched/comments/1rha060/): Reddit · remaining forum replies (read; duplicate advice and team-only suggestion omitted).
+
+---
+
+<!-- id: deadpool -->
+## Deadpool
+
+**In short:** You're an improvising melee harasser whose healing rewards regular attacks, but whose defenses cannot sustain endless trading. Choose your pressure from the hand you actually draw, and preserve enough blocks to survive the reply. [1]
+
+### How they win
+
+**Keep attacking without inviting a barrage**
+- **Choose this when:** melee opponents must spend an action closing distance, letting you attack and heal without accepting two attacks back. Your aim is repeated manageable exchanges, rather than staying adjacent and racing. [1]
+- **On your turn:** attack with Rob's Pouch & Shoe Emporium to end the exchange separated; use Xavier Institute Faculty from range when it saves a movement boost or keeps a melee opponent away. Don't reveal that predictable ranged attack merely because you can. [1]
+- **On their turn:** reserve Super Feint and Gimme Gimme Chimichanga for defense. Keep Chimichanga Break! and I'm Not Wearing Pants for blocking too; prepare the food and sleeve conditions before relying on them. [1][2][3]
+- **Healing:** when your hand is full, maneuver and play Faint instead of forcing another attack or discarding to hand limit. You recover while passing the pressure to approach back to your opponent. [1]
+- **Staying power:** delay Dumpster Divin' Deadpool until you have good recovery targets, usually defenses and cancels. Against effects that let opponents choose your discards, use it earlier rather than losing your second supply of blocks. [1]
+
+**Punish a crowded formation**
+- **Choose this when:** opponents cluster fragile sidekicks together, or shelter their hero immediately behind a sidekick. Klunkin' Heads turns that formation into a damage opportunity instead of just an obstacle. [1]
+- **On your turn:** attack the blocking sidekick with Klunkin' Heads when its hero stands adjacent. The opponent may be reluctant to spend a premium defense on a sidekick; that is the opening you're exploiting. [1]
+- **Positioning:** take the reachable target whose neighbors matter, rather than spending cards trying to run around the screen. Your limited movement often forces you to fight through blockers anyway. [1]
+
+**Strip the hand, then punish weak defenses**
+- **Choose this when:** the opponent carries repeated copies of important cards, has a small hand, or is running short of substantial blocks. Those situations reward targeted disruption or a concentrated finishing attack. [1]
+- **Setup:** defend with Non-Retinal Scan Access to Danger Room before using Holy Mackerel! to remove the important cards you saw. Without that information, name their most likely repeated card or their best card; don't assume both setup pieces will arrive together. [1]
+- **Payoff:** use Excuse me while I grow some limbs. against a small hand. With Cha-Ching!, wait for the revealed defense before committing Push to Teleport; keep the boost if it would buy too little damage. [1]
+
+### How they lose
+
+- **Burst outruns healing.** Heavy hits and attacks that grant further actions can finish you before recovery matters. **Answer:** use Transit Card or the movement choice on And For My Next Move... to interrupt follow-up attacks; reserve Super Feint for dangerous effects. [1][4]
+- **Your own defense exposes the hand.** Passwords can cost your remaining block or a crucial setup card. **Answer:** prefer another defense when that discard would leave you helpless, and use Time out time out time out! early on defense to match the revealed attack without wasting a premium block on bait. [1]
+
+### References
+1. Baked Goods. "Deadpool [Unmatched Strategy Guide 16]." *YouTube*. https://www.youtube.com/watch?v=U-1Ot_x4E7Q
+2. Gridbeast. "Unmatched – Deadpool." *Gridbeast*. https://gridbeast.gg/unmatched-deadpool/
+3. Restoration Games. *Deadpool*, Deadpool deck. Card text as recorded in `input/heroes.json`.
+4. PoindexterG - To The Table Top!. "Deadpool - Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=NvZ6sxee6_o
+
+### Not cited
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; no Deadpool-specific strategy).
+- [Give a One Sentence Tip on how to Play against your favorite Fighter. Go!](https://www.reddit.com/r/Unmatched/search/?q=Give%20a%20One%20Sentence%20Tip): r/Unmatched · forum replies (read; name-change joke supplies no tactical advice; pack provides no thread URL, so link is a title search).
+
+---
+
+<!-- id: achilles -->
+## Achilles
+
+**In short:** You are a durable melee aggressor who wants Patroclus to soften the opponent before Achilles takes over with sustained pressure. Time that handover for a fight you can finish: once Patroclus dies, prolonged chases turn your card draw against you. [1]
+
+### How they win
+
+**Switch early and overwhelm an exposed hero**
+- **Choose this when:** You can keep attacking on a small map against a solo fighter without bodyblocks, especially one who struggles under pressure. Bring Patroclus down early only when Achilles can stay aggressive afterward. [2]
+- **On your turn:** Lead with Brothers In Arms to pressure their hand and tempt a Feint before committing your self-damage attacks. If choosing between The Day of Your Doom and Battle Frenzy, lead with The Day of Your Doom to draw a cancel away from Battle Frenzy. [1][2]
+- **The handover:** Prepare a large hand before the sacrifice so the random discard still leaves you options; do not make your entire follow-up depend on keeping two particular cards. Once Achilles takes over, press with Skirmish and Test For Weakness rather than retreating to refill after every exchange. [1]
+- **On their turn:** Use Under Achilles' Helm to put a heavy attack into a weakened Patroclus when you are ready to switch. Try to spend only one this way, preserving the others for chasing later. [1]
+- **Positioning:** Keep Achilles near enough to advance or retreat when Patroclus falls. Against elusive opponents, work toward central reach before spending movement boosts. [3][1]
+
+**Clear the screen, then force the finish**
+- **Choose this when:** Ranged fighters, sidekick bodyblocks, large maps, or plentiful passes and recursion make immediate aggression hard to sustain. Delay Patroclus's death until those obstacles are reduced. [2]
+- **On your turn:** Spend the early game removing sidekicks while Patroclus lives, so Achilles's later attacks reach the hero. Against several adjacent fragile sidekicks, consider attacking with Wily Fighting to clear multiple bodies instead of spending separate attacks on them. [1]
+- **Protecting Patroclus:** Bodyblock with Achilles and spend versatile defenses when necessary. With The Day of Your Doom, decline the self-damage when the damage trade is poor and another turn of Patroclus matters more. [2][1]
+- **On their turn:** Hold Blessed By Hermes for ranged attacks, moving beside the attacker or within ordinary maneuver reach to spend your next turn attacking. [1]
+- **Finishing:** Use Spear Throw when you can reach their zone but cannot reach melee; recur it with Battle Hardened when damage without another draw matters. Against opponents whose cancels are exhausted, alternate Battle Hardened copies to sustain pressure; against effect-dependent decks, recover Feint instead. [1]
+
+### How they lose
+
+- **A sacrifice into an empty hand.** Opponents can kill Patroclus while you are low on cards, then overwhelm Achilles. **Answer:** Build your hand beforehand; if the death is unavoidable, defend Patroclus with Battle Hardened to retrieve an important random discard afterward. [4][1]
+- **Winning combats into exhaustion.** Runners and late weak attacks accelerate your deck's collapse. **Answer:** Preserve Under Achilles' Helm for pursuit, budget Test For Weakness as a movement boost when needed, and use Spear Throw to avoid unnecessary draws. [1]
+- **A defensive cascade.** Heavy attacks or attacks that ignore defense punish Achilles' Heel and extend the opponent's turn. **Answer:** Prefer Skirmish against those threats; otherwise keep another defense behind Achilles' Heel before risking it. [1]
+
+### References
+1. Baked Goods. "Achilles [Unmatched Strategy Guide 24]." *YouTube*. https://www.youtube.com/watch?v=QLeuule53S8
+2. u/-Asdepique-. Comment on "Got my first unmatched set! Any tips for Achilles?" by u/dzelaaaaa. *r/Unmatched*, Reddit, 24 December 2025. https://www.reddit.com/r/Unmatched/comments/1puv37x/
+3. u/TitanasGios. Comment on "Am I playing Achilles wrong?" by u/One_Fix9278. *r/Unmatched*, Reddit, 29 August 2025. https://www.reddit.com/r/Unmatched/comments/1n30hpy/
+4. u/Life-Rip183. Comment on "Am I playing Achilles wrong?" (see [3]).
+
+### Not cited
+- [Unmatched – Achilles](https://gridbeast.gg/unmatched-achilles/): Gridbeast · written guide (read; the video gives more precise sequencing and resource advice).
+- [Am I playing Achilles wrong?](https://www.reddit.com/r/Unmatched/comments/1n30hpy/): Reddit · remaining forum comments (read; overlapping timing advice and brief reactions).
+- [Got my first unmatched set! Any tips for Achilles?](https://www.reddit.com/r/Unmatched/comments/1puv37x/): Reddit · remaining forum comments (read; overlapping advice, jokes, and unrelated set discussion).
+- [Weekly Discussion: Battling Achilles (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1rko49a/): Reddit · forum thread (read; threats corroborate the more detailed cited answers).
+- [Tips against Achilles](https://www.reddit.com/r/Unmatched/comments/1e10p51/): Reddit · shared forum thread (read; Achilles portions overlap the pressure and movement threats above; title abbreviated to omit another fighter).
+- [Advice against Achilles](https://www.reddit.com/r/Unmatched/comments/1uxkvf2/): Reddit · shared forum thread (read; Achilles portions overlap large-map pursuit problems; title abbreviated to omit another fighter).
+- [Against Achilles](https://boardgamegeek.com/thread/3260485/yennenga-against-vs-achilles): BoardGameGeek · shared forum thread (read; map advice lacks detailed play sequences; title abbreviated to omit another fighter).
+- [Unmatched Tips and Strategies: Fighting Against the Best Fighters](https://thegaminggeek.net/unmatched-tips-and-strategies-fighting-against-the-best-fighters/): The Gaming Geek · shared article extract (read; supplied Achilles portion is only a tier listing).
+- [Achilles - Unmatched Fighter Review](https://www.youtube.com/watch?v=WuJrxr3LlAI): PoindexterG - To The Table Top! · video transcript (read; cited strategy video covers its practical advice in greater detail).
+
+---
+
+<!-- id: bloody_mary -->
+## Bloody Mary
+
+**In short:** Bloody Mary is a mobile melee aggressor who makes defending expensive and turns awkward hand counts into pressure. You want an opponent short of answers when your decisive third-action attack arrives, without emptying your own hand just to arrange it. [1]
+
+### How they win
+
+**Drag them into a low-card fight**
+- **Choose this when:** the opponent is vulnerable to relentless aggression, especially when both hands are already small; you do not need a perfect three-card hand before attacking. [2][3]
+- **On your turn:** threaten Jump Scare with your approach, then play Bloody Requiem early to tax their defenses; use Out Of The Mirror before the third action to slip its disruption past cancels reserved for your finisher. Keep attacking rather than waiting for the ability to cooperate. [1][3]
+- **Hand pressure:** use Stolen Memories on a valuable, high-BOOST card they need for their own plan. Judge success by whether either choice hurts them, rather than expecting them to surrender the card you want removed. [3]
+- **On their turn:** favor Evade at three cards; use Broken Glass when you expect to match their attack, keeping your hand ready while hurting them back. When already ahead, spend Broken Glass attacking instead to press toward the finish. [1]
+- **Positioning:** finish in as few zones as possible so your next approach threatens Jump Scare, even when you intend to attack with Bloody Requiem. That threat encourages the substantial defense you want them to waste. [1]
+- **Sources disagree on Jump Scare:** one player recommends using it early at full strength; Baked Goods recommends conserving it, especially the second copy, because its continued threat complicates every defense. [4][1]
+
+**Build a third-action finish**
+- **Choose this when:** you have time to curate a larger hand, or their low hand gives Closer Than She Appears a surprise opening; against cancel-heavy decks, prepare bait before committing Speak Three Times. [2][5][1]
+- **On your turn:** use Stolen Memories, maneuver, then choose your attack from the defenses you saw. Alternatively, use Closer Than She Appears from a fuller hand to reach Speak Three Times without first shrinking to three cards. [1][5]
+- **Baiting:** make early third-action attacks with expendable Trick of the Light or Ghostly Touch when you expect Feint, preserving Speak Three Times for a later opening. Maintain pressure between these turns so they may have to spend cancels just to survive. [1]
+- **On their turn:** at four cards, hold Feint for their last attack to prevent movement or extra-action effects from spoiling your next turn. [1]
+- **Healing:** in a longer fight, prioritize an uncanceled Ghostly Touch when you need longevity; target a sidekick if that makes them less willing to spend a valuable cancel. [1][5]
+
+### How they lose
+
+- **Your hand becomes a target.** Opponents can attack at three cards or decline combat at four to deny your setup. **Answer:** preserve Evade, keep pressuring if ignored, and avoid ending where they can attack twice. [1]
+- **They escape before the payoff.** A movement defense can strand your third action. **Answer:** attack first and maneuver second to chase, or use Trick of the Light when you read an escape. [1][5]
+- **You trust the wrong block.** Effect-driven attacks and offensive cancels punish Mirror Image. **Answer:** reserve it for high printed attacks; use Infinity Mirror to break attack chains and escape pins. [1]
+
+### References
+1. Baked Goods. "Bloody Mary [Unmatched Strategy Guide 22]." *YouTube*. https://www.youtube.com/watch?v=0avhxkitc7A
+2. u/TheEliteB3aver. Comment on "How do you effectively use Bloody Mary?" by u/BeneficialMethod3866. *r/Unmatched*, Reddit, 18 April 2026. https://www.reddit.com/r/Unmatched/comments/1sp2e0n/
+3. u/RelissDeRaken. Comment on "How do you effectively use Bloody Mary?" (see [2]).
+4. u/NintendoOlav. Comment on "Tips for Bloody Mary?" by u/SeriousMolasses9346. *r/Unmatched*, Reddit, 23 March 2026. https://www.reddit.com/r/Unmatched/comments/1s18nto/
+5. Gridbeast. "Unmatched – Bloody Mary." *Gridbeast*. https://gridbeast.gg/unmatched-bloody-mary/
+
+### Not cited
+- [Bloody Mary - Unmatched Fighter Review](https://www.youtube.com/watch?v=pEL31AareYM): PoindexterG - To The Table Top! · video (read; overlapping advice covered more fully by the cited strategy video).
+- [Other replies on using Bloody Mary](https://www.reddit.com/r/Unmatched/comments/1sp2e0n/): Reddit · forum (read; overlapping aggression advice, recommendations, or speculative replies).
+- [Other replies on Bloody Mary tips](https://www.reddit.com/r/Unmatched/comments/1s18nto/): Reddit · forum (read; overlapping hand-management advice and an exhaustion suggestion not developed here).
+- [Shared matchup discussion](https://www.reddit.com/r/Unmatched/comments/1km9dy9/): Reddit · forum (read; narrow opposing-kit interactions do not support broader opponent-type advice).
+- **Pack excerpt without a link:** the general counterplay thread (read; its warning about three cards is covered in detail by [1]; the pack supplies no URL).
 
 ---
