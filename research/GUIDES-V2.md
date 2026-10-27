@@ -106,8 +106,16 @@ In `research/private/sample/` (gitignored): `little_red.long.md` (card by card),
 ## Status
 
 - [x] Format agreed, samples approved
-- [ ] Medium pass (3 / 74: little_red, medusa, bruce_lee from the samples)
+- [ ] Medium pass (12 / 74; next: jekyll_hyde)
 - [ ] Card by card for Medusa and Bruce Lee
 - [ ] Site: tabs + card hovers
 - [ ] Short pass
 - [ ] Card by card pass
+
+## Notes from the first batch
+
+- Codex sometimes writes a UTF-8 byte-order mark; the scripts read with `utf-8-sig`.
+- It sometimes groups citations as `[1, 3]` or spaces them `[1] [3]`; normalise to `[1][3]` before assembling (the prompt now asks for this).
+- It mostly keeps full card names, but check for short forms (e.g. "Gaze" for Gaze of Stone).
+- Card hover: several card names are ordinary words ("Again", "Feint", "Exploit", "Disengage", "Feeding"), so link only this fighter's own cards and only on an exact, case-sensitive match.
+- Low memory on this PC kills long background runs (Claude Code stops them). Close heavy apps first, or start Claude Code with `CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1`. A killed batch loses only the fighter in progress; rerun with `--next`.

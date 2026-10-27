@@ -25,7 +25,7 @@ There is no section explaining the fighter's special ability; advice on using it
 - Write like a strong player explaining the fighter to a friend: direct, second person, concrete. No filler ("is a strong option", "can be useful").
 - **Card names in full, every time**, spelled exactly as in the deck (no short forms such as "Eyes" or "Big Mouth"): the site turns each full card name into a hover card.
 - Name a source in the text only where sources disagree, and then by site or channel ("Gridbeast", "Baked Goods"), never by forum username: write "one player… another…".
-- Put a space before each citation: `finish. [1]`, not `finish.[1]`.
+- Put a space before each citation, and write several as `[1][3]`, never `[1, 3]`: `finish. [1][3]`.
 - Only these Markdown features: `###` headings, paragraphs, flat `- ` lists, `1. ` lists under References, `**bold**`, `*italic*`, links, [n] citations.
 
 ## Format: structure is the point
