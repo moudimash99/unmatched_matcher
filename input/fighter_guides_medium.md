@@ -954,3 +954,173 @@ Written from player guides, videos and forum discussions; format and rules in re
 - **Pack excerpt without a link:** the general counterplay thread (read; its warning about three cards is covered in detail by [1]; the pack supplies no URL).
 
 ---
+
+<!-- id: sun_wukong -->
+## Sun Wukong
+
+**In short:** You are a defensive trickster who makes opponents spend attacks on clones and extra cards surviving your attacks. Keep Sun Wukong sheltered, then choose between outlasting their damage and pressing a shrinking hand before it recovers. [1]
+
+### How they win
+
+**Make their attacks run out**
+- **Choose this when:** Melee fighters depend on big combat hits and cannot efficiently clear clones; Phoenix Form becomes a win condition when your clones stay alive. [1][2]
+- **On your turn:** Rebuild the barrier before spending actions, and send clones into combat instead of exposing Sun Wukong. Once you actually draw Phoenix Form, use it to stabilize, then prioritize recovering it with 72 Transformations while the board still supports healing. [1]
+- **On their turn:** Usually let a clone absorb an attack without defending; spend Tortoise Form when preserving that clone will secure your next Phoenix Form. Save Golden Chain Mail and Bewilderment for attacks that reach Sun Wukong, especially the opponent's biggest combat hits. [1]
+- **Positioning:** Keep a clone between the opposing attacker and Sun Wukong; against ranged attackers, use zone boundaries rather than assuming an adjacent bodyguard protects you. Leave Sun Wukong an empty adjacent space so a pin cannot shut off rebuilding. [1]
+- **Sources disagree on summoning:** Gridbeast recommends summoning selectively as distractions, warning that replacement costs accumulate; Baked Goods recommends using the ability almost every turn, except when low health or ping damage makes it dangerous. Follow the wall plan only while those replacements buy meaningful protection. [3][1]
+
+**Break their hand, then land the decisive attack**
+- **Choose this when:** Automatic damage makes repeated cloning unsustainable, or the opponent already has few cards and you can maintain attack pressure. Against clone-clearing damage, fight more directly and prioritize recurring Ox Form. [1][4]
+- **On your turn:** Start in attack range with Fiery Eyes That See, then use Infinite Strikes to draw out a defense before another attack. Choose Ox Form when their remaining defenses cannot cover it; remember the replacement draw leaves one card unknown. [1]
+- **Keep them guessing:** Mix Ruyi Jingo Bang and Taunting Laughter into your pressure while Ox Form remains a credible threat. Avoid spending your last Ruyi Jingo Bang and both Ox Form early: once either threat disappears, their defensive decisions become easier. [1]
+- **On their turn:** Defend a clone with 72 Transformations to recover Ox Form when their offensive cancels are scarce; do not risk that recovery into an obvious cancel. Recover Tortoise Form instead if your hand urgently needs a defense. [1]
+
+### How they lose
+
+- **Area damage makes your wall expensive.** Repeated clone removal drains health and undermines Phoenix Form. **Answer:** Spread clones out, summon less against reliable ping damage, and attack with Sun Wukong when clones cannot survive; do not bunch everyone together chasing maximum Infinite Strikes. [2][1]
+- **Attack volume overwhelms your hand.** Limited draw means repeated attacks can exhaust even excellent defenses. **Answer:** Use Bewilderment to create distance and rebuild protection, rather than staying exposed after the first defended hit. [2][1]
+- **Small sidekicks pin you.** Losing adjacent spaces also stops new clones. **Answer:** Hold Wily Fighting for defense against surrounding fragile sidekicks; use Bewilderment when you need to escape the pin outright. [1]
+
+### References
+1. Baked Goods. "Sun Wukong [Unmatched Strategy Guide 25]." *YouTube*. https://www.youtube.com/watch?v=DpTCxwW3w_E
+2. u/Silly_Shenanigans. Comment on "Weekly Discussion: Battling Sun Wukong (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 11 March 2026. https://www.reddit.com/r/Unmatched/comments/1rr1gva/
+3. Gridbeast. "Unmatched – Sun Wukong." *Gridbeast*. https://gridbeast.gg/unmatched-sun-wukong/
+4. u/LabRat2329. Comment on "Weekly Discussion: Battling Sun Wukong (Tips and Strategies)" (see [2]). https://www.reddit.com/r/Unmatched/comments/1rr1gva/
+
+### Not cited
+- [Sun Wukong - Unmatched Fighter Review](https://www.youtube.com/watch?v=JUVKcHjIVa8): PoindexterG - To The Table Top! · video (read; positioning and resource advice overlaps the more detailed strategy video).
+- [Weekly Discussion: Battling Sun Wukong (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1rr1gva/): Reddit · remaining post and replies (read; overlapping threats, matchup suggestions, or reactions).
+- [Aggressive pressure discussion](https://www.reddit.com/r/Unmatched/comments/1mirepy/): Reddit · shared thread (read; advice depends on a particular opponent's defensive tools).
+- [Ranged pressure discussion](https://www.reddit.com/r/Unmatched/comments/1rzaalc/): Reddit · shared thread (read; map and opponent-specific alternatives were not generalized).
+- [One-sentence counterplay discussion](https://www.reddit.com/r/Unmatched/): Reddit · excerpt in source pack (read; joke rather than actionable advice; original thread URL absent from pack).
+- [Fighting Against the Best Fighters](https://thegaminggeek.net/unmatched-tips-and-strategies-fighting-against-the-best-fighters/): The Gaming Geek · article excerpt (read; supplied Sun Wukong portion only identifies a tier and set).
+
+---
+
+<!-- id: yennenga -->
+## Yennenga
+
+**In short:** You are a durable ranged fighter who can win through efficient trades or a sudden barrage that empties the opponent's defenses. Keep your Archers working as renewable health, then decide whether this opponent lets you outlast them or demands pressure now. [1][2]
+
+### How they win
+
+**Outlast their big attacks**
+- **Choose this when:** Heavy-hitting fighters threaten large chunks of damage, but you can survive their offense through efficient blocks and Archer health. Commit to winning the trades rather than spending your whole hand on a burst. [1][2]
+- **On your turn:** Keep attacking without exhausting your defensive options; use Surprise Volley to rebuild your Archer support. Against low-value defenses, Jaws of the Beast can instead become your damaging attack or finisher. [1]
+- **On their turn:** Reserve Jaws of the Beast for heavy hits, especially while your Archers are absent. Use Point Blank against adjacent attackers when you are ahead on health and have Archers available to absorb the trade; avoid that gamble when Yennenga must take everything herself. [1]
+- **Positioning:** Against melee fighters, lead with Yennenga and keep healthy Archers behind her in her zone, denying easy direct attacks on them. Stand where an approaching attacker must enter several zones to make Jaws of the Beast harder to punch through. [1]
+- **Healing:** With One With The Land ready, spread damage so both Archers survive wounded; heal while Yennenga is wounded too. Without that healing opportunity, a wounded Archer can block the approach and consume an enemy attack without spending a defense. [1]
+
+**Strip their defenses, then finish**
+- **Choose this when:** The opponent has a superior fatigue plan or repeatable effects you cannot afford to let accumulate, or their hand is already low enough to punish. A full enemy hand makes committing your own much less attractive. [1][2][3]
+- **On your turn:** Attack before revealing Master of the Hunt; inspect their defense and whether they remain in range before committing. Use Rain of Arrows to drain blocks, extend with Surprise Volley, then cash in with Jaws of the Beast once defenses run out. [1]
+- **On their turn:** When an Archer is attacked on the opponent's last action, Pin the Prey can sacrifice it to leave the hero in Yennenga's range for your barrage. Shield Formation also pressures a depleted hand when an Archer is defeated; don't budget around getting that Archer back. [1][4]
+- **Protect your hand:** Keep defenses after the barrage; spending every versatile on attacks invites a punishing reply. [1][3]
+- **Sources disagree on Surprise Volley:** Gridbeast recommends taking the action only to secure the kill; Baked Goods also accepts it to press an already vulnerable opponent, while warning against neglecting Archer revival. [5][1]
+
+### How they lose
+
+- **Area damage and separation.** Losing Archer support exposes Yennenga to concentrated attacks. **Answer:** Check Archer coverage after Stallion Charge; use it to escape a pin, and defend a stranded Archer with Divide and Conquer rather than separating deliberately just to enable it. [1][3]
+- **Relentless hand pressure.** Steady attacks leave you unable to sustain both offense and defense. **Answer:** Preserve Skirmish and some Momentous Shift for defense instead of committing every copy offensively. [3][1]
+- **Cancels stop your recovery and pressure.** **Answer:** While both Archers are alive, offer Rain of Arrows or Pin the Prey to compete for cancels before you need Surprise Volley to restore your survival plan. [1]
+
+### References
+1. Baked Goods. "Yennenga [Unmatched Strategy Guide 23]." *YouTube*. https://www.youtube.com/watch?v=1y_oc8YJdOQ
+2. u/d_Shirt. Comment on "Weekly Discussion: Battling Yennenga (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 25 March 2026. https://www.reddit.com/r/Unmatched/comments/1s3hv2c/
+3. u/NommyboB. Comment on "Weekly Discussion: Battling Yennenga (Tips and Strategies)" (see [2]).
+4. PoindexterG - To The Table Top!. "Yennenga - Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=LCGjjjleRBs
+5. Gridbeast. "Unmatched – Yennenga." *Gridbeast*. https://gridbeast.gg/unmatched-yennenga/
+
+### Not cited
+- [Mulligan Mondays: Yennenga (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1tgso92/): Reddit · forum thread (read; narrow opening advice omitted to prioritize the two plans).
+- [Shared matchup discussion](https://boardgamegeek.com/thread/3260485/yennenga-against-vs-achilles): BoardGameGeek · forum thread (read; map-specific results add little to these plans).
+- [Shared discussion about countering Yennenga](https://www.reddit.com/r/Unmatched/comments/1rzaalc/): Reddit · forum thread (read; map-specific opposing plans overlap the threats above).
+- [Fighting Against the Best Fighters](https://thegaminggeek.net/unmatched-tips-and-strategies-fighting-against-the-best-fighters/): The Gaming Geek · article excerpt (read; pack supplies only a tier listing).
+
+---
+
+<!-- id: luke_cage -->
+## Luke Cage
+
+**In short:** You are a slow brawler who wants opponents stuck beside you, trading attacks on your terms. Keep Misty Knight alive to create those exchanges, and change plans when your hand cannot support another round of pressure. [1]
+
+### How they win
+
+**Trap them beside Luke, then hit twice**
+- **Choose this when:** You face fighters built around repeated low-value attacks, or melee fighters who need to attack before retreating. Against heavy hitters, pursue the same burst only when you can survive their reply; Skin Like Titanium can turn their biggest swing into your finishing window. [1][2]
+- **On your turn:** Against a lone hero or an accessible nearest target, lead with Where's My Money? to set up two attacks. Use Sweet Christmas! to punish expected cancels; with Hero For Hire, inspect their defense before committing a boost rather than boosting automatically. [1]
+- **On their turn:** Hold Trash Talk for an attack that would otherwise let them retreat or continue a combo, leaving them exposed to your next double attack. If you cannot stop a follow-up that way, use Power Man to break contact instead. [1][2]
+- **Positioning:** Finish adjacent with Luke to threaten that punishment, except against adjacency-based damage abilities; keep Misty Knight safely at range. When they attack her late in their turn, Got My Back? can turn their attempt to remove her into Luke's next attacking opportunity. [1]
+- **Misty's attack:** Approach with Misty Knight only when you have protection or their hand is depleted. Mix Commanding Impact into adjacent attacks to punish a cancel aimed at Daughter of the Dragon; you need not play the card you threaten. [1][3]
+- **Trading health:** Save Skin Like Titanium for a large attack while you still have health to spend and follow-up attacks ready. Against heavy hitters whose best defenses are already gone, the return damage can put them within reach of two finishing blows. [1][4]
+
+**Strip their answers, then outlast them**
+- **Choose this when:** Your damage race is falling short, but you can survive and exhaust their ways to stop Still Standing. Against sidekick teams with weak defenses, those bodies also give you safer opportunities to start recycling. [1][3]
+- **Setup:** Play your first Still Standing early rather than saving both copies for exhaustion. That leaves a longer, less predictable window for the second; pressure with big attacks to draw out the defenses and cancels that would stop it. [1]
+- **Payoff:** Use Hero For Hire as bait without boosting into a strong defense, then slip Still Standing through once those answers run low. Preserve the loop by recovering the other Still Standing; recover Where's My Money? when reaching a fleeing opponent is the obstacle. [1]
+
+### How they lose
+
+- **Effect damage shortens your clock.** Your durability does not protect you from this route, so waiting can lose the race. **Answer:** Press with Commanding Impact and reserve Trash Talk for damaging attack effects you can cancel. [2][4][5]
+- **Runners drain your movement resources.** Spending every Pushback and Regroup on Hero For Hire can leave you unable to reach them across larger gaps. **Answer:** Reserve movement boosts and recycle Where's My Money? when needed. [1]
+- **Protecting Misty empties Luke's defenses.** Shared blocks spent on her leave you exposed to large attacks. **Answer:** Use Daughter of the Dragon against adjacent attackers and Got My Back? to preserve her; avoid casually spending Luke's shared defenses or Regroup boosts. [3][4]
+
+### References
+
+1. Karma ??? | ??? Unmatched. "Strategy Sunday Vol. 18: Luke Cage." *YouTube*. https://www.youtube.com/watch?v=zSsvURmCCcE
+2. Gridbeast. "Unmatched ? Luke Cage." *Gridbeast*. https://gridbeast.gg/unmatched-luke-cage/
+3. PoindexterG - To The Table Top! "Luke Cage - Unmatched Marvel Fighter Review." *YouTube*. https://www.youtube.com/watch?v=_ZgWf_PRMrg
+4. Baked Goods. "Luke Cage - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=GVdtYMAT7lA
+5. TFJ383. "An Unmatched Roster: The Opposite of Redemption." *BoardGameGeek*, 31 October 2023. https://boardgamegeek.com/thread/3182025/an-unmatched-roster-the-opposite-of-redemption
+
+### Not cited
+
+- [Unmatched: Marvel ? Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider ? interview (read; no Luke Cage-specific strategy).
+- [Replies to An Unmatched Roster: The Opposite of Redemption](https://boardgamegeek.com/thread/3182025/an-unmatched-roster-the-opposite-of-redemption): BoardGameGeek ? forum replies (all four read; terminology and general design opinions rather than Luke Cage play advice).
+
+---
+
+<!-- id: ghost_rider -->
+## Ghost Rider
+
+**In short:** You wear opponents down by running them over while building a hand that can survive their reply. Alternate those passes with short attacks to replenish Hellfire, then finish before your fragile defenses give out. [1][2]
+
+### How they win
+
+**Run them down without trading attacks**
+- **Choose this when:** Fighters depend on several 1-health sidekicks to control the board, or cannot keep up with repeated movement damage. Run over those sidekicks rather than spending attacks on them. [1]
+- **On your turn:** Maneuver through targets while filling your hand; once it is full, attack once or twice, then resume maneuvering. Use The Wicked Will Burn after moving to replenish your fuel rather than expecting that attack to push damage through. [1]
+- **On their turn:** Keep Control The Demon for defense, preferably with four or five Hellfire. With Deal With The Devil, accept a little damage when preventing it would consume fuel you need; spend more when winning the combat denies a dangerous effect. [1]
+- **Positioning:** Finish passes outside attack range so they must maneuver before hitting you. Prioritize routes through several targets, but do not sacrifice your safe endpoint just to stay near them. [1]
+
+**Turn a full hand into a short offensive burst**
+- **Choose this when:** You need to empty a crowded hand, or the opponent has run short of defenses. Against decks with high BOOST values and few cancels, Penance Stare gives you a more threatening offensive opening. [1][2]
+- **On your turn:** Use Hell Rides With Me to arrange the engagement, then attack with Spirit Of Vengeance; pay for its draw only when your hand needs replenishing. Follow with Penance Stare when their high BOOST defenses and lack of cancels give you an opening. [1][3]
+- **On their turn:** Against heavy attacks with high BOOST values, reserve Penance Stare to block instead. Do not spend extra Hellfire when its initial defense already handles the attack. [4]
+- **Sources disagree on extra attacks:** Gridbeast recommends Hell Rides With Me into I Brought The Devil With Me, followed by The Wicked Will Burn to sustain pressure. One forum player treats that extra action as a trap except when it immediately wins against an opponent without defenses; plan your remaining fuel before choosing the longer turn. [3][5]
+
+**Prepare the Blaze of Glory finish**
+- **Choose this when:** The opposing hero is within your available Hellfire's lethal reach, especially when you are losing the health race. You can win even if Blaze of Glory defeats both heroes. [1][2]
+- **On your turn:** Keep Hell Rides With Me alongside Blaze of Glory to solve positioning; if already adjacent but empty, play Chains of Hellfire before attacking. Bait remaining cancels before committing the finisher. [2][3]
+- **Restraint:** Save Blaze of Glory for lethal in a duel. Spending your fuel and health without ending the game leaves you exposed. [1]
+
+### How they lose
+
+- **Pressure while empty.** Spending your last fuel leaves your best defenses stranded. **Answer:** Refill with Chains of Hellfire before pressure forces you to; use Stoke The Flames while low only when you can afford the damage. [1][2]
+- **Repeated attacks.** Staying reachable invites more combat than your defenses can sustain. **Answer:** Use I Finally Escaped Hell to break adjacency; if they reconnect, The Wicked Will Burn can replenish Hellfire on the follow-up defense. [6]
+
+### References
+1. HELPivFALLN. "Unmatched Ghost Rider Guide." *YouTube*. https://www.youtube.com/watch?v=laLqE6bF8SY
+2. u/AbrocomaRight9782. Comment on "Tips for playing Ghost Rider? Wouldn't want this beautiful figure go to waste" by u/Prudent-Paint2537. *r/Unmatched*, Reddit, 13 December 2025. https://www.reddit.com/r/Unmatched/comments/1plly3g/
+3. Gridbeast. "Unmatched ? Ghost Rider." *Gridbeast*. https://gridbeast.gg/unmatched-ghost-rider/
+4. PoindexterG - To The Table Top!. "Ghost Rider - Unmatched Marvel Fighter Review - Updated." *YouTube*. https://www.youtube.com/watch?v=LC0t8eQMkI4
+5. u/CupAlternative. Comment on "Tips for playing Ghost Rider? Wouldn't want this beautiful figure go to waste" (see [2]).
+6. Baked Goods. "Ghost Rider - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=VdCuD5Bw7-M
+
+### Not cited
+- [Ghost Rider Tips?](https://www.reddit.com/r/Unmatched/comments/1t0p69f/): Reddit ? forum thread (read; movement and finishing advice covered by the cited sources).
+- [Unmatched: Marvel ? Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider ? article (read; no substantive Ghost Rider-specific strategy).
+- [An Unmatched Roster: The Opposite of Redemption](https://boardgamegeek.com/thread/3182025/an-unmatched-roster-the-opposite-of-redemption): BoardGameGeek ? article and replies (read; resource criticism covered more concretely by the cited guides).
+- Playing-against excerpts S17 and S18 in the source pack: Reddit ? forum comments (read; S17 repeats the low-resource threat; S18 supplies no actionable answer; original URLs absent from the pack).
+
+---
