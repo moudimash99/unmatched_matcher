@@ -51,21 +51,102 @@
     </div>
 </section>
 
-{% if guide and (guide.short or guide.full) %}
+<nav class="page-jump" aria-label="On this page">
+    {% if guide and (guide.short or guide.medium or guide.cards) %}<a href="#strategy">How to play</a>{% endif %}
+    <a href="#matchups">Best &amp; worst matchups</a>
+    {% if hero and deck %}<a href="#deck">Deck</a>{% endif %}
+    {% if map_rows %}<a href="#maps">Maps</a>{% endif %}
+    <a href="#all-matchups">Every matchup</a>
+</nav>
+
+{% set guide_tabs = [('short', 'Short'), ('medium', 'Medium'), ('cards', 'Card by card')] %}
+{% if guide and (guide.short or guide.medium or guide.cards) %}
+{% set default_tab = 'medium' if guide.medium else ('short' if guide.short else 'cards') %}
 <section class="panel guide" id="strategy">
     <h2>How to play {{ fighter.name }}</h2>
-    <p class="muted">Written from player guides, reviews and forum discussions. Numbers in brackets link to the sources.</p>
-    {% if guide.short %}<div class="guide-body">{{ guide.short }}</div>{% endif %}
-    {% if guide.full %}
-    <details class="guide-full"{% if not guide.short %} open{% endif %}>
-        <summary>Read the full guide</summary>
-        <div class="guide-body">{{ guide.full }}</div>
-    </details>
-    {% endif %}
+    <p class="muted">Written from player guides, videos and forum discussions. Hover over or tap a <span class="card-ref-sample">card name</span> to see the card{% if guide_terms %}, or a <span class="card-ref-sample term">key term</span> to see what it means{% endif %}. The small numbers link to the sources at the end.</p>
+    <div class="guide-tabs" role="tablist" aria-label="Guide length">
+        {% for kind, label in guide_tabs if guide[kind] %}
+        <button type="button" role="tab" id="guide-tab-{{ kind }}" aria-controls="guide-{{ kind }}"
+                aria-selected="{{ 'true' if kind == default_tab else 'false' }}" tabindex="{{ 0 if kind == default_tab else -1 }}">{{ label }}</button>
+        {% endfor %}
+    </div>
+    <div class="guide-layout">
+        <div class="guide-main">
+            {% for kind, label in guide_tabs if guide[kind] %}
+            <div class="guide-body" role="tabpanel" id="guide-{{ kind }}" aria-labelledby="guide-tab-{{ kind }}"{% if kind != default_tab %} hidden{% endif %}>{{ guide[kind] }}</div>
+            {% endfor %}
+        </div>
+        <aside class="guide-side">
+            {% if guide_terms %}
+            <div class="side-box">
+                <h3>Key terms</h3>
+                <p class="guide-term-list">{% for term, info in guide_terms.terms.items() %}<span><span aria-hidden="true">{{ info.symbol }}</span> {{ term | capitalize }}</span>{% endfor %}</p>
+                <p class="guide-term-note">{{ guide_terms.note }}{% for term, info in guide_terms.terms.items() if info.text %} {{ info.text }}{% endfor %}</p>
+            </div>
+            {% endif %}
+            <nav class="side-box guide-toc" aria-label="In this guide">
+                <h3>In this guide</h3>
+                <ol id="guide-toc"></ol>
+            </nav>
+        </aside>
+    </div>
 </section>
+<script>
+(function () {
+    var tabs = document.querySelectorAll('#strategy [role="tab"]');
+    var toc = document.getElementById('guide-toc');
+    // "In this guide": the shown version's sections and, under them, its boxes (ways to win, cards)
+    function buildToc(panel) {
+        toc.innerHTML = '';
+        var n = 0;
+        panel.querySelectorAll('h3, .guide-box > h4').forEach(function (h) {
+            if (h.closest('.guide-sources')) return;
+            var target = h.tagName === 'H4' ? h.parentNode : h;
+            if (!target.id) target.id = panel.id + '-part-' + (++n);
+            var li = document.createElement('li');
+            if (h.tagName === 'H4') li.className = 'sub';
+            var a = document.createElement('a');
+            a.href = '#' + target.id;
+            a.textContent = h.childNodes[0] && h.childNodes[0].nodeType === 3 ? h.childNodes[0].textContent : h.textContent;
+            if (h.querySelector('.card-ref')) a.textContent = h.querySelector('.card-ref').firstChild.textContent;
+            li.appendChild(a);
+            toc.appendChild(li);
+        });
+    }
+    function select(tab) {
+        tabs.forEach(function (t) {
+            var on = t === tab;
+            t.setAttribute('aria-selected', on ? 'true' : 'false');
+            t.tabIndex = on ? 0 : -1;
+            var panel = document.getElementById(t.getAttribute('aria-controls'));
+            panel.hidden = !on;
+            if (on) buildToc(panel);
+        });
+    }
+    select(document.querySelector('#strategy [role="tab"][aria-selected="true"]'));
+    // A source number opens the folded Sources list before jumping to it
+    document.querySelectorAll('#strategy sup.cite a').forEach(function (a) {
+        a.addEventListener('click', function () {
+            var target = document.getElementById(a.getAttribute('href').slice(1));
+            var box = target && target.closest('details');
+            if (box) box.open = true;
+        });
+    });
+    tabs.forEach(function (tab, i) {
+        tab.addEventListener('click', function () { select(tab); });
+        tab.addEventListener('keydown', function (e) {
+            var step = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+            if (!step) return;
+            var next = tabs[(i + step + tabs.length) % tabs.length];
+            select(next); next.focus();
+        });
+    });
+})();
+</script>
 {% endif %}
 
-<section class="two-col">
+<section class="two-col" id="matchups">
     <div class="panel">
         <h2>Best matchups</h2>
         <p class="muted">Only matchups with {{ full_confidence_games }}+ games.</p>
@@ -79,48 +160,40 @@
     </div>
 </section>
 
-{% if map_rows %}
-<section class="panel">
-    <h2>Maps</h2>
-    <p class="muted">{{ fighter.name }}'s overall win rate shifted by how they do on each map in Tabletop League games.
-        Maps with fewer than {{ map_full_confidence_games }} games lean on the overall rate.</p>
-    <div class="table-wrap">
-    <table class="data">
-        <thead><tr><th>Map</th><th>Set</th><th class="num">{{ fighter.name }} wins</th><th class="num">vs usual</th><th class="num">Games</th></tr></thead>
-        <tbody>
-        {% for r in map_rows %}
-        <tr>
-            <td><strong>{{ r.map.name }}</strong></td>
-            <td>{{ r.map.set or '–' }}{% if collection and r.map.set in collection %} <span class="muted">· owned</span>{% endif %}</td>
-            <td class="num" data-win="{{ r.win_pct }}" data-games="{{ r.games }}">{{ '~' if r.low_data }}{{ r.win_pct | round | int }}%</td>
-            <td class="num">{{ '%+d' % (r.lean_pts | round | int) }}</td>
-            <td class="num">{{ "{:,}".format(r.games) }}{% if r.low_data %} <span class="games-note low-data">estimate</span>{% endif %}</td>
-        </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-    </div>
-</section>
-{% endif %}
-
 {% if hero and deck %}
-<section class="panel">
+<section class="panel" id="deck">
     <h2>Deck · {{ deck.total }} cards</h2>
-    <div class="row">
+    <div class="row deck-counts">
         {% for t, n in deck.counts.items() if n %}
         <div class="stat"><b>{{ n }}</b><span class="card-type">{{ t }}</span></div>
         {% endfor %}
         {% if deck.avg_value %}<div class="stat"><b>{{ '%.1f' % deck.avg_value }}</b><span>avg combat value</span></div>{% endif %}
+        {% if deck.value_counts %}
+        {% set peak = deck.value_counts.values() | max %}
+        <div class="stat value-tile" title="How many attack, defense and versatile cards have each value">
+            <div class="value-chart" role="img" aria-label="Combat card values: {% for v, n in deck.value_counts.items() %}{{ n }} with value {{ v }}{{ ', ' if not loop.last }}{% endfor %}">
+                {% for v, n in deck.value_counts.items() %}
+                <div class="value-col" title="{{ n }} card{{ 's' if n != 1 }} with value {{ v }}">
+                    <span class="value-count">{{ n if n }}</span>
+                    <span class="value-bar" style="height: {{ (n / peak * 100) | round }}%"></span>
+                    <span class="value-label">{{ v }}</span>
+                </div>
+                {% endfor %}
+            </div>
+            <span>cards per combat value</span>
+        </div>
+        {% endif %}
     </div>
-    {% if deck.value_counts %}
-    {% set peak = deck.value_counts.values() | max %}
-    <h3>Combat card values</h3>
-    <div class="bars" aria-label="Combat card value distribution">
-        {% for v, n in deck.value_counts.items() %}
-        <div style="height: {{ (n / peak * 100) | round }}%" title="{{ n }} cards with value {{ v }}"><span>{{ v }}</span></div>
+    {% if card_pics %}
+    <div class="deck-grid">
+        {% for c in card_pics %}
+        <figure>{% if c.image %}<img src="{{ c.image }}" alt="{{ c.card.title }}: {{ c.card.effect }}" loading="lazy" decoding="async" width="250" height="349">{% else %}
+            <div class="deck-text-card"><b>{{ c.card.title }}</b><span class="card-type">{{ c.card.type }}{% if c.card.value is not none %} · {{ c.card.value }}{% endif %}</span><span>{{ c.card.effect }}</span></div>{% endif %}
+            <figcaption>×{{ c.copies }}</figcaption></figure>
         {% endfor %}
     </div>
-    <div style="height:1.3rem"></div>
+    <details class="fold">
+    <summary>Card text as a list</summary>
     {% endif %}
     <div class="table-wrap">
     <table class="data">
@@ -139,12 +212,40 @@
         </tbody>
     </table>
     </div>
-    <p class="muted" style="margin-top:.5rem">Card data via <a href="https://www.the-unmatched.club/heroes/{{ fighter.club_key }}" target="_blank" rel="noopener">The Unmatched Club</a>.</p>
+    {% if card_pics %}</details>{% endif %}
+    <p class="muted" style="margin-top:.5rem">{% if card_pics %}Card pictures from <a href="https://www.the-unmatched.club/" target="_blank" rel="noopener">The Unmatched Club</a> and <a href="https://unmatched.cards/" target="_blank" rel="noopener">unmatched.cards</a>. {% endif %}Card data via <a href="https://www.the-unmatched.club/heroes/{{ fighter.club_key }}" target="_blank" rel="noopener">The Unmatched Club</a>.</p>
 </section>
 {% endif %}
 
-<section class="panel">
-    <h2>Every matchup</h2>
+{% if map_rows %}
+<section class="panel" id="maps">
+    <details class="fold">
+    <summary><h2>Maps</h2><span class="muted">{{ map_rows | length }} maps · show</span></summary>
+    <p class="muted">{{ fighter.name }}'s overall win rate shifted by how they do on each map in Tabletop League games.
+        Maps with fewer than {{ map_full_confidence_games }} games lean on the overall rate.</p>
+    <div class="table-wrap">
+    <table class="data">
+        <thead><tr><th>Map</th><th>Set</th><th class="num">{{ fighter.name }} wins</th><th class="num">vs usual</th><th class="num">Games</th></tr></thead>
+        <tbody>
+        {% for r in map_rows %}
+        <tr>
+            <td><strong>{{ r.map.name }}</strong></td>
+            <td>{{ r.map.set or '–' }}{% if collection and r.map.set in collection %} <span class="muted">· owned</span>{% endif %}</td>
+            <td class="num" data-win="{{ r.win_pct }}" data-games="{{ r.games }}">{{ '~' if r.low_data }}{{ r.win_pct | round | int }}%</td>
+            <td class="num">{{ '%+d' % (r.lean_pts | round | int) }}</td>
+            <td class="num">{{ "{:,}".format(r.games) }}{% if r.low_data %} <span class="games-note low-data">estimate</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    </details>
+</section>
+{% endif %}
+
+<section class="panel" id="all-matchups">
+    <details class="fold">
+    <summary><h2>Every matchup</h2><span class="muted">{{ rows | length }} opponents · show</span></summary>
     <div class="table-wrap">
     <table class="data">
         <thead><tr><th>Opponent</th><th class="num">{{ fighter.name }} wins</th><th class="num">Games</th><th></th></tr></thead>
@@ -160,5 +261,6 @@
         </tbody>
     </table>
     </div>
+    </details>
 </section>
 {% endblock %}

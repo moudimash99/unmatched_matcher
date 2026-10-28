@@ -63,7 +63,7 @@ def test_deck_summary_counts_copies_and_values():
     s = insights.deck_summary(deck)
     assert s["total"] == 7
     assert s["counts"]["attack"] == 3 and s["counts"]["scheme"] == 2
-    assert s["value_counts"] == {2: 2, 4: 3}
+    assert s["value_counts"] == {2: 2, 3: 0, 4: 3}  # a gap shows as 0
     assert s["avg_value"] == pytest.approx((4 * 3 + 2 * 2) / 5)
 
 

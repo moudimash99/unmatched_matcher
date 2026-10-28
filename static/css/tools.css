@@ -96,22 +96,120 @@
 .tool-page .stat b { display: block; font-size: 1.15rem; }
 .tool-page .stat span { font-size: 0.75rem; color: var(--text-secondary); }
 .tool-page .ability { background: #fff8e6; border-left: 4px solid #f0ad4e; padding: 0.7rem 0.9rem; border-radius: 6px; margin: 0.6rem 0; }
-.tool-page .bars { display: flex; align-items: flex-end; gap: 4px; height: 70px; margin-top: 0.4rem; }
-.tool-page .bars div { flex: 1; background: var(--accent-primary); border-radius: 3px 3px 0 0; position: relative; min-width: 14px; }
-.tool-page .bars div span { position: absolute; bottom: -1.2rem; left: 0; right: 0; text-align: center; font-size: 0.7rem; color: var(--text-secondary); }
+/* Combat card values: a tile in the deck's number row, one small column per value */
+.tool-page .deck-counts { align-items: stretch; }
+.tool-page .deck-counts .stat { display: flex; flex-direction: column; justify-content: center; }
+.tool-page .value-tile { padding: 0.35rem 0.75rem 0.4rem; }
+.tool-page .value-chart { display: flex; gap: 3px; height: 4.2rem; margin: 0 auto 0.15rem; }
+.tool-page .value-col { display: grid; grid-template-rows: auto 1fr auto; justify-items: center; width: 1.45rem; cursor: default; }
+.tool-page .value-count { font-size: 0.68rem; font-weight: 600; color: var(--text-primary); line-height: 1.2; min-height: 0.8rem; }
+.tool-page .value-bar { align-self: end; width: 0.9rem; min-height: 0; background: var(--accent-primary); border-radius: 3px 3px 0 0; }
+.tool-page .value-col:hover .value-bar { filter: brightness(0.85); }
+.tool-page .value-label { font-size: 0.68rem; color: var(--text-secondary); line-height: 1.3; border-top: 1px solid #d6dde8; width: 100%; text-align: center; }
 .tool-page .card-type { text-transform: capitalize; }
 .tool-page .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 
-/* Strategy guide: short version, then the full one in a <details> */
-.tool-page .guide-body { line-height: 1.55; max-width: 52rem; overflow-wrap: anywhere; }
-.tool-page .guide-body p { margin: 0.35rem 0; }
+/* Strategy guide: Short / Medium / Card by card tabs, card names that show the card */
+.tool-page .guide-tabs { display: flex; gap: 0.25rem; margin: 0.6rem 0 0.4rem; border-bottom: 1px solid #e3e7ee; }
+.tool-page .guide-tabs [role="tab"] { border: 0; border-bottom: 3px solid transparent; background: none; padding: 0.45rem 0.8rem;
+    font: inherit; font-weight: 600; color: var(--text-secondary); cursor: pointer; margin-bottom: -1px; }
+.tool-page .guide-tabs [role="tab"][aria-selected="true"] { color: var(--accent-primary); border-bottom-color: var(--accent-primary); }
+.tool-page .guide-tabs [role="tab"]:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 2px; }
+.tool-page .card-ref { position: relative; text-decoration: underline dotted var(--accent-primary); text-underline-offset: 3px; cursor: help; }
+.tool-page .card-ref:focus { outline: none; background: #eef5ff; border-radius: 3px; }
+.tool-page .card-pop { display: none; position: absolute; z-index: 20; left: 0; top: calc(100% + 6px); width: max-content; max-width: min(22rem, 80vw);
+    background: var(--bg-card); color: var(--text-primary); border: 1px solid #d6dde8; border-radius: 8px; box-shadow: var(--shadow-md);
+    padding: 0.55rem 0.7rem; font-size: 0.85rem; line-height: 1.4; font-weight: 400; font-style: normal; text-align: left; white-space: normal; }
+.tool-page .card-ref:hover .card-pop, .tool-page .card-ref:focus .card-pop, .tool-page .card-ref:focus-within .card-pop { display: block; }
+.tool-page .card-pop > span { display: block; }
+.tool-page .card-pop-title { font-weight: 700; }
+.tool-page .card-pop-who, .tool-page .card-pop-facts { color: var(--text-secondary); font-size: 0.8rem; }
+.tool-page .card-pop-effect { margin-top: 0.3rem; }
+/* a card picture fills the box */
+.tool-page .card-pop:has(> .card-pop-img) { padding: 0; border: 0; background: none; box-shadow: none; }
+.tool-page .card-pop-img { display: block; width: 250px; max-width: 70vw; height: auto; border-radius: 10px; box-shadow: 0 6px 18px rgba(0, 0, 0, .3); }
+.tool-page .card-ref-sample { text-decoration: underline dotted var(--accent-primary); text-underline-offset: 3px; }
+@media (max-width: 600px) {
+    /* a box under the word can run off a phone screen, so pin it to the bottom instead */
+    .tool-page .card-pop { position: fixed; left: 16px; right: 16px; top: auto; bottom: 16px; width: auto; max-width: none; }
+    .tool-page .card-pop:has(> .card-pop-img) { left: 50%; right: auto; transform: translateX(-50%); }
+    .tool-page .card-pop-img { width: min(250px, 70vw); }
+}
+
+/* Guide text: one idea per line, a box per way to win or per card */
+.tool-page .guide-body { line-height: 1.6; max-width: 46rem; overflow-wrap: anywhere; padding-top: 0.4rem; }
+.tool-page .guide-body p { margin: 0.45rem 0; }
 .tool-page .guide-body ul { margin: 0.3rem 0 0.3rem 1.2rem; }
 .tool-page .guide-body li { margin: 0.2rem 0; }
-.tool-page .guide-body sup.cite { font-size: 0.7em; line-height: 0; }
+.tool-page .guide-body .guide-lede { background: #f4f8ff; border-left: 4px solid var(--accent-primary); border-radius: 6px;
+    padding: 0.65rem 0.9rem; margin: 0.4rem 0 1rem; font-size: 1.02rem; }
+.tool-page .guide-body h3 { font-size: 1.1rem; margin: 1.4rem 0 0.6rem; padding-bottom: 0.3rem; border-bottom: 2px solid #e3e7ee; }
+.tool-page .guide-body h3.guide-how-they-win, .tool-page .guide-body h3.guide-win-conditions { border-bottom-color: #9fd8b0; }
+.tool-page .guide-body h3.guide-how-they-lose { border-bottom-color: #f0b0b6; }
+.tool-page .guide-body h4 { font-size: 1rem; margin: 0 0 0.4rem; }
+.tool-page .guide-body ul.guide-list { list-style: none; margin: 0.3rem 0; padding: 0; }
+.tool-page .guide-body li.guide-item { margin: 0 0 0.7rem; }
+.tool-page .guide-body li.guide-item:last-child { margin-bottom: 0.2rem; }
+.tool-page .guide-body .guide-label { display: block; font-weight: 700; font-size: 0.82rem; text-transform: uppercase;
+    letter-spacing: 0.03em; color: #44546a; }
+.tool-page .guide-body li.guide-choose { background: #fff8e6; border-radius: 6px; padding: 0.45rem 0.65rem; }
+.tool-page .guide-body li.guide-choose .guide-label { color: #8a6100; }
+.tool-page .guide-body .guide-answer { display: block; margin-top: 0.35rem; font-weight: 700; font-size: 0.82rem;
+    text-transform: uppercase; letter-spacing: 0.03em; color: #1d7a35; }
+.tool-page .guide-body .guide-box { border: 1px solid #e3e7ee; border-radius: 10px; padding: 0.8rem 1rem; margin: 0 0 0.85rem; }
+.tool-page .guide-body .guide-card { display: grid; grid-template-columns: auto 1fr; column-gap: 0.85rem; align-items: start;
+    scroll-margin-top: 4rem; }
+.tool-page .guide-body .guide-card > * { grid-column: 2; }
+.tool-page .guide-body .guide-card > .guide-thumb { grid-column: 1; grid-row: 1 / span 9; width: 64px; height: auto; border-radius: 5px;
+    box-shadow: var(--shadow-sm); }
+.tool-page .guide-body .guide-card > .guide-thumb + .guide-thumb { grid-row: auto; }
+.tool-page .guide-body .guide-jump { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0 0 1rem; }
+.tool-page .guide-body .guide-jump a { font-size: 0.82rem; padding: 0.2rem 0.55rem; border-radius: 999px; background: #eef2f7;
+    color: var(--text-primary); text-decoration: none; }
+.tool-page .guide-body .guide-jump a:hover { background: #dfe8f5; }
+.tool-page .guide-body sup.cite { font-size: 0.68em; line-height: 0; opacity: 0.75; }
 .tool-page .guide-body sup.cite a { text-decoration: none; }
+.tool-page .guide-body .guide-sources { margin-top: 1.4rem; border-top: 1px solid #e3e7ee; padding-top: 0.6rem; }
+.tool-page .guide-body .guide-sources summary { cursor: pointer; font-weight: 600; color: var(--accent-primary); }
+.tool-page .guide-body .guide-sources h3 { border: 0; margin: 0.8rem 0 0.3rem; }
 .tool-page .guide-body h3.guide-references, .tool-page .guide-body h3.guide-not-cited { font-size: 0.9rem; color: var(--text-secondary); }
 .tool-page .guide-body ol.guide-refs { margin: 0.3rem 0 0.3rem 1.6rem; font-size: 0.82rem; color: var(--text-secondary); }
 .tool-page .guide-body ol.guide-refs li:target { background: #fff8e6; }
+@media (max-width: 600px) {
+    .tool-page .guide-body .guide-box { padding: 0.7rem 0.75rem; }
+    .tool-page .guide-body .guide-card > .guide-thumb { width: 48px; }
+}
+
+/* Jump bar between the profile and the rest of the fighter page */
+.tool-page .page-jump { position: sticky; top: 0; z-index: 15; display: flex; gap: 0.35rem; overflow-x: auto; scrollbar-width: none;
+    background: var(--bg-body); padding: 0.5rem 0; margin: -0.5rem 0 0.75rem; }
+.tool-page .page-jump a { flex-shrink: 0; font-size: 0.88rem; font-weight: 500; padding: 0.35rem 0.8rem; border-radius: 999px;
+    background: var(--bg-card); box-shadow: var(--shadow-sm); border: 1px solid #e3e7ee; color: var(--text-primary); text-decoration: none; }
+.tool-page .page-jump a:hover { border-color: var(--accent-primary); color: var(--accent-primary); }
+.tool-page #strategy, .tool-page #matchups, .tool-page #deck, .tool-page #maps, .tool-page #all-matchups { scroll-margin-top: 3.5rem; }
+
+/* Folded sections: the heading is the button */
+.tool-page details.fold > summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
+.tool-page details.fold > summary::-webkit-details-marker { display: none; }
+.tool-page details.fold > summary h2 { margin: 0; }
+.tool-page details.fold > summary::before { content: "▸"; color: var(--accent-primary); }
+.tool-page details.fold[open] > summary::before { content: "▾"; }
+.tool-page details.fold[open] > summary { margin-bottom: 0.75rem; }
+.tool-page #deck details.fold > summary { font-weight: 600; color: var(--accent-primary); margin-top: 1rem; }
+
+/* Deck as card pictures */
+.tool-page .deck-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.75rem; margin-top: 0.5rem; }
+.tool-page .deck-grid figure { margin: 0; position: relative; }
+.tool-page .deck-grid img { width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md); display: block; }
+.tool-page .deck-grid img { aspect-ratio: 250 / 349; background: #e9edf2; }
+.tool-page .deck-text-card { aspect-ratio: 250 / 349; display: flex; flex-direction: column; gap: 0.3rem; padding: 0.6rem; border-radius: 8px;
+    background: #fff; border: 1px solid #d6dde8; box-shadow: var(--shadow-md); font-size: 0.75rem; overflow: hidden; }
+.tool-page .deck-text-card .card-type { color: var(--text-secondary); }
+.tool-page .deck-grid figcaption { position: absolute; top: 6px; right: 6px; background: rgba(11, 46, 89, .88); color: #fff;
+    font-size: 0.75rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 999px; }
+@media (max-width: 600px) {
+    .tool-page .deck-grid { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+}
 .tool-page .guide-full { margin-top: 1rem; border-top: 1px solid #e3e7ee; padding-top: 0.75rem; }
 .tool-page .guide-full summary { cursor: pointer; font-weight: 600; color: var(--accent-primary); }
 
@@ -166,3 +264,37 @@
 .tool-page footer .footer-note { font-size: 0.85rem; color: var(--text-secondary); margin: 0.3rem auto; max-width: 900px; }
 /* The matcher's global button style is white-on-blue; pool tiles are light cards */
 .tool-page .pool button { color: var(--text-primary); font-weight: 500; }
+
+/* Guide: text on the left, key terms and "In this guide" on the right (above the text on phones) */
+.tool-page .guide-layout { display: grid; grid-template-columns: minmax(0, 46rem) minmax(14rem, 1fr); gap: 2rem; align-items: start; }
+.tool-page .guide-side { position: sticky; top: 3.6rem; display: flex; flex-direction: column; gap: 0.85rem;
+    max-height: calc(100vh - 4.5rem); overflow-y: auto; padding-top: 0.6rem; }
+.tool-page .side-box { background: #f7f9fc; border: 1px solid #e3e7ee; border-radius: 10px; padding: 0.75rem 0.9rem; }
+.tool-page .side-box h3 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin: 0 0 0.5rem; }
+.tool-page .guide-term-list { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0 0 0.5rem; }
+.tool-page .guide-term-list > span { background: #fff; border: 1px solid #d6e6da; border-radius: 999px; padding: 0.1rem 0.55rem;
+    font-size: 0.82rem; font-weight: 600; }
+.tool-page .guide-term-note { margin: 0; font-size: 0.82rem; line-height: 1.45; color: var(--text-secondary); }
+.tool-page .card-ref-sample.term { text-decoration-style: dashed; text-decoration-color: #1d7a35; }
+.tool-page .guide-toc ol { list-style: none; margin: 0; padding: 0; font-size: 0.86rem; }
+.tool-page .guide-toc li { margin: 0.1rem 0; }
+.tool-page .guide-toc li.sub { padding-left: 0.85rem; font-size: 0.82rem; }
+.tool-page .guide-toc a { display: block; padding: 0.15rem 0.4rem; border-radius: 5px; color: var(--text-primary); text-decoration: none; }
+.tool-page .guide-toc li.sub a { color: var(--text-secondary); }
+.tool-page .guide-toc a:hover { background: #e9eff8; color: var(--accent-primary); }
+.tool-page .guide-body { max-width: none; }
+.tool-page .guide-body h3, .tool-page .guide-body .guide-box { scroll-margin-top: 4rem; }
+/* words explained on hover (basket symbols and the like) look different from card names */
+.tool-page .card-ref.term-ref { text-decoration: underline dashed #1d7a35; text-underline-offset: 3px; }
+@media (max-width: 1000px) {
+    .tool-page .guide-layout { grid-template-columns: 1fr; gap: 0.5rem; }
+    .tool-page .guide-side { position: static; max-height: none; overflow: visible; order: -1; padding-top: 0.4rem; }
+    .tool-page .guide-toc { display: none; }
+}
+
+/* Guide versions as a segmented control */
+.tool-page .guide-tabs { display: inline-flex; gap: 0.2rem; border: 0; background: #eef2f7; border-radius: 10px; padding: 0.25rem; margin: 0.4rem 0 0.6rem; }
+.tool-page .guide-tabs [role="tab"] { border: 0; border-radius: 8px; padding: 0.4rem 1rem; margin: 0; }
+.tool-page .guide-tabs [role="tab"][aria-selected="true"] { background: #fff; color: var(--accent-primary); box-shadow: var(--shadow-sm); }
+.tool-page .guide-tabs [role="tab"]:hover { color: var(--accent-primary); }
+
