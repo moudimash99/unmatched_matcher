@@ -64,28 +64,67 @@
 {% set default_tab = 'medium' if guide.medium else ('short' if guide.short else 'cards') %}
 <section class="panel guide" id="strategy">
     <h2>How to play {{ fighter.name }}</h2>
-    <p class="muted">Written from player guides, videos and forum discussions. Hover over or tap an <span class="card-ref-sample">underlined card name</span> to see the card; the small numbers link to the sources at the end.</p>
+    <p class="muted">Written from player guides, videos and forum discussions. Hover over or tap a <span class="card-ref-sample">card name</span> to see the card{% if guide_terms %}, or a <span class="card-ref-sample term">key term</span> to see what it means{% endif %}. The small numbers link to the sources at the end.</p>
     <div class="guide-tabs" role="tablist" aria-label="Guide length">
         {% for kind, label in guide_tabs if guide[kind] %}
         <button type="button" role="tab" id="guide-tab-{{ kind }}" aria-controls="guide-{{ kind }}"
                 aria-selected="{{ 'true' if kind == default_tab else 'false' }}" tabindex="{{ 0 if kind == default_tab else -1 }}">{{ label }}</button>
         {% endfor %}
     </div>
-    {% for kind, label in guide_tabs if guide[kind] %}
-    <div class="guide-body" role="tabpanel" id="guide-{{ kind }}" aria-labelledby="guide-tab-{{ kind }}"{% if kind != default_tab %} hidden{% endif %}>{{ guide[kind] }}</div>
-    {% endfor %}
+    <div class="guide-layout">
+        <div class="guide-main">
+            {% for kind, label in guide_tabs if guide[kind] %}
+            <div class="guide-body" role="tabpanel" id="guide-{{ kind }}" aria-labelledby="guide-tab-{{ kind }}"{% if kind != default_tab %} hidden{% endif %}>{{ guide[kind] }}</div>
+            {% endfor %}
+        </div>
+        <aside class="guide-side">
+            {% if guide_terms %}
+            <div class="side-box">
+                <h3>Key terms</h3>
+                <p class="guide-term-list">{% for term, info in guide_terms.terms.items() %}<span><span aria-hidden="true">{{ info.symbol }}</span> {{ term | capitalize }}</span>{% endfor %}</p>
+                <p class="guide-term-note">{{ guide_terms.note }}{% for term, info in guide_terms.terms.items() if info.text %} {{ info.text }}{% endfor %}</p>
+            </div>
+            {% endif %}
+            <nav class="side-box guide-toc" aria-label="In this guide">
+                <h3>In this guide</h3>
+                <ol id="guide-toc"></ol>
+            </nav>
+        </aside>
+    </div>
 </section>
 <script>
 (function () {
     var tabs = document.querySelectorAll('#strategy [role="tab"]');
+    var toc = document.getElementById('guide-toc');
+    // "In this guide": the shown version's sections and, under them, its boxes (ways to win, cards)
+    function buildToc(panel) {
+        toc.innerHTML = '';
+        var n = 0;
+        panel.querySelectorAll('h3, .guide-box > h4').forEach(function (h) {
+            if (h.closest('.guide-sources')) return;
+            var target = h.tagName === 'H4' ? h.parentNode : h;
+            if (!target.id) target.id = panel.id + '-part-' + (++n);
+            var li = document.createElement('li');
+            if (h.tagName === 'H4') li.className = 'sub';
+            var a = document.createElement('a');
+            a.href = '#' + target.id;
+            a.textContent = h.childNodes[0] && h.childNodes[0].nodeType === 3 ? h.childNodes[0].textContent : h.textContent;
+            if (h.querySelector('.card-ref')) a.textContent = h.querySelector('.card-ref').firstChild.textContent;
+            li.appendChild(a);
+            toc.appendChild(li);
+        });
+    }
     function select(tab) {
         tabs.forEach(function (t) {
             var on = t === tab;
             t.setAttribute('aria-selected', on ? 'true' : 'false');
             t.tabIndex = on ? 0 : -1;
-            document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+            var panel = document.getElementById(t.getAttribute('aria-controls'));
+            panel.hidden = !on;
+            if (on) buildToc(panel);
         });
     }
+    select(document.querySelector('#strategy [role="tab"][aria-selected="true"]'));
     // A source number opens the folded Sources list before jumping to it
     document.querySelectorAll('#strategy sup.cite a').forEach(function (a) {
         a.addEventListener('click', function () {
@@ -124,12 +163,14 @@
 {% if hero and deck %}
 <section class="panel" id="deck">
     <h2>Deck · {{ deck.total }} cards</h2>
-    <div class="row">
+    <div class="deck-top">
+    <div class="row deck-counts">
         {% for t, n in deck.counts.items() if n %}
         <div class="stat"><b>{{ n }}</b><span class="card-type">{{ t }}</span></div>
         {% endfor %}
         {% if deck.avg_value %}<div class="stat"><b>{{ '%.1f' % deck.avg_value }}</b><span>avg combat value</span></div>{% endif %}
     </div>
+    <div class="deck-chart">
     {% if deck.value_counts %}
     {% set peak = deck.value_counts.values() | max %}
     <h3>Combat card values</h3>
@@ -144,6 +185,8 @@
         {% endfor %}
     </div>
     {% endif %}
+    </div>
+    </div>
     {% if card_pics %}
     <div class="deck-grid">
         {% for c in card_pics %}

@@ -1,0 +1,12 @@
+{
+  "_about": "Words the strategy guides use for a fighter's own mechanics, explained on hover and in the guide's Key terms box. {fighter id: {note, terms: {word: {symbol, text}}}}: note explains them all; text, if given, adds to it for one word. Words match in any case.",
+  "little_red": {
+    "note": "Little Red's cards carry three basket symbols: wolfsbane 🌹, pelt 🐺 and knives ⚔️. An effect marked with a symbol only works if the card on top of your discard pile (your basket) shows the same symbol. Wild 🌟 counts as any one of them.",
+    "terms": {
+      "wolfsbane": {"symbol": "🌹"},
+      "pelt": {"symbol": "🐺"},
+      "knives": {"symbol": "⚔️"},
+      "wild": {"symbol": "🌟", "text": "Little Red's Basket and What's That In My Basket? are wild."}
+    }
+  }
+}

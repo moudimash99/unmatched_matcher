@@ -119,3 +119,14 @@ def test_fighter_page_layout(client):
     assert re.search(r'id="all-matchups">\s*<details class="fold">', html)
     no_pictures = client.get("/fighter/loki").get_data(as_text=True)  # not in the card database yet
     assert '<div class="deck-grid">' not in no_pictures and "<table class=\"data\">" in no_pictures
+
+
+def test_key_terms_are_explained(client):
+    terms = {"note": "Symbols & such.", "terms": {"wolfsbane": {"symbol": "🌹"}}}
+    cards = strategies.card_matcher([{"title": "Feint", "type": "versatile", "effect": "x"}], "X", None, terms)
+    html = str(strategies.render("## X\n\n- With Wolfsbane on top, play Feint.", "m", cards))
+    assert '<span class="card-ref term-ref" tabindex="0">Wolfsbane<span class="card-pop" role="tooltip">' in html
+    assert "🌹 Wolfsbane</span><span class=\"card-pop-effect\">Symbols &amp; such.</span>" in html
+    assert html.count('class="card-ref"') == 1  # Feint, a card
+    page = client.get("/fighter/little_red").get_data(as_text=True)
+    assert "<h3>Key terms</h3>" in page and 'class="card-ref term-ref"' in page

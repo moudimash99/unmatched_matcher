@@ -61,10 +61,18 @@ def _card_pop(card, fighter_name, image=None):
             f'<span class="card-pop-facts">{" · ".join(facts)}</span>{effect}')
 
 
-def card_matcher(deck, fighter_name="", images=None):
-    """(compiled regex, {title: popup html}, {title: picture url}) for this deck's card names, or None.
+def _term_pop(term, info, note):
+    extra = f'<span class="card-pop-effect">{escape(info["text"])}</span>' if info.get("text") else ""
+    return (f'<span class="card-pop-title">{escape(info.get("symbol", ""))} {escape(term.capitalize())}</span>{extra}'
+            f'<span class="card-pop-effect">{escape(note)}</span>')
 
-    images maps card titles as in heroes.json to their pictures (input/card_images.json).
+
+def card_matcher(deck, fighter_name="", images=None, terms=None):
+    """(compiled regex, {name: (kind, popup html)}, {title: picture url}) for linking card names, or None.
+
+    images maps card titles as in heroes.json to their pictures (input/card_images.json); terms
+    ({note, terms: {word: {symbol, text}}}, input/guide_terms.json) are the fighter's own words, such
+    as Little Red's basket symbols, explained the same way and matched in any case.
     """
     pops, thumbs = {}, {}
     for card in deck or []:
@@ -72,9 +80,11 @@ def card_matcher(deck, fighter_name="", images=None):
         if len(title) < 3 or title in _NOT_CARD_NAMES:
             continue
         image = (images or {}).get(card.get("title"))
-        pops.setdefault(str(escape(title)), _card_pop(card, fighter_name, image))
+        pops.setdefault(str(escape(title)), ("card", _card_pop(card, fighter_name, image)))
         if image:
             thumbs.setdefault(_key(title), image)
+    for term, info in (terms or {}).get("terms", {}).items():
+        pops.setdefault(str(escape(term)), ("term", _term_pop(term, info, terms.get("note", ""))))
     if not pops:
         return None
     # Longest first, so "Feint" never takes the start of a longer title; all-caps titles (Loki's,
@@ -82,7 +92,7 @@ def card_matcher(deck, fighter_name="", images=None):
     alts = []
     for title in sorted(pops, key=len, reverse=True):
         body = f"(?:{re.escape(_APOSTROPHE)}|’)".join(re.escape(part) for part in title.split(_APOSTROPHE))
-        alts.append(f"(?i:{body})" if title.isupper() else body)
+        alts.append(f"(?i:{body})" if title.isupper() or pops[title][0] == "term" else body)
     pattern = re.compile(r"(?<![\w&])(" + "|".join(alts) + r")(?![\w])")
     lookup = {k.lower(): v for k, v in pops.items()}
     return pattern, lookup, thumbs
@@ -115,9 +125,12 @@ def _inline(text, ref_prefix, sup=True, cards=None):
     s = re.sub(r"https?://[^\s<]+?(?=[.,;)]?(?:\s|$))", lambda m: link(m.group(0), m.group(0)), s)
     if cards:
         pattern, lookup, _ = cards
-        s = pattern.sub(lambda m: link_html(
-            f'<span class="card-ref" tabindex="0">{m.group(1)}'
-            f'<span class="card-pop" role="tooltip">{_pop_for(lookup, m.group(1))}</span></span>'), s)
+        def ref(m):
+            kind, pop = _pop_for(lookup, m.group(1))
+            cls = "card-ref" if kind == "card" else "card-ref term-ref"
+            return link_html(f'<span class="{cls}" tabindex="0">{m.group(1)}'
+                             f'<span class="card-pop" role="tooltip">{pop}</span></span>')
+        s = pattern.sub(ref, s)
     s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
     s = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"<em>\1</em>", s)
     cite = '<sup class="cite"><a href="#{p}-ref-{n}">[{n}]</a></sup>' if sup else '<a href="#{p}-ref-{n}">[{n}]</a>'
@@ -134,7 +147,7 @@ def _card_names(text, cards):
     if not cards:
         return None
     names = [n.strip() for n in re.split(r" and |, ", text)]
-    if all(cards[0].fullmatch(str(escape(n))) for n in names):
+    if all(cards[0].fullmatch(str(escape(n))) and _pop_for(cards[1], str(escape(n)))[0] == "card" for n in names):
         return names
     return None
 
@@ -242,20 +255,21 @@ def render(entry, ref_prefix, cards=None):
     return Markup("\n".join(out))
 
 
-def load_guides(short_path, medium_path, v2_paths=None, heroes=None, names=None, images=None):
+def load_guides(short_path, medium_path, v2_paths=None, heroes=None, names=None, images=None, terms=None):
     """{fighter id: {"short", "medium", "cards": html or None}}.
 
     v2_paths maps "short"/"medium"/"cards" to the v2 guide files. Where a fighter has no v2 guide
     yet, the older short guide stands in for Short and the older full guide for Medium. heroes
     ({id: hero data}), names ({id: fighter name}) and images ({id: {card title: picture url}}) give
-    each guide its deck's hover cards.
+    each guide its deck's hover cards; terms ({id: {note, terms}}) its explained words.
     """
     old = {"short": load(short_path), "medium": load(medium_path)}
     new = {kind: load(path) for kind, path in (v2_paths or {}).items()}
-    heroes, names, images = heroes or {}, names or {}, images or {}
+    heroes, names, images, terms = heroes or {}, names or {}, images or {}, terms or {}
     guides = {}
     for fid in set().union(*old.values(), *new.values()):
-        cards = card_matcher((heroes.get(fid) or {}).get("deck"), names.get(fid, ""), images.get(fid))
+        cards = card_matcher((heroes.get(fid) or {}).get("deck"), names.get(fid, ""), images.get(fid),
+                             terms.get(fid))
         guide = {}
         for kind, prefix in (("short", "s"), ("medium", "m"), ("cards", "c")):
             if fid in new.get(kind, {}):
