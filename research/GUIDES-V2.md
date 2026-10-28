@@ -106,10 +106,10 @@ In `research/private/sample/` (gitignored): `little_red.long.md` (card by card),
 ## Status
 
 - [x] Format agreed, samples approved
-- [ ] Medium pass (66 / 74; left: shredder, krang, wyatt_earp, john_henry, george_washington, rosie_the_riveter. donatello has no evidence file: Codex hit its usage limit before writing it)
-- [ ] Card by card for Medusa and Bruce Lee
+- [x] Medium pass (74 / 74; donatello has no evidence file: checked by hand against its pack)
+- [x] Card by card for Medusa and Bruce Lee
 - [x] Site: tabs + card hovers (on guides-v2, not deployed)
-- [ ] Short pass (66 / 74, written by Claude from each Medium guide via research/scripts/make_short.py; drafts in research/private/short-drafts/)
+- [x] Short pass (74 / 74, written by Claude from each Medium guide via research/scripts/make_short.py; drafts in research/private/short-drafts/)
 - [ ] Card by card pass
 
 ## Notes from the first batch

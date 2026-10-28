@@ -2857,3 +2857,238 @@ All linked sources in the pack are cited above. The unlinked one-sentence counte
 - [1v1 Strategies for Donatello?](https://www.reddit.com/r/Unmatched/comments/1q3wu0t/): Reddit · opening post and comments by u/TivaDi, u/roi81 and u/Dear_Huckleberry_394 (read; damage totals assume successful recycling, and remaining advice overlaps cited sources).
 
 ---
+
+<!-- id: shredder -->
+## Shredder
+
+**In short:** You build an attack network, threatening distant targets while Shredder prepares a decisive turn behind Bebop & Rocksteady. You want time to establish Foot soldiers; repeated attacks before that setup force your modest defenses to carry too much weight. [1][2]
+
+### How they win
+
+**Build a fortress, then empty your hand into attacks**
+
+- **Choose this when:** you have time to build around a well-connected space and Bebop & Rocksteady can pressure the opponent without exposing Shredder. This plan needs breathing room; don't treat it as your default against opponents already delivering repeated attacks. [1][2]
+- **Positioning:** settle Shredder on a space with many connections, building soldiers around him while Bebop & Rocksteady body-block and harass. Occupy the junction that an opposing hero would need to cross to clear your soldiers. [2][1]
+- **Setup:** use Gruff Escort to prepare the position and bring Shredder into it. Keep attacking elsewhere through the network while your protected cluster grows, rather than walking Shredder out to make contact. [1]
+- **On your turn:** once established, play Obedient Subjects to open the attack sequence, use Bebop & Rocksteady to establish soldiers beside the target, then spend your remaining actions attacking, with Swarming Strike as the heavy payoff. The point is to combine your safe cluster with access to an opponent elsewhere. [3][1]
+- **On their turn:** reserve Masterful Defense for the established position, where it can absorb the cost of staying put. Before that cluster exists, don't expect it to repair the damage from sustained pressure. [1]
+- **Sources disagree on committing to the fortress:** one player reports overwhelming turns from camping; another warns that losing Bebop & Rocksteady without Back to work! available leaves Shredder exposed. Keep that recovery route in mind before committing your sidekick to prolonged fighting. [3][4]
+
+**Attack through the network while moving away**
+
+- **Choose this when:** camping would leave Shredder under constant attack, especially after an early sidekick loss without recovery available. Use the mobile approach to keep attacking from safer distances rather than waiting in place for the perfect cluster. [4]
+- **On your turn:** place a soldier first, maneuver away, then attack through it. Use Long Shot for these separated attacks; Bebop & Rocksteady can also deliver Gang Up through soldiers without standing beside the target. [4][1]
+- **Positioning:** spread attack access across the board as you move, making the opponent boost along awkward routes to remove it. Keep your own fighters apart when using Savagery so your pressure doesn't injure your partner. [4][1]
+- **On their turn:** against ranged attacks, consider holding Long Shot instead of spending every copy on offense. Defend Bebop & Rocksteady with Think Hard when the attacker is surrounded by your soldiers, turning their attack into an opportunity to replenish your hand. [1]
+
+### How they lose
+
+- **Early pressure and sidekick removal.** Extra actions and discard can break the setup before it pays off. **Answer:** use Bebop & Rocksteady to screen Shredder, with Back to work! as your recovery route; without it, shift toward the mobile plan. [3][2][4]
+- **Forced movement and boosted cleanup.** Displacement opens your protected junction to a sweep. **Answer:** use Gruff Escort to rebuild and reposition; don't assume camping remains safe against fighters who move you or pass through you. [1]
+- **Large printed attacks.** Disrupting Strike answers inflated values, but cannot rescue you from an already enormous printed number. **Answer:** save it for modifier-driven attacks and use distance rather than counting on it against raw damage. [1][4]
+
+### References
+
+1. PoindexterG - To The Table Top!. "Shredder - Unmatched TMNT Fighter Review." *YouTube*. https://www.youtube.com/watch?v=EcKAE5XoihY
+2. u/LabRat2329. Comment on "Tips on effectively playing Shredder?" by u/ronchman. *r/Unmatched*, Reddit, 2 March 2026. https://www.reddit.com/r/Unmatched/comments/1rip96w/
+3. u/TheEliteB3aver. Comment on "Tips on effectively playing Shredder?" (see [2]).
+4. u/Megabro_SgOwDm. Comment on "Tips on effectively playing Shredder?" (see [2]).
+
+### Not cited
+
+- [Shredder competitive overview](https://restorationgames.com/villain-or-hero-shredder-krang-unmatched-tmnt/): Restoration Games Â· official article (read; competitive section establishes the network concept but adds less tactical detail than the video and replies).
+- "Give a One Sentence Tip on how to Play against your favorite Fighter. Go!": Reddit Â· forum excerpt (read; URL absent from pack; author explicitly rejects Shredder as the intended subject).
+
+---
+
+<!-- id: krang -->
+## Krang
+
+**In short:** You play a volatile melee fighter whose machines make you mobile but also tempt you to spend that mobility chasing better rolls. Aim for fights where you can judge the roll you need, then rebuild before repeated rerolls leave you crawling. [1]
+
+### How they win
+
+**Spend machines on a reachable damage window**
+- **Choose this when:** the opponent has committed a modest defense that a better roll can beat. Treat the revealed card as your spending guide: a low roll against a small defense is a reason to try again; a large defense is a reason to accept a disappointing attack. [1]
+- **On your turn:** use Android arms: Missiles when you have a ranged attack opportunity, then inspect the defense before committing machines. Decide whether another roll can turn the exchange into damage rather than rerolling simply because your first result was low. [1]
+- **At close range:** Molecular Amplification Unit gives you another attack whose spending decision comes after you see the defense. Compare the actual opposing value with your result; do not decide in advance that this attack deserves every machine you have. [1]
+- **On their turn:** keep Molecular Amplification Unit available when you need to rebuild under attack. Its machine activation resolves safely on defense before the opponent's cancellation; attacking with it exposes that activation to cancellation instead. [1]
+- **Positioning:** count the movement you will have left after spending machines, not the movement you had before attacking. Avoid turning an ordinary damage attempt into a position where your next maneuver barely moves you. [1]
+
+**Rebuild instead of gambling through a bad exchange**
+- **Choose this when:** your machines are depleted, your health needs replenishing, or the opponent's defense makes further offensive rerolls unattractive. Shift your attention to the next exchange rather than spending every remaining machine trying to rescue this one. [1]
+- **On your turn:** use IQ of 968 to rebuild, but judge its two rolls separately. When you already have enough cards, don't chase a large draw just because you want a large heal: decide which of the two you need. [1]
+- **On their turn:** with Welcome to the Technodrome!, inspect the opposing effect before choosing cancellation. Against a blank card or an effect too minor to warrant stopping, take the machine activation instead of treating every defense as an automatic cancel. [1]
+- **Resource choice:** prefer keeping IQ of 968 for its recovery package over spending it on Android arms: Powerbomb merely for a spectacular possible boost. The review points to Pan-dimensional Portal as the more appealing boost sacrifice when you do not want its unpredictable hand exchange. [1]
+
+### How they lose
+
+- **Rerolls consume your ability to move.** Repeatedly chasing improvement can leave you unable to reposition effectively. **Answer:** stop spending when the revealed defense makes the payoff poor, and rebuild with IQ of 968 or defensive Molecular Amplification Unit. [1]
+- **Value-setting attacks punish Minimizer.** An attack that sets its value during combat can override the earlier reduction and hit you for its full replacement value. **Answer:** reserve Welcome to the Technodrome! for that effect rather than trusting Minimizer as your usual protection. [1][2]
+
+### References
+1. PoindexterG - To The Table Top! "Krang - Unmatched TMNT Fighter Review." *YouTube*. https://www.youtube.com/watch?v=74Bwr_GsPg0
+2. Restoration Games. *TMNT*, Krang deck. Card text as recorded in `input/heroes.json`.
+
+### Not cited
+- [Official article: Krang sections](https://restorationgames.com/villain-or-hero-shredder-krang-unmatched-tmnt/): Restoration Games · official article (read in full; competitive sections explain the machinery but add no decisions beyond the cited review).
+
+---
+
+<!-- id: wyatt_earp -->
+## Wyatt Earp
+
+**In short:** You’re a ranged pressure fighter who wants repeated attacks to empty the opponent’s defenses before landing undefended hits. Get Doc Holliday’s cards into play early, then keep shooting while your hand supports it; your defenses won’t carry a prolonged damage race. [1]
+
+### How they win
+
+**Run them out of defenses**
+- **Choose this when:** You face limited draw, or an opponent whose hand is already shrinking. [1][2]
+- **On your turn:** Use A Marshal And An Outlaw to squeeze their hand, then commit You Just Gonna Stand There And Bleed? when their strongest defenses are less likely. Against plentiful high defenses, bait those out before spending your best attacks. [1]
+- **Keep the turn going:** Take the extra attack after a win when you have ammunition; use the draw to sustain pressure. With In Vino Veritas ready, spend your other attacks first and refill from an empty hand rather than cashing it in early. [1]
+- **On their turn:** Prefer I'm Your Huckleberry as a routine block; preserve A Marshal And An Outlaw for offense when your hand allows. Don’t force a damage trigger at the expense of having a defense. [1]
+- **Positioning:** Cover central zones with both shooters so retreat doesn’t automatically end your pressure. Use a winning attack’s movement to kite when distance matters more than another shot. [1]
+
+**Turn their sidekicks into openings**
+- **Choose this when:** Several one-health sidekicks offer cheap wins, or a valuable sidekick shares Doc’s zone with the opposing hero. [1]
+- **On your turn:** Against a valuable sidekick, attack it with I Have Two Guns, One For Each Of You while its hero is also in Doc’s zone. Make protecting the sidekick costly for the hero; don’t fire before checking both targets’ positions. [1]
+- **Cheap wins:** Use Fan The Hammer on one-health or nearly defeated sidekicks to preserve your hand while opening another attack. Against several one-health targets, Gunfight At The O.K. Corral clears them without needing each in range. [1][3]
+- **Protecting Doc:** Get his attacks played promptly instead of hiding him indefinitely. Use You're A Daisy If You Do early to keep your hand moving; losing Doc with his attacks unspent throws away damage you need. [1][2]
+
+**Punish excessive drawing**
+- **Choose this when:** Your opponent repeatedly double-maneuvers to stockpile defenses and you have the deck lead. Stop feeding that full hand and make their extra draws matter. [1]
+- **On your turn:** Spend You Die First moving an enemy away rather than forcing combat. At a sufficiently full hand, In Vino Veritas also lets you spend an action without drawing; resume aggression if their response reopens that plan. [1]
+
+### How they lose
+
+- **Aggression outruns your blocks.** You can lose the race before your pressure pays off. **Answer:** Against consecutive attacks, lead with Better Swear Me In; if it leaves a favorable BOOST on top, follow with Bring 'Em To Justice. [1][4]
+- **Cancels punish expensive commitments.** **Answer:** Don’t BOOST Second Shot into a defense it still cannot beat, and distrust Bring 'Em To Justice against offensive cancels or decks with BOOST-less cards. [1]
+- **Your own cards finish you.** Exhaustion and reciprocal damage can undermine the attack plan. **Answer:** Watch deck expenditure, and BOOST Second Shot with Gunfight At The O.K. Corral when its damage exchange would put Wyatt near lethal. [1][5]
+
+### References
+1. The Gaming Geek Net. "Wyatt Earp Advanced Strategy Guide - Unmatched Tips and Tricks." *YouTube*. https://www.youtube.com/watch?v=j-3lXW3PfD4
+2. u/Potatopancakeman. Comment on "Wyatt Earp" by u/Life-Rip183. *r/Unmatched*, Reddit, 8 May 2026. https://www.reddit.com/r/Unmatched/comments/1t7jmvr/
+3. Restoration Games. *Stars and Stripes*, Wyatt Earp deck. Card text as recorded in `input/heroes.json`.
+4. u/FangAndBoard. Comment on "Wyatt Earp" (see [2]).
+5. u/audiotarot. Comment on "Wyatt Earp" (see [2]).
+
+### Not cited
+- [From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes](https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/): Restoration Games · official article (read; Wyatt Earp overview adds no sequencing beyond the video).
+- [Wyatt Earp](https://www.reddit.com/r/Unmatched/comments/1t7jmvr/): Reddit · remaining post and replies (read; enthusiasm, general impressions, and BOOST advice already covered more precisely by the video).
+
+---
+
+<!-- id: john_henry -->
+## John Henry
+
+**In short:** You are a melee fighter who builds a railway into the battlefield, turning movement into hammer pressure. You want the fight to develop around those tracks so you can reach the opponent with momentum behind your attacks. [1]
+
+### How they win
+
+**Build a route into a hammer turn**
+- **Choose this when:** You have room to cross four different paths before attacking, especially when opposing fighters share a zone. Make the route part of your attack plan: reaching the target alone does not prepare your hammer effects. [2]
+- **On your turn:** Plot the whole route before committing an action, then use Striking Fire to prepare your approach without spending the action you need to attack. Follow with Nine-pound Hammer when several opposing fighters occupy your zone; choose Eighteen-pound Hammer when the defense's effects are the obstacle to landing your hit. [2]
+- **Keeping contact:** Use Hear That Cold Steel Ring before your follow-up attack when its movement keeps you in reach. Count any path it adds toward your hammer setup; do not assume that playing a movement card automatically completes the route. [2]
+- **Positioning:** Place tracks where they connect the approach you actually intend to use. Count different paths, rather than counting spaces or repeatedly crossing the same connection; the hammer condition concerns your route across the turn. [1][2]
+- **On their turn:** Consider Power Through when combat positioning would otherwise leave your next approach awkward. Decide where the combatants should finish with your next route in mind, rather than moving a fighter simply because the option is available. [2]
+
+**Turn spent hammers into a finishing attack**
+- **Choose this when:** Several hammer cards are already discarded and the opponent is within reach of a decisive Bring Down The Mountain. This is a developed-game payoff: assess your discard pile before deciding whether that card belongs in the next attack or must remain available for defense. [2]
+- **On your turn:** Spend your hammer attacks as you build pressure, then reassess Bring Down The Mountain after those combats. If you already have a finishing attack ready, Striking Fire lets you prepare its approach without first sacrificing an attack action to movement. [2]
+- **On their turn:** Keep Deeds Of Valor available for a large incoming hit if you are preserving Bring Down The Mountain for the finish. Use Cool Drink Of Water against a smaller attack when you need health; accepting a large hit just to heal can still leave you worse off. [2]
+
+### How they lose
+
+- **Movement without momentum.** Ending beside the opponent after too few different paths leaves your hammer payoff unprepared. **Answer:** Check the route before playing Striking Fire; if you cannot complete it, Larger Than Life gives you an attack that does not depend on that setup. [2]
+- **A healing defense into a heavy attack.** Cool Drink Of Water does not make a large incoming hit harmless. **Answer:** Reserve Deeds Of Valor for that threat instead of treating every defense as an interchangeable way to survive until your next turn. [2]
+- **Spending the finisher to stay alive.** Bring Down The Mountain can be needed on defense before you get to attack with it. **Answer:** Recheck the hammer discard count and your remaining defenses before committing it to an offensive plan. [2]
+
+### References
+1. Restoration Games. "From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes." *Restoration Games*. https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/
+2. Restoration Games. *Stars and Stripes*, John Henry deck. Card text as recorded in `input/heroes.json`.
+
+### Not cited
+- No additional sources or videos were included in the supplied pack.
+
+---
+
+<!-- id: george_washington -->
+## George Washington
+
+**In short:** You play a defensive fighter whose damage depends on making the opponent choose the wrong defense. Keep your spies alive while you turn uncertainty about ruses into wasted cancels, discarded cards, and favorable attacks. [1][2]
+
+### How they win
+
+**Make their cancels expensive**
+- **Choose this when:** You face decks with many Feints or cancels. Your aim is to make their answer to a dangerous ruse cost them even when the attack was a bluff. [2]
+- **On your turn:** Put a ruse on Lead Astray as your last action. This gives you a productive bait attack: a Feint concedes damage, while an uncanceled attack lets you disengage rather than stay for their retaliation. [3][4]
+- **Building uncertainty:** Mix attacks that need ruses with attacks that do not, instead of making every token announce its payoff. Occasionally playing a ruse-dependent attack without a token helps keep your opponent guessing about which attacks deserve their cancels. [2]
+- **Positioning:** Use the exit from Lead Astray to finish your turn away from the opponent. Keep your spies spread across different zones against area damage; the bluffing plan still needs surviving spies. [3][2]
+- **Sources disagree on token spending:** One player recommends spending a token or two on flexible bluffs because replenishing them is manageable; another prefers saving tokens for their effects, with Lead Astray as the specific bait. Choose your approach deliberately rather than spending tokens on every attack. [2][3]
+
+**Win the right exchanges**
+- **Choose this when:** The opponent has high blocks you need to get through, or your attacks have been meeting the wrong defenses and leaving you short of damage. Focus on the quality of each exchange rather than expecting a long defensive game to win itself. [1]
+- **On your turn:** Aim a ruse-backed Circumvent into a high block; aim Lead Astray into Feint. These are the favorable interactions you need consistently, so do not treat your attacks as interchangeable ways to spend an action. [1][4]
+- **Before spending spies:** Get value from Sympathetic Stain before treating a spy as expendable. Preserve the network's contribution to Network Of Spies as well, rather than trading away its support before those cards have mattered. [5]
+- **On their turn:** Be reluctant to use Undercover Agent early if your spies have not yet earned that value. Protecting Washington through a swap can cost you the pieces you still need for your own plan. [5]
+- **Positioning:** Preserve at least one spy, and spread the others against area damage. You have limited opportunities to rebuild with Recruit To The Ring; losing the whole network is not a harmless exchange for temporary safety. [2][4]
+
+### How they lose
+
+- **The network disappears too early.** Area damage and premature spy sacrifices undermine your remaining support cards. **Answer:** Spread spies across zones, delay Undercover Agent while Sympathetic Stain still needs them, and use Recruit To The Ring to rebuild. [2][5][4]
+- **Defenses keep lining up correctly.** Without favorable attack interactions, you can run short of damage. **Answer:** Reconsider which defense you are trying to catch with Circumvent or Lead Astray instead of repeating unsuccessful exchanges. [1]
+- **A stronger fatigue deck makes you chase.** Your defensive style does not guarantee the better exhaustion game. **Answer:** Seek the favorable Circumvent and Lead Astray exchanges while you still have attacks; do not rely on waiting out an opponent who outlasts you. [1]
+
+### References
+
+1. u/Muddshoe. Comment on "Tips on playing George Washington effectively?" by u/ronchman. *r/Unmatched*, Reddit, 22 May 2026. https://www.reddit.com/r/Unmatched/comments/1tko47e/
+2. u/Lulu_pa_sodo. Comment on "Tips on playing George Washington Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 11 May 2026. https://www.reddit.com/r/Unmatched/comments/1ta506r/
+3. u/Silly_Shenanigans. Comment on "Tips on playing George Washington Effectively?" (see [2]).
+4. Restoration Games. *Stars and Stripes*, George Washington deck. Card text as recorded in `input/heroes.json`.
+5. u/Silly_Shenanigans. Comment on "Tips on playing George Washington effectively?" (see [1]).
+
+### Not cited
+
+- [From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes](https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/): Restoration Games · official article (read; its George Washington section introduces bluffing without adding tactical advice).
+- [Tips on playing George Washington effectively?](https://www.reddit.com/r/Unmatched/comments/1tko47e/): Reddit · remaining replies (read; speculation and tournament impressions do not supply actionable strategy).
+
+---
+
+<!-- id: rosie_the_riveter -->
+## Rosie the Riveter
+
+**In short:** You play an upgrade-driven fighter whose pressure depends on which benefits come online earliest. [1][2] Keep draw first for an attacking game, or bring damage and range forward when you expect a longer fight; save your all-upgrades push for a late swing. [2][3]
+
+### How they win
+
+**Draw-led pressure into a late burst**
+- **Choose this when:** you want to keep attacking, so keep the draw upgrade first for as long as you can. [2]
+- **Setup:** treat upgrade order as part of your attack plan, rather than simply activating everything at the first opportunity. Individual deactivations change what comes online earliest, so preserve the draw-first order while you are following this approach. [2][3]
+- **On your turn:** build toward a late D-Day turn with follow-up attacks ready: spend the all-upgrades swing when you can keep attacking, not as an isolated attack. [2][4]
+- **Attack order:** lead the burst with D-Day before spending Full Metal as a follow-up. That sequence puts the upgrade-dependent attack after your setup; reversing them spends Full Metal before the all-upgrades payoff is available. [4]
+- **On their turn:** account for the reset before choosing your defense: a fully upgraded attacking turn does not leave you fully upgraded afterward. Check the upgrades actually available before committing Full Metal or relying on Technological Superiority. [4]
+- **Sources disagree on priority:** one player favors keeping draw first, while another prefers damage or range in matchups where drawing faster risks fatigue. Choose the order for the game you expect, rather than treating draw-first as a universal opening. [2][3]
+
+**Damage and range for the long game**
+- **Choose this when:** you expect the game to run long, especially against melee opponents you want to force to approach. Prioritize attack pressure or range over accelerating toward fatigue with the draw upgrade. [3]
+- **Setup:** work toward damage and range as your first two upgrades. One player specifically reports success deactivating two upgrades early to establish that order; use individual deactivations to change future turns, rather than expecting a full reset to rearrange them. [5][6]
+- **On your turn:** bring range forward so melee opponents have to come to you, and keep up pressure without making extra draw your first upgrade. [3]
+- **Positioning:** keep Rosie at ranged attacking distance when that upgrade is active, making the melee opponent spend movement to reach her. That is the reason to prioritize range in this plan. [3]
+
+### How they lose
+
+- **Fatigue from the wrong priority.** Keeping draw first can work against your intended long game. **Answer:** change the queue through individual deactivations; Hasty Repairs, "E" Award, and Rapid Development are your deck's ways to do that, rather than waiting for the full reset to fix the order. [3][4][6]
+- **A burst followed by an exposed reset.** Spending your turn fully upgraded leaves different defensive resources afterward. **Answer:** plan the next defense before committing D-Day, and do not budget Full Metal or Technological Superiority as though the attack turn's upgrades will remain active. [4]
+
+### References
+1. Restoration Games. "From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes." *Restoration Games*. https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/
+2. u/Ramen3. Comment on "Finally got my hands on Stars and Stripes and wanted to ask how to use Rosie better." by u/BeneficialMethod3866. *r/Unmatched*, Reddit, 12 May 2026. https://www.reddit.com/r/Unmatched/comments/1tbidqb/
+3. u/ValhallAwaits_. Comment on "Finally got my hands on Stars and Stripes and wanted to ask how to use Rosie better." (see [2]).
+4. Restoration Games. *Stars and Stripes*, Rosie the Riveter deck. Card text as recorded in `input/heroes.json`.
+5. u/Naive-Health414. Comment on "Finally got my hands on Stars and Stripes and wanted to ask how to use Rosie better." (see [2]).
+6. u/Ok-Excitement7898. Comment on "Finally got my hands on Stars and Stripes and wanted to ask how to use Rosie better." (see [2]).
+
+### Not cited
+- [Finally got my hands on Stars and Stripes and wanted to ask how to use Rosie better.](https://www.reddit.com/r/Unmatched/comments/1tbidqb/): Reddit · remaining comments (read; rules question, clarification duplicated by [6], and a question about stacking provide no additional plan).
+
+---

@@ -1405,3 +1405,128 @@ Written from player guides, videos and forum discussions; format and rules in re
 3. u/LabRat2329. Comment on "1v1 Strategies for Donatello?" (see [2]). *r/Unmatched*, Reddit, 4 January 2026. https://www.reddit.com/r/Unmatched/comments/1q3wu0t/
 
 ---
+
+<!-- id: shredder -->
+## Shredder
+
+**In short:** Builds an attack network of Foot soldiers so Shredder can strike distant targets from behind Bebop & Rocksteady. [1][2]
+
+### How they win
+- **Build a fortress, then empty your hand into attacks:** when you have time to set up, open with Obedient Subjects, place soldiers beside the target and finish with Swarming Strike. [1][2][3]
+- **Attack through the network while moving away:** when camping would leave Shredder under fire, place a soldier, maneuver away, then attack through it with Long Shot. [4][1]
+
+### How they lose
+- **Early pressure and sidekick removal:** screen Shredder with Bebop & Rocksteady and recover with Back to work! [3][2][4]
+- **Large printed attacks:** save Disrupting Strike for modifier-driven attacks and rely on distance. [1][4]
+
+### References
+1. PoindexterG - To The Table Top!. "Shredder - Unmatched TMNT Fighter Review." *YouTube*. https://www.youtube.com/watch?v=EcKAE5XoihY
+2. u/LabRat2329. Comment on "Tips on effectively playing Shredder?" by u/ronchman. *r/Unmatched*, Reddit, 2 March 2026. https://www.reddit.com/r/Unmatched/comments/1rip96w/
+3. u/TheEliteB3aver. Comment on "Tips on effectively playing Shredder?" by u/ronchman. *r/Unmatched*, Reddit, 2 March 2026. https://www.reddit.com/r/Unmatched/comments/1rip96w/
+4. u/Megabro_SgOwDm. Comment on "Tips on effectively playing Shredder?" by u/ronchman. *r/Unmatched*, Reddit, 2 March 2026. https://www.reddit.com/r/Unmatched/comments/1rip96w/
+
+---
+
+<!-- id: krang -->
+## Krang
+
+**In short:** A volatile melee fighter whose machines make him mobile but tempt him to spend that mobility chasing better rolls. [1]
+
+### How they win
+- **Spend machines on a reachable damage window:** when they've committed a modest defense, look at it before rerolling; Android arms: Missiles gives you ranged chances. [1]
+- **Rebuild instead of gambling:** when machines or health run low, rebuild with IQ of 968. [1]
+
+### How they lose
+- **Rerolls eat your movement:** stop spending when the payoff is poor. [1]
+- **Value-setting attacks beat Minimizer:** keep Welcome to the Technodrome! for them. [1][2]
+
+### References
+1. PoindexterG - To The Table Top! "Krang - Unmatched TMNT Fighter Review." *YouTube*. https://www.youtube.com/watch?v=74Bwr_GsPg0
+2. Restoration Games. *TMNT*, Krang deck. Card text as recorded in `input/heroes.json`.
+
+---
+
+<!-- id: wyatt_earp -->
+## Wyatt Earp
+
+**In short:** A ranged pressure fighter who empties the opponent's defenses with repeated attacks, with Doc Holliday's cards in play early. [1]
+
+### How they win
+- **Run them out of defenses:** against limited draw or a shrinking hand, squeeze them with A Marshal And An Outlaw, then commit You Just Gonna Stand There And Bleed? [1][2]
+- **Turn their sidekicks into openings:** when a valuable sidekick shares Doc's zone with its hero, attack it with I Have Two Guns, One For Each Of You. [1]
+- **Punish excessive drawing:** when they keep double maneuvering with you ahead on deck, push them away with You Die First. [1]
+
+### How they lose
+- **Aggression outruns your blocks:** against consecutive attacks, lead with Better Swear Me In. [1][3]
+- **Your own cards finish you:** watch your deck and the damage from Gunfight At The O.K. Corral. [1][4]
+
+### References
+1. The Gaming Geek Net. "Wyatt Earp Advanced Strategy Guide - Unmatched Tips and Tricks." *YouTube*. https://www.youtube.com/watch?v=j-3lXW3PfD4
+2. u/Potatopancakeman. Comment on "Wyatt Earp" by u/Life-Rip183. *r/Unmatched*, Reddit, 8 May 2026. https://www.reddit.com/r/Unmatched/comments/1t7jmvr/
+3. u/FangAndBoard. Comment on "Wyatt Earp" by u/Life-Rip183. *r/Unmatched*, Reddit, 8 May 2026. https://www.reddit.com/r/Unmatched/comments/1t7jmvr/
+4. u/audiotarot. Comment on "Wyatt Earp" by u/Life-Rip183. *r/Unmatched*, Reddit, 8 May 2026. https://www.reddit.com/r/Unmatched/comments/1t7jmvr/
+
+---
+
+<!-- id: john_henry -->
+## John Henry
+
+**In short:** A melee fighter who lays track into the battlefield and turns movement into hammer pressure. [1]
+
+### How they win
+- **Build a route into a hammer turn:** with room to cross four paths before attacking, plot the route, approach with Striking Fire and swing Nine-pound Hammer or Eighteen-pound Hammer. [2]
+- **Turn spent hammers into a finish:** with hammers in your discard pile, finish with Bring Down The Mountain. [2]
+
+### How they lose
+- **Movement without momentum:** if the route falls short, attack with Larger Than Life. [2]
+- **A heavy attack on a weak defense:** keep Deeds Of Valor for it. [2]
+
+### References
+1. Restoration Games. "From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes." *Restoration Games*. https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/
+2. Restoration Games. *Stars and Stripes*, John Henry deck. Card text as recorded in `input/heroes.json`.
+
+---
+
+<!-- id: george_washington -->
+## George Washington
+
+**In short:** A defensive fighter whose damage comes from making the opponent pick the wrong defense. [1][2]
+
+### How they win
+- **Make their cancels expensive:** against decks with many Feints, put a ruse on Lead Astray as your last action. [2][3][4]
+- **Win the right exchanges:** against high blocks, attack with a ruse-backed Circumvent; aim Lead Astray at a Feint. [1][4]
+
+### How they lose
+- **Your spies die too early:** spread them across zones and rebuild with Recruit To The Ring. [2][5][4]
+- **Defenses keep lining up:** change which defense you're trying to catch. [1]
+
+### References
+1. u/Muddshoe. Comment on "Tips on playing George Washington effectively?" by u/ronchman. *r/Unmatched*, Reddit, 22 May 2026. https://www.reddit.com/r/Unmatched/comments/1tko47e/
+2. u/Lulu_pa_sodo. Comment on "Tips on playing George Washington Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 11 May 2026. https://www.reddit.com/r/Unmatched/comments/1ta506r/
+3. u/Silly_Shenanigans. Comment on "Tips on playing George Washington Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 11 May 2026. https://www.reddit.com/r/Unmatched/comments/1ta506r/
+4. Restoration Games. *Stars and Stripes*, George Washington deck. Card text as recorded in `input/heroes.json`.
+5. u/Silly_Shenanigans. Comment on "Tips on playing George Washington effectively?" by u/ronchman. *r/Unmatched*, Reddit, 22 May 2026. https://www.reddit.com/r/Unmatched/comments/1tko47e/
+
+---
+
+<!-- id: rosie_the_riveter -->
+## Rosie the Riveter
+
+**In short:** An upgrade-driven fighter whose pressure depends on which benefits come online first. [1][2]
+
+### How they win
+- **Draw-led pressure into a late burst:** to keep attacking, keep the draw upgrade first and save D-Day for a late turn with follow-up attacks. [2][3]
+- **Damage and range for the long game:** for a long game, bring range forward so melee opponents come to you. [4]
+
+### How they lose
+- **Fatigue from the wrong order:** reorder upgrades with Hasty Repairs, "E" Award and Rapid Development. [4][3][5]
+- **An exposed reset after D-Day:** plan your next defense before committing. [3]
+
+### References
+1. Restoration Games. "From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes." *Restoration Games*. https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/
+2. u/Ramen3. Comment on "Finally got my hands on Stars and Stripes and wanted to ask how to use Rosie better." by u/BeneficialMethod3866. *r/Unmatched*, Reddit, 12 May 2026. https://www.reddit.com/r/Unmatched/comments/1tbidqb/
+3. Restoration Games. *Stars and Stripes*, Rosie the Riveter deck. Card text as recorded in `input/heroes.json`.
+4. u/ValhallAwaits_. Comment on "Finally got my hands on Stars and Stripes and wanted to ask how to use Rosie better." by u/BeneficialMethod3866. *r/Unmatched*, Reddit, 12 May 2026. https://www.reddit.com/r/Unmatched/comments/1tbidqb/
+5. u/Ok-Excitement7898. Comment on "Finally got my hands on Stars and Stripes and wanted to ask how to use Rosie better." by u/BeneficialMethod3866. *r/Unmatched*, Reddit, 12 May 2026. https://www.reddit.com/r/Unmatched/comments/1tbidqb/
+
+---

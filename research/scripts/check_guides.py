@@ -72,7 +72,7 @@ def main():
             titles = {clean(c["title"]) for c in heroes.get(fid, {}).get("deck", [])}
             for b in re.findall(r"^\*\*([^*]+)\*\*\s*$", body, re.M):
                 b = b.strip().lower()
-                if not all(part in titles for part in re.split(r" and |, ", b)):
+                if b not in titles and not all(part in titles for part in re.split(r" and |, ", b)):
                     problems.append(f"bold name not a card? {b}")
         prose = re.sub(r"\[\d+\]", "", body.split("\n", 2)[2] if body.count("\n") > 2 else body)
         arc = prose.partition("### Game arc")

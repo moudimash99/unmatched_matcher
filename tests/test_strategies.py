@@ -37,8 +37,8 @@ def test_card_by_card_headings_are_real_cards():
     for fid, entry in strategies.load(path).items():
         titles = {strategies._clean_title(c["title"]).lower() for c in HEROES[fid]["deck"]}
         for line in re.findall(r"^\*\*([^*]+)\*\*\s*$", entry.split("### References")[0], re.M):
-            for name in re.split(r" and |, ", line.strip().lower()):
-                assert name.replace("’", "'") in titles, (fid, name)
+            line = line.strip().lower().replace("’", "'")
+            assert line in titles or all(n in titles for n in re.split(r" and |, ", line)), (fid, line)
 
 
 def test_render_escapes_html_and_links_sources():
