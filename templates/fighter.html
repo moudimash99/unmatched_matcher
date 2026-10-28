@@ -163,29 +163,26 @@
 {% if hero and deck %}
 <section class="panel" id="deck">
     <h2>Deck · {{ deck.total }} cards</h2>
-    <div class="deck-top">
     <div class="row deck-counts">
         {% for t, n in deck.counts.items() if n %}
         <div class="stat"><b>{{ n }}</b><span class="card-type">{{ t }}</span></div>
         {% endfor %}
         {% if deck.avg_value %}<div class="stat"><b>{{ '%.1f' % deck.avg_value }}</b><span>avg combat value</span></div>{% endif %}
-    </div>
-    <div class="deck-chart">
-    {% if deck.value_counts %}
-    {% set peak = deck.value_counts.values() | max %}
-    <h3>Combat card values</h3>
-    <p class="muted">How many attack, defense and versatile cards have each value.</p>
-    <div class="value-chart" role="img" aria-label="Combat card values: {% for v, n in deck.value_counts.items() %}{{ n }} with value {{ v }}{{ ', ' if not loop.last }}{% endfor %}">
-        {% for v, n in deck.value_counts.items() %}
-        <div class="value-col" title="{{ n }} card{{ 's' if n != 1 }} with value {{ v }}">
-            <span class="value-count">{{ n if n }}</span>
-            <span class="value-bar" style="height: {{ (n / peak * 100) | round }}%"></span>
-            <span class="value-label">{{ v }}</span>
+        {% if deck.value_counts %}
+        {% set peak = deck.value_counts.values() | max %}
+        <div class="stat value-tile" title="How many attack, defense and versatile cards have each value">
+            <div class="value-chart" role="img" aria-label="Combat card values: {% for v, n in deck.value_counts.items() %}{{ n }} with value {{ v }}{{ ', ' if not loop.last }}{% endfor %}">
+                {% for v, n in deck.value_counts.items() %}
+                <div class="value-col" title="{{ n }} card{{ 's' if n != 1 }} with value {{ v }}">
+                    <span class="value-count">{{ n if n }}</span>
+                    <span class="value-bar" style="height: {{ (n / peak * 100) | round }}%"></span>
+                    <span class="value-label">{{ v }}</span>
+                </div>
+                {% endfor %}
+            </div>
+            <span>cards per combat value</span>
         </div>
-        {% endfor %}
-    </div>
-    {% endif %}
-    </div>
+        {% endif %}
     </div>
     {% if card_pics %}
     <div class="deck-grid">
@@ -216,7 +213,7 @@
     </table>
     </div>
     {% if card_pics %}</details>{% endif %}
-    <p class="muted" style="margin-top:.5rem">{% if card_pics %}Card pictures from <a href="https://unmatched.cards/" target="_blank" rel="noopener">unmatched.cards</a>. {% endif %}Card data via <a href="https://www.the-unmatched.club/heroes/{{ fighter.club_key }}" target="_blank" rel="noopener">The Unmatched Club</a>.</p>
+    <p class="muted" style="margin-top:.5rem">{% if card_pics %}Card pictures from <a href="https://www.the-unmatched.club/" target="_blank" rel="noopener">The Unmatched Club</a> and <a href="https://unmatched.cards/" target="_blank" rel="noopener">unmatched.cards</a>. {% endif %}Card data via <a href="https://www.the-unmatched.club/heroes/{{ fighter.club_key }}" target="_blank" rel="noopener">The Unmatched Club</a>.</p>
 </section>
 {% endif %}
 

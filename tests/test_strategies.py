@@ -115,10 +115,11 @@ def test_guide_layout_boxes_labels_and_card_pictures():
 def test_fighter_page_layout(client):
     html = client.get("/fighter/medusa").get_data(as_text=True)
     assert '<nav class="page-jump"' in html and 'href="#deck"' in html
-    assert '<div class="deck-grid">' in html and "static.unmatched.cards" in html
+    assert '<div class="deck-grid">' in html and re.search(r'<figure><img src="https://', html)
     assert re.search(r'id="all-matchups">\s*<details class="fold">', html)
-    no_pictures = client.get("/fighter/loki").get_data(as_text=True)  # not in the card database yet
-    assert '<div class="deck-grid">' not in no_pictures and "<table class=\"data\">" in no_pictures
+    assert 'class="stat value-tile"' in html
+    pandora = client.get("/fighter/pandora").get_data(as_text=True)  # Divine Intervention has no scan
+    assert '<div class="deck-grid">' in pandora and '<div class="deck-text-card"><b>DIVINE INTERVENTION</b>' in pandora
 
 
 def test_key_terms_are_explained(client):
