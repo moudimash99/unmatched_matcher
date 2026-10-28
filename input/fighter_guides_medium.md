@@ -1124,3 +1124,1736 @@ Written from player guides, videos and forum discussions; format and rules in re
 - Playing-against excerpts S17 and S18 in the source pack: Reddit ? forum comments (read; S17 repeats the low-resource threat; S18 supplies no actionable answer; original URLs absent from the pack).
 
 ---
+
+<!-- id: moon_knight -->
+## Moon Knight
+
+**In short:** You're a melee burst fighter who wants to survive the quiet turns, then make Khonshu's attacks count. Build your hand and position a turn ahead so your damage window buys two attacks instead of a chase. [1][2]
+
+### How they win
+
+**Break through with a double attack**
+- **Choose this when:** Their hand is low, their blocks cannot withstand Khonshu, or sidekicks are screening a vulnerable hero. Reach the hero without first clearing a bodyguard. [1][2]
+- **On your turn:** Save Travelers of The Night for Khonshu, then lead with Past and Present Intermingle before another card covers the scheme in your discard pile. Follow with That's Why I Always Win, preferably boosting with Let Your Insanity Guide You rather than sacrificing a valuable scheme. [2][3]
+- **Keep them there:** Against defenses that let the opponent escape, lead with Feint as Khonshu to secure your second attack. Prioritize this over raw damage when necessary. [2]
+- **Accelerate:** If your Moon Knight hop reaches an opponent short on cards, open with I'm Not Real, then attack as Khonshu. As Mr. Knight, use I'm Not Real when your hand supports another damage turn immediately, skipping the quieter Moon Knight turn. [1][2]
+- **On their turn:** Hold Fist of Khonshu for Mr. Knight against attacks you can beat; break adjacency before their second swing. Don't commit with that as your only defense against a heavy attack that will beat it. [2][4]
+- **Positioning:** Set up near the center, with the opponent within Travelers of The Night's reach next turn. Retreating too far during setup can waste the Khonshu turn you were preparing. [1][2]
+
+**Win the value game when the burst stalls**
+- **Choose this when:** You have already missed damage windows but still have the health and resources to contest exhaustion. Assess the remaining decks and hands first. [1][2]
+- **On your turn:** Attack with That's The Part I Like as Khonshu; against decks whose remaining attacks cannot beat Mr. Knight's defense, reserve it for defense instead. Prioritize triggering it. [2]
+- **Use the information:** After That's The Part I Like, track their next draws; if you left them schemes, pressure before they draw fresh defenses. [1]
+- **On their turn:** Use Good Enough For Us as Khonshu to replenish under pressure; keep We're All In This Together for Mr. Knight when possible. [1][2]
+- **Preserve resources:** Save Madness Will Keep You Alive for a stationary pass if exhaustion is your route; avoid spending it merely to boost an attack unless that wins. [2]
+- **Sources disagree on exhaustion:** Karma presents a strong fatigue game; Baked Goods favors aggression and warns the draw-heavy deck is not built for fatigue. HELPivFALLN calls it dependent on the game state. [2][5][1]
+
+### How they lose
+
+- **Pressure breaks your cycle.** Repeated attacks drain the hand needed for Khonshu. **Answer:** Rebuild during Moon Knight's setup turn; use Good Enough For Us to withstand pressure rather than forcing an unsupported double attack. [2]
+- **Retreat wastes your damage window.** Opponents can time their retreat around your predictable identities. **Answer:** Preserve Travelers of The Night and use I'm Not Real to disrupt that schedule. [6][1]
+- **Trading while behind.** A Totally Sane Thing To Do can deepen a losing health race outside Khonshu. **Answer:** Decline its optional exchange when behind; accept self-damage when a health lead makes the trade favorable. [5]
+
+### References
+1. HELPivFALLN. "Unmatched Moon Knight Bronze Guide." *YouTube*. https://www.youtube.com/watch?v=o9Do4HqSdLM
+2. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 11: Moon Knight." *YouTube*. https://www.youtube.com/watch?v=1rEiFhIqnic
+3. Restoration Games. *Redemption Row*, Moon Knight deck. Card text as recorded in `input/heroes.json`.
+4. Gridbeast. "Unmatched – Moon Knight." *Gridbeast*. https://gridbeast.gg/unmatched-moon-knight/
+5. Baked Goods. "Moon Knight - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=yIotoLiC-QU
+6. u/The_Scipio. Comment on "Tips/Strategies how to defeat the Moon Knight?" by u/Alex-Drobyshev. *r/Unmatched*, Reddit, 29 April 2022. https://www.reddit.com/r/Unmatched/comments/uef0wg/
+
+### Not cited
+- [Moon Knight - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=bVbjc44uzwU): PoindexterG - To The Table Top! · video (read; deck overview duplicates the more detailed strategy videos).
+- [An Unmatched Roster: The Opposite of Redemption](https://boardgamegeek.com/thread/3182025/an-unmatched-roster-the-opposite-of-redemption): BoardGameGeek · article and replies (read; identity planning is developed more concretely in the cited videos; replies discuss terminology and general design).
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; Moon Knight's passage identifies the identity-management challenge without developing a plan).
+- [Tips/Strategies how to defeat the Moon Knight?](https://www.reddit.com/r/Unmatched/comments/uef0wg/): Reddit · remaining comments by the thread author (read; acknowledgment and joke add no strategy).
+
+---
+
+<!-- id: daredevil -->
+## Daredevil
+
+**In short:** You are a resilient melee fighter who wins by recycling the answers your opponent struggles to beat. Build a recovery loop, then make them chase bad trades or finish them through their cancels. [1]
+
+### How they win
+
+**Outlast their pressure**
+- **Choose this when:** The opponent has few cancels, sidekicks that cannot cancel, or too little sustained pressure to kill you through repeated healing. Prioritize survival and recycling over damage. [1]
+- **On your turn:** Use Devil of Hell's Kitchen early, once useful cards are ready to return; waiting for an empty deck advertises your plan. Keep Breather available before committing so a cancel does not end your recycling. [2]
+- **Choosing a target:** Attack a sidekick that cannot cancel when possible. If you first risk Devil of Hell's Kitchen against the hero, follow with the other copy against that sidekick while the cancelled copy is still near the top of your discard pile. [1]
+- **On their turn:** Defend with Take A Knee and aim to recycle it alongside the defenses this opponent demands. Keep Through Adversity in the returning cards against enemies that can surround you; do not insist on a perfect selection when you need to recycle now. [1][3]
+- **Recovery:** With Breather, retrieve the deepest discarded copy of the card you need, leaving newer copies available for Devil of Hell's Kitchen. Recover a defense instead of another attack when surviving the next turn is the urgent problem. [1]
+- **Positioning:** Fight in bursts, then leave to rebuild your hand. Against multiple fighters, favor connected spaces over narrow corridors where they can pin you. [1][2]
+
+**Turn chip damage into a finish**
+- **Choose this when:** Son Of A Boxer and Through Adversity have brought the opponent low enough that damage through a cancel can finish them. Against ranged attackers with weak defenses, press close instead of conceding repeated attacks from safety. [1][4]
+- **On your turn:** Offer Man Without Fear or Grappling Hook when your discard pile suggests Devil of Hell's Kitchen is coming. Once you have drawn out a cancel, commit Devil of Hell's Kitchen; stop treating every cancelled attempt as a disaster when the damage itself advances your finish. [1]
+- **On their turn:** Force adjacency for Son Of A Boxer. Against ranged attacks, use Grappling Hook to close on their final action, then attack and maneuver away on yours. [1]
+- **Using the special ability:** A low hand makes committing Devil of Hell's Kitchen more threatening, but retain actual defenses before taking that risk. Do not chase a double blind boost with Man Without Fear merely because it is available. [1]
+- **Sources disagree on risk:** BoardGameGeek's original article treats blind boosting as a trap; one reply argues that early recycling and spare recovery routes make selective boosts manageable. Secure that backup before gambling. [5][2]
+
+### How they lose
+
+- **Cancels and forced discards break the loop.** **Answer:** Keep Breather as insurance, and avoid blind boosting when losing your remaining Devil of Hell's Kitchen would strand you. [2][3]
+- **Repeated attacks empty your defenses.** **Answer:** Keep a larger hand against combo attackers; use Grappling Hook on the first attack to deny the follow-up when an escape is open. [1][4]
+- **Pins turn retreat into a dead turn.** **Answer:** Preserve Through Adversity against multiple fighters; Grappling Hook cannot carry you through a surrounding enemy line. [1][6]
+
+### References
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 10: Daredevil." *YouTube*. https://www.youtube.com/watch?v=wb3KdBzGq-M
+2. mic_al. Reply in "An Unmatched Roster: What's Cooking in Hell's Kitchen?" by TFJ383. *BoardGameGeek*, 11 November 2023. https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen
+3. PoindexterG - To The Table Top!. "Daredevil - Unmatched Marvel Fighter Review." *YouTube*. https://www.youtube.com/watch?v=w_diciqXDqQ
+4. u/WeakSwitchKick. Comment on "Help daredevil!" by u/Practical-Fig-7209. *r/Unmatched*, Reddit, 27 February 2024. https://www.reddit.com/r/Unmatched/comments/1b11b6o/
+5. TFJ383. "An Unmatched Roster: What's Cooking in Hell's Kitchen?" *BoardGameGeek*, 11 November 2023. https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen
+
+6. Restoration Games. *Hell's Kitchen*, Daredevil deck. Card text as recorded in `input/heroes.json`.
+
+### Not cited
+- [Unmatched – Daredevil](https://gridbeast.gg/unmatched-daredevil/): Gridbeast · written guide (read; recycling advice covered more concretely by the videos and forum reply).
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · article (read; Daredevil passage offers no developed plan).
+- [Daredevil - FIRST IMPRESSIONS!](https://www.youtube.com/watch?v=7b4lHIAATAU): Baked Goods · video (read; preliminary assessments overlap the more detailed strategy video).
+- [Help daredevil!](https://www.reddit.com/r/Unmatched/comments/1b11b6o/): Reddit · remaining comments (read; narrower matchup advice or overlapping recommendations).
+- [An Unmatched Roster: What's Cooking in Hell's Kitchen?](https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen): BoardGameGeek · remaining replies (read; overlapping support or discussion of enjoyment rather than additional play decisions).
+- Give a One Sentence Tip on how to Play against your favorite Fighter. Go!: Reddit · excerpts (read; pack supplies no URL; relevant warning about late cancels already covered by cited sources).
+
+---
+
+<!-- id: elektra -->
+## Elektra
+
+**In short:** You are a patient survival fighter who turns a long first life into either an exhaustion lead or a crushing resurrection turn. Make the opponent spend resources reaching you while you prepare the hand and position that your chosen finish needs. [1][2]
+
+### How they win
+
+**Outlast the chase**
+- **Choose this when:** Your first life has lasted long enough to leave the opponent roughly halfway through their deck or further. Resurrection then gives you the resources to keep escaping rather than forcing a damage race. [1]
+- **On your turn:** Maneuver away and make them chase; engage sparingly rather than trading attacks every turn. Use Hands of Red to rebuild your screen when you do attack, so the next approach costs them more time. [1][2]
+- **On their turn:** Spend Sai on defense during the first life; use Snakeroot Clan to punish a large attack and Ninjitsu to escape renewed pressure. Your goal is to buy another turn of drawing, not repay every hit immediately. [2][3]
+- **Positioning:** Hide behind two or three members of The Hand, with another far across the board as your Snakeroot Clan destination. After resurrection, repeat the retreat instead of treating the refreshed board as an obligation to attack. [4]
+
+**Strip defenses, then overwhelm**
+- **Choose this when:** The opponent will have few cards when you resurrect, especially without plentiful cancels or movement after combat. The Fist needs a target that cannot interrupt the chain or leave its attackers behind. [2]
+- **Preparation:** Carry both copies of Mesmerize, one The Fist, Mystic Assassin, and a spare boost card through death. Avoid spending Mesmerize early just for information: redrawing it after resurrection may come too late for the opening. [1][2]
+- **On your turn:** Start with Mesmerize, then use the second if needed to remove cancels or escape defenses. Boost a maneuver to surround the target, cycle The Fist through the adjacent members of The Hand, and finish with Mystic Assassin once their defenses are depleted. [1][5]
+- **Positioning:** Resurrect close enough for that single maneuver to bring Elektra and several members of The Hand into contact; each must initially occupy a different zone. Some map positions allow only two adjacent sidekicks, so count reachable spaces before committing. [1][6]
+- **On their turn:** Keep Intercept alongside Sai if you expect a counterattack. The information from Mesmerize tells you whether staying beside them is affordable. [3]
+- **Sources disagree on forcing death:** Gridbeast advises against first-life Mystic Assassin unless you expect Feint; Baked Goods allows it to trigger a prepared resurrection when the opponent refuses to kill you. Remember that dying on your turn lets them replenish their hand before you return. [3][2]
+
+### How they lose
+
+- **An early first death.** Heavy pressure cuts short your chance to build an exhaustion lead. **Answer:** Preserve your screen, defend with Sai, and use Snakeroot Clan or Ninjitsu to extend the first life. [7][3]
+- **Sidekick clearing.** Automatic damage removes your shields and weakens both Snakeroot Clan and The Fist. **Answer:** Rebuild with Hands of Red; avoid sacrificing your screen to The Fist before the resurrection assault. [7][3][5]
+- **A crowded hand, then a fleeing target.** Unblockable damage can force resurrection while many cards remain stranded in hand, reducing your remaining draws. **Answer:** Use resurrected Cloaked In Shadow against ranged attacks to close into a Mesmerize and Mystic Assassin turn. [8][9][2]
+
+### References
+1. PoindexterG - To The Table Top! "Elektra - Unmatched Marvel Fighter Review." *YouTube*. https://www.youtube.com/watch?v=Un3FXcyDqlU
+2. Baked Goods. "Elektra - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=Xn6IPWpaDaY
+3. Gridbeast. "Unmatched – Elektra." *Gridbeast*. https://gridbeast.gg/unmatched-elektra/
+4. mic_al. Reply in "An Unmatched Roster: What's Cooking in Hell's Kitchen?" by TFJ383. *BoardGameGeek*, 11 November 2023. https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen
+5. u/Silly_Shenanigans. Comment on "Just got my elektra, any tips to play her?" by u/FrequentExcitement55. *r/Unmatched*, Reddit, 12 December 2025. https://www.reddit.com/r/Unmatched/comments/1pkyr6h/
+6. Restoration Games. *Hell's Kitchen*, Elektra deck. Card text as recorded in `input/heroes.json`.
+7. u/LabRat2329. Comment on "Upcoming battle against Elektra" by u/Naive-Health414. *r/Unmatched*, Reddit, 27 March 2026. https://www.reddit.com/r/Unmatched/comments/1s5e5m5/
+8. u/Biggest_Lemon. Comment on "Weekly Discussion: Battling Elektra (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 9 April 2026. https://www.reddit.com/r/Unmatched/comments/1sgv66c/
+9. u/richard-savana. Comment on "Weekly Discussion: Battling Elektra (Tips and Strategies)" (see [8]).
+
+### Not cited
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; no specific Elektra plan).
+- [An Unmatched Roster: What's Cooking in Hell's Kitchen?](https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen): BoardGameGeek · main article and remaining replies (read; the cited reply gives the concrete Elektra positioning).
+- [Just got my elektra, any tips to play her?](https://www.reddit.com/r/Unmatched/comments/1pkyr6h/): Reddit · remaining comments (read; survival and resurrection advice overlaps the cited sources).
+- [Upcoming battle against Elektra](https://www.reddit.com/r/Unmatched/comments/1s5e5m5/): Reddit · remaining comments (read; rankings and opponent recommendations omitted).
+- [Weekly Discussion: Battling Elektra (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1sgv66c/): Reddit · post and remaining comments (read; overlapping sidekick clearing and exhaustion advice).
+- [Unmatched Tips and Strategies: Fighting Against the Best Fighters](https://thegaminggeek.net/unmatched-tips-and-strategies-fighting-against-the-best-fighters/): The Gaming Geek · article excerpt (read; only a tier listing in the pack).
+
+---
+
+<!-- id: bullseye -->
+## Bullseye
+
+**In short:** You’re a fragile ranged aggressor who wants repeated attacks to empty the opponent’s defenses before they kill you. Build turns around a first combat win and a payoff, then escape the counterattack without giving up your next shooting position. [1][2]
+
+### How they win
+
+**Shoot without spending your turn chasing**
+- **Choose this when:** Slow melee fighters must spend cards or whole turns reaching you, or ranged fighters cannot answer outside their zones. Make them approach while you spend both actions attacking. [1][2]
+- **Positioning:** Look for a space that covers the board, but prioritize keeping the opponent at the edge of your reach and outside shared zones. Check your escape destination before committing Master Strategist; reaching a shooting perch means little if the next attack traps you there. [2][3]
+- **On your turn:** Open with I Never Miss when you suspect Feint; use I Planned To Be Here when you can stay put and expect a value defense. Commit a BOOST to I Never Miss when winning unlocks a payoff; without one, take the draw instead. [1][4]
+- **Payoff:** After winning, play Study The Target if your hand needs replenishing, then World's Greatest Assassin or I'm Better And I'll Prove It. Insert For My Next Trick before the finisher to draw out another defense, but remember a cancel can end that sequence early. [1]
+- **On their turn:** Hold Tactical Retreat or Master Strategist for the first attack of a potential double attack. Leave yourself in range to resume shooting, rather than escaping so far that you must chase on your next turn. [1][2][4]
+
+**Empty their hand, then cash in**
+- **Choose this when:** The opponent is running short of defenses, has poor card draw, or offers vulnerable sidekicks you can use to start a winning sequence. You want their remaining cards stretched across more attacks than they can answer. [1][3][5]
+- **On your turn:** Use Arrogant But Effective to start against high value defenses when a cancel is unlikely, then Study The Target while both hands are low. Keep pressing through For My Next Trick into your finisher; avoid refilling so early that you must discard excess cards. [1]
+- **Sidekick pressure:** Take an easier combat win against a sidekick to enable your follow-up. Against fighters with important 1-health sidekicks, aim Ricochet at the hero when their shared zone lets you remove the sidekick without attacking it directly. [1][3]
+- **Sources disagree on defensive discards:** Gridbeast and one player recommend defending with Arrogant But Effective, then Right Between The Eyes against a low-hand opponent with poor draw, provided you can afford the damage. Baked Goods rejects deliberately inviting double attacks and prefers Right Between The Eyes for blocking or boosting I Never Miss. [6][5][4]
+
+### How they lose
+
+- **Cancels break the first win.** Losing your opener can strand the payoff. **Answer:** Favor I Never Miss into suspected Feint; after a failed opener, maneuver to recover instead of forcing the sequence. [1][4]
+- **Close pressure burns your health.** Fast attackers and pins deny safe shooting turns. **Answer:** Preserve Tactical Retreat and Master Strategist to interrupt follow-ups; save Feint for the opposing effects that matter most. [1][4]
+- **An empty hand ends your pressure.** Constant access to a target does not justify constant attacks. **Answer:** Double maneuver to rebuild when necessary, then return with a complete sequence and Study The Target support. [1][7]
+
+### References
+1. The Gaming Geek Net. "Bullseye Advanced Strategy Guide - Unmatched Tips and Tricks-." *YouTube*. https://www.youtube.com/watch?v=SziqNdowXA4
+2. PoindexterG - To The Table Top! "Bullseye - Unmatched Marvel Fighter Review." *YouTube*. https://www.youtube.com/watch?v=P_Kuca-8IA0
+3. TFJ383. "An Unmatched Roster: What's Cooking in Hell's Kitchen?" *BoardGameGeek*, 11 November 2023. https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen
+4. Baked Goods. "Bullseye - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=1B5X3cK6hl8
+5. u/Life-Rip183. Comment on "(Strategy) Did I correctly understand Bullseye's gameplay?" by u/-Asdepique-. *r/Unmatched*, Reddit, 13 January 2025. https://www.reddit.com/r/Unmatched/comments/1i0drah/
+6. Gridbeast. "Unmatched – Bullseye." *Gridbeast*. https://gridbeast.gg/unmatched-bullseye/
+7. u/Megabro_SgOwDm. Comment on "If I’m playing Bullseye and can basically always attack, does that mean I’m supposed to stay at around 1–3 cards in hand because I’m constantly attacking?" by u/Mean-Shelter5303. *r/Unmatched*, Reddit, 6 October 2026. https://www.reddit.com/r/Unmatched/comments/1wz3e9q/
+
+### Not cited
+- [(Strategy) Did I correctly understand Bullseye's gameplay?](https://www.reddit.com/r/Unmatched/comments/1i0drah/): Reddit · post and remaining replies (read; map selection and draw advice overlap the cited sources; the opening-hand guarantee is overstated).
+- [Bullseye strategy](https://www.reddit.com/r/Unmatched/comments/1facpfu/): Reddit · thread (read; sequencing and distance advice overlap the cited videos; one reply uses a card name absent from the deck).
+- [If I’m playing Bullseye and can basically always attack, does that mean I’m supposed to stay at around 1–3 cards in hand because I’m constantly attacking?](https://www.reddit.com/r/Unmatched/comments/1wz3e9q/): Reddit · remaining replies (read; sequence advice overlaps the video; team positioning is outside this guide’s scope).
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; general tempo advice adds no Bullseye-specific sequence).
+- [An Unmatched Roster: What's Cooking in Hell's Kitchen?](https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen): BoardGameGeek · replies (read; no additional Bullseye strategy).
+- [Give a One Sentence Tip on how to Play against your favorite Fighter. Go!](../../packs/bullseye.md): Reddit · excerpts in source pack (read; original thread URL and date not supplied, and one excerpt explicitly concerns a different fighter).
+
+---
+
+<!-- id: dr_sattler -->
+## Dr. Sattler
+
+**In short:** You're a defensive melee fighter who buys time with healing while insight rebuilds between exchanges. Make their attacks run out of damage, collect chip damage on defense, then finish with a few large attacks. [1]
+
+### How they win
+
+**Make their damage budget fail**
+- **Choose this when:** The opponent has a finite supply of threatening attacks, especially big burst attacks you can survive with a full hand. Your healing can leave them without enough damage to finish you. [1]
+- **On your turn:** After spending insight, maneuver both fighters to rebuild before engaging again; double maneuvering restores most of your supply. [1][2]
+- **On their turn:** Reserve Woman Inherits the Earth for defense with full insight. Hold I Think We're Back In Business at a large hand size for the burst attack that ordinary defenses won't stop, rather than spending it on a routine swing. [1]
+- **Positioning:** Spread insight across useful escape spaces instead of stacking it. Keep a distant destination available for The Concept of Attraction so one attack doesn't become two; an occupied destination cannot rescue you. [1]
+- **Protecting Dr. Malcolm:** Keep him alive for repeated rebuilding, not merely until you've used Life Finds a Way. Defending him with Hey! Hey! Hey! can also prepare Dr. Sattler's next approach without spending her turn repositioning. [1][3]
+- **Healing:** Use Life Finds a Way while Dr. Malcolm can survive the combat; don't expect its healing to save him from a lethal hit. Rebuild insight for your main healing afterward. [1][2]
+
+**Turn chip damage into a finishing attack**
+- **Choose this when:** Melee opponents must approach your insight, or several low-health sidekicks can be caught near it. This route becomes easier against decks without Feints; ranged opponents require more deliberate token placement. [1]
+- **On your turn:** Approach with fresh insight, then attack with Violently, If Necessary before cashing the tokens in with You Never Had Control, That's the Illusion. Wait for full insight for the large attack; without it, you're spending a scarce source of damage over defenses. [1]
+- **On their turn:** Use Violently, If Necessary when their melee approach has already put them in reach of your insight. Against ranged attacks, look to Lock The Doors! for retaliation without needing the attacker beside you. [1]
+- **Positioning:** Against ranged fighters, leave insight just inside zone edges where they'll enter. If they avoid your tokens, Chaotician can prepare Violently, If Necessary without requiring them to cooperate. [1][3]
+
+### How they lose
+
+- **Pressure before healing arrives.** Low defenses make an early rush dangerous, and losing Dr. Malcolm slows every subsequent rebuild. **Answer:** Use The Concept of Attraction to interrupt repeated attacks, or Sexism in Survival Situations to disengage from a melee hero while preparing insight. [1][2]
+- **Cancels lined up with full insight.** Your big attacks advertise themselves, and I Think We're Back In Business is especially exposed. **Answer:** Favor Woman Inherits the Earth on defense and retain I Think We're Back In Business for blocking; don't treat every full-insight turn as an obligation to attack. [1][2]
+- **An empty board after a payoff.** The Concept of Attraction loses its escape route, while another Woman Inherits the Earth cannot provide meaningful recovery. **Answer:** Keep a different defense before clearing insight, then rebuild with both fighters before the next exchange. [1][2]
+
+### References
+1. Baked Goods. "Sattler - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=MpJJ9cCHL3s
+2. PoindexterG - To The Table Top! "Dr. Ellie Sattler - Jurassic Park Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=Ft4JNGHuPp8
+3. Gridbeast. "Unmatched – Dr. Sattler." *Gridbeast*. https://gridbeast.gg/unmatched-dr-sattler/
+
+### Not cited
+- [Tips on playing Muldoon and Sattler Effectively?](https://www.reddit.com/r/Unmatched/comments/1t3rga4/): Reddit · forum thread (read; replies provide no Dr. Sattler strategy).
+- [An Unmatched Roster: Jurassic Park](https://boardgamegeek.com/thread/3101319/an-unmatched-roster-jurassic-park): BoardGameGeek · article (read; survival, cancel vulnerability, and sidekick protection covered more concretely by the cited videos).
+
+---
+
+<!-- id: t_rex -->
+## T. Rex
+
+**In short:** You're a relentless attacker racing your own exhaustion and self-damage. Spend cards to reach the opposing hero early, then keep attacking rather than giving them time to escape and outlast you. [1]
+
+### How they win
+
+**Run down an evasive hero**
+
+- **Choose this when:** ranged fighters or evasive opponents keep retreating, especially when sidekicks screen their hero. Pursue the hero rather than spending your attacking window dismantling the whole screen. [1][2]
+- **On your turn:** boost your approach, or use Closer Than She Appears when that preserves a double attack; use Ripples in the Water before attacking when its discard could remove their best defense. Don't spend two actions maneuvering just to refill your hand. [2]
+- **Keep spending:** use the end-of-turn draw to sustain movement boosts instead of waiting for more cards. When your hand is full, paying for an approach beats losing the extra card to the hand limit. [3]
+- **Positioning:** approach along routes that leave fewer escape options. Use your reach over a screening fighter where possible; don't assume every sidekick needs killing before you can attack the hero. [4][5]
+- **On their turn:** keep Thrash for defense against clustered 1-health sidekicks; clearing the screen during their attack saves your own actions for the hero. [2][4]
+- **Sources disagree on Reckless Lunge:** Gridbeast recommends using it exclusively for boosts; Baked Goods allows an occasional attack but likewise prefers saving it for movement or combat boosts. Treat the attack as a deliberate health trade, rather than your default use. [4][2]
+
+**Make closing in cost them the game**
+
+- **Choose this when:** melee fighters must approach to retaliate, or weak defenses let you sustain repeated attacks. Against healing opponents, be stricter about self-damaging trades: small hits may not stay relevant. [2]
+- **Positioning:** attack from two spaces away when possible, making a melee opponent spend an action closing in. Ripples in the Water creates a choice: adjacency buys the discard, but gives up that protection against an immediate counterattack. [2]
+- **On their turn:** answer an early attack with Terrifying Roar when they intend to retreat afterward. Start your next turn attacking twice instead of paying to chase again. [2][4]
+- **On your turn:** lead with When Dinosaurs Ruled the Earth when a boost will produce worthwhile damage and extend your turn; against healing, avoid boosting merely to squeeze one damage through. Mix in Commanding Impact to punish opponents who rely on cancels. [2]
+- **Reload:** use 65 Million Years of Gut Instinct for Commanding Impact against weak blocks, or 15,000 Pounds of Muscle once their cancels are gone. Recover the attack that solves their remaining defense. [2]
+
+### How they lose
+
+- **Keep-away exhausts you.** Repeated chases consume your deck without forcing enough combat. **Answer:** spend Reckless Lunge on movement and use Closer Than She Appears to turn an approach into attacks. [6][2]
+- **An empty hand invites a burst.** Opponents can punish overextension, and action chains are especially threatening because you cannot cancel them. **Answer:** retain Thrash or Terrifying Roar for defense rather than spending every versatile card attacking. [7][8][2]
+- **Defense can consume your offense.** **Answer:** weigh the boost cost of You're Just Making Her Angry. Gridbeast recommends reusing it; Baked Goods questions spending premium boosts there instead of dealing damage. [4][2]
+
+### References
+
+1. PoindexterG - To The Table Top! "T. Rex - Jurassic Park Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=lbS2xd_1A00
+2. Baked Goods. "T Rex - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=rIs1F2miyKc
+3. u/MyHusbandIsGayImNot. Comment on "Tips againt Rexy?" by u/Gaborka111. *r/Unmatched*, Reddit, 18 September 2024. https://www.reddit.com/r/Unmatched/comments/1fjo69b/
+4. Gridbeast. "Unmatched – T. Rex." *Gridbeast*. https://gridbeast.gg/unmatched-t-rex/
+5. TFJ383. "An Unmatched Roster: Jurassic Park." *BoardGameGeek*, 16 June 2023. https://boardgamegeek.com/thread/3101319/an-unmatched-roster-jurassic-park
+6. u/TivaDi. Comment on "Tips againt Rexy?" (see [3]).
+7. u/REEF_snake_POTATO. Comment on "Tips againt Rexy?" (see [3]).
+8. u/TheOncomingStorm08. Comment on "Any tips …?" by u/javivr621. *r/Unmatched*, Reddit, 18 November 2022. https://www.reddit.com/r/Unmatched/comments/yypc6r/
+
+### Not cited
+
+- [Other replies in Tips againt Rexy?](https://www.reddit.com/r/Unmatched/comments/1fjo69b/): Reddit · forum comments (read; retreat and zoning advice repeats the cited replies).
+- [Other replies in Any tips …?](https://www.reddit.com/r/Unmatched/comments/yypc6r/): Reddit · forum comments (read; pursuit and burst threats covered by cited sources).
+
+---
+
+<!-- id: houdini -->
+## Houdini
+
+**In short:** You're an explosive melee fighter who wins by turning hand information and carefully chosen boosts into damage. Make the opponent spend their defenses, strike through the opening, then escape before defending drains your next attack. [1][2]
+
+### How they win
+
+**Clear the defense, then commit**
+- **Choose this when:** Their hand is short on defenses, or you can remove the cancel that would stop your burst. Don't spend The Big Reveal into a defense you already know can shut it down. [1][2]
+- **On your turn:** Maneuver with Set the Stage to arrive adjacent and strip the relevant defense, then attack with The Big Reveal. Without that information, lead with For My Next Trick to test for a cancel; Sleight of Hand also lets you punish a weak defense without committing your payoff blind. [1][2][3]
+- **Boost budget:** Save Sleight of Hand and your other high boosts for attacks rather than travel. With The Big Reveal, pair one valuable boost effect with a card you can afford to lose, then recover the valuable one for another use. [1][2]
+- **Keep attacking:** When you know their remaining hand cannot defend another attack, boost with And the Beautiful Bess! to extend the turn. Follow with An Illusion of My Own Design when they cannot defend it; if they instead spend an extra card boosting a defense, accept that expense without automatically boosting back. [1]
+- **On their turn:** Against a small attack, use Grand Escape to arrange an adjacent start for your next turn. That saves your next action for attacking rather than approaching again. [1]
+
+**Strike, escape, and finish outside combat**
+- **Choose this when:** A melee opponent cannot reach every corner in one turn, giving you room to rebuild between attacks; switch to a Misdirection finish when their remaining health is within reach of your boosts. [1][4]
+- **Positioning:** Count their boosted movement before choosing your escape space. Leave Houdini beyond that reach, rather than merely far away, and keep Bess alive for Smoke and Mirrors to absorb a heavy hit meant for him. [1]
+- **On your turn:** Use Flourish boosts to keep cards coming while spending multiple cards on an attack. When returning to attack, boost The Big Reveal with Misdirection and recover it if you need another damage trigger or a cancel afterward. [1][4]
+- **On their turn:** Don't spend Misdirection automatically: weigh the attack's effects against the damage you give up by defending with it. Against decks whose key effects demand cancellation, preserve that answer instead of budgeting every copy toward the finish. [1]
+- **Healing:** Prefer boosting All Part of the Show for dependable recovery; a weak bait attack can spoil a planned revival. [1]
+
+### How they lose
+
+- **Pressure after the burst.** Opponents can exploit your depleted hand immediately after The Big Reveal. **Answer:** Escape and refill; use Grand Escape or Vanishing Act to break contact instead of feeding every remaining boost into defense. [1][5]
+- **Forced discard dismantles the setup.** Losing your payoff can leave you with boosts but no finish. **Answer:** Keep a sizable hand against discard decks, retain A Magician Never Reveals His Secrets against cancelable hand inspection, and save And the Beautiful Bess! as discard fodder. [1][6]
+
+### References
+1. Baked Goods. "Houdini - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=UAM84ZlFD4A
+2. u/d_Shirt. Comment on "Houdini tips and strategies?" by u/delicate-jello. *r/Unmatched*, Reddit, 7 December 2023. https://www.reddit.com/r/Unmatched/comments/18d2ok3/
+3. u/Grujah. Comment on "Houdini tips and strategies?" (see [2]).
+4. PoindexterG - To The Table Top! "Houdini - Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=nexf5onWJeI
+5. u/FrequentExcitement55. Comment on "Weekly Discussion: Battling Harry Houdini (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 22 April 2026. https://www.reddit.com/r/Unmatched/comments/1sssmd3/
+6. Gridbeast. "Unmatched – Houdini." *Gridbeast*. https://gridbeast.gg/unmatched-houdini/
+
+### Not cited
+- [Houdini set overview](https://www.youtube.com/watch?v=i47pLhncBlc): Lord of the Board · video (read; overlaps the cited reviews).
+- [Additional Houdini matchup discussion](https://www.reddit.com/r/Unmatched/comments/1c9gp10/): r/Unmatched · forum thread (read; its damage-versus-defense advice overlaps the cited discussion).
+- [Fighting Against the Best Fighters](https://thegaminggeek.net/unmatched-tips-and-strategies-fighting-against-the-best-fighters/): The Gaming Geek · shared article excerpt (read; the pack supplies only a listing for Houdini).
+
+---
+
+<!-- id: the_genie -->
+## The Genie
+
+**In short:** You're a ranged pressure fighter who turns cards into tempo and chips opponents into finishing range. Decide whether to spend your deck overwhelming their defenses, save for a hand-stripping turn, or preserve cards for exhaustion. [1][2]
+
+### How they win
+
+**Keep them searching for defenses**
+
+- **Choose this when:** You face decks with few defenses, poor draw, or resources they cannot replenish under repeated attacks. [1][2]
+- **On your turn:** Buy the extra action when you can sustain multiple attacks, then use Three Wishes for refills as your hand runs low. Space those refills across pressure turns rather than drawing everything immediately. [1]
+- **On their turn:** Defend with Wishing For More Wishes to reload; your opponent has less time to react to the enlarged hand. [3]
+- **Positioning:** Attack from range when adjacency adds nothing. Against fighters with several 1-health sidekicks, use I Am Freed to clear a cluster without spending separate attacks on them. [1][3]
+- **Breaking defenses:** Pair Three Wishes with offensive Feint against defensive movement or draw; use This is No Parlor Trick after the value increase against defenses with low BOOST values. [1]
+
+**Strip their hand and finish**
+
+- **Choose this when:** Their health is low enough for one turn to kill, especially against low-health decks without forced discard. Chip them first. [1][2]
+- **On their turn:** Prefer I've Made Sultans Out of Less to expose their defenses and remove the crucial one; reducing seven cards to six opens the full hand-strip threat. Use Prisoner's Torment for fuel only while you can afford the health loss. [1]
+- **On your turn:** Budget your ability discard, Three Wishes, and every follow-up attack before committing. Strip the whole hand, then attack; spend a spare Three Wishes on attack values or fuel instead of unnecessary discard. [1][2]
+- **Keep contact:** Lead with I Am Freed when you expect a movement defense, then follow their escape and continue attacking. [3]
+- **Last damage:** Save Imprisoned Wrath or Your Wish is My Command for a finish your remaining hand can actually fund; paying their costs into another defended attack wastes resources. [1]
+
+**Win the deck race**
+
+- **Choose this when:** A tanky opponent has enough draw and health to survive both sustained pressure and your burst. Keep deck counts close while discards reduce their usable resources. [1][2]
+- **On your turn:** Usually skip the ability; attack as a way to spend an action without drawing. Time Three Wishes discards to deny useful cards or force rebuilding, rather than feeding them an early opportunity to discard junk. [1]
+- **Positioning:** Use I Am Freed after a ranged attack to retreat far enough that pursuit costs extra movement or cards. [1]
+- **Sources disagree on exhaustion:** Baked Goods doubts this deck is built for exhaustion; Karma supports a selective value plan that avoids routine ability discards. [3][1]
+
+### How they lose
+
+- **Counterattacks after adjacency.** Chasing chip damage can leave you exposed to two attacks. **Answer:** Stay at range when possible and retain defenses before ending adjacent. [1]
+- **Bait and combat-win payoffs.** Back In The Lamp invites opposing victory effects. **Answer:** Save it for weaker attacks once you're sufficiently wounded; use Feint against dangerous effects. [1][3]
+- **A surviving opponent.** Spending every Three Wishes without lethal lets them rebuild while your best tools are gone. **Answer:** Count damage first and preserve Careful What You Wish For as a follow-up finisher when the combo leaves confirmed lethal. [1]
+
+### References
+
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 20: The Genie." *YouTube*. https://www.youtube.com/watch?v=mq3EwElOakM
+2. u/LucaGardenall. Comment on "Need Tips for The Genie" by u/Current_Scarcity7081. *r/Unmatched*, Reddit, 2 February 2024. https://www.reddit.com/r/Unmatched/comments/1ah1yk6/
+3. Baked Goods. "The Genie - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=eA2MfPV0wp0
+
+### Not cited
+
+- [Unmatched – The Genie](https://gridbeast.gg/unmatched-the-genie/): Gridbeast · written guide (read; video and forum analysis give more precise conditions).
+- [How are you supposed to play The Genie?](https://www.reddit.com/r/Unmatched/comments/zz4w4t/): Reddit · thread (read; overlapping combo advice).
+- [Need Tips for The Genie](https://www.reddit.com/r/Unmatched/comments/1ah1yk6/): Reddit · remaining replies (read; overlapping advice or unsupported ability wording).
+- [Advice on a mobile, scaling opponent](https://www.reddit.com/r/Unmatched/comments/1w07mo8/): Reddit · thread (read; narrower context than the selected plans).
+- [Advice on the set's duel](https://www.reddit.com/r/Unmatched/comments/1c9gp10/): Reddit · thread (read; overlapping pressure and hand-management advice).
+- [The Genie - Unmatched Fighter Review](https://www.youtube.com/watch?v=enaUsIlGbjU): PoindexterG - To The Table Top! · video (read; overlapping card interactions).
+- [Set overview](https://www.youtube.com/watch?v=i47pLhncBlc): Lord of the Board · video (read; overlapping positioning advice).
+- General counterplay excerpts: Reddit and The Gaming Geek · shared excerpts (read; no additional actionable Genie advice or original URL supplied in the pack).
+
+---
+
+<!-- id: ms_marvel -->
+## Ms. Marvel
+
+**In short:** You're a mobile pressure fighter who wants to attack repeatedly without letting the opponent do the same. Keep a large hand, fight across zone boundaries, and make them spend actions chasing while you spend yours attacking. [1][2]
+
+### How they win
+
+**Win the chase, then break their defenses**
+- **Choose this when:** Melee opponents must maneuver to reach you, or a slower control deck gives you time to maintain a large hand. Against decks without cancels, commit more confidently to a boosted Big Wind Up finish. [1]
+- **On your turn:** Step back with your start-of-turn movement, then attack with Momentous Shift while keeping another defense. When the opponent denies your cross-zone attacks, use Fangirl from a full hand instead of forcing Big Wind Up. [1]
+- **Against cancels:** Lead with I'm Not Touching You when you expect Feint; it punishes that defense while preserving Big Wind Up for another opening. Against a high-value block, Shrink! Shrink! Shrink! instead attacks their hand and positioning. [1][3]
+- **On their turn:** Use Slingshot to escape a pin or interrupt repeated attacks, choosing a destination that leaves you an attack after your next free step. Save Embiggen for defense when you can hold a triple-zone space and make them approach. [1][3]
+- **Positioning:** Stay two spaces away and seek abrupt zone boundaries; force a maneuver before their attack. Prefer small zones without safe hiding spaces, rather than assuming a triple-zone space alone solves the matchup. [2][4]
+- **Finishing:** In a long control game, spend Friends and Family boosting Big Wind Up at a cross-zone opening. Don't spend your best offensive opportunity on a low-pressure attack if the opponent can simply rebuild afterward. [1]
+
+**Refill, survive, and turn their pressure around**
+- **Choose this when:** Aggressive opponents try to empty your hand before landing their biggest attacks. Preserve Friends and Family for recovery so their initial assault doesn't leave you defenseless. [1]
+- **On your turn:** Play Friends and Family first when you need the full reset; don't leave it until your last action. If wounded with at least five cards before playing Gyro and Fries, heal first, then rebuild without sacrificing that recovery turn. [1][5]
+- **On their turn:** Favor Easy Peasy when a melee attacker closes in, or when an adjacent fragile sidekick needs removing. Keep extra cards against effects that strip your hand during combat, rather than relying on the minimum hand size. [1]
+- **Turnaround:** Defend their last attack with Shrink! Shrink! Shrink! to put them across a zone boundary, then use your free step to line up Big Wind Up immediately. Choose discard instead when their depleted hand is the weakness you can press. [1]
+- **Sources disagree on Friends and Family:** One Reddit player says always save it as boost fuel; Baked Goods recommends the refill against hand-depleting aggression. Decide before spending your only copy. [4][1][5]
+
+### How they lose
+
+- **They deny your zones.** Careful positioning shuts off your biggest payoffs. **Answer:** Use Fangirl while your hand is large, or reposition them with Shrink! Shrink! Shrink! instead of pursuing a blocked setup. [1]
+- **They get repeated attacks.** Well-positioned ranged fighters and opponents with combat movement can bypass your usual protection; heavy hits overwhelm your modest blocks. **Answer:** Use Slingshot to break the sequence, and retain Shrink! Shrink! Shrink! or another defense before committing to attacks. [1][6]
+
+### References
+1. Baked Goods. "Ms. Marvel - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=L8RoDnRiRHg
+2. Gridbeast. "Unmatched – Ms. Marvel." *Gridbeast*. https://gridbeast.gg/unmatched-ms-marvel/
+3. u/Life-Rip183. Comment on "Any tips on using Ms. Marvel?" by u/BeneficialMethod3866. *r/Unmatched*, Reddit, 18 May 2026. https://www.reddit.com/r/Unmatched/comments/1th0ed8/
+4. u/LabRat2329. Comment on "Any tips on using Ms. Marvel?" (see [3]).
+5. Restoration Games. *Teen Spirit*, Ms. Marvel deck. Card text as recorded in `input/heroes.json`.
+6. The Pop Insider. "Unmatched: Marvel — Who to Play, How to Win." *The Pop Insider*. https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/
+
+### Not cited
+- [Any tips on using Ms. Marvel?](https://www.reddit.com/r/Unmatched/comments/1th0ed8/): Reddit · comments by u/Virutita69 and u/itsactuallyoctopuses (read; map advice overlaps the cited discussion).
+- [Ms. Marvel - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=kIBhEhVQYHs): PoindexterG - To The Table Top! · video (read; positioning and hand-count advice overlaps the cited video).
+
+---
+
+<!-- id: squirrel_girl -->
+## Squirrel Girl
+
+**In short:** You build a scattered squirrel army, then turn its positioning into a burst of damage. Prepare that burst on the opponent's turn so you can spend your own actions cashing it in, rather than assembling it under fire. [1]
+
+### How they win
+
+**Turn a melee approach into a burst turn**
+- **Choose this when:** A melee opponent comes to you, especially with few cancels; Kick Butts punishes that opening hardest. Against decks with many cancels, prepare Nutwork of Spies before committing your payoff. [1]
+- **On their turn:** Leave one squirrel near the approaching fighter and defend with Get 'Em Tippy-Toe!; place its reinforcements near the attacker, then use your start-of-turn summon to complete the setup. You want the threshold ready before spending either action. [1]
+- **On your turn:** Lead with Nutwork of Spies to remove cancels or remaining defenses, then attack with Kick Butts or Unbeatable Squirrel Girl. Without that preparation, use Fuzzball Special first to gather squirrels for your second attack. [1]
+- **Positioning:** Spread squirrels until you have a payoff worth concentrating them for; don't build a stack merely because you can. Decide which attack you want to cash in before exposing the army to retaliation. [1][2]
+- **Finishing:** Prefer Unbeatable Squirrel Girl on offense when you can secure its setup; even Feint still leaves chip damage. When approaching would expose Squirrel Girl, send squirrels ahead and use Horde of Squirrels while she stays away. [1][2][3]
+
+**Attack through the screen, then bring the hero in**
+- **Choose this when:** The opponent shelters behind sidekicks, or a ranged fighter expects distance to buy a safe turn. Your squirrels bypass the screen; your defensive movement can turn their attack into your next double attack. [1]
+- **On your turn:** Send a squirrel through the screen to attack with Bite of Steel. Keep the supporting squirrels dispersed within the relevant zone instead of crowding everyone beside the target; spend squirrel attacks to drain blocks before Squirrel Girl arrives. [1]
+- **On their turn:** Against ranged attacks, use Squirgility to finish beside the attacker and threaten two attacks next turn. Squirmish and Dash also let you change the position they expected to leave you in. [1]
+- **Sources disagree on Call of the Mild:** Gridbeast favors defending with it to waste opposing attacks; Baked Goods prefers squirrel attacks, especially through sidekick screens, to strip defenses for the hero. Choose whether you need to preserve your board or maintain pressure. [1][4]
+
+### How they lose
+
+- **Area damage destroys the setup.** A clustered army can disappear before its payoff. **Answer:** Dig for Get 'Em Tippy-Toe! early, avoid unnecessary stacks, and favor Bite of Steel's dispersed setup when adjacent squirrels would invite retaliation. [1][2][5]
+- **Heavy attacks punish a prolonged brawl.** Your ordinary defenses leave you vulnerable. **Answer:** Use Squirmish to disengage, Eat Nuts to recover between exchanges, and reserve Unbeatable Squirrel Girl for defense when an effect-heavy opponent demands extra cancellation. [1][4]
+- **Retreat can strand your offense.** Baked Goods warns that pursuit and weak sustained defense undermine a long game; one forum player tentatively suggests fatigue through passes and escapes. **Answer:** Favor early pressure with your squirrel attacks and prepared bursts; treat stalling as a disputed alternative, not your default. [1][6]
+
+### References
+1. Baked Goods. "Squirrel Girl - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=o5qHzhbOw7E
+2. u/CD_North. Comment on "Tips for Squirrel Girl?" by u/Commander_Jelly0. *r/Unmatched*, Reddit, 18 March 2026. https://www.reddit.com/r/Unmatched/comments/1rxdwrr/
+3. Restoration Games. *Teen Spirit*, Squirrel Girl deck. Card text as recorded in `input/heroes.json`.
+4. Gridbeast. "Unmatched – Squirrel Girl." *Gridbeast*. https://gridbeast.gg/unmatched-squirrel-girl/
+5. PoindexterG - To The Table Top!. "Squirrel Girl - Unmatched Marvel Fighter Review." *YouTube*. https://www.youtube.com/watch?v=YxARGfUu0vQ
+6. u/dd_kanon. Comment on "Tips for Squirrel Girl?" (see [2]).
+
+### Not cited
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; Squirrel Girl material describes her playstyle and flavor without adding a concrete plan).
+- [Tips for Squirrel Girl?](https://www.reddit.com/r/Unmatched/comments/1rxdwrr/): Reddit · opening post and acknowledgment (read; question and thanks add no strategic evidence).
+
+---
+
+<!-- id: cloak_and_dagger -->
+## Cloak and Dagger
+
+**In short:** You pilot a fragile duo: Cloak pressures the opposing hand while Dagger waits to deliver the decisive attack chain. Keep both alive until you have saved attacks and reduced the opponent’s defenses enough to commit. [1][2]
+
+### How they win
+
+**Strip defenses before committing**
+- **Choose this when:** The opponent still has good blocks, especially when they shelter behind expendable sidekicks or have little card draw. Build a hand advantage before asking Dagger to finish. [2][3]
+- **On your turn:** Lead with Cloak, mixing Into the Void and Traverse the Darkforce into your attacks to draw out valuable blocks. Spend an early Commanding Impact to punish an expected Feint, but save later copies for Dagger once their hand reaches four or five cards. [1][2]
+- **Sidekick targets:** Attack expendable sidekicks with Cloak’s weaker cards rather than wasting premium attacks on them. An undefended hit still earns the discard against a one-health target; the opponent must either protect that body or lose another resource. [2][3][4]
+- **On their turn:** Save Living Shadow for attacks into Dagger; let Cloak absorb pressure while you assemble her hand. Use Into Darkness defensively to arrange your next attack rather than automatically retreating. [1][2]
+- **Boosting:** Only spend another card on Into the Void when it secures the ability trigger; leave an undefended Dagger attack unboosted and keep your next attack. [1]
+- **Positioning:** Keep Cloak in front and Dagger behind, sharing an empty adjacent space where you can place the enemy. Avoid sending the opponent far away with Darkforce Dimension merely to stall: repeated maneuvers let them rebuild the hand you just depleted. [1]
+
+**Turn a small hand into a finishing chain**
+- **Choose this when:** Their hand is down to four or five cards and yours contains several strong attacks, particularly against decks with weak blocking values. Do not assume every card in that small hand is a defense. [1][3]
+- **On your turn:** Use Chosen Fate first if you need more cards, then Channel the Dark with Cloak once Dagger is ready. Lead her chain with Perfect Balance against substantial blocks or Feint, follow with Commanding Impact, and spend weaker attacks only after their defenses run out. [1][5]
+- **Positioning:** Place the enemy between both heroes for Perfect Balance and, where the map permits, a pin. Channel the Dark and Darkforce Dimension can undo defensive escapes because your placement resolves after their defensive movement. [1][3]
+- **Sources disagree on Lightforce Barrage:** Gridbeast reserves it for the finish; The Gaming Geek Net recommends leading the chain with it against high-value defenses that would stop your smaller attacks. For that earlier commitment, preserve Dagger’s health so she survives to continue attacking. [6][1]
+
+### How they lose
+
+- **One hero gets focused down.** Heavy hitters can dismantle the partnership before your finishing hand arrives. **Answer:** protect Dagger with Living Shadow and redistribute health with Chosen Fate before either hero enters easy lethal range; use Cloak’s bodyblocking to invite attacks into The Living Light when Dagger needs healing. [2][7]
+- **Defensive draw or movement breaks the chain.** The opponent escapes or finds another block before Dagger can unload. **Answer:** attack first with Feint when you expect that defensive effect, or use your placement attacks to defeat movement. [1][2][3]
+
+### References
+1. The Gaming Geek Net. "Cloak and Dagger Advanced Strategy Guide - Unmatched Tips and Tricks." *YouTube*. https://www.youtube.com/watch?v=-9dJUO4tGII
+2. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 5: Cloak & Dagger." *YouTube*. https://www.youtube.com/watch?v=6JjrLDppsOg
+3. Baked Goods. "Cloak & Dagger - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=5bgmQGRcLyM
+4. Restoration Games. *Teen Spirit*, Cloak and Dagger deck. Card text as recorded in `input/heroes.json`.
+5. u/IGotAnotherOneFuck. Comment on "Any tips to make cloak and dagger work?" by u/Stopipo_69. *r/Unmatched*, Reddit, 9 July 2023. https://www.reddit.com/r/Unmatched/comments/14uufd9/
+6. Gridbeast. "Unmatched – Cloak & Dagger." *Gridbeast*. https://gridbeast.gg/unmatched-cloak-dagger/
+7. u/Darkblade113. Comment on "Cloak and Dagger tips" by u/Life-Rip183. *r/Unmatched*, Reddit, 20 July 2023. https://www.reddit.com/r/Unmatched/comments/154k23s/
+
+### Not cited
+- [Cloak & Dagger - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=L4lKirHrfSk): PoindexterG - To The Table Top! · video (read; setup and finishing advice covered by the cited videos).
+- [Tips on using Cloak and Dagger?](https://www.reddit.com/r/Unmatched/comments/1tf29n6/): r/Unmatched · forum thread (read; the advanced video develops the same setup plan in greater detail).
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · article (read; no specific tactical discussion of this duo).
+- [Any tips to make cloak and dagger work?](https://www.reddit.com/r/Unmatched/comments/14uufd9/): r/Unmatched · other forum replies (read; hand-building and baiting advice already covered by cited sources).
+
+---
+
+<!-- id: black_panther -->
+## Black Panther
+
+**In short:** You play a volatile resource thief: your best games turn stolen cards into either a deck advantage or fuel for sustained attacks. Build your hand and protect Shuri early, then decide whether you can preserve that advantage or must spend it to finish before exhaustion. [1]
+
+### How they win
+
+**Starve their deck and deny recursion**
+- **Choose this when:** You face a small deck that depends on retrieving key cards from its discard pile, or early steals have put you ahead on exhaustion. Repeated boosting can erase that advantage. [1][2]
+- **On your turn:** If your group uses mulligans, look for Tactical Remote Scanning; play it before exposing Shuri, then pressure with Analyze and Adjust from range. Attack with Ancestral Insight against low defenses instead of saving it. [1][2]
+- **On their turn:** Hold Ancestral Insight for attacks it can actually beat; check the opponent's remaining attack values before committing it. Keep Evade and Cat-Like Reflexes available for Shuri to preserve your damage cards. [1]
+- **Positioning:** Hide Shuri in a sheltered pocket and use Black Panther to block access where the map allows. Make the opponent spend movement reaching her; use Stalking Panther to reposition without accelerating your own exhaustion through boosted movement. [1]
+- **What stays stored:** Leave stolen recursion pieces in your suit, even when spending them would improve a combat. Deny their next cycle. [1][2]
+
+**Strip defenses, then spend for damage**
+- **Choose this when:** You have built your hand and the opponent is running low on cards, or your stolen cards have high boost values. Once repeated boosting has burned through your deck, commit to damage instead of pursuing exhaustion. [1][3]
+- **On your turn:** Lead with Regroup or Vibranium Shockwave to tempt out strong blocks or Feint, then commit Wakanda Forever! to the damage push. Prefer stolen fuel so your hand grows while you attack; spend your own Analyze and Adjust instead when immediate damage matters more than another uncertain steal. [1][3]
+- **On their turn:** Use Microweave Mesh to defend economically: decide how much to spend after seeing the attack. Anti-Metal Claws gives you another answer against high boost values; preserve Wakanda Forever! for attacking unless survival demands it. [1][3]
+- **Positioning:** Use Stalking Panther to arrive with both actions available for attacks. Against a depleted hand, you can bring Shuri forward to pin the opponent, but exposing her makes that pressure much riskier. [1][3]
+- **Sources disagree on protecting Shuri:** Karma treats keeping her alive for Tactical Remote Scanning as central; Baked Goods accepts defending her once, then punishing the resources spent killing her. That trades future steals for immediate pressure. [1][3]
+
+### How they lose
+
+- **Cancels blunt the payoff.** Feint threatens both your steals and your finishing attacks. **Answer:** Test defenses with Regroup or Vibranium Shockwave before spending Wakanda Forever!,  [1][3]
+- **Chasing burns your deck.** After Shuri dies, repeatedly boosting movement can exhaust you before you finish. **Answer:** Close with Stalking Panther where possible; once committed to boosting, turn that spending into attacks instead of prolonging the chase. [1]
+- **Shuri dies before paying off.** Losing her early cuts off your most dependable steals. **Answer:** Prioritize Tactical Remote Scanning and defend her with Evade or Cat-Like Reflexes; do not expect Nanotriage Processor to rescue her from a lethal hit. [1]
+
+### References
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 19: Black Panther." *YouTube*. https://www.youtube.com/watch?v=Y3MA0XRug58
+2. u/LabRat2329. Comment on "Tips on playing Black Panther Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 22 April 2026. https://www.reddit.com/r/Unmatched/comments/1ssooyg/
+3. Baked Goods. "Black Panther - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=3cIPViTdsnQ
+
+### Not cited
+- [Unmatched – Black Panther](https://gridbeast.gg/unmatched-black-panther/): Gridbeast · written guide (read; overlapping advice, with an incorrect Shuri health figure).
+- [Black Panther - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=CP3_EH6tWu8): PoindexterG - To The Table Top! · video (read; deck overview overlaps the more detailed strategy videos).
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · article (read; Black Panther passage gives no detailed plan beyond watching for a large attack).
+- [Tips on playing Black Panther Effectively?](https://www.reddit.com/r/Unmatched/comments/1ssooyg/): r/Unmatched · remaining forum comments (read; overlapping boosting cautions, brief anecdotes, and a video recommendation).
+
+---
+
+<!-- id: black_widow -->
+## Black Widow
+
+**In short:** You control tempo through ranged pressure, mission choices, and Maria Hill's survival. Pick whether you're winning through undefended attacks, repeated mission damage, or exhaustion before deciding which mission to recycle. [1]
+
+### How they win
+
+**Overwhelm a depleted hand**
+- **Choose this when:** Aggression has emptied your hand early, or your opponent's hand is low enough that a refill lets you overwhelm their remaining defenses. [1][2]
+- **On your turn:** Play The Budapest Gambit while you still have enough deck left to exploit the advantage, then attack immediately. Use Fake Out to consume defenses before Widow's Bite or Widow's Sting; skip the bait when you suspect they already cannot defend. [1][2]
+- **On their turn:** Defend with Widow's Kiss against an attacker planning to retreat, setting up consecutive attacks next turn. [1]
+- **Starting the chain:** If another mission is available, don't force The Moscow Protocol; otherwise, attack first, complete it after dealing damage, then continue attacking. Maneuvering before that attack leaves no action to complete it. [1]
+
+**Strip their resources and outlast them**
+- **Choose this when:** You can survive their remaining attacks and have the better exhaustion game; prioritize denying their resources over racing for damage. [1]
+- **On your turn:** Open with The Kinshasa Directive if you drew it, then maneuver. Recycle it with Acting Director of S.H.I.E.L.D.; aim Widow's Bite at expendable sidekicks when that makes winning combat and stripping another card more reliable. [1]
+- **On their turn:** Use Caught in a Web to deny draw or escape effects; preserve Feint for Maria Hill when Black Widow's narrower cancel suffices. [1]
+- **Positioning:** Station Maria Hill on your starting space to reserve access and threaten a Double Identity return for The Kinshasa Directive. Favor room to retreat and hide Maria Hill rather than repeated close combat, especially against fast melee attackers. [1]
+- **Deck discipline:** Avoid a late The Budapest Gambit: you may not have time to force enough enemy maneuvers to recover the exhaustion advantage. [1]
+
+**Finish through mission damage**
+- **Choose this when:** Several fragile sidekicks need clearing, or the hero is within reach of repeated mission damage and exhaustion is unavailable. [1]
+- **On your turn:** Use Widow's Sting to reach a mission position; recycle The Firenze Agenda for an accessible hero finish, or The Madripoor Sanction against scattered sidekicks. Stop prioritizing the latter once those bodies are gone. [1]
+- **On their turn:** Use Widow's Line against a late attack to clear a guarded starting space or bring the hero adjacent for The Firenze Agenda. [1][2]
+- **Sources disagree on attacking:** Gridbeast reserves Acting Director of S.H.I.E.L.D. for defense; Baked Goods supports attacking when either recursion or damage through Feint advances your finish. [3][2]
+
+### How they lose
+
+- **Relentless pressure.** Heavy printed attacks overwhelm your defenses. **Answer:** Use Widow's Sting to retreat after attacking and Double Identity to divert a lethal hit into Maria Hill. [1]
+- **Cancels aimed at Maria Hill.** Losing her cuts off mission recycling. **Answer:** Gridbeast recommends Life Model Decoy when death is assured; Karma instead favors three health against ordinary Feint, avoiding its lethal trap at two or less. [3][1][4]
+- **Exposed plans.** Mission searches reveal missing defenses and objectives. **Answer:** Complete a privately drawn mission while they guard the public one; check what a late search reveals before committing. [3][1]
+
+### References
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 7: Black Widow." *YouTube*. https://www.youtube.com/watch?v=vxTNU0p0S10
+2. Baked Goods. "Black Widow - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=4YvCpuvREaU
+3. Gridbeast. "Unmatched – Black Widow." *Gridbeast*. https://gridbeast.gg/unmatched-black-widow/
+4. Restoration Games. *For King and Country*, Black Widow deck. Card text as recorded in `input/heroes.json`.
+
+### Not cited
+- [Black Widow - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=-XFE0Kg7hpI): PoindexterG - To The Table Top! · video (read; overview duplicates the more detailed strategy videos).
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; Black Widow passage offers no concrete play sequence).
+
+---
+
+<!-- id: winter_soldier -->
+## Winter Soldier
+
+**In short:** You’re a ranged fighter who can race with heavy attacks or outlast opponents by rebuilding your deck around its best cards. Pressure early when your hand supports it, then retreat once surviving matters more than another hit. [1]
+
+### How they win
+
+**Win the damage race**
+- **Choose this when:** The opponent lacks healing and has too few strong defenses to withstand repeated heavy attacks, or reflected damage puts them within finishing range. Commit when your remaining attacks can end the game before their retaliation does. [1]
+- **On your turn:** Start with A Boy Named Bucky when you can follow with two adjacent Bionic Arm attacks; otherwise lead with Without Remorse and leave an unsuppressed Bionic Arm until last so their escape cannot spoil your second attack. [2]
+- **On their turn:** Hold Complete the Mission and accept damage when the return damage sets up lethal on your next turn, especially after their final action. Boost instead when preserving health prevents their follow-up from finishing you. [1]
+- **Positioning:** Let melee opponents approach your Bionic Arm rather than chasing them; against melee fighters, ranged lanes let you pressure them while making them spend actions closing distance. [1][2]
+- **Using the special ability:** Don’t hold back Bionic Arm merely because they might defend with Feint; adjacency is the condition you need to secure, and cancellation cannot remove its payoff. [1][3]
+
+**Survive into a better deck**
+- **Choose this when:** The opponent plays a long value game without enough burst, direct damage, or oversized attacks to kill you through your defenses. Once early pressure makes them hesitate, switch to retreating and recycling rather than continuing to trade health. [1]
+- **On your turn:** Boost away Programmed to Kill and other poor cards, then attack with Reprogram when your hand can afford the lull in pressure. Return another Reprogram alongside the attacks or defenses your current situation demands; don’t recycle weak cards just to enlarge the deck. [1]
+- **On their turn:** Feed unwanted cards into Complete the Mission to preserve health; reserve Born in the Barracks for low-value attacks you can actually beat. Against effect-driven attacks, recycle Feint; against several 1-health sidekicks, prioritize defensive Wily Fighting. [1]
+- **Refilling:** With a small hand, play A Boy Named Bucky before Manipulation to rebuild without supplying the opponent’s next offensive turn. Unprotected Manipulation is particularly dangerous against aggressive decks that welcome fresh cards. [1][2]
+- **Sources disagree on Reflex Memories:** Gridbeast advises never defending with it; Baked Goods and Karma recommend it, especially with few cards left to lose. Use that defensive line when your remaining hand is expendable, but avoid risking your last Reprogram or essential follow-up defenses. [4][2][1]
+
+### How they lose
+
+- **Relentless pressure.** Fast attackers can empty your defenses before recycling matters. **Answer:** Prioritize drawing and stabilizing over another attack; use Manipulation to recover options and boosted Complete the Mission to protect your health. [5][1]
+- **Being pinned.** Bionic Arm can hand a multi-fighter opponent the positioning for repeated attacks you cannot escape. **Answer:** Suppress it with A Boy Named Bucky, or hold it when your defenses cannot survive the resulting turn. [1]
+- **Losing the recycling chain.** Forced discards or careless Reflex Memories can strand every Reprogram in the discard pile. **Answer:** Keep returning Reprogram and decline the random-discard gamble when your final copy is exposed. [4][2]
+
+### References
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 4: Winter Soldier." *YouTube*. https://www.youtube.com/watch?v=GrNarUkqq9E
+2. Baked Goods. "Winter Soldier - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=DrluaIQtAvc
+3. Restoration Games. *For King and Country*, Winter Soldier deck. Card text as recorded in `input/heroes.json`.
+4. Gridbeast. "Unmatched – Winter Soldier." *Gridbeast*. https://gridbeast.gg/unmatched-winter-soldier/
+5. u/Cell-division. Comment on "How to beat Winter Soldier?" by u/TeaComprehensive3641. *r/Unmatched*, Reddit, 27 April 2024. https://www.reddit.com/r/Unmatched/comments/1ceg4f9/
+
+### Not cited
+- [Winter Soldier - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=3mpB5W2Df38): PoindexterG - To The Table Top! · video (read; recycling and defensive choices covered more specifically by the cited videos).
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; no additional Winter Soldier strategy).
+- [Advice on playing Winter Soldier into a heavy melee attacker](https://www.reddit.com/r/Unmatched/comments/1uxkvf2/): r/Unmatched · thread (read; retreating, boosting, and defensive hand management already supported by the cited video).
+- [How to beat Winter Soldier?](https://www.reddit.com/r/Unmatched/comments/1ceg4f9/): r/Unmatched · other replies (read; pressure advice overlaps the cited commenter, and several replies focus on the attacking deck).
+
+---
+
+<!-- id: she_hulk -->
+## She-Hulk
+
+**In short:** You threaten explosive melee turns, but you also win by making opponents approach and paying them back with throws. Choose between breaking their hand and preserving your deck; chasing every turn gives away the patient game. [1][2]
+
+### How they win
+
+**Break their hand, then land the big hit**
+- **Choose this when:** Their defenses mostly stop at three, they have vulnerable sidekicks, or their cancels are running out. These are openings to punish their hand before committing The Savage She-Hulk. [1][2][3]
+- **On your turn:** Use Leap Toward or Jennifer Walters, Esq. to arrive with two actions available. Lead with Omega-Level Threat when they expect The Savage She-Hulk; punish the anticipated Feint, or follow a successful hand attack with another attack while their defenses are depleted. [1][4][3]
+- **Picking your target:** Attack an exposed 1-health sidekick with Omega-Level Threat if that gives you the discard trigger. You are attacking the player's resources, so damage to the hero need not be the immediate payoff. [1][3]
+- **On their turn:** Hold Nerve Cluster Strike for an adjacent first-action attack, setting up your next turn instead of letting them hit and flee. Keep Green Energy for defense rather than spending every versatile card on offense. [2][4]
+- **Reloading:** Recover Omega-Level Threat with Sensational against weak blocks; recover Leap Toward when reaching an elusive opponent is the actual bottleneck. Against aggressive melee opponents, recovering The Savage She-Hulk keeps the heavier threat available. [2][5]
+
+**Make them come to you**
+- **Choose this when:** You are ahead in deck count, or their crowded hand forces them to attack rather than keep maneuvering and discarding. Preserve that pressure instead of spending cards to chase. [1]
+- **On your turn:** Throw, then maneuver away when they must pursue. Throw The Defense Rests when extra draw would hurt your deck advantage; reserve low-BOOST cards for play unless that last point kills a fighter. [1]
+- **On their turn:** Use Lady Justice before their deck empties; save Green Energy for the late defense. Its retaliation can put an approaching hero within throwing distance of defeat. [1]
+- **Positioning:** Avoid hard zone boundaries where melee opponents can attack without sharing your zone. Hold central reach for Leap Toward rather than following them into an endless chase. [1][2]
+- **Sources disagree on exhaustion:** Karma treats fatigue as a main plan and recommends recurring Sensational or, late, Leap Toward for a pass without ending adjacent. Baked Goods doubts the exhaustion fallback and prefers recurring other cards; commit to patience only when your resource lead supports it. [1][2]
+
+### How they lose
+
+- **They hit back and escape.** Repeated attacks followed by retreat drain your defenses; pure pursuit lets them dictate the exchanges. **Answer:** Catch adjacent attacks with Nerve Cluster Strike, or use Cease and Desist against a retreat effect on their last action. [6][4]
+- **They save strong blocks.** Four-value defenses deny both your hand damage and Sensational recovery. **Answer:** Track their remaining blocks, bait with Legalese, and delay Omega-Level Threat until those answers have been spent. [7][4]
+- **Heavy pressure empties your hand.** **Answer:** Against aggressive attackers, use The Defense Rests and Double Jeopardy to sustain your defense; stop treating extra draw as desirable once preserving your deck matters more. [1]
+
+### References
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 6: She-Hulk." *YouTube*. https://www.youtube.com/watch?v=4kmq5rqbwx8
+2. Baked Goods. "She-Hulk - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=4Nw6pdTepN4
+3. Restoration Games. *Brains and Brawn*, She-Hulk deck. Card text as recorded in `input/heroes.json`.
+4. Captain Crockpot Plays: UNMATCHED. "Unmatched: Brains and Brawn Unboxing, Tips, & Overview - Pt. 1, Intro + She Hulk." *YouTube*. https://www.youtube.com/watch?v=iCcUIauWt5I
+5. Gridbeast. "Unmatched – She-Hulk." *Gridbeast*. https://gridbeast.gg/unmatched-she-hulk/
+6. u/AbrocomaRight9782. Comment on "Weekly Discussion: Battling She-Hulk (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 20 May 2026. https://www.reddit.com/r/Unmatched/comments/1tim6y0/
+7. u/Silly_Shenanigans. Comment on "Weekly Discussion: Battling She-Hulk (Tips and Strategies)" (see [6]).
+
+### Not cited
+- [She-Hulk - Unmatched Marvel Fighter Review](https://www.youtube.com/watch?v=muCiR09GZgQ): PoindexterG - To The Table Top! · video (read; resource-cost cautions covered by cited videos).
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; general tempo advice adds less than the dedicated strategy sources).
+- [Weekly Discussion: Battling She-Hulk (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1tim6y0/): Reddit · opening post by u/LabRat2329 and remaining replies (read; positioning overlaps cited sources, and matchup speculation was omitted).
+- [Unmatched Tips and Strategies: Fighting Against the Best Fighters](https://thegaminggeek.net/unmatched-tips-and-strategies-fighting-against-the-best-fighters/): The Gaming Geek · index (read as supplied; only a tier listing in this pack).
+
+---
+
+<!-- id: spider_man -->
+## Spider-Man
+
+**In short:** You're a mobile melee fighter who turns informed defensive choices into room for another attack wave. Spend cards to hurt them, disengage, and rebuild your hand before committing again, rather than expecting one long exchange to settle the game. [1][2]
+
+### How they win
+
+**Hit, separate, reload**
+
+- **Choose this when:** Melee opponents must spend an action closing distance, especially when their big attacks have distinctive printed values. You can pressure them without accepting two attacks every time you finish your turn nearby. [1][3]
+- **On your turn:** Move in with Momentous Shift, then finish an attack wave with Swinging Kick or Thwip! to separate. Against consistently high defenses, don't stake your escape on winning with Thwip!; check what their remaining blocks can stop. [1][3][4]
+- **On their turn:** Match the announced number to the attacks it could represent before choosing your defense. Keep Web Shooters for the huge hit; use Snark against smaller melee attacks rather than spending your emergency block just because you have it. [1][5]
+- **Reloading:** Use Spider-Sense Tingling! when your hand needs rescuing and you can afford the damage, rather than automatically spending Counter-Attack. If a sidekick has only one health left, target it with Disarming Shot: an undefended hit still replenishes your hand beyond that last health point. [1][3][4]
+- **Sources disagree on hand size:** Baked Goods recommends aggressive play with few cards and a planned refill; one forum player recommends keeping several defenses and attacking in waves. The practical tradeoff is whether you still have the right block after spending your attacks. [1][2]
+
+**Turn their attack into your burst**
+
+- **Choose this when:** A ranged opponent attacks from within your zone, letting you close through defense, or an opponent ends their turn adjacent to you. That starting position gives With Great Power a turn with two attacks instead of spending an action approaching. [1][3][4]
+- **On their turn:** Against a ranged attack late in the turn, defend with Wall Crawler and land adjacent. When you're trying to win the health race, choose Counter-Attack over Spider-Sense Tingling! for retaliation, including against ranged fighters you cannot yet reach. [1]
+- **On your turn:** Open with With Great Power, then Swinging Kick; if their defense moves them away, use Swinging Kick to bring them back for your second attack. This line depends on dealing damage, so a high block can spoil the follow-up. [1][4]
+- **Positioning and recovery:** Use Friendly Neighborhood Spider-Man to repair the health spent on retaliatory defenses and either re-enter or leave the fight. If Wall Crawler cannot get you clear of a second attack, repositioning can instead prepare Momentous Shift to defend it. [1][3][6]
+
+### How they lose
+
+- **A small number hides a large attack.** Shared printed values and combat increases can make your defensive read misleading. **Answer:** Learn their attack effects before committing; reserve Web Shooters for the dangerous possibilities instead of treating the announcement as final damage. [7][6]
+- **Their effects keep working.** Without cancels, knowing an attack is coming doesn't shut its effects down. **Answer:** Against aggression sustained by card draw, defend their first-action attack with Right in the Face! to interrupt the refill and leave their hand under pressure. [1][4]
+
+### References
+
+1. Baked Goods. "Spider-Man - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=U4bP5UtCw00
+2. u/Witty_Ad_1486. "Tips to play Spider-Man." *r/Unmatched*, Reddit, 1 July 2023. https://www.reddit.com/r/Unmatched/comments/14niiyy/
+3. Captain Crockpot Plays: UNMATCHED. "Unmatched: Brains and Brawn Unboxing, Tips, & Overview - Pt. 3, Spider-Man + Foils + Map." *YouTube*. https://www.youtube.com/watch?v=io-tEfPZJvY
+4. Restoration Games. *Brains and Brawn*, Spider-Man deck. Card text as recorded in `input/heroes.json`.
+5. Gridbeast. "Unmatched – Spider-Man." *Gridbeast*. https://gridbeast.gg/unmatched-spider-man/
+6. PoindexterG - To The Table Top! "Spider-Man - Unmatched Marvel Fighter Review." *YouTube*. https://www.youtube.com/watch?v=gEgLSIm-vdg
+7. u/NagasakiPork1945. Comment on "Tips to play Spider-Man" by u/Witty_Ad_1486. *r/Unmatched*, Reddit, 1 July 2023. https://www.reddit.com/r/Unmatched/comments/14niiyy/
+
+### Not cited
+
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · article (read; the Spider-Man passage offers less detail than the videos).
+- [Tips to play Spider-Man](https://www.reddit.com/r/Unmatched/comments/14niiyy/): Reddit · remaining replies (read; deck-knowledge and defense-reservation advice duplicates cited material; release discussion does not inform play).
+
+---
+
+<!-- id: doctor_strange -->
+## Doctor Strange
+
+**In short:** You’re a ranged attrition fighter who turns health into repeat access to the tools your opponent struggles to beat. Make them spend cards reaching you and defending, then win through exhaustion or an attack chain once their defenses dry up. [1][2]
+
+### How they win
+
+**Make the opponent run out first**
+
+- **Choose this when:** melee opponents must spend movement cards chasing you, or the game gives you room to retreat and pass. Preserve your deck instead of gambling away healing to chase damage. [1][2]
+- **On your turn:** attack from range, then maneuver away. Use The Winds of Watoomb to break an impending double attack and bring previously recycled defenses closer; avoid shuffling if The Mists of Munnopor has buried an important opposing card. [2]
+- **On their turn:** keep returning Cloak of Levitation against melee pressure. Recycle Feint when attack effects are the threat; choose your recursion targets for this opponent rather than paying health for every card. [2][3]
+- **Healing:** prioritize returning The Rings of Raggadorr, and attack low-health sidekicks with it when available. Keep Wong adjacent so the same healing supports your blocker as well as Doctor Strange. [2][4]
+- **Passing:** when neither player wants to engage, play No Really, I'm a Doctor first, then maneuver to recover the card you reserved. With a full hand, maneuver, play Eye of Agamotto, then maneuver again to spend the turn without consuming your deck. [2]
+- **Positioning:** put Wong between you and a melee attacker, especially in corridors, while keeping him adjacent for Master of Kamar-Taj. You want the opponent paying to approach while you retain a dependable defense. [1][2][5]
+
+**Turn a depleted hand into a finishing turn**
+
+- **Choose this when:** your opponent is short on defenses and you can finish through repeated attacks. This is the moment to accept blind-boost losses for immediate pressure. [2][6]
+- **On your turn:** open with No Really, I'm a Doctor to prepare a known boost, then attack with Bolts of Balthakk. Chain further Bolts of Balthakk into Seven Suns of Cinnibus; use Eye of Agamotto when your hand needs replenishing to continue. [6][7]
+- **Payoff:** work toward an undefended The Rings of Raggadorr after your attacks drain their blocks. Have Doctor Strange play it so you can preserve your healing engine for another cycle if the finish falls short. [6][7]
+- **Sources disagree on aggression:** Baked Goods favors frequent blind boosting and recycling Bolts of Balthakk and Seven Suns of Cinnibus; Karma favors restraint because boosts can consume your best remaining cards. Commit to the chain when the opponent’s depleted defenses justify that cost. [2][6]
+
+### How they lose
+
+- **Relentless pressure compounds your self-damage.** Repeated attacks can force you to buy replacement defenses with health. **Answer:** use Eye of Agamotto to rebuild a depleted hand; recur even an otherwise unwanted card if you have just spent your last defense and need the draw. [2][3][5]
+- **Wong becomes an expensive rescue project.** Defending him spends cards you cannot recycle, and separation undermines Master of Kamar-Taj. **Answer:** keep a wounded Wong behind Doctor Strange; use Steadfast Disciple against adjacent attacks, but don’t spend your whole hand keeping him alive. [2][8]
+- **A cheap attack baits your risky defense.** The Mists of Munnopor can replace it with something much worse. **Answer:** reserve it for a read on a dangerous attack or a deck whose remaining attacks cannot punish you; otherwise favor Cloak of Levitation or conservative Seven Suns of Cinnibus defense. [2]
+
+### References
+
+1. u/LabRat2329. Comment on "How To Get Better With Doctor Strange" by u/Reasonable_Air_5307. *r/Unmatched*, Reddit, 19 December 2025. https://www.reddit.com/r/Unmatched/comments/1pqfi0p/
+2. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 12: Dr. Strange." *YouTube*. https://www.youtube.com/watch?v=GzUXGdCFmmw
+3. u/Silly_Shenanigans. Comment on "How To Get Better With Doctor Strange" (see [1]).
+4. PoindexterG - To The Table Top!. "Doctor Strange - Unmatched Marvel Fighter Review." *YouTube*. https://www.youtube.com/watch?v=0gmfVRPKRic
+5. u/MalikVega. Comment on "Weekly Discussion: Battling Doctor Strange (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 6 May 2026. https://www.reddit.com/r/Unmatched/comments/1t5ejf8/
+6. Baked Goods. "Doctor Strange - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=FxczZKOimG8
+7. Captain Crockpot Plays: UNMATCHED. "Unmatched: Brains and Brawn Unboxing, Tips, & Overview - Pt. 2, Doctor Strange." *YouTube*. https://www.youtube.com/watch?v=DjQ-XlZm-Lk
+8. u/Upforchat1998. Comment on "Dealing with Sidekicks: Wong" by u/LabRat2329. *r/Unmatched*, Reddit, 4 October 2026. https://www.reddit.com/r/Unmatched/comments/1wxhkqw/
+
+### Not cited
+
+- [Unmatched – Doctor Strange](https://gridbeast.gg/unmatched-doctor-strange/): Gridbeast · guide (read; strategic points covered more precisely by videos; its boost-card recursion advice conflicts with them).
+- [Dealing with Sidekicks: Wong](https://www.reddit.com/r/Unmatched/comments/1wxhkqw/): Reddit · post and remaining replies (read; overlapping positioning advice or no actionable strategy).
+- [How To Get Better With Doctor Strange](https://www.reddit.com/r/Unmatched/comments/1pqfi0p/): Reddit · post and remaining replies (read; narrower situational advice or no additional strategy).
+- [Weekly Discussion: Battling Doctor Strange (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1t5ejf8/): Reddit · post and remaining replies (read; overlapping pressure and defensive-risk advice).
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; Doctor Strange material lacks concrete decisions).
+- [Unmatched Tips and Strategies: Fighting Against the Best Fighters](https://thegaminggeek.net/unmatched-tips-and-strategies-fighting-against-the-best-fighters/): The Gaming Geek · shared article excerpt (read; supplied excerpt only lists Doctor Strange).
+
+---
+
+<!-- id: nikola_tesla -->
+## Nikola Tesla
+
+**In short:** You are a ranged combo fighter who wins by exhausting the opponent's defenses within a turn. Build a hand advantage, keep coils available for follow-up attacks, and switch to attrition when the opening burst isn't there. [1]
+
+### How they win
+
+**Overload their defenses**
+- **Choose this when:** Their deck has poor draw or few cancels; those opponents struggle to survive your attack chains. [1][2]
+- **On your turn:** Use Fully Charged, chain 7 Hertz, then use The Alternating Current to reload before a finishing Death Ray. Usually spend only one coil on each 7 Hertz; the second coil keeps your next attack threatening. [1][3]
+- **On their turn:** Use Intense Experimentation early to build the hand that sustains those chains. If you spend both coils defending, Fully Charged lets you threaten another burst immediately. [1][2]
+- **Positioning:** Use Remote Control to bring an opponent into your zone without spending your attack opportunity on a maneuver. Prefer compact maps where you can keep attacking without burning cards to boost movement. [1]
+- **Finishing:** Don't automatically spend both coils on Death Ray for modest damage; save them for another 7 Hertz if it can reach an undefended attack. Commit to Death Ray when the revealed defense makes the damage worthwhile or it ends the game. [1]
+
+**Clear the supporting fighters**
+- **Choose this when:** Several 1-health sidekicks share a zone, or you can catch a hero and an important sidekick together. [1]
+- **On your turn:** Gather targets with Remote Control, then attack with Lightning Storm. Choose the defender with fewer cancels or movement effects, rather than letting the easiest target spoil the sweep. [1]
+- **Coil budget:** Spend one coil against 1-health sidekicks; spend both when multiple surviving targets make the extra damage count. [1][3]
+- **Positioning:** Against approaching melee fighters, preserve a full charge for the start of your turn; push them away while retaining your own ranged attacks, forcing them to approach again. [1]
+
+**Win the resource trade**
+- **Choose this when:** Your early combo hasn't materialized and the game is settling into a grind. Stop chasing a burst your hand cannot support. [1]
+- **On their turn:** Defend with X-Ray Radiation and judge the revealed card before spending coils. Usually take the top-deck discard, but preserve the second coil for aggression rather than spending it merely to prevent a little damage. [1]
+- **On your turn:** Repulsion Blast's discard becomes worth pursuing when there is no promising attack chain and the opponent is also grinding for value. [1]
+- **Sources disagree on X-Ray Radiation:** Gridbeast recommends attacking with it at every opportunity, watching for cancels; Karma generally reserves it for defense and attrition. Choose deliberately between immediate pressure and protecting your health. [4][1]
+
+### How they lose
+
+- **Repeated attacks drain your coils.** Aggressive decks with extra actions force defensive spending before you can retaliate. **Answer:** Use Repulsion Blast to break their attack chain; use Kinetic Induction on defense to rebuild before your turn. [5][1]
+- **Cancels interrupt the burst.** **Answer:** Bait with Kinetic Induction or Death Ray before committing your payoff; canceled effects leave your coils available for another card. [1][6]
+- **Late drawing accelerates exhaustion.** **Answer:** Stop fueling Intense Experimentation just for more cards once deck count matters; use X-Ray Radiation to pressure their remaining resources instead. [1][2]
+
+### References
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Nikola Tesla Strategy Guide." *YouTube*. https://www.youtube.com/watch?v=csXYxz_a3uQ
+2. u/Life-Rip183. Comment on "Mulligan Mondays: Nikola Tesla (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 11 May 2026. https://www.reddit.com/r/Unmatched/comments/1taiaqs/
+3. Restoration Games. *Tales to Amaze*, Nikola Tesla deck. Card text as recorded in `input/heroes.json`.
+4. Gridbeast. "Unmatched – Nikola Tesla." *Gridbeast*. https://gridbeast.gg/unmatched-nikola-tesla/
+5. u/Cell-division. Comment on "Strategy against Tesla" by u/Wookie_Unmatched. *r/Unmatched*, Reddit, 1 February 2024. https://www.reddit.com/r/Unmatched/comments/1agp0k1/
+6. PoindexterG - To The Table Top!. "Nikola Tesla - Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=L3K-MRw84to
+
+### Not cited
+- [Mulligan Mondays: Nikola Tesla (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1taiaqs/): Reddit · opening post and other replies (read; opening advice covered by the cited reply and video).
+- [Strategy against Tesla](https://www.reddit.com/r/Unmatched/comments/1agp0k1/): Reddit · opening post and other replies (read; repeated aggression advice, social replies, and unsupported rankings add no needed guidance).
+
+---
+
+<!-- id: annie_christmas -->
+## Annie Christmas
+
+**In short:** You play a health-managing brawler whose best attacks come from choosing when to fall behind, rather than staying wounded throughout the game. Keep Charlie involved so you can threaten damage, absorb pressure, and bring Annie into reach when the opponent avoids her. [1]
+
+### How they win
+
+**Trade health for a decisive attack window**
+- **Choose this when:** The opposing fighter has more health than Annie, or your totals are close enough for Lagniappe to put her behind. Take that opportunity while it exists; the advantage can disappear as you damage the opponent. [1][2]
+- **On your turn:** When an opponent holds back to avoid empowering Annie, lead with Lagniappe to cross the health threshold yourself. Choose the self-damage around the health gap, rather than automatically paying as much as possible just to draw. [1]
+- **Managing the exchange:** Keep your health close to theirs instead of chasing the bonus at any cost. You can sometimes leave an attack undefended to reach that position, but the aim is a stronger return attack without throwing away your remaining life. [1]
+- **On their turn:** Save Mississippi Queen for the point where survival buys a credible finishing turn. Against fighters with extra attacks or action gains, commit it on the first dangerous attack rather than spending your other defenses trying to survive the whole sequence. [1][2]
+- **Closing it out:** Before committing to that low-health finish, check the opponent’s remaining defensive damage effects. Plan to win on your next turn; if the kill needs another turn, you need another Mississippi Queen to bridge the gap. [1]
+
+**Make Charlie carry the pressure**
+- **Choose this when:** Annie’s health advantage leaves her attacks unimpressive, or a ranged opponent keeps her out of reach. Charlie gives you an attacking route while Annie waits for a better exchange. [1][2]
+- **On your turn:** Attack from a distance with Charlie using Long Shot or Bottom Dealing instead of forcing Annie into a poor attack. When his hand needs replenishing, use The Turn and the River to support continued pressure. [1][2]
+- **Positioning:** Put Charlie where a defensive Slick Talker would bring Annie close enough to threaten the opponent next turn. Think about the destination before accepting the attack; a swap that saves one combat may still leave Annie reachable afterward. [1][2]
+- **On their turn:** If they attack Charlie to avoid lowering Annie’s health, answer with Slick Talker to bring her into the exchange. Reverse that choice when Charlie needs rescuing, preserving his contribution rather than letting the opponent remove him cheaply. [1][2]
+
+### How they lose
+
+- **Treating low health as permanent safety.** Mississippi Queen does not protect your following attack turn from defensive damage. **Answer:** Check those defenses before attacking, and reserve Mississippi Queen for a finish you can actually complete. [1]
+- **Being kept outside the fight.** Ranged fighters with distance-control tools expose Annie’s poor mobility. **Answer:** Prepare the approach through Charlie and Slick Talker, rather than expecting Annie’s normal movement to solve the chase. [1]
+- **Misreading the need to cancel.** Revealing your pair gives away information even when the opposing effects do not matter. **Answer:** With Quite a Pair, reveal only when there is an effect worth stopping; keep the information private otherwise. [2]
+
+### References
+1. Gridbeast. "Unmatched – Annie Christmas." *Gridbeast*. https://gridbeast.gg/unmatched-annie-christmas/
+2. PoindexterG - To The Table Top!. "Annie Christmas - Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=XesXRXsPPeQ
+
+### Not cited
+- No unused articles or videos: both sources supplied in the pack are cited.
+
+---
+
+<!-- id: the_golden_bat -->
+## The Golden Bat
+
+**In short:** You are a melee fighter who wins by making the opponent pay to approach, then punishing their arrival. Build toward repeated boosted attacks, or retreat and win through exhaustion when pursuit costs them more than you. [1]
+
+### How they win
+
+**Punish the approach**
+- **Choose this when:** Melee opponents must come to you, or an opponent who normally wins longer games needs to be threatened with damage early. Against fighters with several 1-health sidekicks, keep A Punch to Shake the Earth rather than treating it as disposable. [1][2]
+- **On your turn:** If they finish adjacent, attack before maneuvering, then retreat to make them approach again. When you must initiate, lead with Alpine Fortress or Arrive Just in Time, then threaten Super Strength; against decks with cancels, that threat makes defending Vaporizing Eyebeams with a cancel less comfortable. [1][3]
+- **On their turn:** Use Terrifying Roar against a melee attack whose movement would otherwise break adjacency, or Imposing Presence to stop that escape effect. Preserve contact when you need two attacks next turn. [1][3]
+- **Positioning:** Against ranged opponents, occupy spaces that force them adjacent to attack, or use defensive movement to close the gap. Against clustered sidekicks, seek a zone containing several targets for A Punch to Shake the Earth; the threat can force gaps in their screen even before you play it. [1][2]
+- **Commitment:** When adjacent and ready to double attack, open with Terrifying Roar to deny an escape between attacks. Remember that this also prevents your own retreat through Skirmish afterward. [1][2]
+
+**Make pursuit too expensive**
+- **Choose this when:** You can stay ahead in the exhaustion race and the opponent must spend boosts to keep attacking. If repeated boosted attacks fail to finish them, preserve the escape plan rather than pursuing damage indefinitely. [1]
+- **On your turn:** Early, double maneuver away from a full opposing hand and discard Sight Beyond Sight or, outside sidekick matchups, A Punch to Shake the Earth. This trade works when the opponent must also overdraw, throwing away better cards than yours. [1]
+- **Build the engine:** Once Alpine Fortress reaches the discard pile, recycle it with later copies to sustain movement and boosted attacks as your deck shrinks. Use Like a Flash of Golden Light after a scheme crosses zones, then retreat far enough to demand another boost or another turn spent drawing. [1][3]
+- **On their turn:** Keep Skirmish available to defend and disengage. Attack with Insight of the Ancients only when you can spare the defense; do not build the plan around recovering a particular card from a discard pile full of expendable cards. [1]
+- **Finish:** When the opponent has few ways left to reach you, redirect Alpine Fortress toward Arrive Just in Time and spend those turns escaping without drawing. [1]
+
+### How they lose
+
+- **Relentless pursuit.** Fast attackers with draw and extra actions force your versatile cards onto defense until your counterattack disappears. **Answer:** Prioritize Alpine Fortress for rebuilding your hand, and retain Insight of the Ancients for defense under pressure. [1][4][5]
+- **Damage through your best block.** Effect damage punishes He Laughs at Your Feebleness even when combat damage looks covered. **Answer:** Use Imposing Presence against the dangerous effect instead; against multiattack pressure, avoid trapping yourself with Terrifying Roar when you need a movement defense to escape. [1]
+
+### References
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 17: Golden Bat." *YouTube*. https://www.youtube.com/watch?v=RTgu0pUEimQ
+2. PoindexterG - To The Table Top!. "Golden Bat - Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=cmg7TOSyugs
+3. Restoration Games. *Tales to Amaze*, The Golden Bat deck. Card text as recorded in `input/heroes.json`.
+4. u/Silly_Shenanigans. Comment on "Weekly Discussion: Battling Golden Bat (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 27 May 2026. https://www.reddit.com/r/Unmatched/comments/1tpeb5w/
+5. u/DeeJaySaggy. Comment on "Weekly Discussion: Battling Golden Bat (Tips and Strategies)" (see [4]).
+
+### Not cited
+- [Unmatched – The Golden Bat](https://gridbeast.gg/unmatched-golden-bat/): Gridbeast · written guide (read; its approach and trapping advice is covered more fully by the videos).
+- [Weekly Discussion: Battling Golden Bat (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1tpeb5w/): Reddit · opening post, u/Potatopancakeman comment, and u/LabRat2329 replies (read; overlapping pressure advice, or acknowledgments without additional strategy).
+
+---
+
+<!-- id: dr_jill_trent -->
+## Dr. Jill Trent
+
+**In short:** You are a defensive value fighter whose endurance depends on keeping Daisy alive, despite Jill's low health. [1] Make repeated, productive attacks while preserving your defenses, then win through exhaustion or switch to a burst turn when waiting favors your opponent. [1][2]
+
+### How they win
+
+**Outlast them without giving up pressure**
+
+- **Choose this when:** You can protect Daisy long enough to use both Helpful Assistant cards and the opponent cannot beat your extended deck in exhaustion. Keep attacking safely rather than treating the long game as permission to stop fighting. [1][3]
+- **On your turn:** Poke with Laser Pen and Battle of Wits under Hypnoray Blaster, making the opponent spend defenses while you learn their upcoming draws. Avoid unnecessary movement boosts: you want those cards producing value in combat. [1][2][4]
+- **Set up the hand squeeze:** Use Insightful Deduction to arrange a high BOOST card for Caught Red-Handed when that increase would beat their likely defense; remember the bottom card for a later attempt. [1][4]
+- **On their turn:** Preserve Ace Fighter for Daisy's survival and use Gyroscopic Jetpack against an opening melee attack to escape the follow-up. Against pressure on Jill's hand, choose Utility Belt's draw over healing. [1]
+- **Positioning:** Hide one fighter behind the other so the opponent must split damage instead of finishing Daisy. Do not leave Daisy exposed to counterattacks just because you have a tempting attack. [3]
+- **Recursion:** Play Helpful Assistant before Daisy dies; when she is under immediate pressure, take the available returns rather than waiting for perfect ones. Choose among Battle of Wits, Hypnotist, and Utility Belt according to whether you need damage, cancellation, or sustain. [1][5]
+- **Healing:** Switch to Ultrabiotic Tonic late, when you know their remaining defenses and their deck is nearly empty; Hypnoray Blaster loses its payoff once there is nothing to reveal. Keep Hypnoray Blaster active while you still need Hypnotist as a threat. [1][3]
+
+**Spend your endurance on a burst turn**
+
+- **Choose this when:** The opponent has better exhaustion prospects, Daisy will not survive a long game, or their poor ability to handle sidekicks lets Daisy attack freely. [1]
+- **On your turn:** With Daisy already in reach, chain Energizing Spray into Energizing Spray, then Ace Fighter into Ace Fighter with the right hand. This commits your strongest Daisy defenses, so make that commitment for a game where aggression is the better route. [1][5]
+- **If you cannot commit:** Maneuver in, attack with Energizing Spray, then retreat with the extra action. Make the opponent spend their next turn approaching you again. [1]
+
+### How they lose
+
+- **Daisy becomes an effect target.** She cannot supply a true cancel, so opponents can aim decisive effects at her. **Answer:** Save Indestructible Cloth for effect damage and Stasis Diffuser for attacks built around value increases; cash in Helpful Assistant before losing her. [1][3]
+- **Your attacks meet Feint.** Battle of Wits can lose its entire payoff against it. **Answer:** Occasionally attack with Energizing Spray under Hypnoray Blaster to punish the low defense your gadget encourages, rather than making every gadget choice announce your attack. [1][6]
+- **You heal away your protection.** An early Ultrabiotic Tonic switch exposes Jill to effects you needed to cancel. **Answer:** Stay on Hypnoray Blaster with Hypnotist available unless you have a concrete healing plan. [1][3]
+
+### References
+
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 8: Dr. Jill Trent." *YouTube*. https://www.youtube.com/watch?v=E4xbtYc_daU
+2. u/CD_North. Comment on "Jill Trent Advice" by u/Naive-Health414. *r/Unmatched*, Reddit, 4 March 2026. https://www.reddit.com/r/Unmatched/comments/1rl16ig/
+3. u/PrinceOfAsphodel. Comment on "Jill Trent Advice" (see [2]).
+4. u/Jerry-Red. Comment on "Jill Trent Advice" (see [2]).
+5. Restoration Games. *Tales to Amaze*, Dr. Jill Trent deck. Card text as recorded in `input/heroes.json`.
+6. Gridbeast. "Unmatched – Dr. Jill Trent." *Gridbeast*. https://gridbeast.gg/unmatched-jill-trent/
+
+### Not cited
+
+- [Dr. Jill Trent - Unmatched Fighter Review](https://www.youtube.com/watch?v=UQ4SBsbwdoE): PoindexterG - To The Table Top! · video (read; predominantly deck explanation, with strategic points covered by the strategy video).
+- [Tips for playing Jill](https://www.reddit.com/r/Unmatched/comments/1flizsf/): Reddit · forum thread (read; endurance, gadget planning, and Daisy protection overlap the cited sources).
+- [Jill Trent Advice](https://www.reddit.com/r/Unmatched/comments/1rl16ig/): Reddit · remaining forum comments (read; supporting value and setup advice overlaps the cited replies; acknowledgments and jokes add no strategy).
+
+---
+
+<!-- id: oda_nobunaga -->
+## Oda Nobunaga
+
+**In short:** You run an aggressive formation whose Honor Guard must turn positioning into damage before they die. Draw toward their attacks, pin the opponent, and spend your pressure window attacking rather than planning to win through exhaustion. [1]
+
+### How they win
+
+**Pin them and empty their defenses**
+
+- **Choose this when:** You face a solo hero with weak defenses or limited draw, on a compact map where you can keep reaching them. Their hand is the target: repeated attacks can leave them unable to defend. [1]
+- **On your turn:** Use Student of War to refill, then Reinforce for draw and the extra action so you can keep attacking without a rebuilding turn. Find and spend your Honor Guard attacks while their users are still alive. [1]
+- **Attack selection:** Keep both Lightning and Thunder and Sun and Moon available: the opponent wants different defenses against each. Spending every copy of one lets them answer the other predictably; balance that uncertainty against the risk of losing the guards first. [1]
+- **On their turn:** Defend a guard with Battle Maneuvers against their last action, then arrange the flank for a double attack. They cannot spend another action correcting their position. [1]
+- **Positioning:** Keep attacking guards in Oda Nobunaga's zone for stronger attacks and defenses; a flank alone is not enough. Favor connected spaces where your bodies can pin the target without losing that zone coverage. [1][2]
+- **Sources disagree on the scheme:** Gridbeast recommends Demon King of the Sixth Heaven for reliable damage; Karma prefers attacking to also consume a defense, saving the scheme to boost movement. Against opponents who keep escaping, follow the movement plan rather than spending your reach prematurely. [3][1]
+
+**Keep the formation alive for another attack cycle**
+
+- **Choose this when:** The opponent cannot quickly focus down one Honor Guard and their damage arrives slowly enough for healing to matter. This is the situation where maintaining the guards can outlast their attempts to dismantle your offense. [1]
+- **On your turn:** Use Reinforce's healing when it lifts a guard out of lethal range. Otherwise, favor draw and continued attacks; healing that leaves the guard dead to the same next attack buys nothing. [1]
+- **On their turn:** Use Spring the Trap to spread damage between guards before healing the formation. Keep them adjacent, but check that this arrangement still leaves you able to flank. [1]
+- **Sources disagree on healing attacks:** Gridbeast recommends Patience and Strategy to bait a strong defense while healing; Karma usually prefers a damaging attack because the healed guard may still die next turn. Use the bait when healing actually buys survival, rather than spending every flank on it. [3][1]
+
+### How they lose
+
+- **Burst and effect damage kill the guards.** Their loss strands your offense. **Answer:** Reserve Momentous Shift for a guard facing a dangerous combat; do not assume Pragmatism can protect them, because only Oda Nobunaga can play it. [1][2]
+- **Retreat breaks your formation.** Reaching with one fighter does not secure a flank. **Answer:** Herd evasive ranged opponents toward fewer exits, then boost to catch them; preserve Fire and Flames for movement when reach is the bottleneck. [3][1]
+- **Disposable sidekicks waste your attacks.** **Answer:** Use Spring the Trap against attacking one-health screens; avoid Student of War on them, where an undefended hit can force excessive draw for little return. [1]
+
+### References
+
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 9: Oda Nobunaga." *YouTube*. https://www.youtube.com/watch?v=TyjF2vJEJs4
+2. Restoration Games. *Sun's Origin*, Oda Nobunaga deck. Card text as recorded in `input/heroes.json`.
+3. Gridbeast. "Unmatched – Oda Nobunaga." *Gridbeast*. https://gridbeast.gg/unmatched-oda-nobunaga/
+
+### Not cited
+
+- [Oda Nobunaga - Unmatched Fighter Review](https://www.youtube.com/watch?v=MssOtIW4THA): PoindexterG - To The Table Top! · video (read; mostly card explanations and team-play observations, with less detailed solo strategy).
+- [Give a One Sentence Tip on how to Play against your favorite Fighter. Go!](https://www.reddit.com/r/Unmatched/comments/1tk0h6i/): Reddit · forum thread excerpt (read all supplied replies; the warning to avoid flanking adds no concrete answer beyond the cited positioning advice).
+
+---
+
+<!-- id: tomoe_gozen -->
+## Tomoe Gozen
+
+**In short:** You are a ranged aggressor who wants to fight close enough that retreat costs the opposing hero health. Build a larger hand, keep demanding defenses, and turn their attempts to escape into the damage that sets up your finish. [1]
+
+### How they win
+
+**Make retreat their only safe turn**
+- **Choose this when:** Solo fighters have low health or weak card draw, or their hand is too small to sustain a fight. Make them spend turns drawing instead of attacking. [1]
+- **On your turn:** Play Piercing Shot early to sustain attacks without surrendering hand advantage, then pressure with A Worthy Opponent or Skirmish. Keep some of those versatile cards for defense; spending every good block on aggression leaves you exposed. [1]
+- **On their turn:** Use Refuse to Retreat when an adjacent attacker has few cards left, then exploit the reduced hand with two attacks. Preserve your position against forced movement so they cannot cheaply break your next turn's pressure. [1][2]
+- **Positioning:** Fight beside sharp zone boundaries and pockets, where escape routes cross out of your zone; broad overlapping zones let them move freely. With Skirmish, prefer pushing the hero across a boundary to moving yourself away. [1]
+- **Getting through a screen:** Use Lord Kiso's Final Stand to reach a hero sheltering behind sidekicks and preserve both attacks. Alternatively, use A Warrior's Way to pull the hero out of position and follow into adjacency. [1][2]
+
+**Strip the answer, then execute**
+- **Choose this when:** A durable, heavy-hitting opponent can afford to ignore retreat damage, or a known defensive counter makes Witness My Last Battle unsafe. Pressure their defenses before committing your biggest attack. [1][3][4]
+- **Setup:** Use Confront Any Demon or God early to identify and remove the defense that blocks your finish. Attack with it against decks whose defenses commonly match its value; defend with it against decks whose attacks usually beat it. [1][4]
+- **Payoff:** Use A Warrior's Way before Witness My Last Battle, routing the hero across zone boundaries on the way. Commit only after tracking their remaining answers; against defenses that cannot stop lethal damage, save the second Witness My Last Battle as your execution. [1][5]
+- **On their turn:** Keep Deeds of Valor for the opponent's largest attacks. Before a nonlethal Witness My Last Battle, prepare for the adjacent opponent to attack twice in reply. [1]
+- **A dangerous sidekick:** If losing a sidekick unlocks the hero's offensive card draw, leave that sidekick alive and stay beyond its unboosted reach. Keep forcing the hero to choose between attacking and drawing defenses. [3]
+
+### How they lose
+
+- **Sidekicks absorb your pressure.** Screens keep the hero comfortable while sidekick effects evade Flash of Steel's cancel. **Answer:** Clear adjacent 1-health sidekicks with Fearsome Strength or Flash of Steel; against a durable, dangerous sidekick, consider spending an early Witness My Last Battle. [1][6]
+- **Cancels break your setup.** A canceled Confront Any Demon or God loses the discard your finish needed. **Answer:** Against many defensive cancels and high attack values, use it on defense to improve the odds. [1]
+- **Late draw accelerates exhaustion.** Piercing Shot loses its purpose near the deck's end. **Answer:** Spend it on Five Against Thousands instead when another attack matters; choose healing with Lord Kiso's Final Stand when you need an action without drawing deeper. [1]
+
+### References
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 3: Tomoe Gozen." *YouTube*. https://www.youtube.com/watch?v=6kjV3zcPuPk
+2. Gridbeast. "Unmatched – Tomoe Gozen." *Gridbeast*. https://gridbeast.gg/unmatched-tomoe-gozen/
+3. u/sad_royalty. Comment on "Any tips w Gozen playing against [opponent name omitted]?" by u/Tooooon. *r/Unmatched*, Reddit, 11 July 2024. https://www.reddit.com/r/Unmatched/comments/1e10p51/
+4. u/d_Shirt. Comment on "Any tips w Gozen playing against [opponent name omitted]?" (see [3]).
+5. u/Dense_Yam7250. Comment on "Any tips w Gozen playing against [opponent name omitted]?" (see [3]).
+6. Restoration Games. *Sun's Origin*, Tomoe Gozen deck. Card text as recorded in `input/heroes.json`.
+
+### Not cited
+- [Tomoe Gozen - Unmatched Fighter Review](https://www.youtube.com/watch?v=C0FJXyHQ2yE): PoindexterG - To The Table Top! · video (read transcript; its positioning and healing advice is covered more concretely by the cited strategy video).
+- [Remaining replies in the strategy thread](https://www.reddit.com/r/Unmatched/comments/1e10p51/): Reddit · forum comments (read; one repeats the pressure plan, one tentatively suggests exhaustion, and one discusses a specific swap interaction).
+
+---
+
+<!-- id: william_shakespeare -->
+## William Shakespeare
+
+**In short:** William Shakespeare is a pressure fighter who uses Actors to threaten attacks without exposing himself, then commits to a decisive extra-action turn. Choose your line's payoff from your hand and the opponent's weaknesses; chasing a perfect sequence gives them time to reach your fragile hero. [1][2]
+
+### How they win
+
+**Overload their defenses**
+- **Choose this when:** their card draw is limited, or their hand can be pressured into bad defenses; decks with many cancels also struggle to blunt My Kingdom For a Horse. [1][2]
+- **On your turn:** from adjacency and an empty line, lead with All Are Punished, then My Kingdom For a Horse. Spend the extra actions attacking if their hand is cracking, or maneuver away to regroup; another four-syllable setup into My Kingdom For a Horse can extend the turn. [2][1][3]
+- **On their turn:** after resetting your line, defend with Et Tu, Brute? to threaten My Kingdom For a Horse next turn. An Actor defending with Such Sweet Sorrow can establish the same threat while escaping a second attack. [1]
+- **Positioning:** keep other Actors outside the attacking fighter's zone before All Are Punished; clearing enemy sidekicks is poor compensation for destroying your own screen. Against several one-health sidekicks, send an Actor in to threaten the clear without exposing Shakespeare. [1]
+- **Refueling:** aim to complete with Alas after your burst. You need its recovery and cards to survive the counterattack and keep attacking. [1]
+
+**Finish through reliable damage**
+- **Choose this when:** the opponent resists ordinary combat damage, or is close enough to death that a Horror completion can finish them. [1]
+- **On your turn:** use Horror to close an eight-syllable line rather than hoarding every copy for one spectacular chain. Shorter lines earn more completions; accept a smaller payoff when assembling the maximum would delay your other effects. [1]
+- **Sources disagree on the alternative:** Gridbeast recommends following successive Horror attacks with The Ides Of March to bait a strong defense. Karma prefers Horror's stronger combat pressure and usually spends the completion elsewhere, reserving The Ides Of March's targeting flexibility for situations such as removing a sidekick. [2][1]
+
+**Win behind a recurring screen**
+- **Choose this when:** a melee opponent cannot efficiently clear one-health blockers, especially when their card draw makes hand pressure unreliable. Against attacks dependent on effects, prioritize recurring Deceive too. [1]
+- **On your turn:** use Actor combats with Again to recover Once More Unto The Breach and rebuild your screen repeatedly. Take the ordinary revival when needed instead of waiting for every Actor to die. [1]
+- **On their turn:** leave four syllables ready for a defensive Once More Unto The Breach when several Actors need returning. Otherwise, preserve access to Alas or a Deceive completion according to whether you need recovery or another cancel. [2][1]
+
+### How they lose
+
+- **They dictate your line.** Repeated attacks can push you past the setup for My Kingdom For a Horse. **Answer:** plan defenses from your actual hand and use Again to repair the sequence rather than relying on a future draw. [1][2]
+- **Your attack invites two heavy hits.** Shakespeare's strongest attacks expose him to retaliation. **Answer:** budget an escape into your My Kingdom For a Horse turn, or complete Et Tu, Brute? to reset your formation when survival matters more than pressure. [1][2]
+
+### References
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 13: Shakespeare." *YouTube*. https://www.youtube.com/watch?v=Ief6ueYVL20
+2. Gridbeast. "Unmatched – Shakespeare." *Gridbeast*. https://gridbeast.gg/unmatched-shakespeare/
+3. Restoration Games. *Slings and Arrows*, William Shakespeare deck. Card text as recorded in `input/heroes.json`.
+
+### Not cited
+- [Shakespeare - Unmatched Fighter Review](https://www.youtube.com/watch?v=QosmjsUDPnA): PoindexterG - To The Table Top! · video (read in full; rules overview overlaps the more detailed strategy video).
+- [Tips on playing Shakespeare…](https://www.reddit.com/r/Unmatched/comments/1dwnu9r/): r/Unmatched · forum thread and all replies (read; replies offer no developed Shakespeare tactics to support this guide).
+
+---
+
+<!-- id: hamlet -->
+## Hamlet
+
+**In short:** Hamlet fights in bursts: build your hand and position, then spend both aggressively on a NOT TO BE turn. Against opponents who refuse to engage, your schemes can instead buy enough time to win through exhaustion. [1][2]
+
+### How they win
+
+**Build a hand, then break theirs**
+- **Choose this when:** Melee opponents give you room to retreat and reload, or you already have six or more cards and a double attack lined up. Against decks with many versatile cards and few dedicated defenses, prioritize Uncertain Doom in your burst. [1][3][4]
+- **On your turn:** Use TO BE turns to gather cards and approach from a favorable position; switch when you can spend the hand immediately. Lead with The Play's The Thing to strip resources before a second attack, or commit a boosted Cruel To Be Kind when you have the cards to support it. [1]
+- **Keeping contact:** Against opponents who escape between attacks, open with The Readiness Is All to secure the follow-up. When your target is within your zone but out of reach, use The Ghost before attacking so movement does not consume your double attack. [4][5]
+- **On their turn:** Keep The Rest Is Silence for a turn whose remaining attacks or effects matter, rather than judging it by damage blocked alone. Preserve a healthy hand for Maddening Insight; against versatile attacks, Nothing Either Good Or Bad lets you trade damage back. [1][4]
+- **Positioning:** Keep Rosencrantz & Guildenstern back or blocking important spaces, and spend their health on your burst turns. Retreat after the burst to replenish instead of expecting your low defenses to sustain repeated exchanges. [1]
+
+**Make a reluctant opponent run out first**
+- **Choose this when:** Your opponent hangs back and their deck lacks ways to spend actions without drawing. Recognize that opening before chasing them around the board and paying for attacks you cannot deliver. [2]
+- **On your turn:** On TO BE, maneuver, play Method In The Madness to return surplus cards without replacing them, then maneuver again. Treat the scheme as a way to bank cards for later and avoid hand-limit waste, rather than automatically exchanging your entire hand. [6]
+- **Buying time:** Use The Ghost as a healing turn that avoids another maneuver; preserve Rosencrantz & Guildenstern as fuel for NOT TO BE turns when you need to limit drawing. If the opponent finally advances, use The Readiness Is All and To Sleep, Perchance To Dream to keep away. [2]
+- **Sources disagree on pace:** One player reports that Hamlet usually needs to win in the first few turns; another describes winning by deck advantage against opponents without skips. Commit to waiting because the opponent's resources support it, rather than assuming every game rewards patience. [7][2]
+
+### How they lose
+
+- **An empty burst.** Choosing NOT TO BE without an attacking hand spends health for nothing. **Answer:** Use Method In The Madness to manage a TO BE turn instead of forcing aggression from an unready hand. [6]
+- **Cancels deny recovery.** Losing healing makes your self-damage harder to sustain. **Answer:** Track remaining Feints before committing The Play's The Thing for healing; against attack-side cancels, save it for your own attack. [6]
+
+### References
+1. u/Horse0Course. Comment on "Hamlet strategy and matchups" by u/Life-Rip183. *r/Unmatched*, Reddit, 11 September 2024. https://www.reddit.com/r/Unmatched/comments/1fe4nyh/
+2. u/Round-Walrus3175. Comment on "Hamlet tips please" by u/TickleMeTimbre. *r/Unmatched*, Reddit, 17 November 2025. https://www.reddit.com/r/Unmatched/comments/1ozkzi3/
+3. u/TitanasGios. Comment on "Hamlet strategy and matchups" (see [1]).
+4. PoindexterG - To The Table Top!. "Hamlet - Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=1Igd5MYvkAU
+5. Restoration Games. *Slings and Arrows*, Hamlet deck. Card text as recorded in `input/heroes.json`.
+6. u/TheEliteB3aver. Comment on "Hamlet tips please" (see [2]).
+7. u/Biggest_Lemon. Comment on "Hamlet tips please" (see [2]).
+
+### Not cited
+- [Shared Hamlet advice thread](https://www.reddit.com/r/Unmatched/comments/1dwnu9r/): Reddit · forum thread (read; its Hamlet advice repeats the burst plan without developing it).
+- [Give a One Sentence Tip on how to Play against your favorite Fighter. Go!](https://www.reddit.com/r/Unmatched/): Reddit · forum excerpt (read in pack; ambiguous joke gives no actionable counterplay; exact thread URL not supplied).
+
+---
+
+<!-- id: titania -->
+## Titania
+
+**In short:** You’re a ranged pressure fighter who wins by making the opponent spend cards approaching and defending. Use the glamour and hand you actually have, then change plans when their value runs out instead of waiting for a perfect combination. [1]
+
+### How they win
+
+**Run them out of defenses**
+- **Choose this when:** the opponent has a low hand and you have Glamour of Greed early enough to sustain pressure. [1]
+- **On your turn:** lead with As Wise As Beautiful to bait a defense without shrinking your hand, then send Oberon in with Met By Moonlight. Cycle an unproductive glamour. [1]
+- **Positioning:** move Titania away while bringing Oberon into reach, so Met By Moonlight brings him back to safety. Force another approach. [1]
+- **On their turn:** hold Whisked Away to break up a double attack. Save But A Dream for a decisive attack or a temporary power turn; avoid spending it early. [1]
+- **Protecting Oberon:** preserve him while Met By Moonlight remains unplayed. Once those attacks are spent, Parting Gift can turn his otherwise fatal defense into a final contribution. [1]
+
+**Cash in a scheme turn**
+- **Choose this when:** Glamour of Rhyme appears with schemes already in hand and attacks ready to follow. Use what you have rather than stockpiling. [1]
+- **On your turn:** use Gift Of The Fair Folk to establish attack range and replenish your hand, then What Fools These Mortals Be to remove the defense that stops your follow-up. Add A Momentary Glance before attacking if Titania has the target in her zone. [1][2]
+- **Payoff:** spend your remaining actions attacking; if you intend to discard Glamour of Rhyme through Fairy Song, finish your schemes first. That sequence also prepares Queen Of The Fairies. [2][3]
+- **Sources disagree on timing:** Gridbeast recommends holding Queen Of The Fairies until four or five glamours are discarded. Karma recommends accepting an earlier hit rather than clogging your hand or making the maximum attack obvious to a saved Feint. [2][1]
+
+**Outlast their damage**
+- **Choose this when:** the opponent relies on effect damage, or their remaining attacks cannot finish you before exhaustion. Heavy combat hitters make this plan much harder. [1]
+- **Setup:** if Glamour of Sleep appears early, discard it and use The Moon Looks Down to arrange its return late. Allow time to bypass cancels. [1]
+- **Positioning:** use Glamour of Love to widen the gap and force boosted approaches. Gift Of The Fair Folk can heal while separating you from the pursuer; conserve defenses for attacks they actually reach you with. [1]
+- **Closing:** once Glamour of Sleep is established late, keep it and maneuver away through exhaustion. Use Parting Gift under its protection for safe damage. [1][4]
+
+### How they lose
+
+- **An exposed glamour gap.** Opponents can attack after you spend your glamour, denying Protection Of The Fairy Woods its cancel. **Answer:** check their next turn before committing Fairy Song on offense. [1][5]
+- **Discard and repeated combat.** Your limited defensive supply runs out under sustained pressure. **Answer:** escape with Whisked Away and reserve But A Dream for the turn that would otherwise break you. [1]
+- **Forced sacrifice of Glamour of Sleep.** A crucial enemy effect can tempt you into abandoning your exhaustion plan. **Answer:** accept ordinary Fairy Song value when preserving the glamour matters more, and weigh Protection Of The Fairy Woods against losing your endgame. [1]
+
+### References
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 16: Titania." *YouTube*. https://www.youtube.com/watch?v=B6nC0b400-g
+2. Gridbeast. "Unmatched – Titania." *Gridbeast*. https://gridbeast.gg/unmatched-titania/
+3. Restoration Games. *Slings and Arrows*, Titania deck. Card text as recorded in `input/heroes.json`.
+4. PoindexterG - To The Table Top! "Titania - Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=adALr5SJjLc
+5. u/sersacu19. Comment on "Tips for … vs Titania?" by u/Entire_Cucumber_7539. *r/Unmatched*, Reddit, 14 May 2025. https://www.reddit.com/r/Unmatched/comments/1km9dy9/
+
+### Not cited
+- [Aggressive melee matchup discussion](https://www.reddit.com/r/Unmatched/comments/1km9dy9/): r/Unmatched · comments by u/InterestingHouse5270 and u/DavidChargos (read; overlapping advice on aggression and attacking Oberon).
+
+---
+
+<!-- id: the_wayward_sisters -->
+## The Wayward Sisters
+
+**In short:** You’re a melee pressure team that wins by controlling where fights happen and turning attacks into spells. Pin the opponent, keep attacking while healing and drawing, and change spells when the board demands it. [1]
+
+### How they win
+
+**Pin them and sustain the attack**
+- **Choose this when:** A solo opponent can be trapped without an easy movement escape, especially when their draw cannot keep up with repeated attacks. Treat this as your default plan when you’re unsure which spell to prioritize. [1]
+- **On your turn:** Use Something Wicked This Way Comes for movement plus an action, bring the target into reach, then double attack. Once pinned, prioritize the healing spell so you can replenish your hand without spending actions maneuvering. [1]
+- **On their turn:** Use Ward after their second action to put them between Sisters; use Fire Burn And Cauldron Bubble to prepare ingredients for your next attack. Don’t assume Ward stops a ranged opponent’s follow-up. [1]
+- **Positioning:** Spread your Sisters so someone can reach the target with an ordinary maneuver, then close the trap. Play The Stars Align early while your coverage is intact. [1]
+- **Ingredient discipline:** Don’t stockpile ingredients just to maximize Double, Double; a five-value attack can be enough. Against cancels, All-Seeing Familiar is your better punish. [1][2]
+
+**Clear the screen, then chip the hero**
+- **Choose this when:** Several 1-health sidekicks screen the hero, or a low-health opponent without healing makes repeated spell damage decisive. Don’t commit to damage spells regardless of what your other spells could accomplish. [1]
+- **On your turn:** Attack one sidekick, then use the damage spell on another. Alternatively, use Something Wicked This Way Comes to remove one and move another into reach for your second action. [1]
+- **Break their formation:** After attacking a screening sidekick, use the movement spell to pull the hero in front of the screen. Switch to pressure once you have exposed them. [1]
+- **Positioning:** Cover different zones with your Sisters so the damage target needn’t share the attacking Sister’s zone. Opponents can reduce your spell opportunities by staying at zone edges. [1][3]
+
+**Make their finishing blow expensive**
+- **Choose this when:** Heavy-hitting opponents rely on large attacks, particularly when they try to finish a wounded Sister with excess damage. Your remaining Sisters let you profit from that exchange. [1]
+- **On their turn:** Hold Pricking Of My Thumbs for the big swing; don’t spend it merely because you can reflect a small hit. Recover it with Curious Familiar when another reflected hit could decide the game. [1]
+- **On your turn:** Recover Double, Double with Curious Familiar when you need another threatening attack instead. Choose the recursion target for the exchange you actually need next. [1]
+
+### How they lose
+
+- **Relentless pressure disrupts your brewing.** Forced defenses let the opponent dictate your ingredients. **Answer:** Use Fire Burn And Cauldron Bubble to restore spell choices, then attack to cash them in. [3][1]
+- **Focused attacks remove your board coverage.** One player calls losing a Sister crippling; another says disrupting the cauldron matters more. **Answer:** Rotate wounded Sisters away and use Unnatural Remedy from another Sister to heal them remotely. [4][3][5]
+- **Exhaustion punishes every surviving Sister.** Healing through the draw spell accelerates that deadline. **Answer:** Spend your attacks and Something Wicked This Way Comes on pressure before your deck runs out. [6][1]
+
+### References
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 15: The Wayward Sisters." *YouTube*. https://www.youtube.com/watch?v=LVh50o5bbsc
+2. Restoration Games. *Slings and Arrows*, The Wayward Sisters deck. Card text as recorded in `input/heroes.json`.
+3. u/BrandoBombchu900. Comment on "How would you beat/counter the wayward sisters?" by u/Complex_Manner_7280. *r/Unmatched*, Reddit, 7 July 2024. https://www.reddit.com/r/Unmatched/comments/1dxp4jn/
+4. u/OuroborosArchipelago. Comment on "How would you beat/counter the wayward sisters?" (see [3]).
+5. Gridbeast. "Unmatched – The Wayward Sisters." *Gridbeast*. https://gridbeast.gg/unmatched-the-wayward-sisters/
+6. PoindexterG - To The Table Top! "The Wayward Sisters - Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=D2R-suPXFL4
+
+### Not cited
+- [Any tips Vs each character?](https://www.reddit.com/r/Unmatched/): Reddit · shared thread excerpt (read; the supplied excerpt asks about counterplay but gives no advice or thread URL).
+
+---
+
+<!-- id: geralt -->
+## Geralt of Rivia
+
+**In short:** You’re a flexible melee fighter who wins by deciding which exchanges deserve your best versatile cards. Build toward a burst turn or a slower hand-control game, rather than spending your offense just to survive. [1][2]
+
+### How they win
+
+**Build a burst turn**
+- **Choose this when:** you have a hand advantage and enough attacks to turn extra actions into pressure; choose Gear: Sword of steel for this plan. [3]
+- **On your turn:** use Gear: Tawny Owl to replenish before committing, then lead your attack sequence with Gear: Sword of steel. Use Witcher Senses to find the gear you need now; searching early also preserves the chance to retrieve spent gear later. [4][5]
+- **On their turn:** budget your versatile cards before defending: spending your strongest cards to block also spends your next turn’s damage. Don’t count the same card as both your survival plan and your finisher. [2]
+- **Positioning:** arrange the approach before committing your hand. Repeatedly boosting to reach a retreating opponent drains the resources that make the burst threatening. [2][3]
+- **Potion timing:** commit your potion when you can sustain attacks, rather than playing it during a lull and losing its continuing protection immediately. [6]
+- **Sources disagree on the movement potion:** one player recommends Gear: Blizzard’s movement against ranged heroes; another prefers Gear: Tawny Owl plus a boosted maneuver unless preventing action gain matters. Choose for the ongoing effect you actually need. [7][8]
+
+**Win the defense guessing game**
+- **Choose this when:** the opponent relies on large printed defenses, or you can afford to wear down their hand before finishing. Choose Gear: Sword of silver for the former; use Dandelion to support the slower game. [3][4][7]
+- **On your turn:** start with Plot twist to learn what defenses remain and remove the card that spoils your next exchange. Pressure large blocks with Gear: Sword of silver or Igni, then punish smaller blocks with Damn, you're ugly or Rend. [3][4]
+- **Resource choice:** treat boosting Rend as a commitment, not an automatic upgrade. Attack with it when the revealed defense lets you judge the investment; defending with it forces your decision before an attacker makes their own combat-value choices. [4][5]
+- **On their turn:** favor Gear: Wolf Medallion against ranged pressure. Against surrounding attackers, Gear: Armor of the Forgotten Wolf becomes more attractive; use its interruption against opponents planning extra actions or a hit-and-run turn. [4][5][9]
+- **Protecting Dandelion:** keep him covered behind Geralt and prioritize getting Plot twist into combat while he is alive. His contribution is repeated disruption, not standing in front and trading attacks. [6][10]
+
+### How they lose
+
+- **A costly chase.** Retreating opponents make you spend cards reaching them, then pressure your depleted hand. **Answer:** use Yrden to approach or disengage, and fetch needed gear with Witcher Senses instead of treating every turn as a race to attack. [2][4]
+- **Pressure consumes your finishers.** Heavy attacks force your best versatile cards onto defense; boosted Rend can also lose its investment to a cancel. **Answer:** preserve a separate attacking reserve and use Plot twist to identify the defense you must remove before committing. [2][3]
+- **Dandelion disappears before contributing.** His limited defensive supply makes prolonged exposure expensive. **Answer:** cover him, use Annoying tune to separate an attacker, and cash in Plot twist before his remaining cards become stranded in your hand. [4][10]
+
+### References
+1. u/Sneikss. Comment on "Geralt strategy" by u/Life-Rip183. *r/Unmatched*, Reddit, 18 February 2025. https://www.reddit.com/r/Unmatched/comments/1is88el/
+2. u/Cell-division. Comment on "Geralt strategy" (see [1]).
+3. u/VolpeLorem. Comment on "Geralt strategy" (see [1]).
+4. PoindexterG - To The Table Top! "Geralt of Rivia - The Witcher Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=WVVyPrw-XeE
+5. Restoration Games. *The Witcher: Steel and Silver*, Geralt of Rivia deck. Card text as recorded in `input/heroes.json`.
+6. u/erickt1998. Comment on "Geralt strategy" (see [1]).
+7. u/Effective_Jury4363. Comment on "Unmatched guide #2 Geralt of Rivia" by u/PenTernamee. *r/Unmatched*, Reddit, 8 June 2025. https://www.reddit.com/r/Unmatched/comments/1l6duj3/
+8. u/Sneikss. Comment on "Unmatched guide #2 Geralt of Rivia" (see [7]).
+9. u/VolpeLorem. Comment on "Unmatched guide #2 Geralt of Rivia" (see [7]).
+10. u/PenTernamee. Comment on "Unmatched guide #2 Geralt of Rivia" (see [7]).
+
+### Not cited
+- [Geralt strategy](https://www.reddit.com/r/Unmatched/comments/1is88el/): Reddit · thread (read in full; remaining comments offer brief agreement or disputed power rankings rather than additional plans).
+- [Unmatched guide #2 Geralt of Rivia](https://www.reddit.com/r/Unmatched/comments/1l6duj3/): Reddit · thread (read in full; remaining replies are requests, ban context, or armor examples already covered by the video).
+
+---
+
+<!-- id: ciri -->
+## Ciri
+
+**In short:** You play a flexible ramp fighter: survive the opening while deciding which Source cards to spend and which to preserve. Turn that investment into repeated premium combats, an exhaustion loop, or guaranteed damage rather than chasing every late effect at once. [1][2]
+
+### How they win
+
+**Survive, then outvalue**
+- **Choose this when:** you have five Source and Lion cub of Cintra in hand, and the opponent lacks enough draw to comfortably withstand sustained pressure. [1]
+- **On your turn:** build through Pushed to the brink, then spend one Lion cub of Cintra early if needed; preserve the remaining copies and Zireael for your stronger turns. Use The lady of space and time to repeat whichever payoff the position demands. [1][3]
+- **On their turn:** keep Blink for breaking consecutive melee attacks; against ranged attacks, use it to approach and threaten two attacks next turn. Save Parry for Ciri rather than spending it merely to prolong Ihuarraquax's life. [1]
+- **Positioning:** put Ihuarraquax in a choke point with Ciri sheltered behind him while you build. Use Searching strike to defend him, but accept losing him rather than draining Ciri's defenses. [1]
+- **Fuel:** keep Unicorn ally active while early pressure demands replacements; stop treating extra draw as free once decks shrink. Channel the source usually belongs in your movement budget after the opening, not in repeated attacks that consume your best future effects. [1]
+
+**Win the deck race**
+- **Choose this when:** exhaustion is becoming the deciding threat and the opponent cannot reliably cancel your recursion; do not force the loop through available cancels. [1][4]
+- **On your turn:** attack with The lady of space and time to recover its other copy, then maneuver into it. Stay below eight Source for this plan; seven is the ideal protected window, but playing further Source cards can close it. [1][5]
+- **Healing:** with a large hand, use Unicorn ally as a healing pass without retaining its draw engine. Recover it with The lady of space and time if another pass matters more than another attack. [2]
+- **Sources disagree on looping:** one player recommends cycling The lady of space and time despite weak combats; another prefers recovering payoff cards because attacking risks cancellation and defending risks damage. Choose according to remaining cancels and how much health you can spend. [4][3]
+
+**Bypass defenses and clear blockers**
+- **Choose this when:** several one-health sidekicks obstruct you, or defenses that fix printed values or ignore attacks make Lion cub of Cintra unreliable. [1]
+- **On your turn:** use Child of the Elder Blood to clear the small bodies instead of hoarding it for maximum Source. Later, when ahead in deck, play it first and maneuver away; recur it when guaranteed damage matters more than making the opponent spend a defense. [1]
+
+### How they lose
+
+- **Early pursuit.** Opponents want combat before your payoffs mature. **Answer:** boost away while building Source, shelter behind Ihuarraquax, and use Blink and early Unicorn ally to survive repeated attacks. [6][1]
+- **Cancels before seven Source.** Premature Lion cub of Cintra attacks can waste your saved payoff. **Answer:** count Source before committing; preserve one or two copies for later instead of spending them all during setup. [3]
+- **Forced exhaustion.** An active Unicorn ally lets opponents accelerate your deck by attacking. **Answer:** build your hand to end its ongoing effect, and stop pursuing eight Source when The lady of space and time is your deck-preservation plan. [1]
+
+### References
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 21: Ciri." *YouTube*. https://www.youtube.com/watch?v=hWXYF-FodDQ
+2. u/Traditional_Hat_8120. Comment on "Ciri tips and tricks" by u/Cultural_Purple_2861. *r/Unmatched*, Reddit, 12 November 2025. https://www.reddit.com/r/Unmatched/comments/1ouwj01/
+3. u/No_Manner_3414. Comment on "Ciri tips and tricks" (see [2]).
+4. u/Affectionate_Lead907. Comment on "Ciri tips and tricks" (see [2]).
+5. Restoration Games. *The Witcher: Steel and Silver*, Ciri deck. Card text as recorded in `input/heroes.json`.
+6. u/wafflecopter2. Comment on "Unmatched guide #1" by u/PenTernamee. *r/Unmatched*, Reddit, 7 June 2025. https://www.reddit.com/r/Unmatched/comments/1l5jpgv/
+
+### Not cited
+- [Ciri - The Witcher Unmatched Fighter Review](https://www.youtube.com/watch?v=_0qphBhbAeI): PoindexterG - To The Table Top! · video (read; introductory review adds no distinct plan).
+- [Ciri tips and tricks](https://www.reddit.com/r/Unmatched/comments/1ouwj01/): Reddit · forum (read; remaining replies repeat exhaustion advice).
+- [Unmatched guide #1](https://www.reddit.com/r/Unmatched/comments/1l5jpgv/): Reddit · forum (read; remaining replies offer broad alternatives or repeat sidekick advice).
+- [Video linked in Unmatched guide #1](https://www.youtube.com/watch?v=eRXyPi_PT7A): YouTube · linked video (not used; no transcript supplied in the pack).
+- [Unmatched: The Complete Roster](https://gridbeast.gg/unmatched-the-complete-roster/): Gridbeast · linked roster (read as a forum link; no Ciri strategy supplied).
+
+---
+
+<!-- id: yennefer_triss -->
+## Yennefer & Triss
+
+**In short:** You pressure hands from range so opponents spend their turns recovering instead of attacking. Choose Yennefer to turn weak defenses into damage, or Triss to survive melee pressure and finish through schemes. [1]
+
+### How they win
+
+**Yennefer: drain their defenses, then commit**
+- **Choose this when:** You face slower fighters built around card value, especially ranged opponents who can evade Triss's schemes. Your goal is damage before your own defenses run out, rather than collecting discards indefinitely. [1]
+- **Setup:** Play Advisor to the king before attacking when you already have a target. If you must approach first, maneuver, attack with Portal to anywhere, then use the extra action for Advisor to the king. [1][2]
+- **On your turn:** Lead with Portal to anywhere to spend their block before Incinerate or Echoing blast. Against a weak defense, boost Echoing blast for damage without consuming your repeatable attack; against a large block, save the boost card. [1]
+- **Commitment:** Usually leave Incinerate unboosted into blocks of four or less. Spend extra cards when their hand is low and another attack follows: they must accept damage or leave the follow-up undefended. [1]
+- **Reading their hand:** Play Merigold's Hailstorm around three to five opposing cards, when discarding hurts. With Telepathy, resolve their discard decision before choosing your boost, so you know whether their defensive effect remains. [1]
+- **Positioning:** Keep both fighters covering attack lanes from range; attack and retreat against melee fighters. Triss can lead with Portal to anywhere to bring a pursuer into Yennefer's zone while threatening Merigold's Hailstorm. [1]
+
+**Triss: chip from range, finish beside them**
+- **Choose this when:** Hard-hitting melee fighters would punish Yennefer for spending defenses on boosts, or their defenses blunt her attacks. This plan needs time to find schemes; ranged opponents can avoid the adjacency you need. [1][3]
+- **On your turn:** Use Yennefer's shared attacks to threaten Incinerate while Triss stays back. Poke with Echoing blast until they approach; after they finish adjacent to Triss, play a scheme first, then retreat rather than volunteer for two attacks. [1][4]
+- **Scheme timing:** Favor Lodge of sorceresses against a hand of one or two cards, which may lack a low BOOST reveal, or six or seven cards to pressure overdraw. Keep a low BOOST reveal yourself instead of sacrificing health for draw. [1]
+- **Clearing screens:** Against fighters with 1-health sidekicks, use Echoing blast to clear them: an undefended kill preserves your attack, while defending the screen costs their hand. [1]
+
+### How they lose
+
+- **Relentless attacks.** Aggressors with ample draw can absorb Incinerate and keep attacking until your defenses fail. **Answer:** Preserve Magical barrier under pressure, and use Quick and ready to escape a second attack; stop spending defensive cards on marginal boosts. [1][5]
+- **Sidekick hunting.** Losing your partner removes attack options. **Answer:** Use Portal to anywhere to redirect the fight; if Triss dies, Merigold's Hailstorm becomes boost material rather than a card you keep waiting to play. [1][6]
+- **Effects you cannot reliably cancel.** Telepathy lets opponents pay to preserve their crucial attack effects. **Answer:** Save Paralyzing fetters for attacks whose danger comes from increased values; use Magical barrier against large printed attacks instead. [1]
+
+### References
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 23: Yennefer & Triss." *YouTube*. https://www.youtube.com/watch?v=3NQE7MBkwcA
+2. Restoration Games. *The Witcher: Realms Fall*, Yennefer & Triss deck. Card text as recorded in `input/heroes.json`.
+3. PoindexterG - To The Table Top! "Yennefer & Triss - The Witcher Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=wXQtUyryXr0
+4. u/RGCarter. Comment on "Yennefer and Triss strategies" by u/Life-Rip183. *r/Unmatched*, Reddit, 29 July 2025. https://www.reddit.com/r/Unmatched/comments/1mc93cd/
+5. u/Derf1OO. Comment on "Tactics against Triss/Yennifer" by u/Megabro_SgOwDm. *r/Unmatched*, Reddit, 16 November 2025. https://www.reddit.com/r/Unmatched/comments/1oylxqw/
+6. u/GambuzinoSaloio. Comment on "Tactics against Triss/Yennifer" (see [5]).
+
+### Not cited
+- [In which matchups would Triss be better than Yen?](https://www.reddit.com/r/Unmatched/comments/1hch4gt/): Reddit · forum thread (read; melee exposure and hero selection covered more concretely by the cited sources).
+- [Strategy Sunday Vol. 23: Yennefer & Triss](https://www.reddit.com/r/Unmatched/comments/1n56dad/): Reddit · forum thread (read; replies discuss the video rather than strategy).
+
+---
+
+<!-- id: philippa_eilhart -->
+## Philippa Eilhart
+
+**In short:** You are a pressure fighter who turns repeated attacks into a squeeze on the opponent's hand. Keep them spending cards to survive, then use hand knowledge to choose between a bigger attack and a slower game of distance and resource advantage. [1][2]
+
+### How they win
+
+**Keep their hand under pressure**
+- **Choose this when:** The opponent struggles to replenish their hand, or grows stronger the longer you leave them alive. Attack consistently enough that they must choose between spending cards to fight back and spending their turn drawing. [1][2]
+- **On your turn:** If going first lets you reach an attack with a boosted maneuver, pay for it and start immediately. Otherwise, play for value until they engage; then increase the pressure rather than forcing an opening the map does not offer. [1]
+- **Using the special ability:** Spend cards to maintain that attack rhythm and refill afterward; the point is to make your opponent's hand shrink while yours stays functional. Boost to reach attacks instead of hoarding cards. [1]
+- **On their turn:** Use Do my bidding to make them spend a versatile card they wanted for defense. Follow that opening with Owlform when the revealed hand shows it will connect profitably; do not throw a pile of cards into a defense that will absorb the investment. [1][3]
+- **Committing damage:** Regicide gives you pressure without the same hand investment as Owlform. If you need a larger Owlform, Backup plan can prepare it, but treat that as a deliberate damage push rather than routine drawing. [3]
+- **Positioning:** Small maps make repeated engagement easier; larger maps reward Polymorphy's mobility. Let the board determine how you sustain pressure. [1]
+
+**Win the slower resource game**
+- **Choose this when:** The opponent burns out quickly without becoming stronger over time, or has enough draw to keep their hand healthy through your attacks. Against the latter, pivot toward value instead of expecting relentless pressure to empty their hand. [2][1]
+- **On your turn:** Use Spymaster's ruse to disrupt their useful cards, then let that information guide when you spend your larger attacks. When you already have a safe hand and lead on value, an action-one Spellbreaker attack lets you pass without maneuvering just to fill the turn. [2]
+- **Positioning:** Use Polymorphy to escape while keeping an opposing fighter in your zone. Put Dijkstra in the approach so reaching Philippa requires two maneuvers; your goal is to preserve distance without giving up the mobility that sustains it. [2]
+- **Sources disagree on the default:** One player favors aggression after extensive play; another favors distance, occasional attacks, and stalling. Their advice supports choosing by opponent and board position rather than declaring either approach universal. [1][2]
+
+### How they lose
+
+- **Heavy attacks outrun your counterpressure.** Your defenses can punish an attacker without keeping you safe, and attack-heavy hands can leave you exposed. **Answer:** Use Do my bidding to reduce a dangerous hit when their hand allows it; arrange Backup plan before waiting another turn becomes fatal. [4][3]
+- **Dijkstra dies before contributing.** Losing him before Spymaster's ruse undermines the slower plan. **Answer:** Protect his contribution while using him to obstruct approaches; if he falls too early, shift toward aggression instead of continuing to play for unavailable disruption. [2]
+- **Your own aggression exhausts you.** Refilling supports pressure but can consume the deck too quickly. **Answer:** Balance your attack timing, and decline the optional refill when exhaustion would make it harmful. [5][3]
+
+### References
+1. u/Atherious258. Comment on "Philippa strategy" by u/DartsAreSick. *r/Unmatched*, Reddit, 29 August 2025. https://www.reddit.com/r/Unmatched/comments/1n3cksy/
+2. u/Biggest_Lemon. Comment on "Philippa strategy" (see [1]).
+3. PoindexterG - To The Table Top!. "Philippa - The Witcher Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=f5sD4kGI0Ls
+4. u/Traditional_Hat_8120. Comment on "Philippa strategy" (see [1]).
+5. u/GambuzinoSaloio. Comment on "Philippa strategy" (see [1]).
+
+### Not cited
+- [Philippa strategy](https://www.reddit.com/r/Unmatched/comments/1n3cksy/): Reddit ? forum thread (read in full; other commenters repeat aggression advice, ask questions, or offer impressions without additional actionable detail).
+
+---
+
+<!-- id: eredin -->
+## Eredin Bréacc Glas
+
+**In short:** You play an aggressive melee fighter who wants to turn sacrificed Red Riders into sustained pressure, including damage on the opponent’s turn. Decide whether to rush that transition or first spend the Riders wearing down defenses; becoming Enraged with nothing left to attack with is a real failure case. [1][2]
+
+### How they win
+
+**Rush Enraged and force the damage race**
+- **Choose this when:** You can pursue a quick kill rather than a long resource fight. Most replies favor this plan over Rider revivals. [1][3]
+- **On your turn:** Spend Riders through Foul purpose and Icy guile rather than waiting for the opponent to cooperate. Once Enraged, keep attacking with Backhand and bring Implacable into your offensive hand; against defenses with immediate effects, including Feints, use Brutal strike to punish the attempted interruption. [2][3][4][5]
+- **On their turn:** Hold Wild hunt for melee exchanges so your opponent pays for attacking you as well. Keep those defensive turns contributing to the race. [1][3]
+- **Positioning:** Use Riders to pin the opponent down, but keep one adjacent to Eredin while you still expect to use Portal defense. A distant Rider cannot save Eredin. [6][2]
+- **Sources disagree on the transition:** The video review favors keeping Riders around for their utility, whereas most forum replies urge sacrificing them immediately. The slower plan spends enemy defenses before committing your finishing hand. [5][1][2]
+
+**Spend their defenses before the final push**
+- **Choose this when:** The opponent’s healing, discard, or deck recycling makes an early all-out attack unreliable, or your hand cannot sustain aggression after the Riders disappear. Save your tricks for a finish. [2]
+- **On your turn:** Start with Rider attacks using Foul purpose, then use Unyielding hordes to prolong their pressure and draw out defenses. Build a finishing hand with Backhand, Foul purpose, Close for the kill, and Might of the Aen Elle before committing Eredin. [2]
+- **On their turn:** Preserve Icy guile instead of spending it offensively into opponents who can recover from that damage or dismantle your hand. Your opening pressure should leave you equipped to finish, rather than merely reaching Enraged with an empty offensive hand. With one Rider remaining, its sacrifice can surprise an attacker, but do not plan around getting cancellation in that same combat. [2][7]
+- **Finishing:** Once the Riders have done their work, make Backhand pressure count against the depleted defenses. Keep Foul purpose for a finish against a retreating opponent. [2]
+
+### How they lose
+
+- **A stranded defensive hand.** Losing every Rider can leave Portal defense as your only defense and cost you the game. **Answer:** Check your defensive hand before sacrificing the last Rider; retain the adjacent body when you need that escape. [8][6]
+- **Buying cards with too much health.** **Answer:** Sources disagree: one player lost relying on Portal defense without Riders; another accepts that damage when already far ahead on health and unlikely to reach exhaustion. Reserve that gamble for the stated situation. [8][9]
+- **Effect damage during your approach.** **Answer:** Against opponents relying on scheme or other effect damage, establish Might of the Aen Elle and keep attacking to maintain it; do not mistake that protection for an answer to heavy combat hits. [5]
+
+### References
+1. u/Karma_Ger_Eng. Comment on "How to play as Eredin" by u/Life-Rip183. *r/Unmatched*, Reddit, 14 March 2025. https://www.reddit.com/r/Unmatched/comments/1jbbdha/
+2. u/Independent_Act_6367. Comment on "Tips on playing Eredin Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 12 March 2026. https://www.reddit.com/r/Unmatched/comments/1rryuh7/
+3. u/d_Shirt. Comment on "Tips on playing Eredin Effectively?" (see [2]).
+4. Restoration Games. *The Witcher: Realms Fall*, Eredin Bréacc Glas deck. Card text as recorded in `input/heroes.json`.
+5. PoindexterG - To The Table Top!. "Eredin - The Witcher Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=3is-DUhamNg
+6. u/GambuzinoSaloio. Comment on "Tips on playing Eredin Effectively?" (see [2]).
+7. u/Darkblade113. Comment on "Tips on playing Eredin Effectively?" (see [2]).
+8. u/GryllstheBear. Comment on "How to play as Eredin" (see [1]).
+9. u/Derf1OO. Comment on "How to play as Eredin" (see [1]).
+
+### Not cited
+- [How to play as Eredin](https://www.reddit.com/r/Unmatched/comments/1jbbdha/): Reddit · forum (read in full; opening post and remaining replies add no distinct plan).
+- [Tips on playing Eredin Effectively?](https://www.reddit.com/r/Unmatched/comments/1rryuh7/): Reddit · forum (read in full; remaining replies repeat the Enraged plan or offer no concrete decision rule).
+
+---
+
+<!-- id: muhammad_ali -->
+## Muhammad Ali
+
+**In short:** You play a patient counterpuncher, gathering information and a full hand before committing to short bursts. Make opponents spend cards reaching and blocking you, then exploit the opening without leaving yourself stranded in Bee. [1][2]
+
+### How they win
+
+**Win the long fight**
+- **Choose this when:** melee opponents must chase you and their attacks can be absorbed efficiently; you can make them spend resources faster than you. Treat exhaustion as a plan you actively maintain. [1][3]
+- **On your turn:** use Jab from Butterfly to poke and retreat; seek Ali Shuffle wins to recycle Ali Shuffle for deck longevity, or Rope-a-dope when health is the limiting resource. [1]
+- **On their turn:** use Hard to be humble to identify attacks worth catching with Rope-a-dope. Save Fancy footwork for their expensive hits, rather than spending it simply because you can escape a zone. [1][2]
+- **Positioning:** keep a route across a zone boundary and make them come to you; avoid standing where Fancy footwork cannot escape their zones. [1][4]
+- **Sources disagree on the default:** The Gaming Geek Net prioritizes exhaustion; PrinceOfAsphodelUnmatched expects damage to win more often. Follow the resource race and the openings you actually have. [1][4]
+
+**Take their hand apart**
+- **Choose this when:** The greatest is unlikely to pay off, or a patient opponent will not approach. Louisville lip gives you a reason to initiate without demanding a knockout turn. [4][5]
+- **On your turn:** from Bee, use Answer the bell, then Stronger than the skill, then Louisville lip after winning. Strip a defense first and use the remaining hand information to judge the random discard's likely value. [1][5]
+- **Alternative setup:** against opponents hanging back, use Answer the bell into Fancy footwork and Louisville lip when the map permits and cancels are accounted for. Against attackers, arrange that same opening through your preceding defense instead. [4]
+- **On their turn:** favor Hard to be humble against their final attack: the information is freshest immediately before you act. Hold Champion of the world when spending it offensively would leave your hand short of reliable defense. [4][5]
+
+**Punish the exposed defense**
+- **Choose this when:** hand inspection confirms scarce defenses, or an opponent offers undefended 1-health sidekicks. These are openings for The greatest, rather than reasons to chase its payoff every game. [3][5]
+- **On your turn:** start in Bee with Answer the bell, then Stronger than the skill to remove their remaining defense, then The greatest or Momentous Shift. Check their escape effects before committing the follow-up. [1][4]
+- **Counterattack:** against aggressive fighters, defend into a position for Fancy footwork, then attack with it from Butterfly before Momentous Shift. The destination must remain adjacent for your Bee follow-up. [4]
+
+### How they lose
+
+- **Bee becomes a trap.** High defenses can deny your return to Butterfly. **Answer:** bait premium blocks with Jab before committing your payoff; keep Close and clinch ready to establish the next counterattack. [1][2]
+- **Cancels break the setup.** Feint can spoil Fancy footwork or The greatest. **Answer:** inspect their hand with Hard to be humble and draw out cancels with weaker attacks before committing. [1][4][6]
+- **Fast attackers empty your defenses.** One block cannot cover a whole flurry. **Answer:** preserve several defenses, or use Hard to be humble and Champion of the world to break contact while blocking. [7]
+
+### References
+1. The Gaming Geek Net. "Muhammad Ali Advanced Strategy Guide - Unmatched Tips and Tricks." *YouTube*. https://www.youtube.com/watch?v=kTDlqoPUGwY
+2. u/Traditional_Hat_8120. Comment on "Ali Fighter Tips" by u/Poohmessedupthemoose. *r/Unmatched*, Reddit, 9 December 2025. https://www.reddit.com/r/Unmatched/comments/1pigxgq/
+3. u/Jerry-Red. Comment on "Tips on effectively playing Ali?" by u/ronchman. *r/Unmatched*, Reddit, 13 February 2026. https://www.reddit.com/r/Unmatched/comments/1r3if9o/
+4. PrinceOfAsphodelUnmatched. "Unmatched Muhammad Ali Combo Guide." *YouTube*. https://www.youtube.com/watch?v=-OxzK31iaGw
+5. u/ServantOfTheShepherd. Comment on "Tips for playing as Muhammad Ali" by u/Life-Rip183. *r/Unmatched*, Reddit, 1 January 2026. https://www.reddit.com/r/Unmatched/comments/1q13k61/
+6. u/fuzzyfoot88. Comment on "Ali Fighter Tips" (see [2]).
+7. Restoration Games. "Design Diary" (Muhammad Ali sections). *Restoration Games*. https://restorationgames.com/design-diary-lee-vs-ali/
+
+### Not cited
+- [Notable Fighters | Muhammad Ali](https://www.youtube.com/watch?v=-CgEKhM_Hlc): Unmatched Playtesting Guild · video (read; examines an earlier unofficial deck with different mechanics).
+- [Muhammad Ali - Unmatched Fighter Review](https://www.youtube.com/watch?v=ouQlosnRceI): PoindexterG - To The Table Top! · video (read; the strategy videos provide more detailed sequencing).
+
+---
+
+<!-- id: ancient_leshen -->
+## Ancient Leshen
+
+**In short:** You win by harassing with Wolves until the opponent lacks the cards to safely approach your ranged hero. Threaten double attacks, heal behind your screen, and commit when their escape cards and best defenses are spent. [1]
+
+### How they win
+
+**Make the Wolves drain their answers**
+- **Choose this when:** the opponent still has movement defenses or strong blocks that would waste an early double attack. Make them spend those answers before committing Ancient Leshen. [1]
+- **On your turn:** send a Wolf with Command the forest, then mix Nature abounds and Harrying strike into later attacks from the same formation. They must judge whether to preserve their hand, stop your draw, or block a heavy hit. [1]
+- **On their turn:** defend a Wolf with Harrying strike or Planted feet when you lack a replacement; keeping it alive makes them spend another attack before reaching you. If you have a summon ready, letting it die can save the defense. [1]
+- **Positioning:** Wolves should obstruct the route to Ancient Leshen while threatening attacks themselves. Use Primeval slam to rebuild the screen and reposition after attacking, rather than leaving the returning Wolf wherever it appeared. [1][2]
+- **Sources disagree on patience:** one forum player recommends double maneuvers and saving versatile cards for defense; Karma favors early attacks and draw, warning that camping gives opponents too many resources. Choose deliberately between rebuilding your hand and maintaining pressure. [2][1]
+
+**Make small damage disappear**
+- **Choose this when:** melee opponents must fight through Wolves, or the opponent deals scattered damage rather than a decisive burst. Those turns buy time for healing; burst damage can outrun it. [1]
+- **On your turn:** establish Strength of the pack, then keep attacking with Wolves while Ancient Leshen recovers. When pressure mounts, use Flock of birds to retreat and rebuild rather than staying exposed for another attack. [1]
+- **Positioning:** block chokepoints with Wolves; when protecting the healing matters more, hide a Wolf behind Ancient Leshen in the same zone. Restore the screen when you can safely send it forward again. [1][3]
+- **On their turn:** use Planted feet to preserve a vital Wolf; reserve Wily Fighting for Ancient Leshen when an adjacent attacker lets you turn defense into pressure toward lethal. [1]
+
+**Cash in the double attack**
+- **Choose this when:** their health is low and their movement defenses or strongest blocks are depleted. This is your finishing turn, rather than something to force throughout the opening. [1]
+- **On your turn:** use Vanish into murder to prepare your return, then lead with Flock of birds to follow a retreat and finish with Command the forest. If they already cannot escape, finish with Flock of birds and retreat afterward. [1][4]
+
+### How they lose
+
+- **Burst through the screen.** Action chains and ways around Wolves can overwhelm your limited defenses. **Answer:** retreat with Flock of birds or Vanish into murder before committing another attack; healing needs time. [1]
+- **Cancels break the setup.** Feint can stop Disturbing howls from delivering the opponent to you. **Answer:** threaten Command the forest from the same Wolf instead of depending on that chain. [1]
+- **Exhaustion traps.** Camping from the start leaves their resources intact. **Answer:** pressure first, then use Vanish into murder for breathing room. Karma treats it as ending your turn; one forum correction and the deck show otherwise, so budget the remaining action and return draw. [1][5][6]
+
+### References
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 22: Ancient Leshen." *YouTube*. https://www.youtube.com/watch?v=8SLmr2URk9w
+2. u/Rare-Salamander6122. Comment on "Playing as the Leshen" by u/Life-Rip183. *r/Unmatched*, Reddit, 15 January 2025. https://www.reddit.com/r/Unmatched/comments/1i25gqr/
+3. u/Flat-Employee-4362. Comment on "Playing as the Leshen" (see [2]).
+4. PoindexterG - To The Table Top! "Ancient Leshen - The Witcher Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=_CzsjNMdhQk
+5. Restoration Games. *The Witcher: Steel and Silver*, Ancient Leshen deck. Card text as recorded in `input/heroes.json`.
+6. u/Ok-Excitement7898. Comment on "Playing as the Leshen" (see [2]).
+
+### Not cited
+- [Strategy Sunday Vol. 22: Ancient Leshen](https://www.reddit.com/r/Unmatched/comments/1m5bis3/): Reddit · video announcement and replies (read; replies contain no strategy; video cited directly).
+
+---
+
+<!-- id: blackbeard -->
+## Blackbeard
+
+**In short:** Blackbeard is a ranged resource grinder who makes opponents spend attacks on Sea Dogs, then strips away the attacks that could hurt him. You want them approaching through blockers with an empty treasury, so their next attack cannot buy its way past your defenses. [1][2]
+
+### How they win
+
+**Run them out of worthwhile attacks**
+- **Choose this when:** melee opponents must fight through your Sea Dogs, especially when their damage depends on a few premium attacks. [1]
+- **On your turn:** use Plunder early to secure your doubloons; later, retreat with it so pursuit costs the opponent boost cards. When the treasury holds one doubloon, attack with Avast Ye! to tempt them into spending it before their attacking turn. [1][2]
+- **On their turn:** hold Fearsome and calculating for defense with an empty treasury, and discard their best remaining attack. Prefer their final action: you get a whole turn to exploit the revealed hand. [1]
+- **Positioning:** keep Sea Dogs between Blackbeard and the approach, using corridors to obstruct pursuit. Defend a blocker when keeping that route closed matters; do not automatically spend a card on every doomed Sea Dog. [1][2][3]
+- **Rebuilding:** attack with Show a leg! after losing a blocker, making the opponent spend another defense before facing the replacement. Avoid using it as Blackbeard's routine defense: that weak block gives away the doubloon you are trying to protect. [1]
+
+**Turn hand knowledge into a finishing turn**
+- **Choose this when:** the revealed hand lacks defenses, or you can remove its only escape or combo breaker. Switch from stripping attacks to stripping that defense, then spend your turn attacking before the opponent gets another maneuver. [1]
+- **On your turn:** arrange Sea Dog support, then follow Fearsome and calculating with Give no quarter attacks. If you need to approach, pay for an extra action and open with Plunder to recover the coin while preserving two attacks. [1][4]
+- **Using the extra action:** spend for a calculated finish rather than routinely spending. With all three doubloons, opening with Give no quarter also pressures them to return your coin or allow another attack. [1][3]
+- **Against cancels:** advertise Give no quarter through adjacency, then play Avast Ye! or Queen Anne's revenge into the expected Feint. Punish their predictable defense. [5]
+- **Sources disagree on Queen Anne's revenge:** Taytertotboardgaming recommends attacking almost exclusively; Karma saves it against opponents who repeatedly reach you with large attacks, attacking instead into many cancels or defenses that fix printed values. Follow the defensive plan when preventing combat damage matters more than immediate pressure. [5][1]
+
+### How they lose
+
+- **Repeated combat damage breaks your control.** Opponents can spend against your defense and immediately recover a coin by hurting you. **Answer:** boost No prey, no pay only as high as the revealed attack requires; save Queen Anne's revenge for large hits. [1]
+- **Low-health sidekicks crowd the board.** They demand an efficient clearance. **Answer:** use Light the fuse against clustered one-health bodies, keeping your own fighters outside its blast; otherwise save it to boost No prey, no pay. [1]
+- **A finisher gets canceled or escapes.** A brace of primed pistols fails against Feints or movement out of Blackbeard's zone. **Answer:** remove the relevant defense with Fearsome and calculating before committing to that finish. [1][6]
+
+### References
+1. Karma ᴳᴱᴿ | ᴱᴺᴳ Unmatched. "Strategy Sunday Vol. 24: Blackbeard." *YouTube*. https://www.youtube.com/watch?v=nE-zWqU0Kp4
+2. u/d_Shirt. Comment on "Any tips and strategies on Black Beard?" by u/Huge-Walk-174. *r/Unmatched*, Reddit, 5 September 2025. https://www.reddit.com/r/Unmatched/comments/1n9abh5/
+3. u/TheEliteB3aver. Comment on "Any tips and strategies on Black Beard?" (see [2]).
+4. u/JustaPoopBag. Comment on "Any tips and strategies on Black Beard?" (see [2]).
+5. Taytertotboardgaming. "Unmatched, Blackbeard quick guide, overview & strategy." *YouTube*. https://www.youtube.com/watch?v=ta8RRGFj0jI
+
+6. Restoration Games. *Battle of Legends Vol. 3*, Blackbeard deck. Card text as recorded in `input/heroes.json`.
+
+### Not cited
+- [Blackbeard - Unmatched Fighter Review](https://www.youtube.com/watch?v=q_t1NjQtAog): PoindexterG - To The Table Top! · video (read; introductory review, with strategy covered more precisely by the cited videos).
+- [Tips on Volume 3](https://www.reddit.com/r/Unmatched/comments/1mieh3j/): r/Unmatched · forum thread (read; doubloon and blocker advice overlaps the cited discussion).
+- [Strategy Sunday Vol. 24: Blackbeard](https://www.reddit.com/r/Unmatched/comments/1r5lb5m/): r/Unmatched · forum thread (read; replies praise the video without adding strategy).
+- Give a One Sentence Tip on how to Play against your favorite Fighter. Go!: r/Unmatched · forum excerpt (read; high-value attack warning covered by [1]; pack supplies no thread URL or original poster).
+- Unmatched Tips and Strategies: Fighting Against the Best Fighters: The Gaming Geek · article excerpt (read; Blackbeard coverage is only a coming-soon placeholder; pack supplies no URL).
+
+---
+
+<!-- id: chupacabra -->
+## Chupacabra
+
+**In short:** You’re an aggressive melee fighter who wins by draining defenses, then landing a prepared double attack. [1] Keep the pressure up, but choose when to spend your deck and enter low health: either commitment can leave you unable to finish. [1][2]
+
+### How they win
+
+**Overwhelm their hand, then cash in**
+- **Choose this when:** You face aggressive opponents or decks that draw heavily, or their hand is already short enough to punish with consecutive attacks. [2][1]
+- **On your turn:** Use Traveler of the night to approach, open with Ambush, then finish with Blood in the air if you won. When already adjacent, Unsettle into Ambush attacks their hand directly; don’t spend Unsettle without a follow-up ready. [1]
+- **Using the special ability:** Draw after both attacks against aggressive or fast-drawing opponents, keeping pressure on them instead of giving them time to find their best attacks. [2]
+- **On their turn:** Lean on Natural toughness against manageable hits so you can spend versatile cards attacking; use Ravenous lunge for defense rather than expecting it to win attacking combats. Save Wounded beast for offense unless defending with it is necessary to survive. [1]
+- **Positioning:** Against sidekick screens, use Traveler of the night to reach the hero without sacrificing your double attack. If two enemies stand together, move beside both before attacking with Tooth and tail rather than waiting for them to surround you. [1]
+- **Finishing:** Preserve Blood in the air for attacks; use another copy as its boost only when that secures victory. Against decks with low BOOST values, consider spending Ambush as the boost instead of relying on it to win your opening combat. [1]
+
+**Conserve your deck, then strike at low health**
+- **Choose this when:** You can maneuver and attack while making the opponent maneuver twice to replenish their hand, bringing them closer to exhaustion before you commit. [2]
+- **On your turn:** Skip the optional draw during this pressure phase. Once you have a prepared combo at low health, switch to drawing aggressively and finish rather than continuing to conserve. [2]
+- **Setting up the finish:** Use Unsettle to cross the health threshold when Feeding is ready, then follow Feeding with Blood in the air after a combat win. Check your health before planning another Feeding: healing can interrupt the sequence. [1][3]
+- **Sources disagree on timing:** One Reddit player advocates taking early hits to reach low health quickly; The Gaming Geek Net warns that doing so before damaging the opponent can get you killed first. Judge the commitment from both health totals, their hand and discard pile, and your available follow-up. [4][1]
+
+### How they lose
+
+- **Burst before your payoff.** Low health leaves you vulnerable to a lethal combo even with a full hand. **Answer:** Delay the commitment against those opponents and spend Wounded beast defensively when survival requires it. [5][1]
+- **Your opening attack gets read.** The more they struggle can whiff when left undefended or met with a defense that locks printed values. **Answer:** Avoid tells, mix in Ambush, and use The more they struggle to boost Blood in the air against value-locking defenses. [1]
+- **Chasing with too many cards.** A retreat can force extra maneuvers and waste draws through overfilling. **Answer:** Leave room for pursuit; one player recommends five cards if you need to maneuver twice next turn. [6]
+
+### References
+1. The Gaming Geek Net. "Chupacabra Advanced Strategy Guide - Unmatched Tips and Tricks." *YouTube*. https://www.youtube.com/watch?v=iaKRJfKkEKQ
+2. u/TitanasGios. Comment on "Tips - Chupacabra" by u/QuitSilent4144. *r/Unmatched*, Reddit, 18 July 2026. https://www.reddit.com/r/Unmatched/comments/1uzx2ta/
+3. Restoration Games. *Battle of Legends Vol. 3*, Chupacabra deck. Card text as recorded in `input/heroes.json`.
+4. u/TheEliteB3aver. Comment on "Tips on Volume 3" by u/PenTernamee. *r/Unmatched*, Reddit, 5 August 2025. https://www.reddit.com/r/Unmatched/comments/1mieh3j/
+5. u/Professional_Cow9660. Comment on "Tips - Chupacabra" (see [2]).
+6. u/Jerry-Red. Comment on "Tips - Chupacabra" (see [2]).
+
+### Not cited
+- [Chupacabra - Unmatched Fighter Review](https://www.youtube.com/watch?v=zVhfEmAmdnE): PoindexterG - To The Table Top! · video (read; overview overlaps the more detailed timing advice cited above).
+- [Unmatched, Chupacabra quick guide, overview & strategy](https://www.youtube.com/watch?v=BZaNvq6CxD4): Taytertotboardgaming · video (read; overlapping sequencing advice; its spoken Unsettle draw description conflicts with the deck).
+- [Tips on Volume 3](https://www.reddit.com/r/Unmatched/comments/1mieh3j/): Reddit · forum comments (read; u/Rexmustwreck’s aggression and exhaustion advice overlaps cited sources; other replies add no strategic detail).
+- [Tips - Chupacabra](https://www.reddit.com/r/Unmatched/comments/1uzx2ta/): Reddit · remaining forum comments (read; u/LabRat2329’s hand-size advice is qualified in replies; acknowledgments add no strategy).
+
+---
+
+<!-- id: loki -->
+## Loki
+
+**In short:** You make opponents choose between keeping a dangerous hand and spending tricks that help you. Make them come to you, then turn their hand size, defensive choices, and your recycled tricks into damage. [1][2]
+
+### How they win
+
+**Make a full hand expensive**
+- **Choose this when:** opponents hoard cards, retreat to build their hand, or carry high printed defenses. You want them choosing between feeding your attacks and spending resources to keep their hand small. [1][2][3]
+- **On your turn:** wait at distance, then use Trick: Svadilfari's Lure into Shapeshifter or Underhanded once their hand supports a hard hit. Use Looking for trouble when a broad hand gives you weak defenses to choose, or attack with Trick: Freyja's Rescue when you expect a high defense. [1][2][3]
+- **Positioning:** walk away when chasing would cost a boost; make them spend movement resources or maneuver into a larger hand. Preserve your own cards rather than paying repeatedly to reach them. [1]
+- **On their turn:** recognize your card backs: answer an incoming Trick: Baldr's downfall with God of Mischief when preventing damage matters, or Malicious Flyting when you need cards. Decide which resource you need before spending the defense. [4][5]
+
+**Turn their aggression into a counterattack**
+- **Choose this when:** aggressive combo fighters attack twice and have weak defenses or little health. Their attacks let you seed tricks before your own turn begins. [6]
+- **On their turn:** defend the first attack with Trick: Sindri's Bet and the second with Trick: Freyja's Rescue. Keep Trick: Svadilfari's Lure and Ragnarök ready so those defenses lead directly into a counterattack. [6]
+- **On your turn:** play Trick: Svadilfari's Lure, then Ragnarök; count the tricks that will remain after they choose a defense. A defensive trick leaves their hand and reduces the hit, so do not budget damage from the count before combat. [4][6][7]
+- **Mix-up:** once they expect Ragnarök and want to defend with a trick, attack with God of Mischief instead. If they are saving a high defense, Shapeshifter can bait it before Ragnarök. [3]
+
+**Keep the healing coming**
+- **Choose this when:** opponents keep discarding tricks back to you, or you can repeatedly force their healing trick while surviving on your defenses. Treat this as a conditional route into a long game. [8][9]
+- **On your turn:** use Looking for trouble to force Trick: Freyja's Rescue; use Laevateinn to reclaim a trick you need to replay. When tricks return through discards, put them atop your deck if extending the game matters, or into your hand under immediate pressure. [2][9]
+- **Sources disagree on exhaustion:** one player recommends recurring healing and defensive tricks; another argues that your draw and the extra cards you give away make fatigue a poor plan. Keep attacking rather than assuming survival alone wins. [9][10]
+
+### How they lose
+
+- **Small hands and promptly spent tricks.** These deny your biggest threats. **Answer:** refill their hand with tricks or retreat to force maneuvers; use Looking for trouble to find damage through weak defenses instead of waiting indefinitely for Ragnarök. [3][8]
+- **Sidekick bodyblocks.** Numerous opposing fighters obstruct your melee access. **Answer:** preserve Trick: Svadilfari's Lure for reaching the target behind them. [8]
+
+### References
+1. u/Jerry-Red. Comment on "I made a vow to play Loki until I win with him, but I keep losing. Help me get better." by u/Brean__. *r/Unmatched*, Reddit, 22 April 2026. https://www.reddit.com/r/Unmatched/comments/1ss8964/
+2. Taytertotboardgaming. "Unmatched, Loki quick guide, overview & strategy." *YouTube*. https://www.youtube.com/watch?v=nVwG9oZvqSo
+3. u/Moon_Cheese_3. Comment on "I made a vow to play Loki until I win with him, but I keep losing. Help me get better." (see [1]).
+4. Restoration Games. *Battle of Legends Vol. 3*, Loki deck. Card text as recorded in `input/heroes.json`.
+5. PoindexterG - To The Table Top!. "Loki  - Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=Dau1USHCAr4
+6. u/zehuman52. Comment on "I made a vow to play Loki until I win with him, but I keep losing. Help me get better." (see [1]).
+7. u/TheEliteB3aver. Comment on "Tips on Volume 3" by u/PenTernamee. *r/Unmatched*, Reddit, 5 August 2025. https://www.reddit.com/r/Unmatched/comments/1mieh3j/
+8. u/jclayton111. Comment on "Tips on playing Loki Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 10 March 2026. https://www.reddit.com/r/Unmatched/comments/1rpofab/
+9. u/CupAlternative. Comment on "I made a vow to play Loki until I win with him, but I keep losing. Help me get better." (see [1]).
+10. u/Independent_Act_6367. Comment on "I made a vow to play Loki until I win with him, but I keep losing. Help me get better." (see [1]).
+
+### Not cited
+- [Loki strategy video linked in the forum](https://youtu.be/EBBpd57maTc): YouTube · video (link read in the pack; no transcript supplied, so not used).
+- [Tips on playing Loki Effectively?](https://www.reddit.com/r/Unmatched/comments/1rpofab/): Reddit · additional replies (read; initiative advice overlaps the cited sources).
+- [I made a vow to play Loki until I win with him, but I keep losing. Help me get better.](https://www.reddit.com/r/Unmatched/comments/1ss8964/): Reddit · additional replies (read; acknowledgments and overlapping advice omitted).
+
+---
+
+<!-- id: pandora -->
+## Pandora
+
+**In short:** You are an aggressive setup fighter: get into threatening positions while keeping your box flips conservative. Save the big gamble for a hand that can turn it into damage or healing, rather than hoping the next reveal will invent a plan. [1][2]
+
+### How they win
+
+**Build the double-attack turn**
+- **Choose this when:** You have several miseries revealed and attacks ready, especially when you can finish the game with two attacks. If you are already losing and cautious play will not save you, accept more risk to create that opening. [3]
+- **Setup:** Against decks with many Feints or cancels, lead with Aphrodite's Beauty or another attack before committing Hera's Curiosity. Do not spend health chasing a huge reveal count with only defenses in hand. [2]
+- **On your turn:** Use Forged by Hephaestus to reach the target, then attack twice with Hera's Curiosity if your hand permits. Use the first attack's hand information to judge the second; one canceled attack need not end the turn's pressure. [3]
+- **Recovering your threats:** Play Hindsight when Toil is revealed and a Feint is unlikely, then prioritize recovering Hera's Curiosity or Aphrodite's Beauty. You want another payoff or another chance to repair the health spent creating one. [4]
+- **Healing:** Push harder with healthy reserves and Aphrodite's Beauty ready; after a bust, use it to repair the damage rather than abandoning the turn. That recovery still needs to get past a cancel. [4][5][6]
+- **Sources disagree on routine flips:** One player recommends stopping after one unless you need a particular result; Taytertotboardgaming says most matchups demand more than one. Both warn against gambling hard every turn: press for a payoff you can actually use. [2][3]
+
+**Clear fragile sidekicks and fight through yours**
+- **Choose this when:** The opponent has several 1-health sidekicks you can catch together, or a summoned Kakodaemon can take over attacks while Pandora stays out of the fight. This gives your sidekick cards work without exposing Pandora to every exchange. [3]
+- **Positioning:** Use an early Confusion reveal to step beside vulnerable enemies before a possible Pain reveal. Treat that as an opportunity when it appears, rather than planning around an unrevealed misery. [3][1]
+- **On your turn:** Send a Kakodaemon into the opposing sidekicks with Spite, and use Malice to pressure their hand. Keep Pandora and your other Kakodaemon away from the Spite attacker so your own formation does not pay for the splash damage. [3][6]
+- **Restoring Pandora:** Attack with Guided by the Fates when you need a smaller heal to regain room for future box turns; a Kakodaemon can do that fighting for her. Prefer attacking with it to gambling on its defense. [5][6][7]
+
+### How they lose
+
+- **Cancels erase the recovery you counted on.** A canceled Aphrodite's Beauty leaves your gamble unpaid. **Answer:** bait Feint before risking the heal, and usually stop revealing once Misfortune appears. [4]
+- **Low health shuts down your engine.** At four health or less, further gambling becomes restrictive. **Answer:** rebuild with Guided by the Fates before chasing another large box turn. [7][5]
+- **Extra draw becomes exhaustion.** Greed can force unwanted late draw. **Answer:** avoid Zeus's Mischief when preserving your deck matters more than another aggressive turn. [6][3]
+
+### References
+1. u/OuroborosArchipelago. Comment on "Tips on playing Pandora" by u/Franjeims. *r/Unmatched*, Reddit, 30 August 2025. https://www.reddit.com/r/Unmatched/comments/1n431fe/
+2. u/CauseImBatman02. Comment on "Tips on playing Pandora" (see [1]).
+3. Taytertotboardgaming. "Unmatched, Pandora quick guide, overview & strategy." *YouTube*. https://www.youtube.com/watch?v=AHfkFbLxFhQ
+4. u/Ok-Boysenberry9678. Comment on "Strategy for Pandora?" by u/sylveonce. *r/Unmatched*, Reddit, 7 November 2025. https://www.reddit.com/r/Unmatched/comments/1oqwc2r/
+5. Restoration Games. *Battle of Legends Vol. 3*, Pandora deck. Card text as recorded in `input/heroes.json`.
+6. PoindexterG - To The Table Top!. "Pandora - Unmatched Fighter Review." *YouTube*. https://www.youtube.com/watch?v=Si9wSXOe0mw
+7. u/TheEliteB3aver. Comment on "Tips on Volume 3" by u/PenTernamee. *r/Unmatched*, Reddit, 5 August 2025. https://www.reddit.com/r/Unmatched/comments/1mieh3j/
+
+### Not cited
+
+All linked sources in the pack are cited above. The unlinked one-sentence counterplay excerpt was read but not used because its author, date, and thread URL are incomplete.
+
+---
+
+<!-- id: leonardo -->
+## Leonardo
+
+**In short:** You win through efficient trades, using positioning to make your attacks harder to read and your opponent's approaches awkward. Keep Splinter productive, draw out cancels, and turn control of the board into damage before your hand runs thin. [1][2]
+
+### How they win
+
+**Bait the cancel, land the heavy attack**
+- **Choose this when:** you're facing decks with Feints or cancels that threaten your boosted attacks. Track those answers rather than committing your biggest threats into them blindly. [1][2]
+- **On your turn:** bring Leonardo and Splinter beside the target as though preparing Fearless leader, then punish the expected cancel with Katana. Use Wise beyond his years from a favorable zone position to draw out another answer before committing Turtle power!. [1][2]
+- **Keep the bluff alive:** retain both Katana and Turtle power! instead of spending both copies of either early. Save Leonardo leads to boost Turtle power! rather than playing it as a scheme in a duel. [2]
+- **On their turn:** reserve Heroes in a half shell for expected heavy attacks, not bait. Keep Quick strike available for defense so pressure doesn't empty your hand as quickly. [1][2]
+- **Follow through carefully:** For Sensei can arrange a follow-up Fearless leader, but buy its extra action only when the next attack justifies the discard and leaves you defended. [1][2]
+
+**Make their approach work against them**
+- **Choose this when:** melee opponents must approach through spaces with fewer zones, or a hero shelters behind a sidekick. You need useful terrain and deliberate setup; the relocation trick also depends on the opponent engaging where you want. [1][2]
+- **Positioning:** keep Leonardo and Splinter near spaces belonging to several zones, checking the adjacent approach spaces. At the start of your turn, shift the opponent into a worse zone position or into reach; don't spend the movement without a purpose. [1][2]
+- **On your turn:** use Wise beyond his years to pressure the opponent's defenses from that advantage. When attacking with For Sensei, consider separating the combatants afterward instead of buying another attack, making the opponent spend movement to reach you again. [1]
+- **On their turn:** defend Splinter with Spatial awareness from a favorable zone position. Against fighters who depend on staying together, use Eat, Sleep, and Breathe Ninjutsu to split their formation or interrupt a second attack. [1]
+- **Reach the protected hero:** keep Leonardo adjacent to Splinter behind the approaching sidekick. When that sidekick attacks Splinter, defend with Eat, Sleep, and Breathe Ninjutsu and send Leonardo along a long zone toward the sheltered hero. [1]
+
+### How they lose
+
+- **Discard costs consume your answers.** Extra actions and boosts compete with defensive resources, especially against forced discard. **Answer:** prioritize fuel for I have a plan over For Sensei; discard Quick strike or an unneeded Eat, Sleep, and Breathe Ninjutsu when necessary. [1]
+- **Splinter dies before earning his keep.** You lose healing and support for Fearless leader. **Answer:** protect him until Protective father pays off; when a wounded Leonardo is chased, split your fighters and swap him away from pursuit, leaving Splinter ready with Spatial awareness. [1][2]
+- **Heavy attacks punish weak blocks.** Wise beyond his years is a dangerous defense against a big hit. **Answer:** prefer attacking with it; hold I have a plan and discard fuel for the attack you cannot afford to take. [1]
+
+### References
+1. The Gaming Geek Net. "Leonardo Advanced Strategy Guide - Unmatched Tips and Tricks." *YouTube*. https://www.youtube.com/watch?v=lGVIKX-Wvvg
+2. Taytertotboardgaming. "Unmatched, Leonardo quick guide, overview and strategy." *YouTube*. https://www.youtube.com/watch?v=2CZ9xjRcsGQ
+
+### Not cited
+- [From Leader to Wild Card: The Turtles of Unmatched Adventures](https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/): Restoration Games · official article (read; the videos give more concrete positioning advice).
+- [Leonardo - Unmatched TMNT Fighter Review](https://www.youtube.com/watch?v=hR9D-w5OjlA): PoindexterG - To The Table Top! · video (read; largely card overview, with strategic points covered more fully by the cited videos).
+
+---
+
+<!-- id: donatello -->
+## Donatello
+
+**In short:** You are a setup fighter who turns careful hand selection into sudden attack pressure. Spend the early game finding Electro grenade and protecting Metalhead, then win through boosted attacks or repeated Party wagon! damage rather than exhaustion. [1]
+
+### How they win
+
+**Overwhelm a depleted hand**
+- **Choose this when:** Your opponent struggles to replenish defenses, or a forced discard has just left them exposed. That is your window to spend extra actions on attacks instead of giving them another turn to rebuild. [1]
+- **Setup:** While searching for Electro grenade, bottom Turtle power! and Untested enhancements; spend Quick strike and Shift focus early instead. Once Electro grenade is down, switch from preparation to pressure. [1][2]
+- **On your turn:** With Smoke bomb established, start with The future of Ninjutsu, then Party wagon! to deliver Metalhead. Lead with Quick strike to bait a Feint, then commit Turtle power! or Untested enhancements; use Donatello does machines to recover an attack you can play immediately. [1]
+- **Positioning:** Keep Metalhead away from the fight until he can hit hard. Before committing Untested enhancements, know your bottom card and arrange a high BOOST value there through a maneuver; do not sacrifice something you still need. [2][3]
+- **On their turn:** Protect Metalhead with Short circuit when the attack's after-combat effect matters. Save Untested enhancements for offense unless defending with it is the only way to keep a nearly dead Metalhead productive. [1]
+- **Sources disagree on Smoke bomb:** One player prefers boosting with it to preserve schemes as passes; The Gaming Geek Net prefers establishing it early without removing schemes, while Taytertotboardgaming favors saving it for a prepared burst with four discarded schemes. Choose the timing around the pressure you can actually sustain. [2][1][3]
+
+**Finish with repeated direct damage**
+- **Choose this when:** Both fighters are low on health and your deck is thin enough to redraw a recycled Party wagon! soon. This plan needs opportunities to win with Thinking ahead; poorly protected sidekicks are better targets than a hero consistently holding strong defenses. [1]
+- **On your turn:** Play Party wagon!, then use Thinking ahead to recover it after a winning combat. Recover Thinking ahead with Donatello does machines to repeat the sequence; do not assume every attempted recovery will succeed. [1]
+- **Positioning:** Route Party wagon! through the target and finish safely away when you need breathing room. You do not have to leave either Donatello or Metalhead beside the opponent just to collect damage. [1][3]
+- **On their turn:** Recur Bo staff when chip damage and maintaining your hand help against pressure. Against huge attacks, prioritize recovering Heroes in a half shell instead. [1]
+
+### How they lose
+
+- **Large attacks bypass your cancel.** Immediate and during-combat effects leave Short circuit unable to solve the threat. **Answer:** Hold Heroes in a half shell for those attacks and recover it when the opponent repeatedly threatens high values. [1][3]
+- **Defense and cancellation shut down recycling.** Thinking ahead can fail even after Electro grenade. **Answer:** Against opponents consistently blocking or cancelling it, recover Turtle power! or Untested enhancements instead of depending on the Party wagon! loop. [4]
+- **Escape or turn-ending effects waste a burst.** Extra actions do not guarantee extra attacks. **Answer:** Avoid banking everything on a long sequence; keep Party wagon! damage in your plan against turn-ending opponents. [1][5]
+
+### References
+1. The Gaming Geek Net. "Donatello Advanced Strategy Guide - Unmatched Tips and Tricks." *YouTube*. https://www.youtube.com/watch?v=6atiqWL0ef0
+2. u/TheEliteB3aver. Comment on "1v1 Strategies for Donatello?" by u/LabRat2329. *r/Unmatched*, Reddit, 4 January 2026. https://www.reddit.com/r/Unmatched/comments/1q3wu0t/
+3. Taytertotboardgaming. "Unmatched, Donatello quick guide, overview and stratagy." *YouTube*. https://www.youtube.com/watch?v=68lXV-XjUPM
+4. u/LabRat2329. Comment on "1v1 Strategies for Donatello?" (see [2]). *r/Unmatched*, Reddit, 4 January 2026. https://www.reddit.com/r/Unmatched/comments/1q3wu0t/
+5. PoindexterG - To The Table Top!. "Donatello - Unmatched TMNT Fighter Review." *YouTube*. https://www.youtube.com/watch?v=Hg-PGA0_00o
+
+### Not cited
+- [From Leader to Wild Card: The Turtles of Unmatched Adventures](https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/): Restoration Games · official article (read; broad overview adds no concrete decisions).
+- [1v1 Strategies for Donatello?](https://www.reddit.com/r/Unmatched/comments/1q3wu0t/): Reddit · opening post and comments by u/TivaDi, u/roi81 and u/Dear_Huckleberry_394 (read; damage totals assume successful recycling, and remaining advice overlaps cited sources).
+
+---

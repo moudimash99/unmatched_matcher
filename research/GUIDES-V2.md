@@ -106,7 +106,7 @@ In `research/private/sample/` (gitignored): `little_red.long.md` (card by card),
 ## Status
 
 - [x] Format agreed, samples approved
-- [ ] Medium pass (26 / 74; next: moon_knight)
+- [ ] Medium pass (66 / 74; left: shredder, krang, wyatt_earp, john_henry, george_washington, rosie_the_riveter. donatello has no evidence file: Codex hit its usage limit before writing it)
 - [ ] Card by card for Medusa and Bruce Lee
 - [ ] Site: tabs + card hovers
 - [ ] Short pass
@@ -119,3 +119,5 @@ In `research/private/sample/` (gitignored): `little_red.long.md` (card by card),
 - It mostly keeps full card names, but check for short forms (e.g. "Gaze" for Gaze of Stone).
 - Card hover: several card names are ordinary words ("Again", "Feint", "Exploit", "Disengage", "Feeding"), so link only this fighter's own cards and only on an exact, case-sensitive match.
 - Low memory on this PC kills long background runs (Claude Code stops them). Close heavy apps first, or start Claude Code with `CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1`. A killed batch loses only the fighter in progress; rerun with `--next`.
+- Running 3–4 Codex jobs side by side, each a foreground call of 3 fighters (`codex_guides.py medium id1 id2 id3`, timeout 10 min), does about one fighter a minute and isn't stopped by the low-memory guard.
+- The ChatGPT usage limit hit after about 60 fighters (~3M tokens) on 28 October; it resets after a few hours (the log says when).

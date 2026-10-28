@@ -35,6 +35,8 @@ def main():
     LOGS.mkdir(parents=True, exist_ok=True)
 
     todo = [i for i in (args.ids or names) if not (OUT / f"{i}.{args.kind}.md").exists()]
+    if args.kind != "medium":  # both are built on the finished Medium guide
+        todo = [i for i in todo if (OUT / f"{i}.medium.md").exists()]
     unknown = [i for i in todo if i not in names]
     if unknown:
         sys.exit(f"unknown fighter ids: {unknown}")
