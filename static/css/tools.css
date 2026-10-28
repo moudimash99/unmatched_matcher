@@ -102,7 +102,26 @@
 .tool-page .card-type { text-transform: capitalize; }
 .tool-page .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 
-/* Strategy guide: short version, then the full one in a <details> */
+/* Strategy guide: Short / Medium / Card by card tabs, card names that show the card */
+.tool-page .guide-tabs { display: flex; gap: 0.25rem; margin: 0.6rem 0 0.4rem; border-bottom: 1px solid #e3e7ee; }
+.tool-page .guide-tabs [role="tab"] { border: 0; border-bottom: 3px solid transparent; background: none; padding: 0.45rem 0.8rem;
+    font: inherit; font-weight: 600; color: var(--text-secondary); cursor: pointer; margin-bottom: -1px; }
+.tool-page .guide-tabs [role="tab"][aria-selected="true"] { color: var(--accent-primary); border-bottom-color: var(--accent-primary); }
+.tool-page .guide-tabs [role="tab"]:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 2px; }
+.tool-page .card-ref { position: relative; text-decoration: underline dotted var(--accent-primary); text-underline-offset: 3px; cursor: help; }
+.tool-page .card-ref:focus { outline: none; background: #eef5ff; border-radius: 3px; }
+.tool-page .card-pop { display: none; position: absolute; z-index: 20; left: 0; top: calc(100% + 6px); width: max-content; max-width: min(22rem, 80vw);
+    background: var(--bg-card); color: var(--text-primary); border: 1px solid #d6dde8; border-radius: 8px; box-shadow: var(--shadow-md);
+    padding: 0.55rem 0.7rem; font-size: 0.85rem; line-height: 1.4; font-weight: 400; font-style: normal; text-align: left; white-space: normal; }
+.tool-page .card-ref:hover .card-pop, .tool-page .card-ref:focus .card-pop, .tool-page .card-ref:focus-within .card-pop { display: block; }
+.tool-page .card-pop > span { display: block; }
+.tool-page .card-pop-title { font-weight: 700; }
+.tool-page .card-pop-who, .tool-page .card-pop-facts { color: var(--text-secondary); font-size: 0.8rem; }
+.tool-page .card-pop-effect { margin-top: 0.3rem; }
+@media (max-width: 600px) {
+    /* a box under the word can run off a phone screen, so pin it to the bottom instead */
+    .tool-page .card-pop { position: fixed; left: 16px; right: 16px; top: auto; bottom: 16px; width: auto; max-width: none; }
+}
 .tool-page .guide-body { line-height: 1.55; max-width: 52rem; overflow-wrap: anywhere; }
 .tool-page .guide-body p { margin: 0.35rem 0; }
 .tool-page .guide-body ul { margin: 0.3rem 0 0.3rem 1.2rem; }

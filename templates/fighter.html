@@ -51,18 +51,44 @@
     </div>
 </section>
 
-{% if guide and (guide.short or guide.full) %}
+{% set guide_tabs = [('short', 'Short'), ('medium', 'Medium'), ('cards', 'Card by card')] %}
+{% if guide and (guide.short or guide.medium or guide.cards) %}
+{% set default_tab = 'medium' if guide.medium else ('short' if guide.short else 'cards') %}
 <section class="panel guide" id="strategy">
     <h2>How to play {{ fighter.name }}</h2>
-    <p class="muted">Written from player guides, reviews and forum discussions. Numbers in brackets link to the sources.</p>
-    {% if guide.short %}<div class="guide-body">{{ guide.short }}</div>{% endif %}
-    {% if guide.full %}
-    <details class="guide-full"{% if not guide.short %} open{% endif %}>
-        <summary>Read the full guide</summary>
-        <div class="guide-body">{{ guide.full }}</div>
-    </details>
-    {% endif %}
+    <p class="muted">Written from player guides, videos and forum discussions. Numbers in brackets link to the sources; hover over or tap a card name to see the card.</p>
+    <div class="guide-tabs" role="tablist" aria-label="Guide length">
+        {% for kind, label in guide_tabs if guide[kind] %}
+        <button type="button" role="tab" id="guide-tab-{{ kind }}" aria-controls="guide-{{ kind }}"
+                aria-selected="{{ 'true' if kind == default_tab else 'false' }}" tabindex="{{ 0 if kind == default_tab else -1 }}">{{ label }}</button>
+        {% endfor %}
+    </div>
+    {% for kind, label in guide_tabs if guide[kind] %}
+    <div class="guide-body" role="tabpanel" id="guide-{{ kind }}" aria-labelledby="guide-tab-{{ kind }}"{% if kind != default_tab %} hidden{% endif %}>{{ guide[kind] }}</div>
+    {% endfor %}
 </section>
+<script>
+(function () {
+    var tabs = document.querySelectorAll('#strategy [role="tab"]');
+    function select(tab) {
+        tabs.forEach(function (t) {
+            var on = t === tab;
+            t.setAttribute('aria-selected', on ? 'true' : 'false');
+            t.tabIndex = on ? 0 : -1;
+            document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+        });
+    }
+    tabs.forEach(function (tab, i) {
+        tab.addEventListener('click', function () { select(tab); });
+        tab.addEventListener('keydown', function (e) {
+            var step = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+            if (!step) return;
+            var next = tabs[(i + step + tabs.length) % tabs.length];
+            select(next); next.focus();
+        });
+    });
+})();
+</script>
 {% endif %}
 
 <section class="two-col">
