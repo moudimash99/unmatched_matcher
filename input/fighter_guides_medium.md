@@ -2858,6 +2858,86 @@ All linked sources in the pack are cited above. The unlinked one-sentence counte
 
 ---
 
+<!-- id: raphael -->
+## Raphael
+
+**In short:** You are a pressure fighter who wants the opponent spending defenses faster than they can replace them, then facing a heavy attack with a depleted hand. Keep your first attack unpredictable: sometimes you want the extra action from losing, and sometimes you punish an opponent who expects that bait. [1][2][3]
+
+### How they win
+
+**Drain their hand, then commit**
+- **Choose this when:** The opponent is down to two or three cards, or you can sustain pressure until they reach that point. Compare hands before committing; charging into a much fuller hand can put you on the back foot instead. [2]
+- **On your turn:** Open with Let's do this!, then follow a loss with Payback time! or another attack before finishing with Unbridled rage. Make them spend defenses before you spend yours; if they start taking your opening attacks, lead with a heavy hit instead. [1][2]
+- **Using Casey:** Start with Batter up! from range to draw out a defense or pull an undefended target toward Raphael. From adjacency, mix Casey's attacks so the threat of Slapshot draws cancels before your finishing attack. [1][4]
+- **On their turn:** Prefer Relentless, Sai and Heroes in a half shell for defense, leaving your other cards for pressure. Against double attacks, hold Payback time! for the follow-up after losing the first combat; don't spend your best block automatically on their opener. [1][2][5]
+- **Positioning:** Use Casey to help pin the target so your next turn starts with attacks rather than a chase. If you are losing the pressure race, retreat behind him and rebuild your hand before trying again. [2][5]
+- **Commitment:** Keep a defense or two when Unbridled rage will leave the opponent alive and able to retaliate. Don't discard Heroes in a half shell merely to make a bigger hit; spend everything only when it actually finishes the game. [1][2][6]
+
+**Clear the screen and keep attacking**
+- **Choose this when:** Several opposing fighters bunch together, especially armies of one-health sidekicks that pin you or obstruct your pressure. Their formation gives you a way to clear bodies while replenishing your attacking hand. [2]
+- **Setup:** Maneuver beside several opposing fighters before playing Raphael is cool but rude. Use it to remove a cluster or break a sidekick pin, rather than spending the action on isolated chip damage while a better formation is available. [2]
+- **On your turn:** Lead with Crowd control from the crowded position, then use a lost combat to continue attacking with a replenished hand. Casey can take this assignment when Raphael lacks defense or you want Casey absorbing the next attacks. [2]
+- **Positioning:** Against ranged opponents trying to remove Casey, put him where they must approach adjacent to attack him, so Slapshot remains a defensive threat. Don't leave him exposed at range and expect the same protection. [2]
+
+### How they lose
+
+- **Counterpressure empties your hand.** Raphael struggles when the opponent attacks more effectively than he does. **Answer:** Use the bonus action to maneuver away when their hand is too full; defend with Relentless to replenish without sacrificing another attacking card. [2][7]
+- **Cancels stop your recycling.** Attacking with Relentless risks losing it permanently. **Answer:** Favor defense for it; use it offensively when the opponent has no way to cancel, rather than assuming every low attack is expendable. [2][5][6]
+
+### References
+1. PoindexterG - To The Table Top!. "Raphael - Unmatched TMNT Fighter Review." *YouTube*. https://www.youtube.com/watch?v=IUsvOVTWMaA
+2. Taytertotboardgaming. "Unmatched, Raphael quick guide, overview & strategy." *YouTube*. https://www.youtube.com/watch?v=hNLOPvSJAIQ
+3. Restoration Games. *Teenage Mutant Ninja Turtles*, Raphael deck. Card text as recorded in `input/heroes.json`.
+4. u/RumpusRoomMinis. Comment on "Tips for Raphael vs aggro" by u/HEJscaper. *r/Unmatched*, Reddit, 18 March 2026. https://www.reddit.com/r/Unmatched/comments/1rx0oom/
+5. u/CauseImBatman02. Comment on "Tips on playing Raphael Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 8 May 2026. https://www.reddit.com/r/Unmatched/comments/1t7hmf0/
+6. u/Traditional_Hat_8120. Comment on "Tips on playing Raphael Effectively?" (see [5]).
+7. u/polly2000000000. Comment on "Tips on playing Raphael Effectively?" (see [5]).
+
+### Not cited
+- [From Leader to Wild Card: The Turtles of Unmatched Adventures](https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/): Restoration Games · official article (read; broad description adds no tactical detail).
+- [Tips for Raphael vs aggro](https://www.reddit.com/r/Unmatched/comments/1rx0oom/): Reddit · post and remaining replies (read; matchup-specific health thresholds and untested advice were not generalized).
+- [Tips on playing Raphael Effectively?](https://www.reddit.com/r/Unmatched/comments/1t7hmf0/): Reddit · title-only post (read; no additional advice).
+- The Gaming Geek, "Unmatched Tips and Strategies: Fighting Against the Best Fighters": article excerpt (read; only promises future Raphael coverage; no URL supplied in the pack).
+
+---
+
+<!-- id: michelangelo -->
+## Michelangelo
+
+**In short:** You are an aggressive pressure fighter who turns repeated attacks into fresh cards, forcing the opponent to spend defenses while you keep going. Get into the fight early, empty their hand, and finish with Cowabunga!! or Turtle power! rather than trying to win through exhaustion. [1]
+
+### How they win
+
+**Strip their hand, then cash in**
+- **Choose this when:** The opponent has few cards left, especially with only one defense protecting an exposed hero. Sustained pressure can now become a decisive attack. [1]
+- **On your turn:** Lead with Hi-yaaaaah!! or Hard-hitting investigation to draw out defenses before committing Boisterous beatdown; its chance to win improves once their hand is depleted. Use Shell insertion to remove the last card, then finish with Cowabunga!! or a boosted Turtle power! after your action gains have done their work. [1][2]
+- **Setup:** Start with Nunchaku so your pressure attacks benefit throughout the turn. Save Cowabunga!! for late in the sequence, when your preceding attacks and schemes make it hit harder. [1][2]
+- **Keep drawing:** A small hand does not automatically call for two maneuvers: attack first when you can, replace that card through your ability, then decide whether to attack again or maneuver. You pressure their hand while rebuilding your own. [1]
+- **On their turn:** With Guaranteed delivery and Michelangelo is a party dude!! as your remaining hand, bottom the scheme when you need the cancel and refill. Keep Heroes in a half shell for a big incoming attack. [1][2]
+- **Positioning:** Use April and Michelangelo to pin the target where the board permits it. Denying an escape lets you continue attacking while they maneuver in place looking for defenses. [1]
+
+**Turn vulnerable sidekicks into momentum**
+- **Choose this when:** The opponent has vulnerable sidekicks, particularly those with one health, that offer Boisterous beatdown a realistic combat win. Attack those targets to extend your turn rather than expecting it to beat a defended hero. [3]
+- **On your turn:** Use Nunchaku before Michelangelo's attacks, exploit the sidekick with Boisterous beatdown, then spend the extra actions continuing toward a late Cowabunga!!. The sidekick attack builds your turn; keep the finishing hit for later. [1][2][3]
+- **Positioning:** When possible, put Michelangelo beside both the hero and a sidekick before Hi-yaaaaah!!, preserving another damage target if the defender moves away. Keep April in ranged attacking position so Hard-hitting investigation can contribute. [1][2]
+- **Mix up April's attacks:** If the opponent starts accepting April's attacks because they expect Hard-hitting investigation, attack with Let's go or Guaranteed delivery instead. Punish that expectation before returning to your action-generating attacks. [1][2]
+
+### How they lose
+
+- **Cancels break the sequence.** An opponent can save a cancel for your obvious Cowabunga!! finish. **Answer:** Pressure their hand first; remember that a canceled Boisterous beatdown still replaces itself through your ability, even though your extra actions disappear. [1][2]
+- **Repeated attacks overwhelm your defenses.** Aggressive opponents can punish your small remaining hand. **Answer:** Use Let's go to escape action chains and Heroes in a half shell against the big hit; retreat to rebuild when you cannot sustain the exchange. [1][2]
+- **Exhaustion makes aggression hurt you.** Mandatory draws become a liability when your deck runs out. **Answer:** Use Back for seconds and Shell insertion to keep cards circulating, buying time to finish through attacks rather than settling into an exhaustion race. [1][2][3]
+
+### References
+1. Taytertotboardgaming. "Unmatched, Michelangelo quick guide, overview & strategy." *YouTube*. https://www.youtube.com/watch?v=4OvqCLSRhcw
+2. Restoration Games. *Teenage Mutant Ninja Turtles*, Michelangelo deck. Card text as recorded in `input/heroes.json`.
+3. PoindexterG - To The Table Top! "Michelangelo - Unmatched TMNT Fighter Review." *YouTube*. https://www.youtube.com/watch?v=qz_IjUhDkIs
+
+### Not cited
+- [From Leader to Wild Card: The Turtles of Unmatched Adventures](https://restorationgames.com/leader-to-wild-card-turtles-of-unmatched-adventures/): Restoration Games · official article (read; its Michelangelo section gives a broad playstyle description, while the videos supply concrete decisions).
+
+---
+
 <!-- id: shredder -->
 ## Shredder
 

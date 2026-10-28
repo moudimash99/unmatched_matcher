@@ -1406,6 +1406,49 @@ Written from player guides, videos and forum discussions; format and rules in re
 
 ---
 
+<!-- id: raphael -->
+## Raphael
+
+**In short:** A pressure fighter who drains defenses faster than the opponent can replace them, then lands a heavy attack on a depleted hand. [1][2][3]
+
+### How they win
+- **Drain their hand, then commit:** when they're down to two or three cards, open with Let's do this!, follow a loss with Payback time! and finish with Unbridled rage. [2][1]
+- **Clear the screen and keep attacking:** against crowds of 1-health sidekicks, lead with Crowd control from the crowded spot. [2]
+
+### How they lose
+- **Counterpressure empties your hand:** maneuver away when their hand is too full, and defend with Relentless. [2][4]
+- **Cancels stop your recycling:** keep Relentless for defense unless they can't cancel. [2][5][6]
+
+### References
+1. PoindexterG - To The Table Top!. "Raphael - Unmatched TMNT Fighter Review." *YouTube*. https://www.youtube.com/watch?v=IUsvOVTWMaA
+2. Taytertotboardgaming. "Unmatched, Raphael quick guide, overview & strategy." *YouTube*. https://www.youtube.com/watch?v=hNLOPvSJAIQ
+3. Restoration Games. *Teenage Mutant Ninja Turtles*, Raphael deck. Card text as recorded in `input/heroes.json`.
+4. u/polly2000000000. Comment on "Tips on playing Raphael Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 8 May 2026. https://www.reddit.com/r/Unmatched/comments/1t7hmf0/
+5. u/CauseImBatman02. Comment on "Tips on playing Raphael Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 8 May 2026. https://www.reddit.com/r/Unmatched/comments/1t7hmf0/
+6. u/Traditional_Hat_8120. Comment on "Tips on playing Raphael Effectively?" by u/ronchman. *r/Unmatched*, Reddit, 8 May 2026. https://www.reddit.com/r/Unmatched/comments/1t7hmf0/
+
+---
+
+<!-- id: michelangelo -->
+## Michelangelo
+
+**In short:** An aggressive pressure fighter who turns repeated attacks into fresh cards and keeps going while the opponent spends defenses. [1]
+
+### How they win
+- **Strip their hand, then cash in:** when they have few cards, draw out defenses with Hi-yaaaaah!!, remove the last card with Shell insertion and finish with Cowabunga!! [1][2]
+- **Turn vulnerable sidekicks into momentum:** against 1-health sidekicks, play Nunchaku, then win combats with Boisterous beatdown to extend your turn. [3][1][2]
+
+### How they lose
+- **Cancels break the sequence:** pressure their hand before the Cowabunga!! finish. [1][2]
+- **Repeated attacks overwhelm your defenses:** escape action chains with Let's go and block the big hit with Heroes in a half shell. [1][2]
+
+### References
+1. Taytertotboardgaming. "Unmatched, Michelangelo quick guide, overview & strategy." *YouTube*. https://www.youtube.com/watch?v=4OvqCLSRhcw
+2. Restoration Games. *Teenage Mutant Ninja Turtles*, Michelangelo deck. Card text as recorded in `input/heroes.json`.
+3. PoindexterG - To The Table Top! "Michelangelo - Unmatched TMNT Fighter Review." *YouTube*. https://www.youtube.com/watch?v=qz_IjUhDkIs
+
+---
+
 <!-- id: shredder -->
 ## Shredder
 
