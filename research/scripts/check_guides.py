@@ -29,7 +29,7 @@ COMMON = {"Little", "Riding", "Hood", "Black", "Doctor", "King", "Ancient", "Gol
 
 
 def clean(title):
-    return re.sub(r"[^\w\s'\-\.,!?:\"&’]", "", title).strip().lower()
+    return strategies._clean_title(title).lower()
 
 
 def main():

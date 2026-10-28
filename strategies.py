@@ -21,7 +21,8 @@ _HEADINGS = {"Not cited": "More to read and watch"}
 _DECK_NOTE = "Card text as recorded in `input/heroes.json`."
 _PLACEHOLDER = ""  # private-use character, never in the text
 # Card titles as printed where the data spells them differently
-_TITLE_FIXES = {"Shapershifter": "Shapeshifter"}
+_TITLE_FIXES = {"Shapershifter": "Shapeshifter",
+                "Eat, sleep, and breath ninjutsu": "Eat, Sleep, and Breathe Ninjutsu"}
 _NOT_CARD_NAMES = {"Again"}  # one-word titles that are mostly ordinary words in a guide
 _APOSTROPHE = "&#39;"  # how escape() writes ' (guides also use ’)
 
