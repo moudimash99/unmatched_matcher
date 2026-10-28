@@ -744,7 +744,7 @@ Written from player guides, videos and forum discussions; format and rules in re
 
 **In short:** You're a fighter who makes opponents pay for attacking as well as defending. Let Red take early hits while you preserve the Huntsman for healing, or risk him up close when his damage can end the game sooner. [1][2]
 
-### How she wins
+### How they win
 
 **Damage through strong blocks**
 
@@ -763,7 +763,7 @@ Written from player guides, videos and forum discussions; format and rules in re
 - **Positioning:** Keep him near Red and distant from enemies; commit to adjacent attacks only when finishing sooner outweighs preserving healing. [3][1]
 - **Sources disagree on healing:** Baked Goods rates A Grimm Tale as possibly the deck's best card; Karma treats it mostly as a threat because opponents target the Huntsman first. [1][2]
 
-### How she loses
+### How they lose
 
 - **Cancels waste prepared payoffs:** Offensive Feints can erase the defensive damage you're counting on. **Answer:** Against decks with many cancels, show wolfsbane and attack with What's That In My Basket? as bait; retain the second What Big Eyes You Have until late to keep that bluff credible. [2]
 - **Random discards disrupt your next play:** They can replace the symbol you planned around. **Answer:** Recheck your basket, use What's That In My Basket? to repair awkward sequences, and take the smaller heal from A Grimm Tale if discards or imminent death make waiting unsafe. [4][1]
@@ -1639,7 +1639,7 @@ Written from player guides, videos and forum discussions; format and rules in re
 
 ### How they lose
 
-- **Cancels blunt the payoff.** Feint threatens both your steals and your finishing attacks. **Answer:** Test defenses with Regroup or Vibranium Shockwave before spending Wakanda Forever!,  [1][3]
+- **Cancels blunt the payoff.** Feint threatens both your steals and your finishing attacks. **Answer:** Test defenses with Regroup or Vibranium Shockwave before spending Wakanda Forever! [1][3]
 - **Chasing burns your deck.** After Shuri dies, repeatedly boosting movement can exhaust you before you finish. **Answer:** Close with Stalking Panther where possible; once committed to boosting, turn that spending into attacks instead of prolonging the chase. [1]
 - **Shuri dies before paying off.** Losing her early cuts off your most dependable steals. **Answer:** Prioritize Tactical Remote Scanning and defend her with Evade or Cat-Like Reflexes; do not expect Nanotriage Processor to rescue her from a lethal hit. [1]
 
