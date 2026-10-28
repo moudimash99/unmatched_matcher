@@ -4932,7 +4932,7 @@
         "effect": "Cancel all effects on your opponent's card. 🌹 Also ignore the value of your opponent's card.",
         "title": "What Big Eyes You Have 🐺",
         "type": "versatile",
-        "value": 2
+        "value": 3
       },
       {
         "boost": 1,
@@ -4941,7 +4941,7 @@
         "effect": "⚔️ Your opponent discards 1 random card. Add its BOOST value to this card's value.",
         "title": "Stones in the Belly 🌹",
         "type": "versatile",
-        "value": null
+        "value": 2
       },
       {
         "boost": 3,

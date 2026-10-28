@@ -96,9 +96,15 @@
 .tool-page .stat b { display: block; font-size: 1.15rem; }
 .tool-page .stat span { font-size: 0.75rem; color: var(--text-secondary); }
 .tool-page .ability { background: #fff8e6; border-left: 4px solid #f0ad4e; padding: 0.7rem 0.9rem; border-radius: 6px; margin: 0.6rem 0; }
-.tool-page .bars { display: flex; align-items: flex-end; gap: 4px; height: 70px; margin-top: 0.4rem; }
-.tool-page .bars div { flex: 1; background: var(--accent-primary); border-radius: 3px 3px 0 0; position: relative; min-width: 14px; }
-.tool-page .bars div span { position: absolute; bottom: -1.2rem; left: 0; right: 0; text-align: center; font-size: 0.7rem; color: var(--text-secondary); }
+/* Combat card values: one column per value, count on top, value underneath */
+.tool-page .value-chart { display: flex; align-items: stretch; gap: 2px; height: 120px; margin: 0.4rem 0 2.2rem;
+    border-bottom: 1px solid #d6dde8; width: max-content; max-width: 100%; }
+.tool-page .value-col { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; width: 40px;
+    position: relative; cursor: default; }
+.tool-page .value-bar { width: 26px; background: var(--accent-primary); border-radius: 4px 4px 0 0; }
+.tool-page .value-col:hover .value-bar { filter: brightness(0.85); }
+.tool-page .value-count { font-size: 0.8rem; font-weight: 600; color: var(--text-primary); line-height: 1.4; }
+.tool-page .value-label { position: absolute; bottom: -1.3rem; font-size: 0.78rem; color: var(--text-secondary); }
 .tool-page .card-type { text-transform: capitalize; }
 .tool-page .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 

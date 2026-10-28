@@ -133,12 +133,16 @@
     {% if deck.value_counts %}
     {% set peak = deck.value_counts.values() | max %}
     <h3>Combat card values</h3>
-    <div class="bars" aria-label="Combat card value distribution">
+    <p class="muted">How many attack, defense and versatile cards have each value.</p>
+    <div class="value-chart" role="img" aria-label="Combat card values: {% for v, n in deck.value_counts.items() %}{{ n }} with value {{ v }}{{ ', ' if not loop.last }}{% endfor %}">
         {% for v, n in deck.value_counts.items() %}
-        <div style="height: {{ (n / peak * 100) | round }}%" title="{{ n }} cards with value {{ v }}"><span>{{ v }}</span></div>
+        <div class="value-col" title="{{ n }} card{{ 's' if n != 1 }} with value {{ v }}">
+            <span class="value-count">{{ n if n }}</span>
+            <span class="value-bar" style="height: {{ (n / peak * 100) | round }}%"></span>
+            <span class="value-label">{{ v }}</span>
+        </div>
         {% endfor %}
     </div>
-    <div style="height:1.3rem"></div>
     {% endif %}
     {% if card_pics %}
     <div class="deck-grid">

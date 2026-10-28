@@ -66,7 +66,8 @@ def deck_summary(deck):
     return {
         "total": total,
         "counts": counts,
-        "value_counts": dict(sorted(values.items())),
+        # every value from the lowest to the highest, so a gap shows as a 0
+        "value_counts": {v: values.get(v, 0) for v in range(min(values), max(values) + 1)} if values else {},
         "avg_value": weighted / combat if combat else None,
     }
 
