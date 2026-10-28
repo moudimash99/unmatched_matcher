@@ -8,7 +8,8 @@ and [n] citations), so they're rendered here rather than with a Markdown library
 
 The v2 guides (research/GUIDES-V2.md) come in three versions, Short, Medium and Card by card, in
 input/fighter_guides_{short,medium,cards}.md; until a fighter has one, the older guides stand in.
-Card names in a guide are matched against the fighter's deck and shown as hover cards.
+Card names in a guide are matched against the fighter's deck and shown as hover cards, with the
+card's picture where input/card_images.json has one.
 """
 import re
 
@@ -41,8 +42,12 @@ def _clean_title(title):
     return _TITLE_FIXES.get(title, title)
 
 
-def _card_pop(card, fighter_name):
-    """Inner HTML of a card's hover box."""
+def _card_pop(card, fighter_name, image=None):
+    """Inner HTML of a card's hover box: the card's picture, or its text when there's no picture."""
+    if image:
+        alt = f"{_clean_title(card['title'])}: {card.get('effect') or ''}".rstrip(": ")
+        return (f'<img class="card-pop-img" src="{escape(image)}" alt="{escape(alt)}" loading="lazy" '
+                f'width="250" height="349">')
     facts = [str(escape(card.get("type") or "").capitalize())]
     if card.get("value") is not None:
         facts.append(f"value {card['value']}")
@@ -56,14 +61,20 @@ def _card_pop(card, fighter_name):
             f'<span class="card-pop-facts">{" · ".join(facts)}</span>{effect}')
 
 
-def card_matcher(deck, fighter_name=""):
-    """(compiled regex, {escaped title: popup html}) for linking this deck's card names, or None."""
-    pops = {}
+def card_matcher(deck, fighter_name="", images=None):
+    """(compiled regex, {title: popup html}, {title: picture url}) for this deck's card names, or None.
+
+    images maps card titles as in heroes.json to their pictures (input/card_images.json).
+    """
+    pops, thumbs = {}, {}
     for card in deck or []:
         title = _clean_title(card.get("title", ""))
         if len(title) < 3 or title in _NOT_CARD_NAMES:
             continue
-        pops.setdefault(str(escape(title)), _card_pop(card, fighter_name))
+        image = (images or {}).get(card.get("title"))
+        pops.setdefault(str(escape(title)), _card_pop(card, fighter_name, image))
+        if image:
+            thumbs.setdefault(_key(title), image)
     if not pops:
         return None
     # Longest first, so "Feint" never takes the start of a longer title; all-caps titles (Loki's,
@@ -74,7 +85,12 @@ def card_matcher(deck, fighter_name=""):
         alts.append(f"(?i:{body})" if title.isupper() else body)
     pattern = re.compile(r"(?<![\w&])(" + "|".join(alts) + r")(?![\w])")
     lookup = {k.lower(): v for k, v in pops.items()}
-    return pattern, lookup
+    return pattern, lookup, thumbs
+
+
+def _key(title):
+    """A card title for looking it up, whatever its apostrophes and capitals."""
+    return title.replace("’", "'").lower()
 
 
 def _pop_for(lookup, name):
@@ -98,7 +114,7 @@ def _inline(text, ref_prefix, sup=True, cards=None):
     s = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", lambda m: link(m.group(1), m.group(2)), s)
     s = re.sub(r"https?://[^\s<]+?(?=[.,;)]?(?:\s|$))", lambda m: link(m.group(0), m.group(0)), s)
     if cards:
-        pattern, lookup = cards
+        pattern, lookup, _ = cards
         s = pattern.sub(lambda m: link_html(
             f'<span class="card-ref" tabindex="0">{m.group(1)}'
             f'<span class="card-pop" role="tooltip">{_pop_for(lookup, m.group(1))}</span></span>'), s)
@@ -109,12 +125,32 @@ def _inline(text, ref_prefix, sup=True, cards=None):
     return re.sub(f"{_PLACEHOLDER}(\\d+){_PLACEHOLDER}", lambda m: links[int(m.group(1))], s)
 
 
+def _slug(text):
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+
+
+def _card_names(text, cards):
+    """The card titles a bold line names ("A and B" names two), or None if it isn't only cards."""
+    if not cards:
+        return None
+    names = [n.strip() for n in re.split(r" and |, ", text)]
+    if all(cards[0].fullmatch(str(escape(n))) for n in names):
+        return names
+    return None
+
+
 def render(entry, ref_prefix, cards=None):
     """HTML for one entry, without its id line, fighter-name heading and closing separator.
 
-    cards is a card_matcher() result: those card names in the guide text become hover cards.
+    cards is a card_matcher() result: those card names in the guide text become hover cards. A bold
+    line on its own starts a box: a way to win, or in the Card by card guide a card, with its picture
+    and a jump link above the cards. "- **Label:** text" items show the label on its own line, and
+    the sources fold away under the guide.
     """
     out, lst, section = [], None, None
+    box = sources = False
+    jumps, jump_at = [], None
+    thumbs = cards[2] if cards else {}
 
     def close():
         nonlocal lst
@@ -122,16 +158,27 @@ def render(entry, ref_prefix, cards=None):
             out.append(f"</{lst}>")
             lst = None
 
+    def close_box():
+        nonlocal box
+        close()
+        if box:
+            out.append("</div>")
+            box = False
+
     for line in entry.splitlines():
         line = line.rstrip()
         if not line or line == "---" or line.startswith(("<!--", "## ")):
             close()
             continue
         if line.startswith("### "):
-            close()
+            close_box()
             section = line[4:].strip()
-            slug = re.sub(r"[^a-z]+", "-", section.lower()).strip("-")
-            out.append(f'<h3 class="guide-{slug}">{escape(_HEADINGS.get(section, section))}</h3>')
+            if section in ("References", "Not cited") and not sources:
+                out.append('<details class="guide-sources"><summary>Sources</summary>')
+                sources = True
+            out.append(f'<h3 class="guide-{_slug(section)}">{escape(_HEADINGS.get(section, section))}</h3>')
+            if section.startswith("Cards"):
+                jump_at = len(out)
             continue
         item = re.match(r"(\d+)\. (.*)", line)
         if item and section == "References":
@@ -151,31 +198,64 @@ def render(entry, ref_prefix, cards=None):
                 text = re.sub(r"\s*\(not yet reviewed\)$", "", text)
             if lst != "ul":
                 close()
-                out.append("<ul>")
+                out.append("<ul>" if sources else '<ul class="guide-list">')
                 lst = "ul"
-            out.append(f"<li>{_inline(text, ref_prefix, cards=cards)}</li>")
+            label = None if sources else re.match(r"\*\*([^*]+?):?\*\*\s*(.*)", text)
+            if label:
+                choose = " guide-choose" if label.group(1).lower().startswith("choose this when") else ""
+                body = _inline(label.group(2), ref_prefix, cards=cards)
+                body = body.replace("<strong>Answer:</strong>", '<span class="guide-answer">Answer</span>')
+                out.append(f'<li class="guide-item{choose}"><span class="guide-label">'
+                           f'{_inline(label.group(1), ref_prefix, cards=cards)}</span> {body}</li>')
+            else:
+                out.append(f"<li>{_inline(text, ref_prefix, cards=cards)}</li>")
             continue
         close()
         if section == "References":
             continue  # research notes on the deck data, not part of the guide
+        heading = None if sources else re.fullmatch(r"\*\*([^*]+)\*\*", line)
+        if heading:
+            close_box()
+            title = heading.group(1)
+            names = _card_names(title, cards)
+            if names:
+                anchor = f"{ref_prefix}-card-{_slug(title)}"
+                jumps.append(f'<a href="#{anchor}">{escape(title)}</a>')
+                pics = "".join(f'<img class="guide-thumb" src="{escape(thumbs[_key(n)])}" alt="" loading="lazy" '
+                               f'width="48" height="67">' for n in names if _key(n) in thumbs)
+                out.append(f'<div class="guide-box guide-card" id="{anchor}">{pics}'
+                           f'<h4>{_inline(title, ref_prefix, cards=cards)}</h4>')
+            else:
+                out.append(f'<div class="guide-box"><h4>{_inline(title, ref_prefix, cards=cards)}</h4>')
+            box = True
+            continue
+        if line.startswith("**In short:**"):
+            close_box()
+            out.append(f'<p class="guide-lede">{_inline(line, ref_prefix, cards=cards)}</p>')
+            continue
         out.append(f"<p>{_inline(line, ref_prefix, cards=cards)}</p>")
-    close()
+    close_box()
+    if sources:
+        out.append("</details>")
+    if jumps and jump_at is not None:
+        out.insert(jump_at, '<nav class="guide-jump" aria-label="Cards">' + "".join(jumps) + "</nav>")
     return Markup("\n".join(out))
 
 
-def load_guides(short_path, medium_path, v2_paths=None, heroes=None, names=None):
+def load_guides(short_path, medium_path, v2_paths=None, heroes=None, names=None, images=None):
     """{fighter id: {"short", "medium", "cards": html or None}}.
 
     v2_paths maps "short"/"medium"/"cards" to the v2 guide files. Where a fighter has no v2 guide
     yet, the older short guide stands in for Short and the older full guide for Medium. heroes
-    ({id: hero data}) and names ({id: fighter name}) give each guide its deck's hover cards.
+    ({id: hero data}), names ({id: fighter name}) and images ({id: {card title: picture url}}) give
+    each guide its deck's hover cards.
     """
     old = {"short": load(short_path), "medium": load(medium_path)}
     new = {kind: load(path) for kind, path in (v2_paths or {}).items()}
-    heroes, names = heroes or {}, names or {}
+    heroes, names, images = heroes or {}, names or {}, images or {}
     guides = {}
     for fid in set().union(*old.values(), *new.values()):
-        cards = card_matcher((heroes.get(fid) or {}).get("deck"), names.get(fid, ""))
+        cards = card_matcher((heroes.get(fid) or {}).get("deck"), names.get(fid, ""), images.get(fid))
         guide = {}
         for kind, prefix in (("short", "s"), ("medium", "m"), ("cards", "c")):
             if fid in new.get(kind, {}):

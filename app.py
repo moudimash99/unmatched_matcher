@@ -66,10 +66,11 @@ WIN_MATRIX = load_json_data("input/merged_win_pct.json", {})
 GAMES_MATRIX = load_json_data("input/merged_games.json", {})
 STATS_META = load_json_data("input/stats_meta.json", {})
 HEROES = load_json_data("input/heroes.json", {})
+CARD_IMAGES = load_json_data("input/card_images.json", {})  # research/scripts/card_images.py
 STRATEGY_GUIDES = strategies.load_guides(
     "input/fighter_strategies_short.md", "input/fighter_strategies.md",
     v2_paths={kind: f"input/fighter_guides_{kind}.md" for kind in ("short", "medium", "cards")},
-    heroes=HEROES, names={f["id"]: f["name"] for f in FIGHTERS_DATA})
+    heroes=HEROES, names={f["id"]: f["name"] for f in FIGHTERS_DATA}, images=CARD_IMAGES)
 _PRICES_RAW = load_json_data("input/prices.json", {})
 PRICES = {k: v for k, v in _PRICES_RAW.items() if not k.startswith("_")}
 PRICES_META = _PRICES_RAW.get("_meta", {})
@@ -519,6 +520,22 @@ def fighters_page():
     return render_tool("fighters.html", collection=collection, fighters=fighters)
 
 
+def _card_pictures(hero, images):
+    """[{card, image, copies}] for the deck's picture grid, one per picture (image None: shown as text).
+
+    [] unless most of the deck has pictures, and then the page shows the deck as a table.
+    """
+    deck = (hero or {}).get("deck", [])
+    if not deck or sum(c["title"] in images for c in deck) * 2 < len(deck):
+        return []
+    pics = {}
+    for c in deck:
+        image = images.get(c["title"])
+        pic = pics.setdefault(image or c["title"], {"card": c, "image": image, "copies": 0})
+        pic["copies"] += c.get("copies", 1)
+    return list(pics.values())
+
+
 @app.route("/fighter/<fighter_id>")
 def fighter_page(fighter_id):
     fighter = find_fighter_by_id(fighter_id)
@@ -535,6 +552,7 @@ def fighter_page(fighter_id):
         hero=hero,
         guide=STRATEGY_GUIDES.get(fighter_id),
         deck=insights.deck_summary(hero["deck"]) if hero else None,
+        card_pics=_card_pictures(hero, CARD_IMAGES.get(fighter_id, {})),
         rows=rows,
         best=best,
         worst=worst,

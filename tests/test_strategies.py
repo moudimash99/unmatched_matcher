@@ -88,3 +88,34 @@ def test_v2_guides_link_their_cards(client):
     html = client.get("/fighter/medusa").get_data(as_text=True)
     medium = html[html.index('id="guide-medium"'):]
     assert 'class="card-ref"' in medium and "Gaze of Stone<span" in medium
+
+
+def test_guide_layout_boxes_labels_and_card_pictures():
+    deck = [{"title": "Feint", "type": "versatile", "value": 2, "boost": 2, "copies": 3, "effect": "Cancel."},
+            {"title": "Skirmish", "type": "attack", "value": 4, "boost": 2, "copies": 3, "effect": "Move."}]
+    cards = strategies.card_matcher(deck, "X", {"Feint": "https://img.example/feint.png"})
+    html = str(strategies.render(
+        "## X\n\n**In short:** Fight. [1]\n\n### How they win\n\n**Early pressure**\n\n"
+        "- **Choose this when:** they are slow. [1]\n- **On your turn:** attack with Skirmish.\n\n"
+        "### How they lose\n\n- **Cancels:** they hurt. **Answer:** bait with Feint. [1]\n\n"
+        "### Cards: when and how to use them\n\n**Feint**\n\n- **When:** early.\n\n**Skirmish**\n\n- **How:** often.\n\n"
+        "### References\n1. Someone. https://example.com/a", "c", cards))
+    assert '<p class="guide-lede">' in html
+    assert '<div class="guide-box"><h4>Early pressure</h4>' in html
+    assert '<li class="guide-item guide-choose"><span class="guide-label">Choose this when</span>' in html
+    assert '<span class="guide-answer">Answer</span> bait with' in html
+    assert '<img class="card-pop-img" src="https://img.example/feint.png" alt="Feint: Cancel."' in html
+    assert "Attack · value 4" in html  # no picture: the card text stands in
+    assert '<nav class="guide-jump" aria-label="Cards"><a href="#c-card-feint">Feint</a><a href="#c-card-skirmish">' in html
+    assert '<div class="guide-box guide-card" id="c-card-feint"><img class="guide-thumb"' in html
+    assert '<div class="guide-box guide-card" id="c-card-skirmish"><h4>' in html
+    assert html.index('<details class="guide-sources">') < html.index('id="c-ref-1"')
+
+
+def test_fighter_page_layout(client):
+    html = client.get("/fighter/medusa").get_data(as_text=True)
+    assert '<nav class="page-jump"' in html and 'href="#deck"' in html
+    assert '<div class="deck-grid">' in html and "static.unmatched.cards" in html
+    assert re.search(r'id="all-matchups">\s*<details class="fold">', html)
+    no_pictures = client.get("/fighter/loki").get_data(as_text=True)  # not in the card database yet
+    assert '<div class="deck-grid">' not in no_pictures and "<table class=\"data\">" in no_pictures

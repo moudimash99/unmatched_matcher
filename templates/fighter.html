@@ -51,12 +51,20 @@
     </div>
 </section>
 
+<nav class="page-jump" aria-label="On this page">
+    {% if guide and (guide.short or guide.medium or guide.cards) %}<a href="#strategy">How to play</a>{% endif %}
+    <a href="#matchups">Best &amp; worst matchups</a>
+    {% if hero and deck %}<a href="#deck">Deck</a>{% endif %}
+    {% if map_rows %}<a href="#maps">Maps</a>{% endif %}
+    <a href="#all-matchups">Every matchup</a>
+</nav>
+
 {% set guide_tabs = [('short', 'Short'), ('medium', 'Medium'), ('cards', 'Card by card')] %}
 {% if guide and (guide.short or guide.medium or guide.cards) %}
 {% set default_tab = 'medium' if guide.medium else ('short' if guide.short else 'cards') %}
 <section class="panel guide" id="strategy">
     <h2>How to play {{ fighter.name }}</h2>
-    <p class="muted">Written from player guides, videos and forum discussions. Numbers in brackets link to the sources; hover over or tap a card name to see the card.</p>
+    <p class="muted">Written from player guides, videos and forum discussions. Hover over or tap an <span class="card-ref-sample">underlined card name</span> to see the card; the small numbers link to the sources at the end.</p>
     <div class="guide-tabs" role="tablist" aria-label="Guide length">
         {% for kind, label in guide_tabs if guide[kind] %}
         <button type="button" role="tab" id="guide-tab-{{ kind }}" aria-controls="guide-{{ kind }}"
@@ -78,6 +86,14 @@
             document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
         });
     }
+    // A source number opens the folded Sources list before jumping to it
+    document.querySelectorAll('#strategy sup.cite a').forEach(function (a) {
+        a.addEventListener('click', function () {
+            var target = document.getElementById(a.getAttribute('href').slice(1));
+            var box = target && target.closest('details');
+            if (box) box.open = true;
+        });
+    });
     tabs.forEach(function (tab, i) {
         tab.addEventListener('click', function () { select(tab); });
         tab.addEventListener('keydown', function (e) {
@@ -91,7 +107,7 @@
 </script>
 {% endif %}
 
-<section class="two-col">
+<section class="two-col" id="matchups">
     <div class="panel">
         <h2>Best matchups</h2>
         <p class="muted">Only matchups with {{ full_confidence_games }}+ games.</p>
@@ -105,32 +121,8 @@
     </div>
 </section>
 
-{% if map_rows %}
-<section class="panel">
-    <h2>Maps</h2>
-    <p class="muted">{{ fighter.name }}'s overall win rate shifted by how they do on each map in Tabletop League games.
-        Maps with fewer than {{ map_full_confidence_games }} games lean on the overall rate.</p>
-    <div class="table-wrap">
-    <table class="data">
-        <thead><tr><th>Map</th><th>Set</th><th class="num">{{ fighter.name }} wins</th><th class="num">vs usual</th><th class="num">Games</th></tr></thead>
-        <tbody>
-        {% for r in map_rows %}
-        <tr>
-            <td><strong>{{ r.map.name }}</strong></td>
-            <td>{{ r.map.set or '–' }}{% if collection and r.map.set in collection %} <span class="muted">· owned</span>{% endif %}</td>
-            <td class="num" data-win="{{ r.win_pct }}" data-games="{{ r.games }}">{{ '~' if r.low_data }}{{ r.win_pct | round | int }}%</td>
-            <td class="num">{{ '%+d' % (r.lean_pts | round | int) }}</td>
-            <td class="num">{{ "{:,}".format(r.games) }}{% if r.low_data %} <span class="games-note low-data">estimate</span>{% endif %}</td>
-        </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-    </div>
-</section>
-{% endif %}
-
 {% if hero and deck %}
-<section class="panel">
+<section class="panel" id="deck">
     <h2>Deck · {{ deck.total }} cards</h2>
     <div class="row">
         {% for t, n in deck.counts.items() if n %}
@@ -147,6 +139,17 @@
         {% endfor %}
     </div>
     <div style="height:1.3rem"></div>
+    {% endif %}
+    {% if card_pics %}
+    <div class="deck-grid">
+        {% for c in card_pics %}
+        <figure>{% if c.image %}<img src="{{ c.image }}" alt="{{ c.card.title }}: {{ c.card.effect }}" loading="lazy" decoding="async" width="250" height="349">{% else %}
+            <div class="deck-text-card"><b>{{ c.card.title }}</b><span class="card-type">{{ c.card.type }}{% if c.card.value is not none %} · {{ c.card.value }}{% endif %}</span><span>{{ c.card.effect }}</span></div>{% endif %}
+            <figcaption>×{{ c.copies }}</figcaption></figure>
+        {% endfor %}
+    </div>
+    <details class="fold">
+    <summary>Card text as a list</summary>
     {% endif %}
     <div class="table-wrap">
     <table class="data">
@@ -165,12 +168,40 @@
         </tbody>
     </table>
     </div>
-    <p class="muted" style="margin-top:.5rem">Card data via <a href="https://www.the-unmatched.club/heroes/{{ fighter.club_key }}" target="_blank" rel="noopener">The Unmatched Club</a>.</p>
+    {% if card_pics %}</details>{% endif %}
+    <p class="muted" style="margin-top:.5rem">{% if card_pics %}Card pictures from <a href="https://unmatched.cards/" target="_blank" rel="noopener">unmatched.cards</a>. {% endif %}Card data via <a href="https://www.the-unmatched.club/heroes/{{ fighter.club_key }}" target="_blank" rel="noopener">The Unmatched Club</a>.</p>
 </section>
 {% endif %}
 
-<section class="panel">
-    <h2>Every matchup</h2>
+{% if map_rows %}
+<section class="panel" id="maps">
+    <details class="fold">
+    <summary><h2>Maps</h2><span class="muted">{{ map_rows | length }} maps · show</span></summary>
+    <p class="muted">{{ fighter.name }}'s overall win rate shifted by how they do on each map in Tabletop League games.
+        Maps with fewer than {{ map_full_confidence_games }} games lean on the overall rate.</p>
+    <div class="table-wrap">
+    <table class="data">
+        <thead><tr><th>Map</th><th>Set</th><th class="num">{{ fighter.name }} wins</th><th class="num">vs usual</th><th class="num">Games</th></tr></thead>
+        <tbody>
+        {% for r in map_rows %}
+        <tr>
+            <td><strong>{{ r.map.name }}</strong></td>
+            <td>{{ r.map.set or '–' }}{% if collection and r.map.set in collection %} <span class="muted">· owned</span>{% endif %}</td>
+            <td class="num" data-win="{{ r.win_pct }}" data-games="{{ r.games }}">{{ '~' if r.low_data }}{{ r.win_pct | round | int }}%</td>
+            <td class="num">{{ '%+d' % (r.lean_pts | round | int) }}</td>
+            <td class="num">{{ "{:,}".format(r.games) }}{% if r.low_data %} <span class="games-note low-data">estimate</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    </details>
+</section>
+{% endif %}
+
+<section class="panel" id="all-matchups">
+    <details class="fold">
+    <summary><h2>Every matchup</h2><span class="muted">{{ rows | length }} opponents · show</span></summary>
     <div class="table-wrap">
     <table class="data">
         <thead><tr><th>Opponent</th><th class="num">{{ fighter.name }} wins</th><th class="num">Games</th><th></th></tr></thead>
@@ -186,5 +217,6 @@
         </tbody>
     </table>
     </div>
+    </details>
 </section>
 {% endblock %}
