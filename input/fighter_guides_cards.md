@@ -2714,10 +2714,98 @@ Check the actual Into the Woods copy: each leaves a different symbol, so the kni
 
 ---
 
+<!-- id: elektra -->
+## Elektra
+
+**In short:** You are a patient survival fighter who turns a long first life into an exhaustion lead or a crushing resurrection turn. Make them chase while you prepare your finish. [1][2]
+
+### Win conditions
+- **Outlast the chase:** Choose this when your first life has taken the opponent roughly halfway through their deck or further; you can keep retreating after resurrection. Use Sai to survive, Hands of Red to rebuild your screen, and Snakeroot Clan and Ninjitsu to escape rather than exchanging attacks every turn. [1][2][3]
+- **Strip defenses, then overwhelm:** Choose this against a low hand with few cancels or movement defenses to interrupt your assault. Preserve both copies of Mesmerize, one The Fist, Mystic Assassin, and a spare boost card; remove the interruptions, surround them, exhaust their defenses with The Fist, then finish with Mystic Assassin. [2][1]
+
+### Cards: when and how to use them
+
+**Mesmerize**
+- **When:** Hold both copies through the first death when preparing the resurrection assault. Spending them early for information leaves you dependent on redrawing them before you can launch it. [1][2]
+- **How:** Play Mesmerize before your approach maneuver so you know which defenses threaten the sequence; use the second copy if needed to remove another cancel or escape defense. Against a target you can already reach with Elektra, removing their best blocks can instead prepare consecutive Mystic Assassin attacks. [1][2][3]
+- **Watch out:** A small opposing hand is your opening, so avoid handing them a replenishment turn by forcing your own death unnecessarily. Dying on their turn can catch them immediately after they spent an attack; dying on yours gives them time to draw before you return. [2]
+
+**The Fist**
+- **When:** Save one copy for resurrection; you do not need both to execute the assault. During the first life, preserve your sidekick screen instead of spending it for extra attacks. [2][4]
+- **How:** Place your returning fighters so one boosted maneuver can surround the target, then attack through the adjacent members of The Hand before finishing with Mystic Assassin. Reserve a separate boost card: the approach is part of the prepared hand, and some map positions accommodate only two adjacent sidekicks. [1]
+- **Watch out:** Remaining cancels or movement after combat can break the sequence; do not count on every sidekick getting an attack before checking with Mesmerize. Respect separate resurrection zones when planning the maneuver. [2][5]
+
+**Mystic Assassin**
+- **When:** Preserve it for the hit after Mesmerize and The Fist have stripped defenses. Against a beefier opponent, Baked Goods considers spending one in the first life for extra damage; Gridbeast advises waiting unless you expect Feint. [1][2][3]
+- **How:** If Elektra starts adjacent after resurrection, Mesmerize can set up two consecutive Mystic Assassin attacks instead of a sidekick assault. Baked Goods also allows a first-life attack to trigger a prepared resurrection when the opponent refuses to kill you, while Gridbeast recommends the more cautious approach. [3][2]
+- **Watch out:** Do not shorten a productive first life merely because the attack is available. Even a prepared self-inflicted death gives the opponent a turn to replenish the defenses you hoped to strip. [2]
+
+**Snakeroot Clan**
+- **When:** Use it against the large attack your opponent finally commits to Elektra, including ranged attacks that bypass your sidekick wall. Making their expensive hit land on a disposable sidekick buys the survival turn you need. [2]
+- **How:** Keep two or three members of The Hand screening Elektra and another across the board as your escape destination. Continue that retreat after resurrection when exhaustion is the plan. [6]
+- **Watch out:** Sidekick clearing removes both your escape destination and your protection from burst damage. Rebuild with Hands of Red rather than assuming Snakeroot Clan will save you after the screen disappears. [7][3]
+
+**Hands of Red**
+- **When:** Use your occasional first-life engagement to replace a fallen shield, then resume protecting Elektra. This supports the long chase without committing to a sustained damage race. [1][2][3]
+- **How:** Treat the attack as maintenance for your screen and your future Snakeroot Clan defense. After spending sidekicks in a resurrection assault, it also lets you rebuild rather than leaving Elektra permanently exposed. [2][3]
+- **Watch out:** A cancel still denies the replacement, although an opposing Feint concedes damage on the attack. Do not treat recovery attached to an attack as guaranteed. [2]
+
+**Sai**
+- **When:** Defend with it during the first life; preserving health matters more than using it for routine attacks. Save attacks for your finish. [3][2]
+- **How:** After resurrection, keep Sai alongside Intercept if you intend to remain adjacent after an assault. Defend with Intercept first, leaving Sai available for the second attack. [3]
+- **Watch out:** Spending Sai before Intercept gives up the defensive pairing that makes staying beside the opponent safer. Use the information from Mesmerize to judge whether you can afford that counterattack. [3]
+
+**Intercept**
+- **When:** Carry it with Sai when preparing to finish a resurrection turn beside a surviving opponent. It is your protection against the retaliation after stripping their hand. [3]
+- **How:** Defend before spending Sai; the pair covers successive attacks. For an assault that needs a boosted approach, Intercept is also a high-value boost candidate if you are allocating that card to movement instead of defense. [3][1][5]
+- **Watch out:** Do not budget your counterattack protection around Intercept while spending the accompanying Sai elsewhere. The recommended defensive finish depends on keeping them together. [3]
+
+**Ninjitsu**
+- **When:** Keep it for escaping pressure on Elektra. Gridbeast also values defending a dwindling sidekick screen with it; Baked Goods questions that expenditure because a sufficiently large attack kills the sidekick anyway. [3][2]
+- **How:** When Mesmerize reveals more cancels than you can discard, attack with a member of The Hand using Ninjitsu before The Fist. Try to draw the remaining Feint onto that attack, preserving your next action for The Fist. [2]
+- **Watch out:** The bait is a hope, not a guarantee: opponents know a sidekick attack is either Ninjitsu or The Fist. Do not mistake that narrow choice for a reliable way to remove a cancel. [2]
+
+**Cloaked In Shadow**
+- **When:** Favor defense against a ranged opponent after resurrection when you can turn their attack into an approach. Hold Mesmerize and Mystic Assassin for the following turn. [2]
+- **How:** End that defense beside the attacker, then open with Mesmerize and follow with Mystic Assassin. This creates a later attack window. [2]
+- **Watch out:** The setup offers less against adjacent melee opponents; favor defense over routine attacks. [2]
+
+**Whirlwind**
+- **When:** Look for a resurrected position beside surviving enemy sidekicks, particularly fighters with several 1-health sidekicks. It offers little before resurrection. [2][5]
+- **How:** Use it for an actual sidekick-clearing opportunity rather than treating it as another dependable survival defense. The targets need to be beside Elektra when combat ends. [2][5]
+- **Watch out:** Those sidekicks may already be gone by your second life, and defending a large attack with Whirlwind risks too much of your remaining health for the payoff. [2]
+
+### How they lose
+- **Early burst.** An early first death cuts short your exhaustion preparation. **Answer:** Screen Elektra, defend with Sai, and preserve Snakeroot Clan or Ninjitsu for escape. [7][3]
+- **Automatic sidekick clearing.** It dismantles both your protection and The Fist assault. **Answer:** Rebuild with Hands of Red and preserve your first-life screen instead of sacrificing it for The Fist. [7][3][4]
+- **Unblockable damage followed by flight.** It can force death with a crowded hand and then deny your attack window. **Answer:** Seek a ranged defensive approach with Cloaked In Shadow into Mesmerize and Mystic Assassin. [8][9][2]
+
+### References
+1. PoindexterG - To The Table Top! "Elektra - Unmatched Marvel Fighter Review." *YouTube*. https://www.youtube.com/watch?v=Un3FXcyDqlU
+2. Baked Goods. "Elektra - FIRST IMPRESSIONS!" *YouTube*. https://www.youtube.com/watch?v=Xn6IPWpaDaY
+3. Gridbeast. "Unmatched – Elektra." *Gridbeast*. https://gridbeast.gg/unmatched-elektra/
+4. u/Silly_Shenanigans. Comment on "Just got my elektra, any tips to play her?" by u/FrequentExcitement55. *r/Unmatched*, Reddit, 12 December 2025. https://www.reddit.com/r/Unmatched/comments/1pkyr6h/
+5. Restoration Games. *Hell's Kitchen*, Elektra deck. Card text as recorded in `input/heroes.json`.
+6. mic_al. Reply in "An Unmatched Roster: What's Cooking in Hell's Kitchen?" by TFJ383. *BoardGameGeek*, 11 November 2023. https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen
+7. u/LabRat2329. Comment on "Upcoming battle against Elektra" by u/Naive-Health414. *r/Unmatched*, Reddit, 27 March 2026. https://www.reddit.com/r/Unmatched/comments/1s5e5m5/
+8. u/Biggest_Lemon. Comment on "Weekly Discussion: Battling Elektra (Tips and Strategies)" by u/LabRat2329. *r/Unmatched*, Reddit, 9 April 2026. https://www.reddit.com/r/Unmatched/comments/1sgv66c/
+9. u/richard-savana. Comment on "Weekly Discussion: Battling Elektra (Tips and Strategies)" (see [8]).
+
+### Not cited
+- [Unmatched: Marvel — Who to Play, How to Win](https://thepopinsider.com/unmatched-marvel-who-to-play-how-to-win-and-whats-coming-next/): The Pop Insider · interview (read; no specific Elektra plan).
+- [An Unmatched Roster: What's Cooking in Hell's Kitchen?](https://boardgamegeek.com/thread/3188799/an-unmatched-roster-whats-cooking-in-hells-kitchen): BoardGameGeek · main article and remaining replies (read; the cited reply gives the concrete Elektra positioning).
+- [Just got my elektra, any tips to play her?](https://www.reddit.com/r/Unmatched/comments/1pkyr6h/): Reddit · remaining comments (read; survival and resurrection advice overlaps the cited sources).
+- [Upcoming battle against Elektra](https://www.reddit.com/r/Unmatched/comments/1s5e5m5/): Reddit · remaining comments (read; rankings and opponent recommendations omitted).
+- [Weekly Discussion: Battling Elektra (Tips and Strategies)](https://www.reddit.com/r/Unmatched/comments/1sgv66c/): Reddit · post and remaining comments (read; overlapping sidekick clearing and exhaustion advice).
+- [Unmatched Tips and Strategies: Fighting Against the Best Fighters](https://thegaminggeek.net/unmatched-tips-and-strategies-fighting-against-the-best-fighters/): The Gaming Geek · article excerpt (read; only a tier listing in the pack).
+
+
+---
+
 <!-- id: dr_sattler -->
 ## Dr. Sattler
 
-**In short:** You're a defensive melee fighter who survives through healing while building toward a few decisive attacks. Let defensive chip damage shorten the finish, and rebuild between exchanges rather than forcing continuous aggression. [1]
+**In short:** You're a defensive melee fighter who survives through healing while building toward a few decisive attacks. Use defensive chip damage, then rebuild between exchanges. [1]
 
 ### Win conditions
 - **Make their damage budget fail:** Choose this against opponents with a finite supply of threatening attacks, including burst attackers you can survive. Woman Inherits the Earth and Life Finds a Way carry the recovery; I Think We're Back In Business covers the exceptional hit. [1]
@@ -2745,7 +2833,7 @@ Check the actual Into the Woods copy: each leaves a different symbol, so the kni
 - **Watch out:** A small hand makes it a poor emergency defense, and cancels wreck it; spending an enormous block on a routine attack wastes its particular strength. [1]
 
 **Life Finds a Way**
-- **When:** Use while Dr. Malcolm can survive the exchange, rather than waiting until you need the healing to rescue him from lethal damage. [1]
+- **When:** Use while Dr. Malcolm can survive the exchange, before he needs it to survive lethal damage. [1]
 - **How:** Treat the recovery as additional endurance alongside Woman Inherits the Earth, while continuing to protect Dr. Malcolm for future insight rebuilding. [1][2]
 - **Watch out:** Don't consider Dr. Malcolm expendable once his healing cards are used: losing him makes each subsequent recovery and attack cycle slower. [1][2]
 
@@ -2756,11 +2844,11 @@ Check the actual Into the Woods copy: each leaves a different symbol, so the kni
 
 **Lock The Doors!**
 - **When:** Favor this against ranged attacks when Violently, If Necessary cannot reach the attacker, especially against modest attacks. [1]
-- **How:** Choose your retreat to interrupt another attack and start rebuilding insight; this lets a defensive exchange contribute to both survival and the eventual finish. [1]
+- **How:** Retreat to interrupt another attack and rebuild insight; this lets a defensive exchange contribute to both survival and the eventual finish. [1]
 - **Watch out:** Cancels deny the payoff, and chip damage spread across different enemies does not automatically put their hero within finishing range. [1][2]
 
 **Sexism in Survival Situations**
-- **When:** Keep it for defending against a hero, particularly a melee hero whose next attack you can escape by stepping away. [1]
+- **When:** Keep it for defending against a hero, especially a melee hero you can escape. [1]
 - **How:** At four insight, use the defensive movement to prepare You Never Had Control, That's the Illusion for your next turn's first action. [1]
 - **Watch out:** Don't spend it into sidekicks as a routine attack; offensive cancels punish it, and the short retreat does less against ranged pressure. [1]
 
@@ -2771,7 +2859,7 @@ Check the actual Into the Woods copy: each leaves a different symbol, so the kni
 
 **Chaotician**
 - **When:** Use it to prepare Violently, If Necessary against opponents actively avoiding your insight; choose coverage beyond your existing tokens. [3]
-- **How:** Make Dr. Malcolm's combat serve that setup, then follow with Violently, If Necessary while the enemy remains exposed. [3]
+- **How:** Make Dr. Malcolm's combat serve that setup, then follow with Violently, If Necessary while they remain exposed. [3]
 - **Watch out:** Gridbeast values its trap setup; Baked Goods questions risking Dr. Malcolm behind a weak combat value for this effect. Don't force the setup when his survival is at stake. [3][1]
 
 **The Future Ex-Mrs. Malcolm**
@@ -2820,7 +2908,7 @@ Check the actual Into the Woods copy: each leaves a different symbol, so the kni
 ### Cards: when and how to use them
 
 **Three Wishes**
-- **When:** Hold for a threatened hand-strip finish, or spend on a refill when sustained aggression has depleted your hand. Space refills across pressure turns rather than drawing everything immediately. [1][2]
+- **When:** Hold for a threatened hand-strip finish, or spend on a refill when sustained aggression has depleted your hand. [1][2]
 - **How:** Count the ability discard, schemes, attacks, and paid effects before committing; empty their hand before attacking. If fewer discards suffice, use the spare Three Wishes for attack values or fuel, especially with Feint or This is No Parlor Trick. [1]
 - **Watch out:** Partial hand stripping often just removes their weakest cards. Spending everything without lethal lets them rebuild while you have exhausted your best tools. [1][2]
 
@@ -2832,27 +2920,27 @@ Check the actual Into the Woods copy: each leaves a different symbol, so the kni
 **I Am Freed**
 - **When:** Lead an attack chain with it when defensive movement threatens to end your turn. Against several 1-health sidekicks, look for a landing that clears a cluster without separate attacks. [1][3]
 - **How:** Follow a retreating defender and continue attacking; in the deck-race plan, attack from range and retreat far enough to demand boosted pursuit or extra maneuvers. [1][3]
-- **Watch out:** Body-blocking sidekicks can deny the landing needed to keep attacking the hero. Don't assume every chase ends with access to your intended target. [3]
+- **Watch out:** Body-blocking sidekicks can deny the landing needed to keep attacking the hero. [3]
 
 **Wishing For More Wishes**
 - **When:** Prefer defense when you need fuel for the next pressure turn; your opponent has less time to react to your enlarged hand. [3]
 - **How:** Use the refill to sustain extra-action attacks or assemble a funded Three Wishes turn. Defensive draw lets you enter that turn with resources beyond your normal end-of-turn hand. [1][3]
-- **Watch out:** On attack, the opposing refill can find another defense just when you're trying to overwhelm them. Consider that gift before using it to extend pressure. [1]
+- **Watch out:** On attack, the opposing refill can find another defense just when you're trying to overwhelm them. [1]
 
 **Feint**
 - **When:** Attack with it when defensive movement or draw would break your attack chain; retain it defensively when an opposing boost effect needs stopping. [1]
 - **How:** Pair the offensive play with Three Wishes so stopping their defensive effect also pushes damage. Lead with it when keeping them in reach enables another attack. [1]
-- **Watch out:** Don't automatically reserve every copy for defense: that can waste your chance to deny escape or defensive draw during pressure. Choose its role from the effects you need to stop. [1]
+- **Watch out:** Don't automatically reserve every copy for defense: that can waste your chance to deny escape or defensive draw during pressure. [1]
 
 **This is No Parlor Trick**
 - **When:** Save it for offense after Three Wishes against defenses with low BOOST values; otherwise treat it as an ability discard or movement boost. [1][2]
-- **How:** Target defenses whose movement depends on winning combat: the empowered attack can deny both their block and escape. Check their defensive BOOST values before planning around it. [1]
-- **Watch out:** On defense, an attacker's later value increase can undo your protection; some attacks even become stronger. Don't trust it as a general emergency block. [1][3]
+- **How:** Target defenses whose movement depends on winning combat: the empowered attack can deny both their block and escape. [1]
+- **Watch out:** On defense, an attacker's later value increase can undo your protection; some attacks even become stronger. [1][3]
 
 **Prisoner's Torment**
 - **When:** Defend with it while you can afford the health loss and need a large counterattack hand. Hold back from that trade when survival is already tight. [1]
 - **How:** Turn the refill into a funded Three Wishes turn or sustained attacks; count fuel for paid effects as well as the attacks themselves. [1]
-- **Watch out:** You're spending health for immediate initiative and accelerating through your deck. A large hand needs to produce pressure before that long-term cost catches you. [1][3]
+- **Watch out:** You're spending health for immediate initiative and accelerating through your deck. [1][3]
 
 **Careful What You Wish For**
 - **When:** Keep it for a hand-strip turn without the attack-value wish, a Feint punish, or a follow-up finisher after your burst. [1]
@@ -2862,7 +2950,7 @@ Check the actual Into the Woods copy: each leaves a different symbol, so the kni
 **I Grant You Death**
 - **When:** Defend adjacent to chip an opponent into finishing range, or remove a 1-health sidekick without dedicating an attack to it. [1][3]
 - **How:** Save it as an attack for a Three Wishes damage turn when adjacency adds the final damage your lethal calculation needs. [1]
-- **Watch out:** From range, you lose the chip that justifies the trade; on defense, you'll still take damage over the block. Don't count retaliation as free health preservation. [3]
+- **Watch out:** From range, you lose the chip that justifies the trade; on defense, you'll still take damage over the block. [3]
 
 **Back In The Lamp**
 - **When:** Save it for weaker or bait attacks once you're sufficiently wounded; playing it near full health wastes its purpose. [1][3]
@@ -2872,7 +2960,7 @@ Check the actual Into the Woods copy: each leaves a different symbol, so the kni
 **Imprisoned Wrath**
 - **When:** Reserve the paid damage for lethal or an oversized hand that would otherwise lose cards at turn end. [1][3]
 - **How:** Attack adjacent when they cannot escape or cancel and the extra damage closes the game; otherwise decline the expensive payment. [1]
-- **Watch out:** Paying away defenses for ordinary chip leaves you exposed to a double attack. Don't trade your remaining hand for damage that fails to finish. [1]
+- **Watch out:** Paying away defenses for ordinary chip leaves you exposed to a double attack. [1]
 
 **Your Wish is My Command**
 - **When:** Seek an undefended opening with enough spare cards and another attack to finish; don't force the extension into a healthy defensive hand. [1]

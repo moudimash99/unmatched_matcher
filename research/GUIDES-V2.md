@@ -110,7 +110,7 @@ In `research/private/sample/` (gitignored): `little_red.long.md` (card by card),
 - [x] Card by card for Medusa and Bruce Lee
 - [x] Site: tabs + card hovers (on guides-v2, not deployed)
 - [x] Short pass (74 / 74, written by Claude from each Medium guide via research/scripts/make_short.py; drafts in research/private/short-drafts/)
-- [ ] Card by card pass
+- [ ] Card by card pass (32 / 74 by 28 Oct, 7:45 PM; Codex usage limit again, resets 11:58 PM. Left: bullseye, t_rex, houdini, squirrel_girl, cloak_and_dagger, black_panther, black_widow, winter_soldier, she_hulk, spider_man, doctor_strange, nikola_tesla, annie_christmas, the_golden_bat, dr_jill_trent, oda_nobunaga, tomoe_gozen, william_shakespeare, hamlet, titania, the_wayward_sisters, geralt, ciri, yennefer_triss, philippa_eilhart, eredin, muhammad_ali, ancient_leshen, blackbeard, chupacabra, loki, pandora, leonardo, donatello, raphael, michelangelo, shredder, krang, wyatt_earp, john_henry, george_washington, rosie_the_riveter)
 
 ## Notes from the first batch
 
