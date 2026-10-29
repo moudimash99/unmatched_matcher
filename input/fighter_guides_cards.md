@@ -6833,3 +6833,86 @@ Check the actual Into the Woods copy: each leaves a different symbol, so the kni
 - [Tips on playing George Washington effectively?](https://www.reddit.com/r/Unmatched/comments/1tko47e/): Reddit · remaining replies (read; speculation and tournament impressions add no actionable card advice).
 
 ---
+
+<!-- id: rosie_the_riveter -->
+## Rosie the Riveter
+
+**In short:** You play an upgrade-driven fighter whose attack plan depends on which benefits come online earliest. [1][2] Keep draw first for sustained attacking, or prioritize damage and range for a longer fight; build toward a late burst rather than spending your all-upgrades push without follow-up. [2][3]
+
+### Win conditions
+- **Draw-led pressure into a late burst:** choose this when you can keep attacking and want draw supporting that pressure; save D-Day for a late turn with Full Metal ready behind it. [2][4] Players disagree on priority: one player favors draw first, while another favors damage or range when faster draw risks fatigue. [2][3]
+- **Damage and range for the long game:** choose this when you expect a long fight, especially against melee opponents you can force to approach; use Hasty Repairs, "E" Award, or Rapid Development to reorder toward damage and range. [3][4][5] Make individual changes deliberately: the full reset preserves the order, so waiting for it will not repair an unsuitable queue. [6]
+
+### Cards: when and how to use them
+
+**D-Day**
+- **When:** hold it for a late attacking turn with follow-up cards and a reachable target; spending it alone misses the burst the draw-led plan is saving for. [2][4]
+- **How:** lead with D-Day before Full Metal when you need to bring upgrades online, then spend the attack opportunity while those upgrades are available. [4]
+- **Watch out:** plan your next defense before committing; keeping Full Metal or Technological Superiority in hand does not guarantee protection after the reset. [4]
+
+**Full Metal**
+- **When:** hold it while upgrades are scarce, unless you need its boost to reach combat; commit it to an upgraded attack rather than spending it early simply because you can attack. [4]
+- **How:** follow D-Day with it, or reserve it for defense on a turn that actually ends with upgrades still active. [4]
+- **Watch out:** count upgrades again on the opponent's turn; a fully upgraded attack turn can leave this a poor defense, and cancellation also undermines its combat value. [4]
+
+**Hasty Repairs**
+- **When:** defend with it when Rosie is wounded and has an active upgrade you want to move back in the queue; hold it if neither the healing nor the reorder helps. [3][4]
+- **How:** choose the deactivation for your next cycle: preserve draw-first pressure, or push draw back when damage and range better fit a long fight. [2][3][4]
+- **Watch out:** avoid treating it as a safe answer to a large attack; its low starting defense makes the recovery important, and cancellation or an empty upgrade row removes that compensation. [4]
+
+**Technological Superiority**
+- **When:** save it for an effect you need to stop while enough upgrades are active; at low upgrade counts, do not choose it over another defense because you expect cancellation. [4]
+- **How:** keep it for defense against consequential effects, or use it offensively while upgraded when stopping the opposing defense's effects matters to your attack. [4]
+- **Watch out:** after D-Day, check the end-of-turn reset before counting this as your next defensive cancel; the attack window and the defensive window have different resources. [4]
+
+**Rapid Development**
+- **When:** play it with Wendy alive when you need more attacking options and a queue adjustment together; hold it when the additional draw works against your long-game plan. [3][4]
+- **How:** use it before committing your attack so the cards you draw and the upgrade choice inform what you play next; choose deactivation when future upgrade order matters more than immediate activation. [3][4]
+- **Watch out:** it does not move Rosie into reach, so check your attack position first; with Wendy defeated, spend it as a movement boost instead of saving an unplayable scheme. [4]
+
+**"E" Award**
+- **When:** play it when repositioning and changing upgrade order both advance your plan, especially when you want range to make a melee opponent approach. [3][4]
+- **How:** use it before an attack with Momentous Shift to arrange both position and a changed starting space; decide whether your next upgrade cycle needs deactivation before automatically activating. [3][4]
+- **Watch out:** moving without a follow-up wastes an attacking opportunity if you needed pressure now; after Wendy falls, use it for movement boosting rather than holding it for its scheme. [4]
+
+**We Can Do It!**
+- **When:** attack with it before an upgrade-dependent follow-up when one more activation would improve that follow-up; hold it if advancing the cycle would leave your planned defense exposed. [4]
+- **How:** play it before Full Metal when that sequence improves your upgrade count; check whether this activation completes the row before deciding what defense you can afford to keep. [4]
+- **Watch out:** do not spend it solely for setup into a likely cancel, or assume completing the row leaves those upgrades available through the opponent's turn. [4]
+
+**Arc Welding**
+- **When:** use Wendy's combat to support an upcoming Rosie attack, or choose the damage route when adjacent opponents are already near defeat. [4]
+- **How:** defend Wendy with it when that combat can prepare Full Metal on your next turn; attack with Wendy when her adjacency makes the damage choice immediately consequential. [4]
+- **Watch out:** do not choose damage without checking Wendy's actual neighbors; once Wendy is defeated, this becomes movement-boost material rather than a combat card to save. [4]
+
+**Overrun**
+- **When:** attack when the route beyond the target matters, especially if passing through a wounded opponent can finish them; hold it when the board offers no worthwhile route. [4]
+- **How:** plan your landing space before attacking: leave Rosie in reach for a follow-up, or move toward safety after your last attack. [4]
+- **Watch out:** chasing incidental damage can strand Rosie away from her next target; check the entire route instead of assuming the opposing fighter you attacked must be the only useful destination. [4]
+
+**Momentous Shift**
+- **When:** attack after repositioning with "E" Award or Overrun; when defending, check whether this fighter has moved during the current turn before treating it as your stronger defense. [4]
+- **How:** use it to turn necessary movement into attack pressure, including with Wendy when Rosie is not the fighter you need to commit. [4]
+- **Watch out:** movement on your previous turn does not qualify it on the opponent's turn, and cancellation punishes relying on its improved value. [4]
+
+**Loose Lips Sink Ships!**
+- **When:** choose it when you can accept uncertainty in the combat result; hold a more predictable defense for an attack you cannot afford to take. [4]
+- **How:** use it on attack or defense according to which combat can tolerate the opposing deck's unknown top card; do not budget a particular reduction without that information. [4]
+- **Watch out:** a low boost reveal or cancellation can leave you badly short of the result you needed; avoid making survival depend on a favorable reveal. [4]
+
+### How they lose
+- **Fatigue from the wrong priority.** Draw-first acceleration can undermine a long fight. **Answer:** use Hasty Repairs, "E" Award, or Rapid Development to change individual upgrade positions instead of expecting the full reset to reorder them. [3][4][6]
+- **A burst followed by an exposed reset.** Your attacking upgrades can disappear before the counterattack. **Answer:** before D-Day, budget your next defense without assuming Full Metal or Technological Superiority will retain their upgraded performance. [4]
+
+### References
+1. Restoration Games. "From Spycraft to Steam Power: The Gameplay of Unmatched: Stars and Stripes." *Restoration Games*. https://restorationgames.com/gameplay-of-unmatched-stars-and-stripes/
+2. u/Ramen3. Comment on "Finally got my hands on Stars and Stripes and wanted to ask how to use Rosie better." by u/BeneficialMethod3866. *r/Unmatched*, Reddit, 12 May 2026. https://www.reddit.com/r/Unmatched/comments/1tbidqb/
+3. u/ValhallAwaits_. Comment on "Finally got my hands on Stars and Stripes and wanted to ask how to use Rosie better." (see [2]).
+4. Restoration Games. *Stars and Stripes*, Rosie the Riveter deck. Card text as recorded in `input/heroes.json`.
+5. u/Naive-Health414. Comment on "Finally got my hands on Stars and Stripes and wanted to ask how to use Rosie better." (see [2]).
+6. u/Ok-Excitement7898. Comment on "Finally got my hands on Stars and Stripes and wanted to ask how to use Rosie better." (see [2]).
+
+### Not cited
+- [Finally got my hands on Stars and Stripes and wanted to ask how to use Rosie better.](https://www.reddit.com/r/Unmatched/comments/1tbidqb/): Reddit · remaining comments (read; rules question, clarification duplicated by [6], and a question about stacking provide no additional plan).
+
+---

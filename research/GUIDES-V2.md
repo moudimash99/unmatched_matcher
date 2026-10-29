@@ -110,7 +110,7 @@ In `research/private/sample/` (gitignored): `little_red.long.md` (card by card),
 - [x] Card by card for Medusa and Bruce Lee
 - [x] Site: tabs + card hovers (on guides-v2, not deployed)
 - [x] Short pass (74 / 74, written by Claude from each Medium guide via research/scripts/make_short.py; drafts in research/private/short-drafts/)
-- [ ] Card by card pass (73 / 74 by 29 Oct, 12:30 AM; 31 of them merged and deployed in PR #51. Codex usage limit again, resets 5:00 AM. Left: rosie_the_riveter, whose draft was cut off by the limit)
+- [x] Card by card pass (74 / 74, done 29 Oct, 5:10 AM; 31 of them merged and deployed in PR #51, the other 43 on `guides-v2`)
 
 ## Notes from the first batch
 
