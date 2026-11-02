@@ -147,7 +147,7 @@
     "price": 45.0,
     "currency": "USD",
     "in_stock": false,
-    "status": "sold_out",
+    "status": "not_released",
     "stock_text": "OUT OF STOCK",
     "url": "https://restorationgames.com/shop/unmatched-stars-and-stripes/",
     "product": "Unmatched: Stars and Stripes"
@@ -220,7 +220,7 @@
       "price": 50.0,
       "currency": "USD",
       "in_stock": true,
-      "status": "preorder",
+      "status": "in_stock",
       "stock_text": "In stock",
       "url": "https://restorationgames.com/shop/unmatched-hellboy/",
       "product": "Unmatched: Hellboy"
@@ -236,7 +236,7 @@
     }
   },
   "_meta": {
-    "fetched_at": "2026-10-13",
+    "fetched_at": "2026-11-02",
     "store": "https://restorationgames.com"
   }
 }
