@@ -1,0 +1,9 @@
+* **Corrected card values and stats:** Ensured all card names, values, boost values, copy counts, and text descriptions strictly match the fighter data table. Specifically, fixed inaccurate card values present in the draft (e.g., removing hardcoded numerical values like "5-value attack" or "3-value defense" where they were repeated or inaccurate, and ensuring text aligns with the official card table).
+* **Removed unsupported roster claims:** Eliminated exaggerated or out-of-date broad roster claims (such as references to having the highest health in the game) that were not supported by the provided source pack.
+* **Eliminated generic filler:** Stripped out generic advice ("keep your hand full", "track their discards") that applies to any fighter, retaining only advice tied specifically to Oda Nobunaga's mechanics (flanking, Honor Guard management, and zone restrictions).
+* **Added crucial source insights:** Incorporated specific warnings regarding Student of War against 1-health sidekicks, the limitations of Pragmatism (only usable by Oda, leaving Honor Guards unprotected from incoming effects on defense), and the strategic use of Spring the Trap and Reinforce as highlighted by the sources.
+* **Streamlined formatting:** Followed strict constraints to cut repeated bracketed card stats, stay well under the word limit, keep the exact draft headings/order, and write completely in original phrasing without copying distinctive source sentences.
+
+From the first draft:
+- One automatic video caption transcript refers to the fighter as "Odin noaga" or "Odin noan naga", but the fighter data and written guides correctly use Oda Nobunaga.
+- Sources generally agree on his heavy reliance on flanking and sidekick survival, though video reviewers express frustration over his high deck inconsistency in 1v1 matchups compared to team play.

@@ -1,0 +1,9 @@
+- **Corrections**: Fixed the claim under Key Cards that *Shell insertion* specifically shuffles "used copies of Nunchaku or action-gaining attacks"; the card table explicitly states it shuffles two *random* cards from the discard pile.
+- **Additions**: Added a tip about targeting 1-health sidekicks with *Boisterous beatdown* to secure the 2-action reward. Added another tip regarding stacking and recursing *Nunchaku* for massive multi-action damage boosts.
+- **Removals**: Cut the highly specific tip about "not hoarding Heroes in a half shell"—the sources merely suggest that dodging is sometimes better than defending due to hand size, not necessarily that the card must be urgently used or tucked. Also cut repetitive bracketed card stats to improve readability.
+- **Discrepancies**: The card table text for *Nunchaku* contains a copy-paste error, stating "All of Bruce Lee's attacks this turn are +1 value" instead of Michelangelo's. The guide ignores this error and accurately reflects the card's intended effect for Michelangelo, as detailed in the video transcript. The table also has a minor spelling typo on *Shell insertion* ("Chose two different effects").
+
+From the first draft:
+- The card table lists Nunchaku's effect as "All of Bruce Lee's attacks this turn are +1 value." This is clearly a typo in the source document copied from Bruce Lee's deck, as the videos confirm it adds +1 to Michelangelo's attacks. I described it functionally as buffing your attacks, but you should fix the official table text.
+- The sources differ on Guaranteed delivery's primary use: one focuses on its role as a defensive cancel, while another emphasizes using it offensively as a fake-out attack with April. Both applications are included.
+- Card names with exclamation marks (`Hi-yaaaaah!!`, `Cowabunga!!`, `Michelangelo is a party dude!!`, `Turtle power!`) were kept exactly as they appear in the table.
