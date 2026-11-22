@@ -165,3 +165,27 @@ pytest
 ```
 
 Tests also run automatically in CI via GitHub Actions.
+
+<!-- where-it-runs: made by Infra/scripts/readmes.py from Infra/services.yaml; edit the entry there, not here -->
+## Where it runs
+
+**unmatched** (web-app, production): Unmatched fighter matcher, strategy guides and tournaments (Flask + gunicorn).
+
+| | |
+|---|---|
+| Runs | k8s apps/Deployment unmatched on acer-laptop |
+| Address | https://unmatched.machaka.net; unmatchedtournament.machaka.net (nginx 301 to /tournaments) |
+| Deploy | scripts/deploy.sh on the server, in a terminal: git pull, docker build, copies the image to the Acer and loads it there (asks for the Acer's passwords), `kubectl set image`, rollout status, then rewrites the tag in ~/Infra/k8s/apps/unmatched/unmatched.yaml (copy it to the PC's Infra and commit it). |
+| Manifest | Infra/k8s/apps/unmatched/unmatched.yaml |
+| Image | unmatched, built on the server by scripts/deploy.sh, tag = build time (pull Never) |
+| Data | hostPath /srv/apps/unmatched on the Acer (tournament data files); Secret apps/unmatched-env (SECRET_KEY, TOURNAMENT_PASSWORD_HASH) |
+| Check | Pod Ready (tcpSocket :8001); Homepage siteMonitor http://unmatched.apps.svc |
+
+Where what runs differs from the code:
+
+- Older duplicate clone in Documents/GitHub/unmatched_matcher (branch loser-player, 2026-10-14); not the one deployed.
+- The PC clone's origin URL embeds a GitHub token that GitHub refuses (403); fetch and push name https://github.com/moudimash99/unmatched_matcher.git instead.
+
+From the home's service catalog, [Infra/services.yaml](https://github.com/moudimash99/Infra/blob/main/services.yaml) (entries `unmatched`). What runs right now,
+its health, and code here that is not deployed yet: `python scripts/status.py` in the Infra repo.
+<!-- /where-it-runs -->
