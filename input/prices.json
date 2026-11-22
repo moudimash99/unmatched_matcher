@@ -137,18 +137,18 @@
   "Slings and Arrows": {
     "price": 45.0,
     "currency": "USD",
-    "in_stock": true,
-    "status": "in_stock",
-    "stock_text": "In stock",
+    "in_stock": false,
+    "status": "not_released",
+    "stock_text": "OUT OF STOCK",
     "url": "https://restorationgames.com/shop/unmatched-slings-and-arrows/",
     "product": "Unmatched: Slings and Arrows"
   },
   "Stars and Stripes": {
     "price": 45.0,
     "currency": "USD",
-    "in_stock": false,
-    "status": "not_released",
-    "stock_text": "OUT OF STOCK",
+    "in_stock": true,
+    "status": "in_stock",
+    "stock_text": "In stock",
     "url": "https://restorationgames.com/shop/unmatched-stars-and-stripes/",
     "product": "Unmatched: Stars and Stripes"
   },
@@ -219,9 +219,9 @@
     "Hellboy": {
       "price": 50.0,
       "currency": "USD",
-      "in_stock": true,
-      "status": "in_stock",
-      "stock_text": "In stock",
+      "in_stock": false,
+      "status": "not_released",
+      "stock_text": "OUT OF STOCK",
       "url": "https://restorationgames.com/shop/unmatched-hellboy/",
       "product": "Unmatched: Hellboy"
     },
@@ -236,7 +236,7 @@
     }
   },
   "_meta": {
-    "fetched_at": "2026-11-16",
+    "fetched_at": "2026-11-22",
     "store": "https://restorationgames.com"
   }
 }
