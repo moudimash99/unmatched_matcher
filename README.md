@@ -182,10 +182,6 @@ Tests also run automatically in CI via GitHub Actions.
 | Data | hostPath /srv/apps/unmatched on the Acer (tournament data files); Secret apps/unmatched-env (SECRET_KEY, TOURNAMENT_PASSWORD_HASH) |
 | Check | Pod Ready (tcpSocket :8001); Homepage siteMonitor http://unmatched.apps.svc |
 
-Where what runs differs from the code:
-
-- Older duplicate clone in Documents/GitHub/unmatched_matcher (branch loser-player, 2026-10-14); not the one deployed.
-
 From the home's service catalog, [Infra/services.yaml](https://github.com/moudimash99/Infra/blob/main/services.yaml) (entries `unmatched`). What runs right now,
 its health, and code here that is not deployed yet: `python scripts/status.py` in the Infra repo.
 <!-- /where-it-runs -->
