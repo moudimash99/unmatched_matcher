@@ -176,7 +176,7 @@ Tests also run automatically in CI via GitHub Actions.
 | Runs | k8s apps/Deployment unmatched on acer-laptop; apps/CronJob unmatched-restart on moudimash99 (Mondays 08:00 UTC) |
 | Address | https://unmatched.machaka.net; unmatchedtournament.machaka.net (nginx 301 to /tournaments) |
 | Schedule | unmatched-restart: 0 8 * * 1 (UTC), two hours after refresh-stats.yml |
-| Deploy | scripts/deploy.sh on the server, in a terminal: git pull, docker build, copies the image to the Acer and loads it there (asks for the Acer's passwords), `kubectl set image`, rollout status, then rewrites the tag in ~/Infra/k8s/apps/unmatched/unmatched.yaml (copy it to the PC's Infra and commit it). |
+| Deploy | (Flux, since 2026-11-23: the new tag must be committed and pushed in k8s/apps/unmatched/unmatched.yaml, or Flux puts the old one back within 10 minutes.) scripts/deploy.sh on the server, in a terminal: git pull, docker build, copies the image to the Acer and loads it there (asks for the Acer's passwords), `kubectl set image`, rollout status, then rewrites the tag in ~/Infra/k8s/apps/unmatched/unmatched.yaml (copy it to the PC's Infra and commit it). |
 | Manifest | Infra/k8s/apps/unmatched/unmatched.yaml |
 | Image | unmatched, built on the server by scripts/deploy.sh, tag = build time (pull Never) |
 | Data | hostPath /srv/apps/unmatched on the Acer (tournament data files); Secret apps/unmatched-env (SECRET_KEY, TOURNAMENT_PASSWORD_HASH) |
