@@ -2,16 +2,28 @@
 
 ## Deploy
 
-The live site (unmatched.machaka.net) runs in k3s on the server. After merging to `main`, run on the server:
+The live site (unmatched.machaka.net) runs in k3s; the pod is on the Acer. After pushing to `main`, run on the PC,
+in Git Bash (PowerShell's `bash` is WSL, which has no ssh keys or kubeconfig):
 
 ```bash
-cd ~/unmatched_matcher && sh scripts/deploy.sh
+bash scripts/deploy.sh --dry-run   # prints every step, changes nothing
+bash scripts/deploy.sh
 ```
 
-It pulls, builds an image, loads it into k3s, rolls the deployment and updates the image in
-`~/Infra/k8s/apps/unmatched/unmatched.yaml` (commit that in `~/Infra`). Don't `docker compose up`:
-a second copy would write the same tournament data, so the compose service only starts with
-`--profile docker`.
+It deploys GitHub `main` (not the PC's working copy). The steps:
+
+1. The server pulls and builds the image.
+2. The image goes server → PC → Acer and is loaded into k3s there, with no password asked.
+3. The new tag is written in the PC's Infra clone (`k8s/apps/unmatched/unmatched.yaml`), committed alone
+   ("unmatched: deploy <tag>") and pushed to Infra `main`. Flux applies `k8s/` from `main` every 10 minutes and
+   would put an unpushed tag back.
+4. It applies the file, then checks the rollout, the site and that Flux has applied the commit.
+
+It stops before building if the Infra clone's `main` has commits not on GitHub, because the push would put those
+live too.
+
+Don't `docker compose up`: a second copy would write the same tournament data, so the compose service only starts
+with `--profile docker`.
 
 ## Win-rate stats
 

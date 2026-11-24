@@ -1,6 +1,6 @@
 version: "3.9"
 
-# The live site runs in k3s, not here: deploy with `sh scripts/deploy.sh`.
+# The live site runs in k3s, not here: deploy from the PC with `bash scripts/deploy.sh` (in Git Bash).
 # This service sits behind a profile so a plain `docker compose up` doesn't start a second copy
 # writing the same tournament data. Only for running it in Docker on purpose:
 #   docker compose --profile docker up -d --build

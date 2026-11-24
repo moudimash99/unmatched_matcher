@@ -1,0 +1,2 @@
+# Run on Linux or in Git Bash: LF whatever the checkout machine (bash fails on CRLF)
+*.sh text eol=lf
