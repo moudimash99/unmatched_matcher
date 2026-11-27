@@ -27,6 +27,12 @@ def test_every_fighter_image_exists_with_exact_case():
     assert missing == []
 
 
+def test_docker_compose_names_the_dockerfile_with_exact_case():
+    with open(os.path.join(ROOT_DIR, "docker-compose.yml"), encoding="utf-8") as f:
+        names = [line.split(":", 1)[1].strip() for line in f if line.strip().startswith("dockerfile:")]
+    assert names and all(n in os.listdir(ROOT_DIR) for n in names)
+
+
 def test_every_fighter_is_in_the_win_matrix():
     assert {f["id"] for f in FIGHTERS_DATA} <= set(WIN_MATRIX)
 

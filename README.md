@@ -36,8 +36,8 @@ python fetch_stats.py tabletopleague   # or: unmatchedru
 ```
 
 This writes `input/merged_win_pct.json`, `input/merged_games.json` and `input/stats_meta.json`.
-The `Refresh win-rate stats` GitHub workflow does this weekly and opens a PR when the numbers change
-(enable *Settings → Actions → Allow GitHub Actions to create pull requests*).
+The `Refresh win-rate stats` GitHub workflow does this weekly and, once the tests pass on the new
+numbers, commits them to `main` when they change. The live site shows them after the next deploy.
 `scripts/win_calc.ipynb` builds the same two matrices offline from `input/Unmatched_Stats.xlsx`.
 
 A matchup's own record is fully trusted from 10 games on. Below that, confidence climbs
@@ -125,8 +125,9 @@ TOURNAMENT_PASSWORD_HASH=<sha256 hex of the password>
 
 `TOURNAMENT_PASSWORD_HASH` is optional: it's the first password, which gets every tournament from
 before passwords had their own spaces. `TOURNAMENT_SIGNUP=0` turns off making new passwords.
-`python app.py` and docker-compose both read it. docker-compose also mounts `./data` for the saved
-tournaments, so on the server: copy `.env` next to `docker-compose.yml`, then `docker compose up -d --build`.
+`python app.py` and docker-compose both read it. The live site gets them from a k8s Secret instead
+(see "Where it runs" below). docker-compose mounts `./data` for the saved tournaments; it's only for
+running in Docker on purpose (`docker compose --profile docker up -d --build`, see Deploy above).
 Without `.env`, local runs fall back to the password `dev`. Five wrong passwords from one address
 lock it out for 15 minutes.
 

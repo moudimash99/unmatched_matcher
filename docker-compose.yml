@@ -10,7 +10,7 @@ services:
     container_name: unmatched
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
     restart: unless-stopped
 
     # Tournaments: secrets come from .env (gitignored, copy it to the server), saved data lives in ./data
