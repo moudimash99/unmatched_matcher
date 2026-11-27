@@ -33,6 +33,13 @@ def test_docker_compose_names_the_dockerfile_with_exact_case():
     assert names and all(n in os.listdir(ROOT_DIR) for n in names)
 
 
+def test_secrets_stay_out_of_the_docker_image():
+    # deploy.sh builds from the server's folder, so anything gitignored there would be copied in
+    with open(os.path.join(ROOT_DIR, ".dockerignore"), encoding="utf-8") as f:
+        ignored = {line.strip() for line in f}
+    assert {".env", "github_token.txt", "data/", "research/"} <= ignored
+
+
 def test_every_fighter_is_in_the_win_matrix():
     assert {f["id"] for f in FIGHTERS_DATA} <= set(WIN_MATRIX)
 

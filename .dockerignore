@@ -5,3 +5,5 @@ scratch/
 __pycache__/
 *.pyc
 tests/
+github_token.txt
+research/
