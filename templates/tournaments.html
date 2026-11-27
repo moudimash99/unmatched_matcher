@@ -73,7 +73,7 @@
             <span>{{ t.updated[:10] }}</span>
         </div>
         <form class="t-tcard-del" method="post" action="{{ url_for('tournaments.delete', tid=t.id) }}"
-              onsubmit="return confirm('Delete {{ t.name | e }} for good? This can\'t be undone.')">
+              onsubmit='return confirm({{ ("Delete " ~ t.name ~ " for good? This can't be undone.") | tojson }})'>
             <button type="submit" title="Delete" style="position:relative">🗑</button>
         </form>
     </div>

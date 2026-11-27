@@ -554,6 +554,19 @@ def test_each_password_sees_only_its_own_tournaments(client):
     assert "Theirs" in client.get("/tournaments").get_data(as_text=True)
 
 
+def test_delete_confirm_survives_quotes_in_the_name(client):
+    import html
+    import re
+    _login(client)
+    name = """Ahmad's "big" cup</script>"""
+    _new(client, name)
+    page = client.get("/tournaments").get_data(as_text=True)
+    attr = re.search(r"onsubmit='([^']*)'", page).group(1)  # the attribute ends at the first quote
+    js = html.unescape(attr)
+    assert js.startswith("return confirm(") and js.endswith(")")
+    assert json.loads(js[len("return confirm("):-1]) == f"Delete {name} for good? This can't be undone."
+
+
 def test_signup_rules(client):
     tournaments_web._signups.clear()
     r = client.post("/tournaments/signup", data={"password": "abc", "confirm": "abc"})
