@@ -128,8 +128,27 @@ def current_round(t):
     return None
 
 
+# Ids end up in the page's HTML attributes unescaped, so they can't hold quotes or markup
+_UNSAFE_ID = re.compile(r"""["'<>&`\\]""")
+
+
+def _shape_problem(t):
+    """A slot or id the rest of the code can't handle (checked first: the other checks rely on it)."""
+    slots = [slot for m in t["matches"] for _, slot in sides(m)]
+    if any(slot is not None and not (isinstance(slot, dict) and ("fighter" in slot or "from" in slot)) for slot in slots):
+        return "A slot isn't a fighter, an earlier match's winner or empty."
+    ids = ([m["id"] for m in t["matches"]] + [r["id"] for r in t["rounds"]] + [p["id"] for p in t["players"]]
+           + [s.get("fighter", s.get("from")) for s in slots if s] + list(t["bench"]))
+    if any(not isinstance(i, str) or not i or _UNSAFE_ID.search(i) for i in ids):
+        return "An id is empty or has characters that aren't allowed (quotes, <, >, &)."
+    return None
+
+
 def problems(t):
     """Everything that makes the bracket inconsistent (an empty list means it's fine)."""
+    shape = _shape_problem(t)
+    if shape:
+        return [shape]
     out = []
     matches = match_index(t)
     rounds = round_index(t)
@@ -744,6 +763,8 @@ def op_swap_slots(t, mid_a, side_a, mid_b, side_b):
     a, b = _match(t, mid_a), _match(t, mid_b)
     _unplayed(a, "swap")
     _unplayed(b, "swap")
+    if side_a not in ("top", "bot") or side_b not in ("top", "bot"):
+        raise TournamentError("Unknown side.")
     if (mid_a, side_a) == (mid_b, side_b):
         return "Nothing to swap"
     a[side_a], b[side_b] = b[side_b], a[side_a]
@@ -760,6 +781,8 @@ def op_insert_play_in(t, mid, side, challenger, round_id=None, round_name=None):
     """
     m = _match(t, mid)
     _unplayed(m, "add a play-in to")
+    if side not in ("top", "bot"):
+        raise TournamentError("Unknown side.")
     current = m[side]
     if not current:
         raise TournamentError("That slot is empty; put someone in it directly instead.")

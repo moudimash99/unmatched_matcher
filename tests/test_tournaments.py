@@ -124,6 +124,24 @@ def test_edits_on_played_matches_are_refused_and_never_corrupt():
         T.apply_op(t, "set_slot", {"mid": final["id"], "side": "bot", "slot": {"from": "r1_1"}})
 
 
+def test_bad_arguments_are_refused_before_they_reach_the_bracket():
+    t = T.new_tournament("Cup", ["Ann"], _ids(4))
+    for op, args in [("swap_slots", {"mid_a": "r1_1", "side_a": "label", "mid_b": "r1_2", "side_b": "top"}),
+                     ("swap_slots", {"mid_a": "r1_1", "side_a": "top", "mid_b": "r1_2", "side_b": "round"}),
+                     ("insert_play_in", {"mid": "r1_1", "side": "label", "challenger": None}),
+                     ("add_to_bench", {"fighters": ['x" onmouseover="alert(1)']}),
+                     ("add_to_bench", {"fighters": ["<b>"]}),
+                     ("add_match", {"round_id": "r1", "top": {"fighter": "it's"}}),
+                     ("set_slot", {"mid": "r1_1", "side": "top", "slot": {}})]:
+        with pytest.raises(T.TournamentError):
+            T.apply_op(t, op, args)
+    bracket = {k: dict(v) for k, v in LEGACY_BRACKET.items()}
+    bracket['r1_2"x'] = dict(bracket.pop("r1_2"), id='r1_2"x')
+    bracket["final"] = dict(bracket["final"], bot={"type": "from_match", "src": 'r1_2"x'})
+    with pytest.raises(T.TournamentError, match="aren't allowed"):
+        T.import_legacy(bracket, {}, "Old")
+
+
 def test_changing_and_deleting_slots_moves_fighters_to_and_from_the_bench():
     t = T.new_tournament("Cup", ["Ann"], _ids(4))
     t, _ = T.apply_op(t, "add_to_bench", {"fighters": ["new"]})
