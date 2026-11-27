@@ -369,6 +369,15 @@ def reparse():
     state = _load_json(STATE_FILE, {})
     skipped, unmapped = {}, _empty_unmapped()
     files = sorted(f for f in os.listdir(RAW_DIR) if f.endswith(".html.gz")) if os.path.isdir(RAW_DIR) else []
+    # On a clone with only part of the cache, rewriting from it would drop the other games
+    cached = {f[:-len(".html.gz")] for f in files}
+    if os.path.exists(GAMES_FILE):
+        with open(GAMES_FILE, encoding="utf-8") as f:
+            saved = {json.loads(line)["match_id"] for line in f if line.strip()}
+        missing = saved - cached
+        if missing:
+            sys.exit(f"{len(missing)} matches in {GAMES_FILE} aren't in {RAW_DIR} (e.g. {min(missing)}); "
+                     "nothing written. Scrape them again instead of --reparse.")
     records = []
     for name in files:
         match_id = name[:-len(".html.gz")]

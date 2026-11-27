@@ -125,6 +125,22 @@ def test_normalize_infers_winner_from_health_and_skips_team_matches(mapper):
     assert skipped == {"team_or_double": 1}
 
 
+def test_reparse_refuses_a_cache_missing_saved_matches(tmp_path, monkeypatch, mapper):
+    games_file = tmp_path / "ttl_games.jsonl"
+    saved = json.dumps(_rec("m1", 1, "ace", "bea", "alamo", True)) + "\n"
+    games_file.write_text(saved, encoding="utf-8")
+    (tmp_path / "raw").mkdir()  # the cache is empty: m1 isn't in it
+    monkeypatch.setattr(ttl, "GAMES_FILE", str(games_file))
+    monkeypatch.setattr(ttl, "RAW_DIR", str(tmp_path / "raw"))
+    monkeypatch.setattr(ttl, "STATE_FILE", str(tmp_path / "state.json"))
+    monkeypatch.setattr(ttl, "UNMAPPED_FILE", str(tmp_path / "unmapped.json"))
+    monkeypatch.setattr(ttl, "_load_mapper", lambda: mapper)
+    with pytest.raises(SystemExit, match="nothing written"):
+        ttl.reparse()
+    assert games_file.read_text(encoding="utf-8") == saved
+    assert not (tmp_path / "state.json").exists()
+
+
 # ---------------------------------------------------------------------------
 # Aggregation
 # ---------------------------------------------------------------------------
