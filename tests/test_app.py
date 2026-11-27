@@ -31,6 +31,21 @@ def test_every_fighter_is_in_the_win_matrix():
     assert {f["id"] for f in FIGHTERS_DATA} <= set(WIN_MATRIX)
 
 
+def test_stats_fetch_stops_when_a_hero_fails_to_load(monkeypatch):
+    import urllib.error
+    import fetch_stats
+    failing = fetch_stats.site_keys_for(fetch_stats.FIGHTER_IDS[0])[0]
+
+    def fake_fetch(key, source=None):
+        if key == failing:
+            raise urllib.error.HTTPError("url", 429, "Too Many Requests", {}, None)
+        return {}
+    monkeypatch.setattr(fetch_stats, "fetch_matchups", fake_fetch)
+    monkeypatch.setattr(fetch_stats.time, "sleep", lambda s: None)
+    with pytest.raises(RuntimeError, match=f"{failing} \\(HTTP 429\\)"):
+        fetch_stats.build_matrices()
+
+
 def test_bruce_lee_is_one_fighter_in_both_sets():
     lees = [f for f in FIGHTERS_DATA if f["name"] == "Bruce Lee"]
     assert len(lees) == 1

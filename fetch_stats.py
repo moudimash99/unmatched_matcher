@@ -74,13 +74,15 @@ def fetch_matchups(site_key, source=None):
 def build_matrices(source=None):
     games = defaultdict(lambda: defaultdict(int))
     wins = defaultdict(lambda: defaultdict(float))
+    failed = []
 
     for f1 in FIGHTER_IDS:
         for key in site_keys_for(f1):
             try:
                 matchups = fetch_matchups(key, source)
             except urllib.error.HTTPError as e:
-                print(f"  ! {key}: HTTP {e.code}, skipped")
+                print(f"  ! {key}: HTTP {e.code}")
+                failed.append(f"{key} (HTTP {e.code})")
                 continue
             time.sleep(0.3)  # be polite to the site
 
@@ -91,6 +93,11 @@ def build_matrices(source=None):
                     continue
                 games[f1][f2] += plays
                 wins[f1][f2] += m["winRate"] / 100.0 * plays
+
+    # A hero that didn't load would be written as 0 games against everyone (and the weekly
+    # workflow would commit that), so stop before anything is written.
+    if failed:
+        raise RuntimeError(f"Couldn't fetch {len(failed)} hero(es), nothing written: {', '.join(failed)}")
 
     merged_games = {}
     win_pct = {}
